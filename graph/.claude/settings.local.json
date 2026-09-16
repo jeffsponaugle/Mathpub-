@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:oeis.org)",
+      "Bash(sysctl -n machdep.cpu.brand_string)",
+      "Bash(sysctl -n hw.ncpu hw.perflevel0.physicalcpu hw.perflevel1.physicalcpu)",
+      "Bash(sysctl -n hw.memsize)",
+      "Bash(cc --version)",
+      "Bash(make --version)",
+      "Bash(awk '/^isplanar\\\\\\(/,/^}/' planarg.c)",
+      "Bash(awk '/^isplanar\\\\\\(/{p=1} p{print} p&&/^}/{exit}' planarg.c)",
+      "Bash(awk '/^main\\\\\\(/{p=1} p&&/isplanar|readg|DYNALLOC|nauty_check|for \\\\\\(|while \\\\\\(|planarity/{print NR\": \"$0}' planarg.c)",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36\" \"http://users.cecs.anu.edu.au/~bdm/data/graphs.html\" -o bdm_graphs.html)",
+      "Bash(python3 -)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(grep -v \"^$\")",
+      "Bash(./geng -u 6)",
+      "Bash(grep -n \"^#\\\\|^$\" b049334.txt)",
+      "Bash(awk '/^embedg_planar_alg_init/,/^}/' planarity.c)"
+    ]
+  }
+}

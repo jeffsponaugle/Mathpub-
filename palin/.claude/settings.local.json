@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cc -O3 -Wall -Wextra -pthread multibase_prime.c -o multibase_prime)"
+    ]
+  }
+}

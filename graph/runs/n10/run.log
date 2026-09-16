@@ -1,0 +1,2 @@
+geng_coplanar_lr -u -v 10 21:36 res/8  for res=0..7, 4 at a time -> /Users/Jeff.Sponaugle/src/math/graph/planargen/../runs/n10
+done: 8 of 8 pieces complete

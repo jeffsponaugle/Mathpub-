@@ -1,0 +1,17 @@
+>C 233 graphs with 21 edges
+>C 2306 graphs with 22 edges
+>C 12394 graphs with 23 edges
+>C 41004 graphs with 24 edges
+>C 94321 graphs with 25 edges
+>C 158312 graphs with 26 edges
+>C 201912 graphs with 27 edges
+>C 199758 graphs with 28 edges
+>C 156780 graphs with 29 edges
+>C 99212 graphs with 30 edges
+>C 51816 graphs with 31 edges
+>C 22768 graphs with 32 edges
+>C 8548 graphs with 33 edges
+>C 2678 graphs with 34 edges
+>C 657 graphs with 35 edges
+>C 106 graphs with 36 edges
+>Z 1052805 graphs generated in 0.80 sec

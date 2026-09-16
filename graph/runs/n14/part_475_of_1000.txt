@@ -1,0 +1,27 @@
+>A /Users/Jeff.Sponaugle/src/math/graph/runs/n14/geng_coplanar_lr -X0x50000d0D13 n=14 e=55-78 class=475/1000
+>C 2233 graphs with 56 edges
+>C 40936 graphs with 57 edges
+>C 277995 graphs with 58 edges
+>C 1115603 graphs with 59 edges
+>C 3101536 graphs with 60 edges
+>C 6488498 graphs with 61 edges
+>C 11267282 graphs with 62 edges
+>C 17025396 graphs with 63 edges
+>C 19789466 graphs with 64 edges
+>C 17681747 graphs with 65 edges
+>C 13289882 graphs with 66 edges
+>C 8463899 graphs with 67 edges
+>C 4798287 graphs with 68 edges
+>C 2460769 graphs with 69 edges
+>C 1101456 graphs with 70 edges
+>C 414433 graphs with 71 edges
+>C 138864 graphs with 72 edges
+>C 32506 graphs with 73 edges
+>C 2951 graphs with 74 edges
+>C 447 graphs with 75 edges
+>C 63 graphs with 76 edges
+>C preprune calls=405217541 edge_rej=167 conn_rej=5754210 planarity_tests=90822820 nonplanar=61393453 | prune(maxn-1) calls=5788254 rej=307049
+>C final-level candidates deferred to PRUNE=239800062, of which canonical (planarity-tested)=161339202
+>C trivially planar (skipped test)=147906198  new-vertex degree histogram 0..6,7+: 329955 72438130 243256517 83033079 405483 0 0 0
+>C 1.318 us cpu per output graph, 0.350 us per preprune call
+>Z 107494249 graphs generated in 141.69 sec

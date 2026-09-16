@@ -1,0 +1,14 @@
+nauty-backend recomputation finished Wed Sep  9 23:44:13 PDT 2026
+piece 100/1000: identical (121751600 graphs)
+piece 250/1000: identical (99901819 graphs)
+piece 333/1000: identical (128156519 graphs)
+piece 421/1000: identical (114820319 graphs)
+piece 500/1000: identical (105922522 graphs)
+piece 587/1000: identical (123385415 graphs)
+piece 666/1000: identical (126138452 graphs)
+piece 713/1000: identical (126030405 graphs)
+piece 800/1000: identical (130072972 graphs)
+piece 876/1000: identical (131076623 graphs)
+piece 950/1000: identical (118658833 graphs)
+piece 999/1000: identical (102520159 graphs)
+RESULT: PASS

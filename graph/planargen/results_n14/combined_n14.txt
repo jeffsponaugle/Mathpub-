@@ -1,0 +1,25 @@
+>C 339722 graphs with 55 edges
+>C 6022143 graphs with 56 edges
+>C 50848432 graphs with 57 edges
+>C 270473444 graphs with 58 edges
+>C 1017576903 graphs with 59 edges
+>C 2880692140 graphs with 60 edges
+>C 6375615561 graphs with 61 edges
+>C 11313238350 graphs with 62 edges
+>C 16377361650 graphs with 63 edges
+>C 19578032113 graphs with 64 edges
+>C 19492037645 graphs with 65 edges
+>C 16256246886 graphs with 66 edges
+>C 11399818779 graphs with 67 edges
+>C 6737246119 graphs with 68 edges
+>C 3360456524 graphs with 69 edges
+>C 1416544333 graphs with 70 edges
+>C 505912342 graphs with 71 edges
+>C 153876251 graphs with 72 edges
+>C 40216577 graphs with 73 edges
+>C 9123403 graphs with 74 edges
+>C 1799700 graphs with 75 edges
+>C 300748 graphs with 76 edges
+>C 39260 graphs with 77 edges
+>C 3159 graphs with 78 edges
+>Z 117243822184 graphs generated in 159744.96 sec

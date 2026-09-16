@@ -1,0 +1,18 @@
+a(1) = 2
+a(2) = 29
+a(3) = 797
+a(4) = 2221
+a(5) = 35771
+a(1) = 2
+a(2) = 29
+a(3) = 797
+a(4) = 2221
+a(5) = 35771
+a(6) = 175781
+a(7) = 1698311
+a(8) = 43377311
+a(9) = 251951941
+a(10) = 1745730361
+a(11): no solution in the 11-digit range
+a(12): no solution in the 12-digit range
+a(13): no solution in the 13-digit range

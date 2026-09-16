@@ -1,0 +1,20 @@
+finished Wed Sep  9 23:04:20 PDT 2026
+pieces complete: naive 4/4, ours 4/4
+  k=13: naive         1858   ours         1858   OK
+  k=14: naive        22565   ours        22565   OK
+  k=15: naive       156291   ours       156291   OK
+  k=16: naive       787546   ours       787546   OK
+  k=17: naive      3103344   ours      3103344   OK
+  k=18: naive      9551594   ours      9551594   OK
+  k=19: naive     22131460   ours     22131460   OK
+  k=20: naive     37429595   ours     37429595   OK
+  k=21: naive     45061446   ours     45061446   OK
+  k=22: naive     37626166   ours     37626166   OK
+  k=23: naive     21030791   ours     21030791   OK
+  k=24: naive      7469076   ours      7469076   OK
+  k=25: naive      1550420   ours      1550420   OK
+  k=26: naive       163520   ours       163520   OK
+  k=27: naive         6657   ours         6657   OK
+  k=28: naive           68   ours           68   OK
+totals: naive 186092397  ours 186092397
+RESULT: PASS

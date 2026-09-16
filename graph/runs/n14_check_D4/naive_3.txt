@@ -1,0 +1,18 @@
+>A /Users/Jeff.Sponaugle/src/math/graph/planargen/../nauty2_9_3/countg --e
+        454 graphs : e=13
+       7599 graphs : e=14
+      68668 graphs : e=15
+     326492 graphs : e=16
+     808687 graphs : e=17
+    1498896 graphs : e=18
+    4233847 graphs : e=19
+   10756397 graphs : e=20
+   13212653 graphs : e=21
+    8196954 graphs : e=22
+    3813501 graphs : e=23
+    1173827 graphs : e=24
+     317798 graphs : e=25
+      41616 graphs : e=26
+       2345 graphs : e=27
+         15 graphs : e=28
+ 44459749 graphs altogether; cpu=28.97 sec

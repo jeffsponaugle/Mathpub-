@@ -1,0 +1,71 @@
+n=10 run finished at Thu Sep 10 09:42:11 PDT 2026
+done: 8 of 8 pieces complete
+=== aggregate + verification ===
+  k= 0:              0   expected              0  OK
+  k= 1:              0   expected              0  OK
+  k= 2:              0   expected              0  OK
+  k= 3:              0   expected              0  OK
+  k= 4:              0   expected              0  OK
+  k= 5:              0   expected              0  OK
+  k= 6:              0   expected              0  OK
+  k= 7:              0   expected              0  OK
+  k= 8:              0   expected              0  OK
+  k= 9:            106   expected            106  OK
+  k=10:            657   expected            657  OK
+  k=11:           2678   expected           2678  OK
+  k=12:           8548   expected           8548  OK
+  k=13:          22768   expected          22768  OK
+  k=14:          51816   expected          51816  OK
+  k=15:          99212   expected          99212  OK
+  k=16:         156780   expected         156780  OK
+  k=17:         199758   expected         199758  OK
+  k=18:         201912   expected         201912  OK
+  k=19:         158312   expected         158312  OK
+  k=20:          94321   expected          94321  OK
+  k=21:          41004   expected          41004  OK
+  k=22:          12394   expected          12394  OK
+  k=23:           2306   expected           2306  OK
+  k=24:            233   expected            233  OK
+n=10 coplanar: total=1052805 (geng >Z says 1052805) expected 1052805 OK
+  cpu 0.80 sec
+RESULT: PASS
+pieces complete: 8/8
+total graphs: 1052805   total cpu: 0.8 s = 0.00 core-hours
+preprune calls 2860492, planarity tests 642711, nonplanar 305958, trivially planar 1252936
+wrote /Users/Jeff.Sponaugle/src/math/graph/planargen/../runs/n10/combined_n10.txt
+wrote /Users/Jeff.Sponaugle/src/math/graph/planargen/../runs/n10/rows_with_n10.json (input for euler.py)
+=== Euler transform (A005470; A039735 rows) ===
+A003094 (connected planar): [1, 1, 2, 6, 20, 99, 646, 5974, 71885, 1052805]
+A005470 (all planar)      : [1, 2, 4, 11, 33, 142, 822, 6966, 79853, 1140916]
+A039735 row 9 (k=0..21): [1, 1, 2, 5, 11, 25, 63, 148, 345, 770, 1632, 3225, 5848, 9439, 13093, 15029, 13660, 9536, 4858, 1734, 378, 50]
+A039735 row 10 (k=0..24): [1, 1, 2, 5, 11, 26, 66, 165, 428, 1102, 2764, 6731, 15610, 33724, 66450, 115473, 171162, 209599, 206850, 160060, 94699, 41054, 12394, 2306, 233]
+=== b-file lines ===
+# A049334 row 10: terms 95..119
+95 0
+96 0
+97 0
+98 0
+99 0
+100 0
+101 0
+102 0
+103 0
+104 106
+105 657
+106 2678
+107 8548
+108 22768
+109 51816
+110 99212
+111 156780
+112 199758
+113 201912
+114 158312
+115 94321
+116 41004
+117 12394
+118 2306
+119 233
+# A003094: 10 1052805
+# A005470: 10 1140916
+# A039735 row 10 (k=0..24): [1, 1, 2, 5, 11, 26, 66, 165, 428, 1102, 2764, 6731, 15610, 33724, 66450, 115473, 171162, 209599, 206850, 160060, 94699, 41054, 12394, 2306, 233]

@@ -1,0 +1,20 @@
+>A ../../planargen/geng_coplanar_lr -X0x50000d9D13 n=14 e=63-78 class=245/1000
+>C 8 graphs with 64 edges
+>C 132 graphs with 65 edges
+>C 1242 graphs with 66 edges
+>C 6758 graphs with 67 edges
+>C 21892 graphs with 68 edges
+>C 38593 graphs with 69 edges
+>C 36606 graphs with 70 edges
+>C 24919 graphs with 71 edges
+>C 11668 graphs with 72 edges
+>C 3660 graphs with 73 edges
+>C 1084 graphs with 74 edges
+>C 1218 graphs with 75 edges
+>C 252 graphs with 76 edges
+>C 11 graphs with 77 edges
+>C preprune calls=525686 edge_rej=1 conn_rej=24838 planarity_tests=112884 nonplanar=50271 | prune(maxn-1) calls=23057 rej=3117
+>C final-level candidates deferred to PRUNE=225734, of which canonical (planarity-tested)=182510
+>C trivially planar (skipped test)=233092  new-vertex degree histogram 0..6,7+: 6231 184848 267248 42463 57 0 0 0
+>C 1.625 us cpu per output graph, 0.458 us per preprune call
+>Z 148043 graphs generated in 0.24 sec
