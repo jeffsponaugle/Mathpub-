@@ -289,6 +289,70 @@ byte-identical executable on any Apple-silicon Mac.
   and a triangulation stays connected after deleting two edges).
 - `lrtest`: `geng ... | ./lrtest` compares the two planarity testers.
 
+## lrplanar_sg: the planarity test for graphs of any size
+
+At Brendan McKay's request (he wants to include the left-right test in nauty,
+without the n <= WORDSIZE limit) `lrplanar_sg.c`/`.h` is a second
+implementation of the same algorithm for nauty's `sparsegraph`
+representation.  `lrplanar.c` is untouched and remains what the a(14) and
+a(15) runs used.  Differences:
+
+- `boolean lrplanar_sg(sparsegraph *sg)`: any size (vertex and edge counts
+  must fit in an `int`); loops and parallel edges are ignored, so multigraphs
+  are answered for their underlying simple graph.  `lrplanar_dense(g,m,n)`
+  wraps it for dense graphs; `lrplanar_freedyn()` frees the work space.
+- Work space via nauty's `DYNALLSTAT`/`DYNALLOC1` (thread-local with TLS),
+  grown on demand and kept between calls; about 10 ints per vertex and 11
+  per edge (phase-1 arrays are reused in phase 2).
+- Both depth-first searches are iterative (explicit stacks): a path on 10^7
+  vertices is fine.  Outgoing edges are sorted by nesting depth with one
+  global counting sort, so high-degree vertices cost linear time.
+- Edges are identified without a v x v table: each vertex's neighbour list
+  is copied once without loops/duplicates into its slice of a work array,
+  and the DFS distinguishes tree, back and already-oriented edges by heights.
+
+Measured on the M1 Pro (input reading included in wall time and memory):
+
+| graph | vertices | edges | answer | wall | peak RSS |
+|-------|----------|-------|--------|------|----------|
+| random Apollonian network | 10^7 | 3·10^7 | planar | 8.7 s | 1.65 GB |
+| same + K5 on 5 random vertices | 10^7 | 3·10^7+10 | non-planar | 4.5 s | 1.46 GB |
+| path | 10^7 | 10^7 | planar | 0.8 s | 0.92 GB |
+| 2000 x 2000 grid | 4·10^6 | 8·10^6 | planar | 0.4 s | 0.54 GB |
+| star K_{1,10^6} | 10^6 | 10^6 | planar | 0.06 s | 83 MB |
+
+On small graphs it runs at the speed of the bitmask version (0.7 us per
+graph on the 10-vertex graphs, versus 3.3 us for nauty's tester).  A side
+finding: nauty's `planarity.c` is quadratic in vertex degree (11 s for a
+star with 10^5 leaves, 46 s for 2·10^5), so the reference tester is skipped
+for the high-degree families in the test suite.
+
+### Test suite: `make tests` (or `./run_tests.sh [quick|full]`)
+
+`lrtest_sg` reads graph6/sparse6 of any size (loops and parallel edges
+allowed) and compares three testers on every graph: nauty's `planarity.c`
+(the original malloc version, linked from the nauty tree), `lrplanar_sg`,
+and `lrplanar` (for simple graphs with n <= 32); `-e p|n` additionally
+checks against a known answer.  `biggraphs` generates families with known
+planarity of any size (grids, cylinders, tori, ladders, Moebius ladders,
+paths, cycles, stars, wheels, K_{2,n}, K_{3,n}, random trees and forests,
+random Apollonian networks, those with random edges deleted, with K5 or
+K_{3,3} planted, subdivided K5, disconnected graphs with a far-away K5, and
+planar and non-planar multigraphs with loops and parallel edges).
+`run_tests.sh full` (4.7 minutes) runs 86 checks in eight tiers:
+
+1. every graph, connected or not, on 1..10 vertices (12,005,168 at n = 10), three testers;
+2. 720,000 random graphs near the planarity threshold, n = 11..64, including sparse ones with many components;
+3. 350,000 random regular multigraphs with loops and parallel edges;
+4. random sparse graphs with 100..10,000 vertices;
+5. 21 known-answer families at 10^4..10^5 vertices;
+6. 20 huge known-answer graphs at 10^6..10^7 vertices, with time and memory;
+7. regression: `geng_coplanar_lrsg` (the enumeration with the sparse tester
+   as backend) reproduces A003094 and the A049334 rows for n = 9, 10, 11;
+8. the same harness built with AddressSanitizer/UBSan on a sample of tiers 1-5.
+
+Result on 2026-09-17: 86 passed, 0 failed, no sanitizer reports.
+
 ## Notes
 
 - GPUs: the work is dominated by nauty's partition refinement and small
@@ -301,9 +365,11 @@ byte-identical executable on any Apple-silicon Mac.
   graphs, needs vertex-orbit counts per graph, ~100 core-hours at n = 14);
   the diagonal T(n,3n-7) and the disconnected counts A005470 - A003094 are
   not in OEIS.
-- Files: `coplanar.c` (hooks), `direct.c` (baseline), `lrplanar.[ch]`,
-  `lrtest.c`, `arena.c`, `planarity_arena.c`/`planarity.h` (patched copies
-  of nauty's), `launch.sh`/`finish.sh` (detached runs), `run_split.sh`,
-  `aggregate.py`, `verify.py`, `euler.py`, `bfile.py`, `check_*.sh`,
-  `compare_naive.py`, `a049334_rows.json` (OEIS reference rows 1..14),
-  `results_n14/`, `results_n15/`.
+- Files: `coplanar.c` (hooks), `direct.c` (baseline), `lrplanar.[ch]`
+  (bitmask test used for the runs), `lrplanar_sg.[ch]` (any-size sparsegraph
+  test), `lrtest.c`, `lrtest_sg.c`, `biggraphs.c`, `run_tests.sh`,
+  `arena.c`, `planarity_arena.c`/`planarity.h` (patched copies of nauty's),
+  `launch.sh`/`finish.sh` (detached runs), `run_split.sh`, `aggregate.py`,
+  `verify.py`, `euler.py`, `bfile.py`, `check_*.sh`, `compare_naive.py`,
+  `a049334_rows.json` (OEIS reference rows 1..14), `results_n14/`,
+  `results_n15/`.

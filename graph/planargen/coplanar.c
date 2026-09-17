@@ -32,6 +32,9 @@
 #ifdef USE_LR
 #include "lrplanar.h"      /* -DUSE_LR: left-right test instead of nauty's */
 #endif
+#ifdef USE_LRSG
+#include "lrplanar_sg.h"   /* -DUSE_LRSG: sparsegraph left-right test (regression testing) */
+#endif
 
 #if MAXN > 32
 #error "coplanar.c is written for geng compiled with WORDSIZE=32, MAXN=32"
@@ -97,6 +100,12 @@ isplanar_bitmask(graph *gc, int n, int ne)
 #ifdef USE_LR
     ++np_planar_tests;
     ans = lr_isplanar(gc, n);
+    if (!ans) ++np_nonplanar;
+    return ans;
+#endif
+#ifdef USE_LRSG
+    ++np_planar_tests;
+    ans = lrplanar_dense(gc, 1, n);
     if (!ans) ++np_nonplanar;
     return ans;
 #endif

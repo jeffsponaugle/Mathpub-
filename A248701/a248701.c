@@ -789,10 +789,11 @@ static void print_summary(scan_t *sc)
     double secs = sc->t1 - sc->t0;
     u64 to = scanned_to(sc);
     bool complete = sc->cf >= sc->nchunks;
-    printf("# scanned [%" PRIu64 ", %" PRIu64 "]%s in %.1f s (%s numbers/s%s): %" PRIu64 " primes, largest gap %" PRIu64 "\n",
+    printf("# scanned [%" PRIu64 ", %" PRIu64 "]%s in %.1f s (%s numbers/s%s): %" PRIu64 " primes and largest gap %" PRIu64
+           " in [%" PRIu64 ", %" PRIu64 "]\n",
            sc->start, to, complete ? "" : g_stop ? " (interrupted)" : " (stopped early, -n)", secs,
            fmt_eng((double)(to + 1 - sc->start) / (secs > 0 ? secs : 1), b1),
-           sc->elapsed0 > 0 ? ", this run" : "", sc->primes, sc->maxgap);
+           sc->elapsed0 > 0 ? ", this run" : "", sc->primes, sc->maxgap, sc->origin, to);
     if (sc->elapsed0 > 0) printf("# total time including earlier runs %.1f s\n", sc->elapsed0 + secs);
 
     int maxd = 0;

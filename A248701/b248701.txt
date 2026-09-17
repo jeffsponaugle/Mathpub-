@@ -1,7 +1,7 @@
 # A248701: Smallest prime such that the preceding n prime gaps are increasing and the following n prime gaps are decreasing.
-# Table of n, a(n) for n = 1..9.
-# a(1)-a(7) as in the OEIS entry; a(8), a(9) computed with a248701.c (Sep 16 2026),
-# exhaustive scan of the primes below 10^13: a(10) > 10^13.
+# Table of n, a(n) for n = 1..10.
+# a(1)-a(7) as in the OEIS entry; a(8)-a(10) computed with a248701.c (Sep 16-17 2026),
+# exhaustive scan of the primes below 6.02*10^13: a(11) > 6.02*10^13.
 1 3
 2 7
 3 359
@@ -11,3 +11,4 @@
 7 294276293
 8 12579905251
 9 5108217950351
+10 59852066157421

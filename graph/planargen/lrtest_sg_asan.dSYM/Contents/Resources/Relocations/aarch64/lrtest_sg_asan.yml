@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     lrtest_sg_asan
+relocations:     []
+...

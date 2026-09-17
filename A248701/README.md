@@ -43,22 +43,25 @@ depth. Each a(n) is non-decreasing in n, since depth ≥ n+1 implies depth ≥ n
 
 ## Results
 
-Everything below was computed with this tool on an Apple M1 Pro (10 cores,
-Sep 16 2026, sharing the machine with another job). The scan of all primes
-below 10¹³ (346,065,536,839 primes) took 630 s and reproduces every one of the
-26 terms in the four OEIS entries.
+Everything below was computed with this tool on Sep 16–17 2026: the primes
+below 1.357 × 10¹³ on an Apple M1 Pro (10 cores, sharing the machine with
+another job), the rest on a Mac Studio resuming from the checkpoint. All
+1,962,383,843,874 primes below 60233937494016 (6.02 × 10¹³) have been
+examined, in 2335 s of scanning altogether, and every one of the 26 terms in
+the four OEIS entries is reproduced.
 
-**Two new terms of A248701** (the OEIS entry, keyword `more`, ends at a(7)):
+**Three new terms of A248701** (the OEIS entry, keyword `more`, ends at a(7)):
 
 | n | a(n) | gaps into a(n) | gaps out of a(n) |
 |---|------|----------------|------------------|
 | 8 | **12579905251** | 4 6 12 12 18 18 20 24 | 46 14 12 10 8 6 6 4 |
 | 9 | **5108217950351** | 18 18 20 22 24 24 24 26 34 | 62 58 56 46 36 30 24 14 6 |
+| 10 | **59852066157421** | 8 10 24 26 34 38 40 50 90 102 | 88 68 52 30 24 20 18 18 10 8 |
 
-and **a(10) > 10¹³**. The sequence is now
+and **a(11) > 6.02 × 10¹³**. The sequence is now
 
 ```
-3, 7, 359, 7853, 96401, 2812099, 294276293, 12579905251, 5108217950351
+3, 7, 359, 7853, 96401, 2812099, 294276293, 12579905251, 5108217950351, 59852066157421
 ```
 
 **New terms of the companions** from the same scan:
@@ -69,51 +72,60 @@ and **a(10) > 10¹³**. The sequence is now
 |         | a(8) = **2400369437** | 76 30 26 24 12 12 10 6 | 6 6 8 10 30 32 34 36 |
 |         | a(9) = **299917793009** | 80 70 44 36 36 24 10 6 6 | 8 12 12 12 16 24 24 24 26 |
 | A248703 | a(7) = **149822520893** | 6 10 12 30 36 54 60 72 | 78 56 40 20 16 14 10 2 |
+|         | a(8) = **13193280477899** | 6 10 12 14 16 18 30 102 150 | 90 68 36 24 22 14 10 8 6 |
 | A248704 | a(7) = **3531448007** | 44 40 30 26 16 14 4 | 6 8 10 12 26 30 58 |
 |         | a(8) = **17190066197** | 66 50 24 18 16 14 10 6 | 6 8 10 12 14 16 18 36 |
+|         | a(9) = **37148264596189** | 62 58 48 32 28 26 18 16 2 | 4 6 12 18 20 28 30 60 122 |
 
-with A248702(10) > 10¹³, A248703(8) > 10¹³ and A248704(9) > 10¹³. The
-A248702 entry only had the comment "a(7) >= 8960453, if it exists"; it exists.
+with A248702(10), A248703(9) and A248704(10) all > 6.02 × 10¹³. The A248702
+entry only had the comment "a(7) >= 8960453, if it exists"; it exists.
 
 ```
 A248702: 2, 3, 19, 43, 2687, 179819, 1107791, 938665577, 2400369437, 299917793009
-A248703: 23, 1439, 21433, 1130863, 19881311, 331542583, 149822520893
-A248704: 3, 19, 1429, 25243, 340577, 1107791, 3531448007, 17190066197
+A248703: 23, 1439, 21433, 1130863, 19881311, 331542583, 149822520893, 13193280477899
+A248704: 3, 19, 1429, 25243, 340577, 1107791, 3531448007, 17190066197, 37148264596189
 ```
 
-The full scan output with every record and its surrounding gaps is in
-`scan_1e13.txt`; the terms are collected in `DATA.txt` and the b-files
-`b248701.txt` … `b248704.txt`.
+The scan output with every record below 10¹³ and its surrounding gaps is in
+`scan_1e13.txt` and the Mac Studio's final summary in `scan_1e15_summary.txt`
+(the record lines for A248704(9) and a(10) are in the Studio's
+`scan_1e15.txt`). The terms are collected in `DATA.txt` and the b-files
+`b248701.txt` … `b248704.txt`; `verify_py_windows.txt` lists all eleven new
+terms with their windows of consecutive primes.
 
-### Depth statistics below 10¹³
+### Depth statistics below 6.02 × 10¹³
 
-Number of primes p < 10¹³ of depth ≥ d (each prime except 2 has depth ≥ 1;
-depths below 4 are only examined below 2³⁰, see `-d`):
+Number of primes p < 60233937494016 of depth ≥ d (every prime except 2 has
+depth ≥ 1; depths below 4 are only examined below 2³⁰, see `-d`):
 
-| d | 4 | 5 | 6 | 7 | 8 | 9 |
-|---|---|---|---|---|---|---|
-| peak (A248701) | 711387410 | 31635394 | 999414 | 23913 | 442 | 6 |
-| valley (A248702) | 695705113 | 30316986 | 941602 | 21986 | 405 | 7 |
-| strict peak (A248703) | 452401589 | 14964865 | 328619 | 5162 | 68 | 0 |
-| strict valley (A248704) | 445357981 | 14469023 | 312373 | 4756 | 62 | 0 |
+| d | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|
+| peak (A248701) | 4000374598 | 177063528 | 5565658 | 131963 | 2492 | 45 | 1 |
+| valley (A248702) | 3914675711 | 169843380 | 5245379 | 122209 | 2204 | 31 | 0 |
+| strict peak (A248703) | 2604151963 | 87029116 | 1936140 | 30587 | 362 | 3 | 0 |
+| strict valley (A248704) | 2563256345 | 84140091 | 1836529 | 28707 | 300 | 3 | 0 |
 
-For independent continuous gaps P(depth ≥ d) would be 1/(d!)², i.e. the count
-would fall by a factor d² per step. The observed ratios are about 0.8 d² for
-the non-strict shapes (ties help a non-strict run) and about d² for the strict
-ones: 22 → 32 → 42 → 54 → 74 for the peak counts above.
+For independent continuous gaps P(depth ≥ d) would be 1/(d!)², so the counts
+would fall by a factor d² per step. The observed ratios
+count(≥ d)/count(≥ d+1) for the peak shape are 22.6, 31.8, 42.2 and 53.0 for
+d = 4..7, i.e. 0.83–0.90 d²: ties help a non-strict run. The strict shapes
+go the other way, 29.9, 45.0, 63.3 and 84.5, i.e. 1.2–1.3 d², because a tie
+breaks a strict run. The peak ratios 55 and 45 for d = 8, 9 rest on only 45
+and 1 hits.
 
-### Where a(10) should be
+### Where a(11) should be
 
-Six primes of peak depth ≥ 9 below 10¹³ (one per 5.8 × 10¹⁰ primes), and a
-ratio of about 80 for the next step, give about 0.6 primes of depth ≥ 10 in
-[10¹³, 10¹⁴] and about 6 in [10¹⁴, 10¹⁵]. So a(10) is below 10¹⁴ with
-probability about 45 % and below 10¹⁵ with probability above 99.8 %; the
-expected position is around 10¹⁴. Each further term costs another factor of
-roughly 100 in the search bound: a(11) should be near 10¹⁶ (weeks of sieving at
-the rates below) and a(12) beyond 10¹⁸.
+With 45 primes of peak depth ≥ 9 among the 1.96 × 10¹² primes below
+6.02 × 10¹³, and ratios of about 80 and 100 for the next two steps, a prime
+has depth ≥ 11 with probability about 3 × 10⁻¹⁵. That gives an expected 0.09
+such primes below 10¹⁵, 0.8 below 10¹⁶, 2.4 below 3 × 10¹⁶ and 8 below 10¹⁷,
+so a(11) is probably between 10¹⁵ and 3 × 10¹⁶ (median about 8 × 10¹⁵). The
+Mac Studio scanned 3.5 × 10¹⁰ numbers/s around 5 × 10¹³, and the sieve slows
+by about 1.7× toward 10¹⁶, so reaching 10¹⁶ takes about a week and 10¹⁷ about
+two months. The checkpointed command, which also picks up A248702(10),
+A248703(9) and A248704(10) on the way and stops by itself at a(11), is
 
-A checkpointed continuation of the scan toward 10¹⁵ with `-n 10` (stop as
-soon as a(10) is known) was started on Sep 16 2026; see `scan_1e15.txt`.
+    ./a248701 scan 1e17 -n 11 -S a248701.state > scan_1e17.txt 2> scan_1e17.log
 
 ### Performance
 
@@ -130,7 +142,9 @@ primesieve's iterator, single thread, plain prime enumeration:
 The depth bookkeeping costs a few percent on top of that with the default
 `-d 4`. The 10¹³ scan ran at 1.6 × 10¹⁰ numbers/s with 10 threads while
 another 9-thread job had the rest of the machine (the process got about four
-cores); on an idle machine expect roughly twice that.
+cores); on an idle machine expect roughly twice that. On the Mac Studio the
+continuation from 1.357 × 10¹³ to 6.02 × 10¹³ ran at 3.5 × 10¹⁰ numbers/s
+with the default thread count.
 
 ## Verification
 
@@ -153,9 +167,19 @@ cores); on an idle machine expect roughly twice that.
   `verify_a248701.py window P N` confirmed for every new term that the 2N+1
   listed numbers are consecutive primes (all numbers between them composite)
   with the stated gap pattern (`verify_py_windows.txt`).
-* A full independent Python scan to 5.2 × 10¹² (for the minimality of a(9))
-  runs at low priority with four processes; its output goes to
-  `verify_py_5.2e12.txt`.
+* `verify_a248701.py scan 5.2e12 268435456 --procs=8` (79 minutes on a Mac
+  Studio, `verify_py_5.2e12.txt`) independently reproduces a(8) = 12579905251
+  and **a(9) = 5108217950351**, together with A248702(7..9), A248703(7) and
+  A248704(7..8), and gives a(10) > 5.2 × 10¹². The C tool over the same range
+  (`cross_5.2e12.txt`, 288 s) gives the same 184,126,901,158 primes, the same
+  largest gap 652, and the same depth histogram for every shape and every depth
+  from 4 to 9 (24 numbers, e.g. 230 primes of peak depth ≥ 8 and 1 of depth
+  ≥ 9). The three terms above the Python-scanned range, A248703(8) =
+  13193280477899, A248704(9) = 37148264596189 and a(10) = 59852066157421, have
+  verified windows, but their minimality rests on the C scan alone (the scan
+  that agreed with Python on every count below 5.2 × 10¹²). Repeating the
+  Python scan to 6.03 × 10¹³ would take about 15 hours with eight processes on
+  the Studio: `verify_a248701.py scan 6.03e13 268435456 --procs=8`.
 
 ## Usage
 
@@ -163,7 +187,7 @@ cores); on an idle machine expect roughly twice that.
 make                        # needs primesieve: brew install primesieve
 ./a248701 selftest
 ./a248701 scan 1e13 -S a248701.state          # all four sequences below 10^13, checkpointed
-./a248701 scan 1e15 -n 10 -S a248701.state    # continue, stop once A248701(10) is known
+./a248701 scan 1e17 -n 11 -S a248701.state    # continue, stop once A248701(11) is known
 ./a248701 show 5108217950351                  # depths of a prime and the gaps around it
 python3 verify_a248701.py scan 1.72e10 --procs=4
 python3 verify_a248701.py window 12579905251 8
@@ -201,17 +225,23 @@ checkpoint is just the frontier plus the totals.
 * `a248701.c`, `Makefile` — the tool
 * `verify_a248701.py` — independent Python/numpy check
 * `scan_1e13.txt`, `scan_1e13.log`, `scan_1e13.state` — the complete scan below 10¹³
-* `scan_1e15.txt`, `scan_1e15.log`, `a248701.state` — the continuation toward a(10)
-* `cross_1.72e10.txt`, `verify_py_1.72e10.txt`, `verify_py_windows.txt`, `verify_py_5.2e12.txt` — cross-checks
+* `scan_1e15.txt`, `scan_1e15.log`, `a248701.state` — the M1 Pro leg of the continuation (to 1.357 × 10¹³); the complete files live on the Mac Studio
+* `scan_1e15_summary.txt` — the Mac Studio's summary of the continuation, complete below 6.02 × 10¹³
+* `cross_1.72e10.txt`, `verify_py_1.72e10.txt`, `cross_5.2e12.txt`, `verify_py_5.2e12.txt`, `verify_py_windows.txt` — cross-checks
 * `selftest.txt` — selftest output
 * `DATA.txt`, `b248701.txt`, `b248702.txt`, `b248703.txt`, `b248704.txt` — terms
 
 ## Notes for the OEIS submissions
 
-* A248701: add a(8) = 12579905251, a(9) = 5108217950351; b-file n = 1..9;
-  comment "a(10) > 10^13" (to be raised when the continuation finishes); the
-  `more` keyword stays.
+* A248701: add a(8) = 12579905251, a(9) = 5108217950351, a(10) = 59852066157421;
+  b-file n = 1..10; comment "a(11) > 6.02*10^13"; the `more` keyword stays.
+  A comment that the monotonicity is weak and that the two gaps adjacent to
+  a(n) are not compared (a(7) has 60 | 24 around it, a(8) has 24 | 46) would
+  remove the ambiguity in the name; A248703 is the strict version.
 * A248702: add a(7) = 938665577, a(8) = 2400369437, a(9) = 299917793009;
-  replace the comment "a(7) >= 8960453, if it exists" by "a(10) > 10^13".
-* A248703: add a(7) = 149822520893; "a(8) > 10^13".
-* A248704: add a(7) = 3531448007, a(8) = 17190066197; "a(9) > 10^13".
+  replace the comment "a(7) >= 8960453, if it exists" by "a(10) > 6.02*10^13".
+* A248703: add a(7) = 149822520893, a(8) = 13193280477899; "a(9) > 6.02*10^13".
+  Worth a comment that the index counts strict steps, so a(n) has n+1 gaps on
+  each side.
+* A248704: add a(7) = 3531448007, a(8) = 17190066197, a(9) = 37148264596189;
+  "a(10) > 6.02*10^13".
