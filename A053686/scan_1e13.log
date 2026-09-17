@@ -1,0 +1,13 @@
+scanning gaps after the primes in [4302407359, 10000000000000) in 1000 chunks of 10000000000 with 10 threads
+progress: 0.2s  pos 4.30241e+09 (0.00%)  0/s  0 primes  ETA ?  records to #0  repeats 0
+progress: 30.4s  pos 1.1043e+12 (11.00%)  3.62e+10/s  4.12e+10 primes  ETA 4m06s  records to #50  repeats 0
+progress: 1m00s  pos 2.1043e+12 (21.01%)  3.46e+10/s  7.68e+10 primes  ETA 3m47s  records to #53  repeats 0
+progress: 1m30s  pos 3.1043e+12 (31.01%)  3.41e+10/s  1.12e+11 primes  ETA 3m22s  records to #54  repeats 0
+progress: 2m02s  pos 4.1043e+12 (41.02%)  3.36e+10/s  1.46e+11 primes  ETA 2m55s  records to #54  repeats 0
+progress: 2m32s  pos 5.0243e+12 (50.22%)  3.28e+10/s  1.78e+11 primes  ETA 2m31s  records to #54  repeats 0
+progress: 3m03s  pos 6.0143e+12 (60.13%)  3.22e+10/s  2.12e+11 primes  ETA 2m03s  records to #54  repeats 0
+progress: 3m33s  pos 6.9243e+12 (69.23%)  3.16e+10/s  2.43e+11 primes  ETA 1m37s  records to #54  repeats 0
+progress: 4m03s  pos 7.7743e+12 (77.73%)  3.03e+10/s  2.71e+11 primes  ETA 1m13s  records to #55  repeats 0
+progress: 4m33s  pos 8.7043e+12 (87.04%)  3.03e+10/s  3.02e+11 primes  ETA 42.8s  records to #55  repeats 0
+progress: 5m03s  pos 9.5043e+12 (95.04%)  2.93e+10/s  3.29e+11 primes  ETA 16.9s  records to #55  repeats 0
+9995697592641 numbers, 345861921212 primes in 5m20s (3.12e+10 numbers/s)

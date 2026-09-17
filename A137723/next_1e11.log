@@ -1,0 +1,866 @@
+[next] step 1: exhaustive scan to 100000000000
+[scan] 91043 composite gapless numbers <= 100000000000 generated in 0.01s
+[scan] done: 640 chunks of 156250001 in 2.68s                                        
+[next] step 2: structural search (even endpoint <= 18446744073709551616) for each missing even n <= 463
+[search] n = 32, d = n+1 = 33 = 3*11, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 4; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 64497 even gapless E in 0.20s, 2 runs of exactly 32 found
+[next]   a(32) = 18014398509481952
+[search] n = 44, d = n+1 = 45 = 3^2*5, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 1 run of exactly 44 found
+[next]   a(44) = 274877906900
+[search] n = 50, d = n+1 = 51 = 3*17, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 6; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 560167 even gapless E in 0.21s, 0 runs of exactly 50 found
+[next]   a(50) > 18446744073709551566
+[search] n = 62, d = n+1 = 63 = 3^2*7, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.20s, 0 runs of exactly 62 found
+[next]   a(62) > 18446744073709551554
+[search] n = 68, d = n+1 = 69 = 3*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 0.21s, 2 runs of exactly 68 found
+[next]   a(68) = 562949953421313
+[search] n = 74, d = n+1 = 75 = 3*5^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 74 found
+[next]   a(74) > 18446744073709551542
+[search] n = 80, d = n+1 = 81 = 3^4, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 2 runs of exactly 80 found
+[next]   a(80) = 562949953421232
+[search] n = 86, d = n+1 = 87 = 3*29, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 9; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2112462 even gapless E in 0.21s, 1 run of exactly 86 found
+[next]   a(86) = 1099511627690
+[search] n = 92, d = n+1 = 93 = 3*31, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 10; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2383422 even gapless E in 0.20s, 1 run of exactly 92 found
+[next]   a(92) = 1152921504606846884
+[search] n = 94, d = n+1 = 95 = 5*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 7; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 1067492 even gapless E in 0.21s, 12 runs of exactly 94 found
+[next]   a(94) = 31701690482689
+[search] n = 98, d = n+1 = 99 = 3^2*11, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 4; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 64497 even gapless E in 0.20s, 0 runs of exactly 98 found
+[next]   a(98) > 18446744073709551518
+[search] n = 104, d = n+1 = 105 = 3*5*7, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 104 found
+[next]   a(104) > 18446744073709551512
+[search] n = 110, d = n+1 = 111 = 3*37, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 11; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2498371 even gapless E in 0.21s, 1 run of exactly 110 found
+[next]   a(110) = 9007199254740882
+[search] n = 114, d = n+1 = 115 = 5*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 0.21s, 12 runs of exactly 114 found
+[next]   a(114) = 16698832846849
+[search] n = 116, d = n+1 = 117 = 3^2*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 5; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 221943 even gapless E in 0.21s, 0 runs of exactly 116 found
+[next]   a(116) > 18446744073709551500
+[search] n = 122, d = n+1 = 123 = 3*41, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 12; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2531008 even gapless E in 0.21s, 0 runs of exactly 122 found
+[next]   a(122) > 18446744073709551494
+[search] n = 124, d = n+1 = 125 = 5^3, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 7 runs of exactly 124 found
+[next]   a(124) = 65810851921133444
+[search] n = 128, d = n+1 = 129 = 3*43, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 13; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2536990 even gapless E in 0.21s, 1 run of exactly 128 found
+[next]   a(128) = 2251799813685120
+[search] n = 132, d = n+1 = 133 = 7*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 7; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 1067492 even gapless E in 0.21s, 51 runs of exactly 132 found
+[next]   a(132) = 1107168749868
+[search] n = 134, d = n+1 = 135 = 3^3*5, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 1 run of exactly 134 found
+[next]   a(134) = 4611686018427387905
+[search] n = 140, d = n+1 = 141 = 3*47, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 14; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537636 even gapless E in 0.21s, 0 runs of exactly 140 found
+[next]   a(140) > 18446744073709551476
+[search] n = 142, d = n+1 = 143 = 11*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 4
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 268 runs of exactly 142 found
+[next]   a(142) = 367499999858
+[search] n = 144, d = n+1 = 145 = 5*29, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 9; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2112462 even gapless E in 0.20s, 1 run of exactly 144 found
+[next]   a(144) = 7204542494255957664
+[search] n = 146, d = n+1 = 147 = 3*7^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.21s, 0 runs of exactly 146 found
+[next]   a(146) > 18446744073709551470
+[search] n = 152, d = n+1 = 153 = 3^2*17, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 6; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 560167 even gapless E in 0.21s, 0 runs of exactly 152 found
+[next]   a(152) > 18446744073709551464
+[search] n = 154, d = n+1 = 155 = 5*31, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 10; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2383422 even gapless E in 0.20s, 0 runs of exactly 154 found
+[next]   a(154) > 18446744073709551462
+[search] n = 158, d = n+1 = 159 = 3*53, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 15; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 1 run of exactly 158 found
+[next]   a(158) = 18014398509481985
+[search] n = 160, d = n+1 = 161 = 7*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 0.20s, 16 runs of exactly 160 found
+[next]   a(160) = 48599999999840
+[search] n = 164, d = n+1 = 165 = 3*5*11, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 4; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 64497 even gapless E in 0.20s, 0 runs of exactly 164 found
+[next]   a(164) > 18446744073709551452
+[search] n = 170, d = n+1 = 171 = 3^2*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 7; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 1067492 even gapless E in 0.20s, 0 runs of exactly 170 found
+[next]   a(170) > 18446744073709551446
+[search] n = 172, d = n+1 = 173 = 173, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 39
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 4774 runs of exactly 172 found
+[next]   a(172) = 210108937501
+[search] n = 174, d = n+1 = 175 = 5^2*7, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 1 run of exactly 174 found
+[next]   a(174) = 14409084988511915442
+[search] n = 176, d = n+1 = 177 = 3*59, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 16; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 176 found
+[next]   a(176) > 18446744073709551440
+[search] n = 182, d = n+1 = 183 = 3*61, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 17; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 182 found
+[next]   a(182) > 18446744073709551434
+[search] n = 184, d = n+1 = 185 = 5*37, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 11; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2498371 even gapless E in 0.21s, 1 run of exactly 184 found
+[next]   a(184) = 6655833320221310792
+[search] n = 188, d = n+1 = 189 = 3^3*7, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.21s, 0 runs of exactly 188 found
+[next]   a(188) > 18446744073709551428
+[search] n = 190, d = n+1 = 191 = 191, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 42
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.12s, 3049 runs of exactly 190 found
+[next]   a(190) = 191265338881
+[search] n = 192, d = n+1 = 193 = 193, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 43
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 2505 runs of exactly 192 found
+[next]   a(192) = 336213237361
+[search] n = 194, d = n+1 = 195 = 3*5*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 5; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 221943 even gapless E in 0.21s, 0 runs of exactly 194 found
+[next]   a(194) > 18446744073709551422
+[search] n = 196, d = n+1 = 197 = 197, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 44
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.12s, 2125 runs of exactly 196 found
+[next]   a(196) = 303079096321
+[search] n = 200, d = n+1 = 201 = 3*67, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 18; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 200 found
+[next]   a(200) > 18446744073709551416
+[search] n = 202, d = n+1 = 203 = 7*29, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 9; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2112462 even gapless E in 0.21s, 11 runs of exactly 202 found
+[next]   a(202) = 3765727153080001
+[search] n = 204, d = n+1 = 205 = 5*41, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 12; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2531008 even gapless E in 0.21s, 0 runs of exactly 204 found
+[next]   a(204) > 18446744073709551412
+[search] n = 206, d = n+1 = 207 = 3^2*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 0.20s, 0 runs of exactly 206 found
+[next]   a(206) > 18446744073709551410
+[search] n = 208, d = n+1 = 209 = 11*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 7; a prime odd partner needs k <= 4
+[search] 11855 top-level tasks
+[search] enumerated 1067492 even gapless E in 0.20s, 39 runs of exactly 208 found
+[next]   a(208) = 45018750000001
+[search] n = 210, d = n+1 = 211 = 211, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 46
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.11s, 1661 runs of exactly 210 found
+[next]   a(210) = 826455168001
+[search] n = 212, d = n+1 = 213 = 3*71, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 19; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 212 found
+[next]   a(212) > 18446744073709551404
+[search] n = 214, d = n+1 = 215 = 5*43, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 13; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2536990 even gapless E in 0.20s, 0 runs of exactly 214 found
+[next]   a(214) > 18446744073709551402
+[search] n = 216, d = n+1 = 217 = 7*31, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 10; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2383422 even gapless E in 0.21s, 3 runs of exactly 216 found
+[next]   a(216) = 459165023999784
+[search] n = 218, d = n+1 = 219 = 3*73, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 20; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 218 found
+[next]   a(218) > 18446744073709551398
+[search] n = 220, d = n+1 = 221 = 13*17, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 5
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.62s, 138 runs of exactly 220 found
+[next]   a(220) = 977961599780
+[search] n = 222, d = n+1 = 223 = 223, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 47
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 1303 runs of exactly 222 found
+[next]   a(222) = 2864775513601
+[search] n = 224, d = n+1 = 225 = 3^2*5^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 224 found
+[next]   a(224) > 18446744073709551392
+[search] n = 226, d = n+1 = 227 = 227, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 48
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 1143 runs of exactly 226 found
+[next]   a(226) = 284093963774
+[search] n = 228, d = n+1 = 229 = 229, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 49
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 1061 runs of exactly 228 found
+[next]   a(228) = 63166515211801
+[search] n = 230, d = n+1 = 231 = 3*7*11, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.21s, 0 runs of exactly 230 found
+[next]   a(230) > 18446744073709551386
+[search] n = 232, d = n+1 = 233 = 233, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 50
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 890 runs of exactly 232 found
+[next]   a(232) = 4289205560408
+[search] n = 234, d = n+1 = 235 = 5*47, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 14; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537636 even gapless E in 0.21s, 0 runs of exactly 234 found
+[next]   a(234) > 18446744073709551382
+[search] n = 236, d = n+1 = 237 = 3*79, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 21; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 236 found
+[next]   a(236) > 18446744073709551380
+[search] n = 238, d = n+1 = 239 = 239, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 51
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.11s, 807 runs of exactly 238 found
+[next]   a(238) = 2797632337501
+[search] n = 240, d = n+1 = 241 = 241, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 52
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.15s, 623 runs of exactly 240 found
+[next]   a(240) = 10420583701260
+[search] n = 242, d = n+1 = 243 = 3^5, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 242 found
+[next]   a(242) > 18446744073709551374
+[search] n = 244, d = n+1 = 245 = 5*7^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 244 found
+[next]   a(244) > 18446744073709551372
+[search] n = 246, d = n+1 = 247 = 13*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 7; a prime odd partner needs k <= 5
+[search] 11855 top-level tasks
+[search] enumerated 1067492 even gapless E in 0.41s, 53 runs of exactly 246 found
+[next]   a(246) = 340765286399754
+[search] n = 248, d = n+1 = 249 = 3*83, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 22; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 248 found
+[next]   a(248) > 18446744073709551368
+[search] n = 250, d = n+1 = 251 = 251, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 53
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.15s, 539 runs of exactly 250 found
+[next]   a(250) = 58841562634471
+[search] n = 252, d = n+1 = 253 = 11*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k <= 4
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 0.20s, 9 runs of exactly 252 found
+[next]   a(252) = 354360607271748
+[search] n = 254, d = n+1 = 255 = 3*5*17, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 6; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 560167 even gapless E in 0.21s, 0 runs of exactly 254 found
+[next]   a(254) > 18446744073709551362
+[search] n = 256, d = n+1 = 257 = 257, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 54
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 455 runs of exactly 256 found
+[next]   a(256) = 3608590985744
+[search] n = 258, d = n+1 = 259 = 7*37, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 11; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2498371 even gapless E in 0.21s, 2 runs of exactly 258 found
+[next]   a(258) = 12694994583551742
+[search] n = 260, d = n+1 = 261 = 3^2*29, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 9; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2112462 even gapless E in 0.21s, 0 runs of exactly 260 found
+[next]   a(260) > 18446744073709551356
+[search] n = 262, d = n+1 = 263 = 263, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 55
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.11s, 378 runs of exactly 262 found
+[next]   a(262) = 5303305507238
+[search] n = 264, d = n+1 = 265 = 5*53, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 15; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 264 found
+[next]   a(264) > 18446744073709551352
+[search] n = 266, d = n+1 = 267 = 3*89, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 23; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 266 found
+[next]   a(266) > 18446744073709551350
+[search] n = 268, d = n+1 = 269 = 269, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 56
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 322 runs of exactly 268 found
+[next]   a(268) = 36172586800351
+[search] n = 270, d = n+1 = 271 = 271, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 57
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 308 runs of exactly 270 found
+[next]   a(270) = 21181142020501
+[search] n = 272, d = n+1 = 273 = 3*7*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.20s, 0 runs of exactly 272 found
+[next]   a(272) > 18446744073709551344
+[search] n = 274, d = n+1 = 275 = 5^2*11, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 4; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 64497 even gapless E in 0.20s, 0 runs of exactly 274 found
+[next]   a(274) > 18446744073709551342
+[search] n = 276, d = n+1 = 277 = 277, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 58
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.15s, 264 runs of exactly 276 found
+[next]   a(276) = 209563200000001
+[search] n = 278, d = n+1 = 279 = 3^2*31, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 10; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2383422 even gapless E in 0.21s, 0 runs of exactly 278 found
+[next]   a(278) > 18446744073709551338
+[search] n = 280, d = n+1 = 281 = 281, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 59
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.15s, 214 runs of exactly 280 found
+[next]   a(280) = 10274230536290
+[search] n = 282, d = n+1 = 283 = 283, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 199 runs of exactly 282 found
+[next]   a(282) = 392841187201
+[search] n = 284, d = n+1 = 285 = 3*5*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 7; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 1067492 even gapless E in 0.21s, 0 runs of exactly 284 found
+[next]   a(284) > 18446744073709551332
+[search] n = 286, d = n+1 = 287 = 7*41, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 12; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2531008 even gapless E in 0.21s, 1 run of exactly 286 found
+[next]   a(286) = 1446039226782720001
+[search] n = 288, d = n+1 = 289 = 17^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 6
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 1.03s, 48 runs of exactly 288 found
+[next]   a(288) = 508463628751
+[search] n = 290, d = n+1 = 291 = 3*97, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 24; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 290 found
+[next]   a(290) > 18446744073709551326
+[search] n = 292, d = n+1 = 293 = 293, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.12s, 181 runs of exactly 292 found
+[next]   a(292) = 198300815212208
+[search] n = 294, d = n+1 = 295 = 5*59, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 16; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 294 found
+[next]   a(294) > 18446744073709551322
+[search] n = 296, d = n+1 = 297 = 3^3*11, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 4; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 64497 even gapless E in 0.20s, 0 runs of exactly 296 found
+[next]   a(296) > 18446744073709551320
+[search] n = 298, d = n+1 = 299 = 13*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k <= 5
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 0.41s, 12 runs of exactly 298 found
+[next]   a(298) = 1996521468923521
+[search] n = 300, d = n+1 = 301 = 7*43, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 13; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2536990 even gapless E in 0.20s, 2 runs of exactly 300 found
+[next]   a(300) = 9640261511884500
+[search] n = 302, d = n+1 = 303 = 3*101, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 25; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 302 found
+[next]   a(302) > 18446744073709551314
+[search] n = 304, d = n+1 = 305 = 5*61, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 17; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 304 found
+[next]   a(304) > 18446744073709551312
+[search] n = 306, d = n+1 = 307 = 307, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.12s, 133 runs of exactly 306 found
+[next]   a(306) = 17311748904451
+[search] n = 308, d = n+1 = 309 = 3*103, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 26; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 308 found
+[next]   a(308) > 18446744073709551308
+[search] n = 310, d = n+1 = 311 = 311, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 102 runs of exactly 310 found
+[next]   a(310) = 71062060829761
+[search] n = 312, d = n+1 = 313 = 313, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 103 runs of exactly 312 found
+[next]   a(312) = 238133575368
+[search] n = 314, d = n+1 = 315 = 3^2*5*7, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 314 found
+[next]   a(314) > 18446744073709551302
+[search] n = 316, d = n+1 = 317 = 317, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 102 runs of exactly 316 found
+[next]   a(316) = 96508945312501
+[search] n = 318, d = n+1 = 319 = 11*29, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 9; a prime odd partner needs k <= 4
+[search] 11855 top-level tasks
+[search] enumerated 2112462 even gapless E in 0.21s, 2 runs of exactly 318 found
+[next]   a(318) = 9614844360351562501
+[search] n = 320, d = n+1 = 321 = 3*107, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 27; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 320 found
+[next]   a(320) > 18446744073709551296
+[search] n = 322, d = n+1 = 323 = 17*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 6
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 1.23s, 16 runs of exactly 322 found
+[next]   a(322) = 1555651101311678
+[search] n = 324, d = n+1 = 325 = 5^2*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 5; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 221943 even gapless E in 0.21s, 0 runs of exactly 324 found
+[next]   a(324) > 18446744073709551292
+[search] n = 326, d = n+1 = 327 = 3*109, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 28; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 326 found
+[next]   a(326) > 18446744073709551290
+[search] n = 328, d = n+1 = 329 = 7*47, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 14; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2537636 even gapless E in 0.21s, 0 runs of exactly 328 found
+[next]   a(328) > 18446744073709551288
+[search] n = 330, d = n+1 = 331 = 331, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.15s, 89 runs of exactly 330 found
+[next]   a(330) = 448408436726251
+[search] n = 332, d = n+1 = 333 = 3^2*37, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 11; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2498371 even gapless E in 0.20s, 0 runs of exactly 332 found
+[next]   a(332) > 18446744073709551284
+[search] n = 334, d = n+1 = 335 = 5*67, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 18; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 334 found
+[next]   a(334) > 18446744073709551282
+[search] n = 336, d = n+1 = 337 = 337, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 62 runs of exactly 336 found
+[next]   a(336) = 1094833807747681
+[search] n = 338, d = n+1 = 339 = 3*113, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 29; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 338 found
+[next]   a(338) > 18446744073709551278
+[search] n = 340, d = n+1 = 341 = 11*31, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 10; a prime odd partner needs k <= 4
+[search] 11855 top-level tasks
+[search] enumerated 2383422 even gapless E in 0.21s, 0 runs of exactly 340 found
+[next]   a(340) > 18446744073709551276
+[search] n = 342, d = n+1 = 343 = 7^3, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 1 run of exactly 342 found
+[next]   a(342) = 151996487423753898
+[search] n = 344, d = n+1 = 345 = 3*5*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 0.21s, 0 runs of exactly 344 found
+[next]   a(344) > 18446744073709551272
+[search] n = 346, d = n+1 = 347 = 347, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 67 runs of exactly 346 found
+[next]   a(346) = 3825175061307601
+[search] n = 348, d = n+1 = 349 = 349, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.15s, 43 runs of exactly 348 found
+[next]   a(348) = 472399152225001
+[search] n = 350, d = n+1 = 351 = 3^3*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 5; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 221943 even gapless E in 0.20s, 0 runs of exactly 350 found
+[next]   a(350) > 18446744073709551266
+[search] n = 352, d = n+1 = 353 = 353, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.10s, 42 runs of exactly 352 found
+[next]   a(352) = 1657317582140221
+[search] n = 354, d = n+1 = 355 = 5*71, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 19; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 354 found
+[next]   a(354) > 18446744073709551262
+[search] n = 356, d = n+1 = 357 = 3*7*17, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.21s, 0 runs of exactly 356 found
+[next]   a(356) > 18446744073709551260
+[search] n = 358, d = n+1 = 359 = 359, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 39 runs of exactly 358 found
+[next]   a(358) = 58467734066531432
+[search] n = 360, d = n+1 = 361 = 19^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 7
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 2.06s, 11 runs of exactly 360 found
+[next]   a(360) = 37031575569738390
+[search] n = 362, d = n+1 = 363 = 3*11^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 4; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 64497 even gapless E in 0.20s, 0 runs of exactly 362 found
+[next]   a(362) > 18446744073709551254
+[search] n = 364, d = n+1 = 365 = 5*73, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 20; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 364 found
+[next]   a(364) > 18446744073709551252
+[search] n = 366, d = n+1 = 367 = 367, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.32s, 31 runs of exactly 366 found
+[next]   a(366) = 159621298043947374
+[search] n = 368, d = n+1 = 369 = 3^2*41, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 12; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2531008 even gapless E in 0.21s, 0 runs of exactly 368 found
+[next]   a(368) > 18446744073709551248
+[search] n = 370, d = n+1 = 371 = 7*53, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 15; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 370 found
+[next]   a(370) > 18446744073709551246
+[search] n = 372, d = n+1 = 373 = 373, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.32s, 18 runs of exactly 372 found
+[next]   a(372) = 4311503269032588
+[search] n = 374, d = n+1 = 375 = 3*5^3, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 374 found
+[next]   a(374) > 18446744073709551242
+[search] n = 376, d = n+1 = 377 = 13*29, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 9; a prime odd partner needs k <= 5
+[search] 11855 top-level tasks
+[search] enumerated 2112462 even gapless E in 0.61s, 4 runs of exactly 376 found
+[next]   a(376) = 460463558737477681
+[search] n = 378, d = n+1 = 379 = 379, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 17 runs of exactly 378 found
+[next]   a(378) = 6283127355605101
+[search] n = 380, d = n+1 = 381 = 3*127, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 30; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 380 found
+[next]   a(380) > 18446744073709551236
+[search] n = 382, d = n+1 = 383 = 383, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.11s, 15 runs of exactly 382 found
+[next]   a(382) = 39714510836800801
+[search] n = 384, d = n+1 = 385 = 5*7*11, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 384 found
+[next]   a(384) > 18446744073709551232
+[search] n = 386, d = n+1 = 387 = 3^2*43, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 13; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2536990 even gapless E in 0.21s, 0 runs of exactly 386 found
+[next]   a(386) > 18446744073709551230
+[search] n = 388, d = n+1 = 389 = 389, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 14 runs of exactly 388 found
+[next]   a(388) = 25892796286636892
+[search] n = 390, d = n+1 = 391 = 17*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 8; a prime odd partner needs k <= 6
+[search] 11855 top-level tasks
+[search] enumerated 1641419 even gapless E in 1.23s, 3 runs of exactly 390 found
+[next]   a(390) = 500292936593049210
+[search] n = 392, d = n+1 = 393 = 3*131, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 31; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 392 found
+[next]   a(392) > 18446744073709551224
+[search] n = 394, d = n+1 = 395 = 5*79, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 21; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 394 found
+[next]   a(394) > 18446744073709551222
+[search] n = 396, d = n+1 = 397 = 397, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 16 runs of exactly 396 found
+[next]   a(396) = 3597624643092084
+[search] n = 398, d = n+1 = 399 = 3*7*19, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.21s, 0 runs of exactly 398 found
+[next]   a(398) > 18446744073709551218
+[search] n = 400, d = n+1 = 401 = 401, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.15s, 10 runs of exactly 400 found
+[next]   a(400) = 217949972493052801
+[search] n = 402, d = n+1 = 403 = 13*31, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 10; a prime odd partner needs k <= 5
+[search] 11855 top-level tasks
+[search] enumerated 2383422 even gapless E in 0.41s, 0 runs of exactly 402 found
+[next]   a(402) > 18446744073709551214
+[search] n = 404, d = n+1 = 405 = 3^4*5, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 404 found
+[next]   a(404) > 18446744073709551212
+[search] n = 406, d = n+1 = 407 = 11*37, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 11; a prime odd partner needs k <= 4
+[search] 11855 top-level tasks
+[search] enumerated 2498371 even gapless E in 0.21s, 1 run of exactly 406 found
+[next]   a(406) = 34558596366336001
+[search] n = 408, d = n+1 = 409 = 409, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 10 runs of exactly 408 found
+[next]   a(408) = 13015446444000001
+[search] n = 410, d = n+1 = 411 = 3*137, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 32; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 410 found
+[next]   a(410) > 18446744073709551206
+[search] n = 412, d = n+1 = 413 = 7*59, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 16; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 412 found
+[next]   a(412) > 18446744073709551204
+[search] n = 414, d = n+1 = 415 = 5*83, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 22; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 414 found
+[next]   a(414) > 18446744073709551202
+[search] n = 416, d = n+1 = 417 = 3*139, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 33; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 416 found
+[next]   a(416) > 18446744073709551200
+[search] n = 418, d = n+1 = 419 = 419, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 7 runs of exactly 418 found
+[next]   a(418) = 14633428996165562
+[search] n = 420, d = n+1 = 421 = 421, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.35s, 10 runs of exactly 420 found
+[next]   a(420) = 50536949682126601
+[search] n = 422, d = n+1 = 423 = 3^2*47, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 14; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537636 even gapless E in 0.21s, 0 runs of exactly 422 found
+[next]   a(422) > 18446744073709551194
+[search] n = 424, d = n+1 = 425 = 5^2*17, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 6; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 560167 even gapless E in 0.21s, 0 runs of exactly 424 found
+[next]   a(424) > 18446744073709551192
+[search] n = 426, d = n+1 = 427 = 7*61, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 17; a prime odd partner needs k <= 3
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 426 found
+[next]   a(426) > 18446744073709551190
+[search] n = 428, d = n+1 = 429 = 3*11*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 4; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 64497 even gapless E in 0.20s, 0 runs of exactly 428 found
+[next]   a(428) > 18446744073709551188
+[search] n = 430, d = n+1 = 431 = 431, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.14s, 3 runs of exactly 430 found
+[next]   a(430) = 3316510027774943570
+[search] n = 432, d = n+1 = 433 = 433, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.11s, 6 runs of exactly 432 found
+[next]   a(432) = 259288502457600001
+[search] n = 434, d = n+1 = 435 = 3*5*29, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 9; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2112462 even gapless E in 0.21s, 0 runs of exactly 434 found
+[next]   a(434) > 18446744073709551182
+[search] n = 436, d = n+1 = 437 = 19*23, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k <= 7
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 2.25s, 3 runs of exactly 436 found
+[next]   a(436) = 155448258065099564
+[search] n = 438, d = n+1 = 439 = 439, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.12s, 5 runs of exactly 438 found
+[next]   a(438) = 8037225000000001
+[search] n = 440, d = n+1 = 441 = 3^2*7^2, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 3; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 11855 even gapless E in 0.20s, 0 runs of exactly 440 found
+[next]   a(440) > 18446744073709551176
+[search] n = 442, d = n+1 = 443 = 443, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 3 runs of exactly 442 found
+[next]   a(442) = 144879387215062058
+[search] n = 444, d = n+1 = 445 = 5*89, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 23; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 444 found
+[next]   a(444) > 18446744073709551172
+[search] n = 446, d = n+1 = 447 = 3*149, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 34; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.21s, 0 runs of exactly 446 found
+[next]   a(446) > 18446744073709551170
+[search] n = 448, d = n+1 = 449 = 449, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.12s, 2 runs of exactly 448 found
+[next]   a(448) = 73234715264670961
+[search] n = 450, d = n+1 = 451 = 11*41, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 12; a prime odd partner needs k <= 4
+[search] 11855 top-level tasks
+[search] enumerated 2531008 even gapless E in 0.21s, 0 runs of exactly 450 found
+[next]   a(450) > 18446744073709551166
+[search] n = 452, d = n+1 = 453 = 3*151, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 35; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 0.20s, 0 runs of exactly 452 found
+[next]   a(452) > 18446744073709551164
+[search] n = 454, d = n+1 = 455 = 5*7*13, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 5; a prime odd partner needs k <= 2
+[search] 11855 top-level tasks
+[search] enumerated 221943 even gapless E in 0.21s, 0 runs of exactly 454 found
+[next]   a(454) > 18446744073709551162
+[search] n = 456, d = n+1 = 457 = 457, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.36s, 2 runs of exactly 456 found
+[next]   a(456) = 1316768331068190001
+[search] n = 458, d = n+1 = 459 = 3^3*17, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: k <= 6; a prime odd partner needs k = 1 (E = 2^a)
+[search] 11855 top-level tasks
+[search] enumerated 560167 even gapless E in 0.20s, 0 runs of exactly 458 found
+[next]   a(458) > 18446744073709551158
+[search] n = 460, d = n+1 = 461 = 461, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 1 run of exactly 460 found
+[next]   a(460) = 27100758877592401
+[search] n = 462, d = n+1 = 463 = 463, limit = 18446744073709551616, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner is possible for every k
+[search] 11855 top-level tasks
+[search] enumerated 2537666 even gapless E in 5.13s, 1 run of exactly 462 found
+[next]   a(462) = 391411311509918701
+[next] table written to next_1e11.txt
+exit=0

@@ -1,0 +1,40 @@
+# Final summary of the extension run on Jeff's Mac Studio, 2026-09-16/17
+# (a053686 scan r35 1693182318746372 -S a053686.state -H -i 60; ~8e10 numbers/s),
+# as pasted from its output.  The full a053686.log and a053686.state are on that machine.
+
+Record intervals touched by the scan [4302407359, 1693182318746372):
+  n   gap   first after            next record after      repeats   runner-up gap (count)  gaps within 20 / 100 of record   status
+ 35    354  4302407359             10726904659            0         340 (2)                       2 / 536       not a term, agrees with A085237
+ 36    382  10726904659            20678048297            0         376 (1)                       3 / 321       not a term, agrees with A085237
+ 37    384  20678048297            22367084959            0         354 (1)                       0 / 62        not a term, agrees with A085237
+ 38    394  22367084959            25056082087            0         380 (1)                       2 / 60        not a term, agrees with A085237
+ 39    456  25056082087            42652618343            0         444 (1)                       1 / 22        not a term, agrees with A085237
+ 40    464  42652618343            127976334671           0         450 (1)                       1 / 133       not a term, agrees with A085237
+ 41    468  127976334671           182226896239           0         460 (2)                       2 / 133       not a term, agrees with A085237
+ 42    474  182226896239           241160624143           0         454 (1)                       1 / 117       not a term, agrees with A085237
+ 43    486  241160624143           297501075799           0         460 (1)                       0 / 79        not a term, agrees with A085237
+ 44    490  297501075799           303371455241           0         432 (1)                       0 / 7         not a term, agrees with A085237
+ 45    500  303371455241           304599508537           0         458 (1)                       0 / 3         not a term, agrees with A085237
+ 46    514  304599508537           416608695821           0         478 (2)                       0 / 52        not a term, agrees with A085237
+ 47    516  416608695821           461690510011           0         498 (1)                       1 / 19        not a term, agrees with A085237
+ 48    532  461690510011           614487453523           0         500 (1)                       0 / 47        not a term, agrees with A085237
+ 49    534  614487453523           738832927927           0         480 (1)                       0 / 44        not a term, agrees with A085237
+ 50    540  738832927927           1346294310749          0         522 (1)                       1 / 223       not a term, agrees with A085237
+ 51    582  1346294310749          1408695493609          0         534 (1)                       0 / 7         not a term, agrees with A085237
+ 52    588  1408695493609          1968188556461          0         564 (2)                       0 / 22        not a term, agrees with A085237
+ 53    602  1968188556461          2614941710599          0         564 (1)                       0 / 41        not a term, agrees with A085237
+ 54    652  2614941710599          7177162611713          0         650 (1)                       1 / 44        not a term, agrees with A085237
+ 55    674  7177162611713          13829048559701         0         662 (1)                       2 / 49        not a term, agrees with A085237
+ 56    716  13829048559701         19581334192423         0         700 (1)                       1 / 17        not a term, agrees with A085237
+ 57    766  19581334192423         42842283925351         0         744 (1)                       0 / 26        not a term, agrees with A085237
+ 58    778  42842283925351         90874329411493         0         758 (1)                       1 / 29        not a term, new information, undecided in OEIS
+ 59    804  90874329411493         171231342420521        0         788 (1)                       1 / 34        not a term, new information, undecided in OEIS
+ 60    806  171231342420521        218209405436543        0         776 (1)                       0 / 45        not a term, new information, undecided in OEIS
+ 61    906  218209405436543        1189459969825483       1         880 (1)                       0 / 52        TERM, NEW
+             repeats after: 543684371469023
+ 62    916  1189459969825483       1686994940955803       0         902 (1)                       1 / 56        not a term, new information, undecided in OEIS
+ 63    924  1686994940955803       1693182318746371       0         790 (1)                       0 / 0         not a term, new information, undecided in OEIS
+ 64   1132  1693182318746371       43841547845541059      0         < 934                         0 / 0         undecided: scanned [1693182318746371, 1693182318746372) only
+
+30 record gaps in the range, all confirmed where A002386 lists them; 0 anomalies
+49749425527899 primes in [4302407359, 1693182318746372)

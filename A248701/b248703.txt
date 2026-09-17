@@ -1,0 +1,11 @@
+# A248703: Strict Peak Primes: Smallest prime to have n strictly decreasing prime gaps on either side of a(n).
+# Table of n, a(n) for n = 1..7.
+# a(1)-a(6) as in the OEIS entry; a(7) computed with a248701.c (Sep 16 2026),
+# exhaustive scan of the primes below 10^13: a(8) > 10^13.
+1 23
+2 1439
+3 21433
+4 1130863
+5 19881311
+6 331542583
+7 149822520893

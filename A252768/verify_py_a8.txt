@@ -1,0 +1,17 @@
+  ... sieved to 3,288,334,339 (41.4%)
+  ... sieved to 6,375,342,083 (80.2%)
+p = 7952072743: 365681010 primes <= p, 365681009 gaps, largest gap 354 (25.3 s)
+S_1  = 7952072741  (33 bits)  prime
+S_2  = 306387204649  (39 bits)  prime
+S_3  = 17232652308257  (44 bits)  prime
+S_4  = 1275921083018209  (51 bits)  prime
+S_5  = 117138327618559361  (57 bits)  prime
+S_6  = 12826308390187298689  (64 bits)  prime
+S_7  = 1629701772261995408897  (71 bits)  prime
+S_8  = 235364125518401969499649  (78 bits)  prime
+S_9  = 38009162738943211881748481  (85 bits)  composite
+S_10 = 6771339606587479618427516929  (93 bits)  composite
+S_11 = 1315380048841790624844745793537  (101 bits)  composite
+S_12 = 275770759513199420009807354585089  (108 bits)  composite
+depth(7952072743) = 8: S_1..S_8 are prime
+python3 verify_a252768.py 7952072743 12  18.88s user 0.24s system 63% cpu 30.083 total

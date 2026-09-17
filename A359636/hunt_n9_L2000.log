@@ -1,0 +1,20 @@
+A359636 hunt n=9: m = 3^e * (8 primes in [5,2000]) <= 36,189,117,287,569,244, 5 threads, 90300 tasks
+tasks 609/90300 (0.7%)  tested=137209598069 trip=20 sol=0  2h16m02s elapsed
+tasks 1197/90300 (1.3%)  tested=150324280389 trip=26 sol=0  2h28m30s elapsed
+tasks 1199/90300 (1.3%)  tested=151294489315 trip=28 sol=0  2h30m29s elapsed
+tasks 1207/90300 (1.3%)  tested=151820024004 trip=28 sol=0  2h31m30s elapsed
+tasks 1494/90300 (1.7%)  tested=153717066921 trip=30 sol=0  2h34m13s elapsed
+tasks 1789/90300 (2.0%)  tested=159535230974 trip=32 sol=0  2h35m34s elapsed
+tasks 2668/90300 (3.0%)  tested=161868918807 trip=35 sol=0  2h36m59s elapsed
+tasks 45155/90300 (50.0%)  tested=164110221138 trip=35 sol=0  2h46m51s elapsed
+tasks 45157/90300 (50.0%)  tested=168338187455 trip=35 sol=0  2h52m44s elapsed
+tasks 45158/90300 (50.0%)  tested=168787223480 trip=35 sol=0  2h54m57s elapsed
+tasks 45161/90300 (50.0%)  tested=169881527742 trip=36 sol=0  2h56m13s elapsed
+tasks 45753/90300 (50.7%)  tested=198722150142 trip=40 sol=0  3h25m12s elapsed
+tasks 45754/90300 (50.7%)  tested=198979719445 trip=41 sol=0  3h26m39s elapsed
+tasks 46050/90300 (51.0%)  tested=201602272552 trip=44 sol=0  3h29m39s elapsed
+tasks 46051/90300 (51.0%)  tested=201809783907 trip=44 sol=0  3h30m43s elapsed
+tasks 46348/90300 (51.3%)  tested=205705123869 trip=47 sol=0  3h33m06s elapsed
+tasks 46648/90300 (51.7%)  tested=207324370865 trip=49 sol=0  3h34m08s elapsed
+tasks 90300/90300 (100.0%)  tested=222179975029 trip=50 sol=0  3h39m18s elapsed
+hunt tested 222179975029 candidates: 50 triples, 0 solutions

@@ -1,0 +1,48 @@
+# A248701 / A248702 / A248703 / A248704: smallest prime with n monotone prime gaps on each side (peak, valley, strict peak, strict valley)
+# scanning primes in [0, 17199999999] with 10 threads, chunk 26875000, -d 1, reporting depth >= 63
+# scanned [0, 17199999999] in 5.6 s (3.07e+09 numbers/s): 763794029 primes, largest gap 382
+# centres of depth >= d in [0, 17199999999]:
+#   d            :            1            2            3            4            5            6            7            8
+#   peak         :    763794028    199070484     23617281      1631698        74138         2407           50            1
+#   valley       :    763794028    198948731     23481170      1593615        70392         2328           60            5
+#   strict peak  :    763794028    181190667     17793923       929135        29094          603           11            0
+#   strict valley:    763794028    181312419     17761144       918732        28061          592            7            1
+A248701 (peak depth, a(n) = depth >= n):
+  a(1) = 3   (matches OEIS)
+  a(2) = 7   (matches OEIS)
+  a(3) = 359   (matches OEIS)
+  a(4) = 7853   (matches OEIS)
+  a(5) = 96401   (matches OEIS)
+  a(6) = 2812099   (matches OEIS)
+  a(7) = 294276293   (matches OEIS)
+  a(8) = 12579905251   NEW
+  a(9) > 17199999999
+A248702 (valley depth, a(n) = depth >= n):
+  a(0) = 2   (by definition)
+  a(1) = 3   (matches OEIS)
+  a(2) = 19   (matches OEIS)
+  a(3) = 43   (matches OEIS)
+  a(4) = 2687   (matches OEIS)
+  a(5) = 179819   (matches OEIS)
+  a(6) = 1107791   (matches OEIS)
+  a(7) = 938665577   NEW
+  a(8) = 2400369437   NEW
+  a(9) > 17199999999
+A248703 (strict peak depth, a(n) = depth >= n+1):
+  a(1) = 23   (matches OEIS)
+  a(2) = 1439   (matches OEIS)
+  a(3) = 21433   (matches OEIS)
+  a(4) = 1130863   (matches OEIS)
+  a(5) = 19881311   (matches OEIS)
+  a(6) = 331542583   (matches OEIS)
+  a(7) > 17199999999
+A248704 (strict valley depth, a(n) = depth >= n):
+  a(1) = 3   (matches OEIS)
+  a(2) = 19   (matches OEIS)
+  a(3) = 1429   (matches OEIS)
+  a(4) = 25243   (matches OEIS)
+  a(5) = 340577   (matches OEIS)
+  a(6) = 1107791   (matches OEIS)
+  a(7) = 3531448007   NEW
+  a(8) = 17190066197   NEW
+  a(9) > 17199999999

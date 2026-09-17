@@ -1,0 +1,65 @@
+# A248701 / A248702 / A248703 / A248704: smallest prime with n monotone prime gaps on each side (peak, valley, strict peak, strict valley)
+# scanning primes in [0, 10000000000000] with 10 threads, chunk 15625000000, -d 4, reporting depth >= 6
+A248701(6) = 2812099  [peak depth >= 6]  primes 2811973 .. 2812099 .. 2812207  gaps [10] 6 12 12 18 32 36 | 30 24 16 12 8 4 [14]
+A248701(7) = 294276293  [peak depth >= 7]  primes 294276091 .. 294276293 .. 294276401  gaps [18] 4 6 12 32 34 36 60 | 24 20 12 12 10 6 2 [22]
+A248701(8) = 12579905251  [peak depth >= 8]  primes 12579905101 .. 12579905251 .. 12579905413  gaps [36] 4 6 12 12 18 18 20 24 | 46 14 12 10 8 6 6 4 [56]
+A248702(6) = 1107791  [valley depth >= 6]  primes 1107721 .. 1107791 .. 1107853  gaps [6] 24 12 10 8 6 4 | 2 4 6 8 12 28 [2]
+A248702(7) = 938665577  [valley depth >= 7]  primes 938665313 .. 938665577 .. 938665747  gaps [26] 94 80 24 12 12 12 4 | 2 10 12 12 18 36 36 [44]
+A248702(8) = 2400369437  [valley depth >= 8]  primes 2400369239 .. 2400369437 .. 2400369613  gaps [2] 76 30 26 24 12 12 10 6 | 6 6 8 10 30 32 34 36 [14]
+A248703(5) = 19881311  [strict peak depth >= 6]  primes 19881193 .. 19881311 .. 19881439  gaps [34] 2 4 8 18 24 28 | 48 24 20 16 8 4 [8]
+A248703(6) = 331542583  [strict peak depth >= 7]  primes 331542403 .. 331542583 .. 331542811  gaps [34] 2 4 8 16 20 40 56 | 58 48 38 24 12 10 6 [32]
+A248704(6) = 1107791  [strict valley depth >= 6]  primes 1107721 .. 1107791 .. 1107853  gaps [6] 24 12 10 8 6 4 | 2 4 6 8 12 28 [2]
+A248704(7) = 3531448007  [strict valley depth >= 7]  primes 3531447797 .. 3531448007 .. 3531448171  gaps [36] 44 40 30 26 16 14 4 | 6 8 10 12 26 30 58 [14]
+A248704(8) = 17190066197  [strict valley depth >= 8]  primes 17190065969 .. 17190066197 .. 17190066323  gaps [24] 66 50 24 18 16 14 10 6 | 6 8 10 12 14 16 18 36 [6]
+A248703(7) = 149822520893  [strict peak depth >= 8]  primes 149822520571 .. 149822520893 .. 149822521183  gaps [42] 6 10 12 30 36 54 60 72 | 78 56 40 20 16 14 10 2 [54]
+A248702(9) = 299917793009  [valley depth >= 9]  primes 299917792637 .. 299917793009 .. 299917793239  gaps [60] 80 70 44 36 36 24 10 6 6 | 8 12 12 12 16 24 24 24 26 [72]
+A248701(9) = 5108217950351  [peak depth >= 9]  primes 5108217950071 .. 5108217950351 .. 5108217950701  gaps [70] 18 18 20 22 24 24 24 26 34 | 62 58 56 46 36 30 24 14 6 [18]
+# scanned [0, 10000000000000] in 629.7 s (1.59e+10 numbers/s): 346065536839 primes, largest gap 674
+# centres of depth >= d in [0, 10000000000000] (depths below -d are only examined in chunks starting below 2^30):
+#   d            :            4            5            6            7            8            9
+#   peak         :    711387410     31635394       999414        23913          442            6
+#   valley       :    695705113     30316986       941602        21986          405            7
+#   strict peak  :    452401589     14964865       328619         5162           68            0
+#   strict valley:    445357981     14469023       312373         4756           62            0
+A248701 (peak depth, a(n) = depth >= n):
+  a(1) = 3   (matches OEIS)
+  a(2) = 7   (matches OEIS)
+  a(3) = 359   (matches OEIS)
+  a(4) = 7853   (matches OEIS)
+  a(5) = 96401   (matches OEIS)
+  a(6) = 2812099   (matches OEIS)
+  a(7) = 294276293   (matches OEIS)
+  a(8) = 12579905251   NEW
+  a(9) = 5108217950351   NEW
+  a(10) > 10000000000000
+A248702 (valley depth, a(n) = depth >= n):
+  a(0) = 2   (by definition)
+  a(1) = 3   (matches OEIS)
+  a(2) = 19   (matches OEIS)
+  a(3) = 43   (matches OEIS)
+  a(4) = 2687   (matches OEIS)
+  a(5) = 179819   (matches OEIS)
+  a(6) = 1107791   (matches OEIS)
+  a(7) = 938665577   NEW
+  a(8) = 2400369437   NEW
+  a(9) = 299917793009   NEW
+  a(10) > 10000000000000
+A248703 (strict peak depth, a(n) = depth >= n+1):
+  a(1) = 23   (matches OEIS)
+  a(2) = 1439   (matches OEIS)
+  a(3) = 21433   (matches OEIS)
+  a(4) = 1130863   (matches OEIS)
+  a(5) = 19881311   (matches OEIS)
+  a(6) = 331542583   (matches OEIS)
+  a(7) = 149822520893   NEW
+  a(8) > 10000000000000
+A248704 (strict valley depth, a(n) = depth >= n):
+  a(1) = 3   (matches OEIS)
+  a(2) = 19   (matches OEIS)
+  a(3) = 1429   (matches OEIS)
+  a(4) = 25243   (matches OEIS)
+  a(5) = 340577   (matches OEIS)
+  a(6) = 1107791   (matches OEIS)
+  a(7) = 3531448007   NEW
+  a(8) = 17190066197   NEW
+  a(9) > 10000000000000

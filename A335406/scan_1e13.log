@@ -1,0 +1,8 @@
+[00:01:00]  16.2% at 1.62e+12  2.69e+10/s  ETA 00:05:11  primes 5.98e+10  runs 5.86e+10  longest 5  a(1..5) found
+[00:02:00]  32.0% at 3.2e+12  2.67e+10/s  ETA 00:04:15  primes 1.15e+11  runs 1.13e+11  longest 5  a(1..5) found
+[00:03:00]  47.5% at 4.75e+12  2.64e+10/s  ETA 00:03:19  primes 1.69e+11  runs 1.65e+11  longest 5  a(1..5) found
+[00:04:00]  62.8% at 6.28e+12  2.61e+10/s  ETA 00:02:22  primes 2.21e+11  runs 2.17e+11  longest 5  a(1..5) found
+[00:05:00]  77.2% at 7.72e+12  2.57e+10/s  ETA 00:01:28  primes 2.7e+11  runs 2.65e+11  longest 5  a(1..5) found
+[00:06:00]  91.2% at 9.12e+12  2.53e+10/s  ETA 00:00:35  primes 3.17e+11  runs 3.11e+11  longest 5  a(1..5) found
+[00:06:36] 100.0% at 1e+13  2.53e+10/s  ETA 00:00:00  primes 3.46e+11  runs 3.4e+11  longest 5  a(1..5) found
+exit 0

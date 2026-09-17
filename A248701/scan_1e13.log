@@ -1,0 +1,11 @@
+[00:01:00]   7.8% at 7.81e+11  1.3e+10/s  ETA 00:11:49  primes 2.97e+10  maxgap 540  depth peak 8 @ 12579905251 valley 9 strict 8/8
+[00:02:00]  18.4% at 1.84e+12  1.54e+10/s  ETA 00:08:51  primes 6.78e+10  maxgap 588  depth peak 8 @ 12579905251 valley 9 strict 8/8
+[00:03:00]  24.4% at 2.44e+12  1.35e+10/s  ETA 00:09:19  primes 8.87e+10  maxgap 602  depth peak 8 @ 12579905251 valley 9 strict 8/8
+[00:04:00]  31.6% at 3.16e+12  1.31e+10/s  ETA 00:08:41  primes 1.14e+11  maxgap 652  depth peak 8 @ 12579905251 valley 9 strict 8/8
+[00:05:00]  41.1% at 4.11e+12  1.37e+10/s  ETA 00:07:10  primes 1.47e+11  maxgap 652  depth peak 8 @ 12579905251 valley 9 strict 8/8
+[00:06:00]  51.1% at 5.11e+12  1.42e+10/s  ETA 00:05:45  primes 1.81e+11  maxgap 652  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:07:00]  61.4% at 6.14e+12  1.46e+10/s  ETA 00:04:24  primes 2.16e+11  maxgap 652  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:08:00]  72.5% at 7.25e+12  1.51e+10/s  ETA 00:03:02  primes 2.54e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:09:00]  83.4% at 8.34e+12  1.54e+10/s  ETA 00:01:47  primes 2.91e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:10:00]  93.9% at 9.39e+12  1.56e+10/s  ETA 00:00:39  primes 3.26e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:10:30] 100.0% at 1e+13  1.59e+10/s  ETA 00:00:00  primes 3.46e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8

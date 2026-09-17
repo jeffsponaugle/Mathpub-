@@ -1,0 +1,33 @@
+[search] n = 74, d = n+1 = 75 = 3*5^2, limit = 170141183460469231731687303715884105728, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 92591 top-level tasks
+[search] 105/92591 tasks  15s   
+[search] 311/92591 tasks  30s   
+[search] 2174/92591 tasks  45s   
+[search] 2327/92591 tasks  60s   
+[search] 2631/92591 tasks  76s   
+[search] 4368/92591 tasks  91s   
+[search] 4662/92591 tasks  106s   
+[search] 6462/92591 tasks  121s   
+[search] 6762/92591 tasks  136s   
+[search] 8580/92591 tasks  151s   
+[search] 9063/92591 tasks  166s   
+[search] 10715/92591 tasks  181s   
+[search] 12569/92591 tasks  197s   
+[search] 14487/92591 tasks  212s   
+[search] 15008/92591 tasks  227s   
+[search] 16893/92591 tasks  242s   
+[search] 19048/92591 tasks  257s   
+[search] 22092/92591 tasks  272s   
+[search] 24225/92591 tasks  287s   
+[search] 27695/92591 tasks  303s   
+[search] 32567/92591 tasks  318s   
+[search] 38932/92591 tasks  333s   
+[search] 52680/92591 tasks  348s   
+[search] enumerated 17368904861 even gapless E in 353.68s, 2 runs of exactly 74 found
+[search] n = 104, d = n+1 = 105 = 3*5*7, limit = 170141183460469231731687303715884105728, 10 threads
+[search] even endpoint E = 2^e1*3^e2*...*p_k^ek: any k; a prime odd partner needs k = 1 (E = 2^a)
+[search] 92591 top-level tasks
+[search] 104/92591 tasks  15s   
+[search] 219/92591 tasks  30s   
+exit=143

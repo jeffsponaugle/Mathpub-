@@ -1,0 +1,93 @@
+Model check: observed runs of exactly L gaps d beginning at primes <= x, vs the model
+(L = 1, 2 with d = 210 have the same 209-number interiors as a CPAP-7)
+
+ L    d          x=1e+01          x=1e+02          x=1e+03          x=1e+04          x=1e+05          x=1e+06          x=1e+07          x=1e+08          x=1e+09          x=1e+10          x=1e+11          x=1e+12          x=1e+13
+ 1    6        0/      0        5/      0       19/      0      190/    164     1333/1.32e+03     9880/9.9e+03    76488/7.63e+04   608558/6.05e+05 4.94e+06/4.91e+06 4.09e+07/4.07e+07 3.44e+08/3.42e+08 2.94e+09/2.92e+09 2.53e+10/2.52e+10
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 1.158   obs/pred 1.012   obs/pred 0.998   obs/pred 1.003   obs/pred 1.006   obs/pred 1.006   obs/pred 1.006   obs/pred 1.005   obs/pred 1.005   obs/pred 1.005
+ 1   30        0/      0        0/      0        0/      0       11/   7.48      144/    151     1847/1.97e+03    20626/2.14e+04   208044/2.14e+05 2.01e+06/2.05e+06  1.9e+07/1.93e+07 1.78e+08/1.8e+08 1.65e+09/1.66e+09 1.52e+10/1.54e+10
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 1.471   obs/pred 0.952   obs/pred 0.940   obs/pred 0.965   obs/pred 0.973   obs/pred 0.979   obs/pred 0.984   obs/pred 0.988   obs/pred 0.990   obs/pred 0.992
+ 1  210        0/      0        0/      0        0/      0        0/1.19e-12        0/7.92e-08        0/0.000104        0/ 0.0228        2/   1.89       48/   87.3     1531/2.75e+03    41968/6.68e+04   924535/1.35e+06 1.74e+07/2.36e+07
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 1.057   obs/pred 0.550   obs/pred 0.556   obs/pred 0.628   obs/pred 0.687   obs/pred 0.734
+ 2    6        0/      0        1/      0       11/      0       44/   31.4      248/    224     1551/1.47e+03    10059/9.93e+03    70050/6.97e+04   509771/5.06e+05 3.82e+06/3.79e+06 2.93e+07/2.91e+07 2.29e+08/2.28e+08 1.83e+09/1.82e+09
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 1.401   obs/pred 1.106   obs/pred 1.054   obs/pred 1.013   obs/pred 1.005   obs/pred 1.007   obs/pred 1.007   obs/pred 1.007   obs/pred 1.006   obs/pred 1.006
+ 2   30        0/      0        0/      0        0/      0        0/ 0.0498        1/   2.41       32/   49.3      527/    694     7072/8.11e+03    78988/8.55e+04   800952/8.49e+05 7.78e+06/8.15e+06 7.37e+07/7.65e+07 6.88e+08/7.08e+08
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.415   obs/pred 0.649   obs/pred 0.759   obs/pred 0.872   obs/pred 0.924   obs/pred 0.943   obs/pred 0.955   obs/pred 0.964   obs/pred 0.971
+ 2  210        0/      0        0/      0        0/      0        0/3.16e-27        0/1.27e-18        0/2.11e-13        0/1.03e-09        0/7.38e-07        0/0.000167        0/ 0.0177        0/   1.11       14/   48.5      712/1.6e+03
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.289   obs/pred 0.444
+ 3    6        0/      0        0/      0        1/      0        7/   7.22       37/   40.4      189/    210     1127/1.16e+03     6698/6.86e+03    42754/4.31e+04   283353/2.84e+05 1.95e+06/1.95e+06 1.38e+07/1.38e+07    1e+08/  1e+08
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.969   obs/pred 0.917   obs/pred 0.901   obs/pred 0.973   obs/pred 0.977   obs/pred 0.992   obs/pred 0.998   obs/pred 1.000   obs/pred 1.000   obs/pred 1.000
+ 3   12        0/      0        0/      0        0/      0        0/  0.438        0/   4.97       25/   41.1      297/    309     2207/2.26e+03    16404/1.66e+04   120872/1.22e+05   909271/9.19e+05 6.94e+06/  7e+06 5.37e+07/5.41e+07
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.608   obs/pred 0.962   obs/pred 0.976   obs/pred 0.991   obs/pred 0.987   obs/pred 0.989   obs/pred 0.992   obs/pred 0.993
+ 3   30        0/      0        0/      0        0/      0        0/ 0.0003        0/ 0.0342        1/   1.09       19/   19.8      209/    270     2641/3.13e+03    28927/3.29e+04   297150/3.26e+05 2.89e+06/3.11e+06 2.72e+07/2.89e+07
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.916   obs/pred 0.958   obs/pred 0.774   obs/pred 0.845   obs/pred 0.880   obs/pred 0.912   obs/pred 0.930   obs/pred 0.942
+ 4   30        0/      0        0/      0        0/      0        0/2.21e-06        0/0.000521        0/ 0.0243        1/  0.548        8/   8.49       83/    106      937/1.17e+03    10326/1.19e+04   101083/1.14e+05   961277/1.06e+06
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 1.825   obs/pred 0.942   obs/pred 0.781   obs/pred 0.802   obs/pred 0.871   obs/pred 0.886   obs/pred 0.906
+ 4   60        0/      0        0/      0        0/      0        0/1.28e-14        0/4.99e-10        0/4.28e-07        0/6.5e-05        0/0.00388        0/  0.133        3/   3.18       43/   59.8      648/    951     9618/1.34e+04
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.945   obs/pred 0.719   obs/pred 0.681   obs/pred 0.717
+ 5   30        0/      0        0/      0        0/      0        0/1.01e-08        0/5.31e-06        0/0.000371        0/ 0.0106        0/  0.188        1/   2.56       19/   29.6      239/    308     2523/  3e+03    24315/2.79e+04
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.390   obs/pred 0.642   obs/pred 0.775   obs/pred 0.841   obs/pred 0.871
+ 5   60        0/      0        0/      0        0/      0        0/4.44e-19        0/1.47e-13        0/3.95e-10        0/1.21e-07        0/1.16e-05        0/0.000554        0/ 0.0169        0/  0.382        4/   6.99       67/    110
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.572   obs/pred 0.610
+ 2  420        0/      0        0/      0        0/      0        0/1.37e-56        0/6.71e-40        0/3.65e-30        0/1.44e-23        0/1.13e-18        0/8.33e-15        0/1.3e-11        0/  7e-09        0/1.75e-06        0/0.000248
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000
+ 1  420        0/      0        0/      0        0/      0        0/1.79e-27        0/1.36e-18        0/3.36e-13        0/2.19e-09        0/1.97e-06        0/0.000535        0/ 0.0664        2/    4.8       87/    236     3724/8.69e+03
+            obs/pred nan     obs/pred nan     obs/pred nan   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.000   obs/pred 0.416   obs/pred 0.369   obs/pred 0.429
+
+(each cell is observed/predicted)
+
+Calibration: single gaps  ln(obs/model) = -F(u)/ln x,  F(u) = 0.287 u^1.781   (188 points)
+             chain links  extra factor exp(-G(u)/ln x) per link,  G(u) = 0.459 u^1.595   (102 points)
+Calibrated model vs observed for the longer chains (each cell observed/calibrated, ratio):
+ 3   30     2641/2.6e+03  1.01   28927/2.87e+04  1.01  297150/2.93e+05  1.01 2888412/2.86e+06  1.01 27245743/2.71e+07  1.01
+ 4   30       83/   82.1  1.01      937/    963  0.97   10326/1.02e+04  1.01  101083/1.02e+05  1.00  961277/9.66e+05  1.00
+ 5   30        1/   1.84  0.54       19/   23.1  0.82      239/    254  0.94    2523/2.58e+03  0.98   24315/2.47e+04  0.98
+ 3   60       17/   12.6  1.35      277/    273  1.01    4802/4.74e+03  1.01   70270/7.04e+04  1.00   935514/9.4e+05  1.00
+ 4   60        0/ 0.0597  0.00        3/   1.74  1.72       43/   37.5  1.15      648/    659  0.98    9618/9.99e+03  0.96
+ 5   60       0/0.000199  0.00        0/0.00782  0.00        0/   0.21  0.00        4/   4.36  0.92       67/   75.1  0.89
+ 2  120        2/   1.11  1.80       61/   47.4  1.29    1528/1.41e+03  1.08   34516/3.27e+04  1.06   653286/6.3e+05  1.04
+ 3  120       0/0.000132  0.00        0/ 0.0125  0.00        1/  0.682  1.47       24/   25.3  0.95      769/    713  1.08
+ 2  150        0/ 0.0226  0.00        1/   1.61  0.62       89/   71.1  1.25    2484/2.25e+03  1.10    60360/5.6e+04  1.08
+ 2  180       0/0.000434  0.00        0/ 0.0523  0.00        3/   3.46  0.87      150/    151  0.99    5433/4.87e+03  1.12
+ 1  210       48/   34.4  1.39    1531/1.37e+03  1.11   41968/3.92e+04  1.07  924535/8.86e+05  1.04 17352962/1.69e+07  1.02
+ 2  210       0/1.06e-05  0.00        0/0.00222  0.00        0/  0.224  0.00       14/   13.7  1.02      712/    579  1.23
+ 3  210       0/3.68e-12  0.00       0/3.91e-09  0.00       0/1.36e-06  0.00        0/0.00022  0.00        0/ 0.0203  0.00
+
+Fraction E/pi of primes whose gap equals the previous gap (fit uses x >= 1e8):
+   x = 1e+08: 2.8991%   fit 2.8987%
+   x = 1e+09: 2.6125%   fit 2.6116%
+   x = 1e+10: 2.3737%   fit 2.3756%
+   x = 1e+11: 2.1770%   fit 2.1783%
+   x = 1e+12: 2.0110%   fit 2.0111%
+   x = 1e+13: 1.8696%   fit 1.8675%
+   fit E/pi = 0.5991/ln x + -1.2000/ln^2 x
+
+Runs of six equal gaps (maximal CPAP-7) beginning at primes <= x, expected number:
+       x  raw d=210  raw d=420  calibrated    P(first CPAP-7 < x)
+    1e16   6.63e-08   4.63e-24    7.98e-09                 0.0000
+    1e17   4.32e-06   3.15e-21    7.14e-07                 0.0000
+    1e18   0.000219   1.27e-18    4.68e-05                 0.0000
+    1e19    0.00905   3.29e-16     0.00238                 0.0024
+    1e20      0.315   5.92e-14      0.0984                 0.0937
+    1e21       9.46   7.82e-12        3.41                 0.9670
+    1e22        251   7.92e-10         102                 1.0000
+    1e23   6.01e+03   6.39e-08    2.71e+03                 1.0000
+    1e24   1.31e+05   4.23e-06    6.44e+04                 1.0000
+    1e25   2.65e+06   0.000236     1.4e+06                 1.0000
+
+First CPAP-7 start P, quantiles of the raw model:        10%: 4.86e+19, 50%: 1.69e+20, 90%: 3.80e+20
+First CPAP-7 start P, quantiles of the calibrated model: 10%: 1.04e+20, 50%: 3.51e+20, 90%: 7.70e+20
+Smallest known CPAP-7 (P. Zimmermann): 71137654873189893604531 = 7.114e+22; expected number of CPAP-7 below it: 1.68e+03 (calibrated), 3.78e+03 (raw)
+
+Implied a(6) = runs below P = pi(P) - E(P) ~ li(P) (1 - E/pi), and the cost of sieving to P:
+         P    pi(P) ~ li(P)    a(6) estimate  sieve time at 2.5e+10 numbers/s
+10% 1.04e+20       2.3155e+18       2.2867e+18                    132 years
+50% 3.51e+20       7.5755e+18       7.4837e+18                    444 years
+90% 7.70e+20       1.6360e+19       1.6165e+19                    976 years
+known 7.11e+22       1.3787e+21       1.3636e+21               9.02e+04 years
+
+For comparison, with the same rate:
+   sieving to 1e13: 0.111 h = 0.00463 days = 1.27e-05 years
+   sieving to 1e14: 1.11 h = 0.0463 days = 0.000127 years
+   sieving to 1e15: 11.1 h = 0.463 days = 0.00127 years
+   sieving to 1e16: 111 h = 4.63 days = 0.0127 years
+   sieving to 1e18: 1.11e+04 h = 463 days = 1.27 years

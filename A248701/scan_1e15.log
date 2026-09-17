@@ -1,0 +1,9 @@
+resuming from a248701.state at 10000000000001 (346065536839 primes done, 630 s spent)
+[00:01:00]   0.0% at 1.03e+13  5.72e+09/s  ETA 48:04:57  primes 3.58e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:02:00]   0.1% at 1.09e+13  7.86e+09/s  ETA 34:56:42  primes 3.78e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:03:00]   0.2% at 1.15e+13  8.58e+09/s  ETA 32:00:41  primes 3.98e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:04:00]   0.2% at 1.2e+13  8.43e+09/s  ETA 32:32:08  primes 4.14e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:05:00]   0.3% at 1.26e+13  8.64e+09/s  ETA 31:45:21  primes 4.32e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 8/8
+[00:06:00]   0.3% at 1.33e+13  9.15e+09/s  ETA 29:56:48  primes 4.56e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 9/8
+[00:06:14]   0.4% at 1.36e+13  9.55e+09/s  ETA 28:41:23  primes 4.65e+11  maxgap 674  depth peak 9 @ 5108217950351 valley 9 strict 9/8
+interrupted; all chunks below 13573412790273 are complete, checkpoint written

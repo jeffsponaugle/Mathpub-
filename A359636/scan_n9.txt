@@ -1,0 +1,1 @@
+a(9) > 1449825669218305 (scan stopped early; no qualifying gap with p below that)

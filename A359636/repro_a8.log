@@ -1,0 +1,15 @@
+A359636 level n=8: m in [9, 34,710,483,181,815] (m = 3 mod 6, 5785080530302 values), 10 threads, chunk 67108864
+sieve primes 5..1000 (156 strided), each target needs >= 5 prime factors <= 1000 (threshold 4 after the forced 2/3), 1.82 marks per k
+m=402,653,193 (0.00%)  6.34 Gm/s  surv=20193 trip=0 sol=0  0s elapsed, ETA 1h31m17s
+m=3,437,852,885,001 (9.90%)  57.23 Gm/s  surv=13117043 trip=0 sol=0  1m00s elapsed, ETA 9m06s
+m=6,857,183,723,529 (19.76%)  57.09 Gm/s  surv=27223789 trip=0 sol=0  2m00s elapsed, ETA 8m07s
+m=9,915,334,656,009 (28.57%)  55.04 Gm/s  surv=39943408 trip=0 sol=0  3m00s elapsed, ETA 7m30s
+m=13,051,197,653,001 (37.60%)  54.34 Gm/s  surv=53016314 trip=0 sol=0  4m00s elapsed, ETA 6m38s
+m=16,209,609,228,297 (46.70%)  54.00 Gm/s  surv=66157737 trip=1 sol=0  5m00s elapsed, ETA 5m42s
+m=19,250,848,727,049 (55.46%)  53.44 Gm/s  surv=78800730 trip=1 sol=0  6m00s elapsed, ETA 4m49s
+m=22,350,472,937,481 (64.39%)  53.18 Gm/s  surv=91666308 trip=2 sol=0  7m00s elapsed, ETA 3m52s
+m=25,494,388,998,153 (73.45%)  53.08 Gm/s  surv=104680799 trip=4 sol=0  8m00s elapsed, ETA 2m53s
+m=28,628,238,729,225 (82.48%)  52.98 Gm/s  surv=117651796 trip=4 sol=0  9m00s elapsed, ETA 1m54s
+m=31,784,234,385,417 (91.57%)  52.94 Gm/s  surv=130663399 trip=5 sol=0  10m00s elapsed, ETA 55s
+m=34,710,483,181,821 (100.00%)  52.90 Gm/s  surv=142705091 trip=7 sol=1 best=34710483181813  10m56s elapsed, ETA 0s
+scanned m <= 34,710,483,181,815: 142705091 survivors, 7 triples, 1 solutions

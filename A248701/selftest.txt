@@ -1,0 +1,21 @@
+a248701 selftest (10 threads)
+  ok    359: peak depth 3, strict peak depth 2, valley depths 1 (gaps 10, 2, 4, 6 | 8, 6, 6, 4)
+  ok    7: peak depth 2 but strict peak depth 1 (gaps 2, 2 | 4, 2)
+  ok    43: valley depth 3, strict valley depth 2 (gaps 6, 4, 2 | 4, 6, 6)
+  ok    1429: strict valley depth 3; 1439: strict peak depth 3
+  ok    2 has depth 0 (no gap before it), 3 has depth 1
+  ok    360 and 1 are rejected as non-primes
+  ok    chunk [0, 3000000) agrees with the reference implementation (216816 primes, max peak depth 6)
+  ok    chunk [1000000000, 1003000000) agrees with the reference implementation (144615 primes, max peak depth 6)
+  ok    chunk [1000000000000, 1000003000000) agrees with the reference implementation (108623 primes, max peak depth 5)
+  ok    chunk [123456789012345, 123456792012345) agrees with the reference implementation (92438 primes, max peak depth 5)
+  ok    chunk [5e9, 5e9+3e6) equals the sum of its two halves
+  ok    scan [0, 4e8) reproduces all 26 known terms of A248701-A248704 (21336326 primes, 0.1 s)
+  ok    depth counts below 4e8 match numpy: peak 21336325 5601745 670557 47070 2154 74 2
+  ok    no centre of depth >= 8 below 4e8
+  ok    scan [0, 3e8) gives identical records and counts as one chunk, chunk 777777 and chunk 2^20
+  ok    scan [3e8, 4e8) adds up with [0, 3e8) and finds A248703(6) = 331542583 above 3e8
+  ok    scan [2^30, 2^30+2e8) with -d 1 and -d 4 agree on every depth >= 4 (20608 centres of depth >= 4, 928 of depth >= 5)
+  ok    -n 7 on [0, 1e9) stops soon after a(7) = 294276293 (scanned to 299999999)
+  ok    checkpoint file round trip
+all tests passed (1.1 s)
