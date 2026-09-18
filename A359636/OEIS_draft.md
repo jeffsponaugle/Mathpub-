@@ -1,15 +1,12 @@
 # A359636 — draft OEIS submission text
 
-STATUS: DRAFT. The value of a(9) below is the smallest known qualifying gap
-(found by the structured `hunt` search with a free largest prime on Sep 17 2026
-and verified twice). It becomes a term only when the exhaustive scan
-(`scan_n9.txt`) has covered every m <= 33955545649252305; if that scan finds a
-smaller qualifying gap first, all occurrences of 33955545649252303 below must be
-replaced by the smaller prime.
+STATUS: FINAL (Sep 18 2026). a(9) = 31610535900218923 was found by an exhaustive
+scan of every m == 3 (mod 6) up to 3.161e16 (GPU version of the tool, 10 h 42 min
+on a DGX Spark) and verified three independent ways (see README.md).
 
 ## DATA
 
-    7, 19, 643, 51427, 8083633, 1077940147, 75582271489, 34710483181813, 33955545649252303
+    7, 19, 643, 51427, 8083633, 1077940147, 75582271489, 34710483181813, 31610535900218923
 
 (OEIS terms field: the same list, comma separated; a(9) has 17 digits, so the
 DATA line stays within the usual limit.)
@@ -24,14 +21,14 @@ DATA line stays within the usual limit.)
     6 1077940147
     7 75582271489
     8 34710483181813
-    9 33955545649252303
+    9 31610535900218923
 
 ## EXAMPLE (addition)
 
-    a(9) = 33955545649252303: 33955545649252304 = 2^4*7^2*11*17*29*37*163*1021*1297,
-    33955545649252305 = 3*5*13*19*61*71*127*251*66383 and
-    33955545649252306 = 2*23*41*47*53*113*181*313*1129 each have 9 distinct prime
-    factors, and 33955545649252307 is prime.
+    a(9) = 31610535900218923: 31610535900218924 = 2^2*11*17*19*53*79*149*359*9931,
+    31610535900218925 = 3*5^2*13*23*31*37*157*1559*5021 and
+    31610535900218926 = 2*7*29*61*103*197*223*311*907 each have 9 distinct prime
+    factors, and 31610535900218927 is prime.
 
 ## COMMENTS (suggested)
 
@@ -43,7 +40,7 @@ DATA line stays within the usual limit.)
 
        a(10) <= 225096507194749219819. - David A. Corneth, Jan 12 2023
 
-   (or keep it and add "a(9) = 33955545649252303 confirmed by exhaustive search" after it).
+   (or keep it and add "a(9) = 31610535900218923 confirmed by exhaustive search" after it).
 
 2. New comment:
 
@@ -56,9 +53,22 @@ DATA line stays within the usual limit.)
 
        The gaps at a(1)-a(9) all have length 4.
 
+4. New comment (lower bound for a(10), a by-product of the a(9) search):
+
+       a(10) > 31610555571634177. - Jeff Sponaugle, Sep 18 2026
+
+   Justification (for the submitter, not for the entry): the exhaustive level-9
+   scan tested every m == 3 (mod 6) with m <= 31610555571634179 and recorded all
+   98 values with omega(m-1), omega(m), omega(m+1) >= 9.  A level-10 gap would
+   have to contain such an m with all three omegas >= 10; among the 98 only four
+   have a single member with omega = 10 (m = 5791430882243721, 8382386489666475,
+   21469520444799855, 24048717372672915) and none has all three, so no gap with
+   p <= 31610555571634177 qualifies at level 10.  Corneth's a(10) <= 225096507194749219819
+   stands as the upper bound.
+
 ## EXTENSIONS
 
-    a(9) from Jeff Sponaugle, Sep 2026   [use the exact date of the confirmed scan, OEIS style "Sep 23 2026"]
+    a(9) from Jeff Sponaugle, Sep 18 2026
 
 ## PROG / LINKS (optional)
 
@@ -67,9 +77,9 @@ DATA line stays within the usual limit.)
 
 ## Notes for the submitter
 
-* The exhaustive scan log (`scan_n9.log`) and output (`scan_n9.txt`) document the
-  search: every m == 3 (mod 6) below the term was covered; the state file records
-  the final frontier.  Quote the number of triples found below a(9) in the
-  submission comments if useful.
-* Independent verification of the gap: `python3 verify_a359636.py verify 9 33955545649252303`.
+* The exhaustive scan output (`gpu_n9.txt`), progress log (`gpu_n9.log`) and
+  state file (`gpu_n9.state`, final frontier: all m <= 31610555571634179 covered)
+  document the search; 98 triples m with omega(m-1), omega(m), omega(m+1) >= 9
+  occur below the term, only one of them bounded by primes.
+* Independent verification of the gap: `python3 verify_a359636.py verify 9 31610535900218923`.
 * Corneth's a(10) bound is beyond 64-bit arithmetic; this tool does not address a(10).

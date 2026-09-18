@@ -35,28 +35,45 @@ Computed with this tool on an Apple M1 Pro (10 cores, Sep 16 2026).
 * `verify_a359636.py` (independent Python: numpy ω-sieve over every integer,
   every prime gap walked directly, own Miller–Rabin and Pollard rho) recomputes
   a(1..6) from the definition and re-verifies each known gap.
-* Level 9, **new upper bound: a(9) ≤ 33955545649252303**, found by the
-  structured hunts (see below) and verified independently by
-  `verify_a359636.py`. This is 45% of Corneth's bound 76340177205657727.
-  Its gap:
+* **New term: a(9) = 31610535900218923.** Exhaustive GPU scan of every
+  m ≡ 3 (mod 6) up to 3.161·10¹⁶ (DGX Spark, 10 h 42 min at 810 Gm/s;
+  `gpu_n9.txt`/`.log`/`.state`): 2,417,423,797 survivors, 98 triples, exactly
+  one qualifying gap. Verified independently by `a359636 verify`, by
+  `verify_a359636.py` (own Miller–Rabin and Pollard rho), and by re-detecting
+  it with the CPU sieve on a window around it. The gap:
 
   ```
-  33955545649252303 prime
-  33955545649252304 = 2^4*7^2*11*17*29*37*163*1021*1297
-  33955545649252305 = 3*5*13*19*61*71*127*251*66383
-  33955545649252306 = 2*23*41*47*53*113*181*313*1129
-  33955545649252307 prime
+  31610535900218923 prime
+  31610535900218924 = 2^2*11*17*19*53*79*149*359*9931
+  31610535900218925 = 3*5^2*13*23*31*37*157*1559*5021
+  31610535900218926 = 2*7*29*61*103*197*223*311*907
+  31610535900218927 prime
   ```
 
-  The first hunt (`-L 1000`, m with all prime factors ≤ 1000) found six
-  qualifying gaps below Corneth's bound, the smallest at p = 36189117287569243
-  (m = 3·5·37·83·107·163·197·373·613); the free-largest-prime hunt
-  (`-L 300 -Q 2e5`) then found the smaller one above, whose m carries the prime
-  66383, the same shape as Corneth's solution.
+  It is 41% of Corneth's bound 76340177205657727 and does not qualify at
+  level 10. Before the scan, the structured hunts had lowered the bound to
+  36189117287569243 (`-L 1000`, m with all prime factors ≤ 1000) and then to
+  33955545649252303 (`-L 300 -Q 2e5`, one free prime); the true a(9) has
+  m = 3·5²·13·23·31·37·157·1559·5021, not squarefree, which no hunt variant
+  enumerates. Every one of the 53 hunt triples below a(9) reappears in the GPU
+  scan's triple list, and the CPU scans (M1 Pro to 1.45·10¹⁵, 0 triples) agree
+  with the GPU's first triple at 5.79·10¹⁵.
 
-  Whether it *is* a(9) is being settled by the exhaustive scan
-  (`scan_n9.txt`/`.log`), which stops by itself once its frontier passes the
-  smallest solution it finds; N9_STATUS
+  The sequence is now
+
+  ```
+  7, 19, 643, 51427, 8083633, 1077940147, 75582271489, 34710483181813, 31610535900218923
+  ```
+
+* **Lower bound a(10) > 31610555571634177**, for free from the same scan: a
+  level-10 gap must contain a level-9 triple with all three ω ≥ 10, and of the
+  98 triples below the covered limit only four have even one member with
+  ω = 10 (m = 5791430882243721, 8382386489666475, 21469520444799855,
+  24048717372672915), none all three. Corneth's a(10) ≤ 225096507194749219819
+  remains the upper bound; the ratio a(9)/a(8) ≈ 911 suggests a(10) around
+  10¹⁹, near the 2⁶⁴ limit of the current tools. A direct level-10 GPU scan to
+  10¹⁸ (`gpu_n10.*`, started Sep 18 2026, T = 1000 with six forced small
+  factors, 904 Gm/s, about 13 days) is running to strengthen this bound.
 
 For comparison, the numbers of *triples* m ≡ 3 (mod 6) with ω(m−1), ω(m), ω(m+1)
 all ≥ n found below a(n) (each is a potential term; it becomes one only when the
@@ -68,6 +85,7 @@ surrounding gap is bounded by primes and every composite in it qualifies):
 | 6 | 1077940147 | 16 | 1 |
 | 7 | 75582271489 | 3 | 1 |
 | 8 | 34710483181813 | 7 | 1 |
+| 9 | 31610535900218923 | 98 | 1 |
 
 ## Method
 
@@ -147,11 +165,50 @@ solutions in the range).
 | level 9 to Corneth's bound 7.63·10¹⁶ | 1.27·10¹⁶ | ≈ 15 days |
 
 The sieve runs at ≈ 2.2 cycles per k on one performance core (≈ 57 Gm/s, i.e.
-9.5·10⁹ k/s, on all ten cores). The ratios a(n+1)/a(n) so far are 80, 157,
-133, 70 and 459, so a(9) is plausibly in the 10¹⁵–10¹⁷ range; whether the scan
-finds it or only pushes a lower bound is a gamble on where it lies. a(10) is
+9.5·10⁹ k/s, on all ten cores). The ratios a(n+1)/a(n) are 80, 157, 133, 70, 459 and now 911. a(10) is
 beyond 64-bit arithmetic (its bound is 2.25·10²⁰) and out of reach for this
 method.
+
+## GPU version (cuda/a359636_cuda.cu)
+
+`cuda/a359636_cuda.cu` is a CUDA port of the scan for Jeff's DGX Spark (GB10:
+48 SMs, 6144 CUDA cores, 20 Arm cores). The sieve runs on the GPU: one thread
+block (256 threads) per segment of 8192 k, the three packed byte counters in
+shared memory, the primes 5..23 from two pattern tables and the primes 29..T
+by shared-memory `atomicAdd` (one warp per progression up to 127, one thread
+per progression above, snake-ordered for balance). Survivors are appended to a
+device list and verified on the Arm cores by the same host code as the CPU
+tool; output, checkpoint (`-S`) and early stop work the same way. Because the
+GPU has cycles to spare, the default T is the smallest bound forcing *six*
+small prime factors into each target (T = 2000 for the level-9 range), which
+makes survivors about ten times rarer than the CPU tool's default.
+
+Validation: the selftest reproduces a(1..7) in 1.7 s and a(8) in 6 min (same 7
+triples as the CPU tool); on identical windows with identical T the GPU and CPU
+tools report exactly the same survivor counts (e.g. 23,562,061 for
+m in [7·10¹⁶, 7·10¹⁶+6·10¹²] with T = 1000).
+
+| | rate | remaining level-9 range (≈3.4·10¹⁶ m) |
+|---|---|---|
+| M1 Pro, 10 threads (CPU tool) | 57 Gm/s | 6.6 days |
+| DGX Spark, 20 Arm cores (CPU tool) | 82 Gm/s | 4.6 days |
+| DGX Spark GPU, first version | 100 Gm/s | 3.8 days |
+| DGX Spark GPU, 32-bit modulo + coalesced pattern reads | 620 Gm/s | 15 h |
+| DGX Spark GPU, 8192-k segments, 256 threads (used for the run) | **810 Gm/s** | **11.6 h** (actual: 10 h 42 min to a(9)) |
+
+Segment size matters (occupancy): 16384-k segments run at 420 Gm/s, 4096-k at
+640; 128-thread blocks are slower. With marking and pattern init compiled out
+the pipeline alone runs at 4800 Gm/s, so the shared-memory marking is now the
+cost and a persistent-block design with the pattern tables in shared memory
+would be the next step.
+
+Build and run on the Spark (`nvcc` lives in `/usr/local/cuda/bin`):
+
+```
+cd cuda && make            # NVCC=/usr/local/cuda/bin/nvcc ARCH=sm_121
+./a359636_cuda selftest -8
+nohup ./a359636_cuda scan 9 0 33955545649252303 -t 16 -b 262144 -S gpu_n9.state -i 60 > gpu_n9.txt 2> gpu_n9.log &
+```
 
 ## Usage
 
@@ -185,5 +242,7 @@ resumes from the checkpoint; the state file also records solutions found so far.
 * `hunt_n9_L1000.txt`, `hunt_n9_L1000.log` — level-9 hunt (L = 1000) below Corneth's bound.
 * `hunt_n9_L2000.txt`, `hunt_n9_L2000.log` — level-9 hunt (L = 2000) below 36189117287569243.
 * `hunt_n9_L300_Q2e5.txt`, `.log` — level-9 hunt with a free largest prime (L = 300, Q = 2·10⁵).
-* `OEIS_draft.md`, `b359636.txt` — draft submission text and b-file (pending confirmation).
+* `OEIS_draft.md`, `b359636.txt` — submission text and b-file for a(9).
+* `cuda/a359636_cuda.cu`, `cuda/Makefile` — the CUDA version (DGX Spark); `gpu_n9.txt`/`.log`/`.state` are the run files of the scan that found a(9).
+* `scan_n9.txt`, `scan_n9.log`, `scan_n9.state` — the M1 Pro CPU scan (m ≤ 1.45·10¹⁵, paused; superseded by the GPU run).
 * `scan_n9.txt`, `scan_n9.log`, `scan_n9.state` — the level-9 scan (output, progress, checkpoint).
