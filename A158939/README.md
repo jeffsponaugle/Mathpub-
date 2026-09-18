@@ -130,6 +130,44 @@ So the median expectation is about 1.5 days, the mean about 2.3 days, with a
 an expected 0.8 primes with L = 15 below the actual a(15), and 0.17 with
 L = 14 below a(14).) a(17) is expected near 4e16 and is out of reach here.
 
+## GPU version (DGX Spark, CUDA)
+
+[cuda/a158939_cuda.cu](cuda/a158939_cuda.cu) is the same scan on an NVIDIA GB10
+(DGX Spark), with no library dependencies (it sieves its own sieving primes).
+Build on the Spark with `make` in `cuda/` (nvcc 13, `-arch=sm_121`).
+
+Design: numbers coprime to 30 are one byte per 30 numbers, bit j for residue
+R[j]. A chunk is 96 segments of 2,580,480 numbers (2.48e8). Per chunk the
+sieving primes above QSPLIT (default 2e6, up to sqrt(END)) are marked by one
+thread each into an 8 MB bitmap that stays inside the 24 MB L2, where random
+atomics run at ~2e10/s (fifteen times the DRAM rate); each block then loads its
+segment into 88 KB of shared memory, ORs in a periodic pattern for 7..19,
+marks the primes 23..QSPLIT (warp per prime below 2048, thread per prime
+above; the first multiple in each of the eight residue classes comes from a
+32-bit Barrett reduction of chunk_lo mod q and a CRT step with q^-1 mod 30),
+and walks the finished bitmap: each thread takes a slice of words, extracts
+primes and gaps and runs the same increasing-run bookkeeping as the CPU tool
+with register-only state, continuing past its slice until the run in progress
+ends (blocks sieve an overlap of 61,440 numbers for that; a run still open at
+the end is settled on the CPU, which never happens in practice). Two streams
+keep the large-prime kernel of chunk k+1 running while the segments of chunk
+k are processed. Chunks complete in order, so every term is confirmed as it is
+found; `-S FILE` checkpoints position, table and histogram, and rerunning the
+same command resumes (the large-prime state is recomputed).
+
+Measured: 2.2-2.5e11 numbers/s at 10^15 and 1.6-1.7e11 at 8e15, i.e. 13x the
+M1 Pro; 10^16 in about 15 hours. The GPU `selftest` reproduces the CPU tool's
+exact prime counts, a(n), pi(a(n)) and run-length histograms on [0, 1e11), on
+an oddly bounded range and on [1e15, 1e15+2e12), and an interrupted run resumes
+to a byte-identical result. Tuning found by ablation: the sieve marks are
+cheap (shared-memory atomics at 1e12/s); what mattered was avoiding 64-bit
+division per prime per segment and keeping the extraction loop out of local
+memory (a per-thread ring buffer there made the kernel latency-bound).
+
+    ./a158939_cuda selftest
+    ./a158939_cuda bench 1e15 -p                # per-kernel profile
+    setsid nohup ./a158939_cuda scan 1e16 -Q 2e6 -S gpu_a16.state -i 60 > gpu_a16.txt 2> gpu_a16.log < /dev/null &
+
 ## Results
 
 _To be filled in when the run completes: a(16), pi(a(16)) (= A133697(14)),
