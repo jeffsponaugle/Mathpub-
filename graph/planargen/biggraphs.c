@@ -123,8 +123,8 @@ delete_random_edges(int D)
     int i, j;
     for (i = 0; i < D && ne > 0; ++i)
     {
-        j = rndint((int)ne);
-        eu[j] = eu[ne-1]; ev[j] = ev[ne-1]; --ne;
+        size_t r = (size_t)(rnd() % (unsigned long long)ne);
+        eu[r] = eu[ne-1]; ev[r] = ev[ne-1]; --ne;
     }
 }
 
@@ -192,7 +192,7 @@ main(int argc, char *argv[])
     else if (strcmp(fam, "multi") == 0)      /* planar multigraph: duplicate ~N/10 edges, add ~N/10 loops */
     {
         SEEDFROM(3); apollonian(N);
-        for (i = 0; i < N/10; ++i) { j = rndint((int)ne); edge(eu[j], ev[j]); }
+        for (i = 0; i < N/10; ++i) { size_t r = (size_t)(rnd() % (unsigned long long)ne); edge(eu[r], ev[r]); }
         for (i = 0; i < N/10; ++i) { j = rndint(N); edge(j, j); }
     }
     else if (strcmp(fam, "apollok5") == 0)

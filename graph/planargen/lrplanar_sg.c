@@ -11,10 +11,13 @@
  *     d[] holds degrees, e[] the neighbour lists; every edge must be present
  *     from both endpoints.  Loops and parallel edges are ignored, so
  *     multigraphs are accepted and answered for the underlying simple graph.
- *   - No size limit.  Work space is allocated with nauty's DYNALLSTAT /
- *     DYNALLOC1 (thread-local when nauty is built with TLS), grows as needed
- *     and is kept between calls; lrplanar_freedyn() releases it.  Vertex and
- *     edge numbers must fit in an int (up to 2^31-1 undirected edges).
+ *   - No size limit.  Following nauty's conventions, vertex numbers,
+ *     heights and degrees are int (n < 2^31) while every edge count and
+ *     edge number is size_t, so graphs with more than 2^31 edges are
+ *     handled on 64-bit systems.  Work space is allocated with nauty's
+ *     DYNALLSTAT / DYNALLOC1 (thread-local when nauty is built with TLS),
+ *     grows as needed and is kept between calls; lrplanar_freedyn()
+ *     releases it.
  *   - Both depth-first searches are iterative, with explicit stacks, so a
  *     path on ten million vertices is as safe as a triangle.
  *   - Outgoing edges are sorted by nesting depth with one global counting
@@ -27,15 +30,17 @@
  *     visited, w is either v's parent (the tree edge into v: skip), a
  *     descendant (height[w] > height[v]: the edge was already oriented from
  *     w as a back edge: skip) or a proper ancestor (orient a new back edge
- *     v -> w).  Undirected DFS produces no other kind of edge.  The edge ids
- *     oriented from v overwrite the copied list from the front; they never
- *     overtake the position being read.
+ *     v -> w).  Undirected DFS produces no other kind of edge.  The edge
+ *     numbers oriented from v overwrite the copied list from the front; they
+ *     never overtake the position being read.
  *
- * Memory: about 10 ints per vertex plus 11 ints per undirected edge (5 edge
- * arrays, out[] with 2 entries per edge, the sort buffer and the
- * conflict-pair stack), i.e. roughly 170 bytes per vertex of a planar
- * graph with 3n edges.  Arrays only needed in the first phase (esrc,
- * lowpt2, nesting) are reused in the second (lowpt_edge, ref, stack_bottom).
+ * Memory: per vertex 5 ints + 3 size_t-or-int stack entries (about 44
+ * bytes); per undirected edge 2 ints (etgt, lowpt), 3 size_t (esrc/
+ * lowpt_edge, lowpt2/ref, nesting/stack_bottom: arrays needed only in the
+ * first phase are reused in the second), the sort buffer (size_t), out[]
+ * with 2 size_t per edge, and the conflict-pair stack (4 size_t per back
+ * edge): about 100 bytes per edge, roughly 350 bytes per vertex of a
+ * planar graph with 3n edges.
  *
  * Early exits (all exact): n <= 4 is planar; more than 3n-6 distinct edges
  * (found while orienting, so a dense input is rejected after 3n-5 edges)
@@ -47,36 +52,39 @@
 
 #include "lrplanar_sg.h"
 
-#define NONE (-1)
+#define NONE   (-1)                 /* no vertex / not visited (int) */
+#define NOEDGE ((size_t)-1)         /* no edge (size_t) */
 #define MIN(a,b) ((a) < (b) ? (a) : (b))
 
-typedef struct { int low, high; } interval;      /* edge ids, NONE = empty */
+typedef struct { size_t low, high; } interval;   /* edge numbers, NOEDGE = empty */
 typedef struct { interval L, R; } cpair;          /* conflict pair */
-#define EMPTY(I) ((I).low == NONE && (I).high == NONE)
+#define EMPTY(I) ((I).low == NOEDGE && (I).high == NOEDGE)
 
 /* --- work space, grown on demand, kept between calls ------------------- */
 
-DYNALLSTAT(int,height,height_sz);        /* per vertex: DFS depth, NONE = unvisited */
-DYNALLSTAT(int,parent_edge,parent_edge_sz); /* per vertex: tree edge into it, NONE for roots */
-DYNALLSTAT(int,parent_v,parent_v_sz);    /* per vertex: DFS parent vertex, NONE for roots */
-DYNALLSTAT(int,nout,nout_sz);            /* per vertex: number of outgoing edges */
-DYNALLSTAT(int,mark,mark_sz);            /* per vertex: vertex whose list is being deduplicated */
-DYNALLSTAT(int,frame_v,frame_v_sz);      /* DFS stack: vertex */
-DYNALLSTAT(int,frame_i,frame_i_sz);      /* DFS stack: position in its list */
-DYNALLSTAT(int,frame_n,frame_n_sz);      /* DFS stack: length of its list */
-DYNALLSTAT(int,count,count_sz);          /* counting sort buckets (2n+2) */
+/* per vertex */
+DYNALLSTAT(int,height,height_sz);           /* DFS depth, NONE = unvisited */
+DYNALLSTAT(size_t,parent_edge,parent_edge_sz); /* tree edge into it, NOEDGE for roots */
+DYNALLSTAT(int,parent_v,parent_v_sz);       /* DFS parent vertex, NONE for roots */
+DYNALLSTAT(int,nout,nout_sz);               /* number of outgoing edges (<= degree) */
+DYNALLSTAT(int,mark,mark_sz);               /* vertex whose list is being deduplicated */
+DYNALLSTAT(int,frame_v,frame_v_sz);         /* DFS stack: vertex */
+DYNALLSTAT(int,frame_i,frame_i_sz);         /* DFS stack: position in its list */
+DYNALLSTAT(int,frame_n,frame_n_sz);         /* DFS stack: length of its list */
+DYNALLSTAT(size_t,count,count_sz);          /* counting sort buckets (2n+2) */
 
-DYNALLSTAT(int,etgt,etgt_sz);            /* per edge: target (head) after orientation */
-DYNALLSTAT(int,esrc,esrc_sz);            /* per edge: source; phase 2: lowpt_edge */
-DYNALLSTAT(int,lowpt,lowpt_sz);          /* per edge: lowest return height */
-DYNALLSTAT(int,lowpt2,lowpt2_sz);        /* per edge: second lowest; phase 2: ref */
-DYNALLSTAT(int,nesting,nesting_sz);      /* per edge: nesting depth; phase 2: stack_bottom */
-DYNALLSTAT(int,out,out_sz);              /* per vertex slice (like sg->e): neighbours, then outgoing edge ids */
-DYNALLSTAT(int,sorted,sorted_sz);        /* sort buffer (one entry per edge) */
-DYNALLSTAT(cpair,S,S_sz);                /* conflict-pair stack */
+/* per edge */
+DYNALLSTAT(int,etgt,etgt_sz);               /* target (head) after orientation */
+DYNALLSTAT(size_t,esrc,esrc_sz);            /* source vertex; phase 2: lowpt_edge */
+DYNALLSTAT(int,lowpt,lowpt_sz);             /* lowest return height */
+DYNALLSTAT(size_t,lowpt2,lowpt2_sz);        /* second lowest height; phase 2: ref */
+DYNALLSTAT(size_t,nesting,nesting_sz);      /* nesting depth; phase 2: stack_bottom */
+DYNALLSTAT(size_t,out,out_sz);              /* per vertex slice (like sg->e): neighbours, then edge numbers */
+DYNALLSTAT(size_t,sorted,sorted_sz);        /* sort buffer (one entry per edge) */
+DYNALLSTAT(cpair,S,S_sz);                   /* conflict-pair stack */
 
-static TLS_ATTR int sp;                  /* conflict-pair stack size */
-static TLS_ATTR int *lowpt_edge, *ref_, *stack_bottom;   /* phase-2 aliases */
+static TLS_ATTR size_t sp;                  /* conflict-pair stack size */
+static TLS_ATTR size_t *lowpt_edge, *ref_, *stack_bottom;   /* phase-2 aliases */
 
 void
 lrplanar_freedyn(void)
@@ -97,7 +105,8 @@ lrplanar_freedyn(void)
 static int
 dedup_list(sparsegraph *sg, int v)
 {
-    int *e = sg->e + sg->v[v], *o = out + sg->v[v];
+    int *e = sg->e + sg->v[v];
+    size_t *o = out + sg->v[v];
     int j, w, cnt = 0, d = sg->d[v];
 
     for (j = 0; j < d; ++j)
@@ -105,44 +114,46 @@ dedup_list(sparsegraph *sg, int v)
         w = e[j];
         if (w == v || mark[w] == v) continue;
         mark[w] = v;
-        o[cnt++] = w;
+        o[cnt++] = (size_t)w;
     }
     return cnt;
 }
 
 /* Bookkeeping after outgoing edge ei of v has been fully explored (for a
  * tree edge: after its subtree; for a back edge: immediately): nesting
- * depth of ei, and lowpt/lowpt2 of the tree edge e into v. */
+ * depth of ei, and lowpt/lowpt2 of the tree edge e into v.  lowpt2 holds
+ * heights (small ints) although its array is size_t for later reuse. */
 static void
-poststep1(int v, int ei)
+poststep1(int v, size_t ei)
 {
-    int e = parent_edge[v];
+    size_t e = parent_edge[v];
 
-    nesting[ei] = 2*lowpt[ei] + (lowpt2[ei] < height[v] ? 1 : 0);
+    nesting[ei] = 2*(size_t)lowpt[ei] + ((int)lowpt2[ei] < height[v] ? 1 : 0);
 
-    if (e != NONE)
+    if (e != NOEDGE)
     {
         if (lowpt[ei] < lowpt[e])
         {
-            lowpt2[e] = MIN(lowpt[e], lowpt2[ei]);
+            lowpt2[e] = (size_t)MIN(lowpt[e], (int)lowpt2[ei]);
             lowpt[e] = lowpt[ei];
         }
         else if (lowpt[ei] > lowpt[e])
-            lowpt2[e] = MIN(lowpt2[e], lowpt[ei]);
+            lowpt2[e] = (size_t)MIN((int)lowpt2[e], lowpt[ei]);
         else
-            lowpt2[e] = MIN(lowpt2[e], lowpt2[ei]);
+            lowpt2[e] = (size_t)MIN((int)lowpt2[e], (int)lowpt2[ei]);
     }
 }
 
-/* Iterative DFS from root.  Assigns edge ids k, k+1, ... to the distinct
- * non-loop edges met, orients them, fills the outgoing lists, computes
- * height, lowpt, lowpt2 and nesting.  Returns the new k, or -1 as soon as
+/* Iterative DFS from root.  Assigns edge numbers *pk, *pk+1, ... to the
+ * distinct non-loop edges met, orients them, fills the outgoing lists,
+ * computes height, lowpt, lowpt2 and nesting.  Returns FALSE as soon as
  * more than maxk edges have been found (the graph is then not planar). */
-static int
-dfs1(sparsegraph *sg, int root, int k, int maxk)
+static boolean
+dfs1(sparsegraph *sg, int root, size_t *pk, size_t maxk)
 {
     size_t *vv = sg->v;
-    int fp, v, w, j, ei, u;
+    size_t k = *pk, ei;
+    int fp, v, w, j, u;
 
     height[root] = 0;
     fp = 0;
@@ -157,16 +168,17 @@ dfs1(sparsegraph *sg, int root, int k, int maxk)
         if (j < frame_n[fp])
         {
             frame_i[fp] = j + 1;
-            w = out[vv[v] + j];
+            w = (int)out[vv[v] + (size_t)j];
             if (w == parent_v[v]) continue;          /* the tree edge into v */
             if (height[w] != NONE && height[w] > height[v]) continue;   /* descendant: oriented from w */
 
-            if (k > maxk) return -1;                 /* too many edges for a planar graph */
+            if (k > maxk) { *pk = k; return FALSE; } /* too many edges for a planar graph */
             ei = k++;
-            esrc[ei] = v;
+            esrc[ei] = (size_t)v;
             etgt[ei] = w;
-            lowpt[ei] = lowpt2[ei] = height[v];
-            out[vv[v] + nout[v]++] = ei;             /* nout[v] <= j: slot already read */
+            lowpt[ei] = height[v];
+            lowpt2[ei] = (size_t)height[v];
+            out[vv[v] + (size_t)nout[v]++] = ei;     /* nout[v] <= j: slot already read */
 
             if (height[w] == NONE)                   /* tree edge */
             {
@@ -194,15 +206,16 @@ dfs1(sparsegraph *sg, int root, int k, int maxk)
             }
         }
     }
-    return k;
+    *pk = k;
+    return TRUE;
 }
 
 /* --- phase 2: testing --------------------------------------------------- */
 
-static int
-conflicting(interval I, int b)
+static boolean
+conflicting(interval I, size_t b)
 {
-    return !EMPTY(I) && I.high != NONE && lowpt[I.high] > lowpt[b];
+    return !EMPTY(I) && I.high != NOEDGE && lowpt[I.high] > lowpt[b];
 }
 
 static int
@@ -215,25 +228,25 @@ lowest(cpair P)
 
 /* Outgoing edge ei of v (not the first one) has a return edge; e is the
  * tree edge into v.  Fold the constraints of ei into a new conflict pair.
- * Returns 0 if the graph is not planar. */
-static int
-add_constraints(int ei, int e)
+ * Returns FALSE if the graph is not planar. */
+static boolean
+add_constraints(size_t ei, size_t e)
 {
     cpair P, Q;
     interval t;
 
-    P.L.low = P.L.high = P.R.low = P.R.high = NONE;
+    P.L.low = P.L.high = P.R.low = P.R.high = NOEDGE;
 
     /* merge the return edges of ei (everything above stack_bottom[ei]) into P.R */
     do
     {
         Q = S[--sp];
         if (!EMPTY(Q.L)) { t = Q.L; Q.L = Q.R; Q.R = t; }
-        if (!EMPTY(Q.L)) return 0;                      /* NOT PLANAR */
+        if (!EMPTY(Q.L)) return FALSE;                  /* NOT PLANAR */
         if (lowpt[Q.R.low] > lowpt[e])                  /* merge intervals */
         {
             if (EMPTY(P.R)) P.R.high = Q.R.high;
-            else if (P.R.low != NONE) ref_[P.R.low] = Q.R.high;
+            else if (P.R.low != NOEDGE) ref_[P.R.low] = Q.R.high;
             P.R.low = Q.R.low;
         }
         else                                            /* align */
@@ -245,15 +258,15 @@ add_constraints(int ei, int e)
     {
         Q = S[--sp];
         if (conflicting(Q.R, ei)) { t = Q.L; Q.L = Q.R; Q.R = t; }
-        if (conflicting(Q.R, ei)) return 0;             /* NOT PLANAR */
-        if (P.R.low != NONE) ref_[P.R.low] = Q.R.high;
-        if (Q.R.low != NONE) P.R.low = Q.R.low;
+        if (conflicting(Q.R, ei)) return FALSE;         /* NOT PLANAR */
+        if (P.R.low != NOEDGE) ref_[P.R.low] = Q.R.high;
+        if (Q.R.low != NOEDGE) P.R.low = Q.R.low;
         if (EMPTY(P.L)) P.L.high = Q.L.high;
-        else if (P.L.low != NONE) ref_[P.L.low] = Q.L.high;
+        else if (P.L.low != NOEDGE) ref_[P.L.low] = Q.L.high;
         P.L.low = Q.L.low;
     }
     if (!(EMPTY(P.L) && EMPTY(P.R))) S[sp++] = P;
-    return 1;
+    return TRUE;
 }
 
 /* Back edges returning to u are finished when the walk returns to u. */
@@ -267,45 +280,46 @@ trim_back_edges(int u)
     if (sp > 0)
     {
         P = S[--sp];
-        while (P.L.high != NONE && etgt[P.L.high] == u) P.L.high = ref_[P.L.high];
-        if (P.L.high == NONE && P.L.low != NONE)
+        while (P.L.high != NOEDGE && etgt[P.L.high] == u) P.L.high = ref_[P.L.high];
+        if (P.L.high == NOEDGE && P.L.low != NOEDGE)
         {
             ref_[P.L.low] = P.R.low;
-            P.L.low = NONE;
+            P.L.low = NOEDGE;
         }
-        while (P.R.high != NONE && etgt[P.R.high] == u) P.R.high = ref_[P.R.high];
-        if (P.R.high == NONE && P.R.low != NONE)
+        while (P.R.high != NOEDGE && etgt[P.R.high] == u) P.R.high = ref_[P.R.high];
+        if (P.R.high == NOEDGE && P.R.low != NOEDGE)
         {
             ref_[P.R.low] = P.L.low;
-            P.R.low = NONE;
+            P.R.low = NOEDGE;
         }
         S[sp++] = P;
     }
 }
 
 /* After outgoing edge number i (edge ei) of v has been processed. */
-static int
-poststep2(int v, int i, int ei)
+static boolean
+poststep2(int v, int i, size_t ei)
 {
-    int e = parent_edge[v];
+    size_t e = parent_edge[v];
 
-    if (e != NONE && lowpt[ei] < height[v])            /* ei has a return edge (never at a root) */
+    if (e != NOEDGE && lowpt[ei] < height[v])           /* ei has a return edge (never at a root) */
     {
         if (i == 0)
             lowpt_edge[e] = lowpt_edge[ei];
         else if (!add_constraints(ei, e))
-            return 0;
+            return FALSE;
     }
-    return 1;
+    return TRUE;
 }
 
 /* Iterative testing DFS from root over the sorted outgoing lists.
- * Returns 0 if the graph is not planar. */
-static int
+ * Returns FALSE if the graph is not planar. */
+static boolean
 dfs2(sparsegraph *sg, int root)
 {
     size_t *vv = sg->v;
-    int fp, v, i, ei, w, e, u, hl, hr;
+    size_t ei, e, hl, hr;
+    int fp, v, i, w, u;
 
     fp = 0;
     frame_v[0] = root;
@@ -317,7 +331,7 @@ dfs2(sparsegraph *sg, int root)
         i = frame_i[fp];
         if (i < nout[v])
         {
-            ei = out[vv[v] + i];
+            ei = out[vv[v] + (size_t)i];
             w = etgt[ei];
             stack_bottom[ei] = sp;
             if (ei == parent_edge[w])                   /* tree edge: descend, poststep2 on return */
@@ -329,17 +343,17 @@ dfs2(sparsegraph *sg, int root)
             else                                        /* back edge */
             {
                 lowpt_edge[ei] = ei;
-                S[sp].L.low = S[sp].L.high = NONE;
+                S[sp].L.low = S[sp].L.high = NOEDGE;
                 S[sp].R.low = S[sp].R.high = ei;
                 ++sp;
-                if (!poststep2(v, i, ei)) return 0;
+                if (!poststep2(v, i, ei)) return FALSE;
                 frame_i[fp] = i + 1;
             }
         }
         else                                            /* v is finished */
         {
             e = parent_edge[v];
-            if (e != NONE)
+            if (e != NOEDGE)
             {
                 u = parent_v[v];
                 trim_back_edges(u);
@@ -347,7 +361,7 @@ dfs2(sparsegraph *sg, int root)
                 {
                     hl = S[sp-1].L.high;
                     hr = S[sp-1].R.high;
-                    if (hl != NONE && (hr == NONE || lowpt[hl] > lowpt[hr])) ref_[e] = hl;
+                    if (hl != NOEDGE && (hr == NOEDGE || lowpt[hl] > lowpt[hr])) ref_[e] = hl;
                     else ref_[e] = hr;
                 }
             }
@@ -356,12 +370,12 @@ dfs2(sparsegraph *sg, int root)
             {
                 u = frame_v[fp];
                 i = frame_i[fp];
-                if (!poststep2(u, i, e)) return 0;
+                if (!poststep2(u, i, e)) return FALSE;
                 frame_i[fp] = i + 1;
             }
         }
     }
-    return 1;
+    return TRUE;
 }
 
 /* --- driver -------------------------------------------------------------- */
@@ -370,18 +384,13 @@ boolean
 lrplanar_sg(sparsegraph *sg)
 {
     int n = sg->nv;
-    size_t nde = sg->nde, extent, x;
-    int v, i, k, maxk, maxkey, nb;
+    size_t nde = sg->nde, extent, x, k, maxk, nb, i, ei, maxkey;
+    int v;
 
     if (n <= 4) return TRUE;                         /* every graph on <= 4 vertices is planar */
-    if (nde > (size_t)0x7FFFFFF0)
-    {
-        fprintf(stderr, ">E lrplanar_sg: more than 2^31 edges not supported\n");
-        exit(1);
-    }
 
-    maxk = 3*n - 6;                        /* a planar graph has at most this many edges */
-    nb = (int)MIN(nde, (size_t)maxk + 1);  /* at most maxk+1 edges are ever numbered */
+    maxk = 3*(size_t)n - 6;                /* a planar graph has at most this many edges */
+    nb = MIN(nde, maxk + 1);               /* at most maxk+1 edges are ever numbered */
     if (nb < 1) nb = 1;
 
     /* out[] mirrors the layout of sg->e, whose lists may leave gaps */
@@ -393,7 +402,7 @@ lrplanar_sg(sparsegraph *sg)
     }
 
     DYNALLOC1(int,height,height_sz,n,"lrplanar_sg");
-    DYNALLOC1(int,parent_edge,parent_edge_sz,n,"lrplanar_sg");
+    DYNALLOC1(size_t,parent_edge,parent_edge_sz,n,"lrplanar_sg");
     DYNALLOC1(int,parent_v,parent_v_sz,n,"lrplanar_sg");
     DYNALLOC1(int,nout,nout_sz,n,"lrplanar_sg");
     DYNALLOC1(int,mark,mark_sz,n,"lrplanar_sg");
@@ -401,55 +410,52 @@ lrplanar_sg(sparsegraph *sg)
     DYNALLOC1(int,frame_i,frame_i_sz,n,"lrplanar_sg");
     DYNALLOC1(int,frame_n,frame_n_sz,n,"lrplanar_sg");
     DYNALLOC1(int,etgt,etgt_sz,nb,"lrplanar_sg");
-    DYNALLOC1(int,esrc,esrc_sz,nb,"lrplanar_sg");
+    DYNALLOC1(size_t,esrc,esrc_sz,nb,"lrplanar_sg");
     DYNALLOC1(int,lowpt,lowpt_sz,nb,"lrplanar_sg");
-    DYNALLOC1(int,lowpt2,lowpt2_sz,nb,"lrplanar_sg");
-    DYNALLOC1(int,nesting,nesting_sz,nb,"lrplanar_sg");
-    DYNALLOC1(int,out,out_sz,extent,"lrplanar_sg");
+    DYNALLOC1(size_t,lowpt2,lowpt2_sz,nb,"lrplanar_sg");
+    DYNALLOC1(size_t,nesting,nesting_sz,nb,"lrplanar_sg");
+    DYNALLOC1(size_t,out,out_sz,extent,"lrplanar_sg");
 
     for (v = 0; v < n; ++v)
     {
-        height[v] = NONE; parent_edge[v] = NONE; parent_v[v] = NONE;
+        height[v] = NONE; parent_edge[v] = NOEDGE; parent_v[v] = NONE;
         nout[v] = 0; mark[v] = NONE;
     }
 
     /* phase 1: orientation, one DFS per component */
     k = 0;
     for (v = 0; v < n; ++v)
-        if (height[v] == NONE)
-        {
-            k = dfs1(sg, v, k, maxk);
-            if (k < 0) return FALSE;                /* more than 3n-6 distinct edges */
-        }
+        if (height[v] == NONE && !dfs1(sg, v, &k, maxk))
+            return FALSE;                            /* more than 3n-6 distinct edges */
     if (k < 9) return TRUE;                          /* K5 has 10 edges, K3,3 has 9 */
 
     /* sort every vertex's outgoing edges by nesting depth: one stable
        counting sort over all edges, then redistribute into out[] */
-    maxkey = 2*n + 1;
-    DYNALLOC1(int,count,count_sz,maxkey + 1,"lrplanar_sg");
-    DYNALLOC1(int,sorted,sorted_sz,k,"lrplanar_sg");
+    maxkey = 2*(size_t)n + 1;
+    DYNALLOC1(size_t,count,count_sz,maxkey + 1,"lrplanar_sg");
+    DYNALLOC1(size_t,sorted,sorted_sz,k,"lrplanar_sg");
     for (i = 0; i <= maxkey; ++i) count[i] = 0;
     for (i = 0; i < k; ++i) ++count[nesting[i]];
     for (i = 1; i <= maxkey; ++i) count[i] += count[i-1];
-    for (i = k - 1; i >= 0; --i) sorted[--count[nesting[i]]] = i;
+    for (i = k; i-- > 0; ) sorted[--count[nesting[i]]] = i;
     for (v = 0; v < n; ++v) nout[v] = 0;
     for (i = 0; i < k; ++i)
     {
-        int ei = sorted[i];
-        v = esrc[ei];
-        out[sg->v[v] + nout[v]++] = ei;
+        ei = sorted[i];
+        v = (int)esrc[ei];
+        out[sg->v[v] + (size_t)nout[v]++] = ei;
     }
 
     /* phase 2: reuse phase-1 arrays that are no longer needed */
     lowpt_edge = esrc;          /* esrc was only needed for the redistribution */
     ref_ = lowpt2;              /* lowpt2 was only needed for nesting depths */
     stack_bottom = nesting;     /* nesting was only needed for the sort */
-    for (i = 0; i < k; ++i) { ref_[i] = NONE; lowpt_edge[i] = NONE; }
+    for (i = 0; i < k; ++i) { ref_[i] = NOEDGE; lowpt_edge[i] = NOEDGE; }
     DYNALLOC1(cpair,S,S_sz,k + 2,"lrplanar_sg");
 
     sp = 0;
     for (v = 0; v < n; ++v)
-        if (parent_edge[v] == NONE && !dfs2(sg, v)) return FALSE;
+        if (parent_edge[v] == NOEDGE && !dfs2(sg, v)) return FALSE;
     return TRUE;
 }
 

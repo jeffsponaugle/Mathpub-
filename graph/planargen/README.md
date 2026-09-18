@@ -297,12 +297,16 @@ implementation of the same algorithm for nauty's `sparsegraph`
 representation.  `lrplanar.c` is untouched and remains what the a(14) and
 a(15) runs used.  Differences:
 
-- `boolean lrplanar_sg(sparsegraph *sg)`: any size (vertex and edge counts
-  must fit in an `int`); loops and parallel edges are ignored, so multigraphs
-  are answered for their underlying simple graph.  `lrplanar_dense(g,m,n)`
-  wraps it for dense graphs; `lrplanar_freedyn()` frees the work space.
+- `boolean lrplanar_sg(sparsegraph *sg)`: any size.  Following nauty's
+  conventions vertex numbers, heights and degrees are `int` (n < 2^31) and
+  every edge count and edge number is `size_t`, so more than 2^31 edges are
+  supported on 64-bit systems (untested for lack of memory: such a planar
+  graph needs 7·10^8 vertices and ~250 GB).  Loops and parallel edges are
+  ignored, so multigraphs are answered for their underlying simple graph.
+  `lrplanar_dense(g,m,n)` wraps it for dense graphs; `lrplanar_freedyn()`
+  frees the work space.
 - Work space via nauty's `DYNALLSTAT`/`DYNALLOC1` (thread-local with TLS),
-  grown on demand and kept between calls; about 10 ints per vertex and 11
+  grown on demand and kept between calls; about 44 bytes per vertex and 100
   per edge (phase-1 arrays are reused in phase 2).
 - Both depth-first searches are iterative (explicit stacks): a path on 10^7
   vertices is fine.  Outgoing edges are sorted by nesting depth with one
@@ -315,11 +319,14 @@ Measured on the M1 Pro (input reading included in wall time and memory):
 
 | graph | vertices | edges | answer | wall | peak RSS |
 |-------|----------|-------|--------|------|----------|
-| random Apollonian network | 10^7 | 3·10^7 | planar | 8.7 s | 1.65 GB |
-| same + K5 on 5 random vertices | 10^7 | 3·10^7+10 | non-planar | 4.5 s | 1.46 GB |
-| path | 10^7 | 10^7 | planar | 0.8 s | 0.92 GB |
-| 2000 x 2000 grid | 4·10^6 | 8·10^6 | planar | 0.4 s | 0.54 GB |
-| star K_{1,10^6} | 10^6 | 10^6 | planar | 0.06 s | 83 MB |
+| random Apollonian network | 10^7 | 3·10^7 | planar | 8.5 s | 2.45 GB |
+| same + K5 on 5 random vertices | 10^7 | 3·10^7+10 | non-planar | 4.5 s | ~2.2 GB |
+| path | 10^7 | 10^7 | planar | 0.6 s | 1.26 GB |
+| 2000 x 2000 grid | 4·10^6 | 8·10^6 | planar | 0.4 s | 0.77 GB |
+| star K_{1,10^6} | 10^6 | 10^6 | planar | 0.07 s | 117 MB |
+
+(With `int` edge numbers the memory was about 35% lower; `size_t` was chosen
+at McKay's request so that edge counts can exceed 2^31.)
 
 On small graphs it runs at the speed of the bitmask version (0.7 us per
 graph on the 10-vertex graphs, versus 3.3 us for nauty's tester).  A side
@@ -351,7 +358,7 @@ planar and non-planar multigraphs with loops and parallel edges).
    as backend) reproduces A003094 and the A049334 rows for n = 9, 10, 11;
 8. the same harness built with AddressSanitizer/UBSan on a sample of tiers 1-5.
 
-Result on 2026-09-17: 86 passed, 0 failed, no sanitizer reports.
+Result on 2026-09-18 (size_t edge numbers): 86 passed, 0 failed, no sanitizer reports.
 
 ## Notes
 
