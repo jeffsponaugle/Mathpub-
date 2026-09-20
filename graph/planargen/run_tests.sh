@@ -18,8 +18,14 @@
 #   7  regression: the enumeration of connected planar graphs with the sparse
 #      tester as geng backend reproduces OEIS A003094 for n = 9, 10, 11
 #   8  sanitizer build (AddressSanitizer + UBSan) on a sample of tiers 1-5
+#   9  digraph input (digraph = TRUE): every orientation of every graph on
+#      <= 6 vertices (directg), random digraphs (genrang -z), an exact count
+#      comparison with McKay's reference pipeline "underlyingg | planarg",
+#      and the huge families oriented inside the harness (-D; digraph6 is a
+#      dense format, so huge digraphs cannot come from files)
 #
-# "quick" skips tiers 6-8 and shortens the others (about one minute).
+# "quick" skips tiers 6-8, shortens the others and runs only the small
+# part of tier 9 (about one minute).
 # Exit status 0 iff every test passed.
 set -u
 MODE=${1:-full}
@@ -122,6 +128,29 @@ if [ "$MODE" = full ]; then
         set -- $spec; f=$1; e=$2; shift 2
         pcheck "asan: $f $* (expected $e)" "./biggraphs $f $* 2>/dev/null" "./lrtest_sg_asan -e $e -q"
     done
+fi
+
+echo "== tier 9: digraph input =="
+for n in 3 4 5 6; do
+    pcheck "all orientations of all graphs n=$n (directg)" "$NAUTY/geng -q $n | $NAUTY/directg -q" "./lrtest_sg -q"
+done
+pcheck "random digraphs n=8 arcs=12 x$NUM" "$NAUTY/genrang -z -q -e12 8 $NUM" "./lrtest_sg -q"
+pcheck "random digraphs n=14 arcs=28 x$NUM" "$NAUTY/genrang -z -q -e28 14 $NUM" "./lrtest_sg -q"
+pcheck "random digraphs n=30 arcs=70 x$((NUM/5))" "$NAUTY/genrang -z -q -e70 30 $((NUM/5))" "./lrtest_sg -q"
+pcheck "-D: all graphs n=8 oriented in the harness" "$NAUTY/geng -q 8" "./lrtest_sg -D -q"
+pcheck "-D: 3-regular multigraphs n=14 oriented" "$NAUTY/genrang -q -r3 -l2 -m3 14 $((NUM/2))" "./lrtest_sg -D -q"
+$NAUTY/genrang -z -q -e20 12 $NUM > "$TMP/dig.d6"
+c1=$(./lrtest_sg -N -B < "$TMP/dig.d6" 2>&1 | sed -n 's/.*graphs (digraphs).*, \([0-9]*\) planar.*/\1/p')
+c2=$($NAUTY/underlyingg -q "$TMP/dig.d6" | $NAUTY/planarg -u 2>&1 | sed -n 's/.* \([0-9]*\) graphs planar.*/\1/p')
+if [ -n "$c1" ] && [ "$c1" = "$c2" ]; then PASS=$((PASS+1)); printf '  ok   planar count of %s random digraphs equals underlyingg | planarg (%s)\n' "$NUM" "$c1"
+else FAIL=$((FAIL+1)); printf '  FAIL planar count vs underlyingg | planarg: %s vs %s\n' "$c1" "$c2"; fi
+if [ "$MODE" = full ]; then
+    famD() { f=$1; e=$2; shift 2; pcheck "-D $f $* (expected $e)" "./biggraphs $f $* 2>/dev/null" "./lrtest_sg -D -e $e -q"; }
+    famDN() { f=$1; e=$2; shift 2; pcheck "-D $f $* (expected $e, sg only)" "./biggraphs $f $* 2>/dev/null" "./lrtest_sg -D -N -B -e $e -q"; }
+    famD grid p 1000 1000;      famD apollonian p 1000000 1;   famD multi p 500000 3
+    famD path p 3000000;        famD torus n 700 700;          famD apollok33 n 1000000 2
+    famD k5far n 1000000;       famD multink33 n 1000000 8;    famDN star p 1000000
+    famDN k3n n 1000000
 fi
 
 echo "== summary: $PASS passed, $FAIL failed =="

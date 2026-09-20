@@ -58,7 +58,7 @@ the four OEIS entries is reproduced.
 | 9 | **5108217950351** | 18 18 20 22 24 24 24 26 34 | 62 58 56 46 36 30 24 14 6 |
 | 10 | **59852066157421** | 8 10 24 26 34 38 40 50 90 102 | 88 68 52 30 24 20 18 18 10 8 |
 
-and **a(11) > 6.02 × 10¹³**. The sequence is now
+and **a(11) > 3.86 × 10¹⁵** (see below). The sequence is now
 
 ```
 3, 7, 359, 7853, 96401, 2812099, 294276293, 12579905251, 5108217950351, 59852066157421
@@ -71,26 +71,34 @@ and **a(11) > 6.02 × 10¹³**. The sequence is now
 | A248702 | a(7) = **938665577** | 94 80 24 12 12 12 4 | 2 10 12 12 18 36 36 |
 |         | a(8) = **2400369437** | 76 30 26 24 12 12 10 6 | 6 6 8 10 30 32 34 36 |
 |         | a(9) = **299917793009** | 80 70 44 36 36 24 10 6 6 | 8 12 12 12 16 24 24 24 26 |
+|         | a(10) = **384671458489889** | 64 60 60 44 36 34 18 14 10 6 | 2 6 10 12 12 20 36 40 60 104 |
+|         | a(11) = **3860678242735729** | 114 94 78 50 40 30 30 18 14 12 6 | 10 12 12 18 18 18 26 40 66 108 114 |
 | A248703 | a(7) = **149822520893** | 6 10 12 30 36 54 60 72 | 78 56 40 20 16 14 10 2 |
 |         | a(8) = **13193280477899** | 6 10 12 14 16 18 30 102 150 | 90 68 36 24 22 14 10 8 6 |
+|         | a(9) = **746882911420231** | 6 8 12 16 20 22 32 34 36 38 | 130 48 38 36 18 16 14 12 10 8 |
 | A248704 | a(7) = **3531448007** | 44 40 30 26 16 14 4 | 6 8 10 12 26 30 58 |
 |         | a(8) = **17190066197** | 66 50 24 18 16 14 10 6 | 6 8 10 12 14 16 18 36 |
 |         | a(9) = **37148264596189** | 62 58 48 32 28 26 18 16 2 | 4 6 12 18 20 28 30 60 122 |
+|         | a(10) = **1958854030679863** | 70 56 42 40 38 30 12 10 8 6 | 16 20 22 26 30 54 58 74 88 168 |
 
-with A248702(10), A248703(9) and A248704(10) all > 6.02 × 10¹³. The A248702
-entry only had the comment "a(7) >= 8960453, if it exists"; it exists.
+The last four come from the continuing hunt for a(11) on the Mac Studio (24
+threads, resumed from 6.02 × 10¹³ on Sep 17 2026, `scan_1e17_records.txt`).
+Since the A248702(11) record was folded, every prime below 3860678242735729
+has been examined, so **a(11) > 3.86 × 10¹⁵** for A248701 and likewise
+A248702(12), A248703(10) and A248704(11) are all above that bound. The
+A248702 entry only had the comment "a(7) >= 8960453, if it exists"; it exists.
 
 ```
-A248702: 2, 3, 19, 43, 2687, 179819, 1107791, 938665577, 2400369437, 299917793009
-A248703: 23, 1439, 21433, 1130863, 19881311, 331542583, 149822520893, 13193280477899
-A248704: 3, 19, 1429, 25243, 340577, 1107791, 3531448007, 17190066197, 37148264596189
+A248702: 2, 3, 19, 43, 2687, 179819, 1107791, 938665577, 2400369437, 299917793009, 384671458489889, 3860678242735729
+A248703: 23, 1439, 21433, 1130863, 19881311, 331542583, 149822520893, 13193280477899, 746882911420231
+A248704: 3, 19, 1429, 25243, 340577, 1107791, 3531448007, 17190066197, 37148264596189, 1958854030679863
 ```
 
 The scan output with every record below 10¹³ and its surrounding gaps is in
 `scan_1e13.txt` and the Mac Studio's final summary in `scan_1e15_summary.txt`
 (the record lines for A248704(9) and a(10) are in the Studio's
 `scan_1e15.txt`). The terms are collected in `DATA.txt` and the b-files
-`b248701.txt` … `b248704.txt`; `verify_py_windows.txt` lists all eleven new
+`b248701.txt` … `b248704.txt`; `verify_py_windows.txt` lists all fifteen new
 terms with their windows of consecutive primes.
 
 ### Depth statistics below 6.02 × 10¹³
@@ -122,10 +130,16 @@ such primes below 10¹⁵, 0.8 below 10¹⁶, 2.4 below 3 × 10¹⁶ and 8 below
 so a(11) is probably between 10¹⁵ and 3 × 10¹⁶ (median about 8 × 10¹⁵). The
 Mac Studio scanned 3.5 × 10¹⁰ numbers/s around 5 × 10¹³, and the sieve slows
 by about 1.7× toward 10¹⁶, so reaching 10¹⁶ takes about a week and 10¹⁷ about
-two months. The checkpointed command, which also picks up A248702(10),
-A248703(9) and A248704(10) on the way and stops by itself at a(11), is
+two months. The checkpointed command, which also picks up the companions'
+next terms on the way and stops by itself at a(11), is
 
     ./a248701 scan 1e17 -n 11 -S a248701.state > scan_1e17.txt 2> scan_1e17.log
+
+It has been running on the Studio (24 threads) since Sep 17 2026. As of Sep 19
+it had found A248702(10), A248703(9), A248704(10) and A248702(11) but no prime
+of peak depth 11 below 3.86 × 10¹⁵ (expected number 0.33). Given that, the
+remaining odds are about 39 % of a hit before 10¹⁶, 87 % before 3 × 10¹⁶ and
+99.9 % before 10¹⁷.
 
 ### Performance
 
@@ -174,10 +188,10 @@ with the default thread count.
   (`cross_5.2e12.txt`, 288 s) gives the same 184,126,901,158 primes, the same
   largest gap 652, and the same depth histogram for every shape and every depth
   from 4 to 9 (24 numbers, e.g. 230 primes of peak depth ≥ 8 and 1 of depth
-  ≥ 9). The three terms above the Python-scanned range, A248703(8) =
-  13193280477899, A248704(9) = 37148264596189 and a(10) = 59852066157421, have
-  verified windows, but their minimality rests on the C scan alone (the scan
-  that agreed with Python on every count below 5.2 × 10¹²). Repeating the
+  ≥ 9). The seven terms above the Python-scanned range (A248703(8), A248704(9),
+  a(10), A248702(10), A248703(9), A248704(10) and A248702(11)) have verified
+  windows, but their minimality rests on the C scan alone (the scan that
+  agreed with Python on every count below 5.2 × 10¹²). Repeating the
   Python scan to 6.03 × 10¹³ would take about 15 hours with eight processes on
   the Studio: `verify_a248701.py scan 6.03e13 268435456 --procs=8`.
 
@@ -227,6 +241,7 @@ checkpoint is just the frontier plus the totals.
 * `scan_1e13.txt`, `scan_1e13.log`, `scan_1e13.state` — the complete scan below 10¹³
 * `scan_1e15.txt`, `scan_1e15.log`, `a248701.state` — the M1 Pro leg of the continuation (to 1.357 × 10¹³); the complete files live on the Mac Studio
 * `scan_1e15_summary.txt` — the Mac Studio's summary of the continuation, complete below 6.02 × 10¹³
+* `scan_1e17_records.txt` — records found so far by the a(11) hunt on the Studio (complete below 3.86 × 10¹⁵ as of Sep 19 2026)
 * `cross_1.72e10.txt`, `verify_py_1.72e10.txt`, `cross_5.2e12.txt`, `verify_py_5.2e12.txt`, `verify_py_windows.txt` — cross-checks
 * `selftest.txt` — selftest output
 * `DATA.txt`, `b248701.txt`, `b248702.txt`, `b248703.txt`, `b248704.txt` — terms
@@ -234,14 +249,17 @@ checkpoint is just the frontier plus the totals.
 ## Notes for the OEIS submissions
 
 * A248701: add a(8) = 12579905251, a(9) = 5108217950351, a(10) = 59852066157421;
-  b-file n = 1..10; comment "a(11) > 6.02*10^13"; the `more` keyword stays.
+  b-file n = 1..10; comment "a(11) > 3.86*10^15" (raise it to wherever the hunt
+  has got to, or add a(11)); the `more` keyword stays.
   A comment that the monotonicity is weak and that the two gaps adjacent to
   a(n) are not compared (a(7) has 60 | 24 around it, a(8) has 24 | 46) would
   remove the ambiguity in the name; A248703 is the strict version.
-* A248702: add a(7) = 938665577, a(8) = 2400369437, a(9) = 299917793009;
-  replace the comment "a(7) >= 8960453, if it exists" by "a(10) > 6.02*10^13".
-* A248703: add a(7) = 149822520893, a(8) = 13193280477899; "a(9) > 6.02*10^13".
+* A248702: add a(7) = 938665577, a(8) = 2400369437, a(9) = 299917793009,
+  a(10) = 384671458489889, a(11) = 3860678242735729; b-file n = 0..11; replace
+  the comment "a(7) >= 8960453, if it exists" by "a(12) > 3.86*10^15".
+* A248703: add a(7) = 149822520893, a(8) = 13193280477899, a(9) = 746882911420231;
+  "a(10) > 3.86*10^15".
   Worth a comment that the index counts strict steps, so a(n) has n+1 gaps on
   each side.
-* A248704: add a(7) = 3531448007, a(8) = 17190066197, a(9) = 37148264596189;
-  "a(10) > 6.02*10^13".
+* A248704: add a(7) = 3531448007, a(8) = 17190066197, a(9) = 37148264596189,
+  a(10) = 1958854030679863; "a(11) > 3.86*10^15".

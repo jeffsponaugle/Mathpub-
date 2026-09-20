@@ -1,7 +1,7 @@
 # A248704: Smallest prime such that the n preceding prime gaps are strictly decreasing and the n subsequent prime gaps strictly increasing.
-# Table of n, a(n) for n = 1..9.
-# a(1)-a(6) as in the OEIS entry; a(7)-a(9) computed with a248701.c (Sep 16-17 2026),
-# exhaustive scan of the primes below 6.02*10^13: a(10) > 6.02*10^13.
+# Table of n, a(n) for n = 1..10.
+# a(1)-a(6) as in the OEIS entry; a(7)-a(10) computed with a248701.c (Sep 16-19 2026),
+# exhaustive scan of the primes below 3.86*10^15: a(11) > 3860678242735729.
 1 3
 2 19
 3 1429
@@ -11,3 +11,4 @@
 7 3531448007
 8 17190066197
 9 37148264596189
+10 1958854030679863

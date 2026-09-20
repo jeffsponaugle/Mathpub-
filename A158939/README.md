@@ -153,7 +153,9 @@ the end is settled on the CPU, which never happens in practice). Two streams
 keep the large-prime kernel of chunk k+1 running while the segments of chunk
 k are processed. Chunks complete in order, so every term is confirmed as it is
 found; `-S FILE` checkpoints position, table and histogram, and rerunning the
-same command resumes (the large-prime state is recomputed).
+same command resumes (the large-prime state is recomputed). A run that ends
+inside a chunk records END as its position, and a resume with a larger END
+rescans that chunk from there, so END can be extended freely.
 
 Measured: 2.2-2.5e11 numbers/s at 10^15 and 1.6-1.7e11 at 8e15, i.e. 13x the
 M1 Pro; 10^16 in about 15 hours. The GPU `selftest` reproduces the CPU tool's
@@ -170,6 +172,63 @@ memory (a per-thread ring buffer there made the kernel latency-bound).
 
 ## Results
 
-_To be filled in when the run completes: a(16), pi(a(16)) (= A133697(14)),
-the prime after a(16) (= A229832(15)), and the run-length histogram to the
-final position._
+**a(16) = 17293451238695141**, found 2026-09-19 by the GPU scan on a DGX Spark
+(13h18m into the extended run, at 1.73e16). The run of 16 increasing gaps is
+
+    2 4 6 8 22 26 30 34 36 44 46 54 56 64 86 108   (the next gap is 46)
+
+over the primes 17293451238695141, ...143, ...147, ...153, ...161, ...183,
+...209, ...239, ...273, ...309, ...353, ...399, ...453, ...509, ...573, ...659,
+...767, ...813. Its prime index is pi(a(16)) = 475618519121221.
+
+Derived new terms of the sister sequences: **A229832(15) = 17293451238695143**
+(the prime after a(16), first of 15 consecutive weak primes) and
+**A133697(14) = 475618519121221**. Proposed entry text is in
+[OEIS_notes.md](OEIS_notes.md), the b-file in [b158939.txt](b158939.txt).
+Nothing has been submitted to the OEIS yet.
+
+Verification:
+
+* The run length at 17293451238695141 was re-derived from the definition by
+  three independent implementations: `a158939 verify` (deterministic
+  Miller-Rabin next-prime search), GMP `mpz_nextprime`, and `verify_run.py`
+  (pure Python).
+* Minimality: the GPU scan covered [0, 10^16) in one run whose prime count is
+  exactly pi(10^16) = 279238341033925, then [10^16 + 41615360, a(16)] in the
+  extended run. The 41.6-million-number sliver between the two was scanned by
+  the CPU tool (1129839 primes, longest run 9). The sliver existed because the
+  first version of the GPU checkpoint recorded a run that ended inside a chunk
+  as if the whole chunk were done; this is fixed (the checkpoint now records
+  END and a resume rescans that chunk from there, with a selftest case), and
+  primecount confirms the corrected prime index: pi(10^16 + 41615359) minus
+  pi(10^16) is exactly the 1129839 primes the GPU's running index had missed.
+* Both tools reproduce a(1)..a(15) with pi(a(n)) = A133697(n-2), and agree
+  exactly (prime counts, first occurrences, full run-length histograms) on
+  [0, 10^13) and on a window around a(15).
+
+**a(17) > 2×10^16.** The scan ran on to 2e16 (18h35m of GPU time in total)
+without a run of 17.
+
+Exact run-length distribution of the primes below 2×10^16 (GPU scan plus
+the CPU-scanned sliver; the total, 547863431950008, equals primecount's pi(2×10^16); the model column is the
+i.i.d.-exponential-gap value n/(n+1)! times pi):
+
+| n | primes with L(p) = n | ratio to model | n | primes with L(p) = n | ratio |
+|--:|--:|--:|--:|--:|--:|
+| 1 | 278097256853262 | 1.015 | 10 | 63702682 | 0.464 |
+| 2 | 183128766525454 | 1.003 | 11 | 5031375 | 0.400 |
+| 3 | 66157934063747 | 0.966 | 12 | 362043 | 0.343 |
+| 4 | 16677780549621 | 0.913 | 13 | 23856 | 0.292 |
+| 5 | 3223980817207 | 0.847 | 14 | 1467 | 0.250 |
+| 6 | 503664116099 | 0.772 | 15 | 84 | 0.214 |
+| 7 | 65857869949 | 0.692 | 16 | 1 | 0.041 |
+| 8 | 7394602321 | 0.612 | 17 | 0 | (1.45 expected) |
+| 9 | 727430840 | 0.535 | | | |
+
+a(16) landing above 10^16 was a roughly 15% outcome under the estimate in
+this README: about 2.7 runs of length 16 were expected below 10^16 and about
+4 below where it was actually found. The pre-run estimate (median 1.6e15) was
+also biased low because it was calibrated on the first-occurrence data rather
+than on measured densities. For a(17) the same densities (ratio ~0.19 at
+n = 17) predict a median near 6e16 and a 90% point near 1.5e17, i.e. 4 to 10
+days on one Spark at the rate the large-prime kernel sustains out there.

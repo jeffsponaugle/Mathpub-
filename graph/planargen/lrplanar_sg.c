@@ -8,9 +8,14 @@
  * works.  The differences are:
  *
  *   - Input is a nauty sparsegraph (nausparse.h): v[] indexes into e[],
- *     d[] holds degrees, e[] the neighbour lists; every edge must be present
- *     from both endpoints.  Loops and parallel edges are ignored, so
- *     multigraphs are accepted and answered for the underlying simple graph.
+ *     d[] holds degrees, e[] the neighbour lists.  For an undirected graph
+ *     every edge must be present from both endpoints.  Loops and parallel
+ *     edges are ignored, so multigraphs are accepted and answered for the
+ *     underlying simple graph.  With digraph = TRUE the lists are taken to
+ *     hold arcs and the question is asked of the underlying undirected
+ *     graph (u-v is an edge iff u->v or v->u is an arc): the arc lists are
+ *     first symmetrized into work arrays in linear time, so undirected input
+ *     pays nothing for the feature.
  *   - No size limit.  Following nauty's conventions, vertex numbers,
  *     heights and degrees are int (n < 2^31) while every edge count and
  *     edge number is size_t, so graphs with more than 2^31 edges are
@@ -83,6 +88,13 @@ DYNALLSTAT(size_t,out,out_sz);              /* per vertex slice (like sg->e): ne
 DYNALLSTAT(size_t,sorted,sorted_sz);        /* sort buffer (one entry per edge) */
 DYNALLSTAT(cpair,S,S_sz);                   /* conflict-pair stack */
 
+/* symmetrized copy of a digraph (only used when digraph = TRUE) */
+DYNALLSTAT(size_t,sym_v,sym_v_sz);
+DYNALLSTAT(int,sym_d,sym_d_sz);
+DYNALLSTAT(int,sym_e,sym_e_sz);
+DYNALLSTAT(int,sym_fill,sym_fill_sz);
+static TLS_ATTR sparsegraph symsg;
+
 static TLS_ATTR size_t sp;                  /* conflict-pair stack size */
 static TLS_ATTR size_t *lowpt_edge, *ref_, *stack_bottom;   /* phase-2 aliases */
 
@@ -96,6 +108,47 @@ lrplanar_freedyn(void)
     DYNFREE(etgt,etgt_sz); DYNFREE(esrc,esrc_sz); DYNFREE(lowpt,lowpt_sz);
     DYNFREE(lowpt2,lowpt2_sz); DYNFREE(nesting,nesting_sz); DYNFREE(out,out_sz);
     DYNFREE(sorted,sorted_sz); DYNFREE(S,S_sz);
+    DYNFREE(sym_v,sym_v_sz); DYNFREE(sym_d,sym_d_sz);
+    DYNFREE(sym_e,sym_e_sz); DYNFREE(sym_fill,sym_fill_sz);
+}
+
+/* --- digraph input: symmetrize the arc lists ---------------------------- */
+
+/* Return a sparsegraph (static work space) in which every arc u->w of sg
+ * appears as w in u's list and u in w's list.  Duplicates and loops are
+ * left in; the DFS removes them as for any multigraph. */
+static sparsegraph *
+symmetrize(sparsegraph *sg)
+{
+    int n = sg->nv, u, w;
+    size_t j, nde2 = 2*sg->nde, pos;
+
+    DYNALLOC1(size_t,sym_v,sym_v_sz,n > 0 ? n : 1,"lrplanar_sg");
+    DYNALLOC1(int,sym_d,sym_d_sz,n > 0 ? n : 1,"lrplanar_sg");
+    DYNALLOC1(int,sym_fill,sym_fill_sz,n > 0 ? n : 1,"lrplanar_sg");
+    DYNALLOC1(int,sym_e,sym_e_sz,nde2 > 0 ? nde2 : 1,"lrplanar_sg");
+
+    for (u = 0; u < n; ++u) sym_d[u] = 0;
+    for (u = 0; u < n; ++u)
+        for (j = sg->v[u]; j < sg->v[u] + (size_t)sg->d[u]; ++j)
+        {
+            ++sym_d[u];
+            ++sym_d[sg->e[j]];
+        }
+    pos = 0;
+    for (u = 0; u < n; ++u) { sym_v[u] = pos; pos += (size_t)sym_d[u]; sym_fill[u] = 0; }
+    for (u = 0; u < n; ++u)
+        for (j = sg->v[u]; j < sg->v[u] + (size_t)sg->d[u]; ++j)
+        {
+            w = sg->e[j];
+            sym_e[sym_v[u] + (size_t)sym_fill[u]++] = w;
+            sym_e[sym_v[w] + (size_t)sym_fill[w]++] = u;
+        }
+
+    symsg.nv = n; symsg.nde = nde2;
+    symsg.v = sym_v; symsg.d = sym_d; symsg.e = sym_e; symsg.w = NULL;
+    symsg.vlen = sym_v_sz; symsg.dlen = sym_d_sz; symsg.elen = sym_e_sz; symsg.wlen = 0;
+    return &symsg;
 }
 
 /* --- phase 1: orientation ---------------------------------------------- */
@@ -381,13 +434,15 @@ dfs2(sparsegraph *sg, int root)
 /* --- driver -------------------------------------------------------------- */
 
 boolean
-lrplanar_sg(sparsegraph *sg)
+lrplanar_sg(sparsegraph *sg, boolean digraph)
 {
     int n = sg->nv;
-    size_t nde = sg->nde, extent, x, k, maxk, nb, i, ei, maxkey;
+    size_t nde, extent, x, k, maxk, nb, i, ei, maxkey;
     int v;
 
     if (n <= 4) return TRUE;                         /* every graph on <= 4 vertices is planar */
+    if (digraph) sg = symmetrize(sg);                /* work on the underlying undirected graph */
+    nde = sg->nde;
 
     maxk = 3*(size_t)n - 6;                /* a planar graph has at most this many edges */
     nb = MIN(nde, maxk + 1);               /* at most maxk+1 edges are ever numbered */
@@ -461,12 +516,12 @@ lrplanar_sg(sparsegraph *sg)
 
 /* Dense-format wrapper: converts to a sparsegraph kept between calls. */
 boolean
-lrplanar_dense(graph *g, int m, int n)
+lrplanar_dense(graph *g, int m, int n, boolean digraph)
 {
     static TLS_ATTR sparsegraph sg;
     static TLS_ATTR boolean init = FALSE;
 
     if (!init) { SG_INIT(sg); init = TRUE; }
     nauty_to_sg(g, &sg, m, n);
-    return lrplanar_sg(&sg);
+    return lrplanar_sg(&sg, digraph);
 }

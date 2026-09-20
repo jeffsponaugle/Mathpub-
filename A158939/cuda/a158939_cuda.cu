@@ -784,6 +784,7 @@ static struct {
     u64 next_chunk;         /* next chunk index to process (chunks [k_lo, next) done) */
     u64 k_lo, k_hi;         /* chunk index range [k_lo, k_hi) */
     u64 primes;             /* primes in [start, pos) */
+    u64 resume_pos;         /* numbers below this were scanned by an earlier run (= start for a fresh run) */
     u64 hist[NMAX];
     Cand best[NMAX];
     bool overflow;
@@ -834,7 +835,7 @@ static void merge_chunk(const SegResult *results, u64 chunk_lo)
         const SegResult *r = &results[s];
         const u64 seg_lo = chunk_lo + (u64)s * SEG_NUMS;
         const u64 seg_hi = seg_lo + SEG_NUMS;
-        if (seg_hi <= S.start || seg_lo >= S.end) continue;
+        if (seg_hi <= S.resume_pos || seg_lo >= S.end) continue;
         if (r->overflow) S.overflow = true;
         /* first occurrences (segments and chunks arrive in order, so first seen = smallest) */
         for (int n = 1; n < NMAX; n++)
@@ -846,7 +847,7 @@ static void merge_chunk(const SegResult *results, u64 chunk_lo)
             /* a run was still open at the end of the block's bitmap: settle [p0, hi) on the CPU */
             u64 p0 = seg_lo + r->unsettled, hi = seg_hi < S.end ? seg_hi : S.end;
             u64 before = S.primes;                  /* primes below seg_lo (∩ [start,·)) */
-            u64 lo_n = seg_lo > S.start ? seg_lo : S.start;
+            u64 lo_n = seg_lo > S.resume_pos ? seg_lo : S.resume_pos;
             for (u64 p = is_prime64(lo_n) ? lo_n : next_prime64(lo_n); p < p0; p = next_prime64(p)) before++;
             settle_cpu(p0, hi, before);
         }
@@ -864,8 +865,10 @@ static void save_state(const char *path)
     snprintf(tmp, sizeof tmp, "%s.tmp", path);
     FILE *f = fopen(tmp, "w");
     if (!f) { fprintf(stderr, "\nwarning: cannot write %s: %s\n", tmp, strerror(errno)); return; }
+    u64 pos = S.next_chunk * CHUNK_NUMS;
+    if (pos > S.end) pos = S.end;                /* a partial last chunk is done only up to END */
     fprintf(f, "A158939 cuda checkpoint 2\nstart %" PRIu64 "\nend %" PRIu64 "\npos %" PRIu64
-               "\nprimes %" PRIu64 "\ncpu_settled %" PRIu64 "\n", S.start, S.end, S.next_chunk * CHUNK_NUMS, S.primes, S.cpu_settled);
+               "\nprimes %" PRIu64 "\ncpu_settled %" PRIu64 "\n", S.start, S.end, pos, S.primes, S.cpu_settled);
     for (int n = 1; n < NMAX; n++)
         if (S.hist[n]) fprintf(f, "hist %d %" PRIu64 "\n", n, S.hist[n]);
     for (int n = 1; n < NMAX; n++) {
@@ -918,8 +921,9 @@ static bool load_state(const char *path)
     if (!complete) die("%s is truncated", path);
     if (start != S.start) die("%s was written for START %" PRIu64 ", not %" PRIu64, path, start, S.start);
     if (end != S.end) fprintf(stderr, "note: checkpoint END was %" PRIu64 ", continuing to %" PRIu64 "\n", end, S.end);
-    if (pos % CHUNK_NUMS) die("%s: position %" PRIu64 " is not a chunk boundary of this build (chunk %" PRIu64 ")", path, pos, (u64)CHUNK_NUMS);
-    S.next_chunk = pos / CHUNK_NUMS;
+    if (pos < S.start) die("%s: position %" PRIu64 " is below START", path, pos);
+    S.next_chunk = pos / CHUNK_NUMS;             /* the chunk containing pos is rescanned from pos */
+    S.resume_pos = pos;
     S.primes = primes;
     S.cpu_settled = cpu;
     return true;
@@ -961,9 +965,11 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
     S.k_lo = start / CHUNK_NUMS;
     S.k_hi = (end + CHUNK_NUMS - 1) / CHUNK_NUMS;
     S.next_chunk = S.k_lo;
-    if (state && load_state(state))
-        fprintf(stderr, "resuming from %s: chunks up to %" PRIu64 " done (position %" PRIu64 ", %" PRIu64 " primes)\n",
-                state, S.next_chunk, S.next_chunk * CHUNK_NUMS, S.primes);
+    S.resume_pos = start;
+    const bool resumed = state && load_state(state);
+    if (resumed)
+        fprintf(stderr, "resuming from %s at position %" PRIu64 " (%" PRIu64 " primes so far)\n",
+                state, S.resume_pos, S.primes);
     const u64 max_number = S.k_hi * CHUNK_NUMS + (u64)OVERLAP * NUMS_PER_WORD;
     if (G_ready) gpu_free(G);
     gpu_init(G, max_number, qsplit);
@@ -976,7 +982,7 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
                 stop_n ? ", stopping when a(N) is found" : "");
 
     /* the primes 2, 3, 5 are outside the wheel */
-    if (S.next_chunk == S.k_lo) {
+    if (!resumed) {
         static const u64 sp[3] = { 2, 3, 5 };
         static const int sL[3] = { 2, 1, 2 };
         for (int i = 0; i < 3; i++)
@@ -1043,9 +1049,10 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
         CUDA_CHECK(cudaStreamWaitEvent(G.sB, G.ev_large[i], 0));
         if (g_profile) CUDA_CHECK(cudaEventRecord(G.ev_t2[i], G.sB));
         kernel_chunkmod<<<(G.nsmall + 255) / 256, 256, 0, G.sB>>>(G.d_sprimes, G.d_rchunk, G.nsmall, chunk_lo);
+        const u64 lo_bound = (chunk_lo < S.resume_pos) ? S.resume_pos : start;   /* rescanned chunk: count from resume_pos */
         kernel_segment<<<CHUNK_SEGS, BLOCKDIM, SHARED_WORDS * sizeof(u32), G.sB>>>(
             G.d_bitmap[i], G.d_pattern, G.d_sprimes, G.d_sinv, G.d_ssegmod, G.d_rchunk, G.nsmall, G.nwarpprimes,
-            chunk_lo, start, end, G.d_results[i]);
+            chunk_lo, lo_bound, end, G.d_results[i]);
         if (g_profile) CUDA_CHECK(cudaEventRecord(G.ev_t3[i], G.sB));
         CUDA_CHECK(cudaMemcpyAsync(G.h_results[i], G.d_results[i], CHUNK_SEGS * sizeof(SegResult), cudaMemcpyDeviceToHost, G.sB));
         CUDA_CHECK(cudaEventRecord(G.ev_seg[i], G.sB));
@@ -1284,6 +1291,23 @@ static int cmd_selftest(int argc, char **argv)
         bool ok = true;
         for (int n = 1; n <= 13; n++) if (S.hist[n] != H[n]) { ok = false; printf("      hist[%d]: GPU %" PRIu64 " expected %" PRIu64 "\n", n, S.hist[n], H[n]); }
         CHECK(ok && S.hist[14] == 0, "run-length histogram of [1e15, 1e15+2e12) matches the CPU tool exactly");
+    }
+    /* (d) a run that ends inside a chunk, then resumed with a larger END, must equal a straight run */
+    {
+        const char *st = "selftest_resume.state";
+        remove(st);
+        run_scan(0, 12345678901ULL, qsplit, st, 60, 0, true);
+        run_scan(0, 23456789012ULL, qsplit, st, 60, 0, true);
+        u64 primes_r = S.primes, hist_r[NMAX];
+        Cand best_r[NMAX];
+        memcpy(hist_r, S.hist, sizeof hist_r);
+        memcpy(best_r, S.best, sizeof best_r);
+        run_scan(0, 23456789012ULL, qsplit, NULL, 60, 0, true);
+        bool ok = primes_r == S.primes;
+        for (int n = 1; n < NMAX; n++)
+            if (hist_r[n] != S.hist[n] || best_r[n].p != S.best[n].p || best_r[n].pi != S.best[n].pi) ok = false;
+        remove(st);
+        CHECK(ok, "resume across END=12345678901 (inside a chunk) to 23456789012 equals a straight run (%" PRIu64 " primes)", S.primes);
     }
 #undef CHECK
     printf(fails ? "SELFTEST FAILED (%d)\n" : "selftest passed\n", fails);

@@ -297,7 +297,10 @@ implementation of the same algorithm for nauty's `sparsegraph`
 representation.  `lrplanar.c` is untouched and remains what the a(14) and
 a(15) runs used.  Differences:
 
-- `boolean lrplanar_sg(sparsegraph *sg)`: any size.  Following nauty's
+- `boolean lrplanar_sg(sparsegraph *sg, boolean digraph)`: any size.  With
+  `digraph = TRUE` the lists are arcs and the underlying undirected graph is
+  tested (the arc lists are symmetrized into work arrays in linear time;
+  undirected input pays nothing).  Following nauty's
   conventions vertex numbers, heights and degrees are `int` (n < 2^31) and
   every edge count and edge number is `size_t`, so more than 2^31 edges are
   supported on 64-bit systems (untested for lack of memory: such a planar
@@ -356,9 +359,48 @@ planar and non-planar multigraphs with loops and parallel edges).
 6. 20 huge known-answer graphs at 10^6..10^7 vertices, with time and memory;
 7. regression: `geng_coplanar_lrsg` (the enumeration with the sparse tester
    as backend) reproduces A003094 and the A049334 rows for n = 9, 10, 11;
-8. the same harness built with AddressSanitizer/UBSan on a sample of tiers 1-5.
+8. the same harness built with AddressSanitizer/UBSan on a sample of tiers 1-5;
+9. digraph input: every orientation of every graph on <= 6 vertices
+   (`directg`, 1.55 million digraphs), random digraphs, an exact planar-count
+   match with McKay's reference pipeline `underlyingg | planarg`, and the
+   huge families oriented inside the harness (`lrtest_sg -D`; digraph6 is a
+   dense format, so huge digraphs cannot be read from files).
 
-Result on 2026-09-18 (size_t edge numbers): 86 passed, 0 failed, no sanitizer reports.
+Result on 2026-09-18 (size_t edge numbers, digraph option): 106 passed,
+0 failed, no sanitizer reports.  McKay's decisions (2026-09-18): sparsegraph
+input, yes/no answer only (planarg stays for embeddings and obstructions),
+DYNALLSTAT with exit on allocation failure, and the digraph option as an
+argument.
+
+## Tried: caching planarity certificates between sibling candidates
+
+McKay suggested keeping the obstruction of the most recent non-planar graph
+and testing for it before running the full planarity test, since consecutive
+candidates are nearly identical.  A specialised version was implemented as
+the compile-time option `-DNBCACHE` in `coplanar.c` (targets
+`geng_coplanar_lrc`, `geng_coplanar_lrcm`): with the parent fixed, planarity
+is monotone in the new vertex's neighbourhood N, so per level a cache of
+recent non-planar neighbourhoods (any subset of the candidate's N proves
+non-planarity) and planar ones (any superset proves planarity) is consulted
+before the test, one AND per entry; `-DNBCACHE_MIN` first shrinks a
+non-planar N greedily to a minimal certificate.  All variants reproduce the
+exact counts.  Measured at n = 11 (11.9 million tests, 772,000 parents):
+
+| variant | full tests avoided | extra tests | time |
+|---------|--------------------|-------------|------|
+| no cache | – | – | 14.8 s |
+| cache, K=16 | 3.3% (planar side only; 0 non-planar hits) | 0 | 14.9 s |
+| cache + minimisation, K=16 | 20.6% | 18.4% | 14.9 s |
+| cache + minimisation, K=64 | 22.6% | 18.4% | 14.8 s |
+
+No gain, for structural reasons: geng's max-degree rule pins the size of N
+to one or two values per parent, so sibling neighbourhoods are almost never
+nested; geng enumerates them from large N to small N, the wrong direction for
+non-planar reuse; and only ~15 candidates per parent reach the test.  Minimal
+certificates (which is what an obstruction would provide) raise the hit rate
+to ~20%, but that is only ~7% of total time, and computing them costs as
+much.  A cross-parent obstruction cache would face the same ceiling.  The
+option is kept for reference; the production build is unchanged.
 
 ## Notes
 

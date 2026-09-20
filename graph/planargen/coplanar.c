@@ -82,10 +82,99 @@ ncomponents(graph *gc, int n)
     return nc;
 }
 
+#ifdef NBCACHE
+/* Per-level cache of recent results, exploiting monotonicity in the new
+ * vertex's neighbourhood N (McKay's suggestion, specialised): with the
+ * parent fixed, parent + N' non-planar and N' subset of N implies parent +
+ * N non-planar; parent + N'' planar and N subset of N'' implies parent + N
+ * planar.  geng presents the children of one parent consecutively, so a
+ * few recent neighbourhoods catch most siblings.  One cache per level
+ * because the recursion interleaves levels.  With NBCACHE_MIN a non-planar
+ * N is first shrunk greedily to a minimal non-planar neighbourhood (a few
+ * extra tests) so that it catches more siblings. */
+#ifndef NBCACHE_K
+#define NBCACHE_K 16
+#endif
+typedef struct {
+    graph parent[MAXN];        /* rows 0..n-2 of the complement, masked */
+    boolean valid;
+    setword np[NBCACHE_K]; int nnp, inp;     /* non-planar neighbourhoods */
+    setword pl[NBCACHE_K]; int npl, ipl;     /* planar neighbourhoods */
+} nbcache;
+static nbcache cache[MAXN+1];
+static nauty_counter cc_lookups, cc_hit_np, cc_hit_pl, cc_miss, cc_reset, cc_mintests;
+
+static boolean isplanar_bitmask_raw(graph *gc, int n, int ne);
+
+static boolean
+isplanar_bitmask(graph *gc, int n, int ne)
+{
+    nbcache *ca = &cache[n];
+    setword N = gc[n-1], mask = ALLMASK(n-1);
+    int i;
+    boolean ans;
+
+    if (n <= 4) return TRUE;
+    if (ne > 3*n - 6) return FALSE;
+    ++cc_lookups;
+
+    /* same parent as last time at this level? */
+    for (i = 0; i < n-1; ++i)
+        if ((gc[i] & mask) != ca->parent[i]) break;
+    if (i < n-1 || !ca->valid)
+    {
+        for (i = 0; i < n-1; ++i) ca->parent[i] = gc[i] & mask;
+        ca->valid = TRUE; ca->nnp = ca->npl = ca->inp = ca->ipl = 0;
+        ++cc_reset;
+    }
+    else
+    {
+        for (i = 0; i < ca->nnp; ++i)
+            if ((ca->np[i] & ~N) == 0) { ++cc_hit_np; return FALSE; }
+        for (i = 0; i < ca->npl; ++i)
+            if ((N & ~ca->pl[i]) == 0) { ++cc_hit_pl; return TRUE; }
+    }
+    ++cc_miss;
+    ans = isplanar_bitmask_raw(gc, n, ne);
+    if (ans)
+    {
+        ca->pl[ca->ipl] = N; ca->ipl = (ca->ipl + 1) % NBCACHE_K;
+        if (ca->npl < NBCACHE_K) ++ca->npl;
+    }
+    else
+    {
+#ifdef NBCACHE_MIN
+        /* Shrink N greedily while parent + N stays non-planar, on a private
+           copy of the graph.  A single neighbour never causes non-planarity,
+           so stop at two. */
+        graph h[MAXN];
+        setword rest = N;
+        int j, m = ne;
+        for (i = 0; i < n; ++i) h[i] = gc[i];
+        while (rest && POPCOUNT(N) > 2)
+        {
+            TAKEBIT(j, rest);
+            h[n-1] = N & ~bit[j]; h[j] &= ~bit[n-1];
+            ++cc_mintests;
+            if (!isplanar_bitmask_raw(h, n, m - 1)) { N &= ~bit[j]; --m; }
+            else h[j] |= bit[n-1];
+        }
+#endif
+        ca->np[ca->inp] = N; ca->inp = (ca->inp + 1) % NBCACHE_K;
+        if (ca->nnp < NBCACHE_K) ++ca->nnp;
+    }
+    return ans;
+}
+
+static boolean
+isplanar_bitmask_raw(graph *gc, int n, int ne)
+{
+#else
 /* Planarity test of gc via nauty's Boyer-Myrvold style tester. */
 static boolean
 isplanar_bitmask(graph *gc, int n, int ne)
 {
+#endif
     t_ver_sparse_rep V[MAXN];
     t_adjl_sparse_rep A[MAXN*(MAXN-1) + 1];
     t_dlcl **dfs_tree, **back_edges, **mult_edges;
@@ -105,7 +194,7 @@ isplanar_bitmask(graph *gc, int n, int ne)
 #endif
 #ifdef USE_LRSG
     ++np_planar_tests;
-    ans = lrplanar_dense(gc, 1, n);
+    ans = lrplanar_dense(gc, 1, n, FALSE);
     if (!ans) ++np_nonplanar;
     return ans;
 #endif
@@ -244,6 +333,12 @@ coplanar_summary(nauty_counter nout, double cpu)
             "  new-vertex degree histogram 0..6,7+:", np_trivial);
     { int i; for (i = 0; i < 8; ++i) fprintf(stderr, " " COUNTER_FMT, np_bydeg[i]); }
     fprintf(stderr, "\n");
+#ifdef NBCACHE
+    fprintf(stderr, ">C nbcache(K=%d): lookups=" COUNTER_FMT " hits nonplanar=" COUNTER_FMT
+            " planar=" COUNTER_FMT " misses(full tests)=" COUNTER_FMT " parent changes=" COUNTER_FMT
+            " minimisation tests=" COUNTER_FMT "\n", NBCACHE_K, cc_lookups, cc_hit_np, cc_hit_pl,
+            cc_miss, cc_reset, cc_mintests);
+#endif
     if (nout > 0)
         fprintf(stderr, ">C %.3f us cpu per output graph, %.3f us per preprune call\n",
                 1e6*cpu/(double)nout, 1e6*cpu/(double)(np_calls ? np_calls : 1));

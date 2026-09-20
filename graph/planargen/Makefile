@@ -44,6 +44,18 @@ geng_direct : $(NAUTY)/geng.c direct.c $(PLANAR) $(NAUTYOBJ)
 	  -DPREPRUNE=direct_preprune -DSUMMARY=direct_summary \
 	  -o $@ $(NAUTY)/geng.c direct.c planarity_arena.c arena.c $(NAUTYOBJ)
 
+# experimental: per-parent neighbourhood cache in front of the planarity test
+# (-DNBCACHE), optionally with greedy minimisation of non-planar certificates
+geng_coplanar_lrc : $(NAUTY)/geng.c coplanar.c lrplanar.c lrplanar.h $(PLANAR) $(NAUTYOBJ)
+	$(CC) $(CFLAGS) $(W1) -I. -I$(NAUTY) -DUSE_LR -DNBCACHE \
+	  -DPREPRUNE=coplanar_preprune -DPRUNE=coplanar_prune -DSUMMARY=coplanar_summary \
+	  -o $@ $(NAUTY)/geng.c coplanar.c lrplanar.c planarity_arena.c arena.c $(NAUTYOBJ)
+
+geng_coplanar_lrcm : $(NAUTY)/geng.c coplanar.c lrplanar.c lrplanar.h $(PLANAR) $(NAUTYOBJ)
+	$(CC) $(CFLAGS) $(W1) -I. -I$(NAUTY) -DUSE_LR -DNBCACHE -DNBCACHE_MIN \
+	  -DPREPRUNE=coplanar_preprune -DPRUNE=coplanar_prune -DSUMMARY=coplanar_summary \
+	  -o $@ $(NAUTY)/geng.c coplanar.c lrplanar.c planarity_arena.c arena.c $(NAUTYOBJ)
+
 # --- sparsegraph version of the left-right test (no size limit) and its tests ---
 # lrtest_sg links nauty's ORIGINAL planarity.c (malloc-based) as the reference,
 # not the arena copy, so that graphs of any size can be tested.
@@ -80,7 +92,7 @@ geng_coplanar_lr_asan : $(NAUTY)/geng.c coplanar.c lrplanar.c lrplanar.h $(PLANA
 	  -o $@ $(NAUTY)/geng.c coplanar.c lrplanar.c planarity_arena.c arena.c $(NAUTYOBJ)
 
 clean :
-	rm -f geng_coplanar geng_coplanar_instr geng_direct geng_coplanar_lr lrtest geng_coplanar_lr_asan \
+	rm -f geng_coplanar geng_coplanar_instr geng_direct geng_coplanar_lr lrtest geng_coplanar_lr_asan geng_coplanar_lrc geng_coplanar_lrcm \
 	  lrplanar_sg.o lrtest_sg biggraphs geng_coplanar_lrsg lrtest_sg_asan
 
 .PHONY : all clean tests

@@ -1,8 +1,10 @@
 /* biggraphs.c -- generate large test graphs with known planarity, in
  * sparse6 on stdout (loops and parallel edges allowed).
  *
- * usage: biggraphs FAMILY args...          (seed: optional last argument
- *                                            for the random families)
+ * usage: biggraphs [-d] FAMILY args...     (seed: optional last argument
+ *                                            for the random families;
+ *                                            -d: digraph6 output, each edge
+ *                                            as an arc in a random direction)
  *   planar:
  *     grid R C          R x C grid                     path N     path
  *     cylinder R C      path_R x cycle_C               cycle N    cycle
@@ -51,13 +53,41 @@ rnd(void)   /* xorshift64 */
 }
 static int rndint(int n) { return (int)(rnd() % (unsigned long long)n); }
 
-/* Build the sparsegraph from the edge list and write it as sparse6. */
+static int as_digraph = 0;   /* -d: write digraph6, each edge as one arc in a random
+                                direction, every 7th edge in both directions */
+
+/* Build the sparsegraph from the edge list and write it as sparse6 (or
+ * digraph6 with -d). */
 static void
 emit(void)
 {
     SG_DECL(sg);
     size_t i, nde = 0;
     int *pos;
+
+    if (as_digraph)
+    {
+        for (i = 0; i < ne; ++i)
+        {
+            if (rnd() % 2) { int t = eu[i]; eu[i] = ev[i]; ev[i] = t; }
+            nde += (i % 7 == 6 && eu[i] != ev[i]) ? 2 : 1;
+        }
+        SG_ALLOC(sg, nv, nde, "biggraphs");
+        sg.nv = nv; sg.nde = nde;
+        for (i = 0; i < (size_t)nv; ++i) sg.d[i] = 0;
+        for (i = 0; i < ne; ++i) { ++sg.d[eu[i]]; if (i % 7 == 6 && eu[i] != ev[i]) ++sg.d[ev[i]]; }
+        sg.v[0] = 0;
+        for (i = 1; i < (size_t)nv; ++i) sg.v[i] = sg.v[i-1] + sg.d[i-1];
+        pos = (int*)calloc(nv, sizeof(int));
+        for (i = 0; i < ne; ++i)
+        {
+            sg.e[sg.v[eu[i]] + pos[eu[i]]++] = ev[i];
+            if (i % 7 == 6 && eu[i] != ev[i]) sg.e[sg.v[ev[i]] + pos[ev[i]]++] = eu[i];
+        }
+        writed6_sg(stdout, &sg);
+        fprintf(stderr, "biggraphs: digraph n=%d arcs=%lu\n", nv, (unsigned long)nde);
+        return;
+    }
 
     for (i = 0; i < ne; ++i) nde += (eu[i] == ev[i]) ? 1 : 2;
     SG_ALLOC(sg, nv, nde, "biggraphs");
@@ -153,7 +183,8 @@ main(int argc, char *argv[])
     const char *fam;
     int N, R, C, D, i, j, x[6];
 
-    if (argc < 3) { fprintf(stderr, "usage: biggraphs FAMILY N [args] [seed]  (see source)\n"); return 2; }
+    if (argc > 1 && strcmp(argv[1], "-d") == 0) { as_digraph = 1; ++argv; --argc; }
+    if (argc < 3) { fprintf(stderr, "usage: biggraphs [-d] FAMILY N [args] [seed]  (see source)\n"); return 2; }
     fam = argv[1];
     N = atoi(argv[2]);
     for (i = 1; i < argc; ++i) ;                     /* seed = last arg if there is one more than needed */
