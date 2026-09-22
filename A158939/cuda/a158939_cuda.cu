@@ -19,10 +19,12 @@
  * (2.58e6 numbers per segment, 2.48e8 per chunk).  Per chunk:
  *
  *   1. kernel_large:  one thread per sieving prime q > QSPLIT (up to sqrt of
- *      the chunk end).  Each thread keeps m, the multiplier of its next
- *      multiple, in a persistent array and marks its few hits in the chunk
- *      into an 8 MB bitmap in global memory.  8 MB stays inside the GB10's
- *      24 MB L2, where random atomics run at ~2e10/s (vs 1.3e9/s in DRAM).
+ *      the chunk end).  Each prime keeps a 4-byte state saying in which chunk
+ *      (mod 64) and where its next multiple falls; primes whose next multiple
+ *      is in a later chunk cost one read, the others mark their few hits in
+ *      the chunk into an 8 MB bitmap in global memory.  8 MB stays inside the
+ *      GB10's 24 MB L2, where random atomics run at ~2e10/s (vs 1.3e9/s in
+ *      DRAM).
  *   2. kernel_segment: one block per segment, the segment's words in shared
  *      memory.  It ORs in a periodic pattern for the primes 7..19 and the
  *      large-prime bits from the chunk bitmap, marks the primes 23..QSPLIT
@@ -121,6 +123,8 @@ static const u64 PI10[17] = {
 static bool stderr_tty;
 static volatile sig_atomic_t g_stop = 0;
 static int g_report = 14;
+static bool g_single_stream = false;   /* -1: run the two kernels back to back instead of overlapped (one bitmap) */
+static bool g_l2_persist = false;      /* -L: keep the bitmap resident in L2 with a persisting access window */
 
 #define CUDA_CHECK(x) do { cudaError_t e_ = (x); if (e_ != cudaSuccess) die("CUDA error %s at line %d: %s", #x, __LINE__, cudaGetErrorString(e_)); } while (0)
 
@@ -327,13 +331,27 @@ __device__ __forceinline__ u64 first_multiplier(u32 q, u64 lo)
     return m;
 }
 
-/* Initialise the multiplier state of the large primes [0, nactive) for the
- * chunk starting at chunk_lo (scan start and resume). */
-__global__ void kernel_init_state(const u32 *__restrict__ primes, u64 *__restrict__ mstate, u32 nactive, u64 chunk_lo)
+/* Large-prime state, one u32 per prime: bits 31..26 = index (mod 64) of the
+ * chunk holding the prime's next multiple, bits 25..3 = that multiple's byte
+ * offset inside the chunk, bits 2..0 = wheel index of its multiplier.  A
+ * prime whose next multiple lies in a later chunk costs one 4-byte read per
+ * chunk; consecutive multiples are at most 6q apart, so the chunk distance is
+ * below 64 for every q below 2.6e9. */
+__device__ __forceinline__ u32 pack_state(u64 n, u32 j)
+{
+    u64 kc = n / CHUNK_NUMS;
+    u32 b = (u32)((n - kc * CHUNK_NUMS) / 30);
+    return ((u32)(kc & 63) << 26) | (b << 3) | j;
+}
+
+/* State of the large primes [0, nactive) for a scan (re)starting at chunk_lo. */
+__global__ void kernel_init_state(const u32 *__restrict__ primes, u32 *__restrict__ state, u32 nactive, u64 chunk_lo)
 {
     u32 i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i >= nactive) return;
-    mstate[i] = first_multiplier(primes[i], chunk_lo);
+    u32 q = primes[i];
+    u64 m = first_multiplier(q, chunk_lo);
+    state[i] = pack_state((u64)q * m, c_RIDX[m % 30]);
 }
 
 /* chunk_lo mod q for every medium sieving prime (one 64-bit division each, once per chunk) */
@@ -343,33 +361,45 @@ __global__ void kernel_chunkmod(const u32 *__restrict__ sprimes, u32 *__restrict
     if (i < nsmall) rchunk[i] = (u32)(chunk_lo % sprimes[i]);
 }
 
-/* Large primes: one thread per prime, marks the prime's multiples in
- * [chunk_lo, hi_ext) into the chunk bitmap, then stores the multiplier of the
- * first multiple >= chunk_hi (the overlap region is re-sieved by the next chunk). */
+/* Large primes: one thread per prime.  Primes whose next multiple is in this
+ * chunk mark their multiples in [chunk_lo, hi_ext) and store the state of the
+ * first multiple >= chunk_hi (the overlap is re-sieved by the next chunk). */
 __global__ void __launch_bounds__(256)
-kernel_large(const u32 *__restrict__ primes, u64 *__restrict__ mstate, u32 nprev, u32 nactive,
-             u64 chunk_lo, u64 chunk_hi, u64 hi_ext, u32 *__restrict__ bitmap)
+kernel_large(const u32 *__restrict__ primes, u32 *__restrict__ state, u32 nprev, u32 nactive,
+             u64 k, u64 chunk_lo, u64 chunk_hi, u64 hi_ext, u32 *__restrict__ bitmap)
 {
     u32 i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i >= nactive) return;
-    const u32 q = __ldcs(&primes[i]);
-    u64 m = (i >= nprev) ? (u64)q : __ldcs((const unsigned long long *)&mstate[i]);   /* newly active: first multiple is q*q */
-    u64 n = q * m;
-    if (n >= hi_ext) { if (i >= nprev) __stcs((unsigned long long *)&mstate[i], m); return; }
-    u32 j = c_RIDX[m % 30];
+    u32 q, j;
+    u64 n;
+    if (i >= nprev) {                                  /* newly active: first multiple q*q is in this chunk or its overlap */
+        q = __ldcs(&primes[i]);
+        n = (u64)q * q;
+        j = c_RIDX[q % 30];
+    } else {
+        const u32 s = __ldcs(&state[i]);
+        const u32 tgt = s >> 26, kk = (u32)(k & 63), b = (s >> 3) & 0x7FFFFFu;
+        u64 base;
+        if (tgt == kk) base = chunk_lo;                 /* next multiple is in this chunk */
+        else if (tgt == ((kk + 1) & 63) && b < OVERLAP * 4) base = chunk_hi;   /* ... or in this chunk's overlap */
+        else return;                                    /* lies in a later chunk */
+        q = __ldcs(&primes[i]);
+        j = s & 7;
+        n = base + 30ULL * b + c_R[c_BITIDX[c_RIDX[q % 30]][j]];
+    }
     const u32 a = c_RIDX[q % 30];
-    u64 msave = 0;
+    u64 nsave = 0;
+    u32 jsave = 0;
     bool saved = false;
     do {
-        if (!saved && n >= chunk_hi) { msave = m; saved = true; }
+        if (!saved && n >= chunk_hi) { nsave = n; jsave = j; saved = true; }
         u32 b = (u32)((n - chunk_lo) / 30);
         atomicOr(&bitmap[b >> 2], (1u << c_BITIDX[a][j]) << ((b & 3) << 3));
-        u32 g = c_GAP[j];
-        m += g;
-        n += (u64)q * g;
+        n += (u64)q * c_GAP[j];
         j = (j + 1) & 7;
     } while (n < hi_ext);
-    __stcs((unsigned long long *)&mstate[i], saved ? msave : m);
+    if (!saved) { nsave = n; jsave = j; }
+    __stcs(&state[i], pack_state(nsave, jsave));
 }
 
 /* Block-wide sum of u32 (blockDim.x multiple of 32); scratch needs blockDim/32 words. */
@@ -692,8 +722,7 @@ static std::vector<u8> build_pattern(void)
 }
 
 struct Gpu {
-    u32 *d_bitmap[2], *d_sprimes, *d_lprimes;
-    u64 *d_mstate;
+    u32 *d_bitmap[2], *d_sprimes, *d_lprimes, *d_mstate;
     u32 *d_sinv, *d_ssegmod, *d_rchunk;     /* per medium prime: floor(2^32/q), SEG_NUMS mod q, chunk_lo mod q */
     u8  *d_pattern;
     SegResult *d_results[2], *h_results[2];
@@ -728,7 +757,7 @@ static void gpu_init(Gpu &g, u64 max_number, u32 qsplit)
 
     std::vector<u8> pat = build_pattern();
     CUDA_CHECK(cudaStreamCreate(&g.sA));
-    CUDA_CHECK(cudaStreamCreate(&g.sB));
+    if (g_single_stream) g.sB = g.sA; else CUDA_CHECK(cudaStreamCreate(&g.sB));
     for (int i = 0; i < 2; i++) {
         CUDA_CHECK(cudaMalloc(&g.d_bitmap[i], (CHUNK_WORDS + OVERLAP) * sizeof(u32)));
         CUDA_CHECK(cudaMalloc(&g.d_results[i], CHUNK_SEGS * sizeof(SegResult)));
@@ -756,8 +785,28 @@ static void gpu_init(Gpu &g, u64 max_number, u32 qsplit)
     }
     CUDA_CHECK(cudaMalloc(&g.d_lprimes, (g.nlarge + 1) * sizeof(u32)));
     if (g.nlarge) CUDA_CHECK(cudaMemcpy(g.d_lprimes, g.lprimes.data(), g.nlarge * sizeof(u32), cudaMemcpyHostToDevice));
-    CUDA_CHECK(cudaMalloc(&g.d_mstate, (g.nlarge + 1) * sizeof(u64)));
+    CUDA_CHECK(cudaMalloc(&g.d_mstate, (g.nlarge + 1) * sizeof(u32)));
     CUDA_CHECK(cudaFuncSetAttribute(kernel_segment, cudaFuncAttributeMaxDynamicSharedMemorySize, SHARED_WORDS * sizeof(u32)));
+    if (g_l2_persist) {
+        cudaDeviceProp prop;
+        CUDA_CHECK(cudaGetDeviceProperties(&prop, 0));
+        size_t bytes = (CHUNK_WORDS + OVERLAP) * sizeof(u32) * (g_single_stream ? 1 : 2);
+        size_t persist = bytes < (size_t)prop.persistingL2CacheMaxSize ? bytes : (size_t)prop.persistingL2CacheMaxSize;
+        CUDA_CHECK(cudaDeviceSetLimit(cudaLimitPersistingL2CacheSize, persist));
+        size_t win = (CHUNK_WORDS + OVERLAP) * sizeof(u32);
+        if (win > (size_t)prop.accessPolicyMaxWindowSize) win = prop.accessPolicyMaxWindowSize;
+        cudaStreamAttrValue attr;
+        memset(&attr, 0, sizeof attr);
+        attr.accessPolicyWindow.base_ptr = g.d_bitmap[0];
+        attr.accessPolicyWindow.num_bytes = win;
+        attr.accessPolicyWindow.hitRatio = 1.0f;
+        attr.accessPolicyWindow.hitProp = cudaAccessPropertyPersisting;
+        attr.accessPolicyWindow.missProp = cudaAccessPropertyStreaming;
+        CUDA_CHECK(cudaStreamSetAttribute(g.sA, cudaStreamAttributeAccessPolicyWindow, &attr));
+        if (!g_single_stream) CUDA_CHECK(cudaStreamSetAttribute(g.sB, cudaStreamAttributeAccessPolicyWindow, &attr));
+        fprintf(stderr, "L2 persistence: limit %zu KB (max %d KB), window %zu KB (max %d KB)\n",
+                persist >> 10, prop.persistingL2CacheMaxSize >> 10, win >> 10, prop.accessPolicyMaxWindowSize >> 10);
+    }
 }
 
 /* number of large primes q with q*q < limit */
@@ -952,7 +1001,7 @@ static void gpu_free(Gpu &g)
     }
     cudaFree(g.d_pattern); cudaFree(g.d_sprimes); cudaFree(g.d_lprimes); cudaFree(g.d_mstate);
     cudaFree(g.d_sinv); cudaFree(g.d_ssegmod); cudaFree(g.d_rchunk);
-    cudaStreamDestroy(g.sA); cudaStreamDestroy(g.sB);
+    cudaStreamDestroy(g.sA); if (!g_single_stream) cudaStreamDestroy(g.sB);
     g.lprimes.clear();
 }
 
@@ -1015,7 +1064,7 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
      * while chunk k-1's segment kernel runs on stream B, with two bitmaps.
      * The host merges chunk k-1 after issuing chunk k. */
     auto merge_done = [&](u64 kk) {
-        const int i = (int)(kk & 1);
+        const int i = g_single_stream ? 0 : (int)(kk & 1);
         CUDA_CHECK(cudaEventSynchronize(G.ev_seg[i]));
         if (g_profile) {
             float ms;
@@ -1032,18 +1081,18 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
     bool issued = false;
     u64 last_issued = 0;
     for (; k < S.k_hi && !g_stop; k++) {
-        const int i = (int)(k & 1);
+        const int i = g_single_stream ? 0 : (int)(k & 1);
         const u64 chunk_lo = k * CHUNK_NUMS, chunk_hi = chunk_lo + CHUNK_NUMS;
         const u64 hi_ext = chunk_hi + (u64)OVERLAP * NUMS_PER_WORD;
         const u32 nact = active_count(G, hi_ext);
         /* stream A: bitmap i must no longer be read by the segment kernel of chunk k-2 */
-        if (k >= k0 + 2) CUDA_CHECK(cudaStreamWaitEvent(G.sA, G.ev_seg[i], 0));
+        if (k >= k0 + 2 && !g_single_stream) CUDA_CHECK(cudaStreamWaitEvent(G.sA, G.ev_seg[i], 0));
         if (g_profile) CUDA_CHECK(cudaEventRecord(G.ev_t0[i], G.sA));
         CUDA_CHECK(cudaMemsetAsync(G.d_bitmap[i], 0, (CHUNK_WORDS + OVERLAP) * sizeof(u32), G.sA));
         if (g_profile) CUDA_CHECK(cudaEventRecord(G.ev_t1[i], G.sA));
         if (nact)
             kernel_large<<<(nact + 255) / 256, 256, 0, G.sA>>>(G.d_lprimes, G.d_mstate, nprev, nact,
-                                                                chunk_lo, chunk_hi, hi_ext, G.d_bitmap[i]);
+                                                                k, chunk_lo, chunk_hi, hi_ext, G.d_bitmap[i]);
         CUDA_CHECK(cudaEventRecord(G.ev_large[i], G.sA));
         /* stream B: segments of chunk k after its large primes are in */
         CUDA_CHECK(cudaStreamWaitEvent(G.sB, G.ev_large[i], 0));
@@ -1058,9 +1107,13 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
         CUDA_CHECK(cudaEventRecord(G.ev_seg[i], G.sB));
         CUDA_CHECK(cudaGetLastError());
         nprev = nact;
-        if (issued) merge_done(last_issued);
-        issued = true;
-        last_issued = k;
+        if (g_single_stream) {                         /* one buffer: merge this chunk before issuing the next */
+            merge_done(k);
+        } else {
+            if (issued) merge_done(last_issued);
+            issued = true;
+            last_issued = k;
+        }
 
         double t = now();
         if (t - ts[ns - 1] >= 1.0) {
@@ -1155,7 +1208,7 @@ static void print_table(void)
 static void usage(void)
 {
     fprintf(stderr,
-        "usage: a158939_cuda scan [START] END [-n N] [-r NMIN] [-S FILE] [-i SECS] [-Q QSPLIT] [-q]\n"
+        "usage: a158939_cuda scan [START] END [-n N] [-r NMIN] [-S FILE] [-i SECS] [-Q QSPLIT] [-1] [-q]\n"
         "       a158939_cuda bench [N] [-d SPAN] [-Q QSPLIT] [-p]\n"
         "       a158939_cuda selftest [-Q QSPLIT]\n");
     exit(2);
@@ -1181,6 +1234,8 @@ static int cmd_scan(int argc, char **argv)
         else if (!strcmp(argv[i], "-S") && i + 1 < argc) state = argv[++i];
         else if (!strcmp(argv[i], "-i") && i + 1 < argc) interval = parse_int(argv[++i], 1, 86400, "SECS");
         else if (!strcmp(argv[i], "-Q") && i + 1 < argc) qsplit = parse_qsplit(argv[++i]);
+        else if (!strcmp(argv[i], "-1")) g_single_stream = true;
+        else if (!strcmp(argv[i], "-L")) g_l2_persist = true;
         else if (!strcmp(argv[i], "-q")) quiet = true;
         else if (argv[i][0] == '-' && !isdigit((unsigned char)argv[i][1])) usage();
         else if (npos < 2) pos[npos++] = parse_num(argv[i]);
@@ -1204,6 +1259,8 @@ static int cmd_bench(int argc, char **argv)
     for (int i = 0; i < argc; i++) {
         if (!strcmp(argv[i], "-d") && i + 1 < argc) span = parse_num(argv[++i]);
         else if (!strcmp(argv[i], "-p")) g_profile = true;
+        else if (!strcmp(argv[i], "-1")) g_single_stream = true;
+        else if (!strcmp(argv[i], "-L")) g_l2_persist = true;
         else if (!strcmp(argv[i], "-Q") && i + 1 < argc) qsplit = parse_qsplit(argv[++i]);
         else if (argv[i][0] == '-' && !isdigit((unsigned char)argv[i][1])) usage();
         else if (npos++ == 0) N = parse_num(argv[i]);

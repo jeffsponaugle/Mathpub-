@@ -158,7 +158,16 @@ inside a chunk records END as its position, and a resume with a larger END
 rescans that chunk from there, so END can be extended freely.
 
 Measured: 2.2-2.5e11 numbers/s at 10^15 and 1.6-1.7e11 at 8e15, i.e. 13x the
-M1 Pro; 10^16 in about 15 hours. The GPU `selftest` reproduces the CPU tool's
+M1 Pro; 10^16 in about 15 hours. Above 10^16 the large-prime kernel dominates
+(17 million sieving primes at 10^17), so each large prime keeps a 4-byte state
+naming the chunk (mod 64) and offset of its next multiple, and primes whose
+next multiple lies chunks ahead cost a single read; primes aimed at the next
+chunk but inside the overlap are still processed in the current chunk. For
+that range use `-Q 1e6 -1 -L` (QSPLIT 10^6, one stream and one bitmap, 8 MB
+L2 persisting window): 1.7e11 numbers/s at 2e16 and 1.3e11 at 8e16, versus
+1.1e11 and 0.97e11 before. Pinning both bitmaps of the two-stream mode in L2
+is three times slower, and overlapping the two kernels gains nothing there
+because they contend for L2 and SM issue slots. The GPU `selftest` reproduces the CPU tool's
 exact prime counts, a(n), pi(a(n)) and run-length histograms on [0, 1e11), on
 an oddly bounded range and on [1e15, 1e15+2e12), and an interrupted run resumes
 to a byte-identical result. Tuning found by ablation: the sieve marks are
@@ -206,8 +215,27 @@ Verification:
   exactly (prime counts, first occurrences, full run-length histograms) on
   [0, 10^13) and on a window around a(15).
 
-**a(17) > 2×10^16.** The scan ran on to 2e16 (18h35m of GPU time in total)
-without a run of 17.
+**a(17) = 52461866207504471**, found 2026-09-22 by the continued GPU scan
+(2d09h after resuming from 2e16, at 5.25e16). The run of 17 increasing gaps is
+
+    2 4 6 8 12 18 22 30 36 38 40 44 46 50 54 58 84   (the next gap is 66)
+
+over the primes 52461866207504471, ...473, ...477, ...483, ...491, ...503,
+...521, ...543, ...573, ...609, ...647, ...687, ...731, ...777, ...827, ...881,
+...939, ...5023, ...5089. Its prime index is pi(a(17)) = 1400080864310974
+(primecount; the GPU's running index plus the 1129839 primes of the sliver
+gives the same value). The run length was re-derived by `a158939 verify`
+(Miller-Rabin and GMP) and `verify_run.py`. Every prime below a(17) was
+examined: [0, 10^16) and [10^16 + 41615360, 2e16) by the first two GPU runs,
+the sliver by the CPU tool, and [2e16, a(17)] by the continued run (the
+2e16 checkpoint was hand-corrected to END before resuming, and the resume-
+from-inside-a-chunk logic was verified by selftest case (d)).
+
+Derived: **A229832(16) = 52461866207504473** (the prime after a(17), first of
+16 consecutive weak primes) and **A133697(15) = 1400080864310974**.
+
+a(18): the scan is continuing toward 10^17 for a lower bound (only about a 4%
+chance of finding a(18) there; the expected location is beyond 10^18).
 
 Exact run-length distribution of the primes below 2×10^16 (GPU scan plus
 the CPU-scanned sliver; the total, 547863431950008, equals primecount's pi(2×10^16); the model column is the
