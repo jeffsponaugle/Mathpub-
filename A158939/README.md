@@ -158,22 +158,50 @@ inside a chunk records END as its position, and a resume with a larger END
 rescans that chunk from there, so END can be extended freely.
 
 Measured: 2.2-2.5e11 numbers/s at 10^15 and 1.6-1.7e11 at 8e15, i.e. 13x the
-M1 Pro; 10^16 in about 15 hours. Above 10^16 the large-prime kernel dominates
-(17 million sieving primes at 10^17), so each large prime keeps a 4-byte state
-naming the chunk (mod 64) and offset of its next multiple, and primes whose
-next multiple lies chunks ahead cost a single read; primes aimed at the next
-chunk but inside the overlap are still processed in the current chunk. For
-that range use `-Q 1e6 -1 -L` (QSPLIT 10^6, one stream and one bitmap, 8 MB
-L2 persisting window): 1.7e11 numbers/s at 2e16 and 1.3e11 at 8e16, versus
-1.1e11 and 0.97e11 before. Pinning both bitmaps of the two-stream mode in L2
-is three times slower, and overlapping the two kernels gains nothing there
-because they contend for L2 and SM issue slots. The GPU `selftest` reproduces the CPU tool's
-exact prime counts, a(n), pi(a(n)) and run-length histograms on [0, 1e11), on
-an oddly bounded range and on [1e15, 1e15+2e12), and an interrupted run resumes
-to a byte-identical result. Tuning found by ablation: the sieve marks are
-cheap (shared-memory atomics at 1e12/s); what mattered was avoiding 64-bit
-division per prime per segment and keeping the extraction loop out of local
-memory (a per-thread ring buffer there made the kernel latency-bound).
+M1 Pro; 10^16 in about 15 hours. Above 10^16 the large sieving primes dominate
+(17 million at 10^17, 51 million at 10^18), and the design for them went
+through three versions:
+
+1. one thread per prime with a 64-bit multiplier state, touched every chunk:
+   1.1e11 numbers/s at 2e16, 0.5e11 at 10^18;
+2. a 4-byte state (chunk mod 64, byte offset, wheel index) so that a prime
+   whose next multiple is chunks away costs one read: 1.7e11 at 2e16,
+   1.3e11 at 8e16, 0.5-0.7e11 at 10^18. Ablation showed the L2 atomics cost
+   only ~0.2 ms per chunk there; the time went into state traffic, made worse
+   by the sparse 4-byte write-backs of the ~18% of primes that hit;
+3. bucket lists: primes above CHUNK_NUMS/6 (which can skip chunks) live as
+   8-byte entries {state, q} in 64 lists, one per upcoming chunk. A chunk
+   processes only the entries due in it and re-appends each to the list of
+   its next multiple's chunk, staged per block so the appends are coalesced;
+   the ~2.5 million smaller "dense" primes keep a flat, always-rewritten
+   state array. 1.58e11 at 5e16, 1.51e11 at 10^17, 1.29e11 at 10^18.
+
+The residue-class start offsets of the medium primes are computed as
+(c + R[k]*beta) mod q with a per-prime inverse (item "cheaper setup"); it is
+correct but does not allow a larger QSPLIT, because each segment block has
+to re-read every medium prime's table entries and that bandwidth, not the
+arithmetic, is the limit. QSPLIT stays at 10^6. Two-stream overlap of the
+kernels and pinning both bitmaps in L2 were both slower than one stream with
+one 8 MB bitmap pinned by a persisting access window (`-N` disables it).
+Running the CPU tool on the Spark's 20 Arm cores alongside adds 3e10
+numbers/s at 10^17 but slows the GPU by 14%, and the CPU tool falls to 1e10
+near 1.7e18, so it is a wash and is not used.
+
+A wheel-210 variant (48 bits per 210 numbers, kept as
+[cuda/a158939_cuda_wheel210.cu](cuda/a158939_cuda_wheel210.cu)) was built and
+validated identically, but it is slower: the large-prime kernel gains the
+expected 7% from 14% fewer hits, while the medium primes need 48 residue-class
+setups per prime per segment instead of 8, a latency-bound chain that doubles
+the segment kernel (0.96 ms per chunk at QSPLIT 5e5 versus 0.43 ms), and
+lowering QSPLIT to shed medium primes only reaches parity. Measured on an idle
+GPU: 1.10e11 at 10^18 versus 1.27e11 for the wheel-30 bucket version, which
+therefore stays in production.
+
+Every version was checked against the CPU tool on windows at 3e16 and 10^18
+(identical first occurrences, prime indices, prime counts and histograms; the
+bucket version's first build missed 86,000 marks per 2e11 window from
+sleepers filed under the starting chunk's predecessor, caught by that check)
+and by interrupting and resuming at 10^17 (identical to a straight run).
 
     ./a158939_cuda selftest
     ./a158939_cuda bench 1e15 -p                # per-kernel profile
@@ -234,8 +262,15 @@ from-inside-a-chunk logic was verified by selftest case (d)).
 Derived: **A229832(16) = 52461866207504473** (the prime after a(17), first of
 16 consecutive weak primes) and **A133697(15) = 1400080864310974**.
 
-a(18): the scan is continuing toward 10^17 for a lower bound (only about a 4%
-chance of finding a(18) there; the expected location is beyond 10^18).
+**a(18) > 54557804097699840** (5.46×10^16). The a(17) run was stopped at
+5.30×10^16 on 2026-09-22; the search was resumed the same day with the bucket
+version and paused again at 5.46×10^16 that afternoon, at a checkpoint. The
+median expected location of a(18) is about 2e18 (90% point near 8e18), about
+five months of one Spark at 1.3-1.6e11 numbers/s, so continuing is a matter
+of hardware and patience rather than code. To continue on atom2 (resumable,
+END can be changed):
+
+    cd /home/jbs/A158939/cuda && setsid nohup ./a158939_cuda scan 2e18 -Q 1e6 -S gpu_a18.state -i 60 > gpu_a18.txt 2> gpu_a18.log < /dev/null &
 
 Exact run-length distribution of the primes below 2×10^16 (GPU scan plus
 the CPU-scanned sliver; the total, 547863431950008, equals primecount's pi(2×10^16); the model column is the

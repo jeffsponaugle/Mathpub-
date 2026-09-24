@@ -8,15 +8,16 @@
  *
  * Sieve layout
  * ------------
- * Only numbers coprime to 30 are represented: one byte per 30 numbers, bit j
- * of byte b standing for 30*b + R[j] with R = {1,7,11,13,17,19,23,29}.  A bit
- * that is still 0 after sieving is a prime.  For a sieving prime q >= 7 the
- * multiples q*m with gcd(m,30) = 1 fall into 8 arithmetic progressions of
- * byte index (stride q) with a fixed bit mask each, so a mark is
- * "atomicOr(word[b >> 2], mask << 8*(b & 3))".
+ * Only numbers coprime to 210 are represented: 48 bits per period of 210
+ * numbers, bit j of period P standing for 210*P + R[j] with R the 48 residues
+ * coprime to 210.  A bit that is still 0 after sieving is a prime.  For a
+ * sieving prime q >= 11 the multiples q*m with gcd(m,210) = 1 fall into 48
+ * arithmetic progressions of period index (stride q) with a fixed residue
+ * index each, so a mark is "atomicOr(word[i >> 5], 1 << (i & 31))" with the
+ * bit index i advancing by 48*q.  The primes 2, 3, 5, 7 are added by the host.
  *
  * The range is processed in chunks of CHUNK_SEGS segments of SEG_WORDS words
- * (2.58e6 numbers per segment, 2.48e8 per chunk).  Per chunk:
+ * (3.01e6 numbers per segment, 2.89e8 per chunk).  Per chunk:
  *
  *   1. kernel_large / kernel_bucket:  the sieving primes q > QSPLIT (up to
  *      sqrt of the chunk end) mark their few multiples in the chunk into an
@@ -83,10 +84,10 @@ typedef unsigned __int128 u128;
 
 /* ---- geometry (compile-time, overridable with -D) ---- */
 #ifndef SEG_WORDS
-#define SEG_WORDS   21504           /* words owned by a segment: 84 KB, 2,580,480 numbers */
+#define SEG_WORDS   21504           /* words owned by a segment: 84 KB = 14336 periods of 210 = 3,010,560 numbers */
 #endif
 #ifndef OVERLAP
-#define OVERLAP     512             /* extra words sieved past a segment: 61,440 numbers */
+#define OVERLAP     528             /* extra words sieved past a segment: 352 periods = 73,920 numbers */
 #endif
 #ifndef CHUNK_SEGS
 #define CHUNK_SEGS  96              /* segments per chunk: 7.875 MB bitmap (must stay in L2) */
@@ -97,14 +98,17 @@ typedef unsigned __int128 u128;
 #ifndef PWARP
 #define PWARP       2048            /* primes below this: one warp per prime */
 #endif
+#define WHEEL       210
+#define NRES        48              /* residues coprime to 210 */
 #define SHARED_WORDS (SEG_WORDS + OVERLAP)
-#define NUMS_PER_WORD 120ULL         /* 32 bits * 30/8 */
-#define SEG_NUMS    (SEG_WORDS * NUMS_PER_WORD)
+#define SEG_PERIODS (SEG_WORDS * 32 / NRES)              /* 14336 */
+#define OVL_PERIODS (OVERLAP * 32 / NRES)                /* 352 */
+#define SEG_NUMS    ((u64)SEG_PERIODS * WHEEL)           /* 3,010,560 */
 #define CHUNK_WORDS ((u64)SEG_WORDS * CHUNK_SEGS)
-#define CHUNK_NUMS  (CHUNK_WORDS * NUMS_PER_WORD)
-#define PAT_PERIOD  323323          /* 7*11*13*17*19: period of the presieve pattern in bytes */
+#define CHUNK_NUMS  ((u64)SEG_PERIODS * CHUNK_SEGS * WHEEL)  /* 289,013,760 */
+#define PAT_PERIOD  46189           /* 11*13*17*19: period of the presieve pattern in wheel periods */
+#define PAT_BYTES   (PAT_PERIOD * 6)
 #define NMAX        64              /* run lengths 1..NMAX-1 tracked */
-#define RINGP       32              /* recent primes kept per thread; runs >= RINGP-1 are flagged */
 #define NKNOWN      15
 
 static const u64 KNOWN[NKNOWN + 1] = {
@@ -306,12 +310,13 @@ static int run_length64(u64 p, u16 *gaps, int maxgaps)
 /* Device side                                                         */
 /* ------------------------------------------------------------------ */
 
-__constant__ u32 c_R[8]       = { 1, 7, 11, 13, 17, 19, 23, 29 };
-__constant__ u32 c_GAP[8]     = { 6, 4, 2, 4, 2, 4, 6, 2 };       /* R[j+1] - R[j] */
-__constant__ u8  c_RIDX[30]   = { 8,0,8,8,8,8,8,1,8,8, 8,2,8,3,8,8,8,4,8,5, 8,8,8,6,8,8,8,8,8,7 };
-__constant__ u8  c_BITIDX[8][8];                                  /* bit of (R[a]*R[j]) mod 30 */
-__constant__ u8  c_QINV30[30]  = { 0,1,0,0,0,0,0,13,0,0, 0,11,0,7,0,0,0,23,0,19, 0,0,0,17,0,0,0,0,0,29 };  /* q^-1 mod 30 */
-__device__ __forceinline__ u32 wheelR(u32 j) { return (u32)((0x1D1713110D0B0701ULL >> (8 * j)) & 0xFF); }   /* R[j] without a divergent table read */
+__constant__ u8  c_R[NRES]    = { 1,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,
+                                  107,109,113,121,127,131,137,139,143,149,151,157,163,167,169,173,179,181,187,191,193,197,199,209 };
+__constant__ u8  c_GAP[NRES];       /* R[j+1] - R[j] (2 for the wrap 209 -> 211) */
+__constant__ u8  c_RIDX[WHEEL];     /* residue -> index, 255 if not coprime to 210 */
+__constant__ u8  c_INV[NRES];       /* inverse of R[j] modulo 210 */
+__constant__ u8  c_T[NRES][NRES];   /* floor(R[b]*R[j] / 210) */
+__constant__ u8  c_J[NRES][NRES];   /* index of (R[b]*R[j]) mod 210 */
 
 /* Per-segment results written by kernel_segment, merged on the host. */
 struct SegResult {
@@ -321,42 +326,47 @@ struct SegResult {
     u32 extra[NMAX];        /* run lengths from final run ends, per prime inside the bounds */
     u32 count;              /* primes in [seg_lo, seg_hi) ∩ [start, end) */
     u32 unsettled;          /* offset of the first prime of a run still open at the bitmap end, ~0u = none */
-    u32 overflow;           /* a run reached RINGP-1 gaps */
+    u32 overflow;           /* a run reached NMAX-1 gaps */
     u32 pad;
 };
 
-/* First multiplier m >= max(q, ceil(lo/q)) with gcd(m, 30) = 1. */
+/* First multiplier m >= max(q, ceil(lo/q)) with gcd(m, 210) = 1. */
 __device__ __forceinline__ u64 first_multiplier(u32 q, u64 lo)
 {
     u64 m = (lo + q - 1) / q;
     if (m < q) m = q;
-    u32 r = (u32)(m % 30);
-    while (c_RIDX[r] == 8) { m++; r = (r == 29) ? 0 : r + 1; }
+    u32 r = (u32)(m % WHEEL);
+    while (c_RIDX[r] == 255) { m++; r = (r == WHEEL - 1) ? 0 : r + 1; }
     return m;
 }
 
+/* bit index of number n inside the chunk starting at base (n coprime to 210, n >= base, base multiple of 210) */
+__device__ __forceinline__ u32 bit_index(u64 n, u64 base)
+{
+    u32 d = (u32)(n - base);
+    return NRES * (d / WHEEL) + c_RIDX[d % WHEEL];
+}
+
 /* Large-prime state, one u32 per prime: bits 31..26 = index (mod 64) of the
- * chunk holding the prime's next multiple, bits 25..3 = that multiple's byte
- * offset inside the chunk, bits 2..0 = wheel index of its multiplier.
- * Consecutive multiples are at most 6q apart, so the chunk distance is below
- * 64 for every q below 2.6e9.
+ * chunk holding the prime's next multiple, bits 25..0 = that multiple's bit
+ * index inside the chunk (< 2^26).  The multiplier's residue class is
+ * recovered from the bit and q.  Consecutive multiples are at most 10q
+ * apart, so the chunk distance is below 64 for every q below 1.8e9.
  *
- * Primes below CHUNK_NUMS/6 ("dense", ~2.5 million) hit every chunk and keep
- * their state in a flat array read and rewritten by kernel_large.  Larger
- * primes ("sleepers") mostly skip chunks; they live as 8-byte entries
- * (state << 32 | q) in a ring of SLOTS bucket lists, one list per upcoming
- * chunk, so a chunk touches only the primes that hit it (kernel_bucket), and
- * each entry is re-appended to the list of the chunk holding its next
- * multiple, block-staged so the appends are coalesced. */
+ * Primes below CHUNK_NUMS/10 ("dense") hit every chunk and keep their state
+ * in a flat array read and rewritten by kernel_large.  Larger primes
+ * ("sleepers") live as 8-byte entries (state << 32 | q) in a ring of SLOTS
+ * bucket lists, one per upcoming chunk, so a chunk touches only the primes
+ * that hit it (kernel_bucket); each entry is re-appended to the list of the
+ * chunk holding its next multiple, block-staged so the appends are coalesced. */
 #define SLOTS        64
-#define OVERLAP_NUMS ((u64)OVERLAP * NUMS_PER_WORD)
+#define OVERLAP_NUMS ((u64)OVL_PERIODS * WHEEL)
 #define BLOCKDIM_B   1024
 
-__device__ __forceinline__ u32 pack_state(u64 n, u32 j)
+__device__ __forceinline__ u32 pack_state(u64 n)
 {
     u64 kc = n / CHUNK_NUMS;
-    u32 b = (u32)((n - kc * CHUNK_NUMS) / 30);
-    return ((u32)(kc & (SLOTS - 1)) << 26) | (b << 3) | j;
+    return ((u32)(kc & (SLOTS - 1)) << 26) | bit_index(n, kc * CHUNK_NUMS);
 }
 
 /* the chunk whose extended range [chunk_lo, hi_ext) first contains n */
@@ -373,8 +383,7 @@ __device__ __forceinline__ void append_entry(u64 *entries, u32 *counts, u32 cap,
     else atomicOr(err, 1u);
 }
 
-/* State of the active large primes [0, nactive) for a scan (re)starting at chunk_lo:
- * dense primes (i < nd) into the flat array, sleepers into their bucket lists. */
+/* State of the active large primes [0, nactive) for a scan (re)starting at chunk k0. */
 __global__ void kernel_init_state(const u32 *__restrict__ primes, u32 *__restrict__ state, u32 nd, u32 nactive, u64 k0,
                                   u64 *__restrict__ entries, u32 *__restrict__ counts, u32 cap, u32 *__restrict__ err)
 {
@@ -382,15 +391,15 @@ __global__ void kernel_init_state(const u32 *__restrict__ primes, u32 *__restric
     if (i >= nactive) return;
     const u64 chunk_lo = k0 * CHUNK_NUMS;
     u32 q = primes[i];
-    u64 m = first_multiplier(q, chunk_lo), n = (u64)q * m;
-    u32 st = pack_state(n, c_RIDX[m % 30]);
+    u64 n = (u64)q * first_multiplier(q, chunk_lo);
+    u32 st = pack_state(n);
     if (i < nd) { state[i] = st; return; }
     u64 sl = slot_of(n);
     if (sl < k0) sl = k0;                             /* the first chunk's overlap belongs to no earlier chunk here */
     append_entry(entries, counts, cap, err, sl, ((u64)st << 32) | q);
 }
 
-/* Newly active primes [nprev, nactive): their first multiple q*q lies in the current chunk or its overlap. */
+/* Newly active primes [nprev, nactive): their first multiple q*q is in the current chunk or its overlap. */
 __global__ void kernel_activate(const u32 *__restrict__ primes, u32 *__restrict__ state, u32 nd, u32 nprev, u32 nactive, u64 k,
                                 u64 *__restrict__ entries, u32 *__restrict__ counts, u32 cap, u32 *__restrict__ err)
 {
@@ -398,18 +407,18 @@ __global__ void kernel_activate(const u32 *__restrict__ primes, u32 *__restrict_
     if (i >= nactive) return;
     u32 q = primes[i];
     u64 n = (u64)q * q;
-    u32 st = pack_state(n, c_RIDX[q % 30]);
+    u32 st = pack_state(n);
     if (i < nd) { state[i] = st; return; }
     u64 sl = slot_of(n);
     if (sl < k) sl = k;
     append_entry(entries, counts, cap, err, sl, ((u64)st << 32) | q);
 }
 
-/* (chunk_lo/30) mod q for every medium sieving prime (one 64-bit division each, once per chunk) */
+/* (chunk_lo/210) mod q for every medium sieving prime (one 64-bit division each, once per chunk) */
 __global__ void kernel_chunkmod(const u32 *__restrict__ sprimes, u32 *__restrict__ rchunk, u32 nsmall, u64 chunk_lo)
 {
     u32 i = blockIdx.x * blockDim.x + threadIdx.x;
-    if (i < nsmall) rchunk[i] = (u32)((chunk_lo / 30) % sprimes[i]);
+    if (i < nsmall) rchunk[i] = (u32)((chunk_lo / WHEEL) % sprimes[i]);
 }
 
 /* x mod q for x < 2^32, with inv = floor(2^32 / q) */
@@ -419,35 +428,39 @@ __device__ __forceinline__ u32 barrett32(u32 x, u32 q, u32 inv)
     return r >= q ? r - q : r;
 }
 
-/* Mark the multiples of q from n (wheel index j) below hi_ext into the chunk bitmap;
- * returns the packed state of the first multiple >= chunk_hi. */
-__device__ __forceinline__ u32 mark_prime(u32 q, u64 n, u32 j, u64 chunk_lo, u64 chunk_hi, u64 hi_ext, u32 *__restrict__ bitmap)
+/* Mark the multiples of q from n (multiplier residue index jm) below hi_ext into the
+ * chunk bitmap; returns the packed state of the first multiple >= chunk_hi. */
+__device__ __forceinline__ u32 mark_prime(u32 q, u64 n, u32 jm, u64 chunk_lo, u64 chunk_hi, u64 hi_ext,
+                                          u32 *__restrict__ bitmap, const u8 *s_gap, const u8 *s_ridx)
 {
-    const u32 a = c_RIDX[q % 30];
     u64 nsave = 0;
-    u32 jsave = 0;
     bool saved = false;
     do {
-        if (!saved && n >= chunk_hi) { nsave = n; jsave = j; saved = true; }
-        u32 b = (u32)((n - chunk_lo) / 30);
-        atomicOr(&bitmap[b >> 2], (1u << c_BITIDX[a][j]) << ((b & 3) << 3));
-        n += (u64)q * c_GAP[j];
-        j = (j + 1) & 7;
+        if (!saved && n >= chunk_hi) { nsave = n; saved = true; }
+        u32 d = (u32)(n - chunk_lo);
+        u32 i = NRES * (d / WHEEL) + s_ridx[d % WHEEL];
+        atomicOr(&bitmap[i >> 5], 1u << (i & 31));
+        n += (u64)q * s_gap[jm];
+        jm = (jm == NRES - 1) ? 0 : jm + 1;
     } while (n < hi_ext);
-    if (!saved) { nsave = n; jsave = j; }
-    return pack_state(nsave, jsave);
+    if (!saved) nsave = n;
+    return pack_state(nsave);
 }
 
-/* Multiple encoded by state s for chunk k: in the chunk (target k) or in its overlap (target k+1). */
-__device__ __forceinline__ bool state_position(u32 s, u32 q, u64 k, u64 chunk_lo, u64 chunk_hi, u64 *n, u32 *j)
+/* Multiple encoded by state s for chunk k (in the chunk, or in its overlap when the target is k+1),
+ * and the residue index of its multiplier. */
+__device__ __forceinline__ bool state_position(u32 s, u32 q, u64 k, u64 chunk_lo, u64 chunk_hi, u64 *n, u32 *jm,
+                                               const u8 *s_ridx, const u8 *s_inv, const u8 *s_R)
 {
-    const u32 tgt = s >> 26, kk = (u32)(k & (SLOTS - 1)), b = (s >> 3) & 0x7FFFFFu;
+    const u32 tgt = s >> 26, kk = (u32)(k & (SLOTS - 1)), i = s & 0x3FFFFFFu;
     u64 base;
     if (tgt == kk) base = chunk_lo;
-    else if (tgt == ((kk + 1) & (SLOTS - 1)) && b < OVERLAP * 4) base = chunk_hi;
+    else if (tgt == ((kk + 1) & (SLOTS - 1)) && i < OVERLAP * 32) base = chunk_hi;
     else return false;
-    *j = s & 7;
-    *n = base + 30ULL * b + c_R[c_BITIDX[c_RIDX[q % 30]][*j]];
+    const u32 rn = s_R[i % NRES];
+    *n = base + (u64)WHEEL * (i / NRES) + rn;
+    const u32 qi = s_inv[s_ridx[q % WHEEL]];                    /* q^-1 mod 210 */
+    *jm = s_ridx[(rn * qi) % WHEEL];                            /* m = n/q  =>  m mod 210 = rn * q^-1 */
     return true;
 }
 
@@ -456,14 +469,18 @@ __global__ void __launch_bounds__(256)
 kernel_large(const u32 *__restrict__ primes, u32 *__restrict__ state, u32 n_dense,
              u64 k, u64 chunk_lo, u64 chunk_hi, u64 hi_ext, u32 *__restrict__ bitmap)
 {
+    __shared__ u8 s_ridx[WHEEL], s_gap[NRES], s_inv[NRES], s_R[NRES];
+    for (u32 t = threadIdx.x; t < WHEEL; t += blockDim.x) s_ridx[t] = c_RIDX[t];
+    if (threadIdx.x < NRES) { s_gap[threadIdx.x] = c_GAP[threadIdx.x]; s_inv[threadIdx.x] = c_INV[threadIdx.x]; s_R[threadIdx.x] = c_R[threadIdx.x]; }
+    __syncthreads();
     u32 i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i >= n_dense) return;
     const u32 s = __ldcs(&state[i]);
     const u32 q = __ldcs(&primes[i]);
     u64 n;
-    u32 j;
-    if (!state_position(s, q, k, chunk_lo, chunk_hi, &n, &j)) { __stcs(&state[i], s); return; }
-    __stcs(&state[i], mark_prime(q, n, j, chunk_lo, chunk_hi, hi_ext, bitmap));
+    u32 jm;
+    if (!state_position(s, q, k, chunk_lo, chunk_hi, &n, &jm, s_ridx, s_inv, s_R)) { __stcs(&state[i], s); return; }
+    __stcs(&state[i], mark_prime(q, n, jm, chunk_lo, chunk_hi, hi_ext, bitmap, s_gap, s_ridx));
 }
 
 /* Sleeping large primes due in chunk k: process the n_in entries of its bucket list,
@@ -475,8 +492,11 @@ kernel_bucket(u64 *__restrict__ entries, u32 *__restrict__ counts, u32 cap, u32 
     __shared__ u32 s_cnt[SLOTS], s_off[SLOTS], s_base[SLOTS];
     __shared__ u64 s_stage[BLOCKDIM_B];
     __shared__ u8 s_rel[BLOCKDIM_B];
+    __shared__ u8 s_ridx[WHEEL], s_gap[NRES], s_inv[NRES], s_R[NRES];
     const u32 tid = threadIdx.x;
     if (tid < SLOTS) s_cnt[tid] = 0;
+    if (tid < WHEEL) s_ridx[tid] = c_RIDX[tid];
+    if (tid < NRES) { s_gap[tid] = c_GAP[tid]; s_inv[tid] = c_INV[tid]; s_R[tid] = c_R[tid]; }
     __syncthreads();
 
     const u32 slot = (u32)(k % SLOTS);
@@ -488,15 +508,14 @@ kernel_bucket(u64 *__restrict__ entries, u32 *__restrict__ counts, u32 cap, u32 
         const u64 e = entries[(u64)slot * cap + i];
         const u32 q = (u32)e, s = (u32)(e >> 32);
         u64 n;
-        u32 j;
-        if (state_position(s, q, k, chunk_lo, chunk_hi, &n, &j)) {
-            const u32 st = mark_prime(q, n, j, chunk_lo, chunk_hi, hi_ext, bitmap);
-            /* next multiple: recover it from the packed state to find its slot */
-            const u32 tgt = st >> 26, b = (st >> 3) & 0x7FFFFFu;
+        u32 jm;
+        if (state_position(s, q, k, chunk_lo, chunk_hi, &n, &jm, s_ridx, s_inv, s_R)) {
+            const u32 st = mark_prime(q, n, jm, chunk_lo, chunk_hi, hi_ext, bitmap, s_gap, s_ridx);
+            const u32 tgt = st >> 26, bi = st & 0x3FFFFFFu;
             u64 kc = k + (((tgt - (u32)(k % SLOTS)) & (SLOTS - 1)));        /* absolute chunk of the next multiple */
-            u64 nn = kc * CHUNK_NUMS + 30ULL * b;                               /* (residue irrelevant for the slot) */
+            u64 nn = kc * CHUNK_NUMS + (u64)WHEEL * (bi / NRES);               /* (residue irrelevant for the slot) */
             u64 sl = slot_of(nn);
-            if (sl <= k) sl = k + 1;                                            /* in this chunk's overlap: process again next chunk */
+            if (sl <= k) sl = k + 1;                                            /* in this chunk's overlap: again next chunk */
             rel = (u32)(sl - k);
             out = ((u64)st << 32) | q;
             rank = atomicAdd(&s_cnt[rel], 1u);
@@ -505,11 +524,11 @@ kernel_bucket(u64 *__restrict__ entries, u32 *__restrict__ counts, u32 cap, u32 
         }
     }
     __syncthreads();
-    if (tid == 0) {                                   /* exclusive prefix of the per-destination counts */
+    if (tid == 0) {
         u32 acc = 0;
         for (u32 r = 0; r < SLOTS; r++) { s_off[r] = acc; acc += s_cnt[r]; }
     }
-    if (tid < SLOTS) {                                /* reserve ranges in the destination lists */
+    if (tid < SLOTS) {
         u32 c = s_cnt[tid];
         u32 base = c ? atomicAdd(&counts[(u32)((k + tid) % SLOTS)], c) : 0;
         s_base[tid] = base;
@@ -523,27 +542,11 @@ kernel_bucket(u64 *__restrict__ entries, u32 *__restrict__ counts, u32 cap, u32 
     }
     __syncthreads();
     const u32 total = s_off[SLOTS - 1] + s_cnt[SLOTS - 1];
-    if (tid < total) {                                /* coalesced write-out, one run per destination */
+    if (tid < total) {
         const u32 r = s_rel[tid];
         const u32 pos = s_base[r] + (tid - s_off[r]);
         if (pos < cap) entries[(u64)((k + r) % SLOTS) * cap + pos] = s_stage[tid];
     }
-}
-
-/* Block-wide sum of u32 (blockDim.x multiple of 32); scratch needs blockDim/32 words. */
-__device__ __forceinline__ u32 block_sum(u32 v, u32 *scratch)
-{
-    for (int o = 16; o > 0; o >>= 1) v += __shfl_down_sync(0xffffffffu, v, o);
-    const int warp = threadIdx.x >> 5, lane = threadIdx.x & 31, nwarps = blockDim.x >> 5;
-    if (lane == 0) scratch[warp] = v;
-    __syncthreads();
-    u32 s = 0;
-    if (threadIdx.x < 32) {
-        s = (threadIdx.x < (u32)nwarps) ? scratch[threadIdx.x] : 0;
-        for (int o = 16; o > 0; o >>= 1) s += __shfl_down_sync(0xffffffffu, s, o);
-    }
-    __syncthreads();
-    return s;                       /* valid in thread 0 */
 }
 
 /* Block-wide exclusive prefix sum (blockDim.x <= 1024, multiple of 32); scratch: 32 words.
@@ -567,20 +570,23 @@ __device__ __forceinline__ u32 block_exscan(u32 v, u32 *scratch, u32 *tot)
     return prefix;
 }
 
+/* number offset (from the segment start) of bit i of the segment bitmap */
+__device__ __forceinline__ u32 numoff(u32 i, const u8 *s_R) { return WHEEL * (i / NRES) + s_R[i % NRES]; }
+
 /* Record the first `count` primes of the run that starts at offset o (a prime)
  * as the first occurrences of run lengths run, run-1, ...: prime t of the walk
  * has run length run - t and index idx0 + t.  Stops at slice_hi. */
 __device__ __forceinline__ void record_from(const u32 *sh, u32 o, u32 idx0, u32 count, u32 run, u32 slice_hi,
-                                            unsigned long long *s_first)
+                                            unsigned long long *s_first, const u8 *s_R, const u8 *s_ridx)
 {
-    u32 b = o / 30, w = b >> 2;
-    u32 bi = ((b & 3) << 3) + c_RIDX[o % 30];
+    u32 ib = NRES * (o / WHEEL) + s_ridx[o % WHEEL];
+    u32 w = ib >> 5, bi = ib & 31;
     u32 x = (~sh[w]) & (~0u << bi);
     for (u32 t = 0; t < count; t++) {
         while (!x) { if (++w >= SHARED_WORDS) return; x = ~sh[w]; }
         u32 bit = __ffs(x) - 1;
         x &= x - 1;
-        u32 off = 120 * w + 30 * (bit >> 3) + wheelR(bit & 7);
+        u32 off = numoff(32 * w + bit, s_R);
         if (off >= slice_hi) return;
         atomicMin(&s_first[run - t], ((unsigned long long)off << 32) | (idx0 + t));
     }
@@ -588,38 +594,44 @@ __device__ __forceinline__ void record_from(const u32 *sh, u32 o, u32 idx0, u32 
 
 /*
  * One block per segment.  sprimes[0..nsmall) are the sieving primes 23..QSPLIT
- * (ascending, nwarpprimes of them below PWARP).  start_off/end_off bound the
- * primes to be accounted for, as offsets from seg_lo (end_off may exceed the
- * owned region, in which case the owned region end applies).
+ * (ascending, nwarpprimes of them below PWARP).  start/end bound the primes to
+ * be accounted for.
  */
 __global__ void __launch_bounds__(BLOCKDIM)
 kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
                const u32 *__restrict__ sprimes, const u32 *__restrict__ sinv, const u32 *__restrict__ ssegmod,
-               const u32 *__restrict__ sbeta, const u32 *__restrict__ rchunk, u32 nsmall, u32 nwarpprimes,
+               const u32 *__restrict__ rchunk, u32 nsmall, u32 nwarpprimes,
                u64 chunk_lo, u64 start, u64 end, SegResult *__restrict__ results)
 {
     extern __shared__ u32 sh[];                         /* SHARED_WORDS words of bitmap */
     __shared__ unsigned long long s_first[NMAX];       /* (offset << 32) | prime index */
     __shared__ u32 s_runs[NMAX], s_extra[NMAX];
     __shared__ u32 s_unsettled, s_overflow, s_scratch[32];
+    __shared__ u8 s_R[NRES], s_ridx[WHEEL];
+    __shared__ u8 s_T[NRES][NRES], s_J[NRES][NRES];
 
     const u32 seg = blockIdx.x;
     const u64 seg_lo = chunk_lo + (u64)seg * SEG_NUMS;
     const u32 word0 = seg * SEG_WORDS;
     const u32 tid = threadIdx.x;
 
-    /* --- 1. presieve pattern (7, 11, 13, 17, 19) and large-prime bits --- */
+    /* --- 0. tables --- */
+    for (u32 t = tid; t < NRES * NRES; t += BLOCKDIM) { (&s_T[0][0])[t] = (&c_T[0][0])[t]; (&s_J[0][0])[t] = (&c_J[0][0])[t]; }
+    for (u32 t = tid; t < WHEEL; t += BLOCKDIM) s_ridx[t] = c_RIDX[t];
+    if (tid < NRES) s_R[tid] = c_R[tid];
+
+    /* --- 1. presieve pattern (11, 13, 17, 19) and large-prime bits --- */
     {
-        u32 pbase = (u32)((seg_lo / 30) % PAT_PERIOD);
+        u32 pbase = (u32)(((seg_lo / WHEEL) % PAT_PERIOD) * 6);   /* byte offset of this segment's first period */
         for (u32 w = tid; w < SHARED_WORDS; w += BLOCKDIM) {
-            u32 k = pbase + 4 * w;
-            if (k >= PAT_PERIOD) k -= PAT_PERIOD;
+            u32 kk = pbase + 4 * w;
+            if (kk >= PAT_BYTES) kk -= PAT_BYTES;
             u32 v = 0;
             #pragma unroll
             for (int t = 0; t < 4; t++) {
-                v |= (u32)pattern[k] << (8 * t);
-                k++;
-                if (k == PAT_PERIOD) k = 0;
+                v |= (u32)pattern[kk] << (8 * t);
+                kk++;
+                if (kk == PAT_BYTES) kk = 0;
             }
             sh[w] = v | __ldcs(&bitmap[word0 + w]);
         }
@@ -629,90 +641,69 @@ kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
     __syncthreads();
 
     /* --- 2. small primes: warp per prime (q < PWARP), then thread per prime ---
-     * Byte offset b (from seg_lo) holds a multiple of q in residue class R[k]
-     * iff 30*(B0 + b) + R[k] = 0 (mod q), B0 = seg_lo/30, i.e.
-     * b = c + R[k]*beta (mod q) with c = -B0 mod q and beta = -30^-1 mod q.
-     * B0 mod q comes from (chunk_lo/30) mod q (rchunk, per chunk) and
-     * (SEG_NUMS/30) mod q (ssegmod) by 32-bit Barrett arithmetic; the bit of
-     * class k is k.  Below q*q (early chunks only) the first multiple is q*q. */
-    const u32 SHB = SHARED_WORDS * 4;                   /* bytes in the shared bitmap */
+     * For q = 210a + r (r coprime to 210, class b) and the multiplier class j,
+     * the multiples q*(210t + R[j]) have period index a*R[j] + T[b][j] + q*t
+     * and residue index J[b][j].  With P0 = seg_lo/210 (mod q, from rchunk and
+     * ssegmod by Barrett), the first period offset in the segment is
+     * (a*R[j] + T[b][j] - P0) mod q, the bit index 48*that + J[b][j], and
+     * the stride 48*q bits.  Only q itself (multiplier 1) must not be marked. */
+    const u32 SHBITS = SHARED_WORDS * 32;
     {
         const u32 warp = tid >> 5, lane = tid & 31, nwarps = BLOCKDIM / 32;
-#ifndef SKIP_MARK_WARP
         for (u32 i = warp; i < nwarpprimes; i += nwarps) {
-            const u32 q = sprimes[i];
-            const u32 k = lane & 7, sub = lane >> 3, mask = 1u << k, stride = 4 * q;
-            u32 b;
-            if ((u64)q * q > seg_lo) {
-                u64 d = (u64)q * q - seg_lo;
-                if (d >= (u64)SHB * 30) continue;
-                const u32 D = (u32)d, qinv = c_QINV30[q % 30], Dm = D % 30;
-                const u32 tk = ((wheelR(k) + 30 - Dm) * qinv) % 30;
-                b = (D + q * tk) / 30;
-            } else {
-                const u32 inv = sinv[i];
-                const u32 r = barrett32(rchunk[i] + seg * ssegmod[i], q, inv);
-                const u32 c = r ? q - r : 0;
-                b = barrett32(c + wheelR(k) * sbeta[i], q, inv);
+            const u32 q = sprimes[i], inv = sinv[i];
+            const u32 a = q / WHEEL, b = s_ridx[q % WHEEL];
+            const u32 p0 = barrett32(rchunk[i] + seg * ssegmod[i], q, inv);   /* P0 mod q */
+            const bool self = (u64)q >= seg_lo && (u64)q < seg_lo + SEG_NUMS + OVERLAP_NUMS;
+            for (u32 j = lane; j < NRES; j += 32) {
+                u32 c = a * s_R[j] + s_T[b][j];
+                if (c >= q) c -= q;
+                u32 d = c >= p0 ? c - p0 : c - p0 + q;
+                u32 bi = NRES * d + s_J[b][j];
+                if (self && j == 0) bi += NRES * q;                          /* skip the multiple q*1 = q */
+                for (; bi < SHBITS; bi += NRES * q)
+                    atomicOr(&sh[bi >> 5], 1u << (bi & 31));
             }
-            for (b += sub * q; b < SHB; b += stride)
-                atomicOr(&sh[b >> 2], mask << ((b & 3) << 3));
         }
-#endif
-#ifndef SKIP_MARK_MED
         for (u32 i = nwarpprimes + tid; i < nsmall; i += BLOCKDIM) {
-            const u32 q = sprimes[i];
-            if ((u64)q * q > seg_lo) {
-                u64 d = (u64)q * q - seg_lo;
-                if (d >= (u64)SHB * 30) continue;
-                const u32 D = (u32)d, qinv = c_QINV30[q % 30], Dm = D % 30;
-                #pragma unroll
-                for (u32 k = 0; k < 8; k++) {
-                    const u32 tk = ((wheelR(k) + 30 - Dm) * qinv) % 30;
-                    const u32 mask = 1u << k;
-                    for (u32 b = (D + q * tk) / 30; b < SHB; b += q)
-                        atomicOr(&sh[b >> 2], mask << ((b & 3) << 3));
-                }
-            } else {
-                const u32 inv = sinv[i], beta = sbeta[i];
-                const u32 r = barrett32(rchunk[i] + seg * ssegmod[i], q, inv);
-                const u32 c = r ? q - r : 0;
-                #pragma unroll
-                for (u32 k = 0; k < 8; k++) {
-                    const u32 mask = 1u << k;
-                    for (u32 b = barrett32(c + wheelR(k) * beta, q, inv); b < SHB; b += q)
-                        atomicOr(&sh[b >> 2], mask << ((b & 3) << 3));
-                }
+            const u32 q = sprimes[i], inv = sinv[i];
+            const u32 a = q / WHEEL, b = s_ridx[q % WHEEL];
+            const u32 p0 = barrett32(rchunk[i] + seg * ssegmod[i], q, inv);
+            const bool self = (u64)q >= seg_lo && (u64)q < seg_lo + SEG_NUMS + OVERLAP_NUMS;
+            for (u32 j = 0; j < NRES; j++) {
+                u32 c = a * s_R[j] + s_T[b][j];
+                if (c >= q) c -= q;
+                u32 d = c >= p0 ? c - p0 : c - p0 + q;
+                u32 bi = NRES * d + s_J[b][j];
+                if (self && j == 0) bi += NRES * q;
+                for (; bi < SHBITS; bi += NRES * q)
+                    atomicOr(&sh[bi >> 5], 1u << (bi & 31));
             }
         }
-#endif
     }
     __syncthreads();
-    if (seg_lo == 0 && tid == 0) sh[0] = (sh[0] & ~0x3Eu) | 1u;   /* 1 is not prime; 7..19 are */
+    if (seg_lo == 0 && tid == 0) sh[0] = (sh[0] & ~0x1Eu) | 1u;   /* 1 is not prime; 11, 13, 17, 19 are */
     __syncthreads();
 
     /* --- 3. prime count in the owned region ∩ [start, end) --- */
-    /* bounds as offsets from seg_lo */
-    const u64 own_nums = SEG_NUMS;
     u32 lo_off = (start > seg_lo) ? (u32)(start - seg_lo) : 0;              /* first number accounted */
-    u32 hi_off = (end < seg_lo + own_nums) ? (u32)(end - seg_lo) : (u32)own_nums;   /* exclusive */
+    u32 hi_off = (end < seg_lo + SEG_NUMS) ? (u32)(end - seg_lo) : (u32)SEG_NUMS;   /* exclusive */
     if (lo_off > hi_off) lo_off = hi_off;
     const u32 WPT = SEG_WORDS / BLOCKDIM;                  /* words per thread slice */
     const u32 w0 = tid * WPT;
-    u32 prefix;                                            /* primes (inside the bounds) before this slice */
+    u32 prefix;
     {
         u32 c = 0;
         for (u32 w = w0; w < w0 + WPT; w++) {
             u32 x = ~sh[w];
             if (x) {
-                /* word w covers offsets [120w, 120w+120) */
-                u32 wlo = 120 * w;
-                if (wlo >= lo_off && wlo + 120 <= hi_off) c += __popc(x);
-                else if (wlo + 120 > lo_off && wlo < hi_off) {
+                u32 wlo = numoff(32 * w, s_R), whi = numoff(32 * w + 32, s_R);   /* word w covers offsets [wlo, whi) */
+                if (wlo >= lo_off && whi <= hi_off) c += __popc(x);
+                else if (whi > lo_off && wlo < hi_off) {
                     while (x) {
                         u32 bit = __ffs(x) - 1;
                         x &= x - 1;
-                        u32 off = wlo + 30 * (bit >> 3) + wheelR(bit & 7);
+                        u32 off = numoff(32 * w + bit, s_R);
                         c += (off >= lo_off && off < hi_off);
                     }
                 }
@@ -723,15 +714,10 @@ kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
         if (tid == 0) results[seg].count = total;
     }
 
-    /* --- 4. run lengths: thread per slice of words, continuing until settled ---
-     * Registers only: the run in progress is described by its first prime
-     * (run_start, with its index run_start_cnt), its length `run`, and
-     * run_out = how many of its primes lie at or beyond slice_hi.  When a run
-     * ends the histogram is updated from those (short runs in registers), and
-     * the rare first-occurrence records re-walk the run from run_start. */
+    /* --- 4. run lengths: thread per slice of words, continuing until settled --- */
     u32 c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0, c7 = 0;
     {
-        u32 slice_lo = 120 * w0, slice_hi = 120 * (w0 + WPT);   /* offsets */
+        u32 slice_lo = numoff(32 * w0, s_R), slice_hi = numoff(32 * (w0 + WPT), s_R);   /* offsets */
         if (slice_lo < lo_off) slice_lo = lo_off;
         if (slice_hi > hi_off) slice_hi = hi_off;
 #ifdef SKIP_EXTRACT
@@ -742,11 +728,10 @@ kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
             bool have_prev = false, done = false;
             for (u32 w = w0; w < SHARED_WORDS && !done; w++) {
                 u32 x = ~sh[w];
-                const u32 wlo = 120 * w;
                 while (x) {
                     const u32 bit = __ffs(x) - 1;
                     x &= x - 1;
-                    const u32 off = wlo + 30 * (bit >> 3) + wheelR(bit & 7);
+                    const u32 off = numoff(32 * w + bit, s_R);
                     if (!have_prev) {
                         if (off < slice_lo) continue;
                         if (off >= slice_hi) { done = true; break; }   /* no prime in the slice */
@@ -762,8 +747,6 @@ kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
                         run++;                                   /* prev joins the run's primes */
                         run_out += (prev >= slice_hi);
                     } else {
-                        /* run of `run` gaps ended at prev = q_k; its primes q_(k-run)..q_(k-1)
-                         * (the first being run_start) have run lengths run..1 */
                         if (run > NMAX - 1) { s_overflow = 1; run = NMAX - 1; }
                         if (prev < slice_hi) {
                             switch (run) {
@@ -775,7 +758,7 @@ kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
                             for (u32 n = run_out + 1; n <= run; n++) atomicAdd(&s_extra[n], 1u);
                         }
                         if (run > M) {
-                            record_from(sh, run_start, prefix + run_start_cnt, run - M, run, slice_hi, s_first);
+                            record_from(sh, run_start, prefix + run_start_cnt, run - M, run, slice_hi, s_first, s_R, s_ridx);
                             M = run;
                         }
                         run = 1;
@@ -790,13 +773,11 @@ kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
                 }
             }
             if (!done && have_prev) {
-                /* run still open at the end of the shared bitmap: flag its first prime */
                 u32 startp = run ? run_start : prev;
                 if (startp < slice_hi) atomicMin(&s_unsettled, startp);
             }
         }
     }
-    /* fold the short-run counts: warp reduce, one atomic per warp per length */
     {
         u32 v[7] = { c1, c2, c3, c4, c5, c6, c7 };
         #pragma unroll
@@ -820,8 +801,14 @@ kernel_segment(const u32 *__restrict__ bitmap, const u8 *__restrict__ pattern,
 /* Host side: sieving primes, pattern, GPU context                     */
 /* ------------------------------------------------------------------ */
 
-static const u32 H_R[8] = { 1, 7, 11, 13, 17, 19, 23, 29 };
-static const u8  H_RIDX[30] = { 8,0,8,8,8,8,8,1,8,8, 8,2,8,3,8,8,8,4,8,5, 8,8,8,6,8,8,8,8,8,7 };
+static u8 H_R[NRES], H_RIDX[WHEEL];       /* residues coprime to 210 and the inverse map (255 = not coprime) */
+static void init_wheel_tables(void)
+{
+    int j = 0;
+    memset(H_RIDX, 255, sizeof H_RIDX);
+    for (int r = 0; r < WHEEL; r++)
+        if (r % 2 && r % 3 && r % 5 && r % 7) { H_R[j] = (u8)r; H_RIDX[r] = (u8)j; j++; }
+}
 
 /* all primes <= n (simple odd sieve; n <= ~2e8 takes well under a second) */
 static std::vector<u32> primes_upto(u32 n)
@@ -839,19 +826,19 @@ static std::vector<u32> primes_upto(u32 n)
 
 static std::vector<u8> build_pattern(void)
 {
-    std::vector<u8> pat(PAT_PERIOD, 0);
-    static const u32 P[5] = { 7, 11, 13, 17, 19 };
-    for (u32 b = 0; b < PAT_PERIOD; b++)
-        for (int j = 0; j < 8; j++) {
-            u32 n = 30 * b + H_R[j];
-            for (int k = 0; k < 5; k++) if (n % P[k] == 0) { pat[b] |= (u8)(1 << j); break; }
+    std::vector<u8> pat(PAT_BYTES, 0);
+    static const u32 P[4] = { 11, 13, 17, 19 };
+    for (u32 p = 0; p < PAT_PERIOD; p++)
+        for (int j = 0; j < NRES; j++) {
+            u32 n = WHEEL * p + H_R[j];
+            for (int k = 0; k < 4; k++) if (n % P[k] == 0) { pat[6 * p + (j >> 3)] |= (u8)(1 << (j & 7)); break; }
         }
     return pat;
 }
 
 struct Gpu {
     u32 *d_bitmap, *d_sprimes, *d_lprimes, *d_mstate;
-    u32 *d_sinv, *d_ssegmod, *d_sbeta, *d_rchunk;   /* per medium prime: floor(2^32/q), (SEG_NUMS/30) mod q, -30^-1 mod q, (chunk_lo/30) mod q */
+    u32 *d_sinv, *d_ssegmod, *d_rchunk;     /* per medium prime: floor(2^32/q), SEG_PERIODS mod q, (chunk_lo/210) mod q */
     u8  *d_pattern;
     u64 *d_entries;                 /* SLOTS bucket lists of cap entries for the sleeping large primes */
     u32 *d_counts, *d_err, *h_cnt;  /* per-list counts, error flags, pinned copy of {count, err} */
@@ -866,10 +853,25 @@ struct Gpu {
 
 static void gpu_init(Gpu &g, u64 max_number, u32 qsplit)
 {
-    u8 bitidx[8][8];
-    for (int a = 0; a < 8; a++)
-        for (int j = 0; j < 8; j++) bitidx[a][j] = H_RIDX[(H_R[a] * H_R[j]) % 30];
-    CUDA_CHECK(cudaMemcpyToSymbol(c_BITIDX, bitidx, sizeof bitidx));
+    init_wheel_tables();
+    {
+        u8 gap[NRES], inv[NRES], T[NRES][NRES], J[NRES][NRES];
+        for (int j = 0; j < NRES; j++) {
+            gap[j] = (u8)((j + 1 < NRES ? H_R[j + 1] : H_R[0] + WHEEL) - H_R[j]);
+            inv[j] = 0;
+            for (int x = 1; x < WHEEL; x++) if ((H_R[j] * x) % WHEEL == 1) { inv[j] = (u8)x; break; }
+            for (int b = 0; b < NRES; b++) {
+                u32 prod = (u32)H_R[b] * H_R[j];
+                T[b][j] = (u8)(prod / WHEEL);
+                J[b][j] = H_RIDX[prod % WHEEL];
+            }
+        }
+        CUDA_CHECK(cudaMemcpyToSymbol(c_GAP, gap, sizeof gap));
+        CUDA_CHECK(cudaMemcpyToSymbol(c_RIDX, H_RIDX, sizeof H_RIDX));
+        CUDA_CHECK(cudaMemcpyToSymbol(c_INV, inv, sizeof inv));
+        CUDA_CHECK(cudaMemcpyToSymbol(c_T, T, sizeof T));
+        CUDA_CHECK(cudaMemcpyToSymbol(c_J, J, sizeof J));
+    }
 
     u32 sq = (u32)sqrt((double)max_number);
     while ((u64)sq * sq > max_number) sq--;
@@ -895,10 +897,10 @@ static void gpu_init(Gpu &g, u64 max_number, u32 qsplit)
     CUDA_CHECK(cudaEventCreate(&g.ev_t2)); CUDA_CHECK(cudaEventCreate(&g.ev_t3));
     /* sleeping large primes: q >= CHUNK_NUMS/6 may skip chunks; capacity from the expected hits per chunk at END */
     {
-        const u32 qdense = (u32)(CHUNK_NUMS / 6);
+        const u32 qdense = (u32)(CHUNK_NUMS / 10);        /* consecutive multiples are at most 10q apart */
         g.nd = (u32)(std::upper_bound(g.lprimes.begin(), g.lprimes.end(), qdense - 1) - g.lprimes.begin());
         double expect = 0;
-        for (u32 i = g.nd; i < g.nlarge; i++) expect += (double)CHUNK_NUMS * 8.0 / 30.0 / g.lprimes[i];
+        for (u32 i = g.nd; i < g.nlarge; i++) expect += (double)CHUNK_NUMS * NRES / (double)WHEEL / g.lprimes[i];
         u64 cap = (u64)(2.0 * expect) + (1u << 20);
         if (cap > 0xFFFFFFF0ULL) die("bucket capacity too large");
         g.cap = (u32)cap;
@@ -912,26 +914,22 @@ static void gpu_init(Gpu &g, u64 max_number, u32 qsplit)
             fprintf(stderr, "large primes: %u dense (< %u), %u sleepers in %d bucket lists of %u entries (%.1f GB)\n",
                     g.nd, qdense, g.nlarge - g.nd, SLOTS, g.cap, (double)SLOTS * g.cap * 8 / 1e9);
     }
-    CUDA_CHECK(cudaMalloc(&g.d_pattern, PAT_PERIOD));
-    CUDA_CHECK(cudaMemcpy(g.d_pattern, pat.data(), PAT_PERIOD, cudaMemcpyHostToDevice));
+    CUDA_CHECK(cudaMalloc(&g.d_pattern, PAT_BYTES));
+    CUDA_CHECK(cudaMemcpy(g.d_pattern, pat.data(), PAT_BYTES, cudaMemcpyHostToDevice));
     CUDA_CHECK(cudaMalloc(&g.d_sprimes, (g.nsmall + 1) * sizeof(u32)));
     CUDA_CHECK(cudaMemcpy(g.d_sprimes, sp.data(), g.nsmall * sizeof(u32), cudaMemcpyHostToDevice));
     {
-        std::vector<u32> inv(g.nsmall), segmod(g.nsmall), beta(g.nsmall);
+        std::vector<u32> inv(g.nsmall), segmod(g.nsmall);
         for (u32 i = 0; i < g.nsmall; i++) {
             const u32 q = sp[i];
             inv[i] = (u32)((1ULL << 32) / q);
-            segmod[i] = (u32)((SEG_NUMS / 30) % q);
-            u64 inv30 = powmod(30, q - 2, q);            /* 30^-1 mod q (q prime, q > 30) */
-            beta[i] = (u32)((q - inv30) % q);
+            segmod[i] = (u32)(SEG_PERIODS % q);
         }
         CUDA_CHECK(cudaMalloc(&g.d_sinv, (g.nsmall + 1) * sizeof(u32)));
         CUDA_CHECK(cudaMalloc(&g.d_ssegmod, (g.nsmall + 1) * sizeof(u32)));
-        CUDA_CHECK(cudaMalloc(&g.d_sbeta, (g.nsmall + 1) * sizeof(u32)));
         CUDA_CHECK(cudaMalloc(&g.d_rchunk, (g.nsmall + 1) * sizeof(u32)));
         CUDA_CHECK(cudaMemcpy(g.d_sinv, inv.data(), g.nsmall * sizeof(u32), cudaMemcpyHostToDevice));
         CUDA_CHECK(cudaMemcpy(g.d_ssegmod, segmod.data(), g.nsmall * sizeof(u32), cudaMemcpyHostToDevice));
-        CUDA_CHECK(cudaMemcpy(g.d_sbeta, beta.data(), g.nsmall * sizeof(u32), cudaMemcpyHostToDevice));
     }
     CUDA_CHECK(cudaMalloc(&g.d_lprimes, (g.nlarge + 1) * sizeof(u32)));
     if (g.nlarge) CUDA_CHECK(cudaMemcpy(g.d_lprimes, g.lprimes.data(), g.nlarge * sizeof(u32), cudaMemcpyHostToDevice));
@@ -1144,7 +1142,7 @@ static void gpu_free(Gpu &g)
     cudaFree(g.d_bitmap); cudaFree(g.d_results); cudaFreeHost(g.h_results);
     cudaEventDestroy(g.ev_t0); cudaEventDestroy(g.ev_t1); cudaEventDestroy(g.ev_t2); cudaEventDestroy(g.ev_t3);
     cudaFree(g.d_pattern); cudaFree(g.d_sprimes); cudaFree(g.d_lprimes); cudaFree(g.d_mstate);
-    cudaFree(g.d_sinv); cudaFree(g.d_ssegmod); cudaFree(g.d_sbeta); cudaFree(g.d_rchunk);
+    cudaFree(g.d_sinv); cudaFree(g.d_ssegmod); cudaFree(g.d_rchunk);
     cudaFree(g.d_entries); cudaFree(g.d_counts); cudaFree(g.d_err); cudaFreeHost(g.h_cnt);
     cudaStreamDestroy(g.sA);
     g.lprimes.clear();
@@ -1164,7 +1162,7 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
     if (resumed)
         fprintf(stderr, "resuming from %s at position %" PRIu64 " (%" PRIu64 " primes so far)\n",
                 state, S.resume_pos, S.primes);
-    const u64 max_number = S.k_hi * CHUNK_NUMS + (u64)OVERLAP * NUMS_PER_WORD;
+    const u64 max_number = S.k_hi * CHUNK_NUMS + OVERLAP_NUMS;
     if (G_ready) gpu_free(G);
     g_quiet_init = quiet;
     gpu_init(G, max_number, qsplit);
@@ -1176,11 +1174,11 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
                 start, end, S.k_hi - S.k_lo, (u64)CHUNK_NUMS, G.nsmall, G.nlarge, qsplit,
                 stop_n ? ", stopping when a(N) is found" : "");
 
-    /* the primes 2, 3, 5 are outside the wheel */
+    /* the primes 2, 3, 5, 7 are outside the wheel: L(2)=2 (1,2,2), L(3)=1, L(5)=2 (2,4,2), L(7)=1 (4,2) */
     if (!resumed) {
-        static const u64 sp[3] = { 2, 3, 5 };
-        static const int sL[3] = { 2, 1, 2 };
-        for (int i = 0; i < 3; i++)
+        static const u64 sp[4] = { 2, 3, 5, 7 };
+        static const int sL[4] = { 2, 1, 2, 1 };
+        for (int i = 0; i < 4; i++)
             if (sp[i] >= start && sp[i] < end) { S.primes++; S.hist[sL[i]]++; record_first(sL[i], sp[i], S.primes); }
     }
 
@@ -1239,7 +1237,7 @@ static ScanStats run_scan(u64 start, u64 end, u32 qsplit, const char *state, int
         kernel_chunkmod<<<(G.nsmall + 255) / 256, 256, 0, G.sA>>>(G.d_sprimes, G.d_rchunk, G.nsmall, chunk_lo);
         const u64 lo_bound = (chunk_lo < S.resume_pos) ? S.resume_pos : start;   /* rescanned chunk: count from resume_pos */
         kernel_segment<<<CHUNK_SEGS, BLOCKDIM, SHARED_WORDS * sizeof(u32), G.sA>>>(
-            G.d_bitmap, G.d_pattern, G.d_sprimes, G.d_sinv, G.d_ssegmod, G.d_sbeta, G.d_rchunk, G.nsmall, G.nwarpprimes,
+            G.d_bitmap, G.d_pattern, G.d_sprimes, G.d_sinv, G.d_ssegmod, G.d_rchunk, G.nsmall, G.nwarpprimes,
             chunk_lo, lo_bound, end, G.d_results);
         if (g_profile) CUDA_CHECK(cudaEventRecord(G.ev_t3, G.sA));
         CUDA_CHECK(cudaMemcpyAsync(G.h_results, G.d_results, CHUNK_SEGS * sizeof(SegResult), cudaMemcpyDeviceToHost, G.sA));

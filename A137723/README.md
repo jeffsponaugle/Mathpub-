@@ -75,13 +75,11 @@ search, every one of them adjacent to a power of two:
 lets E = 2^a·3^b have a prime partner.) Every a(n) with n ≡ 2 (mod 6) found so
 far is adjacent to a power of two, as step 3 of "How it works" predicts.
 
-**Open cases.** a(194) is the first unknown term (d = 195 = 3·5·13: block
-{3, 5}, so the even endpoint is enumerated up to k = 3 — about 45 million
-candidates below 2¹⁰⁰⁰, a few minutes). After it the unknown even n are 200,
-204, 206, 212, 214, 218, 224, … (the scan to 10¹¹ knows every odd n up to 463). Most of them are cheap in GMP mode; the tool prints the estimated
-enumeration size before starting.
-The complete table for n ≤ 463 is in `next_1e11.txt`; `search_2e127.txt` holds
-the 2¹²⁷ searches.
+**Open cases.** a(194) is the first unknown term; the odd n are known up to
+385 and the first unknown odd term is a(387). See "Extending the sequence"
+below for the current lower bounds, the cost of each open case and the
+workflow for adding a term. The complete scan table for n ≤ 463 is in
+`next_1e11.txt`; `search_2e127.txt` holds the 2¹²⁷ searches.
 
 ### The a(32) run in detail
 
@@ -375,6 +373,94 @@ of small prime factors is long: for d = 105 = 3·5·7 the E side runs to k = 3
 enumeration size grows like (ln limit)^m, so a large block of small prime
 factors in d is the one thing that keeps a term out of reach. Primality above
 2⁶⁴ is probabilistic; see "Verification".
+
+## Extending the sequence
+
+**Where things stand.** a(1..193) are known (b-file `b137723.txt`). Every odd
+n ≤ 385 is known from the scan to 10¹¹; the first unknown odd term is a(387),
+and 24 odd n ≤ 463 are unknown in all. 70 even n ≤ 463 are unknown; the
+structural pass to 2⁶⁴ (`next -N 10^11 -l 2^64`) proved a(n) > 2⁶⁴ − n for each
+of them, and the 2¹²⁷ / 2¹⁰⁰⁰ searches have so far only been run for the even
+n ≤ 188.
+
+**Even n.** The table lists the open even n ≤ 300 with the structure that
+decides the cost of the GMP search (see step 6 of "How it works"): the block of
+small primes dividing d, how many primes the even endpoint E may have on the
+E side, the estimated number of candidates to 2¹⁰⁰⁰, and a limit that keeps the
+enumeration around 10⁸ or less. "2^a only" means a prime odd partner forces
+E to be a power of two (3 | d); "k ≤ 2" means E = 2^a·3^b may also work. Runs
+of ~300 k candidates take half a second; ~45 M take a few minutes, longer when
+the block does not start at 3 because the k ≤ 2 partners then need Miller–Rabin
+tests; the 4 G case (d = 245 = 5·7²) should be run to 2⁴⁰⁰ first.
+
+| n | d = n+1 | block of d's small primes | E side k ≤ | candidates to 2¹⁰⁰⁰ | suggested limit | a(n) > |
+|---|---------|---------------------------|------------|--------------------|-----------------|--------|
+| 194 | 3·5·13 | {3, 5} | 3 (2^a only for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 194 |
+| 200 | 3·67 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 200 |
+| 204 | 5·41 | {5} | 3 (k ≤ 2 for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 204 |
+| 206 | 3^2·23 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 206 |
+| 212 | 3·71 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 212 |
+| 214 | 5·43 | {5} | 3 (k ≤ 2 for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 214 |
+| 218 | 3·73 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 218 |
+| 224 | 3^2·5^2 | {3, 5} | 3 (2^a only for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 224 |
+| 230 | 3·7·11 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 230 |
+| 234 | 5·47 | {5} | 3 (k ≤ 2 for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 234 |
+| 236 | 3·79 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 236 |
+| 242 | 3^5 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 242 |
+| 244 | 5·7^2 | {5, 7} | 4 (k ≤ 2 for a prime partner) | 4.0 G | 2^400 | 2⁶⁴ − 244 |
+| 248 | 3·83 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 248 |
+| 254 | 3·5·17 | {3, 5} | 3 (2^a only for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 254 |
+| 260 | 3^2·29 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 260 |
+| 264 | 5·53 | {5} | 3 (k ≤ 2 for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 264 |
+| 266 | 3·89 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 266 |
+| 272 | 3·7·13 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 272 |
+| 274 | 5^2·11 | {5} | 3 (k ≤ 2 for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 274 |
+| 278 | 3^2·31 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 278 |
+| 284 | 3·5·19 | {3, 5} | 3 (2^a only for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 284 |
+| 290 | 3·97 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 290 |
+| 294 | 5·59 | {5} | 3 (k ≤ 2 for a prime partner) | 45 M | 2^1000 | 2⁶⁴ − 294 |
+| 296 | 3^3·11 | {3} | 2 (2^a only for a prime partner) | 315 k | 2^1000 | 2⁶⁴ − 296 |
+
+The open even n between 300 and 463 are listed in `next_1e11.txt`. The
+search is exhaustive up to its limit, so a result is final; a "no run found"
+only raises the lower bound to limit − n + 1.
+
+```bash
+./a137723 search 194 -l 2^1000            # first open term, a few minutes
+./a137723 search 200 206 212 218 -l 2^1000   # block {3} cases, half a second each
+./a137723 search 244 -l 2^400             # long block: use a lower limit first
+```
+
+**Odd n.** For odd n both bounding gap-free numbers are odd and in practice
+both prime, so a(n) is the start of the first prime gap of n+1 that contains no
+prime power or consecutive-prime product. There is no structural shortcut; the
+exhaustive scan is the tool, and it is fast: the first prime gap of 388 lies
+beyond 10¹¹, and `scan 10^12` (about 30 s) or `scan 10^13` (a few minutes, half
+a million composite gap-free numbers) will fill in a(387) and several later odd
+terms. `next -N 10^13 -l 2^64` does the scan and the 2⁶⁴ structural pass in
+one go and rewrites the whole table.
+
+**Adding a term.** After `search` reports a(n):
+
+1. run the independent check, `python3 verify_run.py L R` (L and R are printed
+   by `search`), and for a prime endpoint above 2⁶⁴ optionally `openssl prime L`;
+2. append `n a(n) form limit` to `structural_terms.txt` (use `-` for the form
+   if the endpoint is not a simple power product);
+3. run `python3 make_bfile.py`, which re-evaluates every form, checks the
+   scan and search agree, and rewrites `b137723.txt` and `DATA.txt`;
+4. add the row to the results table above.
+
+**Submitting to the OEIS.** The b-file is the deliverable (the DATA field only
+holds about 260 characters, roughly a(1..45) here). Terms found by the scan are
+unconditional. Terms found by the structural search are exhaustive up to the
+stated limit, but the primality of an endpoint above 2⁶⁴ was established with a
+strong probable-prime test only, so certify those primes (2⁵⁴ − 33 and
+2³⁸ − 45 are below 2⁶⁴ and already deterministic; the others are 2⁸¹ − 51,
+2¹⁶⁴ − 63, 2⁸³ + 75, … up to 2³⁷² − 177) with a proving algorithm such as
+PARI/GP `isprime` (APR-CL) or Primo (ECPP) before submission; all are far below
+the sizes where that takes more than seconds. Mention in the entry that the
+even-n terms come from the parity argument of step 3, since that is what makes
+the huge values credible.
 
 ## Verification
 

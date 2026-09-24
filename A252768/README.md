@@ -66,19 +66,45 @@ Number of primes p < 10¹² of exact depth n (S₁..Sₙ prime, S_(n+1) not):
 |---|---|---|---|---|---|---|---|---|---|
 | count | 1747205024 | 112645225 | 9907858 | 756501 | 65240 | 4934 | 401 | 32 | 5 |
 
-Each extra k costs a factor of only 8–13 (the conditions are positively
-correlated, see below). The five primes of depth 9 below 10¹² are 21814967833,
+Each extra k costs a factor of only 12–15 in the count (a per-k pass rate of
+6.6–8.7 %; the conditions are positively correlated, see below). The five primes of depth 9 below 10¹² are 21814967833,
 60308763733, 73668807349, 331274803549 and 844836146389; all 438 primes of
 depth ≥ 7 are listed in `scan_1e12.txt`.
 
-### Where a(10) should be
+### Search-range estimates for a(10) .. a(13)
 
-About one in ten primes of depth 9 reaches depth 10, and the density of
-depth-9 primes (3 below 10¹¹, 2 more below 10¹²) falls by roughly half per
-decade, so the expected number of depth-10 primes is about 1.4 in
-[10¹², 10¹³] and about 7 in [10¹³, 10¹⁴]: a(10) is probably below 10¹³
-(~75 %) and almost certainly below 10¹⁴. a(11) is expected another factor of
-~10 further out, i.e. around 10¹⁴–10¹⁵.
+`estimate.py` models the density of primes of depth ≥ n and is calibrated on
+the scan below 10¹²:
+
+* p is the upper member of a twin pair with probability 2·C₂/ln p (C₂ = 0.66016);
+* given S₁..S_(k−1) prime, S_k is prime with probability B_k · 2/ln S_k, where
+  B_k = Π_{3 ≤ q ≤ k, q prime} q/(q−1) is the congruence boost from the section
+  "Why the depths are correlated" (1, 1.5, 1.5, 1.875, 1.875, 2.19, 2.19, 2.19,
+  2.19, 2.41, 2.41, … for k = 2, 3, …);
+* S_(k+1)/S_k ≈ 0.8·(k+1)·ln p, fitted to the actual sums at a(9).
+
+The model reproduces the measured per-k pass rates N(≥k)/N(≥k−1) below 10¹²
+within 1–3 % (k = 2..7: 0.066, 0.087, 0.077, 0.085, 0.076, 0.082 measured vs
+0.066, 0.087, 0.077, 0.086, 0.078, 0.082 predicted) and the counts of primes of
+depth ≥ 7, 8, 9 (465, 35, 2.4 predicted vs 438, 37, 5 found). Integrating it
+beyond 10¹², with the Poisson probability 1 − e^(−E) that a(n) < X:
+
+| n | 50 % point | 90 % point | P(a(n) < 10¹³) | < 10¹⁴ | < 10¹⁵ | < 10¹⁶ | < 10¹⁷ |
+|---|---|---|---|---|---|---|---|
+| 10 | 1.1·10¹³ | 5·10¹³ | 46 % | 98 % | ~100 % | | |
+| 11 | 4.3·10¹⁴ | 2.2·10¹⁵ | 4 % | 21 % | 73 % | 99.9 % | |
+| 12 | 2.3·10¹⁶ | 1.2·10¹⁷ | 0.2 % | 1 % | 7 % | 31 % | 87 % |
+| 13 | 1.2·10¹⁸ | 6·10¹⁸ | | | 0.4 % | 2 % | 10 % |
+
+Each further term costs about 1.7 decades: the per-k pass rate settles near
+6–7 % while the density of qualifying primes halves per decade, so the count
+per decade grows only ~5×. Both a(10) and a(11) are within reach of this
+machine (hours and about two days respectively, see the timings); a(12) is
+not — its median sits at two weeks of continuous computing for a 1-in-3 chance.
+The scatter is Poisson: a(9) at 2.2·10¹⁰ was a mildly lucky draw (2.4 primes of
+depth 9 expected below 10¹², 5 found), so expect a factor of 3–5 either side
+of the medians. Run `python3 estimate.py 1e13` after the next scan to refresh
+the table for the new lower bound.
 
 ### Timings (M1 Pro, 10 threads)
 
@@ -91,6 +117,8 @@ decade, so the expected number of depth-10 primes is about 1.4 in
 | 0 .. 10¹³ (estimate) | ~20 min | |
 | 0 .. 10¹⁴ (estimate) | ~3 h | |
 | 0 .. 10¹⁵ (estimate) | ~1.3 days | |
+| 0 .. 10¹⁶ (estimate) | ~2 weeks | |
+| totals-only pass (scan with START > 0, `verify -t 10`) | 3.5 s per 10¹¹ | 2.9·10¹⁰ numbers/s |
 
 primesieve alone counts primes 3–8× faster than this (1.4 s per 10¹¹ near 0,
 4 s per 10¹¹ near 10¹⁵), so the tool is bound by its per-prime work — mostly
@@ -160,7 +188,82 @@ mid-range start give identical hits and sums, and round-trips a checkpoint.
 
 `verify_a252768.py P [KMAX]` is a fully independent Python check (numpy
 segmented sieve, exact Python integers, its own Miller–Rabin); it shares no
-code with the C tool and needs about 1 minute per 10¹⁰.
+code with the C tool and needs about 30 s per 10¹⁰.
+
+## Tips for the next run
+
+**Resume, don't restart.** `a252768.state` holds the exact power sums at 10¹²
+(and the a(n) found so far). Any `scan … -S a252768.state` with a larger END
+continues from there; scanning from 0 again would waste 2 minutes, a scan
+starting mid-range without the state file costs a totals-only pass over
+[0, START] (about a third of a full scan: ~6 min to 10¹³, ~1 h to 10¹⁴).
+
+**The command.** Log to a file, and keep the Mac awake — a scan that sleeps
+halfway through is the most likely way to lose a day:
+
+```
+caffeinate -i ./a252768 scan 1e14 -S a252768.state -r 8 -i 120 2> scan_1e14.log | tee -a scan_1e14.txt
+```
+
+* `-r 8` prints only primes of depth ≥ 8. Depth-7 hits come at 4–5× the
+  previous decade's count (83 in [10¹⁰, 10¹¹], 336 in [10¹¹, 10¹²], so
+  ~1500 in [10¹², 10¹³]) and are only interesting as statistics; the depth
+  histogram in the final summary counts them anyway.
+* `-i 120` checkpoints every 2 minutes (default 60 s); the file is rewritten
+  atomically, so a power cut costs at most that much work.
+* Ctrl-C (or SIGTERM) finishes the chunks in flight, writes the checkpoint and
+  prints the summary for the completed prefix; rerun the same command to go on.
+* The status line on stderr shows the completion frontier, rate, ETA, and the
+  best depth so far. Without a terminal (e.g. under `nohup`) it is printed
+  once a minute instead.
+* Default threads = all cores, default chunk = range/(32·threads) clamped to
+  10⁶..10⁹ (10⁹ from 3·10¹¹ on); memory is ~40 MB of gap bytes per thread at
+  chunk 10⁹, so nothing to tune. `-t 8` leaves two cores free if the machine
+  is in use.
+
+**How long, and what to expect.** At the measured 9·10⁹ numbers/s:
+10¹³ ≈ 20 min (a(10) with 46 % probability), 10¹⁴ ≈ 3 h (a(10) with 98 %,
+a(11) with 21 %), 10¹⁵ ≈ 31 h (a(11) with 73 %), 2·10¹⁵ ≈ 2.6 days (a(11)
+with 90 %). See the estimate table above; `python3 estimate.py X` refreshes it
+once X has been scanned without success.
+
+**Splitting across machines.** A checkpoint can only continue from its own
+position (with `-S`, a START argument is ignored in favour of the checkpoint).
+To split [M, Y] between two machines, let machine A continue from the
+checkpoint with `scan M -S a252768.state` and give machine B a plain
+`scan M Y` (no state file): B first pays the totals-only pass over [0, M],
+about a third of a full scan (~1 h for M = 10¹⁴, ~3 h for 3·10¹⁴), and its
+a(n) table then says "no prime of depth ≥ n in [M, Y]" instead of
+`a(n) > Y`; combine the two ranges by hand. The checkpoint file is plain text
+(power sums at its position in decimal), so it can be copied or inspected.
+
+**When a hit appears** (`p = … n = 10 …` on stdout, or `a(10) = … NEW` in the
+summary):
+
+1. `./a252768 verify P -k 16` — recomputes from scratch and shows GMP's
+   verdict beside the tool's for every k, including k > 12 that the scan could
+   not test. Single-threaded it takes 5 s per 2·10¹⁰ (40 min at 10¹³, 6 h at
+   10¹⁴); `-t 10` uses the parallel totals pipeline instead (6 min at 10¹³,
+   1 h at 10¹⁴) at the price of sharing the chunk code with the scan.
+2. `python3 verify_a252768.py P 16` — the independent numpy/Python check,
+   about 30 s per 10¹⁰ single-threaded: 9 h at 10¹³, days at 10¹⁴. For a
+   term that far out, either let it run over a weekend or parallelise it
+   (the per-segment histograms are independent; a `multiprocessing.Pool`
+   over segments with the boundary primes merged afterwards would bring 10¹⁴
+   to about 10 h on 10 cores).
+3. For the OEIS: the sums beyond 3.3·10²⁴ are probable primes (24 Miller–Rabin
+   bases + GMP's BPSW). A PARI/GP `isprime(S)` certificate (APR-CL, instant
+   for ≤ 130-bit numbers) makes them rigorous; PARI is not installed here.
+   Then extend `b252768.txt` and `DATA.txt`, and note the scan bound for the
+   next term ("a(11) > X") in the entry.
+
+**Above 1.5·10¹⁴** the tool stops testing k = 12 (S₁₂ needs more than 128
+bits) and prints a note; k = 11 lasts to about 10¹⁶. A hit's depth beyond that
+is settled in seconds by `verify`, which uses GMP for any k. An a(12) hunt
+beyond 10¹⁶ would need wider accumulators for the top k: the running offsets
+`O[k]` and chunk totals `T[k]`, plus the lazy Σ count(g)·g^k loop in
+`check_chunk` — all cheap places, since S₅ and up are only evaluated for the
+rare survivors of S₂..S₄.
 
 ## How it works
 
@@ -197,8 +300,10 @@ S₁(p) = p − 2 is prime exactly when the gap into p is 2, so only twin primes
 incrementally and tested in turn; the ~1 in 10⁵ primes surviving S₂..S₄ get
 S₅, S₆, … evaluated from the running gap histogram (Σ count(g)·g^k over the
 few hundred distinct gap sizes), so the cost per prime is a handful of adds.
-Every sum is 128-bit with overflow detection; if some S_k would exceed 2¹²⁸
-(S₁₂ does so around 10¹⁵), depths ≥ k stop being tested and the tool says so.
+Every sum is 128-bit with overflow detection; if some S_k would exceed 2¹²⁸,
+depths ≥ k stop being tested and the tool says so (S₁₃ crosses 128 bits near
+10¹³, S₁₂ near 1.5·10¹⁴, S₁₁ near 10¹⁶; with the default `-k 12` nothing is
+lost below 1.5·10¹⁴).
 
 ### Primality
 
@@ -219,11 +324,13 @@ Every sum is 128-bit with overflow detection; if some S_k would exceed 2¹²⁸
 By Fermat, g^k mod q depends only on k mod (q − 1), so S_k ≡ S_k′ (mod q)
 whenever k ≡ k′ (mod q − 1). Once S₁ and S₂ are prime, no later S_k is
 divisible by 3 (odd k ≡ S₁, even k ≡ S₂ mod 3), S₅ ≡ S₁ and S₆ ≡ S₂ (mod 5),
-S₇ ≡ S₁ (mod 7), and so on. This is why a(n) grows more slowly than
-independent conditions would suggest: empirically each extra k costs a factor
-of only about 8–12 in the count of qualifying primes (see the depth table
-above), and S_k(p) ~ k!·p·(ln p)^(k−1) makes the per-k prime probability
-~2·c_k/ln S_k(p) shrink only slowly with p.
+S₇ ≡ S₁ (mod 7), and so on. The boost for S_k is
+B_k = Π q/(q−1) over the primes 3 ≤ q ≤ k, and the per-k pass rate
+B_k·2/ln S_k(p) with S_k(p) ≈ 0.8^(k−1)·k!·p·(ln p)^(k−1) matches the measured
+rates within a few percent (see the estimate section). This is why a(n) grows
+more slowly than independent conditions would suggest: each extra k costs a
+factor of only 12–16 in the count of qualifying primes, and the pass rate
+shrinks only slowly with p.
 
 ## Verification
 
@@ -246,7 +353,8 @@ would make it rigorous. All the sums involved have at most ~110 bits.
 
 * `a252768.c` — the tool (single file, C11, pthreads, primesieve, optional GMP)
 * `Makefile` — `make`, `make test`
-* `verify_a252768.py` — independent Python/numpy verification of one prime
+* `verify_a252768.py` — independent Python/numpy verification of one prime; `verify_py_a8.txt`, `verify_py_a9.txt` are its transcripts for the new terms
+* `estimate.py` — the calibrated density model: expected search ranges for a(10)..a(13) and the S_k bit sizes
 * `scan_1e12.txt`, `scan_1e12.log` — output of the scan to 10¹² (all primes of depth ≥ 7)
 * `a252768.state` — checkpoint of the scan (resume with the same `scan … -S a252768.state`)
 * `b252768.txt`, `DATA.txt` — b-file and OEIS DATA line with the new terms

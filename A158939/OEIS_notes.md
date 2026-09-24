@@ -12,7 +12,7 @@ DATA (offset 0): 7, 3, 2, 17, 347, 2903, 15373, 128981, 1319407, 17797517, 94097
    2, 4, 6, 8, 22, 26, 30, 34, 36, 44, 46, 54, 56, 64, 86, 108 (the next gap is 46).
 %e a(17) = 52461866207504471 is followed by the 17 increasing gaps
    2, 4, 6, 8, 12, 18, 22, 30, 36, 38, 40, 44, 46, 50, 54, 58, 84 (the next gap is 66).
-%C a(18) > 5.25*10^16 (scan still running toward 10^17; update the bound when it ends).
+%C a(18) > 5.4*10^16. - Jeff Sponaugle, Sep 22 2026 (exhaustive scan to 54557804097699840)
 %E a(16)-a(17) from Jeff Sponaugle, Sep 22 2026 (GPU sieve; every prime below a(17) examined,
    prime counts checked against pi(10^16) and pi(2*10^16), pi(a(n)) against primecount).
 

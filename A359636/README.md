@@ -72,8 +72,50 @@ Computed with this tool on an Apple M1 Pro (10 cores, Sep 16 2026).
   24048717372672915), none all three. Corneth's a(10) ≤ 225096507194749219819
   remains the upper bound; the ratio a(9)/a(8) ≈ 911 suggests a(10) around
   10¹⁹, near the 2⁶⁴ limit of the current tools. A direct level-10 GPU scan to
-  10¹⁸ (`gpu_n10.*`, started Sep 18 2026, T = 1000 with six forced small
-  factors, 904 Gm/s, about 13 days) is running to strengthen this bound.
+  10¹⁸ (T = 1000 with six forced small factors, ~870 Gm/s per machine) is in
+  progress to strengthen this bound; see **Status** below.
+
+## Status (Sep 24 2026)
+
+**Done.** a(9) = 31610535900218923 is established and verified; the OEIS
+submission text (`OEIS_draft.md`) and b-file (`b359636.txt`) are final and
+not yet submitted.
+
+**In progress: level-10 lower-bound scan to 10¹⁸**, split over two DGX Sparks
+since Sep 22 (each half in its own run with its own checkpoint):
+
+| machine | range of m | covered so far | remaining | state |
+|---|---|---|---|---|
+| atom1 (10.1.30.36) | 0 … 664309293225476097 | m ≤ 4.087·10¹⁷ (61.5%) | ≈ 3 d 12 h at 884 Gm/s | paused Sep 23 11:40, `gpu_n10.state` |
+| atom2 (10.1.30.37) | 664309293225476097 … 10¹⁸+2 | m ≤ 7.410·10¹⁷ (22.8%) | ≈ 3 d 17 h at 847 Gm/s | paused Sep 23 11:40, `gpu_n10b.state` |
+
+Both runs were stopped cleanly (SIGINT, checkpoint written) to free the
+machines for other tests; nothing restarts them automatically. No triple with
+all three ω ≥ 10 has appeared anywhere below 4.087·10¹⁷, nor in atom2's
+stretch 6.643·10¹⁷ … 7.410·10¹⁷, so the interim rigorous bound is
+**a(10) > 408697968217030657**; the two ranges together will give
+a(10) > 10¹⁸ (or a(10) itself, should a qualifying gap turn up) about
+3 d 17 h of running after resumption.
+
+To resume, on each machine in `/home/jbs/A359636/cuda` (the same command
+lines as before; the state files carry the frontier):
+
+```
+# atom1
+(nohup setsid ./a359636_cuda.run scan 10 0 664309293225476095 -t 16 -b 262144 -S gpu_n10.state -i 60 >> gpu_n10.txt 2>> gpu_n10.log < /dev/null &)
+# atom2
+(nohup setsid ./a359636_cuda.run scan 10 664309293225476096 1e18 -t 16 -b 262144 -S gpu_n10b.state -i 60 >> gpu_n10b.txt 2>> gpu_n10b.log < /dev/null &)
+```
+
+A run is finished when its `.log` ends with a `scanned m <= ...` line and its
+`.txt` with a result line; atom1's result is about a(10) directly, atom2's is
+about its range only, and the final statement combines the two (no solution in
+either range means a(10) > 10¹⁸ − 3).
+
+**Beyond 10¹⁸.** a(10) plausibly lies near 10¹⁹ and Corneth's bound is
+2.25·10²⁰, above 2⁶⁴. Finding it would need 128-bit arithmetic in the sieve
+targets and the verifier (the reduction and the kernel structure carry over
+unchanged) and roughly 2–3 GPU-weeks per 10¹⁹ of range on one Spark.
 
 For comparison, the numbers of *triples* m ≡ 3 (mod 6) with ω(m−1), ω(m), ω(m+1)
 all ≥ n found below a(n) (each is a potential term; it becomes one only when the
@@ -202,13 +244,19 @@ the pipeline alone runs at 4800 Gm/s, so the shared-memory marking is now the
 cost and a persistent-block design with the pattern tables in shared memory
 would be the next step.
 
-Build and run on the Spark (`nvcc` lives in `/usr/local/cuda/bin`):
+Build and run on a Spark (`nvcc` lives in `/usr/local/cuda/bin`; no other
+dependencies, the CUDA tool has its own small prime sieve):
 
 ```
 cd cuda && make            # NVCC=/usr/local/cuda/bin/nvcc ARCH=sm_121
 ./a359636_cuda selftest -8
 nohup ./a359636_cuda scan 9 0 33955545649252303 -t 16 -b 262144 -S gpu_n9.state -i 60 > gpu_n9.txt 2> gpu_n9.log &
 ```
+
+Splitting a range over machines: give each its own START/END and `-S` file;
+a resumed run may lower or raise END (the frontier is relative to START), and
+a run with START > 0 reports the smallest qualifying gap in its range rather
+than claiming a(n).
 
 ## Usage
 

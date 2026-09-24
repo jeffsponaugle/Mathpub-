@@ -20,8 +20,8 @@
  *   a359636_cuda selftest [-8]
  *   a359636_cuda verify N P
  *
- * Build (DGX Spark / GB10, CUDA 13):
- *   nvcc -O3 -std=c++17 -arch=sm_121 -Xcompiler -pthread a359636_cuda.cu -lprimesieve -o a359636_cuda
+ * Build (DGX Spark / GB10, CUDA 13; no dependencies beyond CUDA):
+ *   nvcc -O3 -std=c++17 -arch=sm_121 -Xcompiler -pthread a359636_cuda.cu -o a359636_cuda
  * Measured on the GB10: 810 Gm/s at level 9 (T = 2000), 904 Gm/s at level 10 (T = 1000),
  * versus 82 Gm/s for the CPU tool on the Spark's 20 Arm cores.
  */
@@ -44,7 +44,6 @@
 #include <condition_variable>
 #include <thread>
 #include <unistd.h>
-#include <primesieve.h>
 #include <cuda_runtime.h>
 
 typedef uint64_t u64;
@@ -95,6 +94,13 @@ static void die(const char *fmt, ...)
     fputc('\n', stderr);
     va_end(ap);
     exit(1);
+}
+
+static void *xmalloc(size_t n)
+{
+    void *p = malloc(n ? n : 1);
+    if (!p) die("out of memory");
+    return p;
 }
 
 static u64 parse_num(const char *s)
@@ -227,12 +233,20 @@ static u32 *g_primes;
 static size_t g_nprimes;
 static u64 g_plimit;
 
-static void build_primes(u64 limit)
+static void build_primes(u64 limit)          /* plain Eratosthenes; limit is a few million at most */
 {
-    size_t n;
-    g_primes = (u32 *)primesieve_generate_primes(2, limit, &n, UINT32_PRIMES);
-    if (!g_primes) die("primesieve failed");
-    g_nprimes = n;
+    if (limit > (1ull << 31)) die("prime table limit too large");
+    std::vector<u8> comp(limit + 1, 0);
+    std::vector<u32> pr;
+    for (u64 i = 2; i <= limit; i++) {
+        if (comp[i]) continue;
+        pr.push_back((u32)i);
+        for (u64 j = i * i; j <= limit; j += i) comp[j] = 1;
+    }
+    free(g_primes);
+    g_primes = (u32 *)xmalloc(pr.size() * sizeof(u32));
+    memcpy(g_primes, pr.data(), pr.size() * sizeof(u32));
+    g_nprimes = pr.size();
     g_plimit = limit;
 }
 
@@ -601,8 +615,10 @@ static void load_state(Scan *S)
         }
     }
     fclose(f);
-    if (n != S->n || klo != S->k_lo || khi != S->k_hi)
-        die("state file %s belongs to a different scan", S->state_file);
+    if (n != S->n || klo != S->k_lo)
+        die("state file %s belongs to a different scan (n=%d, k_lo=%" PRIu64 ")", S->state_file, n, klo);
+    if (khi != S->k_hi && !g_quiet)              /* END changed: fine, the frontier is relative to k_lo */
+        fprintf(stderr, "state has k_hi %" PRIu64 ", now %" PRIu64 " (END changed on resume)\n", khi, S->k_hi);
     if (lsize != S->lsize) {                 /* different launch size: restart at or below the old k frontier */
         u64 kfr = fr * lsize;
         fr = kfr / S->lsize;
@@ -665,7 +681,7 @@ static u64 run_scan(int n, u64 start, u64 end, int cputhreads, u32 T, int blocks
     u64 plim = (u64)iroot(Bmax, 3) + 1000;
     if (plim < 1u << 20) plim = 1u << 20;
     if (plim < 60000) plim = 60000;
-    if (!g_primes || g_plimit < plim) { free(g_primes); build_primes(plim); }
+    if (!g_primes || g_plimit < plim) build_primes(plim);
 
     if (T == 0) {
         static const u32 cand[] = { 1000, 1500, 2000, 2500, 3000, 4000, 5000, 6000, 8000, 10000, 15000, 20000 };
@@ -796,10 +812,14 @@ static u64 run_scan(int n, u64 start, u64 end, int cputhreads, u32 T, int blocks
                 (unsigned long long)S->survivors.load(), (unsigned long long)S->triples.load(),
                 (unsigned long long)S->nsol.load());
     }
-    if (*certain) printf("a(%d) = %" PRIu64 "\n", n, result);
+    bool partial = m_lo > 9;                       /* START given: statements are about this range only */
+    if (*certain && !partial) printf("a(%d) = %" PRIu64 "\n", n, result);
+    else if (*certain) printf("smallest qualifying p with m in [%" PRIu64 ", %" PRIu64 "] is %" PRIu64 " (partial range: a(%d) <= this)\n", m_lo, covered_m, result, n);
     else if (S->best_p) printf("a(%d) <= %" PRIu64 " (scan incomplete below it)\n", n, S->best_p);
-    else if (S->frontier >= S->nlaunch) printf("a(%d) > %" PRIu64 " (no qualifying gap with p <= %" PRIu64 ")\n", n, end, end);
-    else printf("a(%d) > %" PRIu64 " (scan stopped early; no qualifying gap with p below that)\n", n, covered_m > 2 ? covered_m - 2 : 0);
+    else if (S->frontier >= S->nlaunch && !partial) printf("a(%d) > %" PRIu64 " (no qualifying gap with p <= %" PRIu64 ")\n", n, end, end);
+    else if (S->frontier >= S->nlaunch) printf("no qualifying gap with m in [%" PRIu64 ", %" PRIu64 "] (partial range)\n", m_lo, m_hi);
+    else if (!partial) printf("a(%d) > %" PRIu64 " (scan stopped early; no qualifying gap with p below that)\n", n, covered_m > 2 ? covered_m - 2 : 0);
+    else printf("no qualifying gap with m in [%" PRIu64 ", %" PRIu64 "] (partial range, stopped early)\n", m_lo, covered_m);
     fflush(stdout);
     cudaFree(S->d_prog); cudaFree(S->d_kb); cudaFree(S->d_patA); cudaFree(S->d_patB); cudaFree(S->d_out); cudaFree(S->d_count);
     delete S;
