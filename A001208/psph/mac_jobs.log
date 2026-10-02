@@ -5,3 +5,5 @@ SOLUTION h=9 k=8 n_h=5896 : 1 10 17 71 145 457 1255 1787
 === MAC JOB1b done Fri Oct  2 05:19:47 PDT 2026
 === MAC JOB1d items [4200,4450) start Fri Oct  2 05:19:47 PDT 2026
 === Mac range [4200,4450) abandoned (moved to mathd); GPU k=21 paused Fri Oct  2 09:08:32 PDT 2026
+=== MAC JOB3 n(27,6) items [2000000,2964437) start Fri Oct  2 11:04:23 PDT 2026
+=== Mac A001211(27) share abandoned (chunks 20-21 -> mathb); GPU k=21 suspended Fri Oct  2 13:55:06 PDT 2026

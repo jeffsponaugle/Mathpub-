@@ -12,13 +12,15 @@ see README.md for methods and run logs (`runs/`).
 | A350826(19) = 24711327817 | **new to OEIS**, ready (own GPU run; equals the value implied by Desfontaines' pi_6) |
 | A063501(18) = 4010758480 | **new to OEIS**, ready (= pi_6(10^18), Desfontaines; confirmed) |
 | A063501(19) = 28722086297 | **new to OEIS**, ready (= pi_6(10^19), Desfontaines; confirmed) |
-| A350826(20), A063501(20) | **genuinely new**; GPU runs on atom1 + atom2 (split at chunk 53416), ETA ~2026-10-02 12:10; a(20) >= 25366464204 already (rigorous, from finished chunks) |
+| A350826(20) = 180637585474 | **new**, computed 2026-10-02 (two DGX Sparks, 34.8 h + 25.6 h GPU); not in Luhn's table either |
+| A063501(20) = 209359671771 | **new** (= pi_6(10^20)) |
+| pi_6(2^64) | our value **48629688861** differs from Luhn's table (Desfontaines) **48629687343** by 1518; ours reproduced twice (see section 3) |
 | A350826 comment "as far as we know ... same length" | can be replaced by a verified statement for 3 <= n <= 24 |
 | Dead link in A350826 and A063501 (`PI_06.html`) | should point to `PI_06.php` |
 | A350826(1..17), A063501(1..17), A022008 b-file, A271000 b-file, A200503/A200504/A233426 (terms 1..56), A343636 (n = 0..23) | re-verified, all agree |
 
-Recommendation: wait for a(20) (about one more day with both Sparks) and submit a(18)-a(20) for both
-sequences in one edit each.
+Recommendation: submit a(18)-a(20) for both sequences in one edit each. Contact Norman Luhn about the
+pi_6(2^64) discrepancy (section 3) first or in parallel; it does not affect the OEIS terms.
 
 ---
 
@@ -26,10 +28,10 @@ sequences in one edit each.
 
 Current entry: #24, Jan 21 2022, data a(1..17), keywords `nonn,base,more,hard`.
 
-### DATA (append two terms; a(20) later)
+### DATA (append three terms)
 
 ```
-1,1,0,0,3,0,13,64,235,1296,7013,41782,253420,1607418,10520883,70785653,488096844,3439443854,24711327817
+1,1,0,0,3,0,13,64,235,1296,7013,41782,253420,1607418,10520883,70785653,488096844,3439443854,24711327817,180637585474
 ```
 
 ### COMMENTS — replace the second comment
@@ -71,7 +73,7 @@ The eight cases (all re-checked with Python's own primality test and Pollard rho
 ### Optional FORMULA (asymptotic, conjectural)
 
 ```
-Conjecture (Hardy-Littlewood): a(n) ~ C_6 * Integral_{10^(n-1)..10^n} dt/log(t)^6, C_6 = 17.29861... . For n = 17, 18, 19 the integral differs from a(n) by less than 5*10^-5 a(n); it gives a(20) ~ 1.80638*10^11 and a(21) ~ 1.34117*10^12.
+Conjecture (Hardy-Littlewood): a(n) ~ C_6 * Integral_{10^(n-1)..10^n} dt/log(t)^6, C_6 = 17.29861... . For n = 17..20 the integral differs from a(n) by less than 5*10^-5 a(n) (2*10^-6 for n = 20); it gives a(21) ~ 1.34117*10^12.
 ```
 
 (C_6 = prod over primes q of (1 - w(q)/q)/(1 - 1/q)^6 with w(q) the number of residues of
@@ -103,6 +105,7 @@ Suggested wording (credit to Desfontaines, who computed pi_6(10^18) and pi_6(10^
 
 ```
 a(18)-a(19) from Karl Desfontaines's counts in Norman Luhn's table (May 2026), independently confirmed by _Jeff Sponaugle_, Oct 01 2026
+a(20) from _Jeff Sponaugle_, Oct 02 2026
 ```
 
 (If the editors prefer, simply `a(18)-a(19) from _Jeff Sponaugle_, Oct 01 2026` with the
@@ -117,10 +120,10 @@ Keyword `more` stays.
 
 Current entry: #25, Feb 10 2022, data a(1..17), offset 1,3, keywords `nonn,more`.
 
-### DATA (append two terms; a(20) later)
+### DATA (append three terms)
 
 ```
-0,1,2,2,5,5,18,82,317,1613,8626,50408,303828,1911246,12432129,83217782,571314626,4010758480,28722086297
+0,1,2,2,5,5,18,82,317,1613,8626,50408,303828,1911246,12432129,83217782,571314626,4010758480,28722086297,209359671771
 ```
 
 ### COMMENTS (add)
@@ -157,30 +160,57 @@ Consider adding `hard` (as in A350826).
 
 ```
 a(18)-a(19) from Karl Desfontaines (May 2026, see Luhn's table), independently confirmed by _Jeff Sponaugle_, Oct 01 2026
+a(20) from _Jeff Sponaugle_, Oct 02 2026
 ```
 
 ---
 
-## 3. a(20) — run in progress
+## 3. a(20) — result and verification
 
-`./a350826_cuda count 1e19 1e20 -b 2^64,2e19,3e19,2^65,4e19,5e19,6e19,7e19,2^66,8e19,9e19` on atom1
-(GB10), started 2026-10-01 00:55; from 10:07 atom2 runs chunks 53416..92568 of the same count
-(`-C 875167744:1516640125`), atom1 stops after chunk 53417; ~1530 chunks/h each, ETA ~2026-10-02 12:10.
-The logs are merged with `combine_a20.py` (chunks 53416-53417 are computed by both GPUs).
+`a350826_cuda count 1e19 1e20 -b 2^64,2e19,3e19,2^65,4e19,5e19,6e19,7e19,2^66,8e19,9e19` (wheel 37,
+B = 2^16, 92569 chunks of 16384 classes) on two DGX Sparks: atom1 chunks 0..53417 (2026-10-01 00:55 to
+2026-10-02 11:12) and 91858..92568, atom2 chunks 53416..91861 (from 2026-10-01 10:07); merged with
+`combine_a20.py` (`runs/a20_combined.txt`): every chunk exactly once, the 10 chunks computed by both GPUs
+have identical lines, candidates − count = 15 pseudo-sextuplets.
 
-* Rigorous lower bound now (14.0% of the classes done, checkpoint `runs/a20.state` on atom1):
-  **a(20) >= 25366464204**, hence A063501(20) >= 54088550501. A bound like this is only worth a
-  comment if we submit before the run ends.
-* Expected (Hardy–Littlewood): a(20) ≈ 1.80638·10^11, A063501(20) ≈ 2.0936·10^11.
-* Built-in check: the bin [10^19, 2^64) must contain
-  pi_6(2^64) − pi_6(10^19) = 48629687343 − 28722086297 = **19907601046** sextuplets (Desfontaines).
-* When it finishes: append a(20) to A350826 and A063501(20) = 28722086297 + a(20) to A063501;
-  extensions `a(20) from _Jeff Sponaugle_, Oct 02 2026` (genuinely new, unless pi_6(10^20) shows up
-  in Luhn's table in the meantime); recheck random chunks on the CPU first (`a350826 recheck`).
-* By-products (not OEIS terms; for Luhn's table or comments): pi_6(2^64) confirmation, pi_6(2^65),
-  pi_6(2^66), pi_6(k·10^19) for k = 2..9.
+```
+RESULT [1e19, 1e20) count 180637585474 cks 6fde7e53b8dbdda6  A350826(20)
+RESULT A063501(20) = pi_6(10^20) = 209359671771
+```
 
----
+pi_6 at the bin boundaries (cumulative from pi_6(10^19) = 28722086297):
+
+| x | sextuplets in [previous, x) | pi_6(x) |
+|---|---|---|
+| 2^64 | 19907602564 | 48629688861 |
+| 2·10^19 | 3506083177 | 52135772038 |
+| 3·10^19 | 21809123277 | 73944895315 |
+| 2^65 | 14448377987 | 88393273302 |
+| 4·10^19 | 6389745264 | 94783018566 |
+| 5·10^19 | 20148907847 | 114931926413 |
+| 6·10^19 | 19619158182 | 134551084595 |
+| 7·10^19 | 19190757809 | 153741842404 |
+| 2^66 | 7170897125 | 160912739529 |
+| 8·10^19 | 11662053851 | 172574793380 |
+| 9·10^19 | 18526297674 | 191101091054 |
+| 10^20 | 18258580717 | 209359671771 |
+
+**Discrepancy at 2^64.** Luhn's table lists pi_6(2^64) = 48629687343 (Desfontaines, Jul 2026); we get
+48629688861, i.e. 1518 more sextuplets in [10^19, 2^64). Checks on our side:
+
+* a full recount of [10^19, 2^64) on both GPUs with the halves swapped between the machines reproduced
+  every chunk exactly (92569 of 92569 chunk lines identical, total 19907602564);
+* the CPU program (independent marking code and primality tests) recomputed 40 random chunks of
+  [10^19, 2^64): no mismatch;
+* every counted sextuplet passed BPSW in all six members (no BPSW pseudoprime exists below 2^64), so our
+  count cannot contain composites; the sieve only removes candidates; the same programs reproduce
+  pi_6(10^18) and pi_6(10^19) of Desfontaines exactly;
+* the 1518th sextuplet below 2^64 lies 6.82e11 below it (no natural cut-off there: [2^64 − 2^39, 2^64)
+  holds 1211 sextuplets, [2^64 − 2^40, 2^64) holds 2453), so the difference is not simply a missing top
+  segment of power-of-two size.
+
+Our value therefore looks right; Luhn / Desfontaines should be told (it does not affect any OEIS term).
+Pseudo-sextuplets excluded in [10^19, 10^20): 15 (12 listed in the README run notes, all verified).
 
 ## 4. Re-verified data (for the notes to the editors; no edits needed)
 
@@ -204,7 +234,7 @@ Largest record gap below 10^15: 1457965740, from 437804272277497 to 437805730243
 ## 5. Notes to the editors (paste into the edit form)
 
 ```
-a(18) and a(19) were computed with C and CUDA programs: candidates p are restricted to the 1516640125 residue classes modulo 2*3*5*...*37 that are admissible for the pattern (0,4,6,10,12,16); each class is sieved as an arithmetic progression with all primes up to 2^16; every member of every survivor gets a base-2 strong probable-prime test, and every member of every candidate that passes all six gets a strong Lucas test (BPSW, which has no counterexample below 2^64). The values agree with PI_6(10^18) = 4010758480 and PI_6(10^19) = 28722086297 of Karl Desfontaines (May 2026) in Norman Luhn's table. Runs: a(18) 30.5 min, a(19) 4.0 h on one NVIDIA GB10 (DGX Spark). Checks: the programs reproduce a(1)..a(17); an independent Python program (numpy sieve, Python's own Miller-Rabin with the first 13 prime bases) agrees in count and checksum on 2*10^12-wide windows near 10^15, 10^17, 10^18, 10^19, 2^64, 10^20 and 10^22; the CPU and GPU programs give identical per-chunk counts and checksums, and randomly chosen chunks of both GPU runs were recomputed on the CPU. The Lucas test matters: 5 (in a(18)) and 3 (in a(19)) candidates pass the base-2 test in all six members but contain a base-2 strong pseudoprime. The link to Luhn's table is updated (the .html address is dead). A computation of a(20) is running and should finish in two days.
+a(18)-a(20) were computed with C and CUDA programs: candidates p are restricted to the 1516640125 residue classes modulo 2*3*5*...*37 that are admissible for the pattern (0,4,6,10,12,16); each class is sieved as an arithmetic progression with all primes up to 2^16; every member of every survivor gets a base-2 strong probable-prime test, and every member of every candidate that passes all six gets a strong Lucas test (BPSW, which has no counterexample below 2^64). The values agree with PI_6(10^18) = 4010758480 and PI_6(10^19) = 28722086297 of Karl Desfontaines (May 2026) in Norman Luhn's table. Runs: a(18) 30.5 min, a(19) 4.0 h on one NVIDIA GB10 (DGX Spark), a(20) 60 GPU-hours on two. Checks: the programs reproduce a(1)..a(17); an independent Python program (numpy sieve, Python's own Miller-Rabin with the first 13 prime bases) agrees in count and checksum on 2*10^12-wide windows near 10^15, 10^17, 10^18, 10^19, 2^64, 10^20 and 10^22; the CPU and GPU programs give identical per-chunk counts and checksums, and randomly chosen chunks of both GPU runs were recomputed on the CPU. The Lucas test matters: 5 (in a(18)), 3 (in a(19)) and 15 (in a(20)) candidates pass the base-2 test in all six members but contain a base-2 strong pseudoprime. The link to Luhn's table is updated (the .html address is dead). a(20) = 180637585474 (new) was computed the same way on two DGX Sparks (60 GPU-hours) and its [10^19, 2^64) part was recounted with the machines swapped (identical per-chunk counts and checksums).
 ```
 
 ---
@@ -219,6 +249,8 @@ a(18) and a(19) were computed with C and CUDA programs: candidates p are restric
   section 1); [10^15, 10^16) has none; [0, 10^15) and (10^16, 10^17) still have to be listed
   (minutes on the GPU) before the sequence could start at its first term.
 * **A200503 / A200504 / A233426**: nothing new (Desfontaines already extended A200503 to 91 terms).
+* **Luhn's table**: pi_6(10^20) = 209359671771 and pi_6(2^65) = 88393273302, pi_6(2^66) = 160912739529,
+  pi_6(k·10^19) (section 3) are new; pi_6(2^64) = 48629688861 would correct the table.
 
 ---
 

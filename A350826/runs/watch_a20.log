@@ -1,1 +1,3 @@
 Thu Oct  1 13:42:42 PDT 2026 watcher started (state main)
+Fri Oct  2 11:14:17 PDT 2026 rebalanced: atom2 at chunk 91175 (1393 left); atom1 tail run from chunk 91858, atom2 stops after 91859
+all a(20) runs done (split 53416 and 91858); merge with combine_a20.py

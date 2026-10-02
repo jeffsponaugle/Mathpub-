@@ -77,6 +77,14 @@ range is complete; every chunk is resumable (re-run the same command).
   [4200,4450); orin1: [10600,10700). Projected n(9,8) completion ~Oct 2 09:30 PDT. Best 6082 (mathg).
 * 04:05 PDT Oct 2 rebalance #5: mathb's chunk [7200,8000) is slower than planned (ends ~09:45), so [10250,10500) moved from mathb to mathd (after [9250,9500)); mathb goes straight to A001210(91). Projected n(9,8) completion ~09:45 PDT.
 * 07:47 PDT Oct 2: mathd finished all its n(9,8) ranges and started A001209(303) (psph16, 301 items).
+* 13:50 PDT Oct 2 — Jeff will retask mathd/mathb/mathg in a few hours. Re-plan to finish A001211(27) first:
+  A001209(303) dropped on mathd (12 % of one unsplittable chunk; restart later with `-d 2 ... chunk 10` = 31 resumable
+  chunks); A001210(91) on mathb pauses after its running chunk 1 (chunks 0-1 then complete, resumable).
+  A001211(27) chunk map (30 chunks of 100k items at depth 4): 0-4 done (mathg); mathg 5, 15-19; mathd 6-14 (h27k6d);
+  mathb 20-29 (h27k6b, after ~16:10; the Mac was stopped at 14:05 and its chunks 20-21 moved to mathb). Best 177914. `stop_all.sh` staged on each box for the hand-back.
+* **11:18 PDT Oct 2: n(9,8) = 6082 PROVEN** (last range done on mathd; audit logs/n9k8_final_audit.txt: 11003/11003 items, 479 bases reported, max 6082 by {1,8,27,88,197,521,1226,1461}).
+* 11:04 PDT Oct 2: Mac resumed; takes A001211(27) items [2000000,2964437) (mathg's chunks 20-29 marked done there); GPU k=21 resumed.
+* 09:21 PDT Oct 2: mathb finished its last n(9,8) chunk [7200,8000) and started A001210(91) (133732 items at depth 3, chunks of 5000).
 * 09:10 PDT Oct 2: Mac paused on request; its range [4200,4450) moved to mathd (jobs7.sh: [4200,4450) then A001209(303) restarted from scratch, ~45 min lost).
 * 08:05 PDT Oct 2: mathg finished all its n(9,8) ranges and started A001211(27).
 * 03:50 PDT Oct 2: orin1 finished its range [10500,10700) (29+ bases >= 5600, best 5782); orin1 now idle.
@@ -118,7 +126,7 @@ range is complete; every chunk is resumable (re-run the same command).
 
 ### 3. A001211(27) = n(27,6)
 
-* Lower bound **176380** (basis 1 19 177 1016 6649 22876, heuristic); target 176381.
+* Lower bound **177914** (basis 1 19 122 1028 6378 22929, Mac, Oct 2 13:28; earlier 177568, 176863); heuristic was 176380; target in use 176381.
 * Items: 4005 at depth 3, 2,964,437 at depth 4 (generated in 2 s). Expected 300-3000 core-hours (growth
   exponent still rising at h=14), so start it only when a machine is otherwise idle; the ETA printed after
   the first chunks tells the truth. Depth 4 balances best:

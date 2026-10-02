@@ -1,0 +1,21 @@
+runs/a20.chunks: 53420 chunks (0..53419)
+runs/a20b.chunks: 38448 chunks (53416..91863)
+runs/a20c.chunks: 711 chunks (91858..92568)
+chunks computed in more than one run: 10, identical: 10
+RESULT [1e19, 2^64) count 19907602564 cks 24c2c20e82adf36e   pi_6(2^64) = 48629688861
+RESULT [2^64, 2e19) count 3506083177 cks 94f32a5907f22756   pi_6(2e19) = 52135772038
+RESULT [2e19, 3e19) count 21809123277 cks e52a12eddbfdf386   pi_6(3e19) = 73944895315
+RESULT [3e19, 2^65) count 14448377987 cks be9da068253a0b49   pi_6(2^65) = 88393273302
+RESULT [2^65, 4e19) count 6389745264 cks c84ec64df6506160   pi_6(4e19) = 94783018566
+RESULT [4e19, 5e19) count 20148907847 cks 1ce7f72efcd01f1c   pi_6(5e19) = 114931926413
+RESULT [5e19, 6e19) count 19619158182 cks 6b3f453600a03e9f   pi_6(6e19) = 134551084595
+RESULT [6e19, 7e19) count 19190757809 cks 1ebf96078e49042d   pi_6(7e19) = 153741842404
+RESULT [7e19, 2^66) count 7170897125 cks 340cc05e23838e37   pi_6(2^66) = 160912739529
+RESULT [2^66, 8e19) count 11662053851 cks c48fc343c47ba078   pi_6(8e19) = 172574793380
+RESULT [8e19, 9e19) count 18526297674 cks 5744685c301d0164   pi_6(9e19) = 191101091054
+RESULT [9e19, 1e20) count 18258580717 cks 534a59dd92ddd0b8   pi_6(1e20) = 209359671771
+RESULT [1e19, 1e20) count 180637585474 cks 6fde7e53b8dbdda6  A350826(20)
+RESULT survivors 26182870639706 candidates 180637585489 spsp 15 (candidates - count = 15)
+RESULT A063501(20) = pi_6(10^20) = 209359671771
+check pi_6(2^64) = 48629688861 vs Desfontaines 48629687343: MISMATCH
+check candidates - count = spsp: OK

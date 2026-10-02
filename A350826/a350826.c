@@ -1750,6 +1750,7 @@ static int cmd_recheck(int argc, char **argv)
         if (a >= W.C) die("chunk %" PRIu64 " is beyond the %" PRIu64 " classes", idx[i], W.C);
         D.c0 = a;
         D.c1 = b;
+        D.chunk = (b - a) / ((u64)o.threads * 16) ? (b - a) / ((u64)o.threads * 16) : 1;  /* spread over threads */
         run_count(o.threads, NULL, 60, true);
         char mine[4096];
         int len = snprintf(mine, sizeof mine, "C %" PRIu64 " %" PRIu64 " %" PRIu64 " %" PRIu64, idx[i], D.tot.surv,

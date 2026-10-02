@@ -1,0 +1,308 @@
+[10000000000000000000, 100000000000000000000) on NVIDIA GB10: wheel 37 (1516640125 classes, ~1.84e+16 candidates), B = 65536 (42 pattern, 510 medium, 5978 large primes), 39153 chunks of 16384
+classes [875167744, 1516640125) of 1516640125 only (partial count)
+progress: 4.6s  chunks 1/39153 (0.003%)  4.3e+10 bits/s  found 1950748  ETA 2d02h14m
+progress: 5m08s  chunks 127/39153 (0.324%)  8.19e+10 bits/s  found 247817857  ETA 1d02h18m
+progress: 10m11s  chunks 253/39153 (0.646%)  8.22e+10 bits/s  found 493668401  ETA 1d02h06m
+progress: 15m13s  chunks 379/39153 (0.968%)  8.24e+10 bits/s  found 739550865  ETA 1d01h57m
+progress: 20m16s  chunks 505/39153 (1.290%)  8.25e+10 bits/s  found 985404925  ETA 1d01h51m
+progress: 25m18s  chunks 631/39153 (1.612%)  8.26e+10 bits/s  found 1231281735  ETA 1d01h45m
+progress: 30m21s  chunks 757/39153 (1.933%)  8.26e+10 bits/s  found 1477162248  ETA 1d01h39m
+progress: 35m23s  chunks 883/39153 (2.255%)  8.26e+10 bits/s  found 1723032402  ETA 1d01h33m
+progress: 40m25s  chunks 1009/39153 (2.577%)  8.27e+10 bits/s  found 1968894387  ETA 1d01h28m
+progress: 45m27s  chunks 1135/39153 (2.899%)  8.27e+10 bits/s  found 2214756793  ETA 1d01h22m
+progress: 50m29s  chunks 1261/39153 (3.221%)  8.27e+10 bits/s  found 2460650697  ETA 1d01h17m
+progress: 55m32s  chunks 1387/39153 (3.543%)  8.27e+10 bits/s  found 2706505743  ETA 1d01h12m
+progress: 1h00m34s  chunks 1513/39153 (3.864%)  8.27e+10 bits/s  found 2952401223  ETA 1d01h07m
+progress: 1h05m37s  chunks 1639/39153 (4.186%)  8.27e+10 bits/s  found 3198278048  ETA 1d01h02m
+progress: 1h10m40s  chunks 1765/39153 (4.508%)  8.27e+10 bits/s  found 3444157446  ETA 1d00h57m
+progress: 1h15m42s  chunks 1891/39153 (4.830%)  8.27e+10 bits/s  found 3690036530  ETA 1d00h51m
+progress: 1h20m45s  chunks 2017/39153 (5.152%)  8.27e+10 bits/s  found 3935896535  ETA 1d00h46m
+progress: 1h25m47s  chunks 2143/39153 (5.473%)  8.27e+10 bits/s  found 4181756957  ETA 1d00h41m
+progress: 1h30m50s  chunks 2269/39153 (5.795%)  8.27e+10 bits/s  found 4427632793  ETA 1d00h36m
+progress: 1h35m53s  chunks 2395/39153 (6.117%)  8.27e+10 bits/s  found 4673495997  ETA 1d00h31m
+progress: 1h40m56s  chunks 2521/39153 (6.439%)  8.27e+10 bits/s  found 4919356383  ETA 1d00h26m
+progress: 1h46m00s  chunks 2647/39153 (6.761%)  8.27e+10 bits/s  found 5165248199  ETA 1d00h22m
+progress: 1h51m04s  chunks 2773/39153 (7.082%)  8.27e+10 bits/s  found 5411100976  ETA 1d00h17m
+progress: 1h56m08s  chunks 2899/39153 (7.404%)  8.27e+10 bits/s  found 5656961485  ETA 1d00h12m
+progress: 2h01m12s  chunks 3025/39153 (7.726%)  8.27e+10 bits/s  found 5902826316  ETA 1d00h07m
+progress: 2h06m15s  chunks 3151/39153 (8.048%)  8.26e+10 bits/s  found 6148685857  ETA 1d00h02m
+progress: 2h11m19s  chunks 3277/39153 (8.370%)  8.26e+10 bits/s  found 6394535177  ETA 23h57m38s
+progress: 2h16m22s  chunks 3403/39153 (8.692%)  8.26e+10 bits/s  found 6640427170  ETA 23h52m40s
+progress: 2h21m26s  chunks 3529/39153 (9.013%)  8.26e+10 bits/s  found 6886296718  SPSP!  ETA 23h47m46s
+progress: 2h26m29s  chunks 3655/39153 (9.335%)  8.26e+10 bits/s  found 7132153516  SPSP!  ETA 23h42m46s
+progress: 2h31m32s  chunks 3781/39153 (9.657%)  8.26e+10 bits/s  found 7378023508  SPSP!  ETA 23h37m42s
+progress: 2h36m35s  chunks 3907/39153 (9.979%)  8.26e+10 bits/s  found 7623892155  SPSP!  ETA 23h32m35s
+progress: 2h41m37s  chunks 4033/39153 (10.301%)  8.26e+10 bits/s  found 7869748490  SPSP!  ETA 23h27m31s
+progress: 2h46m41s  chunks 4159/39153 (10.622%)  8.26e+10 bits/s  found 8115620241  SPSP!  ETA 23h22m32s
+progress: 2h51m45s  chunks 4285/39153 (10.944%)  8.26e+10 bits/s  found 8361503053  SPSP!  ETA 23h17m37s
+progress: 2h56m48s  chunks 4411/39153 (11.266%)  8.26e+10 bits/s  found 8607389501  SPSP!  ETA 23h12m34s
+progress: 3h01m51s  chunks 4537/39153 (11.588%)  8.26e+10 bits/s  found 8853265172  SPSP!  ETA 23h07m30s
+progress: 3h06m54s  chunks 4663/39153 (11.910%)  8.26e+10 bits/s  found 9099143671  SPSP!  ETA 23h02m28s
+progress: 3h11m57s  chunks 4789/39153 (12.232%)  8.26e+10 bits/s  found 9345013968  SPSP!  ETA 22h57m24s
+progress: 3h17m00s  chunks 4915/39153 (12.553%)  8.26e+10 bits/s  found 9590891384  SPSP!  ETA 22h52m21s
+progress: 3h22m03s  chunks 5041/39153 (12.875%)  8.26e+10 bits/s  found 9836783026  SPSP!  ETA 22h47m17s
+progress: 3h27m07s  chunks 5167/39153 (13.197%)  8.26e+10 bits/s  found 10082639726  SPSP!  ETA 22h42m18s
+progress: 3h32m10s  chunks 5293/39153 (13.519%)  8.26e+10 bits/s  found 10328510482  SPSP!  ETA 22h37m21s
+progress: 3h37m14s  chunks 5419/39153 (13.841%)  8.26e+10 bits/s  found 10574402864  SPSP!  ETA 22h32m23s
+progress: 3h42m18s  chunks 5545/39153 (14.162%)  8.26e+10 bits/s  found 10820261084  SPSP!  ETA 22h27m24s
+progress: 3h47m22s  chunks 5671/39153 (14.484%)  8.26e+10 bits/s  found 11066147272  SPSP!  ETA 22h22m27s
+progress: 3h52m26s  chunks 5797/39153 (14.806%)  8.26e+10 bits/s  found 11312042857  SPSP!  ETA 22h17m28s
+progress: 3h57m29s  chunks 5923/39153 (15.128%)  8.26e+10 bits/s  found 11557916836  SPSP!  ETA 22h12m26s
+progress: 4h02m33s  chunks 6049/39153 (15.450%)  8.26e+10 bits/s  found 11803806032  SPSP!  ETA 22h07m28s
+progress: 4h07m34s  chunks 6174/39153 (15.769%)  8.26e+10 bits/s  found 12047742683  SPSP!  ETA 22h02m24s
+progress: 4h12m37s  chunks 6299/39153 (16.088%)  8.26e+10 bits/s  found 12291650471  SPSP!  ETA 21h57m37s
+progress: 4h17m40s  chunks 6425/39153 (16.410%)  8.26e+10 bits/s  found 12537530908  SPSP!  ETA 21h52m34s
+progress: 4h22m43s  chunks 6551/39153 (16.732%)  8.26e+10 bits/s  found 12783433181  SPSP!  ETA 21h47m31s
+progress: 4h27m47s  chunks 6677/39153 (17.054%)  8.26e+10 bits/s  found 13029324603  SPSP!  ETA 21h42m29s
+progress: 4h32m47s  chunks 6801/39153 (17.370%)  8.26e+10 bits/s  found 13271284525  SPSP!  ETA 21h37m38s
+progress: 4h37m51s  chunks 6927/39153 (17.692%)  8.26e+10 bits/s  found 13517157523  SPSP!  ETA 21h32m40s
+progress: 4h42m55s  chunks 7053/39153 (18.014%)  8.26e+10 bits/s  found 13763045076  SPSP!  ETA 21h27m39s
+progress: 4h47m58s  chunks 7179/39153 (18.336%)  8.26e+10 bits/s  found 14008923836  SPSP!  ETA 21h22m35s
+progress: 4h53m01s  chunks 7305/39153 (18.658%)  8.26e+10 bits/s  found 14254800494  SPSP!  ETA 21h17m32s
+progress: 4h58m05s  chunks 7431/39153 (18.979%)  8.26e+10 bits/s  found 14500697365  SPSP!  ETA 21h12m30s
+progress: 5h03m09s  chunks 7557/39153 (19.301%)  8.26e+10 bits/s  found 14746565043  SPSP!  ETA 21h07m28s
+progress: 5h08m12s  chunks 7683/39153 (19.623%)  8.26e+10 bits/s  found 14992417430  SPSP!  ETA 21h02m26s
+progress: 5h13m12s  chunks 7808/39153 (19.942%)  8.26e+10 bits/s  found 15236362469  SPSP!  ETA 20h57m22s
+progress: 5h18m16s  chunks 7933/39153 (20.262%)  8.25e+10 bits/s  found 15480282093  SPSP!  ETA 20h52m32s
+progress: 5h23m16s  chunks 8058/39153 (20.581%)  8.26e+10 bits/s  found 15724238036  SPSP!  ETA 20h47m28s
+progress: 5h28m20s  chunks 8183/39153 (20.900%)  8.25e+10 bits/s  found 15968148695  SPSP!  ETA 20h42m38s
+progress: 5h33m20s  chunks 8307/39153 (21.217%)  8.25e+10 bits/s  found 16210109953  SPSP!  ETA 20h37m45s
+progress: 5h38m20s  chunks 8432/39153 (21.536%)  8.25e+10 bits/s  found 16454050169  SPSP!  ETA 20h32m41s
+progress: 5h43m24s  chunks 8557/39153 (21.855%)  8.25e+10 bits/s  found 16697956858  SPSP!  ETA 20h27m51s
+progress: 5h48m28s  chunks 8683/39153 (22.177%)  8.25e+10 bits/s  found 16943836070  SPSP!  ETA 20h22m49s
+progress: 5h53m28s  chunks 8807/39153 (22.494%)  8.25e+10 bits/s  found 17185810103  SPSP!  ETA 20h17m58s
+progress: 5h58m32s  chunks 8933/39153 (22.816%)  8.25e+10 bits/s  found 17431655602  SPSP!  ETA 20h12m55s
+progress: 6h03m32s  chunks 9058/39153 (23.135%)  8.25e+10 bits/s  found 17675568358  SPSP!  ETA 20h07m51s
+progress: 6h08m35s  chunks 9183/39153 (23.454%)  8.25e+10 bits/s  found 17919503170  SPSP!  ETA 20h02m56s
+progress: 6h13m38s  chunks 9309/39153 (23.776%)  8.25e+10 bits/s  found 18165379979  SPSP!  ETA 19h57m53s
+progress: 6h18m42s  chunks 9435/39153 (24.098%)  8.25e+10 bits/s  found 18411256291  SPSP!  ETA 19h52m50s
+progress: 6h23m42s  chunks 9560/39153 (24.417%)  8.25e+10 bits/s  found 18655163734  SPSP!  ETA 19h47m47s
+progress: 6h28m45s  chunks 9685/39153 (24.736%)  8.25e+10 bits/s  found 18899098097  SPSP!  ETA 19h42m50s
+progress: 6h33m48s  chunks 9811/39153 (25.058%)  8.25e+10 bits/s  found 19144980659  SPSP!  ETA 19h37m47s
+progress: 6h38m52s  chunks 9937/39153 (25.380%)  8.25e+10 bits/s  found 19390830281  SPSP!  ETA 19h32m43s
+progress: 6h43m55s  chunks 10063/39153 (25.702%)  8.25e+10 bits/s  found 19636668515  SPSP!  ETA 19h27m39s
+progress: 6h48m58s  chunks 10189/39153 (26.024%)  8.25e+10 bits/s  found 19882543144  SPSP!  ETA 19h22m35s
+progress: 6h54m02s  chunks 10315/39153 (26.345%)  8.25e+10 bits/s  found 20128413934  SPSP!  ETA 19h17m31s
+progress: 6h59m05s  chunks 10441/39153 (26.667%)  8.25e+10 bits/s  found 20374288438  SPSP!  ETA 19h12m27s
+progress: 7h04m09s  chunks 10567/39153 (26.989%)  8.25e+10 bits/s  found 20620156466  SPSP!  ETA 19h07m25s
+progress: 7h09m11s  chunks 10693/39153 (27.311%)  8.25e+10 bits/s  found 20866011016  SPSP!  ETA 19h02m20s
+progress: 7h14m15s  chunks 10819/39153 (27.633%)  8.25e+10 bits/s  found 21111929806  SPSP!  ETA 18h57m16s
+progress: 7h19m18s  chunks 10945/39153 (27.954%)  8.25e+10 bits/s  found 21357815327  SPSP!  ETA 18h52m11s
+progress: 7h24m21s  chunks 11071/39153 (28.276%)  8.25e+10 bits/s  found 21603696775  SPSP!  ETA 18h47m07s
+progress: 7h29m23s  chunks 11197/39153 (28.598%)  8.25e+10 bits/s  found 21849571752  SPSP!  ETA 18h42m01s
+progress: 7h34m26s  chunks 11323/39153 (28.920%)  8.25e+10 bits/s  found 22095458688  SPSP!  ETA 18h36m56s
+progress: 7h39m29s  chunks 11449/39153 (29.242%)  8.25e+10 bits/s  found 22341348092  SPSP!  ETA 18h31m52s
+progress: 7h44m32s  chunks 11575/39153 (29.564%)  8.25e+10 bits/s  found 22587227311  SPSP!  ETA 18h26m47s
+progress: 7h49m35s  chunks 11701/39153 (29.885%)  8.25e+10 bits/s  found 22833110801  SPSP!  ETA 18h21m43s
+progress: 7h54m38s  chunks 11827/39153 (30.207%)  8.25e+10 bits/s  found 23078968363  SPSP!  ETA 18h16m39s
+progress: 7h59m41s  chunks 11953/39153 (30.529%)  8.25e+10 bits/s  found 23324826664  SPSP!  ETA 18h11m35s
+progress: 8h04m45s  chunks 12079/39153 (30.851%)  8.25e+10 bits/s  found 23570710398  SPSP!  ETA 18h06m32s
+progress: 8h09m48s  chunks 12205/39153 (31.173%)  8.25e+10 bits/s  found 23816577595  SPSP!  ETA 18h01m28s
+progress: 8h14m51s  chunks 12331/39153 (31.494%)  8.25e+10 bits/s  found 24062450041  SPSP!  ETA 17h56m24s
+progress: 8h19m54s  chunks 12457/39153 (31.816%)  8.25e+10 bits/s  found 24308301994  SPSP!  ETA 17h51m19s
+progress: 8h24m57s  chunks 12583/39153 (32.138%)  8.25e+10 bits/s  found 24554187536  SPSP!  ETA 17h46m14s
+progress: 8h30m00s  chunks 12709/39153 (32.460%)  8.25e+10 bits/s  found 24800070459  SPSP!  ETA 17h41m10s
+progress: 8h35m03s  chunks 12835/39153 (32.782%)  8.25e+10 bits/s  found 25045955151  SPSP!  ETA 17h36m06s
+progress: 8h40m05s  chunks 12961/39153 (33.103%)  8.25e+10 bits/s  found 25291835292  SPSP!  ETA 17h31m00s
+progress: 8h45m07s  chunks 13087/39153 (33.425%)  8.25e+10 bits/s  found 25537716101  SPSP!  ETA 17h25m55s
+progress: 8h50m10s  chunks 13213/39153 (33.747%)  8.25e+10 bits/s  found 25783605167  SPSP!  ETA 17h20m51s
+progress: 8h55m13s  chunks 13339/39153 (34.069%)  8.25e+10 bits/s  found 26029479548  SPSP!  ETA 17h15m47s
+progress: 9h00m16s  chunks 13465/39153 (34.391%)  8.25e+10 bits/s  found 26275310750  SPSP!  ETA 17h10m42s
+progress: 9h05m18s  chunks 13591/39153 (34.713%)  8.25e+10 bits/s  found 26521211573  SPSP!  ETA 17h05m37s
+progress: 9h10m21s  chunks 13717/39153 (35.034%)  8.25e+10 bits/s  found 26767093081  SPSP!  ETA 17h00m33s
+progress: 9h15m24s  chunks 13843/39153 (35.356%)  8.25e+10 bits/s  found 27012972601  SPSP!  ETA 16h55m29s
+progress: 9h20m27s  chunks 13969/39153 (35.678%)  8.25e+10 bits/s  found 27258850167  SPSP!  ETA 16h50m24s
+progress: 9h25m30s  chunks 14095/39153 (36.000%)  8.25e+10 bits/s  found 27504726598  SPSP!  ETA 16h45m20s
+progress: 9h30m33s  chunks 14221/39153 (36.322%)  8.25e+10 bits/s  found 27750590412  SPSP!  ETA 16h40m16s
+progress: 9h35m36s  chunks 14347/39153 (36.643%)  8.25e+10 bits/s  found 27996476711  SPSP!  ETA 16h35m12s
+progress: 9h40m39s  chunks 14473/39153 (36.965%)  8.25e+10 bits/s  found 28242384286  SPSP!  ETA 16h30m09s
+progress: 9h45m41s  chunks 14599/39153 (37.287%)  8.25e+10 bits/s  found 28488247636  SPSP!  ETA 16h25m04s
+progress: 9h50m44s  chunks 14725/39153 (37.609%)  8.26e+10 bits/s  found 28734126959  SPSP!  ETA 16h20m00s
+progress: 9h55m47s  chunks 14851/39153 (37.931%)  8.26e+10 bits/s  found 28979988030  SPSP!  ETA 16h14m56s
+progress: 10h00m47s  chunks 14975/39153 (38.247%)  8.25e+10 bits/s  found 29221965666  SPSP!  ETA 16h10m01s
+progress: 10h05m48s  chunks 15099/39153 (38.564%)  8.25e+10 bits/s  found 29463921576  SPSP!  ETA 16h05m05s
+progress: 10h10m49s  chunks 15224/39153 (38.883%)  8.25e+10 bits/s  found 29707862889  SPSP!  ETA 16h00m04s
+progress: 10h15m51s  chunks 15349/39153 (39.203%)  8.25e+10 bits/s  found 29951781842  SPSP!  ETA 15h55m06s
+progress: 10h20m55s  chunks 15475/39153 (39.524%)  8.25e+10 bits/s  found 30197659926  SPSP!  ETA 15h50m03s
+progress: 10h25m58s  chunks 15601/39153 (39.846%)  8.25e+10 bits/s  found 30443523603  SPSP!  ETA 15h44m59s
+progress: 10h31m01s  chunks 15727/39153 (40.168%)  8.25e+10 bits/s  found 30689388721  SPSP!  ETA 15h39m56s
+progress: 10h36m01s  chunks 15852/39153 (40.487%)  8.25e+10 bits/s  found 30933318776  SPSP!  ETA 15h34m54s
+progress: 10h41m04s  chunks 15977/39153 (40.807%)  8.25e+10 bits/s  found 31177253234  SPSP!  ETA 15h29m56s
+progress: 10h46m05s  chunks 16102/39153 (41.126%)  8.25e+10 bits/s  found 31421177422  SPSP!  ETA 15h24m54s
+progress: 10h51m08s  chunks 16227/39153 (41.445%)  8.25e+10 bits/s  found 31665080329  SPSP!  ETA 15h19m56s
+progress: 10h56m11s  chunks 16353/39153 (41.767%)  8.25e+10 bits/s  found 31910957796  SPSP!  ETA 15h14m53s
+progress: 11h01m14s  chunks 16479/39153 (42.089%)  8.25e+10 bits/s  found 32156827502  SPSP!  ETA 15h09m49s
+progress: 11h06m18s  chunks 16605/39153 (42.411%)  8.25e+10 bits/s  found 32402685536  SPSP!  ETA 15h04m46s
+progress: 11h11m18s  chunks 16730/39153 (42.730%)  8.25e+10 bits/s  found 32646600740  SPSP!  ETA 14h59m44s
+progress: 11h16m21s  chunks 16855/39153 (43.049%)  8.25e+10 bits/s  found 32890506067  SPSP!  ETA 14h54m46s
+progress: 11h21m21s  chunks 16980/39153 (43.368%)  8.25e+10 bits/s  found 33134449604  SPSP!  ETA 14h49m44s
+progress: 11h26m24s  chunks 17105/39153 (43.688%)  8.25e+10 bits/s  found 33378381715  SPSP!  ETA 14h44m45s
+progress: 11h31m27s  chunks 17231/39153 (44.009%)  8.25e+10 bits/s  found 33624264915  SPSP!  ETA 14h39m41s
+progress: 11h36m30s  chunks 17357/39153 (44.331%)  8.25e+10 bits/s  found 33870159414  SPSP!  ETA 14h34m38s
+progress: 11h41m31s  chunks 17482/39153 (44.650%)  8.25e+10 bits/s  found 34114076506  SPSP!  ETA 14h29m37s
+progress: 11h46m33s  chunks 17607/39153 (44.970%)  8.25e+10 bits/s  found 34358015411  SPSP!  ETA 14h24m37s
+progress: 11h51m36s  chunks 17733/39153 (45.292%)  8.25e+10 bits/s  found 34603869749  SPSP!  ETA 14h19m34s
+progress: 11h56m39s  chunks 17859/39153 (45.613%)  8.25e+10 bits/s  found 34849753064  SPSP!  ETA 14h14m30s
+progress: 12h01m42s  chunks 17985/39153 (45.935%)  8.25e+10 bits/s  found 35095626263  SPSP!  ETA 14h09m26s
+progress: 12h06m44s  chunks 18111/39153 (46.257%)  8.25e+10 bits/s  found 35341504090  SPSP!  ETA 14h04m21s
+progress: 12h11m47s  chunks 18237/39153 (46.579%)  8.25e+10 bits/s  found 35587371536  SPSP!  ETA 13h59m17s
+progress: 12h16m50s  chunks 18363/39153 (46.901%)  8.25e+10 bits/s  found 35833264778  SPSP!  ETA 13h54m13s
+progress: 12h21m53s  chunks 18489/39153 (47.222%)  8.25e+10 bits/s  found 36079156818  SPSP!  ETA 13h49m09s
+progress: 12h26m56s  chunks 18615/39153 (47.544%)  8.25e+10 bits/s  found 36325050723  SPSP!  ETA 13h44m05s
+progress: 12h31m58s  chunks 18741/39153 (47.866%)  8.25e+10 bits/s  found 36570926213  SPSP!  ETA 13h39m01s
+progress: 12h37m00s  chunks 18867/39153 (48.188%)  8.25e+10 bits/s  found 36816783789  SPSP!  ETA 13h33m56s
+progress: 12h42m02s  chunks 18993/39153 (48.510%)  8.25e+10 bits/s  found 37062697705  SPSP!  ETA 13h28m52s
+progress: 12h47m05s  chunks 19119/39153 (48.832%)  8.25e+10 bits/s  found 37308577267  SPSP!  ETA 13h23m47s
+progress: 12h52m07s  chunks 19245/39153 (49.153%)  8.25e+10 bits/s  found 37554443274  SPSP!  ETA 13h18m43s
+progress: 12h57m10s  chunks 19371/39153 (49.475%)  8.25e+10 bits/s  found 37800326456  SPSP!  ETA 13h13m39s
+progress: 13h02m12s  chunks 19497/39153 (49.797%)  8.25e+10 bits/s  found 38046193580  SPSP!  ETA 13h08m35s
+progress: 13h07m14s  chunks 19623/39153 (50.119%)  8.26e+10 bits/s  found 38292060495  SPSP!  ETA 13h03m30s
+progress: 13h12m17s  chunks 19749/39153 (50.441%)  8.26e+10 bits/s  found 38537904773  SPSP!  ETA 12h58m26s
+progress: 13h17m19s  chunks 19875/39153 (50.762%)  8.26e+10 bits/s  found 38783770308  SPSP!  ETA 12h53m22s
+progress: 13h22m22s  chunks 20001/39153 (51.084%)  8.26e+10 bits/s  found 39029647026  SPSP!  ETA 12h48m19s
+progress: 13h27m26s  chunks 20127/39153 (51.406%)  8.26e+10 bits/s  found 39275543731  SPSP!  ETA 12h43m16s
+progress: 13h32m27s  chunks 20252/39153 (51.725%)  8.26e+10 bits/s  found 39519426972  SPSP!  ETA 12h38m15s
+progress: 13h37m30s  chunks 20377/39153 (52.045%)  8.25e+10 bits/s  found 39763347052  SPSP!  ETA 12h33m16s
+progress: 13h42m31s  chunks 20502/39153 (52.364%)  8.25e+10 bits/s  found 40007272669  SPSP!  ETA 12h28m15s
+progress: 13h47m32s  chunks 20627/39153 (52.683%)  8.25e+10 bits/s  found 40251184817  SPSP!  ETA 12h23m14s
+progress: 13h52m34s  chunks 20753/39153 (53.005%)  8.26e+10 bits/s  found 40497061803  SPSP!  ETA 12h18m10s
+progress: 13h57m35s  chunks 20879/39153 (53.327%)  8.26e+10 bits/s  found 40742932242  SPSP!  ETA 12h13m05s
+progress: 14h02m37s  chunks 21005/39153 (53.649%)  8.26e+10 bits/s  found 40988805145  SPSP!  ETA 12h08m01s
+progress: 14h07m40s  chunks 21131/39153 (53.970%)  8.26e+10 bits/s  found 41234676494  SPSP!  ETA 12h02m57s
+progress: 14h12m42s  chunks 21257/39153 (54.292%)  8.26e+10 bits/s  found 41480548287  SPSP!  ETA 11h57m53s
+progress: 14h17m44s  chunks 21383/39153 (54.614%)  8.26e+10 bits/s  found 41726418981  SPSP!  ETA 11h52m49s
+progress: 14h22m46s  chunks 21509/39153 (54.936%)  8.26e+10 bits/s  found 41972276329  SPSP!  ETA 11h47m44s
+progress: 14h27m49s  chunks 21635/39153 (55.258%)  8.26e+10 bits/s  found 42218151915  SPSP!  ETA 11h42m40s
+progress: 14h32m51s  chunks 21761/39153 (55.579%)  8.26e+10 bits/s  found 42464019613  SPSP!  ETA 11h37m37s
+progress: 14h37m53s  chunks 21887/39153 (55.901%)  8.26e+10 bits/s  found 42709878239  SPSP!  ETA 11h32m32s
+progress: 14h42m55s  chunks 22013/39153 (56.223%)  8.26e+10 bits/s  found 42955749078  SPSP!  ETA 11h27m28s
+progress: 14h47m58s  chunks 22139/39153 (56.545%)  8.26e+10 bits/s  found 43201628153  SPSP!  ETA 11h22m24s
+progress: 14h52m59s  chunks 22265/39153 (56.867%)  8.26e+10 bits/s  found 43447503203  SPSP!  ETA 11h17m20s
+progress: 14h58m01s  chunks 22391/39153 (57.188%)  8.26e+10 bits/s  found 43693382508  SPSP!  ETA 11h12m16s
+progress: 15h03m03s  chunks 22517/39153 (57.510%)  8.26e+10 bits/s  found 43939253736  SPSP!  ETA 11h07m11s
+progress: 15h08m06s  chunks 22643/39153 (57.832%)  8.26e+10 bits/s  found 44185122963  SPSP!  ETA 11h02m08s
+progress: 15h13m08s  chunks 22769/39153 (58.154%)  8.26e+10 bits/s  found 44430974573  SPSP!  ETA 10h57m04s
+progress: 15h18m10s  chunks 22895/39153 (58.476%)  8.26e+10 bits/s  found 44676849537  SPSP!  ETA 10h52m00s
+progress: 15h23m13s  chunks 23021/39153 (58.798%)  8.26e+10 bits/s  found 44922741161  SPSP!  ETA 10h46m57s
+progress: 15h28m16s  chunks 23147/39153 (59.119%)  8.26e+10 bits/s  found 45168618343  SPSP!  ETA 10h41m53s
+progress: 15h33m17s  chunks 23273/39153 (59.441%)  8.26e+10 bits/s  found 45414495530  SPSP!  ETA 10h36m49s
+progress: 15h38m20s  chunks 23399/39153 (59.763%)  8.26e+10 bits/s  found 45660387304  SPSP!  ETA 10h31m45s
+progress: 15h43m22s  chunks 23525/39153 (60.085%)  8.26e+10 bits/s  found 45906273910  SPSP!  ETA 10h26m41s
+progress: 15h48m24s  chunks 23651/39153 (60.407%)  8.26e+10 bits/s  found 46152133217  SPSP!  ETA 10h21m38s
+progress: 15h53m27s  chunks 23777/39153 (60.728%)  8.26e+10 bits/s  found 46398011760  SPSP!  ETA 10h16m34s
+progress: 15h58m29s  chunks 23903/39153 (61.050%)  8.26e+10 bits/s  found 46643882459  SPSP!  ETA 10h11m30s
+progress: 16h03m33s  chunks 24029/39153 (61.372%)  8.26e+10 bits/s  found 46889736501  SPSP!  ETA 10h06m28s
+progress: 16h08m35s  chunks 24155/39153 (61.694%)  8.26e+10 bits/s  found 47135630617  SPSP!  ETA 10h01m24s
+progress: 16h13m37s  chunks 24281/39153 (62.016%)  8.26e+10 bits/s  found 47381511958  SPSP!  ETA 9h56m20s
+progress: 16h18m39s  chunks 24407/39153 (62.337%)  8.26e+10 bits/s  found 47627391206  SPSP!  ETA 9h51m16s
+progress: 16h23m41s  chunks 24533/39153 (62.659%)  8.26e+10 bits/s  found 47873263197  SPSP!  ETA 9h46m12s
+progress: 16h28m43s  chunks 24659/39153 (62.981%)  8.26e+10 bits/s  found 48119107324  SPSP!  ETA 9h41m09s
+progress: 16h33m45s  chunks 24785/39153 (63.303%)  8.26e+10 bits/s  found 48364949666  SPSP!  ETA 9h36m05s
+progress: 16h38m47s  chunks 24911/39153 (63.625%)  8.26e+10 bits/s  found 48610838897  SPSP!  ETA 9h31m01s
+progress: 16h43m49s  chunks 25037/39153 (63.947%)  8.26e+10 bits/s  found 48856728628  SPSP!  ETA 9h25m57s
+progress: 16h48m51s  chunks 25163/39153 (64.268%)  8.26e+10 bits/s  found 49102588926  SPSP!  ETA 9h20m53s
+progress: 16h53m53s  chunks 25289/39153 (64.590%)  8.26e+10 bits/s  found 49348478135  SPSP!  ETA 9h15m50s
+progress: 16h58m56s  chunks 25415/39153 (64.912%)  8.26e+10 bits/s  found 49594356395  SPSP!  ETA 9h10m47s
+progress: 17h03m57s  chunks 25540/39153 (65.231%)  8.26e+10 bits/s  found 49838284263  SPSP!  ETA 9h05m46s
+progress: 17h09m00s  chunks 25665/39153 (65.551%)  8.26e+10 bits/s  found 50082207835  SPSP!  ETA 9h00m47s
+progress: 17h14m03s  chunks 25791/39153 (65.872%)  8.26e+10 bits/s  found 50328073483  SPSP!  ETA 8h55m43s
+progress: 17h19m05s  chunks 25917/39153 (66.194%)  8.26e+10 bits/s  found 50573973486  SPSP!  ETA 8h50m40s
+progress: 17h24m07s  chunks 26043/39153 (66.516%)  8.26e+10 bits/s  found 50819823736  SPSP!  ETA 8h45m36s
+progress: 17h29m09s  chunks 26169/39153 (66.838%)  8.26e+10 bits/s  found 51065718517  SPSP!  ETA 8h40m32s
+progress: 17h34m10s  chunks 26295/39153 (67.160%)  8.26e+10 bits/s  found 51311604675  SPSP!  ETA 8h35m29s
+progress: 17h39m12s  chunks 26421/39153 (67.481%)  8.26e+10 bits/s  found 51557479635  SPSP!  ETA 8h30m25s
+progress: 17h44m14s  chunks 26547/39153 (67.803%)  8.26e+10 bits/s  found 51803356028  SPSP!  ETA 8h25m21s
+progress: 17h49m16s  chunks 26673/39153 (68.125%)  8.26e+10 bits/s  found 52049247555  SPSP!  ETA 8h20m18s
+progress: 17h54m18s  chunks 26799/39153 (68.447%)  8.26e+10 bits/s  found 52295132302  SPSP!  ETA 8h15m14s
+progress: 17h59m20s  chunks 26925/39153 (68.769%)  8.26e+10 bits/s  found 52541009529  SPSP!  ETA 8h10m10s
+progress: 18h04m22s  chunks 27051/39153 (69.090%)  8.26e+10 bits/s  found 52786875727  SPSP!  ETA 8h05m07s
+progress: 18h09m24s  chunks 27177/39153 (69.412%)  8.26e+10 bits/s  found 53032722614  SPSP!  ETA 8h00m03s
+progress: 18h14m26s  chunks 27303/39153 (69.734%)  8.26e+10 bits/s  found 53278619088  SPSP!  ETA 7h55m00s
+progress: 18h19m28s  chunks 27429/39153 (70.056%)  8.26e+10 bits/s  found 53524485363  SPSP!  ETA 7h49m56s
+progress: 18h24m29s  chunks 27555/39153 (70.378%)  8.26e+10 bits/s  found 53770350300  SPSP!  ETA 7h44m53s
+progress: 18h29m31s  chunks 27681/39153 (70.700%)  8.26e+10 bits/s  found 54016229377  SPSP!  ETA 7h39m49s
+progress: 18h34m33s  chunks 27807/39153 (71.021%)  8.26e+10 bits/s  found 54262124742  SPSP!  ETA 7h34m46s
+progress: 18h39m35s  chunks 27933/39153 (71.343%)  8.26e+10 bits/s  found 54507963486  SPSP!  ETA 7h29m42s
+progress: 18h44m38s  chunks 28059/39153 (71.665%)  8.26e+10 bits/s  found 54753840375  SPSP!  ETA 7h24m39s
+progress: 18h49m40s  chunks 28185/39153 (71.987%)  8.26e+10 bits/s  found 54999744723  SPSP!  ETA 7h19m36s
+progress: 18h54m43s  chunks 28311/39153 (72.309%)  8.26e+10 bits/s  found 55245627391  SPSP!  ETA 7h14m33s
+progress: 18h59m45s  chunks 28437/39153 (72.630%)  8.26e+10 bits/s  found 55491496128  SPSP!  ETA 7h09m30s
+progress: 19h04m47s  chunks 28563/39153 (72.952%)  8.26e+10 bits/s  found 55737379146  SPSP!  ETA 7h04m26s
+progress: 19h09m49s  chunks 28689/39153 (73.274%)  8.26e+10 bits/s  found 55983271324  SPSP!  ETA 6h59m23s
+progress: 19h14m51s  chunks 28815/39153 (73.596%)  8.26e+10 bits/s  found 56229163253  SPSP!  ETA 6h54m19s
+progress: 19h19m53s  chunks 28941/39153 (73.918%)  8.26e+10 bits/s  found 56475041205  SPSP!  ETA 6h49m16s
+progress: 19h24m56s  chunks 29067/39153 (74.240%)  8.26e+10 bits/s  found 56720915809  SPSP!  ETA 6h44m13s
+progress: 19h29m58s  chunks 29193/39153 (74.561%)  8.26e+10 bits/s  found 56966809931  SPSP!  ETA 6h39m10s
+progress: 19h35m01s  chunks 29319/39153 (74.883%)  8.26e+10 bits/s  found 57212636942  SPSP!  ETA 6h34m07s
+progress: 19h40m03s  chunks 29445/39153 (75.205%)  8.26e+10 bits/s  found 57458510244  SPSP!  ETA 6h29m03s
+progress: 19h45m04s  chunks 29571/39153 (75.527%)  8.26e+10 bits/s  found 57704415974  SPSP!  ETA 6h24m00s
+progress: 19h50m06s  chunks 29697/39153 (75.849%)  8.26e+10 bits/s  found 57950305088  SPSP!  ETA 6h18m57s
+progress: 19h55m09s  chunks 29823/39153 (76.170%)  8.26e+10 bits/s  found 58196171390  SPSP!  ETA 6h13m53s
+progress: 20h00m11s  chunks 29949/39153 (76.492%)  8.26e+10 bits/s  found 58442042242  SPSP!  ETA 6h08m50s
+progress: 20h05m13s  chunks 30075/39153 (76.814%)  8.26e+10 bits/s  found 58687936767  SPSP!  ETA 6h03m47s
+progress: 20h10m15s  chunks 30201/39153 (77.136%)  8.26e+10 bits/s  found 58933797111  SPSP!  ETA 5h58m44s
+progress: 20h15m17s  chunks 30327/39153 (77.458%)  8.26e+10 bits/s  found 59179638238  SPSP!  ETA 5h53m41s
+progress: 20h20m19s  chunks 30453/39153 (77.779%)  8.26e+10 bits/s  found 59425522558  SPSP!  ETA 5h48m37s
+progress: 20h25m21s  chunks 30579/39153 (78.101%)  8.26e+10 bits/s  found 59671382186  SPSP!  ETA 5h43m34s
+progress: 20h30m22s  chunks 30705/39153 (78.423%)  8.26e+10 bits/s  found 59917257887  SPSP!  ETA 5h38m31s
+progress: 20h35m23s  chunks 30830/39153 (78.742%)  8.26e+10 bits/s  found 60161195626  SPSP!  ETA 5h33m30s
+progress: 20h40m24s  chunks 30954/39153 (79.059%)  8.26e+10 bits/s  found 60403162088  SPSP!  ETA 5h28m33s
+progress: 20h45m26s  chunks 31079/39153 (79.378%)  8.26e+10 bits/s  found 60647125773  SPSP!  ETA 5h23m33s
+progress: 20h50m28s  chunks 31205/39153 (79.700%)  8.26e+10 bits/s  found 60893003382  SPSP!  ETA 5h18m29s
+progress: 20h55m30s  chunks 31331/39153 (80.022%)  8.26e+10 bits/s  found 61138878473  SPSP!  ETA 5h13m26s
+progress: 21h00m31s  chunks 31457/39153 (80.344%)  8.26e+10 bits/s  found 61384744172  SPSP!  ETA 5h08m23s
+progress: 21h05m33s  chunks 31583/39153 (80.666%)  8.26e+10 bits/s  found 61630619629  SPSP!  ETA 5h03m20s
+progress: 21h10m35s  chunks 31709/39153 (80.987%)  8.26e+10 bits/s  found 61876514856  SPSP!  ETA 4h58m17s
+progress: 21h15m38s  chunks 31835/39153 (81.309%)  8.27e+10 bits/s  found 62122374174  SPSP!  ETA 4h53m14s
+progress: 21h20m40s  chunks 31961/39153 (81.631%)  8.27e+10 bits/s  found 62368250165  SPSP!  ETA 4h48m10s
+progress: 21h25m42s  chunks 32087/39153 (81.953%)  8.27e+10 bits/s  found 62614121634  SPSP!  ETA 4h43m07s
+progress: 21h30m44s  chunks 32213/39153 (82.275%)  8.27e+10 bits/s  found 62859987037  SPSP!  ETA 4h38m04s
+progress: 21h35m46s  chunks 32339/39153 (82.596%)  8.27e+10 bits/s  found 63105841067  SPSP!  ETA 4h33m01s
+progress: 21h40m48s  chunks 32465/39153 (82.918%)  8.27e+10 bits/s  found 63351724948  SPSP!  ETA 4h27m58s
+progress: 21h45m50s  chunks 32591/39153 (83.240%)  8.27e+10 bits/s  found 63597589699  SPSP!  ETA 4h22m55s
+progress: 21h50m52s  chunks 32717/39153 (83.562%)  8.27e+10 bits/s  found 63843455660  SPSP!  ETA 4h17m52s
+progress: 21h55m54s  chunks 32843/39153 (83.884%)  8.27e+10 bits/s  found 64089334142  SPSP!  ETA 4h12m49s
+progress: 22h00m56s  chunks 32969/39153 (84.206%)  8.27e+10 bits/s  found 64335217265  SPSP!  ETA 4h07m46s
+progress: 22h05m58s  chunks 33095/39153 (84.527%)  8.27e+10 bits/s  found 64581089010  SPSP!  ETA 4h02m43s
+progress: 22h11m00s  chunks 33221/39153 (84.849%)  8.27e+10 bits/s  found 64826960350  SPSP!  ETA 3h57m40s
+progress: 22h16m02s  chunks 33347/39153 (85.171%)  8.27e+10 bits/s  found 65072853085  SPSP!  ETA 3h52m37s
+progress: 22h21m05s  chunks 33473/39153 (85.493%)  8.27e+10 bits/s  found 65318733222  SPSP!  ETA 3h47m34s
+progress: 22h26m06s  chunks 33599/39153 (85.815%)  8.27e+10 bits/s  found 65564609364  SPSP!  ETA 3h42m30s
+progress: 22h31m09s  chunks 33725/39153 (86.136%)  8.27e+10 bits/s  found 65810519411  SPSP!  ETA 3h37m28s
+progress: 22h36m11s  chunks 33851/39153 (86.458%)  8.27e+10 bits/s  found 66056421110  SPSP!  ETA 3h32m25s
+progress: 22h41m13s  chunks 33977/39153 (86.780%)  8.27e+10 bits/s  found 66302298006  SPSP!  ETA 3h27m22s
+progress: 22h46m15s  chunks 34103/39153 (87.102%)  8.27e+10 bits/s  found 66548177595  SPSP!  ETA 3h22m19s
+progress: 22h51m17s  chunks 34229/39153 (87.424%)  8.27e+10 bits/s  found 66794064469  SPSP!  ETA 3h17m16s
+progress: 22h56m20s  chunks 34355/39153 (87.746%)  8.27e+10 bits/s  found 67039941350  SPSP!  ETA 3h12m13s
+progress: 23h01m22s  chunks 34481/39153 (88.067%)  8.27e+10 bits/s  found 67285839831  SPSP!  ETA 3h07m10s
+progress: 23h06m24s  chunks 34607/39153 (88.389%)  8.27e+10 bits/s  found 67531722772  SPSP!  ETA 3h02m07s
+progress: 23h11m26s  chunks 34733/39153 (88.711%)  8.27e+10 bits/s  found 67777592512  SPSP!  ETA 2h57m04s
+progress: 23h16m29s  chunks 34859/39153 (89.033%)  8.27e+10 bits/s  found 68023469865  SPSP!  ETA 2h52m01s
+progress: 23h21m29s  chunks 34984/39153 (89.352%)  8.27e+10 bits/s  found 68267402548  SPSP!  ETA 2h47m00s
+progress: 23h26m29s  chunks 35111/39153 (89.676%)  8.27e+10 bits/s  found 68515212708  SPSP!  ETA 2h41m54s
+progress: 23h31m30s  chunks 35243/39153 (90.014%)  8.27e+10 bits/s  found 68772775346  SPSP!  ETA 2h36m35s
+progress: 23h36m31s  chunks 35375/39153 (90.351%)  8.27e+10 bits/s  found 69030374366  SPSP!  ETA 2h31m16s
+progress: 23h41m32s  chunks 35507/39153 (90.688%)  8.27e+10 bits/s  found 69287948606  SPSP!  ETA 2h25m58s
+progress: 23h46m32s  chunks 35639/39153 (91.025%)  8.27e+10 bits/s  found 69545554298  SPSP!  ETA 2h20m39s
+progress: 23h51m33s  chunks 35771/39153 (91.362%)  8.28e+10 bits/s  found 69803151154  SPSP!  ETA 2h15m20s
+progress: 23h56m34s  chunks 35903/39153 (91.699%)  8.28e+10 bits/s  found 70060758060  SPSP!  ETA 2h10m02s
+progress: 1d00h01m  chunks 36035/39153 (92.036%)  8.28e+10 bits/s  found 70318347548  SPSP!  ETA 2h04m44s
+progress: 1d00h06m  chunks 36167/39153 (92.374%)  8.28e+10 bits/s  found 70575931219  SPSP!  ETA 1h59m25s
+progress: 1d00h11m  chunks 36299/39153 (92.711%)  8.28e+10 bits/s  found 70833529063  SPSP!  ETA 1h54m07s
+progress: 1d00h16m  chunks 36431/39153 (93.048%)  8.28e+10 bits/s  found 71091134604  SPSP!  ETA 1h48m49s
+progress: 1d00h21m  chunks 36563/39153 (93.385%)  8.28e+10 bits/s  found 71348723130  SPSP!  ETA 1h43m32s
+progress: 1d00h26m  chunks 36695/39153 (93.722%)  8.29e+10 bits/s  found 71606316493  SPSP!  ETA 1h38m14s
+progress: 1d00h31m  chunks 36827/39153 (94.059%)  8.29e+10 bits/s  found 71863931199  SPSP!  ETA 1h32m56s
+progress: 1d00h36m  chunks 36959/39153 (94.396%)  8.29e+10 bits/s  found 72121508053  SPSP!  ETA 1h27m39s
+progress: 1d00h41m  chunks 37091/39153 (94.733%)  8.29e+10 bits/s  found 72379070441  SPSP!  ETA 1h22m22s
+progress: 1d00h46m  chunks 37223/39153 (95.071%)  8.29e+10 bits/s  found 72636638105  SPSP!  ETA 1h17m05s
+progress: 1d00h51m  chunks 37355/39153 (95.408%)  8.29e+10 bits/s  found 72894203632  SPSP!  ETA 1h11m47s
+progress: 1d00h56m  chunks 37487/39153 (95.745%)  8.29e+10 bits/s  found 73151793971  SPSP!  ETA 1h06m30s
+progress: 1d01h01m  chunks 37619/39153 (96.082%)  8.3e+10 bits/s  found 73409375531  SPSP!  ETA 1h01m14s
+progress: 1d01h06m  chunks 37751/39153 (96.419%)  8.3e+10 bits/s  found 73667001133  SPSP!  ETA 55m57s
+progress: 1d01h11m  chunks 37883/39153 (96.756%)  8.3e+10 bits/s  found 73924593304  SPSP!  ETA 50m40s
+progress: 1d01h16m  chunks 38015/39153 (97.093%)  8.3e+10 bits/s  found 74182193343  SPSP!  ETA 45m24s
+progress: 1d01h21m  chunks 38147/39153 (97.431%)  8.3e+10 bits/s  found 74439752765  SPSP!  ETA 40m07s
+progress: 1d01h26m  chunks 38279/39153 (97.768%)  8.3e+10 bits/s  found 74697320126  SPSP!  ETA 34m51s
+progress: 1d01h31m  chunks 38411/39153 (98.105%)  8.3e+10 bits/s  found 74954902823  SPSP!  ETA 29m35s
+stopped after 38448 of 39153 chunks, checkpoint saved

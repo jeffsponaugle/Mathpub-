@@ -1,0 +1,2 @@
+Fri Oct  2 11:14:17 AM PDT 2026 stop_at_chunk: will stop PID 4149926 after chunk 91859 of runs/a20b.chunks
+Fri Oct  2 11:40:17 AM PDT 2026 stop_at_chunk: sent SIGTERM to 4149926, last logged chunk 91861

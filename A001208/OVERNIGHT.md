@@ -52,12 +52,19 @@
   mathd (tag h9k8n, ETA ~10:10 PDT); the GPU k=21 run (1.8e13 of ~3.4e13 nodes) is suspended with SIGSTOP:
   resume with `pkill -CONT -f "psp2gpu -k"; pkill -CONT -f "sh -c cd /Users/Jeff.Sponaugle/src/math/A001208/psp2gpu"`.
 
+- 11:04 Oct 2 — Mac resumed: GPU k=21 continues (2.1e13 of ~3.4e13 nodes, ~9 h left); the Mac CPU now runs the tail of the
+  A001211(27) search (mathg's chunks 20-29 = items [2000000,2964437) at depth 4, target 176381; psph/mac_jobs5.sh,
+  logs in psph/logs/mac_h27k6).
+
+- 14:05 Oct 2 — Mac STOPPED on request: its A001211(27) chunk (82 % done) abandoned, chunks 20-21 handed to mathb's queue;
+  GPU k=21 suspended again (SIGSTOP, ~2.5e13 of ~3.4e13 nodes; resume with pkill -CONT as above). The x86 boxes keep running.
+
 ## Lower bounds established tonight (all bases verified by direct h-range computation)
 
 | term | bound | basis | source |
 |---|---|---|---|
-| A053348(9) = A005344(8) = n(9,8) | >= 6082 (5945 18:20, 5844, 5822, 5809, 5781, 5728, 5708, 5649, 5599, 5521, 5418 heuristic) | 1 8 27 88 197 521 1226 1461 | exact search on mathg, items 9000..9250, 23:00 |
-| A001211(27) = n(27,6) | >= 176380 | 1 19 177 1016 6649 22876 | hsearch2, 420 s |
+| A053348(9) = A005344(8) = n(9,8) | **= 6082 (PROVEN 2026-10-02 11:18 PDT; all 11003 items searched)** | 1 8 27 88 197 521 1226 1461 | found on mathg 23:00 Oct 1; search complete Oct 2 |
+| A001211(27) = n(27,6) | >= 177914 (177568 13:10, 176863 12:35; heuristic 176380) | 1 19 122 1028 6378 22929 | exact search on the Mac, items 2000000..2100000, Oct 2 13:28 |
 | A001209(303) = n(303,4) | >= 71148327 | 1 228 17657 912312 | formula family (3,A) continued to t=25; hrange verified |
 | A001209(304) | >= 72060639 | same basis | formula (4,A) |
 | A001209(305) | >= 72972951 | same basis | formula (5,A) |

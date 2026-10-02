@@ -20,7 +20,7 @@ and pi_6(2^64) = 48,629,687,343 (Jul 2026). They imply
 |----|------|--------|
 | 18 | 3,439,443,854 | Desfontaines' pi_6, not in OEIS; **confirmed here** (GPU run 2026-09-30, `runs/a18.*`) |
 | 19 | 24,711,327,817 | Desfontaines' pi_6, not in OEIS; **confirmed here** (GPU run 2026-10-01, `runs/a19.*`) |
-| 20 | ~1.806e11 (Hardy–Littlewood) | **unknown** — GPU runs on atom1 (since Oct 1 00:55) + atom2 (since Oct 1 10:07), ETA Oct 2 ~12:10 |
+| 20 | **180,637,585,474** | **new**, computed here (two Sparks, Oct 1–2 2026); A063501(20) = pi_6(10^20) = 209,359,671,771 |
 | 21 | ~1.34e12 (Hardy–Littlewood) | unknown — about 3 weeks on one Spark |
 
 No sextuplet straddles 10^n (n >= 3) or 2^64, so a(n) = A063501(n) - A063501(n-1) there.
@@ -71,6 +71,51 @@ CPU tool (`recheck`) agree line for line. The three excluded pseudo-sextuplets:
 | 1157159728167006787 | p+6 = 563142103 · 2054827231 |
 | 4211906013907595737 | p+4 = 1510446653 · 2788516897 |
 | 6526567117896650257 | p+16 = 154618367 · 42210813919 |
+
+### a(20) run
+
+`a350826_cuda count 1e19 1e20 -b 2^64,2e19,3e19,2^65,4e19,5e19,6e19,7e19,2^66,8e19,9e19` (wheel 37, B = 2^16,
+92,569 chunks) on both Sparks: atom1 chunks 0–53417 (Oct 1 00:55 – Oct 2 11:12) and 91858–92568 (tail after an
+automatic rebalance), atom2 chunks 53416–91861 (Oct 1 10:07 – Oct 2 11:40); about 60 GPU-hours at 8.6e10 bits/s.
+Merged with `combine_a20.py` (`runs/a20_combined.txt`): every chunk once, the 10 chunks computed on both GPUs
+identical, candidates − count = 15 pseudo-sextuplets.
+
+```
+RESULT [1e19, 1e20) count 180637585474 cks 6fde7e53b8dbdda6  A350826(20)
+RESULT A063501(20) = pi_6(10^20) = 209359671771
+```
+
+Within 2e-6 of the Hardy–Littlewood estimate (1.806376e11). pi_6 at the other boundaries: pi_6(2^64) =
+48,629,688,861, pi_6(2·10^19) = 52,135,772,038, pi_6(3·10^19) = 73,944,895,315, pi_6(2^65) = 88,393,273,302,
+pi_6(4·10^19) = 94,783,018,566, pi_6(5·10^19) = 114,931,926,413, pi_6(6·10^19) = 134,551,084,595,
+pi_6(7·10^19) = 153,741,842,404, pi_6(2^66) = 160,912,739,529, pi_6(8·10^19) = 172,574,793,380,
+pi_6(9·10^19) = 191,101,091,054.
+
+**pi_6(2^64) differs from Luhn's table** (48,629,687,343, Desfontaines Jul 2026) by +1518. A full recount of
+[1e19, 2^64) on both GPUs with the halves swapped reproduced all 92,569 chunk lines exactly (`runs/v64a.*`,
+`runs/v64b.*`, `verify/compare_bin0.py`), and the CPU program recomputed 40 random chunks of that range with no
+mismatch (`verify/spot64.*`). Every counted sextuplet passed BPSW in all six members, so the count cannot
+contain composites; we believe the table value is 1518 too small.
+
+The 15 excluded pseudo-sextuplets (base-2 strong pseudoprime member, five primes; all re-verified):
+
+| p | composite member |
+|---|---|
+| 14436089061180203227 | p+6 = 921510559 · 15665679487 |
+| 18195704945653017187 | p+6 = 635884423 · 28614798991 |
+| 19023809129048783947 | p+4 = 96536551 · 197063277401 |
+| 19241635766281308547 | p+10 = 2471529041 · 7785316477 |
+| 20006509539068916037 | p+12 = 632558449 · 31627922401 |
+| 20838543370207726057 | p+16 = 1813917397 · 11488143509 |
+| 22282765621488210187 | p = 2360231219 · 9440924873 |
+| 29516860589310759097 | p+12 = 3436094329 · 8590235821 |
+| 31830699322617753907 | p = 2820935099 · 11283740393 |
+| 49058042171497345027 | p+10 = 5718860153 · 8578290229 |
+| 61665756833788609627 | p+6 = 4533790057 · 13601370169 |
+| 62953548084920616577 | p = 1360725889 · 46264680193 |
+| 70455417088719278377 | p = 1041119347 · 67672757491 |
+| 78948038145292461907 | p+6 = 2809769353 · 28097693521 |
+| 80348597812901062357 | p+16 = 637025117 · 126130972969 |
 
 ## Method
 

@@ -214,7 +214,7 @@ estimate first, exponential-fit upper estimate in parentheses; see psph/README.m
 | k=6, h=27 | A001211(27) | 320 (40 000) | 1.4 days (months) | hours (2 weeks) | exponent still rising |
 | k=6, h=30 | A001211(30) | 1000 (630 000) | 4.5 days (years) | 10 h (9 months) | as above |
 | k=7, h=15 | A053346(15) | 1300 (38 000) | 6 days (6 months) | 13 h (16 days) | 3 points |
-| k=8, h=9 | A053348(9) = A005344(8) | ~280-700 (running since 2026-09-30 night; **>= 5521 found**: {1,3,14,46,201,346,1135,1661}; chunks in the a_2=3 region are 5x costlier than estimated) | ~1-3 days | hours | single partial point |
+| k=8, h=9 | A053348(9) = A005344(8) | **DONE 2026-10-02: n(9,8) = 6082**, basis {1,8,27,88,197,521,1226,1461}; ~1.5e14 leaf candidates, ~1 day on 4 x86 boxes + M1 Pro + Orin (see DEPLOY.md) | | | |
 | k=9, h=7 | A005342(9), unlocks A084193/A196416 antidiagonal 16 | ~3000 | ~2 weeks | ~1.3 days | single partial point, x3-5 either way |
 | k=9, h=8 | A005343(9) | ~1e5 | ~1 year | ~40 days | not measured; from Challis-Robinson's count of 2.5e13 admissible 8-sets |
 
@@ -236,7 +236,7 @@ Ranked by value per unit of effort:
 4. Add "lower bound, not proven" comments to **A001213(16+), A001214(13+), A001215(11+), A001216(10)**.
 
 **Tier 1 — new terms feasible on this M1 Pro in days to a few weeks (psph, CPU):**
-5. **A053348(9) = A005344(8)** via (k=8, h=9): ~1-3 days (low-confidence estimate; also completes a row entry).
+5. **A053348(9) = A005344(8)** via (k=8, h=9): **DONE — 6082** (2026-10-02; b-files and submission draft in bfiles/).
 6. **A001209(303)** via k=4: ~2 weeks here, ~1 day on 100 cores; cheapest genuinely new column term.
 7. **A001211(27)** via (k=6, h=27): 1.4 days if the power law holds, months if the exponential does.
 8. **A001210(91)** via (k=5, h=91): 1-4 weeks here, days on 100 cores; then h=92, 93, ... at ~x1.4 each.

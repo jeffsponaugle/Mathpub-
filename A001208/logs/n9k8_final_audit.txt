@@ -1,0 +1,30 @@
+completed ranges (lo,hi) -> machine/tag:
+  [0,400) [('mac-overnight', 'chunk0')]
+  [400,800) [('mac-overnight', 'chunk1')]
+  [800,1200) [('mac-overnight', 'chunk2')]
+  [1200,2200) [('mathd', 'logs/h9k8')]
+  [2200,3200) [('mathd', 'logs/h9k8')]
+  [3200,4200) [('mathd', 'logs/h9k8')]
+  [4200,4450) [('mathd', 'logs/h9k8n')]
+  [4450,4700) [('mathg', 'logs/h9k8z')]
+  [4700,4950) [('mathg', 'logs/h9k8y')]
+  [4950,5200) [('mathg', 'logs/h9k8y')]
+  [5200,6200) [('mathb', 'logs/h9k8a')]
+  [6200,7200) [('mathb', 'logs/h9k8a')]
+  [7200,8000) [('mathb', 'logs/h9k8a')]
+  [8000,8500) [('mathg', 'logs/h9k8')]
+  [8500,9000) [('mathg', 'logs/h9k8')]
+  [9000,9250) [('mathg', 'logs/h9k8x')]
+  [9250,9500) [('mathd', 'logs/h9k8g')]
+  [9500,10000) [('mathd', 'logs/h9k8e')]
+  [10000,10250) [('mac', 'mac_h9k8b')]
+  [10250,10500) [('mathd', 'logs/h9k8m')]
+  [10500,10600) [('orin1', 'logs/h9k8')]
+  [10600,10700) [('orin1', 'logs/h9k8')]
+  [10700,11003) [('mac', 'mac_h9k8c')]
+items covered: 11003 of 11003; missing runs: []; double-covered runs: []
+solutions collected: 479
+best: SOLUTION h=9 k=8 n_h=6082 : 1 8 27 88 197 521 1226 1461
+all bases attaining the best:
+   SOLUTION h=9 k=8 n_h=6082 : 1 8 27 88 197 521 1226 1461
+status: COMPLETE: n(9,8) = 6082

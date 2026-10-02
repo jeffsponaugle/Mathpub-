@@ -1,0 +1,6 @@
+Wed Sep 30 10:44:45 PM PDT 2026 queue: waiting for the a(19) run
+Thu Oct  1 12:55:47 AM PDT 2026 queue: a(19) done: RESULT [1000000000000000000, 10000000000000000000) count 24711327817 cks 584f516044b075a6  A350826(19)
+Thu Oct  1 12:55:47 AM PDT 2026 queue: starting a(20)
+Thu Oct  1 10:07:54 AM PDT 2026 stop_a20: will stop PID 1003403 after chunk 53417 (split at chunk 53416)
+Fri Oct  2 11:12:33 AM PDT 2026 stop_a20: sent SIGTERM, last logged chunk 53417
+Fri Oct  2 11:12:36 AM PDT 2026 queue: a(20) exited with status 0

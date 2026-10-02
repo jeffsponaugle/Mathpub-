@@ -1,0 +1,9 @@
+[10000000000000000000, 100000000000000000000) on NVIDIA GB10: wheel 37 (1516640125 classes, ~1.84e+16 candidates), B = 65536 (42 pattern, 510 medium, 5978 large primes), 711 chunks of 16384
+classes [1505001472, 1516640125) of 1516640125 only (partial count)
+progress: 4.4s  chunks 1/711 (0.141%)  4.56e+10 bits/s  found 1950289  ETA 51m34s
+progress: 5m07s  chunks 133/711 (18.706%)  8.58e+10 bits/s  found 259549247  ETA 22m17s
+progress: 10m07s  chunks 263/711 (36.990%)  8.6e+10 bits/s  found 513247911  ETA 17m15s
+progress: 15m08s  chunks 393/711 (55.274%)  8.6e+10 bits/s  found 766922680  ETA 12m14s
+progress: 20m08s  chunks 523/711 (73.558%)  8.6e+10 bits/s  found 1020594046  ETA 7m14s
+progress: 25m08s  chunks 653/711 (91.842%)  8.6e+10 bits/s  found 1274296547  ETA 2m13s
+done in 27m18s (8.61e+10 bits/s)
