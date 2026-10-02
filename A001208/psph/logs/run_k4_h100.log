@@ -1,0 +1,25 @@
+[psph] using TGT = known value 979831
+[psph] h=100 k=4 TGT=979831 threads=2  (known n_100(4)=979831, listing extremal bases)
+[psph] bounds a_{j+1} <= n_h(j)+1: n(1)=100 n(2)=2650 n(3)=56302
+[psph] lower bounds a_j >= LOW[j]: L2=2 L3=98 L4=9799
+[psph] split depth 3: 159831 work items (generated in 0.35s)
+[psph] 48413/159831 items (30.3%) elapsed 60.4s, ETA 2.3m, leaf cand 8.94e+08, full checks 9922417, sols 0
+[psph] 64692/159831 items (40.5%) elapsed 2.0m, ETA 3.0m, leaf cand 1.25e+09, full checks 19856260, sols 0
+[psph] 79264/159831 items (49.6%) elapsed 3.0m, ETA 3.1m, leaf cand 1.56e+09, full checks 28495341, sols 0
+[psph] 95969/159831 items (60.0%) elapsed 4.0m, ETA 2.7m, leaf cand 1.9e+09, full checks 36650096, sols 0
+[psph] 116966/159831 items (73.2%) elapsed 5.0m, ETA 110.1s, leaf cand 2.32e+09, full checks 45423045, sols 0
+SOLUTION h=100 k=4 n_h=979831 : 1 75 1983 35044
+[psph] 149282/159831 items (93.4%) elapsed 6.0m, ETA 25.5s, leaf cand 3.03e+09, full checks 53396769, sols 1
+[psph] thread 0: 79030 items, busy 270.94s (tables 4.10s, candidates 266.60s)
+[psph] thread 1: 80801 items, busy 271.04s (tables 3.97s, candidates 266.82s)
+[psph] ---- statistics h=100 k=4 TGT=979831 ----
+[psph] level           visited       admissible      pruned(LOW) degenerate
+[psph] a_2                 100              100                0          0
+[psph] a_3              172090           159831            12259          0
+[psph] leaf candidates a_4 tested: 3224457589   X-pass: 523656717 (16.2%)   deephole-pass: 59881326 (1.86%)   stage2-pass: 53463754   full-check fail: 53463753   direct: 0   solutions: 1
+[psph] probes: 34084768533 (10.57 per candidate)
+[psph] full-check failure position (blocks of a_k below the top block): [1]=142 [2]=5117 [3]=43255 [4]=152516 [5]=356428 [6]=684519 [7]=1169044 [8]=1809605 [9]=2528954 [10]=3215217 [11]=3789333 [12]=4181329 [13]=4333591 [14]=4236089 [15]=3937233 [16]=3593520 [17]=19427861
+[psph] leaf table bytes 1.26e+10, full-check bytes 9.6e+12
+[psph] wall 362.69s, CPU 542.43s (1.5 cores), items 159831 (split 3, gen 0.35s); 5.94e+06 candidates per CPU-second
+[psph] worker CPU split: leaf tables 1.5%, leaf candidates (X test, stage 2, full checks) 98.4%, prefix DP+overhead 0.1%
+[psph] 1 bases with n_100(A_4) >= 979831

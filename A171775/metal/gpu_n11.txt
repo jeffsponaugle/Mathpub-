@@ -1,0 +1,4 @@
+# n=11 [1, 1237940039285380274899124224] INTERRUPTED: 172.5s, steps 153183437134, lookups 168726853148, hits 10643296225, f1 92355601, (n-1)-palindromes 86868, canonical 86868, checksum a44fb8949de58b0c, solutions 0
+# failed at length: L=9:86868 L=8:0 L=7:0 L=6:0 L=5:0 L=4:0 L=3:0
+# n=11 [1, 1237940039285380274899124224] INTERRUPTED: 30598.0s, steps 4006617051090, lookups 4362206771966, hits 299583710891, f1 1449280138, (n-1)-palindromes 434527, canonical 434527, checksum bf61ba31ab0feff9, solutions 0
+# failed at length: L=9:434527 L=8:0 L=7:0 L=6:0 L=5:0 L=4:0 L=3:0

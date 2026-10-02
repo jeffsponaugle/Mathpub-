@@ -1,0 +1,12 @@
+=== chunk 0 items [0,400) TGT=5419 start Wed Sep 30 23:09:33 PDT 2026
+=== chunk 0 done rc=0 Wed Sep 30 23:59:12 PDT 2026: 0 solutions; [psph] leaf candidates a_8 tested: 1315885208864   X-pass: 389250147043 (29.6%)   deephole-pass: 29592453056 (2.25%)   s
+[psph] worker CPU split: leaf tables 19.1%, leaf candidates (X test, stage 2, full checks) 75.6%, prefix DP+overhead 5.3
+=== chunk 1 items [400,800) TGT=5419 start Wed Sep 30 23:59:12 PDT 2026
+=== chunk 1 done rc=0 Thu Oct  1 01:05:42 PDT 2026: 0 solutions; [psph] leaf candidates a_8 tested: 1622235652668   X-pass: 530394457748 (32.7%)   deephole-pass: 48765980149 (3.01%)   s
+[psph] worker CPU split: leaf tables 16.7%, leaf candidates (X test, stage 2, full checks) 78.7%, prefix DP+overhead 4.6
+=== chunk 2 items [800,1200) TGT=5419 start Thu Oct  1 01:05:43 PDT 2026
+=== chunk 2 done rc=0 Thu Oct  1 06:34:26 PDT 2026: 1 solutions; [psph] leaf candidates a_8 tested: 3118294929831   X-pass: 1426613160399 (45.7%)   deephole-pass: 208897203331 (6.7%)   
+[psph] worker CPU split: leaf tables 9.4%, leaf candidates (X test, stage 2, full checks) 88.0%, prefix DP+overhead 2.6%
+=== chunk 3 items [1200,1600) TGT=5419 start Thu Oct  1 06:34:26 PDT 2026
+=== chunk 3 items [1200,1600) TGT=5522 S2=auto start Thu Oct  1 07:02:31 PDT 2026
+=== Mac chunk 3 retired (items 1200-1600 covered by mathd) Thu Oct  1 16:35:58 PDT 2026

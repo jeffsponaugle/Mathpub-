@@ -1,0 +1,4 @@
+=== chunk 0 items [10000,10250) h=9 k=8 TGT=5946 start Thu Oct  1 22:51:43 PDT 2026
+=== chunk 1 [10250,10500) reassigned to mathb Fri Oct  2 01:57:53 PDT 2026
+=== chunk 0 done rc=0 Fri Oct  2 05:19:20 PDT 2026: 0 solutions; [psph] leaf candidates a_8 tested: 4179900250705   X-pass: 2300055648455 (55%)   deephole-pass: 505681370805 (
+=== RANGE [10000,10500) COMPLETE Fri Oct  2 05:19:20 PDT 2026

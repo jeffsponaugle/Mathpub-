@@ -1,0 +1,32 @@
+[psph] h=9 k=8 TGT=5419 threads=10
+[psph] bounds a_{j+1} <= n_h(j)+1: n(1)=9 n(2)=34 n(3)=112 n(4)=326 n(5)=797 n(6)=1617 n(7)=3191
+[psph] lower bounds a_j >= LOW[j]: L2=2 L3=2 L4=2 L5=2 L6=8 L7=67 L8=603
+[psph] split depth 4: 11003 work items (generated in 0.00s)
+[psph] processing work items [400, 800) of 11003
+[psph] 20/400 items (5.0%) [range 400..800 of 11003] elapsed 5.0m, ETA 95.0m, leaf cand 1.24e+11, full checks 387776454, sols 0
+[psph] 47/400 items (11.8%) [range 400..800 of 11003] elapsed 10.0m, ETA 75.1m, leaf cand 2.56e+11, full checks 779683598, sols 0
+[psph] 70/400 items (17.5%) [range 400..800 of 11003] elapsed 15.0m, ETA 70.7m, leaf cand 3.64e+11, full checks 1278311449, sols 0
+[psph] 100/400 items (25.0%) [range 400..800 of 11003] elapsed 20.0m, ETA 60.0m, leaf cand 4.95e+11, full checks 1672580365, sols 0
+[psph] 124/400 items (31.0%) [range 400..800 of 11003] elapsed 25.0m, ETA 55.6m, leaf cand 6.12e+11, full checks 2119936635, sols 0
+[psph] 149/400 items (37.2%) [range 400..800 of 11003] elapsed 30.0m, ETA 50.5m, leaf cand 7.33e+11, full checks 2578042786, sols 0
+[psph] 174/400 items (43.5%) [range 400..800 of 11003] elapsed 35.0m, ETA 45.5m, leaf cand 8.49e+11, full checks 3048375099, sols 0
+[psph] 196/400 items (49.0%) [range 400..800 of 11003] elapsed 40.0m, ETA 41.6m, leaf cand 9.68e+11, full checks 3458517067, sols 0
+[psph] 216/400 items (54.0%) [range 400..800 of 11003] elapsed 45.0m, ETA 38.3m, leaf cand 1.08e+12, full checks 3941619014, sols 0
+[psph] 241/400 items (60.2%) [range 400..800 of 11003] elapsed 50.0m, ETA 33.0m, leaf cand 1.19e+12, full checks 4389893861, sols 0
+[psph] 275/400 items (68.8%) [range 400..800 of 11003] elapsed 55.0m, ETA 25.0m, leaf cand 1.31e+12, full checks 4813955939, sols 0
+[psph] 352/400 items (88.0%) [range 400..800 of 11003] elapsed 60.0m, ETA 8.2m, leaf cand 1.47e+12, full checks 5000571273, sols 0
+[psph] 392/400 items (98.0%) [range 400..800 of 11003] elapsed 65.0m, ETA 79.6s, leaf cand 1.61e+12, full checks 5270949639, sols 0
+[psph] ---- statistics h=9 k=8 TGT=5419 ----
+[psph] level           visited       admissible      pruned(LOW) degenerate
+[psph] a_2                   9                9                0          0
+[psph] a_3                 201              201                0          0
+[psph] a_4               11003            11003                0          0
+[psph] a_5               37280            37280                0          0
+[psph] a_6             7417054          7417053                1          0
+[psph] a_7          2939302950       2889557402         49745548          0
+[psph] leaf candidates a_8 tested: 1622235652668   X-pass: 530394457748 (32.7%)   deephole-pass: 48765980149 (3.01%)   stage2-pass: 5374931012   full-check fail: 5374931012   direct: 0   solutions: 0
+[psph] probes: 10164349250730 (6.27 per candidate)
+[psph] leaf table bytes 6.67e+12, full-check bytes 9.58e+12
+[psph] wall 3990.33s, CPU 37896.23s (9.5 cores), items 11003 (split 4, gen 0.00s); 4.28e+07 candidates per CPU-second
+[psph] worker CPU split: leaf tables 16.7%, leaf candidates (X test, stage 2, full checks) 78.7%, prefix DP+overhead 4.6%
+[psph] 0 bases with n_9(A_8) >= 5419

@@ -1,0 +1,132 @@
+== formula checks ==
+FAIL k=4 formula h=255: formula n=36205623 (A=192,12565,548700), DP=139918501, table=-1
+FAIL k=4 formula h=256: formula n=36754323 (A=192,12565,548700), DP=140467201, table=-1
+FAIL k=4 formula h=257: formula n=37303023 (A=192,12565,548700), DP=141015901, table=-1
+FAIL k=4 formula h=258: formula n=37851723 (A=192,12565,548700), DP=141564601, table=-1
+FAIL k=4 formula h=259: formula n=38463044 (A=197,12696,541857), DP=140340964, table=-1
+FAIL k=4 formula h=260: formula n=39004901 (A=197,12696,541857), DP=140882821, table=-1
+FAIL k=4 formula h=261: formula n=39552632 (A=196,13023,581788), DP=151846669, table=-1
+FAIL k=4 formula h=262: formula n=40151151 (A=200,12890,550137), DP=144135895, table=-1
+FAIL k=4 formula h=263: formula n=40785754 (A=200,13046,582781), DP=153271404, table=-1
+FAIL k=4 formula h=264: formula n=41368535 (A=200,13046,582781), DP=153854185, table=-1
+FAIL k=4 formula h=265: formula n=41969622 (A=199,13620,608390), DP=161223351, table=-1
+FAIL k=4 formula h=266: formula n=42581613 (A=203,13242,591537), DP=157348843, table=-1
+FAIL k=4 formula h=267: formula n=43340973 (A=201,13757,628266), DP=167747023, table=-1
+FAIL k=4 formula h=268: formula n=43969239 (A=201,13757,628266), DP=168375289, table=-1
+FAIL k=4 formula h=269: formula n=44597505 (A=201,13757,628266), DP=169003555, table=-1
+FAIL k=4 formula h=270: formula n=45225771 (A=201,13757,628266), DP=169631821, table=-1
+FAIL k=4 formula h=271: formula n=45927141 (A=206,13894,620767), DP=168227858, table=-1
+FAIL k=4 formula h=272: formula n=46547908 (A=206,13894,620767), DP=168848625, table=-1
+FAIL k=4 formula h=273: formula n=47168675 (A=206,13894,620767), DP=169469392, table=-1
+FAIL k=4 formula h=274: formula n=47857946 (A=209,14097,629837), DP=172575339, table=-1
+FAIL k=4 formula h=275: formula n=48573882 (A=209,14260,665529), DP=183020476, table=-1
+FAIL k=4 formula h=276: formula n=49239411 (A=209,14260,665529), DP=183686005, table=-1
+FAIL k=4 formula h=277: formula n=49921732 (A=208,14860,693498), DP=192098947, table=-1
+FAIL k=4 formula h=278: formula n=50622399 (A=212,14465,675097), DP=187676967, table=-1
+FAIL k=4 formula h=279: formula n=51482307 (A=210,15003,715174), DP=199533547, table=-1
+FAIL k=4 formula h=280: formula n=52197481 (A=210,15003,715174), DP=200248721, table=-1
+FAIL k=4 formula h=281: formula n=52912655 (A=210,15003,715174), DP=200963895, table=-1
+FAIL k=4 formula h=282: formula n=53627829 (A=210,15003,715174), DP=201679069, table=-1
+FAIL k=4 formula h=283: formula n=54427686 (A=215,15146,706989), DP=200077888, table=-1
+FAIL k=4 formula h=284: formula n=55134675 (A=215,15146,706989), DP=200784877, table=-1
+FAIL k=4 formula h=285: formula n=55841664 (A=215,15146,706989), DP=201491866, table=-1
+FAIL k=4 formula h=286: formula n=56623397 (A=218,15358,716885), DP=205029111, table=-1
+FAIL k=4 formula h=287: formula n=57428806 (A=218,15575,727084), DP=208673109, table=-1
+FAIL k=4 formula h=288: formula n=58183007 (A=218,15528,755761), DP=217659169, table=-1
+FAIL k=4 formula h=289: formula n=58953554 (A=217,16154,786194), DP=227210067, table=-1
+FAIL k=4 formula h=290: formula n=59751069 (A=221,15742,766177), DP=222191331, table=-1
+FAIL k=4 formula h=291: formula n=60720003 (A=219,16303,809748), DP=235636669, table=-1
+FAIL k=4 formula h=292: formula n=61529751 (A=219,16303,809748), DP=236446417, table=-1
+FAIL k=4 formula h=293: formula n=62339499 (A=219,16303,809748), DP=237256165, table=-1
+FAIL k=4 formula h=294: formula n=63149247 (A=219,16303,809748), DP=238065913, table=-1
+FAIL k=4 formula h=295: formula n=64056407 (A=224,16452,800847), DP=236249866, table=-1
+FAIL k=4 formula h=296: formula n=64857254 (A=224,16452,800847), DP=237050713, table=-1
+FAIL k=4 formula h=297: formula n=65658101 (A=224,16452,800847), DP=237851560, table=-1
+FAIL k=4 formula h=298: formula n=66540204 (A=227,16673,811605), DP=241858291, table=-1
+FAIL k=4 formula h=299: formula n=67451530 (A=228,16697,812808), DP=243029593, table=-1
+FAIL k=4 formula h=300: formula n=68292599 (A=227,16850,853801), DP=256140301, table=-1
+FAIL k=4 formula h=301: formula n=69158652 (A=226,17502,886802), DP=266927403, table=-1
+FAIL k=4 formula h=302: formula n=70061547 (A=230,17073,865101), DP=261260503, table=-1
+formula/table checks: 341 tests, 48 failures
+PASS h= 2 k=3 n=8        bases=1  [TGT=n: 0.00s wall 0.00s cpu, 4 cand, 3 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 2 k=4 n=12       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 13 cand, 10 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 2 k=5 n=16       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 51 cand, 46 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 2 k=6 n=20       bases=5  [TGT=n: 0.00s wall 0.00s cpu, 244 cand, 234 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 2 k=7 n=26       bases=3  [TGT=n: 0.03s wall 0.00s cpu, 1120 cand, 1074 X-pass]  [TGT=n+1: 0.02s wall 0.00s cpu]
+PASS h= 2 k=8 n=32       bases=2  [TGT=n: 0.03s wall 0.00s cpu, 6029 cand, 5850 X-pass]  [TGT=n+1: 0.03s wall 0.00s cpu]
+PASS h= 3 k=3 n=15       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 10 cand, 3 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 3 k=4 n=24       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 67 cand, 38 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 3 k=5 n=36       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 594 cand, 420 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 3 k=6 n=52       bases=2  [TGT=n: 0.03s wall 0.00s cpu, 6188 cand, 5079 X-pass]  [TGT=n+1: 0.03s wall 0.00s cpu]
+PASS h= 3 k=7 n=70       bases=1  [TGT=n: 0.03s wall 0.02s cpu, 87447 cand, 75834 X-pass]  [TGT=n+1: 0.03s wall 0.02s cpu]
+PASS h= 3 k=8 n=93       bases=1  [TGT=n: 0.05s wall 0.26s cpu, 1484122 cand, 1291390 X-pass]  [TGT=n+1: 0.03s wall 0.22s cpu]
+PASS h= 3 k=9 n=121      bases=1  [TGT=n: 0.31s wall 2.79s cpu, 27409286 cand, 24919302 X-pass]  [TGT=n+1: 0.28s wall 2.72s cpu]
+PASS h= 4 k=3 n=26       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 16 cand, 3 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 4 k=4 n=44       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 217 cand, 96 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 4 k=5 n=70       bases=1  [TGT=n: 0.02s wall 0.00s cpu, 3594 cand, 2346 X-pass]  [TGT=n+1: 0.03s wall 0.00s cpu]
+PASS h= 4 k=6 n=108      bases=2  [TGT=n: 0.03s wall 0.01s cpu, 86769 cand, 60651 X-pass]  [TGT=n+1: 0.03s wall 0.01s cpu]
+PASS h= 4 k=7 n=162      bases=3  [TGT=n: 0.05s wall 0.24s cpu, 2611245 cand, 1952012 X-pass]  [TGT=n+1: 0.05s wall 0.22s cpu]
+PASS h= 4 k=8 n=228      bases=1  [TGT=n: 0.73s wall 7.06s cpu, 108342081 cand, 83613641 X-pass]  [TGT=n+1: 0.72s wall 6.96s cpu]
+PASS h= 5 k=3 n=35       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 35 cand, 8 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 5 k=4 n=71       bases=2  [TGT=n: 0.00s wall 0.00s cpu, 526 cand, 207 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 5 k=5 n=126      bases=1  [TGT=n: 0.02s wall 0.00s cpu, 15473 cand, 8368 X-pass]  [TGT=n+1: 0.02s wall 0.00s cpu]
+PASS h= 5 k=6 n=211      bases=2  [TGT=n: 0.03s wall 0.05s cpu, 671058 cand, 414610 X-pass]  [TGT=n+1: 0.03s wall 0.05s cpu]
+PASS h= 5 k=7 n=336      bases=1  [TGT=n: 0.24s wall 2.26s cpu, 42116774 cand, 27091380 X-pass]  [TGT=n+1: 0.23s wall 2.21s cpu]
+PASS h= 5 k=8 n=524      bases=1  [TGT=n: 17.98s wall 172.97s cpu, 3646033841 cand, 2332795357 X-pass]  [TGT=n+1: 18.10s wall 172.84s cpu]
+PASS h= 6 k=3 n=52       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 50 cand, 6 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 6 k=4 n=114      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 1199 cand, 321 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 6 k=5 n=216      bases=1  [TGT=n: 0.03s wall 0.00s cpu, 53950 cand, 22342 X-pass]  [TGT=n+1: 0.03s wall 0.01s cpu]
+PASS h= 6 k=6 n=388      bases=1  [TGT=n: 0.03s wall 0.22s cpu, 3929160 cand, 1972893 X-pass]  [TGT=n+1: 0.03s wall 0.19s cpu]
+PASS h= 6 k=7 n=638      bases=1  [TGT=n: 2.09s wall 20.06s cpu, 466519082 cand, 269756759 X-pass]  [TGT=n+1: 2.07s wall 19.97s cpu]
+PASS h= 7 k=3 n=69       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 77 cand, 12 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 8 k=3 n=89       bases=1  [TGT=n: 0.00s wall 0.00s cpu, 104 cand, 14 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 9 k=3 n=112      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 147 cand, 17 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=10 k=3 n=146      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 190 cand, 20 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=11 k=3 n=172      bases=2  [TGT=n: 0.00s wall 0.00s cpu, 253 cand, 28 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=12 k=3 n=212      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 316 cand, 32 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=13 k=3 n=259      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 390 cand, 42 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=14 k=3 n=302      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 476 cand, 52 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=15 k=3 n=354      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 575 cand, 58 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=16 k=3 n=418      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 672 cand, 70 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=17 k=3 n=476      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 816 cand, 84 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=18 k=3 n=548      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 942 cand, 105 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=19 k=3 n=633      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 1083 cand, 105 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=20 k=3 n=714      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 1260 cand, 136 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=21 k=3 n=805      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 1435 cand, 153 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h=22 k=3 n=902      bases=2  [TGT=n: 0.00s wall 0.00s cpu, 1650 cand, 175 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 7 k=4 n=165      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 2386 cand, 573 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 8 k=4 n=234      bases=1  [TGT=n: 0.00s wall 0.00s cpu, 4368 cand, 880 X-pass]  [TGT=n+1: 0.00s wall 0.00s cpu]
+PASS h= 9 k=4 n=326      bases=1  [TGT=n: 0.03s wall 0.00s cpu, 7461 cand, 1247 X-pass]  [TGT=n+1: 0.02s wall 0.00s cpu]
+PASS h=10 k=4 n=427      bases=1  [TGT=n: 0.03s wall 0.00s cpu, 12784 cand, 2197 X-pass]  [TGT=n+1: 0.03s wall 0.00s cpu]
+PASS h=11 k=4 n=547      bases=1  [TGT=n: 0.03s wall 0.00s cpu, 20533 cand, 3507 X-pass]  [TGT=n+1: 0.03s wall 0.00s cpu]
+PASS h=12 k=4 n=708      bases=1  [TGT=n: 0.03s wall 0.00s cpu, 31368 cand, 4889 X-pass]  [TGT=n+1: 0.03s wall 0.00s cpu]
+PASS h=13 k=4 n=873      bases=1  [TGT=n: 0.03s wall 0.01s cpu, 46995 cand, 7918 X-pass]  [TGT=n+1: 0.03s wall 0.01s cpu]
+PASS h=14 k=4 n=1094     bases=1  [TGT=n: 0.03s wall 0.01s cpu, 67790 cand, 10615 X-pass]  [TGT=n+1: 0.03s wall 0.01s cpu]
+PASS h=15 k=4 n=1383     bases=1  [TGT=n: 0.03s wall 0.01s cpu, 94148 cand, 12639 X-pass]  [TGT=n+1: 0.02s wall 0.01s cpu]
+PASS h=16 k=4 n=1650     bases=1  [TGT=n: 0.03s wall 0.01s cpu, 132757 cand, 19441 X-pass]  [TGT=n+1: 0.03s wall 0.01s cpu]
+PASS h=17 k=4 n=1935     bases=1  [TGT=n: 0.03s wall 0.02s cpu, 185049 cand, 29938 X-pass]  [TGT=n+1: 0.03s wall 0.02s cpu]
+PASS h=18 k=4 n=2304     bases=1  [TGT=n: 0.03s wall 0.02s cpu, 249310 cand, 40236 X-pass]  [TGT=n+1: 0.02s wall 0.02s cpu]
+PASS h=19 k=4 n=2782     bases=1  [TGT=n: 0.03s wall 0.02s cpu, 324930 cand, 48473 X-pass]  [TGT=n+1: 0.03s wall 0.02s cpu]
+PASS h=20 k=4 n=3324     bases=1  [TGT=n: 0.03s wall 0.03s cpu, 419839 cand, 58105 X-pass]  [TGT=n+1: 0.03s wall 0.03s cpu]
+PASS h= 7 k=5 n=345      bases=1  [TGT=n: 0.03s wall 0.02s cpu, 156050 cand, 54834 X-pass]  [TGT=n+1: 0.03s wall 0.02s cpu]
+PASS h= 8 k=5 n=512      bases=2  [TGT=n: 0.02s wall 0.04s cpu, 422274 cand, 138078 X-pass]  [TGT=n+1: 0.03s wall 0.04s cpu]
+PASS h= 9 k=5 n=797      bases=1  [TGT=n: 0.06s wall 0.08s cpu, 942902 cand, 217557 X-pass]  [TGT=n+1: 0.03s wall 0.05s cpu]
+PASS h=10 k=5 n=1055     bases=1  [TGT=n: 0.03s wall 0.11s cpu, 2219856 cand, 607909 X-pass]  [TGT=n+1: 0.02s wall 0.10s cpu]
+PASS h=11 k=5 n=1475     bases=1  [TGT=n: 0.03s wall 0.16s cpu, 4531005 cand, 1085718 X-pass]  [TGT=n+1: 0.03s wall 0.14s cpu]
+PASS h=12 k=5 n=2047     bases=1  [TGT=n: 0.03s wall 0.23s cpu, 8729500 cand, 1734471 X-pass]  [TGT=n+1: 0.04s wall 0.23s cpu]
+PASS h=13 k=5 n=2659     bases=1  [TGT=n: 0.07s wall 0.43s cpu, 16657992 cand, 3408567 X-pass]  [TGT=n+1: 0.06s wall 0.43s cpu]
+PASS h=14 k=5 n=3403     bases=1  [TGT=n: 0.09s wall 0.71s cpu, 30385266 cand, 6403878 X-pass]  [TGT=n+1: 0.09s wall 0.72s cpu]
+PASS h=15 k=5 n=4422     bases=1  [TGT=n: 0.15s wall 1.16s cpu, 52475185 cand, 10095737 X-pass]  [TGT=n+1: 0.13s wall 1.16s cpu]
+PASS h=16 k=5 n=5629     bases=1  [TGT=n: 0.21s wall 1.92s cpu, 88371227 cand, 16237367 X-pass]  [TGT=n+1: 0.20s wall 1.93s cpu]
+PASS h=17 k=5 n=6865     bases=1  [TGT=n: 0.40s wall 3.66s cpu, 147747327 cand, 29514589 X-pass]  [TGT=n+1: 0.40s wall 3.66s cpu]
+PASS h=18 k=5 n=8669     bases=1  [TGT=n: 0.58s wall 5.55s cpu, 233800904 cand, 42686870 X-pass]  [TGT=n+1: 0.61s wall 5.56s cpu]
+PASS h=19 k=5 n=10835    bases=1  [TGT=n: 0.89s wall 8.12s cpu, 361606272 cand, 60326818 X-pass]  [TGT=n+1: 0.88s wall 8.22s cpu]
+PASS h=20 k=5 n=12903    bases=1  [TGT=n: 1.56s wall 14.94s cpu, 563233415 cand, 101783251 X-pass]  [TGT=n+1: 1.57s wall 15.09s cpu]
+PASS h= 7 k=6 n=664      bases=1  [TGT=n: 0.08s wall 0.72s cpu, 18483328 cand, 7890393 X-pass]  [TGT=n+1: 0.08s wall 0.71s cpu]
+PASS h= 8 k=6 n=1045     bases=1  [TGT=n: 0.29s wall 2.61s cpu, 75581166 cand, 30579230 X-pass]  [TGT=n+1: 0.27s wall 2.59s cpu]
+PASS h= 9 k=6 n=1617     bases=1  [TGT=n: 0.86s wall 8.12s cpu, 264445070 cand, 96948826 X-pass]  [TGT=n+1: 0.87s wall 8.06s cpu]
+PASS h=10 k=6 n=2510     bases=1  [TGT=n: 2.18s wall 20.55s cpu, 811631067 cand, 243959896 X-pass]  [TGT=n+1: 2.14s wall 20.60s cpu]
+PASS h=11 k=6 n=3607     bases=1  [TGT=n: 5.96s wall 57.14s cpu, 2347945133 cand, 676899794 X-pass]  [TGT=n+1: 5.92s wall 57.02s cpu]
+PASS h=12 k=6 n=5118     bases=1  [TGT=n: 15.20s wall 146.38s cpu, 6241875289 cand, 1683140899 X-pass]  [TGT=n+1: 15.12s wall 146.06s cpu]
+PASS h= 7 k=7 n=1137     bases=2  [TGT=n: 15.19s wall 146.07s cpu, 3851780998 cand, 2018695077 X-pass]  [TGT=n+1: 15.19s wall 145.58s cpu]
+== selftest: 422 tests, 48 failures ==

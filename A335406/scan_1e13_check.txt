@@ -1,0 +1,13 @@
+A335406 scan of the primes in [0, 10,000,000,000,000]: 8 threads, 810001 chunks of 12,345,678
+--- totals for the primes in [0, 10,000,000,000,000]  (710.6 s, 1.41e+10 numbers/s) ---
+primes <= 10,000,000,000,000 (pi)         346,065,536,839
+equal adjacent gaps (E)   6,470,105,925  (1.8696% of the primes)
+runs (= pi - E)           339,595,430,914
+longest run               5
+runs by length            1: 333,366,453,054 2: 5,988,869,536 3: 239,112,966 4: 970,975 5: 24,383
+a(1) = 1               gap index i = 1               first prime 2               gap 1
+a(2) = 2               gap index i = 2               first prime 3               gap 2
+a(3) = 49              gap index i = 54              first prime 251             gap 6
+a(4) = 633,353         gap index i = 654,926         first prime 9,843,019       gap 30
+a(5) = 6,706,139       gap index i = 6,904,737       first prime 121,174,811     gap 30
+a(6) > 339,595,430,914  (no run of length 6 begins at a prime <= 10,000,000,000,000)

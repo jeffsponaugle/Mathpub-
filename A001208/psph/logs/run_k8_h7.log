@@ -1,0 +1,16 @@
+[psph] using TGT = known value 1911
+[psph] h=7 k=8 TGT=1911 threads=10  (known n_7(8)=1911, listing extremal bases)
+[psph] bounds a_{j+1} <= n_h(j)+1: n(1)=7 n(2)=23 n(3)=69 n(4)=165 n(5)=345 n(6)=664 n(7)=1137
+[psph] lower bounds a_j >= LOW[j]: L2=2 L3=2 L4=2 L5=2 L6=6 L7=39 L8=273
+[psph] split depth 4: 3407 work items (generated in 0.00s)
+[psph] 169/3407 items (5.0%) elapsed 60.0s, ETA 19.2m, leaf cand 2.27e+10, full checks 21583051, sols 0
+[psph] 268/3407 items (7.9%) elapsed 2.0m, ETA 23.4m, leaf cand 4.32e+10, full checks 60503881, sols 0
+[psph] 384/3407 items (11.3%) elapsed 3.0m, ETA 23.6m, leaf cand 6.15e+10, full checks 90726144, sols 0
+[psph] 462/3407 items (13.6%) elapsed 4.0m, ETA 25.5m, leaf cand 7.93e+10, full checks 137686241, sols 0
+[psph] 515/3407 items (15.1%) elapsed 5.0m, ETA 28.1m, leaf cand 9.33e+10, full checks 211169101, sols 0
+[psph] 547/3407 items (16.1%) elapsed 6.0m, ETA 31.4m, leaf cand 1.06e+11, full checks 303550960, sols 0
+[psph] 581/3407 items (17.1%) elapsed 7.0m, ETA 34.1m, leaf cand 1.18e+11, full checks 406302156, sols 0
+[psph] 618/3407 items (18.1%) elapsed 8.0m, ETA 36.1m, leaf cand 1.31e+11, full checks 517277986, sols 0
+[psph] 649/3407 items (19.0%) elapsed 9.0m, ETA 38.3m, leaf cand 1.43e+11, full checks 615325756, sols 0
+[psph] 680/3407 items (20.0%) elapsed 10.0m, ETA 40.1m, leaf cand 1.53e+11, full checks 718397111, sols 0
+[psph] 705/3407 items (20.7%) elapsed 11.0m, ETA 42.2m, leaf cand 1.64e+11, full checks 838340642, sols 0

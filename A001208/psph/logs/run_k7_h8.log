@@ -1,0 +1,31 @@
+[psph] using TGT = known value 2001
+[psph] h=8 k=7 TGT=2001 threads=10  (known n_8(7)=2001, listing extremal bases)
+[psph] bounds a_{j+1} <= n_h(j)+1: n(1)=8 n(2)=28 n(3)=89 n(4)=234 n(5)=512 n(6)=1045
+[psph] lower bounds a_j >= LOW[j]: L2=2 L3=2 L4=2 L5=4 L6=32 L7=251
+[psph] split depth 4: 6332 work items (generated in 0.00s)
+SOLUTION h=8 k=7 n_h=2001 : 1 6 28 47 127 412 602
+[psph] 4931/6332 items (77.9%) elapsed 60.0s, ETA 17.1s, leaf cand 1.87e+10, full checks 114114686, sols 1
+[psph] thread 0: 621 items, busy 78.26s (tables 13.07s, candidates 61.31s)
+[psph] thread 1: 627 items, busy 78.28s (tables 13.19s, candidates 61.08s)
+[psph] thread 2: 619 items, busy 78.37s (tables 12.91s, candidates 61.11s)
+[psph] thread 3: 642 items, busy 78.53s (tables 13.44s, candidates 60.68s)
+[psph] thread 4: 625 items, busy 78.75s (tables 14.23s, candidates 60.63s)
+[psph] thread 5: 607 items, busy 78.32s (tables 13.36s, candidates 60.88s)
+[psph] thread 6: 621 items, busy 78.59s (tables 13.28s, candidates 60.80s)
+[psph] thread 7: 636 items, busy 78.63s (tables 13.25s, candidates 60.97s)
+[psph] thread 8: 665 items, busy 78.40s (tables 13.58s, candidates 60.82s)
+[psph] thread 9: 669 items, busy 78.43s (tables 13.62s, candidates 60.79s)
+[psph] ---- statistics h=8 k=7 TGT=2001 ----
+[psph] level           visited       admissible      pruned(LOW) degenerate
+[psph] a_2                   8                8                0          0
+[psph] a_3                 148              148                0          0
+[psph] a_4                6332             6332                0          0
+[psph] a_5              575227           575227                0          0
+[psph] a_6           100261265         99128292          1132973          0
+[psph] leaf candidates a_7 tested: 24653627212   X-pass: 10933188012 (44.3%)   deephole-pass: 1141836860 (4.63%)   stage2-pass: 167975106   full-check fail: 167975105   direct: 0   solutions: 1
+[psph] probes: 178248636758 (7.23 per candidate)
+[psph] full-check failure position (blocks of a_k below the top block): [0]=222015 [1]=42242849 [2]=96303777 [3]=26406260 [4]=2697098 [5]=102545 [6]=561
+[psph] leaf table bytes 8.46e+10, full-check bytes 1.32e+11
+[psph] wall 81.76s, CPU 784.59s (9.6 cores), items 6332 (split 4, gen 0.00s); 3.14e+07 candidates per CPU-second
+[psph] worker CPU split: leaf tables 17.1%, leaf candidates (X test, stage 2, full checks) 77.6%, prefix DP+overhead 5.3%
+[psph] 1 bases with n_8(A_7) >= 2001

@@ -1,0 +1,3 @@
+START k=20 T=153 Wed Sep 30 22:47:40 PDT 2026
+GPU error: Impacting Interactivity (0000000e:kIOGPUCommandBufferCallbackErrorImpactingInteractivity)
+Metal device: Apple M1 Pro, maxThreadsPerThreadgroup=832

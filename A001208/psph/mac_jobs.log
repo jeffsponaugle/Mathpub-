@@ -1,0 +1,7 @@
+=== MAC JOB1c items [10700,11003) start Thu Oct  1 16:36:28 PDT 2026
+SOLUTION h=9 k=8 n_h=5896 : 1 10 17 71 145 457 1255 1787
+=== MAC JOB1c done Thu Oct  1 22:51:43 PDT 2026
+=== MAC JOB1b items [10000,10500) start Thu Oct  1 22:51:43 PDT 2026
+=== MAC JOB1b done Fri Oct  2 05:19:47 PDT 2026
+=== MAC JOB1d items [4200,4450) start Fri Oct  2 05:19:47 PDT 2026
+=== Mac range [4200,4450) abandoned (moved to mathd); GPU k=21 paused Fri Oct  2 09:08:32 PDT 2026

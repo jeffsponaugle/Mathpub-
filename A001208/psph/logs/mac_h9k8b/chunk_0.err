@@ -1,0 +1,96 @@
+[psph] h=9 k=8 TGT=5946 threads=10
+[psph] bounds a_{j+1} <= n_h(j)+1: n(1)=9 n(2)=34 n(3)=112 n(4)=326 n(5)=797 n(6)=1617 n(7)=3191
+[psph] lower bounds a_j >= LOW[j]: L2=2 L3=2 L4=2 L5=2 L6=9 L7=74 L8=661
+[psph] split depth 4: 11003 work items (generated in 0.00s)
+[psph] processing work items [10000, 10250) of 11003
+[psph] 0/250 items (0.0%) [range 10000..10250 of 11003] elapsed 5.0m, ETA 0.0s, leaf cand 9.27e+10, full checks 623155382, sols 0
+[psph] 4/250 items (1.6%) [range 10000..10250 of 11003] elapsed 10.0m, ETA 10.25h, leaf cand 1.59e+11, full checks 1629658653, sols 0
+[psph] 8/250 items (3.2%) [range 10000..10250 of 11003] elapsed 15.0m, ETA 7.56h, leaf cand 2.24e+11, full checks 2675563844, sols 0
+[psph] 11/250 items (4.4%) [range 10000..10250 of 11003] elapsed 20.0m, ETA 7.24h, leaf cand 2.84e+11, full checks 3831851357, sols 0
+[psph] 12/250 items (4.8%) [range 10000..10250 of 11003] elapsed 25.0m, ETA 8.26h, leaf cand 3.37e+11, full checks 5118365126, sols 0
+[psph] 14/250 items (5.6%) [range 10000..10250 of 11003] elapsed 30.0m, ETA 8.43h, leaf cand 3.88e+11, full checks 6485376469, sols 0
+[psph] 19/250 items (7.6%) [range 10000..10250 of 11003] elapsed 35.0m, ETA 7.09h, leaf cand 4.43e+11, full checks 7797936363, sols 0
+[psph] 20/250 items (8.0%) [range 10000..10250 of 11003] elapsed 40.0m, ETA 7.67h, leaf cand 4.95e+11, full checks 9072592873, sols 0
+[psph] 23/250 items (9.2%) [range 10000..10250 of 11003] elapsed 45.0m, ETA 7.40h, leaf cand 5.42e+11, full checks 10474344571, sols 0
+[psph] 28/250 items (11.2%) [range 10000..10250 of 11003] elapsed 50.0m, ETA 6.61h, leaf cand 5.91e+11, full checks 11850942013, sols 0
+[psph] 30/250 items (12.0%) [range 10000..10250 of 11003] elapsed 55.0m, ETA 6.72h, leaf cand 6.41e+11, full checks 13147491368, sols 0
+[psph] 34/250 items (13.6%) [range 10000..10250 of 11003] elapsed 60.0m, ETA 6.35h, leaf cand 6.88e+11, full checks 14517500106, sols 0
+[psph] 38/250 items (15.2%) [range 10000..10250 of 11003] elapsed 65.0m, ETA 6.04h, leaf cand 7.32e+11, full checks 15972051890, sols 0
+[psph] 40/250 items (16.0%) [range 10000..10250 of 11003] elapsed 70.0m, ETA 6.13h, leaf cand 7.72e+11, full checks 17529297564, sols 0
+[psph] 45/250 items (18.0%) [range 10000..10250 of 11003] elapsed 75.0m, ETA 5.69h, leaf cand 8.26e+11, full checks 18884842341, sols 0
+[psph] 50/250 items (20.0%) [range 10000..10250 of 11003] elapsed 80.0m, ETA 5.33h, leaf cand 8.97e+11, full checks 20026905994, sols 0
+[psph] 57/250 items (22.8%) [range 10000..10250 of 11003] elapsed 85.0m, ETA 4.80h, leaf cand 9.78e+11, full checks 20958134353, sols 0
+[psph] 61/250 items (24.4%) [range 10000..10250 of 11003] elapsed 90.0m, ETA 4.65h, leaf cand 1.06e+12, full checks 21779182837, sols 0
+[psph] 68/250 items (27.2%) [range 10000..10250 of 11003] elapsed 95.0m, ETA 4.24h, leaf cand 1.14e+12, full checks 22609712960, sols 0
+[psph] 70/250 items (28.0%) [range 10000..10250 of 11003] elapsed 100.0m, ETA 4.29h, leaf cand 1.22e+12, full checks 23563686953, sols 0
+[psph] 73/250 items (29.2%) [range 10000..10250 of 11003] elapsed 105.0m, ETA 4.24h, leaf cand 1.28e+12, full checks 24584194104, sols 0
+[psph] 77/250 items (30.8%) [range 10000..10250 of 11003] elapsed 110.0m, ETA 4.12h, leaf cand 1.34e+12, full checks 25772086831, sols 0
+[psph] 80/250 items (32.0%) [range 10000..10250 of 11003] elapsed 115.0m, ETA 4.07h, leaf cand 1.41e+12, full checks 26911107598, sols 0
+[psph] 84/250 items (33.6%) [range 10000..10250 of 11003] elapsed 2.00h, ETA 3.95h, leaf cand 1.47e+12, full checks 28083616007, sols 0
+[psph] 85/250 items (34.0%) [range 10000..10250 of 11003] elapsed 2.08h, ETA 4.04h, leaf cand 1.52e+12, full checks 29283710809, sols 0
+[psph] 88/250 items (35.2%) [range 10000..10250 of 11003] elapsed 2.17h, ETA 3.99h, leaf cand 1.58e+12, full checks 30517318303, sols 0
+[psph] 92/250 items (36.8%) [range 10000..10250 of 11003] elapsed 2.25h, ETA 3.86h, leaf cand 1.63e+12, full checks 31776289678, sols 0
+[psph] 93/250 items (37.2%) [range 10000..10250 of 11003] elapsed 2.33h, ETA 3.94h, leaf cand 1.69e+12, full checks 33094849258, sols 0
+[psph] 95/250 items (38.0%) [range 10000..10250 of 11003] elapsed 2.42h, ETA 3.94h, leaf cand 1.74e+12, full checks 34447739763, sols 0
+[psph] 99/250 items (39.6%) [range 10000..10250 of 11003] elapsed 2.50h, ETA 3.81h, leaf cand 1.79e+12, full checks 35793226516, sols 0
+[psph] 101/250 items (40.4%) [range 10000..10250 of 11003] elapsed 2.58h, ETA 3.81h, leaf cand 1.84e+12, full checks 37120072316, sols 0
+[psph] 103/250 items (41.2%) [range 10000..10250 of 11003] elapsed 2.67h, ETA 3.81h, leaf cand 1.89e+12, full checks 38514575885, sols 0
+[psph] 106/250 items (42.4%) [range 10000..10250 of 11003] elapsed 2.75h, ETA 3.74h, leaf cand 1.93e+12, full checks 39994766493, sols 0
+[psph] 107/250 items (42.8%) [range 10000..10250 of 11003] elapsed 2.83h, ETA 3.79h, leaf cand 1.97e+12, full checks 41460611551, sols 0
+[psph] 111/250 items (44.4%) [range 10000..10250 of 11003] elapsed 2.92h, ETA 3.65h, leaf cand 2.02e+12, full checks 42932363025, sols 0
+[psph] 116/250 items (46.4%) [range 10000..10250 of 11003] elapsed 3.00h, ETA 3.47h, leaf cand 2.06e+12, full checks 44378447328, sols 0
+[psph] 118/250 items (47.2%) [range 10000..10250 of 11003] elapsed 3.08h, ETA 3.45h, leaf cand 2.11e+12, full checks 45854676321, sols 0
+[psph] 121/250 items (48.4%) [range 10000..10250 of 11003] elapsed 3.17h, ETA 3.38h, leaf cand 2.15e+12, full checks 47354115345, sols 0
+[psph] 124/250 items (49.6%) [range 10000..10250 of 11003] elapsed 3.25h, ETA 3.30h, leaf cand 2.19e+12, full checks 48951906413, sols 0
+[psph] 128/250 items (51.2%) [range 10000..10250 of 11003] elapsed 3.33h, ETA 3.18h, leaf cand 2.24e+12, full checks 50378746892, sols 0
+[psph] 133/250 items (53.2%) [range 10000..10250 of 11003] elapsed 3.42h, ETA 3.01h, leaf cand 2.3e+12, full checks 51621170594, sols 0
+[psph] 138/250 items (55.2%) [range 10000..10250 of 11003] elapsed 3.50h, ETA 2.84h, leaf cand 2.37e+12, full checks 52830151734, sols 0
+[psph] 142/250 items (56.8%) [range 10000..10250 of 11003] elapsed 3.58h, ETA 2.73h, leaf cand 2.45e+12, full checks 53789108822, sols 0
+[psph] 149/250 items (59.6%) [range 10000..10250 of 11003] elapsed 3.67h, ETA 2.49h, leaf cand 2.53e+12, full checks 54639016097, sols 0
+[psph] 153/250 items (61.2%) [range 10000..10250 of 11003] elapsed 3.75h, ETA 2.38h, leaf cand 2.61e+12, full checks 55472194811, sols 0
+[psph] 156/250 items (62.4%) [range 10000..10250 of 11003] elapsed 3.83h, ETA 2.31h, leaf cand 2.67e+12, full checks 56533983776, sols 0
+[psph] 159/250 items (63.6%) [range 10000..10250 of 11003] elapsed 3.92h, ETA 2.24h, leaf cand 2.74e+12, full checks 57561043309, sols 0
+[psph] 162/250 items (64.8%) [range 10000..10250 of 11003] elapsed 4.00h, ETA 2.17h, leaf cand 2.8e+12, full checks 58762124732, sols 0
+[psph] 166/250 items (66.4%) [range 10000..10250 of 11003] elapsed 4.08h, ETA 2.07h, leaf cand 2.86e+12, full checks 59940107477, sols 0
+[psph] 169/250 items (67.6%) [range 10000..10250 of 11003] elapsed 4.17h, ETA 119.8m, leaf cand 2.92e+12, full checks 61132963803, sols 0
+[psph] 171/250 items (68.4%) [range 10000..10250 of 11003] elapsed 4.25h, ETA 117.8m, leaf cand 2.97e+12, full checks 62306845063, sols 0
+[psph] 175/250 items (70.0%) [range 10000..10250 of 11003] elapsed 4.33h, ETA 111.4m, leaf cand 3.03e+12, full checks 63538058307, sols 0
+[psph] 176/250 items (70.4%) [range 10000..10250 of 11003] elapsed 4.42h, ETA 111.4m, leaf cand 3.08e+12, full checks 64922556071, sols 0
+[psph] 178/250 items (71.2%) [range 10000..10250 of 11003] elapsed 4.50h, ETA 109.2m, leaf cand 3.13e+12, full checks 66384905614, sols 0
+[psph] 182/250 items (72.8%) [range 10000..10250 of 11003] elapsed 4.58h, ETA 102.8m, leaf cand 3.18e+12, full checks 67770749994, sols 0
+[psph] 183/250 items (73.2%) [range 10000..10250 of 11003] elapsed 4.67h, ETA 102.5m, leaf cand 3.23e+12, full checks 69111751731, sols 0
+[psph] 185/250 items (74.0%) [range 10000..10250 of 11003] elapsed 4.75h, ETA 100.1m, leaf cand 3.28e+12, full checks 70469520364, sols 0
+[psph] 185/250 items (74.0%) [range 10000..10250 of 11003] elapsed 4.83h, ETA 101.9m, leaf cand 3.32e+12, full checks 72060992167, sols 0
+[psph] 192/250 items (76.8%) [range 10000..10250 of 11003] elapsed 4.92h, ETA 89.1m, leaf cand 3.36e+12, full checks 73653397559, sols 0
+[psph] 194/250 items (77.6%) [range 10000..10250 of 11003] elapsed 5.00h, ETA 86.6m, leaf cand 3.41e+12, full checks 74944764954, sols 0
+[psph] 194/250 items (77.6%) [range 10000..10250 of 11003] elapsed 5.08h, ETA 88.0m, leaf cand 3.45e+12, full checks 76482078166, sols 0
+[psph] 199/250 items (79.6%) [range 10000..10250 of 11003] elapsed 5.17h, ETA 79.5m, leaf cand 3.49e+12, full checks 78073926892, sols 0
+[psph] 202/250 items (80.8%) [range 10000..10250 of 11003] elapsed 5.25h, ETA 74.9m, leaf cand 3.53e+12, full checks 79483401243, sols 0
+[psph] 202/250 items (80.8%) [range 10000..10250 of 11003] elapsed 5.33h, ETA 76.0m, leaf cand 3.57e+12, full checks 81107529992, sols 0
+[psph] 205/250 items (82.0%) [range 10000..10250 of 11003] elapsed 5.42h, ETA 71.3m, leaf cand 3.61e+12, full checks 82768884300, sols 0
+[psph] 212/250 items (84.8%) [range 10000..10250 of 11003] elapsed 5.50h, ETA 59.2m, leaf cand 3.65e+12, full checks 84302945545, sols 0
+[psph] 213/250 items (85.2%) [range 10000..10250 of 11003] elapsed 5.58h, ETA 58.2m, leaf cand 3.71e+12, full checks 85722665668, sols 0
+[psph] 216/250 items (86.4%) [range 10000..10250 of 11003] elapsed 5.67h, ETA 53.5m, leaf cand 3.76e+12, full checks 87132557394, sols 0
+[psph] 224/250 items (89.6%) [range 10000..10250 of 11003] elapsed 5.75h, ETA 40.0m, leaf cand 3.83e+12, full checks 88257496871, sols 0
+[psph] 230/250 items (92.0%) [range 10000..10250 of 11003] elapsed 5.83h, ETA 30.4m, leaf cand 3.92e+12, full checks 89093661356, sols 0
+[psph] 235/250 items (94.0%) [range 10000..10250 of 11003] elapsed 5.92h, ETA 22.7m, leaf cand 3.99e+12, full checks 90012799679, sols 0
+[psph] 239/250 items (95.6%) [range 10000..10250 of 11003] elapsed 6.00h, ETA 16.6m, leaf cand 4.06e+12, full checks 90959774573, sols 0
+[psph] 244/250 items (97.6%) [range 10000..10250 of 11003] elapsed 6.08h, ETA 9.0m, leaf cand 4.12e+12, full checks 91999914286, sols 0
+[psph] 245/250 items (98.0%) [range 10000..10250 of 11003] elapsed 6.17h, ETA 7.6m, leaf cand 4.15e+12, full checks 92821425303, sols 0
+[psph] 248/250 items (99.2%) [range 10000..10250 of 11003] elapsed 6.25h, ETA 3.0m, leaf cand 4.17e+12, full checks 93559738877, sols 0
+[psph] 248/250 items (99.2%) [range 10000..10250 of 11003] elapsed 6.33h, ETA 3.1m, leaf cand 4.17e+12, full checks 93965997914, sols 0
+[psph] 249/250 items (99.6%) [range 10000..10250 of 11003] elapsed 6.42h, ETA 92.8s, leaf cand 4.18e+12, full checks 94199546661, sols 0
+[psph] ---- statistics h=9 k=8 TGT=5946 ----
+[psph] level           visited       admissible      pruned(LOW) degenerate
+[psph] a_2                   9                9                0          0
+[psph] a_3                 201              201                0          0
+[psph] a_4               11003            11003                0          0
+[psph] a_5               34116            34116                0          0
+[psph] a_6             9543032          9543032                0          0
+[psph] a_7          5074947212       5061982798         12964414          0
+[psph] leaf candidates a_8 tested: 4179900250705   X-pass: 2300055648455 (55%)   deephole-pass: 505681370805 (12.1%)   stage2-pass: 94333782121   full-check fail: 94333782121   direct: 0   solutions: 0
+[psph] probes: 50840068742445 (12.16 per candidate)
+[psph] leaf table bytes 1.5e+13, full-check bytes 2.13e+14
+[psph] wall 23256.48s, CPU 215822.53s (9.3 cores), items 11003 (split 4, gen 0.00s); 1.94e+07 candidates per CPU-second
+[psph] worker CPU split: leaf tables 6.1%, leaf candidates (X test, stage 2, full checks) 92.2%, prefix DP+overhead 1.7%
+[psph] 0 bases with n_9(A_8) >= 5946

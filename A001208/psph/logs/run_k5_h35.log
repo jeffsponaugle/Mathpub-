@@ -1,0 +1,34 @@
+[psph] using TGT = known value 123954
+[psph] h=35 k=5 TGT=123954 threads=8  (known n_35(5)=123954, listing extremal bases)
+[psph] bounds a_{j+1} <= n_h(j)+1: n(1)=35 n(2)=359 n(3)=3020 n(4)=21061
+[psph] lower bounds a_j >= LOW[j]: L2=2 L3=3 L4=102 L5=3542
+[psph] split depth 3: 8365 work items (generated in 0.00s)
+[psph] 2248/8365 items (26.9%) elapsed 30.0s, ETA 81.7s, leaf cand 1.28e+10, full checks 3251403, sols 0
+[psph] 3272/8365 items (39.1%) elapsed 60.0s, ETA 93.4s, leaf cand 2.24e+10, full checks 10239710, sols 0
+[psph] 4089/8365 items (48.9%) elapsed 90.0s, ETA 94.2s, leaf cand 3.08e+10, full checks 18841064, sols 0
+[psph] 5058/8365 items (60.5%) elapsed 2.0m, ETA 78.5s, leaf cand 3.99e+10, full checks 27019137, sols 0
+[psph] 5981/8365 items (71.5%) elapsed 2.5m, ETA 59.8s, leaf cand 4.85e+10, full checks 36333027, sols 0
+[psph] 6704/8365 items (80.1%) elapsed 3.0m, ETA 44.6s, leaf cand 5.57e+10, full checks 47711042, sols 0
+SOLUTION h=35 k=5 n_h=123954 : 1 27 231 2495 11464
+[psph] 7429/8365 items (88.8%) elapsed 3.5m, ETA 26.5s, leaf cand 6.29e+10, full checks 57927113, sols 1
+[psph] 8236/8365 items (98.5%) elapsed 4.0m, ETA 3.8s, leaf cand 7.05e+10, full checks 65209381, sols 1
+[psph] thread 0: 1030 items, busy 192.62s (tables 24.63s, candidates 165.78s)
+[psph] thread 1: 1028 items, busy 192.73s (tables 24.84s, candidates 165.68s)
+[psph] thread 2: 1050 items, busy 192.88s (tables 24.57s, candidates 166.06s)
+[psph] thread 3: 1046 items, busy 192.56s (tables 24.75s, candidates 165.54s)
+[psph] thread 4: 1066 items, busy 192.79s (tables 24.84s, candidates 165.71s)
+[psph] thread 5: 1033 items, busy 192.79s (tables 24.78s, candidates 165.81s)
+[psph] thread 6: 1054 items, busy 192.81s (tables 24.97s, candidates 165.56s)
+[psph] thread 7: 1058 items, busy 192.80s (tables 25.15s, candidates 165.36s)
+[psph] ---- statistics h=35 k=5 TGT=123954 ----
+[psph] level           visited       admissible      pruned(LOW) degenerate
+[psph] a_2                  35               35                0          0
+[psph] a_3                8365             8365                0          0
+[psph] a_4            12082263         11648731           433532          0
+[psph] leaf candidates a_5 tested: 71462123189   X-pass: 12734510354 (17.8%)   deephole-pass: 98752373 (0.138%)   stage2-pass: 65416774   full-check fail: 65416773   direct: 0   solutions: 1
+[psph] probes: 438276833554 (6.13 per candidate)
+[psph] full-check failure position (blocks of a_k below the top block): [0]=12 [1]=33509 [2]=1363806 [3]=7850921 [4]=14935142 [5]=15616168 [6]=11731510 [7]=7083764 [8]=3712850 [9]=1768426 [10]=788678 [11]=332653 [12]=129958 [13]=46603 [14]=16039 [15]=4938 [16]=1367 [17]=429
+[psph] leaf table bytes 3.01e+11, full-check bytes 4.15e+12
+[psph] wall 242.56s, CPU 1542.06s (6.4 cores), items 8365 (split 3, gen 0.00s); 4.63e+07 candidates per CPU-second
+[psph] worker CPU split: leaf tables 12.9%, leaf candidates (X test, stage 2, full checks) 86.0%, prefix DP+overhead 1.2%
+[psph] 1 bases with n_35(A_5) >= 123954

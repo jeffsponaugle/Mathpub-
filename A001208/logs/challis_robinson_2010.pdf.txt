@@ -1,0 +1,611 @@
+
+=== PAGE 1 ===
+1
+47
+Journal of Integer Sequences, Vol. 13 (2010),2
+3
+6
+Article 10.2.3
+23 11
+Some Extremal Postage Stamp Bases
+Michael F. Challis
+Hempnall House
+Lundy Green Hempnall
+Norwich NR15 2NU
+United Kingdom
+mike@hempnallhouse.co.uk
+John P. Robinson
+Center for Bioinformatics and Computational Biology
+University of Iowa
+Iowa City, IA 52242
+USA
+john-robinson@uiowa.edu
+Abstract
+A set of k positive integers is a postage stamp basis for n if every positive integer up
+to n can be expressed as the sum of no more than h values from the set. An extremal
+basis is one for which n is as large as possible. For the case h= k = 8, the unique
+extremal basis is A= {1, 8, 13, 58, 169, 295, 831, 1036}, with n = 3485. Several other
+new extremal bases are presented, along with corrections to a previous article.
+1 Introduction
+The global postage-stamp problem consists of determining, for given positive integers h and
+k, a set of k positive integers
+Ak = {a1 = 1 < a2 <· · · < ak}
+such that
+(a) sums of h or fewer of these aj can realize the numbers 1,2,... ,n, and
+1
+=== PAGE 2 ===
+(b) the value of n is as large as possible.
+The h-range for a particular set Ak is denoted by nh(Ak) and the extremal value by nh(k).
+Mossige [3] presented eﬃcient search algorithms for determining nh(k), which Shallit [8] has
+shown to be NP hard in k. Various techniques (e.g., Challis [2]) have been used to reduce
+the eﬀort to compute nh(k), and a further improvement is described below.
+The most recent results are presented in an appendix. Corrections and improvements to
+Robinson [6] are also given.
+2 Tree representation
+A set Ak is said to be admissible (strictly, h-admissible) if nh(Ak) ≥ ak; clearly inadmissible
+sets are of no interest when searching for the extremal value nh(k).
+The natural tree representation for all admissible postage stamp sets associates a1 = 1
+with the root. The root branches out to h admissible nodes at the second level for the
+a2 values 2,3,... ,h + 1. At level three and beyond, the number of successor states for a
+particular state can vary. For any given admissible denomination vector A there is a path.
+For the diagonal case h= k, all possible admissible sets were examined for the cases
+h = 6,7,8 and about 100 million random admissible sets for h = 9. Table 1 summarizes
+these experiments. The average fan-out is over all admissible sets. Note that the average
+fan-out increases down the tree and for the same level grows slowly with h. The number of
+admissible sets for h = 9 is an estimate based on the experimental average values.
+Admissible h cases Average fan-out by level
+1 2 3 4 5 6 7 8
+6 5.2 × 106 6 11.8 23.9 43.2 71.6
+7 5.6 × 109 7 15.0 32.5 64.0 114 234
+8 2.5 × 1013 8 18.5 42.8 90.8 174 307 525
+91 3.7 × 1017 9 22.3 54.7 125 256 472 860 1502
+Table 1: Cases and fan-out
+3 Algorithm for case h= k = 8
+The number of admissible postage stamp sets grows rapidly for the diagonal case (Table 1).
+Level k− 1 has the largest average fan-out; e.g., over 500 for h = 8. We extend the method
+of Challis [2] wherein a set A can be rejected if it can be shown that a particular needed
+total x cannot be represented by A. Whereas Challis uses a software cache to speed up his
+generate(x) procedure, we use look-up tables. We next outline this speed-up for h = 8.
+Estimates.
+2
+=== PAGE 3 ===
+For each preamble of a1 = 1 to a7, eight intermediate look-up tables are calculated. Each
+table lists all totals of a1 to a7 using len denominations or less, for 1 ≤ len ≤ 8. These
+calculations are amortized over all the admissible values of a8. Next, the target total x is
+checked, in one look-up step in the table len = 8, to determine if some combination of a1
+to a7 totals to x. If not, then the table len = 7 is checked for the total x− a8; if it exists,
+this yields a combination totaling x using one copy of x8. If not, another a8 is subtracted,
+and the len = 6 table is checked for a combination using two copies of x8. Continue down
+to len = 1, finally checking whether 8a8 = x. When a combination for x is found, the scan
+down the eight tables is exited and the entire process is repeated with another target x. If
+no combination equal to x is found in these nine steps, A with a8 is rejected, and another
+value for a8 is tested.
+The set of target values for x are the totals needed to equal the current best A. If we
+generate all these totals, then n8(A) is computed, and the target set is updated. This process
+yielded a net speed-up factor of more than 20 over the unoptimized procedure for h = 8.
+There are more than 1013 admissible sets in the (8,8) case. The unique extremal basis
+A= {1,8,13,58,169,295,831,1036} with n = 3485 was determined in 2002 by the first
+author and independently in 2009 by the second using the program described above. Challis
+[2] describes two diﬀerent algorithms (the K-program and H-program) and the 2002 result was
+obtained using the K-program, whereas the 2009 result was obtained using an independent
+algorithm based on the H-program.
+4 New extremal sets
+Many other new results have been obtained by Challis, and a complete table of extremal
+bases known to him at the time of writing (September 2009) is included as Appendix A to
+this paper.
+These results have been obtained using the algorithms described in Challis [2], but with
+one further improvement made to the H-program which enables a number of candidate sets
+Ak to be rejected as a group.
+Suppose that we have already determined a reasonably good lower bound T for nh(k). In
+[2] we show that the following value X < T is a “diﬃcult” target for Ak: that is, in almost
+all cases (provided h ≫ k) there is no generation of X as the sum of no more than h values
+from Ak:
+X = (Ck− 1)ak + (Ck 1− 1)ak 1 +... + (C2− 1)a2 + (a2− 1) (1)
+where
+T= Ckak + Rk for 0 ≤ Rk < ak,
+and
+ai = Ci 1ai 1 + Ri 1 for 0 ≤ Ri 1 < ai 1, 3 ≤ i < k.
+We now suppose that we can find a value x such that
+x ≤ X and x > (Ck− 2)ak + (h− Ck + 2)ak 1,
+3
+=== PAGE 4 ===
+where the second condition above means that if x is to have a valid generation as the sum
+of no more than h values from Ak, then it will require at least (Ck− 1) values ak. Of course
+there is no guarantee that we can find such values for given T and Ak, but in practice it
+turns out often to be the case.
+Suppose further that x cannot be generated by Ak at all. We now show how under
+certain conditions it is possible to derive a value x which cannot be generated by Ak where
+ak = ak− r, r > 0, ai = ai, 1 ≤ i < k. As ak decreases, so Ck may increase and Ck 1 may
+decrease; other values Ci will remain unchanged. One extra condition that we require is that
+Ck 1 also remains unchanged. So we have:
+ak = ak− r, Ck = Ck + j, r > 0, j ≥ 0
+with
+C(k 1)= Ck 1 (2)
+Now consider
+x = x + j(ak− r)− r(Ck− 1)
+and suppose further (our second condition) that x , in analogy with x, satisfies
+x > (Ck− 2)ak + (h− Ck + 2)ak 1. (3)
+We show that Ak cannot generate x by contradiction. Suppose that such a generation
+exists. Then it must include exactly (Ck− 1) values ak and so will be of the form:
+x = (Ck− 1)ak + fk 1ak 1 +... + f2a2 + f1
+with
+(Ck− 1) + fk 1 +... + f1 ≤ h
+Substituting for x , Ck and ak we have
+x + j(ak− r)− r(Ck− 1) = (Ck + j− 1)(ak− r) + fk 1ak 1 +... + f2a2 + f1
+or
+x = (Ck− 1)ak + fk 1ak 1 +... + f2a2 + f1 with (Ck− 1) + fk 1 +... + f1 ≤ h.
+But since Ck ≤ Ck this means that x can be generated by Ak, which is contrary to hypothesis.
+We now know that x cannot be generated by Ak, but in order to reject Ak we must also
+show that x is less than T. If we write
+x = (Ck− 1)ak + F,
+we have
+x = (Ck− 1)ak + F + j(ak− r)− r(Ck− 1) = (Ck− 1)ak + F.
+From (1) we know that F ≤ (Ck 1− 1)ak 1 +... + (C2− 1)a2 + (a2− 1), and so
+x ≤ (Ck− 1)ak + (Ck 1− 1)ak 1 +... + (C2− 1)a2 + (a2− 1) = X
+4
+=== PAGE 5 ===
+where X is the diﬃcult target for Ak, so x < T.
+Once we have discovered a suitable value x we can reject all sets Ak for r = 0,1,...
+without further ado so long as the two conditions (2) and (3) are met. It is not diﬃcult to
+calculate when these conditions will fail, and as the average length of the “chain” of rejected
+sets is quite substantial for large h, the extra cost of the requisite book-keeping code is more
+than oﬀset by the savings made. This is illustrated in the following table:
+k h Average chain length Speed increase
+4 150 1088 7%
+5 35 395 11%
+6 14 124 9%
+5 Corrections to “Some extremal postage stamp 2-
+bases”
+Of minor importance are the following corrections to Table 1 of the original article [6]:
+Stride s Original value Correct value
+13 1,654 1,658
+17 246,196 246,169
+21 69,076,273 69,075,740
+A counting bug was found in the original program which was most serious for s = 21.
+The type of 2-bases investigated by Robinson [6] were also investigated by Mossige [5],
+who first describes preambles PA(s,as) and then describes a property extensibility. Consider
+the following family of bases derived from PA(s,as):
+Ap+s = {1,a2,... ,as = b0,as + s = b1,as + 2s = b2,... ,as + ps= bp}
+We say PA(s,as) is extensible if Ap+s is admissible for all p.
+Next we say that an extensible preamble PA(s,as) is symmetricizable if the family of the
+symmetric bases Ak derived from it in the obvious way (see Robinson [6]) are admissible
+for all k ≥ k0 for some k0. It is straightforward to show that PA(s,as) is extensible if Ap+s
+is admissible for some p such that bp 1 ≥ 2b0, and that it is symmetricizable if the derived
+symmetric basis is admissible for some p such that bp ≥ 2b0. These facts were used by Challis
+when coding his algorithm to determine optimal preambles PA(s,as).
+What is perhaps surprising is that an extensible preamble is not necessarily symmetriciz-
+able, and this is the reason for the two errors in Table 2 of the original article: the preambles
+for s = 16 and s = 24, although extensible, are not symmetricizable. As an example, con-
+sider the 2-basis for k = 52 derived from PA(16,61); it is easy to show that the value 415
+cannot be generated by this basis.
+5
+=== PAGE 6 ===
+Let us call a preamble that is extensible but not symmetricizable anomalous; then there
+are no anomalous preambles for s < 14. Even afterwards, there are very few, although the
+proportion increases slightly as s increases. For s = 21, just 1.3% of extensible preambles
+are anomalous.
+Here are corrected versions of Table 2 and Table 3 from Robinson [6]:
+Table 2: Most eﬃcient PAs for s = 11,... ,26
+s A
+11 {1,3,4,7,8,9,16,17,21,24,35}
+13 {1,2,5,7,10,11,19,21,22,25,29,30,43}
+15 {1,2,5,6,8,9,13,19,22,27,29,33,40,41,56}
+16 {1,2,3,7,8,9,12,15,22,26,30,36,37,43,45,61}
+17 {1,2,5,6,7,12,13,16,26,28,31,37,38,42,44,49,66}
+19 {1,2,3,6,9,11,12,15,16,27,32,37,45,48,52,55,61,62,80}
+20 {1,2,4,5,11,13,14,19,29,35,37,43,46,47,50,52,56,58,68,88}
+21 {1,2,3,6,10,14,17,19,26,29,36,41,49,51,54,55,58,60,67,74,95}
+22 {1,3,5,7,8,12,14,18,26,32,33,42,43,50,60,63,68,79,81,83,97, 105}
+24 {1,3,5,6,13,15,16,18,22,38,41,44,47,52,55,58,59,60,74,80,81, 91,93, 117}
+26 {1,3,4,6,7,14,16,19,20,28,36,38,39,48,49,60,61,70,76,77,89, 93, 95,99, 109,135}
+The changes are an alternative PA(16,61) that is symmetricizable, a new PA(17,66) that
+gives rise to an optimal basis for k = 57, a replacement for PA(24,118), and the addition of
+PA(26,135).
+Table 3: Best n2(Ak) for the symmetric bases
+s as k-range n2(Ak)
+11 35 30-40 22k− 344
+13 43 40-43 26k− 504
+15 56 43-52 30k− 676
+16 61 52-56 32k− 780
+17 66 56-58 34k− 892
+19 80 58-62 38k− 1124
+20 88 62-67 40k− 1248
+22 105 67-80 44k− 1516
+24 117 80-82 48k− 1836
+26 135 82-? 52k− 2164
+Interestingly, Mossige missed PA(16,61) and noted that for 9 ≤ s ≤ 19 all of the best
+bases were derived from preambles with odd s, so although he calculated as far as s = 23 he
+omitted s = 20 and s = 22.
+6
+=== PAGE 7 ===
+Recently (see section 7), an exhaustive search for optimal 2-bases for k = 21 found the
+following to be extremal:
+k n(2,k) A
+21 164 {1,3,4,6,10,13,15,21,29,37,45,53,61,69,73,75,78,79,82,84,88}
+{1,3,4,6,10,13,15,21,29,37,45,53,61,69,73,75,78,79,80,82,84}
+{1,3,4,6,10,13,15,21,29,37,45,53,61,67,69,72,76,78,79,81,82}
+{1,3,4,5,8,14,20,26,32,38,44,50,56,62,68,74,77,78,79,81,82}
+This is the first example for k > 14 where there are non-symmetric extremal solutions in
+addition to the expected symmetric bases.
+6 Discussion
+It was found that n(8) = 3485 is 40 larger than the next best (8,8) set with n8(A) = 3445.
+The improved rejection factor technique presented in this note, when applied to the h = 9
+case, appears to be about 50. Our estimate of more than 1017 admissible cases indicates that
+this approach is insuﬃcient for h = 9 with the current computer technology. In the random
+experiments it was found that n(9) ≥ 9338, which is more than twice the Fibonacci lower
+bound of 4180 [1].
+7 Appendix A: Table of extremal ranges n(h, k) with
+corresponding h-bases Ak
+Note that the smaller values in the following table were previously published by the first
+author [2].
+h= 2
+k n(2,k) ai
+3 8 1 3 4
+4 12 1 3 5 6
+5 16 1 3 5 7 8
+6 20 1 2 5 8 9 10
+6 20 1 3 4 8 9 11
+6 20 1 3 4 9 11 16
+6 20 1 3 5 6 13 14
+6 20 1 3 5 7 9 10
+7 26 1 2 5 8 11 12 13
+7 26 1 3 4 9 10 12 13
+7 26 1 3 5 7 8 17 18
+7
+=== PAGE 8 ===
+8
+h= 2 (continued)
+k n(2,k) ai
+8 32 1 2 5 8 11 14 15 16
+8 32 1 3 5 7 9 10 21 22
+9 40 1 3 4 9 11 16 17 19 20
+10 46 1 2 3 7 11 15 19 21 22 24
+10 46 1 2 5 7 11 15 19 21 22 24
+11 54 1 2 3 7 11 15 19 23 25 26 28
+11 54 1 2 5 7 11 15 19 23 25 26 28
+11 54 1 3 4 9 11 16 18 23 24 26 27
+11 54 1 3 5 6 13 14 21 22 24 26 27
+12 64 1 3 4 9 11 16 21 23 28 29 31 32
+13 72 1 3 4 9 11 16 20 25 27 32 33 35 36
+14 80 1 2 5 8 11 14 17 20 23 24 25 51 53 55
+14 80 1 3 4 5 8 14 20 26 32 35 36 37 39 40
+14 80 1 3 4 9 10 15 16 21 22 24 25 51 53 55
+15 92 1 3 4 5 8 14 20 26 32 38 41 42 43 45 46
+16 104 1 3 4 5 8 14 20 26 32 38 44 47 48 49 51 52
+17 116 1 3 4 5 8 14 20 26 32 38 44 50 53 54 55 57 58
+18 128 1 3 4 5 8 14 20 26 32 38 44 50 56 59 60 61 63 64
+19 140 1 3 4 5 8 14 20 26 32 38 44 50 56 62 65 66 67 69 70
+20 152 1 3 4 5 8 14 20 26 32 38 44 50 56 62 68 71 72 73 75 76
+21 164 1 3 4 6 10 13 15 21 29 37 45 53 61 69 73 75 78 79 82 84 88
+21 164 1 3 4 6 10 13 15 21 29 37 45 53 61 69 73 75 78 79 80 82 84
+21 164 1 3 4 6 10 13 15 21 29 37 45 53 61 67 69 72 76 78 79 81 82
+21 164 1 3 4 5 8 14 20 26 32 38 44 50 56 62 68 74 77 78 79 81 82
+22 180 1 3 4 6 10 13 15 21 29 37 45 53 61 69 77 81 83 86 87 90 92 96
+22 180 1 3 4 6 10 13 15 21 29 37 45 53 61 69 77 81 83 86 87 88 90 92
+22 180 1 3 4 6 10 13 15 21 29 37 45 53 61 69 75 77 80 84 86 87 89 90
+=== PAGE 9 ===
+h= 3
+k n(3,k) ai
+3 15 1 4 5
+4 24 1 4 7 8
+5 36 1 4 6 14 15
+6 52 1 3 7 9 19 24
+6 52 1 4 6 14 17 29
+7 70 1 4 5 15 18 27 34
+8 93 1 3 6 10 24 26 39 41
+9 121 1 3 8 9 14 32 36 51 53
+10 154 1 2 6 8 19 28 40 43 91 103
+11 186 1 2 3 8 11 26 38 56 69 85 89
+11 186 1 4 6 13 16 27 44 49 73 81 91
+12 225 1 3 8 13 15 16 49 53 84 88 108 114
+13 271 1 4 6 14 16 20 39 56 79 100 113 122 131
+14 323 1 2 4 9 15 27 38 43 46 97 107 127 147 157
+h= 4
+k n(4,k) ai
+3 26 1 5 8
+4 44 1 3 11 18
+5 70 1 3 11 15 32
+6 108 1 4 9 16 38 49
+6 108 1 5 8 27 29 44
+7 162 1 4 9 24 35 49 51
+7 162 1 4 10 15 37 50 71
+7 162 1 5 8 25 31 52 71
+8 228 1 3 8 19 33 39 92 102
+9 310 1 4 10 11 28 33 78 118 143
+9 310 1 5 7 22 31 36 83 117 133
+10 422 1 4 9 24 26 42 104 115 174 185
+11 550 1 4 9 20 34 52 62 137 149 229 242
+h= 5
+k n(5,k) ai
+3 35 1 6 7
+4 71 1 4 12 21
+4 71 1 5 12 28
+5 126 1 4 9 31 51
+6 211 1 4 13 24 56 61
+6 211 1 5 8 33 54 67
+7 336 1 4 13 24 30 87 106
+8 524 1 6 8 33 48 77 183 236
+9 726 1 4 13 18 51 92 163 208 223
+10 1016 1 6 8 21 60 93 104 154 378 414
+9
+=== PAGE 10 ===
+h= 6
+k n(6,k) ai
+3 52 1 7 12
+4 114 1 4 19 33
+5 216 1 7 12 43 52
+6 388 1 7 11 48 83 115
+7 638 1 4 18 31 104 145 170
+8 1007 1 5 18 29 97 170 219 308
+9 1545 1 6 10 32 77 114 284 447 471
+k= 2
+Separate formulae are given for h even and h odd:
+n(2t,2) = t(t + 3) n(2t + 1,2) = t(t + 4) + 2 with a2 = t + 1 or t + 2
+with a2 = t + 2
+k= 3
+h n(h,3) a1 a2 a3
+7 69 1 8 13
+8 89 1 9 14
+9 112 1 9 20
+10 146 1 10 26
+11 172 1 9 30
+11 172 1 10 26
+12 212 1 11 37
+13 259 1 13 34
+14 302 1 12 52
+h n(h,3) a1 a2 a3
+15 354 1 12 52
+16 418 1 15 54
+17 476 1 14 61
+18 548 1 15 80
+19 633 1 18 65
+20 714 1 17 91
+21 805 1 17 91
+22 902 1 19 102
+22 902 1 20 92
+where h = 9t + r, 0 ≤ r ≤ 8, and cij
+are given by:
+For h ≥ 23, n(h,3) and ai are given by
+the formulae:
+a2 = (6t + c21)
+a3 = (2t + c31) + (2t + c32)a2
+n(h,3) = (4t + c41) + (2t + c42)a2
++(3t + c43)a3
+r c21 c31 c32 c41 c42 c43
+0 3 1 1 0 0 0
+1 3 1 1 0 0 1
+2 5 2 1 1 0 1
+3 5 2 1 1 0 2
+4 7 3 1 2 0 2
+5 6 2 2 2 1 2
+6 8 3 2 3 1 2
+7 8 3 2 3 1 3
+8 10 4 2 4 1 3
+10
+=== PAGE 11 ===
+k= 4
+h n(h,4) a1 a2 a3 a4
+7 165 1 5 24 37
+8 234 1 6 25 65
+9 326 1 5 34 60
+10 427 1 6 41 67
+11 547 1 7 48 85
+12 708 1 7 48 126
+13 873 1 9 56 155
+14 1094 1 8 61 164
+15 1383 1 12 65 240
+16 1650 1 11 78 216
+17 1935 1 11 90 252
+18 2304 1 16 73 338
+19 2782 1 10 99 360
+20 3324 1 16 103 488
+21 3812 1 16 103 488
+22 4368 1 12 121 561
+23 5130 1 14 142 659
+24 5892 1 16 163 757
+25 6745 1 20 149 860
+26 7880 1 16 194 734
+27 8913 1 21 177 1006
+28 9919 1 21 177 1006
+29 11081 1 19 230 870
+30 12376 1 18 254 969
+31 13932 1 25 211 1410
+h n(h,4) a1 a2 a3 a4
+32 15657 1 25 236 1585
+33 17242 1 25 236 1585
+34 18892 1 24 225 1734
+35 21061 1 28 264 1773
+36 23445 1 22 355 1700
+37 25553 1 29 303 2346
+38 27978 1 22 355 2361
+39 31347 1 30 343 2634
+40 33981 1 30 343 2634
+41 36806 1 31 353 3092
+42 39914 1 27 465 2692
+43 43592 1 34 389 3376
+44 47536 1 34 423 3682
+45 51218 1 34 423 3682
+46 54900 1 28 564 3261
+46 54900 1 34 423 3682
+47 59702 1 37 460 4004
+48 63891 1 38 473 4590
+49 69362 1 38 509 4986
+50 74348 1 38 509 4986
+51 81303 1 39 563 5448
+52 86751 1 39 563 5448
+53 92199 1 39 563 5448
+54 97836 1 41 630 6147
+For 55 ≤ h ≤ 254, n(h,4) and ai are given by one of the following three sets of formulae:
+(A) : a2 = (9t + c21)
+a3 = (4t + c31) + (3t + c32)a2
+a4 = (7t + c41) + (2t + c42)a2 + (2t + c43)a3
+n(h,4) = (2t + c51) + (t + c52)a2 + (6t + c53)a3 + (3t + c54)a4
+(B) : a2 = (9t + c21)
+a3 = (2t + c31) + (3t + c32)a2
+a4 = (7t + c41) + (2t + c42)a2 + (2t + c43)a3
+n(h,4) = (4t + c51) + (3t + c52)a2 + (2t + c53)a3 + (3t + c54)a4
+(C) : a2 = (9t + c21)
+a3 = (4t + c31) + (3t + c32)a2
+a4 = (7t + c41) + (2t + c42)a2 + (2t + c43)a3
+n(h,4) = (t + c51) + (4t + c52)a2 + (6t + c53)a3 + (3t + c54)a4
+where h = 12t + r, 0 ≤ r ≤ 11, and cij are given in the following table:
+11
+=== PAGE 12 ===
+k= 4 (continued)
+r c21 c31 c32 c41 c42 c43 c51 c52 c53 c54 Valid for:
+0 A 2 1 0 1 0 1−3 0 4−1 4 ≤ t ≤ 5
+0 A 1 0 0 0 0 0−2 0 1 1 6 ≤ t ≤ 11
+0 B 2 2−1 3−1 0−1−2−1 4 12 ≤ t ≤ 21
+1 A 1 0 2 1 1 0 0 0 1 0 5 ≤ t ≤ 21
+2 A 2 1 1 1 1 1−3 1 4 0 5 ≤ t ≤ 6
+2 A 1 0 2 1 1 0 0 0 1 1 7 ≤ t ≤ 20
+2 B 5 3−1 6−1 0 0−2−1 5 21 ≤ t ≤ 21
+3 A 3 1 2 2 1 1−1 0 4 0 1 ≤ t ≤ 20
+4 A 3 1 2 2 1 1−1 0 4 1 2 ≤ t ≤ 20
+5 A 3 1 2 2 1 1−1 0 4 2 4 ≤ t ≤ 20
+6 A 3 1 2 2 1 1−1 0 4 3 5 ≤ t ≤ 20
+7 A 7 3 2 5 1 2−1 0 7 1 2 ≤ t ≤ 11
+7 A 8 4 1 7 1 0 0 1 1 5 12 ≤ t ≤ 20
+8 A 7 3 3 5 2 2−1 1 7 1 1 ≤ t ≤ 16
+8 A 8 4 1 7 1 0 0 1 1 6 17 ≤ t ≤ 20
+9 A 7 3 3 5 2 2−1 1 7 2 1 ≤ t ≤ 20
+10 A 7 3 3 5 2 2−1 1 7 3 4 ≤ t ≤ 19
+10 C 11 6 1 10 1 0 0 3 0 7 20 ≤ t ≤ 20
+11 A 10 4 3 7 2 2 0 1 7 3 2 ≤ t ≤ 7
+11 B 11 4 2 10 1 2 3 1 1 6 8 ≤ t ≤ 20
+The extremal bases of type A were independently investigated by Mossige [4], who devel-
+oped a procedure for determining the corresponding h-range. Selmer [7] showed the others
+to be given by similar formulae of type B. Type C is a variant of type A.
+k= 5
+h n(h,5) a1 a2 a3 a4 a5
+7 345 1 8 11 64 102
+8 512 1 9 15 78 115
+8 512 1 9 15 80 118
+9 797 1 9 23 108 181
+10 1055 1 8 27 119 194
+11 1475 1 10 34 165 270
+12 2047 1 10 26 195 320
+13 2659 1 13 34 242 409
+14 3403 1 11 48 278 720
+15 4422 1 14 50 325 782
+16 5629 1 14 61 381 984
+17 6865 1 13 67 326 1191
+18 8669 1 14 75 500 1306
+19 10835 1 14 89 523 1892
+20 12903 1 14 102 589 1912
+21 15785 1 14 88 727 2060
+22 18801 1 18 97 858 2156
+12
+=== PAGE 13 ===
+k= 5 (continued)
+h n(h,5) a1 a2 a3 a4 a5
+23 22456 1 20 91 894 3330
+24 26469 1 16 148 843 3894
+25 31108 1 16 148 975 4554
+26 36949 1 22 136 1168 4227
+27 42744 1 22 162 1372 4889
+28 49436 1 25 139 1510 5657
+29 57033 1 23 170 1610 5811
+30 66771 1 24 201 1718 7596
+31 75558 1 23 192 1976 7018
+32 86303 1 25 180 1916 8793
+33 96852 1 28 202 2150 9867
+34 110253 1 29 209 2434 11256
+35 123954 1 27 231 2495 11464
+36 140688 1 30 227 2839 12993
+37 158389 1 31 234 2926 13391
+38 178811 1 30 275 2947 16472
+39 197293 1 29 300 3671 16677
+40 223580 1 29 266 3382 18856
+41 247194 1 32 294 3739 20847
+42 273443 1 34 325 4133 23063
+43 300747 1 33 342 4560 25414
+44 331461 1 32 393 4562 25751
+45 368894 1 32 457 5137 28671
+46 401350 1 37 421 5602 31205
+47 443231 1 33 336 5224 34431
+48 490325 1 36 515 6304 35400
+49 536399 1 34 422 6065 38741
+50 586322 1 42 444 6906 45542
+51 634430 1 36 482 7132 40052
+52 699698 1 35 570 6602 50446
+53 754166 1 40 462 7666 50721
+54 823136 1 39 474 7840 51893
+55 892139 1 42 511 8494 56238
+56 968914 1 39 489 8580 65052
+57 1052562 1 43 617 10091 66380
+58 1150377 1 46 606 9531 72397
+59 1236682 1 44 552 10237 77846
+60 1325927 1 41 631 11205 74232
+61 1420882 1 44 623 10432 89278
+62 1547688 1 49 646 12050 91649
+63 1678695 1 49 664 12338 93848
+64 1782370 1 52 705 13100 99644
+13
+=== PAGE 14 ===
+k= 5 (continued)
+h n(h,5) a1 a2 a3 a4 a5
+65 1888725 1 48 698 12988 111755
+66 2036874 1 48 746 13252 113747
+67 2165553 1 51 793 14087 120914
+k= 6
+h n(h,6) a1 a2 a3 a4 a5 a6
+7 664 1 7 12 64 113 193
+8 1045 1 9 14 65 170 297
+9 1617 1 6 31 48 256 373
+10 2510 1 9 31 96 366 411
+11 3607 1 7 41 105 490 815
+12 5118 1 6 47 120 565 946
+13 7066 1 10 35 133 759 1304
+14 9748 1 11 49 188 810 2109
+15 12793 1 8 71 192 1215 1993
+16 17061 1 15 49 285 1292 3043
+17 22342 1 13 82 387 1723 4789
+18 28874 1 13 94 354 1968 5062
+19 36560 1 16 87 408 2351 6452
+20 45754 1 17 93 436 2898 6897
+21 57814 1 14 129 469 3585 8757
+22 72997 1 17 109 624 3998 9618
+23 87555 1 12 117 541 4487 11496
+24 106888 1 19 138 782 5346 13991
+25 129783 1 19 157 896 5656 19313
+k= 7
+h n(h,7) a1 a2 a3 a4 a5 a6 a7
+7 1137 1 7 18 62 104 244 259
+7 1137 1 8 13 66 115 254 415
+8 2001 1 6 28 47 127 412 602
+9 3191 1 7 30 86 189 607 920
+10 5047 1 6 29 96 246 857 1179
+11 7820 1 10 34 153 380 1342 1487
+12 11568 1 8 49 127 419 1566 2604
+13 17178 1 12 40 223 544 2479 3253
+k= 8
+h n(h,8) a1 a2 a3 a4 a5 a6 a7 a8
+7 1911 1 4 17 31 117 209 513 550
+7 1911 1 6 20 41 109 228 509 580
+8 3485 1 8 13 58 169 295 831 1036
+14
+=== PAGE 15 ===
+References
+[1] R. Alter, J. Barnett, Remarks on the postage stamp problem with applications to com-
+puters, Congr. Numer. 19 (1977), 43–59.
+[2] M. F. Challis, Two new techniques for computing extremal h-bases Ak, Computer J. 36
+(1993), 117–126.
+[3] S. Mossige, Algorithms for computing the h-range of the Postage stamp problem, Math.
+Comp. 36 (1981), 575–582.
+[4] S. Mossige, On extremal h-bases A4, Math. Scand. 61 (1987), 5–16.
+[5] S. Mossige, Symmetric bases with large 2-range for k ≤ 75, preprint, 1991.
+[6] J. P. Robinson, Some postage stamp 2-bases, J. Integer Seq. 12 (2009), Article 09.1.1.
+[7] E. S. Selmer, Associate bases in the postage stamp problem, J. Number Theory 42 (3)
+(1992), 320–336.
+[8] J. Shallit, The computational complexity of the local postage stamp problem, ACM
+SIGACT News 33 (2002), 90–94.
+[9] N. J. A. Sloane, The On-Line Encylopedia of Integer Sequences, 2009.
+2000 Mathematics Subject Classification: Primary 11B13.
+Keywords: h-basis, extremal h-basis.
+(Concerned with sequences A001210, A001211, A001216, A001215, A001216, A053346, and
+A053348.)
+Received September 23 2009; revised version received November 18 2009; January 27 2010.
+Published in Journal of Integer Sequences, January 30 2010.
+Return to Journal of Integer Sequences home page.
+15

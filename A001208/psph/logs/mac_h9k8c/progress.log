@@ -1,0 +1,3 @@
+=== chunk 0 items [10700,11003) h=9 k=8 TGT=5823 start Thu Oct  1 16:36:28 PDT 2026
+=== chunk 0 done rc=0 Thu Oct  1 22:50:46 PDT 2026: 1 solutions; [psph] leaf candidates a_8 tested: 4069569761061   X-pass: 2211697420516 (54.3%)   deephole-pass: 508204530529
+=== RANGE [10700,11003) COMPLETE Thu Oct  1 22:50:46 PDT 2026

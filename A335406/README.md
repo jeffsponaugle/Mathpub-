@@ -153,10 +153,36 @@ at N = 2·10⁸.
 `model_a335406.py SCANFILE [RATE]` — the heuristic model and its calibration; the
 output for the 10¹³ scan is `model_1e13.txt`.
 
-Files: `scan_1e12.txt`, `scan_1e13.txt` (+ `.log`) — scan outputs; `model_1e13.txt`;
+Files: `scan_1e12.txt`, `scan_1e13.txt`, `scan_1e13_check.txt` (+ `.log`) — scan outputs; `model_1e13.txt`;
 `DATA.txt` — the known terms.
 
+## Side result: a new term of A055206
+
+E(10ⁿ), the number of primes below 10ⁿ whose gap repeats the previous gap, is the
+number of balanced primes (A006562) below 10ⁿ, which is OEIS [A055206](https://oeis.org/A055206).
+Its data ends at n = 12 with 756279950; our values agree with all twelve terms, and the
+10¹³ scan gives the next one:
+
+    A055206(13) = 6470105925
+
+Confirmed by a second exhaustive scan with different chunking (810,001 chunks of
+12,345,678 on 8 threads, `scan_1e13_check.txt`, 711 s), which reproduced π, E and the
+whole run-length histogram exactly; π(10¹³) matches the known value.
+
+## GPU note (Sep 30 2026)
+
+A GPU does not change the picture for a(6). A segmented sieve is memory-bandwidth
+bound (at N ≈ 10²⁰ roughly 0.4–0.5 large-prime bucket hits per integer, 12–16 bytes
+each), so an H100-class card (3.3 TB/s) might reach 1–2·10¹¹ numbers/s, ~55 years for
+the median 3.5·10²⁰, while a DGX Spark (273 GB/s) is no faster than the M1 Pro. E(x)
+is a count of balanced primes, a local pattern with no sub-linear algorithm, so every
+integer must be touched. A constellation sieve for the smallest CPAP-7 itself
+(A006560(7)) is ~25× cheaper than a full sieve (~0.04 operations per integer of range;
+roughly 1–2 H100-years to 10²¹) but would still not give A335406(6).
+
 ## Possible OEIS additions
+
+- A055206: a(13) = 6470105925 (balanced primes below 10^13), confirmed by two scans.
 
 - A335406: "a(6) > 339595430914: no run of six equal gaps begins at a prime below
   10^13 (exhaustive). a(6) is the index of the run starting at the smallest CPAP-7,

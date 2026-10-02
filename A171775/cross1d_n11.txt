@@ -1,0 +1,2 @@
+# n=11 [10077696000000000000000000, 10128084480000000000000000] complete: 3820.3s, tuples 11450978179652, hits 80727, (n-1)-palindromes 211, canonical 211, checksum 1dc0b33a97158c66, solutions 0
+# failed at length: L=9:211 L=8:0 L=7:0 L=6:0 L=5:0 L=4:0 L=3:0

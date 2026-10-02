@@ -1,0 +1,19 @@
+[psph] using TGT = known value 143814
+[psph] h=60 k=4 TGT=143814 threads=2  (known n_60(4)=143814, listing extremal bases)
+[psph] bounds a_{j+1} <= n_h(j)+1: n(1)=60 n(2)=990 n(3)=13219
+[psph] lower bounds a_j >= LOW[j]: L2=2 L3=40 L4=2397
+[psph] split depth 3: 36674 work items (generated in 0.03s)
+SOLUTION h=60 k=4 n_h=143814 : 1 47 726 8492
+[psph] thread 0: 18500 items, busy 3.38s (tables 0.22s, candidates 3.13s)
+[psph] thread 1: 18174 items, busy 3.36s (tables 0.21s, candidates 3.13s)
+[psph] ---- statistics h=60 k=4 TGT=143814 ----
+[psph] level           visited       admissible      pruned(LOW) degenerate
+[psph] a_2                  60               60                0          0
+[psph] a_3               38887            36674             2213          0
+[psph] leaf candidates a_4 tested: 173475867   X-pass: 28246821 (16.3%)   deephole-pass: 2219731 (1.28%)   stage2-pass: 1960459   full-check fail: 1960458   direct: 0   solutions: 1
+[psph] probes: 1248580273 (7.20 per candidate)
+[psph] full-check failure position (blocks of a_k below the top block): [0]=4 [1]=768 [2]=8385 [3]=33462 [4]=82658 [5]=151088 [6]=218074 [7]=263990 [8]=269591 [9]=239359 [10]=197042 [11]=153447 [12]=111171 [13]=78022 [14]=51751 [15]=34130 [16]=22616 [17]=44900
+[psph] leaf table bytes 6.54e+08, full-check bytes 7.87e+10
+[psph] wall 4.18s, CPU 6.77s (1.6 cores), items 36674 (split 3, gen 0.03s); 2.56e+07 candidates per CPU-second
+[psph] worker CPU split: leaf tables 6.4%, leaf candidates (X test, stage 2, full checks) 92.9%, prefix DP+overhead 0.6%
+[psph] 1 bases with n_60(A_4) >= 143814

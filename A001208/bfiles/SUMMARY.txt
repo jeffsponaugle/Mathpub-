@@ -1,0 +1,7 @@
+k=4: verified h-range of 302 bases (h=1..302), 0 mismatches
+A084192: 109 terms (was 71/71/66 in OEIS); first unknown entry (h,k or m,n, antidiagonal) = (5, 11, 16)
+A084193: 113 terms (was 71/71/66 in OEIS); first unknown entry (h,k or m,n, antidiagonal) = (7, 9, 16)
+A196416: 145 terms (was 71/71/66 in OEIS); first unknown entry (h,k or m,n, antidiagonal) = (7, 9, 16)
+A084192: OEIS data (71 terms) matches our array prefix: True
+A084193: OEIS data (71 terms) matches our array prefix: True
+A196416: OEIS data (66 terms) matches our array prefix: True

@@ -1,0 +1,55 @@
+=== h=3 k=10 T=155 ===
+h=3 k=10 T=155: 86 prefixes at depth 4 (0.00s)
+nodes per level: L5=760 L6=8518 L7=116278 L8=1911198 L9=37060964 L10=648374287
+RESULT h=3 k=10 T=155 found=0 total_nodes=687472005 time=7.58s rate=90.70M nodes/s threads=10
+=== h=3 k=11 T=187 ===
+h=3 k=11 T=187: 86 prefixes at depth 4 (0.00s)
+nodes per level: L5=760 L6=8518 L7=116278 L8=1911198 L9=37063964 L10=835735518 L11=17345036965
+RESULT h=3 k=11 T=187 found=0 total_nodes=18219873201 time=183.51s rate=99.29M nodes/s threads=10
+=== h=3 k=12 T=226 ===
+h=3 k=12 T=226: 86 prefixes at depth 4 (0.00s)
+=== h=4 k=8 T=229 ===
+h=4 k=8 T=229: 291 prefixes at depth 4 (0.00s)
+nodes per level: L5=4752 L6=109640 L7=3380466 L8=135824807
+RESULT h=4 k=8 T=229 found=0 total_nodes=139319665 time=2.19s rate=63.70M nodes/s threads=10
+=== h=4 k=9 T=311 ===
+h=4 k=9 T=311: 291 prefixes at depth 4 (0.00s)
+nodes per level: L5=4752 L6=109640 L7=3380466 L8=136053274 L9=6952196642
+RESULT h=4 k=9 T=311 found=0 total_nodes=7091744774 time=112.99s rate=62.76M nodes/s threads=10
+=== h=4 k=10 T=423 ===
+h=4 k=10 T=423: 291 prefixes at depth 4 (0.00s)
+=== h=5 k=7 T=337 ===
+h=5 k=7 T=337: 750 prefixes at depth 4 (0.00s)
+nodes per level: L5=20881 L6=880325 L7=54329413
+RESULT h=5 k=7 T=337 found=0 total_nodes=55230619 time=1.63s rate=33.85M nodes/s threads=10
+=== h=5 k=8 T=525 ===
+h=5 k=8 T=525: 750 prefixes at depth 4 (0.00s)
+nodes per level: L5=20881 L6=880325 L7=54329413 L8=4727396109
+RESULT h=5 k=8 T=525 found=0 total_nodes=4782626728 time=142.00s rate=33.68M nodes/s threads=10
+=== h=5 k=9 T=727 ===
+h=5 k=9 T=727: 750 prefixes at depth 4 (0.00s)
+=== h=6 k=6 T=389 ===
+h=6 k=6 T=389: 1694 prefixes at depth 4 (0.00s)
+nodes per level: L5=73126 L6=5235791
+RESULT h=6 k=6 T=389 found=0 total_nodes=5308917 time=0.12s rate=45.47M nodes/s threads=10
+=== h=6 k=7 T=639 ===
+h=6 k=7 T=639: 1694 prefixes at depth 4 (0.00s)
+nodes per level: L5=73126 L6=5235791 L7=593539539
+RESULT h=6 k=7 T=639 found=0 total_nodes=598848456 time=21.04s rate=28.47M nodes/s threads=10
+=== h=6 k=8 T=1008 ===
+h=6 k=8 T=1008: 1694 prefixes at depth 4 (0.00s)
+=== h=7 k=5 T=346 ===
+h=7 k=5 T=346: 3407 prefixes at depth 4 (0.00s)
+nodes per level: L5=217997
+RESULT h=7 k=5 T=346 found=0 total_nodes=217997 time=0.01s rate=25.77M nodes/s threads=10
+=== h=7 k=6 T=665 ===
+h=7 k=6 T=665: 3407 prefixes at depth 4 (0.00s)
+nodes per level: L5=217997 L6=24929035
+RESULT h=7 k=6 T=665 found=0 total_nodes=25147032 time=1.29s rate=19.48M nodes/s threads=10
+=== h=7 k=7 T=1138 ===
+=== h=8 k=5 T=513 ===
+h=8 k=5 T=513: 6332 prefixes at depth 4 (0.00s)
+nodes per level: L5=575227
+RESULT h=8 k=5 T=513 found=0 total_nodes=575227 time=0.03s rate=20.07M nodes/s threads=10
+=== h=8 k=6 T=1046 ===
+=== h=8 k=7 T=2002 ===
