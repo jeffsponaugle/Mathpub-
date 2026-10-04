@@ -75,11 +75,13 @@ Computed with this tool on an Apple M1 Pro (10 cores, Sep 16 2026).
   10¹⁸ (T = 1000 with six forced small factors, ~870 Gm/s per machine) is in
   progress to strengthen this bound; see **Status** below.
 
-## Status (Sep 24 2026)
+## Status (Oct 3 2026)
 
-**Done.** a(9) = 31610535900218923 is established and verified; the OEIS
-submission text (`OEIS_draft.md`) and b-file (`b359636.txt`) are final and
-not yet submitted.
+**Done.** a(9) = 31610535900218923 is established, verified, and **in the
+OEIS entry since Sep 18 2026** (revision #31, with the comment
+a(10) > 31610555571634177). What can still be submitted is listed in
+`submission.md`: chiefly the improved bound a(10) > 408697968217030657 from the
+paused level-10 scan, plus an EXAMPLE line for a(9).
 
 **In progress: level-10 lower-bound scan to 10¹⁸**, split over two DGX Sparks
 since Sep 22 (each half in its own run with its own checkpoint):
@@ -89,8 +91,10 @@ since Sep 22 (each half in its own run with its own checkpoint):
 | atom1 (10.1.30.36) | 0 … 664309293225476097 | m ≤ 4.087·10¹⁷ (61.5%) | ≈ 3 d 12 h at 884 Gm/s | paused Sep 23 11:40, `gpu_n10.state` |
 | atom2 (10.1.30.37) | 664309293225476097 … 10¹⁸+2 | m ≤ 7.410·10¹⁷ (22.8%) | ≈ 3 d 17 h at 847 Gm/s | paused Sep 23 11:40, `gpu_n10b.state` |
 
-Both runs were stopped cleanly (SIGINT, checkpoint written) to free the
-machines for other tests; nothing restarts them automatically. No triple with
+Both runs were stopped cleanly (SIGINT, checkpoint written) on Sep 23 to free
+the machines for other projects and have not been resumed since (state files
+unchanged as of Oct 3; copies in this directory); nothing restarts them
+automatically. No triple with
 all three ω ≥ 10 has appeared anywhere below 4.087·10¹⁷, nor in atom2's
 stretch 6.643·10¹⁷ … 7.410·10¹⁷, so the interim rigorous bound is
 **a(10) > 408697968217030657**; the two ranges together will give
@@ -290,7 +294,9 @@ resumes from the checkpoint; the state file also records solutions found so far.
 * `hunt_n9_L1000.txt`, `hunt_n9_L1000.log` — level-9 hunt (L = 1000) below Corneth's bound.
 * `hunt_n9_L2000.txt`, `hunt_n9_L2000.log` — level-9 hunt (L = 2000) below 36189117287569243.
 * `hunt_n9_L300_Q2e5.txt`, `.log` — level-9 hunt with a free largest prime (L = 300, Q = 2·10⁵).
-* `OEIS_draft.md`, `b359636.txt` — submission text and b-file for a(9).
+* `OEIS_draft.md`, `b359636.txt` — the a(9) submission text (submitted Sep 18 2026) and b-file.
+* `submission.md` — what remains submittable (improved a(10) bound, EXAMPLE, optional comments).
+* `gpu_n10.*`, `gpu_n10b.*` — the paused level-10 runs' output/progress/checkpoints (copies from atom1/atom2).
 * `cuda/a359636_cuda.cu`, `cuda/Makefile` — the CUDA version (DGX Spark); `gpu_n9.txt`/`.log`/`.state` are the run files of the scan that found a(9).
 * `scan_n9.txt`, `scan_n9.log`, `scan_n9.state` — the M1 Pro CPU scan (m ≤ 1.45·10¹⁵, paused; superseded by the GPU run).
 * `scan_n9.txt`, `scan_n9.log`, `scan_n9.state` — the level-9 scan (output, progress, checkpoint).

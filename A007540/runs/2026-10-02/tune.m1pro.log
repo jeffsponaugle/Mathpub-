@@ -1,0 +1,160 @@
+
+n =      100
+  gmp              = 2.621e-06 sec
+  ntt ( 1 threads) = 3.569e-05 sec
+  ntt ( 2 threads) = 3.273e-04 sec
+  ntt ( 3 threads) = 5.060e-04 sec
+  ntt ( 4 threads) = 8.903e-04 sec
+  ntt ( 5 threads) = 1.216e-03 sec
+  ntt ( 6 threads) = 1.346e-03 sec
+  ntt ( 7 threads) = 1.716e-03 sec
+  ntt ( 8 threads) = 1.891e-03 sec
+
+n =      162
+  gmp              = 5.548e-06 sec
+  ntt ( 1 threads) = 4.253e-05 sec
+  ntt ( 2 threads) = 2.799e-04 sec
+  ntt ( 3 threads) = 4.426e-04 sec
+  ntt ( 4 threads) = 6.927e-04 sec
+  ntt ( 5 threads) = 9.478e-04 sec
+  ntt ( 6 threads) = 1.045e-03 sec
+  ntt ( 7 threads) = 1.355e-03 sec
+  ntt ( 8 threads) = 1.637e-03 sec
+
+n =      263
+  gmp              = 1.238e-05 sec
+  ntt ( 1 threads) = 5.187e-05 sec
+  ntt ( 2 threads) = 2.587e-04 sec
+  ntt ( 3 threads) = 4.545e-04 sec
+  ntt ( 4 threads) = 7.177e-04 sec
+  ntt ( 5 threads) = 9.808e-04 sec
+  ntt ( 6 threads) = 1.207e-03 sec
+  ntt ( 7 threads) = 1.437e-03 sec
+  ntt ( 8 threads) = 1.623e-03 sec
+
+n =      426
+  gmp              = 2.389e-05 sec
+  ntt ( 1 threads) = 8.985e-05 sec
+  ntt ( 2 threads) = 4.137e-04 sec
+  ntt ( 3 threads) = 7.073e-04 sec
+  ntt ( 4 threads) = 1.096e-03 sec
+  ntt ( 5 threads) = 1.421e-03 sec
+  ntt ( 6 threads) = 1.695e-03 sec
+  ntt ( 7 threads) = 2.109e-03 sec
+  ntt ( 8 threads) = 2.349e-03 sec
+
+n =      690
+  gmp              = 4.650e-05 sec
+  ntt ( 1 threads) = 1.215e-04 sec
+  ntt ( 2 threads) = 3.468e-04 sec
+  ntt ( 3 threads) = 5.146e-04 sec
+  ntt ( 4 threads) = 7.844e-04 sec
+  ntt ( 5 threads) = 9.980e-04 sec
+  ntt ( 6 threads) = 1.186e-03 sec
+  ntt ( 7 threads) = 1.492e-03 sec
+  ntt ( 8 threads) = 1.667e-03 sec
+
+n =     1117
+  gmp              = 9.205e-05 sec
+  ntt ( 1 threads) = 2.101e-04 sec
+  ntt ( 2 threads) = 5.903e-04 sec
+  ntt ( 3 threads) = 7.912e-04 sec
+  ntt ( 4 threads) = 1.172e-03 sec
+  ntt ( 5 threads) = 1.497e-03 sec
+  ntt ( 6 threads) = 1.717e-03 sec
+  ntt ( 7 threads) = 2.122e-03 sec
+  ntt ( 8 threads) = 2.351e-03 sec
+
+n =     1808
+  gmp              = 1.803e-04 sec
+  ntt ( 1 threads) = 3.052e-04 sec
+  ntt ( 2 threads) = 5.259e-04 sec
+  ntt ( 3 threads) = 6.970e-04 sec
+  ntt ( 4 threads) = 1.074e-03 sec
+  ntt ( 5 threads) = 1.335e-03 sec
+  ntt ( 6 threads) = 1.607e-03 sec
+  ntt ( 7 threads) = 1.864e-03 sec
+  ntt ( 8 threads) = 2.117e-03 sec
+
+n =     2926
+  gmp              = 3.503e-04 sec
+  ntt ( 1 threads) = 5.234e-04 sec
+  ntt ( 2 threads) = 6.196e-04 sec
+  ntt ( 3 threads) = 7.634e-04 sec
+  ntt ( 4 threads) = 1.113e-03 sec
+  ntt ( 5 threads) = 1.404e-03 sec
+  ntt ( 6 threads) = 1.602e-03 sec
+  ntt ( 7 threads) = 1.784e-03 sec
+  ntt ( 8 threads) = 1.935e-03 sec
+
+n =     4735
+  gmp              = 5.331e-04 sec
+  ntt ( 1 threads) = 7.838e-04 sec
+  ntt ( 2 threads) = 9.367e-04 sec
+  ntt ( 3 threads) = 1.088e-03 sec
+  ntt ( 4 threads) = 1.471e-03 sec
+  ntt ( 5 threads) = 1.859e-03 sec
+  ntt ( 6 threads) = 2.085e-03 sec
+  ntt ( 7 threads) = 2.528e-03 sec
+  ntt ( 8 threads) = 2.750e-03 sec
+
+n =     7662
+  gmp              = 8.929e-04 sec
+  ntt ( 1 threads) = 1.435e-03 sec
+  ntt ( 2 threads) = 1.361e-03 sec
+  ntt ( 3 threads) = 1.605e-03 sec
+  ntt ( 4 threads) = 1.776e-03 sec
+  ntt ( 5 threads) = 2.287e-03 sec
+  ntt ( 6 threads) = 2.496e-03 sec
+  ntt ( 7 threads) = 3.035e-03 sec
+  ntt ( 8 threads) = 3.499e-03 sec
+
+n =    12398
+  gmp              = 1.710e-03 sec
+  ntt ( 1 threads) = 2.305e-03 sec
+  ntt ( 2 threads) = 1.855e-03 sec
+  ntt ( 3 threads) = 1.834e-03 sec
+  ntt ( 4 threads) = 2.347e-03 sec
+  ntt ( 5 threads) = 2.971e-03 sec
+  ntt ( 6 threads) = 4.347e-03 sec
+  ntt ( 7 threads) = 3.458e-03 sec
+  ntt ( 8 threads) = 3.714e-03 sec
+
+n =    20060
+  gmp              = 2.781e-03 sec
+  ntt ( 1 threads) = 3.766e-03 sec
+  ntt ( 2 threads) = 2.720e-03 sec
+  ntt ( 3 threads) = 2.500e-03 sec
+  ntt ( 4 threads) = 3.127e-03 sec
+  ntt ( 5 threads) = 3.939e-03 sec
+  ntt ( 6 threads) = 4.035e-03 sec
+  ntt ( 7 threads) = 4.481e-03 sec
+  ntt ( 8 threads) = 4.746e-03 sec
+
+n =    32458
+  gmp              = 5.659e-03 sec
+  ntt ( 1 threads) = 6.004e-03 sec
+  ntt ( 4 threads) = 4.616e-03 sec
+  ntt ( 5 threads) = 6.137e-03 sec
+  ntt ( 6 threads) = 6.040e-03 sec
+  ntt ( 7 threads) = 6.497e-03 sec
+  ntt ( 8 threads) = 6.554e-03 sec
+
+n =    52518
+  gmp              = 8.684e-03 sec
+  ntt ( 1 threads) = 1.197e-02 sec
+  ntt ( 5 threads) = 8.140e-03 sec
+  ntt ( 6 threads) = 8.468e-03 sec
+  ntt ( 7 threads) = 9.009e-03 sec
+  ntt ( 8 threads) = 9.291e-03 sec
+
+n =    84975
+  gmp              = 1.779e-02 sec
+  ntt ( 1 threads) = 1.864e-02 sec
+  ntt ( 7 threads) = 1.317e-02 sec
+  ntt ( 8 threads) = 1.386e-02 sec
+
+n =   137490
+  gmp              = 3.413e-02 sec
+  ntt ( 1 threads) = 3.238e-02 sec
+

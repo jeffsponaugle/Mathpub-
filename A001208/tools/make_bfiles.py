@@ -4,7 +4,7 @@ proven data (Challis 1993; Challis & Robinson JIS 2010 + 2013 addendum;
 Kohonen & Corander 2014).  Every k=4 formula basis is re-verified with the
 C h-range checker (tools/hrange) before it is written out.
 
-Output: bfiles/bA001209.txt (h=1..302), bA001210.txt (h=1..90), bA001211.txt (h=1..26),
+Output: bfiles/bA001209.txt (h=1..302), bA001210.txt (h=1..90), bA001211.txt (h=1..27),
         bA053346.txt (h=1..14), bA084192.txt, bA084193.txt, bA196416.txt (extended arrays),
         and bfiles/SUMMARY.txt
 """
@@ -176,8 +176,8 @@ add5 = [2330896,2496702,2653201,2846834,3047485,3250580,3429203,3629795,3864527,
 k5 = A001210 + add5
 assert len(k5) == 90
 for h,v in enumerate(k5,1): N[(h,5)] = v
-# k=6 (A001211 1..25 + addendum 26)
-k6 = [6,20,52,108,211,388,664,1045,1617,2510,3607,5118,7066,9748,12793,17061,22342,28874,36560,45754,57814,72997,87555,106888,129783,156744]
+# k=6 (A001211 1..25 + addendum 26 + n(27,6) = 186942 proven by our exhaustive search 2026-10-03, basis {1,19,194,1095,7370,27669})
+k6 = [6,20,52,108,211,388,664,1045,1617,2510,3607,5118,7066,9748,12793,17061,22342,28874,36560,45754,57814,72997,87555,106888,129783,156744,186942]
 for h,v in enumerate(k6,1): N[(h,6)] = v
 # k=7 (A053346 1..13 + addendum 14)
 k7 = [7,26,70,162,336,638,1137,2001,3191,5047,7820,11568,17178,24466]
@@ -209,7 +209,7 @@ def write_bfile(name, pairs, header):
 
 write_bfile('A001209', [(h,N[(h,4)]) for h in range(1,303)], "A001209: n=1..302. n=1..54 Challis & Robinson (2010) Table; n=55..302 from the three formula families (A/B/C) with coefficient table of the July 2013 addendum, each basis re-verified by direct h-range computation.")
 write_bfile('A001210', [(h,N[(h,5)]) for h in range(1,91)], "A001210: n=1..90. n=1..67 Challis & Robinson (2010); n=68..90 from their July 2013 addendum (h-ranges re-verified).")
-write_bfile('A001211', [(h,N[(h,6)]) for h in range(1,27)], "A001211: n=1..26. n=26 from Challis & Robinson July 2013 addendum (h-range re-verified).")
+write_bfile('A001211', [(h,N[(h,6)]) for h in range(1,28)], "A001211: n=1..27. n=26 from Challis & Robinson July 2013 addendum (h-range re-verified); n=27 = 186942 from an exhaustive search by Jeff Sponaugle, Oct 2026 (basis 1 19 194 1095 7370 27669).")
 write_bfile('A053346', [(h,N[(h,7)]) for h in range(1,15)], "A053346: n=1..14. n=14 from Challis & Robinson July 2013 addendum (h-range re-verified).")
 
 # arrays

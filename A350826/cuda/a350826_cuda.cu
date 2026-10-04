@@ -62,7 +62,7 @@ typedef int64_t i64;
 typedef unsigned __int128 u128;
 
 #define GOLD    0x9E3779B97F4A7C15ULL
-#define MAXBIN  32
+#define MAXBIN  256
 #define MAXSPSP 1024
 #define P0      ((u64)1 << 20)
 #define BMAX    ((u32)1 << 20)
@@ -860,8 +860,12 @@ __device__ void d_candidate(u128 p, Res *res)
             return;
         }
     }
-    int b = 0;
-    while (b + 1 < P.nbins && p >= (((u128)P.bnd_hi[b + 1] << 64) | P.bnd_lo[b + 1])) b++;
+    int lo = 0, hi = P.nbins;                 /* bnd[lo] <= p < bnd[hi] */
+    while (hi - lo > 1) {
+        const int mid = (lo + hi) >> 1;
+        if (p >= (((u128)P.bnd_hi[mid] << 64) | P.bnd_lo[mid])) lo = mid; else hi = mid;
+    }
+    const int b = lo;
     atomicAdd(&res->cnt[b], 1ULL);
     atomicAdd(&res->cks[b], (unsigned long long)d_mix64((u64)p ^ ((u64)(p >> 64) * GOLD)));
 }
@@ -1572,7 +1576,7 @@ static void parse_opts(int argc, char **argv, int first, opts_t *o, int npos, u1
             const char *v = argv[++i];
             switch (c) {
             case 'b': {
-                char buf[1024];
+                char buf[16384];
                 snprintf(buf, sizeof buf, "%s", v);
                 for (char *tok = strtok(buf, ","); tok; tok = strtok(NULL, ",")) {
                     if (o->nb >= MAXBIN - 1) die("too many bin boundaries");

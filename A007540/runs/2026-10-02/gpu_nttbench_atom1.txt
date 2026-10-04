@@ -1,0 +1,6 @@
+GPU: NVIDIA GB10, 48 SMs, 124608 MB
+(a) copy kernel bandwidth: 213.4 GB/s (read+write)
+(b) 62-bit Montgomery mulmod throughput: 250.1 Gop/s
+(c) validation vs naive DFT, N=1024: ok
+(c) N=2^26 radix-2 Stockham NTT: forward 627.3 ms, inverse 610.1 ms (26 passes each, 24.1 ms/pass, 45 GB/s effective); round trip ok
+(c2) two-level twiddle table: forward 120.2 ms (4.6 ms/pass, 232 GB/s effective), matches single-table: yes

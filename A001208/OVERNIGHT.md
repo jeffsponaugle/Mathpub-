@@ -63,8 +63,8 @@
 
 | term | bound | basis | source |
 |---|---|---|---|
-| A053348(9) = A005344(8) = n(9,8) | **= 6082 (PROVEN 2026-10-02 11:18 PDT; all 11003 items searched)** | 1 8 27 88 197 521 1226 1461 | found on mathg 23:00 Oct 1; search complete Oct 2 |
-| A001211(27) = n(27,6) | >= 177914 (177568 13:10, 176863 12:35; heuristic 176380) | 1 19 122 1028 6378 22929 | exact search on the Mac, items 2000000..2100000, Oct 2 13:28 |
+| A053348(9) = A005344(8) = n(9,8) | **= 6082 (PROVEN 2026-10-02 11:18 PDT; all 11003 items searched; basis UNIQUE, Orin re-check done 2026-10-03)** | 1 8 27 88 197 521 1226 1461 | found on mathg 23:00 Oct 1; search complete Oct 2 |
+| A001211(27) = n(27,6) | **= 186942 (PROVEN 2026-10-03 08:13 PDT; all 30 chunks + boundary windows audited)** | 1 19 194 1095 7370 27669 | found on mathb chunk 21 Oct 3 00:45; search complete Oct 3 (mathd/mathb/mathg) |
 | A001209(303) = n(303,4) | >= 71148327 | 1 228 17657 912312 | formula family (3,A) continued to t=25; hrange verified |
 | A001209(304) | >= 72060639 | same basis | formula (4,A) |
 | A001209(305) | >= 72972951 | same basis | formula (5,A) |

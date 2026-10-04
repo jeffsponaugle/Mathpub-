@@ -1,0 +1,80 @@
+Found 20 core(s) on this computer.
+Please give the number of availables core(s) for this code! Not found unfinished workunit.
+The allowed (even) e values are:
+2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,48,50,54,60,66,70,84,90
+Choose one: Please give start and end value of the search! Give how many primes to process at once: Do you want to print to file all residues (0/1)? (Warning large text file!): Would you like to use large savefile for frequent save (in approx. every 1800 seconds or before we exit) (0/1)? All interesting residues in wilson.txt (res=-1+kp, where abs(k)<=max(100,p/5000))
+Give the Wall time you would like to spend on this run in seconds ! Precompute pow table.
+done.
+All precomputations are done, start the clock.
+Testing p=400000000063...400106842357, p==1 mod 6, stage=0, (2000000 primes for that e=6 is the best) time=0 sec.
+Done the first stage in 4041 sec., 76382 sec. cpu clock time, found ((q-1)/e)! mod m^2, where q=400000000063, e=6, m=product of 2000000 primes
+PROF S1: ntt_mul total 4440.8 s (wall, summed over calls), gmp mpn_mul total 587.3 s
+PROF S1: limbs 2^ 0..  ntt:      1702 calls       0.0 s | gmp: 5297188810 calls     190.0 s
+PROF S1: limbs 2^ 1..  ntt:      1483 calls       0.0 s | gmp: 1536246532 calls      56.3 s
+PROF S1: limbs 2^ 2..  ntt:      1077 calls       0.0 s | gmp: 228500694 calls      10.5 s
+PROF S1: limbs 2^ 3..  ntt:      1132 calls       0.0 s | gmp: 114049015 calls       9.9 s
+PROF S1: limbs 2^ 4..  ntt:      1610 calls       0.0 s | gmp:  56947915 calls      13.1 s
+PROF S1: limbs 2^ 5..  ntt:      1308 calls       0.0 s | gmp:  28445761 calls      18.5 s
+PROF S1: limbs 2^ 6..  ntt:      1266 calls       0.0 s | gmp:  14200267 calls      27.6 s
+PROF S1: limbs 2^ 7..  ntt:      1159 calls       0.0 s | gmp:   7090891 calls      40.7 s
+PROF S1: limbs 2^ 8..  ntt:      1115 calls       0.0 s | gmp:   3543433 calls      55.4 s
+PROF S1: limbs 2^ 9..  ntt:      1591 calls       0.1 s | gmp:   1770302 calls      71.1 s
+PROF S1: limbs 2^10..  ntt:      8109 calls       1.4 s | gmp:    877729 calls      94.2 s
+PROF S1: limbs 2^11..  ntt:    442890 calls     119.2 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^12..  ntt:    221437 calls     130.5 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^13..  ntt:    110724 calls     139.0 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^14..  ntt:     55360 calls     164.6 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^15..  ntt:     27680 calls     179.5 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^16..  ntt:     13839 calls     210.2 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^17..  ntt:      6921 calls     150.2 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^18..  ntt:      3466 calls     105.2 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^19..  ntt:      1729 calls     104.4 s | gmp:         0 calls       0.0 s
+PROF S1: limbs 2^20..  ntt:      8863 calls    3136.4 s | gmp:         0 calls       0.0 s
+Done the second stage in 125 sec., 1108 sec. cpu clock time, computed 2000000 values of the form ((p-1)/e)!/((q-1)/e)! mod p^2, where q=400000000063, e=6
+PROF S2: ntt_mul total 4556.6 s (wall, summed over calls), gmp mpn_mul total 595.9 s
+PROF S2: limbs 2^ 0..  ntt:   2001702 calls       0.1 s | gmp: 5407802113 calls     194.0 s
+PROF S2: limbs 2^ 1..  ntt:  11397111 calls       1.5 s | gmp: 1587710554 calls      58.2 s
+PROF S2: limbs 2^ 2..  ntt:   2698072 calls       0.5 s | gmp: 235768903 calls      10.9 s
+PROF S2: limbs 2^ 3..  ntt:   1873200 calls       0.4 s | gmp: 116850721 calls      10.1 s
+PROF S2: limbs 2^ 4..  ntt:   2832540 calls       0.7 s | gmp:  58292585 calls      13.5 s
+PROF S2: limbs 2^ 5..  ntt:    444972 calls       0.6 s | gmp:  28939772 calls      18.9 s
+PROF S2: limbs 2^ 6..  ntt:    240914 calls       0.8 s | gmp:  14397572 calls      28.0 s
+PROF S2: limbs 2^ 7..  ntt:    156333 calls       1.2 s | gmp:   7179979 calls      41.3 s
+PROF S2: limbs 2^ 8..  ntt:    719543 calls      10.4 s | gmp:   3569033 calls      55.8 s
+PROF S2: limbs 2^ 9..  ntt:     52770 calls       2.3 s | gmp:   1770302 calls      71.1 s
+PROF S2: limbs 2^10..  ntt:     31386 calls       3.9 s | gmp:    877729 calls      94.2 s
+PROF S2: limbs 2^11..  ntt:    456602 calls     122.8 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^12..  ntt:    253709 calls     148.5 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^13..  ntt:    119508 calls     148.9 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^14..  ntt:     56496 calls     168.5 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^15..  ntt:     28240 calls     183.0 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^16..  ntt:     15279 calls     225.3 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^17..  ntt:      7024 calls     152.8 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^18..  ntt:      3515 calls     107.9 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^19..  ntt:      1933 calls     140.2 s | gmp:         0 calls       0.0 s
+PROF S2: limbs 2^20..  ntt:      8863 calls    3136.4 s | gmp:         0 calls       0.0 s
+Done the third stage in 2 sec., 23 sec. cpu clock time, computed the polynomial gcd's for e=6.
+PROF S3: ntt_mul total 4556.6 s (wall, summed over calls), gmp mpn_mul total 595.9 s
+PROF S3: limbs 2^ 0..  ntt:   2001702 calls       0.1 s | gmp: 5407802113 calls     194.0 s
+PROF S3: limbs 2^ 1..  ntt:  11397111 calls       1.5 s | gmp: 1587710554 calls      58.2 s
+PROF S3: limbs 2^ 2..  ntt:   2698072 calls       0.5 s | gmp: 235768903 calls      10.9 s
+PROF S3: limbs 2^ 3..  ntt:   1873200 calls       0.4 s | gmp: 116850721 calls      10.1 s
+PROF S3: limbs 2^ 4..  ntt:   2832540 calls       0.7 s | gmp:  58292585 calls      13.5 s
+PROF S3: limbs 2^ 5..  ntt:    444972 calls       0.6 s | gmp:  28939772 calls      18.9 s
+PROF S3: limbs 2^ 6..  ntt:    240914 calls       0.8 s | gmp:  14397572 calls      28.0 s
+PROF S3: limbs 2^ 7..  ntt:    156333 calls       1.2 s | gmp:   7179979 calls      41.3 s
+PROF S3: limbs 2^ 8..  ntt:    719543 calls      10.4 s | gmp:   3569033 calls      55.8 s
+PROF S3: limbs 2^ 9..  ntt:     52770 calls       2.3 s | gmp:   1770302 calls      71.1 s
+PROF S3: limbs 2^10..  ntt:     31386 calls       3.9 s | gmp:    877729 calls      94.2 s
+PROF S3: limbs 2^11..  ntt:    456602 calls     122.8 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^12..  ntt:    253709 calls     148.5 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^13..  ntt:    119508 calls     148.9 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^14..  ntt:     56496 calls     168.5 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^15..  ntt:     28240 calls     183.0 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^16..  ntt:     15279 calls     225.3 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^17..  ntt:      7024 calls     152.8 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^18..  ntt:      3515 calls     107.9 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^19..  ntt:      1933 calls     140.2 s | gmp:         0 calls       0.0 s
+PROF S3: limbs 2^20..  ntt:      8863 calls    3136.4 s | gmp:         0 calls       0.0 s
+VmPeak: 8.03 Gbytes; VmSize: 5.21 Gbytes; VmHWM: 0.54 Gbytes; VmRSS: 0.51 Gbytes; CPU time used: 77515 sec.; Wall clock time passed: 4170 sec.; 
+Testing p=400106842441...400213636597, p==1 mod 6, stage=0, (2000000 primes for that e=6 is the best) time=4168 sec.

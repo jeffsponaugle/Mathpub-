@@ -17,8 +17,11 @@ a(n) is the smallest prime of depth ≥ n. Example: the primes up to 13 have gap
 Since S₁(p) = p − 2, every term is the larger member of a twin prime pair
 (A006512), and a(n) is non-decreasing in n.
 
-The OEIS entry (Sep 2026, keyword `hard,more`) lists a(1..7):
-5, 5, 13, 14593, 372313, 2315773, 541613713.
+When this work started (Sep 16 2026) the OEIS entry (keyword `hard,more`)
+listed a(1..7): 5, 5, 13, 14593, 372313, 2315773, 541613713. The two terms
+found below were submitted the same day and approved on Sep 17 2026
+(revision #21); the entry now lists a(1..9). See `submission.md` for what is
+still worth submitting.
 
 ## Results
 
@@ -38,7 +41,8 @@ which reproduce every power sum digit for digit.
 The exhaustive scan of all primes below 10¹² (37,607,912,018 primes, 111 s)
 found no prime of depth ≥ 10, so **a(10) > 10¹²** (and a(11), a(12) > 10¹²;
 sums were tested up to k = 12). The OEIS terms a(1..7) are reproduced by the
-same scan. The sequence is now
+same scan. a(8) and a(9) are in the OEIS entry since Sep 17 2026; the bound
+a(10) > 10¹² is not yet (see `submission.md`). The sequence is now
 
 ```
 5, 5, 13, 14593, 372313, 2315773, 541613713, 7952072743, 21814967833
@@ -253,9 +257,11 @@ summary):
    to about 10 h on 10 cores).
 3. For the OEIS: the sums beyond 3.3·10²⁴ are probable primes (24 Miller–Rabin
    bases + GMP's BPSW). A PARI/GP `isprime(S)` certificate (APR-CL, instant
-   for ≤ 130-bit numbers) makes them rigorous; PARI is not installed here.
-   Then extend `b252768.txt` and `DATA.txt`, and note the scan bound for the
-   next term ("a(11) > X") in the entry.
+   for ≤ 130-bit numbers) makes them rigorous; PARI is not installed here
+   (`brew install pari`). Then extend `b252768.txt` and `DATA.txt`, and note
+   the scan bound for the next term ("a(11) > X") in the entry. Ready-to-paste
+   OEIS lines, and the state of the entry as of Oct 3 2026, are in
+   `submission.md`.
 
 **Above 1.5·10¹⁴** the tool stops testing k = 12 (S₁₂ needs more than 128
 bits) and prints a note; k = 11 lasts to about 10¹⁶. A hit's depth beyond that
@@ -344,10 +350,11 @@ shrinks only slowly with p.
 * Inside every chunk the tool asserts that the published running sum S₁ equals
   (previous prime − 2), which pins the chunk hand-off to the actual primes.
 
-Primality of the sums above 3.3·10²⁴ (S₈ and beyond for the terms found so
-far) is probable-prime status from 24 Miller–Rabin bases plus GMP's BPSW test;
-for an OEIS submission a certificate (e.g. PARI/GP `isprime`, which is APR-CL)
-would make it rigorous. All the sums involved have at most ~110 bits.
+Sums below 3.3·10²⁴ are proven prime by the deterministic bases; that covers
+every sum of a(8) and S₁..S₈ of a(9). Sums above it — so far only S₉ of a(9),
+and S₉ and up for future terms — have probable-prime status from 24
+Miller–Rabin bases plus GMP's BPSW test; a PARI/GP `isprime` certificate
+(APR-CL) makes them rigorous. All the sums involved have at most ~110 bits.
 
 ## Files
 
@@ -358,3 +365,4 @@ would make it rigorous. All the sums involved have at most ~110 bits.
 * `scan_1e12.txt`, `scan_1e12.log` — output of the scan to 10¹² (all primes of depth ≥ 7)
 * `a252768.state` — checkpoint of the scan (resume with the same `scan … -S a252768.state`)
 * `b252768.txt`, `DATA.txt` — b-file and OEIS DATA line with the new terms
+* `submission.md` — state of the OEIS entry (a(8), a(9) approved Sep 17 2026) and the items still worth submitting, as ready-to-paste OEIS lines

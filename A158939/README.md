@@ -4,11 +4,10 @@ Tool to reproduce and extend [OEIS A158939](https://oeis.org/A158939):
 
 > First primes followed by sequences of exactly n monotonic increasing prime gaps.
 
-Known terms (offset 0):
+Known terms (offset 1):
 
 | n | a(n) | gaps after a(n), then the gap that ends the run |
 |--:|--:|:--|
-| 0 | 7 | (author's convention, see below) |
 | 1 | 3 | 2 \| 2 |
 | 2 | 2 | 1 2 \| 2 |
 | 3 | 17 | 2 4 6 \| 2 |
@@ -25,11 +24,12 @@ Known terms (offset 0):
 | 14 | 1472840004017 | 2 4 6 8 10 12 14 28 30 38 48 64 66 74 \| 22 |
 | 15 | 129001208165717 | 2 4 6 12 18 20 28 32 34 36 44 54 72 84 114 \| 40 |
 
-a(15) is from Giovanni Resta (2016). No a(16) is known; the same data appears
-shifted in [A229832](https://oeis.org/A229832) (runs of weak primes:
-A229832(n) is the prime after a(n+1)) and as prime indices in
-[A133697](https://oeis.org/A133697) (A133697(n) = pi(a(n+2))), and neither has
-gone further. Resta's scan reached 1.3e14 (comment in A158940).
+a(15) is from Giovanni Resta (2016); a(16) and a(17) are from this work and have
+been in the entry since September 2026 (see Results and
+[submission.md](submission.md)). The same data appears shifted in
+[A229832](https://oeis.org/A229832) (runs of weak primes: A229832(n) is the
+prime after a(n+1)) and as prime indices in [A133697](https://oeis.org/A133697)
+(A133697(n) = pi(a(n+2))). Resta's scan reached 1.3e14 (comment in A158940).
 
 ## Definition
 
@@ -39,9 +39,8 @@ on and g_i = q_i - q_(i-1). The run length of p is
     L(p) = largest n with g_1 < g_2 < ... < g_n
 
 (so g_(n+1) <= g_n ends the run), and a(n) is the smallest prime with
-L(p) = n. This is the PARI program in the entry. Nothing has L(p) = 0 under
-this definition; the entry's a(0) = 7 (gaps 4, 2: the first prime whose next
-gap shrinks) is the original author's convention and is not computed here.
+L(p) = n. This is the PARI program in the entry; the offset is 1 (nothing has
+L(p) = 0).
 
 ## Method
 
@@ -220,9 +219,11 @@ over the primes 17293451238695141, ...143, ...147, ...153, ...161, ...183,
 
 Derived new terms of the sister sequences: **A229832(15) = 17293451238695143**
 (the prime after a(16), first of 15 consecutive weak primes) and
-**A133697(14) = 475618519121221**. Proposed entry text is in
-[OEIS_notes.md](OEIS_notes.md), the b-file in [b158939.txt](b158939.txt).
-Nothing has been submitted to the OEIS yet.
+**A133697(14) = 475618519121221**. a(16), A229832(15) and A133697(14) were
+submitted to the OEIS on 2026-09-19 and approved the same day; a(17),
+A229832(16) and A133697(15) followed on 2026-09-22. What remains submittable
+is listed in [submission.md](submission.md); the b-file is
+[b158939.txt](b158939.txt) (n = 1..17).
 
 Verification:
 
@@ -263,7 +264,7 @@ Derived: **A229832(16) = 52461866207504473** (the prime after a(17), first of
 16 consecutive weak primes) and **A133697(15) = 1400080864310974**.
 
 **a(18) > 54557804097699840** (5.46×10^16). The a(17) run was stopped at
-5.30×10^16 on 2026-09-22; the search was resumed the same day with the bucket
+5.30×10^16 on 2026-09-22 (the bound a(18) > 5.30×10^16 is the one in the entry); the search was resumed the same day with the bucket
 version and paused again at 5.46×10^16 that afternoon, at a checkpoint. The
 median expected location of a(18) is about 2e18 (90% point near 8e18), about
 five months of one Spark at 1.3-1.6e11 numbers/s, so continuing is a matter

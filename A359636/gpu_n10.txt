@@ -1,0 +1,2 @@
+a(10) > 328618586450952193 (scan stopped early; no qualifying gap with p below that)
+a(10) > 408697968217030657 (scan stopped early; no qualifying gap with p below that)

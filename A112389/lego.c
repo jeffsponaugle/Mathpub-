@@ -60,6 +60,9 @@
  *        -x 1        check every I_4 formula value against plain DFS
  *   ./lego -b PROFILE [threads]
  *                              same refinement by plain enumeration
+ *   ./lego -S N [threads]      symmetric counts only, all profiles, n<=N:
+ *                              A123829(n) and A123831(n-1); -SV also
+ *                              prints S180/S90 for every profile
  */
 
 #include <inttypes.h>
@@ -628,7 +631,7 @@ typedef struct {
 } Cand;
 
 #define MEMO 1024
-typedef struct { uint64_t key; int64_t val; uint32_t gen; } MemoE;
+typedef struct { uint64_t key; int64_t val; uint32_t gen; uint16_t tag, k; } MemoE;
 
 static int AMASK, RMASK, ZR, MR, NAGG;
 static int AGL[MAXAGG];          /* aggregated layers                    */
@@ -1054,13 +1057,12 @@ static int USECT = 5;            /* class tables when >= this many sigmas  */
 
 static int64_t memo_ind(AT *t, MemoE *tab, uint32_t gen, const Cand *c, uint64_t key, int k, int tag)
 {
-    uint64_t hk = key * 0x9E3779B97F4A7C15ull ^ (uint64_t)(tag * 131 + k);
+    uint64_t hk = (key ^ ((uint64_t)tag << 40) ^ ((uint64_t)k << 48)) * 0x9E3779B97F4A7C15ull;
     unsigned h = (unsigned)(hk >> 54) & (MEMO - 1);
-    uint64_t full = key ^ ((uint64_t)(tag * 131 + k) << 58);
     for (;;) {
         MemoE *e = &tab[h];
         if (e->gen != gen) break;
-        if (e->key == full) return e->val;
+        if (e->key == key && e->tag == tag && e->k == k) return e->val;
         h = (h + 1) & (MEMO - 1);
     }
     int64_t v;
@@ -1076,7 +1078,7 @@ static int64_t memo_ind(AT *t, MemoE *tab, uint32_t gen, const Cand *c, uint64_t
             exit(2);
         }
     }
-    tab[h] = (MemoE){full, v, gen};
+    tab[h] = (MemoE){key, v, gen, (uint16_t)tag, (uint16_t)k};
     (void)t;
     return v;
 }
@@ -1314,15 +1316,20 @@ static void *progress_thread(void *arg)
     return NULL;
 }
 
-/* default aggregated set: max bricks over independent layer sets with z<=3 */
+/* default aggregated set: fewest enumerated bricks over independent layer */
+/* sets whose layers hold <= 4 bricks (I_4 has a closed formula); ties go */
+/* to the smaller largest aggregated layer                                 */
 static int choose_agg(const int *prof, int h)
 {
-    int best = -1, bestm = 0;
-    for (int m = 1; m < (1 << h); m++) {
+    int bestm = 0, bestr = 1 << 20, bestk = 99;
+    for (int m = 1; m < (1 << h) - 1; m++) {
         if (m & (m >> 1)) continue;
-        int s = 0, ok = 1;
-        for (int l = 0; l < h; l++) if (m >> l & 1) { if (prof[l] > 3) ok = 0; s += prof[l]; }
-        if (ok && s > best) { best = s; bestm = m; }
+        int r = 0, k = 0, ok = 1;
+        for (int l = 0; l < h; l++) {
+            if (m >> l & 1) { if (prof[l] > 4) ok = 0; if (prof[l] > k) k = prof[l]; }
+            else r += prof[l];
+        }
+        if (ok && (r < bestr || (r == bestr && k < bestk))) { bestr = r; bestk = k; bestm = m; }
     }
     return bestm;
 }
@@ -1549,6 +1556,54 @@ static void run_all(int nmax, int verbose)
     }
 }
 
+/* Symmetric counts only, all profiles of size 1..nmax:                   */
+/*   A123829(n) = classes of 180-degree-symmetric buildings                */
+/*              = sum over profiles of (S180 + S90) / 2                    */
+/*   A123831(n-1) = 180-symmetric buildings on a fixed base brick that is  */
+/*              alone in the bottom layer = sum over profiles <1 ...> of   */
+/*              S180 / 2 (the rotation must fix the base brick)            */
+static void sym_all(int nmax, int verbose)
+{
+    for (int n = 1; n <= nmax; n++) {
+        N = n;
+        for (int z = 0; z < NZ; z++) CAP[z] = n;
+        HMAX = n;
+        static uint64_t S2[MAXPROF], S4[MAXPROF];
+        double t0 = now();
+        count_sym(2, S2);
+        count_sym(4, S4);
+        double t1 = now();
+        u128 a180 = 0, s90 = 0, base = 0;
+        int ok = 1, cnt[MAXN + 1];
+        for (int idx = 0; idx < (1 << (n - 1)); idx++) {
+            if ((S2[idx] + S4[idx]) & 1) ok = 0;
+            a180 += (S2[idx] + S4[idx]) / 2;
+            s90 += S4[idx];
+            prof_decode(idx, n, cnt);
+            if (cnt[0] == 1) {
+                if (S2[idx] & 1) ok = 0;
+                base += S2[idx] / 2;
+            }
+        }
+        char b1[48], b2[48], b3[48];
+        u128str(a180, b1);
+        u128str(s90, b2);
+        u128str(base, b3);
+        printf("n=%d  A123829=%s  S90total=%s  A123831(%d)=%s%s  [%.1fs]\n", n, b1, b2, n - 1,
+               n >= 2 ? b3 : "-", ok ? "" : "  PARITY-FAIL", t1 - t0);
+        if (verbose) {
+            for (int idx = 0; idx < (1 << (n - 1)); idx++) {
+                if (!S2[idx] && !S4[idx]) continue;
+                int h = prof_decode(idx, n, cnt);
+                char ps[16];
+                prof_str(cnt, h, ps);
+                printf("  <%s> S180=%" PRIu64 " S90=%" PRIu64 "\n", ps, S2[idx], S4[idx]);
+            }
+        }
+        fflush(stdout);
+    }
+}
+
 static int selftest(void)
 {
     static const char *A[] = {"", "1", "24", "1560", "119580", "10166403", "915103765", "85747377755"};
@@ -1581,6 +1636,11 @@ int main(int argc, char **argv)
     init_parts();
     long nc = sysconf(_SC_NPROCESSORS_ONLN);
     NTHR = nc > 0 ? (int)nc : 1;
+    if (argc >= 3 && (!strcmp(argv[1], "-S") || !strcmp(argv[1], "-SV"))) {
+        if (argc >= 4) NTHR = atoi(argv[3]);
+        sym_all(atoi(argv[2]), argv[1][2] == 'V');
+        return 0;
+    }
     if (argc >= 2 && !strcmp(argv[1], "-s")) {
         if (argc >= 3) NTHR = atoi(argv[2]);
         return selftest();

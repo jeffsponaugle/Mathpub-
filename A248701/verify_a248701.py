@@ -13,7 +13,7 @@ C program apart from the definitions:
   strict valley depth = min(strictly decreasing run in,  strictly increasing run out)
   A248701(n) = smallest P with peak depth >= n            (offset 1)
   A248702(n) = smallest P with valley depth >= n          (offset 0, a(0) = 2)
-  A248703(n) = smallest P with strict peak depth >= n+1   (offset 1)
+  A248703(n) = smallest P with strict peak depth >= n     (offset 2 since Sep 2026; was offset 1 with a(n) = depth n+1)
   A248704(n) = smallest P with strict valley depth >= n   (offset 1)
 
 usage: verify_a248701.py scan LIMIT [SEGMENT] [--procs=N]   exhaustive scan of the primes below LIMIT
@@ -28,8 +28,8 @@ import numpy as np
 
 MODES = ("peak", "valley", "strict peak", "strict valley")
 SEQ = ("A248701", "A248702", "A248703", "A248704")
-SHIFT = (0, 0, 1, 0)
-FIRSTN = (1, 0, 1, 1)
+SHIFT = (0, 0, 0, 0)
+FIRSTN = (1, 0, 2, 1)   # A248703 has offset 2 since Sep 2026
 KNOWN = {
     "A248701": [3, 7, 359, 7853, 96401, 2812099, 294276293],
     "A248702": [2, 3, 19, 43, 2687, 179819, 1107791],

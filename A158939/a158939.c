@@ -21,11 +21,10 @@
  * by Charles Greathouse in the entry).  a(n) = smallest prime with L(p) = n.
  * Examples: L(2) = 2 (gaps 1, 2, 2), L(3) = 1 (2, 2), L(17) = 3 (2, 4, 6, 2),
  * so a(2) = 2, a(1) = 3, a(3) = 17.  a(14) = 1472840004017 has the run
- * 2 4 6 8 10 12 14 28 30 38 48 64 66 74 ended by 34.
+ * 2 4 6 8 10 12 14 28 30 38 48 64 66 74 ended by 22.
  *
- * No prime has L(p) = 0 under this definition; the entry's a(0) = 7 (gaps 4,
- * 2: the first prime whose next gap shrinks) is a convention of the original
- * author and is not computed here.  Related: A229832(n) is the prime after
+ * No prime has L(p) = 0 under this definition, and the entry's offset is 1
+ * (a(1) = 3, a(2) = 2).  Related: A229832(n) is the prime after
  * a(n+1) (runs of n weak primes) and A133697(n) is the index of a(n+2) among
  * the primes.  a(n) is not monotone in principle, so the scan keeps the first
  * prime of every run length instead of stopping at a target.

@@ -1,0 +1,40 @@
+chunk  machine/tag/TGT
+   0   [('mathg', 'h27k6', 176381)]
+   1   [('mathg', 'h27k6', 176381)]
+   2   [('mathg', 'h27k6', 176381)]
+   3   [('mathg', 'h27k6', 176381)]
+   4   [('mathg', 'h27k6', 176381)]
+   5   [('mathg', 'h27k6', 176381)]
+   6   [('mathd', 'h27k6d', 177915)]
+   7   [('mathd', 'h27k6d', 177915)]
+   8   [('mathd', 'h27k6d', 177915)]
+   9   [('mathd', 'h27k6d', 177915)]
+  10   [('mathd', 'h27k6d', 177915)]
+  11   [('mathd', 'h27k6d', 177915)]
+  12   [('mathd', 'h27k6d', 177915)]
+  13   [('mathd', 'h27k6d', 177915)]
+  14   [('mathd', 'h27k6i', 186943)]
+  15   [('mathg', 'h27k6', 176381)]
+  16   [('mathg', 'h27k6', 176381)]
+  17   [('mathg', 'h27k6', 176381)]
+  18   [('mathg', 'h27k6', 176381)]
+  19   [('mathg', 'h27k6', 176381)]
+  20   [('mathb', 'h27k6b', 177915)]
+  21   [('mathb', 'h27k6b', 177915)]
+  22   [('mathb', 'h27k6h', 186943)]
+  23   [('mathb', 'h27k6h', 186943)]
+  24   [('mathb', 'h27k6h', 186943)]
+  25   [('mathb', 'h27k6gb', 186943)]
+  26   [('mathg', 'h27k6f', 186943)]
+  27   [('mathd', 'h27k6e', 186943)]
+  28   [('mathd', 'h27k6e', 186943)]
+  29   [('mathb', 'h27k6j', 186943)]
+chunks complete: 30 of 30; missing: []; duplicated: []
+enumeration sizes seen per target: {177915: [2964430], 186943: [2964418], 176381: [2964437]}
+boundaries with a window: 29 of 29; without: []
+boundaries needing a window (lower target below, higher above) -> covered: {6: True, 14: True, 20: True, 22: True}
+solutions collected: 1147
+best: SOLUTION h=27 k=6 n_h=186942 : 1 19 194 1095 7370 27669
+all bases attaining the best:
+   SOLUTION h=27 k=6 n_h=186942 : 1 19 194 1095 7370 27669
+status: COMPLETE: n(27,6) = A001211(27) = 186942

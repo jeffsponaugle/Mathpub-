@@ -30,6 +30,7 @@ Savings:
 | `cuda/a034822_cuda.cu` | GPU tool for GB10 (sm_121), even L 40..70. Builds: `-DMINB=2` (production), `-DWINDOW_CHECK -DFILTER_CHECK` (exact re-checks) |
 | `base_of.py` | maps a known root n to the GPU base index that must find it |
 | `xcheck_subtree.py` | independent Python enumeration of one DFS subtree (all 8 roots, exact windows) for comparison with a GPU hit dump |
+| `SUBMISSION.md`, `oeis/` | proposed OEIS b-files and edits, current OEIS b-files, De Geest's table, `verify_bfiles.py` |
 
 GPU usage: `a034822_cuda search L [-r a:b] [-b bases_per_launch] [-S state]` (bases 0..5·10^9 for L=70;
 resume with the same command line and state file), `a034822_cuda selftest [maxL]`.
@@ -61,7 +62,13 @@ The root check is instruction-bound (~70 SASS per root in isolation); profiler c
 No L = 70 run started yet (Jeff decided 2026-09-30 not to tie up the Sparks for ~10 days; the run can be done in
 chunks later via `-r a:b` + `-S state`). Nothing submitted to OEIS.
 
-## TODO: OEIS b-file updates for the 68-digit square (independent of the L = 70 run)
+## OEIS submissions — see [SUBMISSION.md](SUBMISSION.md)
+
+Ready-to-submit b-files and entry edits for A263618, A002778, A002779, A016113, A027829 and a comment on
+A034822 are in **[SUBMISSION.md](SUBMISSION.md)**, with the files in `oeis/` and checked by `oeis/verify_bfiles.py`.
+OEIS checked 2026-10-03: no newer revisions and no pending drafts; the 68-digit root is not in the OEIS.
+
+### Background: the 68-digit square (independent of the L = 70 run)
 
 The only 68-digit palindromic square is
 

@@ -1,0 +1,7 @@
+--- a/ntt/ntt-0.1.2/ntt-internal.h
++++ b/ntt/ntt-0.1.2/ntt-internal.h
+@@ Two guards used #ifdef where the rest of the header uses #if; AVOID_128_BIT
+@@ is #defined to 0, so #ifdef was true and the x86 MUL128/DIV128 asm macros
+@@ (defined only under #if AVOID_128_BIT) were referenced -> build failure on arm64.
+-#ifdef AVOID_128_BIT
++#if AVOID_128_BIT

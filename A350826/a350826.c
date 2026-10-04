@@ -117,7 +117,7 @@ typedef int64_t i64;
 typedef unsigned __int128 u128;
 
 #define GOLD    0x9E3779B97F4A7C15ULL
-#define MAXBIN  32
+#define MAXBIN  256
 #define RINGC   8192            /* chunk completion ring: bounds how far workers run ahead */
 #define MAXSPSP 4096
 #define P0      ((u64)1 << 20)  /* initial members below P0 are tested directly */
@@ -931,8 +931,12 @@ static void record_spsp(u128 n, u128 p)
 
 static void found(u128 p, acc_t *A)
 {
-    int b = 0;
-    while (b + 1 < R.nbins && p >= R.bnd[b + 1]) b++;
+    int lo = 0, hi = R.nbins;                 /* bnd[lo] <= p < bnd[hi] */
+    while (hi - lo > 1) {
+        const int mid = (lo + hi) / 2;
+        if (p >= R.bnd[mid]) lo = mid; else hi = mid;
+    }
+    const int b = lo;
     A->cnt[b]++;
     A->cks[b] += hashp(p);
     if (g_caplist) {
@@ -1461,7 +1465,7 @@ typedef struct {
 
 static void parse_bins(const char *s, opts_t *o)
 {
-    char buf[1024];
+    char buf[16384];
     snprintf(buf, sizeof buf, "%s", s);
     for (char *tok = strtok(buf, ","); tok; tok = strtok(NULL, ",")) {
         if (o->nb >= MAXBIN - 1) die("too many bin boundaries");

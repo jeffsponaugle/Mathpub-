@@ -1,0 +1,27 @@
+[10000000000000000000, 18446744073709551616) on NVIDIA GB10: wheel 37 (1516640125 classes, ~1.73e+15 candidates), B = 65536 (42 pattern, 510 medium, 5978 large primes), 46285 chunks of 16384
+classes [0, 758333440) of 1516640125 only (partial count)
+progress: 0.3s  chunks 1/46285 (0.002%)  6.81e+10 bits/s  found 213989  ETA 3h31m17s
+progress: 5m00s  chunks 2022/46285 (4.369%)  1.26e+11 bits/s  found 434840775  ETA 1h49m33s
+progress: 10m00s  chunks 4022/46285 (8.690%)  1.25e+11 bits/s  found 864977259  ETA 1h45m08s
+progress: 15m00s  chunks 6024/46285 (13.015%)  1.25e+11 bits/s  found 1295525004  ETA 1h40m18s
+progress: 20m00s  chunks 8026/46285 (17.340%)  1.25e+11 bits/s  found 1726117509  ETA 1h35m23s
+progress: 25m00s  chunks 10040/46285 (21.692%)  1.25e+11 bits/s  found 2159234748  ETA 1h30m18s
+progress: 30m01s  chunks 12054/46285 (26.043%)  1.25e+11 bits/s  found 2592390494  ETA 1h25m14s
+progress: 35m01s  chunks 14060/46285 (30.377%)  1.25e+11 bits/s  found 3023807833  ETA 1h20m16s
+progress: 40m01s  chunks 16066/46285 (34.711%)  1.25e+11 bits/s  found 3455213780  ETA 1h15m16s
+progress: 45m01s  chunks 18086/46285 (39.075%)  1.25e+11 bits/s  found 3889636710  ETA 1h10m12s
+progress: 50m01s  chunks 20090/46285 (43.405%)  1.25e+11 bits/s  found 4320596294  ETA 1h05m13s
+progress: 55m01s  chunks 22090/46285 (47.726%)  1.25e+11 bits/s  found 4750716153  ETA 1h00m16s
+progress: 1h00m01s  chunks 24098/46285 (52.064%)  1.25e+11 bits/s  found 5182546433  ETA 55m16s
+progress: 1h05m02s  chunks 26098/46285 (56.385%)  1.25e+11 bits/s  found 5612692801  ETA 50m18s
+progress: 1h10m02s  chunks 28116/46285 (60.745%)  1.25e+11 bits/s  found 6046675232  ETA 45m15s
+progress: 1h15m02s  chunks 30136/46285 (65.110%)  1.25e+11 bits/s  found 6481056974  ETA 40m12s
+progress: 1h20m02s  chunks 32156/46285 (69.474%)  1.25e+11 bits/s  found 6915483034  ETA 35m10s
+progress: 1h25m02s  chunks 34160/46285 (73.804%)  1.25e+11 bits/s  found 7346429357  ETA 30m11s
+progress: 1h30m02s  chunks 36182/46285 (78.172%)  1.25e+11 bits/s  found 7781281572  ETA 25m08s
+progress: 1h35m03s  chunks 38192/46285 (82.515%)  1.25e+11 bits/s  found 8213543666  ETA 20m08s
+progress: 1h40m03s  chunks 40200/46285 (86.853%)  1.25e+11 bits/s  found 8645376328  ETA 15m08s
+progress: 1h45m03s  chunks 42206/46285 (91.187%)  1.25e+11 bits/s  found 9076746836  ETA 10m09s
+progress: 1h50m03s  chunks 44212/46285 (95.521%)  1.25e+11 bits/s  found 9508146718  ETA 5m09s
+progress: 1h55m03s  chunks 46226/46285 (99.873%)  1.25e+11 bits/s  found 9941272353  ETA 8.8s
+done in 1h55m12s (1.25e+11 bits/s)

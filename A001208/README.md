@@ -14,7 +14,7 @@ OEIS convention: a(n) = N (one less than the "smallest unobtainable value" used 
 | A001208 | k=3, h=n | 1000 (b-file) | all (Challis recursion, h>=23) |
 | A001209 | k=4, h=n | 54 | h<=302 (Challis & Robinson 2013 addendum formulas) |
 | A001210 | k=5, h=n | 67 | h<=90 (2013 addendum) |
-| A001211 | k=6, h=n | 25 | h<=26 (2013 addendum) |
+| A001211 | k=6, h=n | 25 | h<=26 (2013 addendum); **h=27 proven here (2026-10-03: a(27) = 186942)** |
 | A053346 | k=7, h=n | 13 | h<=14 (2013 addendum) |
 | A053348 | k=8, h=n | 8 | h<=8 |
 | A001212 | h=2, k=n | 24 | k<=24 (Kohonen & Corander 2014, 606 CPU-days) |
@@ -72,7 +72,7 @@ Every basis below was re-verified by direct h-range computation (`tools/hrange`,
 | Sequence | Current OEIS | New terms available | Source | File |
 |---|---|---|---|---|
 | A001210 (k=5) | 67 terms | a(68)..a(90) | 2013 addendum table | `bfiles/bA001210.txt` |
-| A001211 (k=6) | 25 terms | a(26) = 156744 | 2013 addendum | `bfiles/bA001211.txt` |
+| A001211 (k=6) | 25 terms | a(26) = 156744; **a(27) = 186942 (new, this work)** | 2013 addendum; exhaustive search Oct 2-3 2026 (`logs/n27k6_final_audit.txt`) | `bfiles/bA001211.txt` |
 | A053346 (k=7) | 13 terms | a(14) = 24466 | 2013 addendum | `bfiles/bA053346.txt` |
 | A001209 (k=4) | 54 terms | a(55)..a(302) | formula families A/B/C + 2013 coefficient table; all 248 formula bases verified, and the formulas reproduce the 1993 table wherever they overlap | `bfiles/bA001209.txt` |
 | A084192 | 71 terms | to 109 | proven array entries only (stops at (h=5,k=11)) | `bfiles/bA084192.txt` |
@@ -211,7 +211,7 @@ estimate first, exponential-fit upper estimate in parentheses; see psph/README.m
 | k=4, h=303 | A001209(303) | 2000-3300 | 9-14 days | ~1 day | 2 points, structurally understood; needs the 16-bit build |
 | k=5, h=91 | A001210(91) | 1700 (x2-5 likely) | 1-4 weeks | 1-3 days | 2-3 points |
 | k=5, h=100 | A001210(100) | 3800 (x2-5) | 3-8 weeks | ~1 week | as above |
-| k=6, h=27 | A001211(27) | 320 (40 000) | 1.4 days (months) | hours (2 weeks) | exponent still rising |
+| k=6, h=27 | A001211(27) | **DONE 2026-10-03: n(27,6) = 186942**, basis {1,19,194,1095,7370,27669}; actual 3326 core-h (1.1e14 leaf candidates, 7.4e10 full checks), ~41 h wall on mathd+mathb+mathg (see DEPLOY.md) | | | |
 | k=6, h=30 | A001211(30) | 1000 (630 000) | 4.5 days (years) | 10 h (9 months) | as above |
 | k=7, h=15 | A053346(15) | 1300 (38 000) | 6 days (6 months) | 13 h (16 days) | 3 points |
 | k=8, h=9 | A053348(9) = A005344(8) | **DONE 2026-10-02: n(9,8) = 6082**, basis {1,8,27,88,197,521,1226,1461}; ~1.5e14 leaf candidates, ~1 day on 4 x86 boxes + M1 Pro + Orin (see DEPLOY.md) | | | |
@@ -238,7 +238,7 @@ Ranked by value per unit of effort:
 **Tier 1 — new terms feasible on this M1 Pro in days to a few weeks (psph, CPU):**
 5. **A053348(9) = A005344(8)** via (k=8, h=9): **DONE — 6082** (2026-10-02; b-files and submission draft in bfiles/).
 6. **A001209(303)** via k=4: ~2 weeks here, ~1 day on 100 cores; cheapest genuinely new column term.
-7. **A001211(27)** via (k=6, h=27): 1.4 days if the power law holds, months if the exponential does.
+7. **A001211(27)** via (k=6, h=27): **DONE — 186942** (2026-10-03; 3326 core-hours on three Xeon boxes; b-file and submission draft in bfiles/).
 8. **A001210(91)** via (k=5, h=91): 1-4 weeks here, days on 100 cores; then h=92, 93, ... at ~x1.4 each.
 9. **A005342(9)** via (k=9, h=7): ~2 weeks here; also the first missing entry for A084193/A196416.
 
@@ -261,10 +261,12 @@ machine now (both fit in a week), and submit the Tier-0 items to OEIS in paralle
 
 ## 7. Suggested OEIS actions (drafts; nothing submitted yet)
 
+**Consolidated, paste-ready package: `submission.md` (2026-10-03; includes an OEIS status check of every entry).**
+
 1. **A001210** — extend with a(68)..a(90) from Challis & Robinson's July 2013 addendum
    (b-file `bfiles/bA001210.txt`, all h-ranges independently verified). Edit line:
    "a(68)-a(90) from the July 2013 addendum to Challis and Robinson, added by Jeff Sponaugle".
-2. **A001211** — correct a(20) from 45745 to 45754 (see 2b) and add a(26) = 156744. **A053346** — add a(14) = 24466 (same source).
+2. **A001211** — correct a(20) from 45745 to 45754 (see 2b), add a(26) = 156744 (addendum) and **a(27) = 186942 (new; exhaustive search, draft `bfiles/A001211_27_submission.md`)**. **A053346** — add a(14) = 24466 (same source).
 3. **A001209** — replace the 54-term b-file by `bfiles/bA001209.txt` (h = 1..302) and add the comment:
    "a(55)-a(302) are given by three formula families (types A, B, C) with the coefficient table in the
    July 2013 addendum to Challis and Robinson; each formula basis was verified to have the stated

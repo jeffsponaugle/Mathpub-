@@ -1,0 +1,9 @@
+pw13
+wilsontest
+tools/wilson_brute
+third_party/gmp-*
+third_party/Wilson-prime/gmp-5.0.4
+third_party/Wilson-prime/ntt-0.1.2
+third_party/Wilson-prime/ntt/ntt-0.1.2/tune
+third_party/Wilson-prime/ntt/ntt-0.1.2/tune.log
+third_party/Wilson-prime/ntt/ntt-0.1.2/tunetab.new

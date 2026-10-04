@@ -15,11 +15,28 @@ with a(7..9) = 2^30, 2^42, 2^56. The entry notes the bound
 a(n) ≤ 2^((n-1)(n-2)) (James G. Merickel) and Max Alekseyev's conjecture (Jun 2026)
 that equality holds for n ≥ 7. So the next term satisfies a(10) ≤ 2^72.
 
+**This work: a(10) = 2^72 and a(11) = 2^90**, both new and both by exhaustive search,
+confirming the conjecture for n = 10 and 11 (see Results). Neither is on the OEIS yet;
+[submission.md](submission.md) has the ready-to-paste edit and the OEIS status as of
+2026-10-03.
+
 Why 2^((n-1)(n-2)) works: in base b = 2^e − 1 the number 2^r (b+1)^(L−1) has the
 digits 2^r·C(L−1, j), which form an L-digit palindrome as long as every 2^r·C(L−1, j) < b.
 For N = (n−1)(n−2), every length L = 2..n has a split N = e(L−1) + r that works.
 
 ## Results
+
+### OEIS status (checked 2026-10-03)
+
+A171775 is unchanged since revision #64 (a(9) by Max Alekseyev, approved Jun 06 2026): data
+a(1..9), no pending edit or draft. Section 1 of [submission.md](submission.md) is the edit
+to submit: DATA a(10)–a(11), a comment with the survivor counts, EXTENSIONS, a link to this
+directory in the public repository, and optional EXAMPLE and PROG lines. Its appendix
+records which of the other `src/math` submissions were live on the OEIS that day (16
+approved entries) and points to the per-project `submission.md` files for what is still
+open.
+
+### a(10)
 
 **a(10) = 2^72 = 4722366482869645213696** (new term; confirms the conjecture for n = 10).
 
@@ -190,7 +207,7 @@ directly comparable. The file headers have the full derivations.
 | `scan_n10.*` | the M1 Pro a(10) run |
 | `scan_n11.*`, `metal/gpu_n11.*` | the a(11) runs (CPU and Metal) |
 | `b171775.txt` | b-file n = 1..10 |
-| `OEIS_notes.md` | proposed OEIS update (not submitted) |
+| `submission.md` | OEIS edit for a(10)–a(11) (not yet submitted) and OEIS status check |
 
 ## Usage
 
@@ -247,3 +264,14 @@ consistent checkpoint. Solutions go to stdout, progress to stderr.
   6·10⁹ lookups/s at small c and slower than the CPU threads at large c, where most
   pairs have k = 2 and the lookups diverge; the 20-unit c = 600 test slice took 10.5 s
   against 2.4 s. Kernels there run up to 50 s, which is fine on the Spark.
+
+## Outlook: a(12)
+
+The conjectured value is 2^110 ≈ 1.3·10³³. 2^90 is not a 12-digit palindrome
+(`a171775 check 2^90 12`), so a(12) > 2^90, but that is only the trivial bound
+a(12) ≥ a(11). For even n the n-digit palindromes are the smaller set: about 7·10¹⁸
+twelve-digit palindromes lie below 2^110. So a search would use the 2D lookup in the
+original orientation, solving two base-B digits against the 11-digit condition, and
+needs about 1.4·10¹⁶ lookups. At the GB10 rate of the a(11) run (1.6·10⁹ lookups/s)
+that is about 100 GPU-days, or two months on both Sparks. The 96-bit limbs would have
+to grow, because M reaches 2^110. Not attempted.

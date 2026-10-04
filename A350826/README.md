@@ -4,7 +4,10 @@ Tools for extending [OEIS A350826](https://oeis.org/A350826), the number of prim
 sextuplets (p, p+4, p+6, p+10, p+12, p+16) with 10^(n-1) < p < 10^n, and its
 partial sums [A063501](https://oeis.org/A063501) (sextuplets up to 10^n).
 
-## Status (2026-09-30)
+## Status (2026-09-30; OEIS update 2026-10-03)
+
+A063501 has been extended with a(18)-a(20) (edit by Jeff Sponaugle, approved as #29 on 2026-10-03);
+the A350826 edit is still to be submitted (see `submission.md`).
 
 OEIS (last edit Jan 2022) lists a(1..17):
 
@@ -96,6 +99,16 @@ pi_6(9·10^19) = 191,101,091,054.
 `runs/v64b.*`, `verify/compare_bin0.py`), and the CPU program recomputed 40 random chunks of that range with no
 mismatch (`verify/spot64.*`). Every counted sextuplet passed BPSW in all six members, so the count cannot
 contain composites; we believe the table value is 1518 too small.
+
+A table of pi_6(x) at 131 points of [1e19, 2^64] (every 10^17, every multiple of 2^58, and 2^64 − 2^j for
+j = 40..56) is in `runs/pi6_table_1e19_2p64.txt` / `.md` (`make_table_2p64.py`; run `count 1e19 2^64 -b
+$(cat runs/bounds_2p64.txt)` split over both Sparks, Oct 2): its intervals add up to 19,907,602,564 again, and
+every chunk total equals the recount's. Luhn's 48,629,687,343 lies between our pi_6(2^64 − 2^40) =
+48,629,686,408 and pi_6(2^64) = 48,629,688,861.
+
+The whole a(20) range (all 12 bins, so also the 96-bit GPU arithmetic above 2^64) was spot-checked by the CPU
+program on 100 distinct random chunks, crosswise (atom1's CPU on atom2's GPU chunks and vice versa, plus 20 on
+the M1 Pro): 100 identical chunk lines, 0 mismatches (`verify/recheck_a20*.txt`).
 
 The 15 excluded pseudo-sextuplets (base-2 strong pseudoprime member, five primes; all re-verified):
 

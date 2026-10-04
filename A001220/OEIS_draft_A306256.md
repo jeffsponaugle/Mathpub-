@@ -1,7 +1,14 @@
 # A306256 — draft OEIS submission text (Wieferich primes to base 30)
 
-STATUS: FINAL (Oct 01 2026). a(4) = 303632117562967 was found by the multi-base GPU search
-(Phase 1: 16 bases, all primes from 2e14 upward, DGX Spark) early on Oct 01 2026 and confirmed
+STATUS: SUBMITTED AND APPROVED. Jeff Sponaugle's edit of Oct 02 2026 (revisions #9-#14) was approved
+the same day as revision #18 (keywords edited by Amiram Eldar, reviewed by Hugo Pfoertner, approved by
+Michael De Vlieger). The live entry has the DATA, the comment "a(4) was found by an exhaustive search
+of all primes below 3.04*10^14.", the EXAMPLE and the EXTENSIONS line below; the old comment "No more
+terms up to 9.8*10^13." is still there (see submission.md for a follow-up). This file is kept as the
+record of the evidence.
+
+a(4) = 303632117562967 was found by the multi-base GPU search (Phase 1: 16 bases, all primes from 2e14
+upward, DGX Spark) early on Oct 01 2026 and confirmed
 by an independent exhaustive base-30 scan of every prime below 3.0364e14:
 
 * that scan tested 9,396,616,950,003 primes, which equals pi(303640000000000) from primecount,

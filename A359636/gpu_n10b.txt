@@ -1,0 +1,1 @@
+no qualifying gap with m in [664309293225476097, 740968712792834043] (partial range, stopped early)

@@ -1,0 +1,10 @@
+=== default (20 threads, unpinned) ===
+n=2^20 limbs (67 Mbit): gmp=0.39s t1=0.17s t2=0.11s t4=0.07s t8=0.05s t10=0.05s t16=0.04s t20=0.04s
+n=2^22 limbs (268 Mbit): gmp=1.36s t1=0.81s t2=0.54s t4=0.29s t8=0.23s t10=0.19s t16=0.17s t20=0.17s
+n=2^24 limbs (1074 Mbit): gmp=4.82s t1=3.41s t2=2.28s t4=1.58s t8=1.23s t10=1.21s t16=1.23s t20=1.24s
+n=2^26 limbs (4295 Mbit): t1=15.68s t2=8.98s t4=6.36s t8=4.96s t10=4.64s t16=4.75s t20=4.83s
+=== pinned to 10 X925 big cores ===
+n=2^20 limbs (67 Mbit): gmp=0.38s t1=0.17s t2=0.10s t4=0.06s t8=0.05s t10=0.04s
+n=2^22 limbs (268 Mbit): gmp=1.36s t1=0.81s t2=0.50s t4=0.35s t8=0.20s t10=0.19s
+n=2^24 limbs (1074 Mbit): gmp=4.97s t1=3.47s t2=2.16s t4=1.48s t8=1.26s t10=1.21s
+

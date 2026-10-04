@@ -1,13 +1,13 @@
-# A248703: Strict Peak Primes: Smallest prime to have n strictly decreasing prime gaps on either side of a(n).
-# Table of n, a(n) for n = 1..9.
-# a(1)-a(6) as in the OEIS entry; a(7)-a(9) computed with a248701.c (Sep 16-19 2026),
-# exhaustive scan of the primes below 3.86*10^15: a(10) > 3860678242735729.
-1 23
-2 1439
-3 21433
-4 1130863
-5 19881311
-6 331542583
-7 149822520893
-8 13193280477899
-9 746882911420231
+# A248703: a(n) is the smallest prime p to have n strictly decreasing prime gaps on either side of p.
+# Table of n, a(n) for n = 2..10 (offset 2 since Sep 2026: a(n) has n gaps on each side).
+# a(2)-a(7) as in the original OEIS entry; a(8)-a(10) computed with a248701.c (Sep 16-19 2026),
+# exhaustive scan of the primes below 3.86*10^15: a(11) > 3860678242735729.
+2 23
+3 1439
+4 21433
+5 1130863
+6 19881311
+7 331542583
+8 149822520893
+9 13193280477899
+10 746882911420231

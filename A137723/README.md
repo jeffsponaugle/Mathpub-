@@ -16,7 +16,9 @@ n = g'−g−1 numbers that all have a gap, and a(n) is the smallest g+1 over al
 runs of length exactly n. Example: 83 and 89 are consecutive gap-free numbers
 and 84..88 all have gaps, so a(5) = 84.
 
-The OEIS entry (Sep 2026) lists a(1..31) and notes a(32) > 10¹¹.
+Until Sep 16 2026 the OEIS entry listed a(1..31) and noted a(32) > 10¹¹. The terms
+a(32)..a(193) found here were submitted that day and approved on Sep 17 2026
+(b-file n = 1..193). `submission.md` holds the follow-up edit package.
 
 ## Results
 
@@ -501,4 +503,6 @@ re-checked with `verify_run.py` (and, for the first three, `openssl prime`).
 * `b137723.txt` — OEIS b-file of the consecutive terms (`n a(n)` per line, `#` header comments)
 * `DATA.txt` — the same terms as an OEIS DATA line
 * `structural_terms.txt` — the terms found by `search` (n, a(n), form, search limit); edit this when a new one is found
+* `submission.md` — OEIS status check, follow-up edit in field format, run plan for more terms, certification list, optional derived sequences
+* `primes_to_certify.txt` — the 16 probable-prime endpoints above 2⁶⁴ (for PARI/GP `isprime`)
 * `make_bfile.py` — merges `next_1e11.txt` with `structural_terms.txt`, re-evaluates the forms, and rewrites `b137723.txt` and `DATA.txt`

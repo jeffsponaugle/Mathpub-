@@ -1,0 +1,45 @@
+2026-10-02 20:54:39.024 system_profiler[91922:18372231] hw.cpufamily: 0x1b588bb3
+toom_interpolate_5pts.c:70:19: warning: expression result unused [-Wunused-value]
+   70 |   ASSERT_NOCARRY (mpn_divexact_by3 (v2, v2, kk1));    /* v2 <- v2 / 3 */
+      |   ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../gmp-impl.h:1723:6: note: expanded from macro 'mpn_divexact_by3'
+ 1723 |   (3 & mpn_bdiv_dbm1 (dst, src, size, __GMP_CAST (mp_limb_t, GMP_NUMB_MASK / 3)))
+      |    ~ ^
+../gmp-impl.h:2525:33: note: expanded from macro 'ASSERT_NOCARRY'
+ 2525 | #define ASSERT_NOCARRY(expr)   (expr)
+      |                                 ^~~~
+1 warning generated.
+toom_interpolate_8pts.c:163:18: warning: expression result unused [-Wunused-value]
+  163 |   ASSERT_NOCARRY(mpn_divexact_by3 (r5, r5, 3 * n + 1));
+      |   ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../gmp-impl.h:1723:6: note: expanded from macro 'mpn_divexact_by3'
+ 1723 |   (3 & mpn_bdiv_dbm1 (dst, src, size, __GMP_CAST (mp_limb_t, GMP_NUMB_MASK / 3)))
+      |    ~ ^
+../gmp-impl.h:2525:33: note: expanded from macro 'ASSERT_NOCARRY'
+ 2525 | #define ASSERT_NOCARRY(expr)   (expr)
+      |                                 ^~~~
+1 warning generated.
+mulmod_bknp1.c:335:21: warning: expression result unused [-Wunused-value]
+  335 |     ASSERT_NOCARRY (mpn_divexact_by3 (tp, tp, n + 1));
+      |     ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../gmp-impl.h:1723:6: note: expanded from macro 'mpn_divexact_by3'
+ 1723 |   (3 & mpn_bdiv_dbm1 (dst, src, size, __GMP_CAST (mp_limb_t, GMP_NUMB_MASK / 3)))
+      |    ~ ^
+../gmp-impl.h:2525:33: note: expanded from macro 'ASSERT_NOCARRY'
+ 2525 | #define ASSERT_NOCARRY(expr)   (expr)
+      |                                 ^~~~
+1 warning generated.
+pprime_p.c:63:29: warning: operator '?:' has lower precedence than '&'; '&' will be evaluated first [-Wbitwise-conditional-parentheses]
+   63 |           is_prime = n0 & (n0 > 1) ? isprime (n0) : n0 == 2;
+      |                      ~~~~~~~~~~~~~ ^
+pprime_p.c:63:29: note: place parentheses around the '&' expression to silence this warning
+   63 |           is_prime = n0 & (n0 > 1) ? isprime (n0) : n0 == 2;
+      |                                    ^
+      |                      (            )
+pprime_p.c:63:29: note: place parentheses around the '?:' expression to evaluate it first
+   63 |           is_prime = n0 & (n0 > 1) ? isprime (n0) : n0 == 2;
+      |                                    ^                       
+      |                           (                                )
+1 warning generated.
+running ntt tuner for 8 threads (several minutes)...
+built: pw13 wilsontest tools/wilson_brute

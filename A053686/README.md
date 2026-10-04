@@ -191,16 +191,12 @@ Files: `scan_1e13.txt`, `scan_1e13.log` — the 10¹³ leg on the M1 Pro;
 — the known part with histogram lines; `a053686.state` — checkpoint (on the Studio it
 covers the full range and is the one to continue from); `DATA.txt` — the terms.
 
-## Possible OEIS additions
+## OEIS status
 
-- A053686: **a(13) = 906**. Example/comment: "906, the record gap after 218209405436543,
-  occurs again after 543684371469023 (the next prime is 543684371469929), before the
-  next record 916 after 1189459969825483." And: "a(14) ≥ 1132: the records 778, 804,
-  806, 916 and 924 do not repeat before the next record (exhaustive scan to
-  A002386(64) = 1693182318746371)."
-- A133788: a(13) = 218209405436543.
-- A085237: a(80)..a(86) = 804, 806, 906, 906, 916, 924, 1132 (778 is not repeated, 906
-  is; a(87) is 1132 again or 1184).
-- The second occurrences 5, 13, 31, 293, 8467, 12853, 25471, 338033, 1561919, 11113933,
-  428045491, 4275912661, 543684371469023 (the prime after which the repeat of a(k)
-  occurs) do not seem to be in the OEIS and could accompany A133788.
+Submitted and approved Sep 17 2026: A053686 a(13) = 906 with a comment giving the repeat
+and a(14) ≥ 1132 (revision #28), A133788 a(13) = 218209405436543 (#13), and A085237
+a(80)–a(86) = 804, 806, 906, 906, 916, 924, 1132 as a b-file to n = 86 (#44). What can
+still be submitted — the second occurrences 5, 13, 31, 293, 8467, 12853, 25471, 338033,
+1561919, 11113933, 428045491, 4275912661, 543684371469023 (not in the OEIS), a
+multiplicity sequence, a program link, an example — and the command for deciding a(14)
+are in `submission.md`.

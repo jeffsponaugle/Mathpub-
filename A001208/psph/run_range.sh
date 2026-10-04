@@ -6,6 +6,11 @@
 #   TAG      name for the log directory (e.g. h9k8_box1)
 #   H K TGT  the search (TGT = best known lower bound + 1)
 #   D        split depth (must be the same on every machine so that item indices agree)
+#            NOTE: the item enumeration also depends on TGT (higher targets prune a few more prefixes through the
+#            element-wise lower bounds), so machines running DIFFERENT targets have slightly different index spaces
+#            (e.g. n(27,6) d=4: 2964437 items at TGT 176381, 2964430 at 177915). Either use one TGT everywhere or
+#            re-run small windows around every chunk boundary at the lowest TGT afterwards (see bnd_h27k6.sh,
+#            tools/collect_h27k6.py). Check with: psph -h H -k K -t TGT -d D -i 0:0 (prints the item count).
 #   LO HI    this machine's item range [LO,HI)  (item counts: run  psph -h H -k K -t TGT -d D -i 0:0)
 #   CHUNK    items per psph invocation (a finished chunk is marked by a .done file -> re-run to resume)
 #   THREADS  worker threads (number of cores)

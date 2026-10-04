@@ -9,9 +9,12 @@
  *   A248702  the same with decreasing gaps before and increasing gaps after (a valley);
  *             offset 0, a(0) = 2.  Known (n = 0..6): 2, 3, 19, 43, 2687, 179819, 1107791,
  *             "a(7) >= 8960453 if it exists".
- *   A248703  "Strict Peak Primes": strictly increasing gaps before, strictly decreasing
- *             after, and the index counts the strict steps, so a(n) needs n+1 gaps on
- *             each side.  Known (n = 1..6): 23, 1439, 21433, 1130863, 19881311, 331542583.
+ *   A248703  strict peak: strictly increasing gaps before, strictly decreasing after.
+ *             The entry originally had offset 1 with the index counting strict steps
+ *             (a(1) = 23 has two gaps on each side); in Sep 2026 the OEIS editors changed
+ *             the offset to 2 so that a(n) has n gaps on each side, which is the
+ *             convention used here.  Known (n = 2..7): 23, 1439, 21433, 1130863,
+ *             19881311, 331542583.
  *   A248704  strict valley, n gaps each side.  Known (n = 1..6): 3, 19, 1429, 25243,
  *             340577, 1107791.
  *
@@ -28,8 +31,8 @@
  * 373, 379, 383 with gaps 10, 2, 4, 6 | 8, 6, 6, 4: L = 3, M = 4, depth 3.
  * Valley depth swaps the two directions, the strict depths use strict
  * inequalities.  A248702(n) = smallest prime of valley depth >= n, A248703(n) =
- * smallest prime of strict peak depth >= n+1, A248704(n) = smallest prime of
- * strict valley depth >= n.  Each a(n) is non-decreasing in n.
+ * smallest prime of strict peak depth >= n (n >= 2), A248704(n) = smallest prime
+ * of strict valley depth >= n.  Each a(n) is non-decreasing in n.
  *
  * Method
  * ------
@@ -111,8 +114,8 @@ typedef unsigned __int128 u128;
 enum { PEAK, VALLEY, SPEAK, SVALLEY };
 static const char *SEQ[NMODE]    = { "A248701", "A248702", "A248703", "A248704" };
 static const char *MODE[NMODE]   = { "peak", "valley", "strict peak", "strict valley" };
-static const int   SHIFT[NMODE]  = { 0, 0, 1, 0 };     /* OEIS index n <-> depth n + SHIFT */
-static const int   FIRSTN[NMODE] = { 1, 0, 1, 1 };     /* OEIS offsets */
+static const int   SHIFT[NMODE]  = { 0, 0, 0, 0 };     /* OEIS index n <-> depth n + SHIFT */
+static const int   FIRSTN[NMODE] = { 1, 0, 2, 1 };     /* OEIS offsets (A248703 has offset 2 since Sep 2026) */
 #define KDEPTH 7
 static const u64 KNOWN[NMODE][KDEPTH + 1] = {           /* known terms indexed by depth */
     { 0, 3, 7, 359, 7853, 96401, 2812099, 294276293 },

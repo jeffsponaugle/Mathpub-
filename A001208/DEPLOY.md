@@ -77,6 +77,15 @@ range is complete; every chunk is resumable (re-run the same command).
   [4200,4450); orin1: [10600,10700). Projected n(9,8) completion ~Oct 2 09:30 PDT. Best 6082 (mathg).
 * 04:05 PDT Oct 2 rebalance #5: mathb's chunk [7200,8000) is slower than planned (ends ~09:45), so [10250,10500) moved from mathb to mathd (after [9250,9500)); mathb goes straight to A001210(91). Projected n(9,8) completion ~09:45 PDT.
 * 07:47 PDT Oct 2: mathd finished all its n(9,8) ranges and started A001209(303) (psph16, 301 items).
+* 19:40 PDT Oct 2 — OVERNIGHT PLAN (Jeff keeps mathd/mathb/mathg running overnight):
+  Phase 1, finish A001211(27) (best 184129): mathd chunks 10-14 then 27-29 (jobs9.sh); mathb chunks 20-26 after its A001210(91)
+  chunk ends ~21:20 (jobs6.sh); mathg chunks 17-19 (jobs5.sh). Expected complete ~08:00-09:00 PDT Oct 3.
+  Phase 2 (automatic): mathd -> A001209(303) with 10-item chunks (31 chunks, resumable); mathb -> A001210(91) items [10000,100000)
+  in 1000-item chunks (tag h91k5b); mathg -> A001210(91) items [100000,133732) in 1000-item chunks (tag h91k5c). Items [0,10000)
+  of A001210(91) are complete (h91k5 chunks 0-1). Orin continues the n(9,8) uniqueness check. Mac stopped (GPU k=21 suspended).
+* 16:50 PDT Oct 2 status: A001211(27) chunks done: 0-5, 6-7 (mathd), 15 (mathg); running: mathd 8 (1.2 h/chunk), mathg 16 (2.3 h/chunk);
+  mathb still finishing its A001210(91) chunk 1 (80 %, ends ~18:30) before taking chunks 20-29. Remaining 21 chunks ~ 16 mathd-hours.
+  Best 182504. Orin uniqueness check: [4200,4450) done with no second basis >= 6082; [4450,4700) running (7.6 h).
 * 13:50 PDT Oct 2 — Jeff will retask mathd/mathb/mathg in a few hours. Re-plan to finish A001211(27) first:
   A001209(303) dropped on mathd (12 % of one unsplittable chunk; restart later with `-d 2 ... chunk 10` = 31 resumable
   chunks); A001210(91) on mathb pauses after its running chunk 1 (chunks 0-1 then complete, resumable).
@@ -126,7 +135,7 @@ range is complete; every chunk is resumable (re-run the same command).
 
 ### 3. A001211(27) = n(27,6)
 
-* Lower bound **177914** (basis 1 19 122 1028 6378 22929, Mac, Oct 2 13:28; earlier 177568, 176863); heuristic was 176380; target in use 176381.
+* Lower bound **184129** (basis 1 16 194 900 7895 21263, mathg, Oct 2 19:15; earlier 183614, 183362, 182526, 182504, 182481, 182339, 180223, 177914, 177568, 176863); heuristic was 176380; targets in use 176381 (mathg) / 177915 (mathd, mathb).
 * Items: 4005 at depth 3, 2,964,437 at depth 4 (generated in 2 s). Expected 300-3000 core-hours (growth
   exponent still rising at h=14), so start it only when a machine is otherwise idle; the ETA printed after
   the first chunks tells the truth. Depth 4 balances best:
@@ -161,3 +170,100 @@ the h=3/4/5 row proofs.
 * Memory per thread is about (k-1) x TGT bytes (x2 for psph16): negligible except for k=4 h=303
   (3 x 71 MB x 2 = 430 MB per thread, 41 GB for 96 threads — use fewer threads if RAM is short, e.g. -j 48).
 * Do not mix item ranges from different D or different TGT in one logs/TAG directory.
+
+### 19:50 PDT Oct 2 — watcher false trigger, boundary windows, audit tool
+
+- The unified watcher fired on mathd's stale `=== JOB2 done` line (Oct 1, from the first wrapper); no real event. Replaced by
+  `scratchpad/watch_overnight.sh` (anchors mathd's phase-2 marker after the "restart in chunks of 10 items" line, also
+  reports stalls: no psph running while the wrapper has not printed ALL JOBS DONE).
+- **Work-item enumeration is target-dependent**: n(27,6) at depth 4 has 2964437 items at TGT 176381 (mathg, Mac) but
+  2964430 at TGT 177915 (mathd, mathb) — the element-wise lower bounds L2..L6 prune 7 more prefixes at the higher
+  target (those prefixes are proven < 177915, hence not extremal). Index spaces therefore differ by a shift <= 7, and up
+  to 7 items can fall through a boundary whose lower chunk ran at 176381 and upper chunk at 177915 (chunk 5|6 and
+  19|20 in the current chunk map). Fix: `psph/bnd_h27k6.sh` on mathg re-runs [B-8,B+8) at TGT 176381 for all 29
+  boundaries B = 100000*i (~11 s each at nice 19, -j 4; logs/h27k6_bnd). n(9,8) was unaffected (11003 items at every
+  target 5419..6083, checked across all logs).
+- `tools/collect_h27k6.py` audits chunks 0..29 (requires .done marker AND the final statistics line, so touched
+  markers do not count), checks enumeration sizes per target, the boundary windows, and reports the maximum basis.
+- Status at 19:40 PDT: mathd chunk 9 at 93 % then 10-14, 27-29; mathb A001210(91) chunk 1 at 85 % (ETA 21:30 PDT) then
+  chunks 20-26; mathg chunk 17 at 9 % then 18-19; Orin uniqueness [4450,4700) at 51 % (ETA 22:30 PDT). Best n(27,6)
+  still 184129.
+
+### 00:55 PDT Oct 3 — NEW BEST n(27,6) >= 186942
+
+- mathb chunk 21 (items [2100000,2200000), TGT 177915) reported {1, 19, 194, 1095, 7370, 27669} with 27-range 186942
+  (hrange-verified locally). Previous best 184129. Chunk map at 00:55: done 0-11, 15-18, 20; running mathd 12 (90 %),
+  mathb 21 (26 %), mathg 19 (14 %); queued mathd 13-14, 27-29; mathb 22-26. Chunk times have grown to 1.5-3.2 h on the
+  96-thread boxes in the a_2 = 17..19 region, so mathb's queue (22-26) is the long pole (finish ~13:00-18:00 PDT).
+
+### 01:15 PDT Oct 3 — rebalance #6: target raised to 186943 for all not-yet-started chunks, chunks 25/26 moved off mathb
+
+- Benchmark on mathg (same 100 items [2600000,2600100), 3 threads each, concurrent): TGT 177915 385 s, TGT 186943 253 s
+  (1.52x faster; full checks 28.8M -> 12.2M). Item counts: 2964437 (176381) / 2964430 (177915) / 2964418 (186943), so
+  the index shift between any two enumerations is <= 19; boundary windows v2 use half-width 24 (bnd2_h27k6.sh on mathg,
+  logs/h27k6_bnd2; v1 with half-width 8 completed 29/29, 0 solutions).
+- New wrappers (old ones killed first, running drivers left alone; skipped chunks marked with touched .done files, which
+  the audit does not count): mathd jobs10.sh — old driver finishes chunk 13 (177915), then h27k6i chunk 14, h27k6e
+  chunks 27-29, h27k6g chunk 25 (all 186943), then A001209(303). mathb jobs7.sh — old driver finishes chunk 21 (ETA
+  ~02:00 PDT), then h27k6h chunks 22-24 (186943), then A001210(91) [10000,100000). mathg jobs7.sh — chunk 19 (ETA
+  ~03:10 PDT), then h27k6f chunk 26 (186943, 32 threads), then A001210(91) [100000,133732).
+- Expected A001211(27) completion: ~08:00-10:00 PDT Oct 3 (was ~13:00-18:00 with mathb carrying 22-26 at 177915).
+- tools/collect_h27k6.py now knows all three enumerations and checks, for every boundary whose lower chunk ran at a lower
+  target than its upper chunk, that a window at TGT 176381 covers [B, B + N_176381 - N_upper).
+
+### 05:40 PDT Oct 3 — rebalance #7: chunks 25 and 29 moved from mathd to mathb
+
+- mathg finished chunks 19 and 26 (05:20 PDT; best in chunk 26: 184802) and started phase 2 (h91k5c). mathb finished 22-23
+  and is on 24 (ETA ~05:55). mathd is on 27 (ETA ~06:40) with 28, 29, 25 queued = ~6 h -> completion ~11:30.
+- Moved chunk 29 (touched logs/h27k6e/chunk_2.done on mathd) and chunk 25 (touched logs/h27k6g/chunk_0.done so mathd's
+  h27k6g stage is a no-op) to mathb: new wrapper jobs8.sh runs h27k6gb (chunk 25) and h27k6j (chunk 29) at TGT 186943
+  after chunk 24, then h91k5b. Expected completion ~09:00 PDT (mathd 27-28, mathb 24-25-29).
+
+### 07:35 PDT Oct 3 — mathd done with A001211(27); phase 2 (A001209(303)) started there
+
+- mathd finished chunks 27 and 28 at ~07:30 PDT and its wrapper moved on to A001209(303) in 10-item chunks (psph16,
+  tag h303k4, target 71148328). mathb is on chunk 25 (70 % at 07:15, ETA ~07:45), then chunk 29 -> A001211(27) search
+  complete ~09:15 PDT. mathg on A001210(91) tail: first 1000-item chunk 39 % after 110 min (~4.7 h per chunk on
+  32 threads -> ~6.5 days for its 34 chunks; mathb's 90 chunks ~1.6 h each -> ~6 days). Decide in the morning whether
+  A001210(91) is worth ~6 days of both boxes.
+
+### 07:50 PDT Oct 3 — A001209(303) re-split at depth 3 on mathd
+
+- The depth-2 split (301 items, chunks of 10) could keep at most 10 of mathd's 96 threads busy (load average fell to ~10
+  within minutes). Stopped it (3 chunks = items 0-29 had completed, 0 solutions) and restarted as h303k4b: split depth 3 =
+  4158140 work items (generation 515 s single-threaded per psph16 invocation; mathd has 754 GB RAM), chunks of 200000
+  items (21 chunks), target 71148328. Expected 21-34 h of 96-thread time plus ~9 % generation overhead -> done ~Oct 4
+  afternoon/evening PDT. Wrapper jobs11.sh; marker "JOB2b done".
+- Lesson: for the k=4 column the depth-2 prefix (a_2 alone) is far too coarse for chunking; use depth 3 or psph's auto
+  depth (smallest depth with >= 64*threads items) and accept the per-invocation generation cost.
+
+### 08:00 PDT Oct 3 — WIND-DOWN of the x86 boxes (on request)
+
+- **mathd STOPPED 07:58 PDT** (`stop_all.sh`, 0 processes left). Resumable state: A001209(303) depth-3 run h303k4b had
+  0 of 21 chunks done (chunk 0 was ~15 min in); the abandoned depth-2 run h303k4 has items 0-29 done (3 chunks, 0 sols).
+  To resume: `cd ~/A0001208/psph && nohup sh jobs11.sh &` (re-runs `run_range.sh h303k4b 303 4 71148328 3 0 4158140 200000 96 ./psph16`,
+  skipping finished chunks). Expected 21-34 h of 96 threads.
+- **mathg STOPPED 07:58 PDT** (0 processes left). Resumable state: A001210(91) tail h91k5c had 0 of 34 chunks done (chunk 0 at
+  40 % after 2.5 h, lost). To resume: `run_range.sh h91k5c 91 5 8897043 3 100000 133732 1000 32 ./psph` (~6.5 days on mathg).
+  All its A001211(27) work (chunks 0-5, 15-19, 26; boundary windows v1+v2) is complete and on disk.
+- **mathb: wrapper killed 07:59 PDT**; chunk 29 (h27k6j, the last A001211(27) chunk, 46 % at 07:59, ETA ~08:17) finishes on
+  its own, then the box is idle. Phase 2 (A001210(91) items [10000,100000), h91k5b) cancelled before it started; items [0,10000)
+  (h91k5 chunks 0-1) are done. To resume: `run_range.sh h91k5b 91 5 8897043 3 10000 100000 1000 96 ./psph` (~6 days).
+- **orin1 continues** the n(9,8) uniqueness re-check all day (uniq_b [9250,10000) then uniq_c [10250,10500); ~6 h left).
+- Mac: stopped since 14:05 Oct 2 (GPU k=21 run suspended with SIGSTOP; see OVERNIGHT.md).
+
+### 08:15 PDT Oct 3 — **A001211(27) = n(27,6) = 186942 PROVEN**
+
+- mathb finished chunk 29 at 08:13 PDT (0 bases >= 186943). `tools/collect_h27k6.py` -> COMPLETE: 30/30 chunks exactly once,
+  three enumerations (2964437/2964430/2964418), boundary windows cover the 4 mixed-target boundaries (6, 14, 20, 22), 1147
+  reported bases, unique maximum 186942 = {1, 19, 194, 1095, 7370, 27669}. Audit saved as logs/n27k6_final_audit.txt;
+  b-file bfiles/bA001211.txt extended to a(27); submission draft bfiles/A001211_27_submission.md finalized.
+- All three x86 boxes are now idle (mathb went idle on its own after chunk 29). Orin continues the n(9,8) uniqueness check.
+
+### 18:51 PDT Oct 3 — Orin uniqueness re-check for n(9,8) COMPLETE: basis unique
+
+- orin1 (psph_gpu, 6 CPU threads + GPU leaf filter) re-ran items [4200,5200), [9250,10000), [10250,10500) at target 6082
+  (uniq_a/b/c, 8 chunks of 250 items, Oct 2 11:23 -> Oct 3 18:51 PDT): 0 bases with 9-range >= 6082, no errors. Together
+  with the original search (all other items at targets <= 6082, exactly one basis of range 6082 reported),
+  {1, 8, 27, 88, 197, 521, 1226, 1461} is the unique extremal basis. Drafts updated. All machines (mathd, mathb, mathg,
+  orin1) are now idle; the Mac's GPU k=21 run remains suspended (SIGSTOP) as noted in OVERNIGHT.md.

@@ -9,27 +9,27 @@ for many bases b at once, on CPU (`wieferich.c`) and on the DGX Spark GPU
 the other bases with their own OEIS entries are below, plus
 [A039951](https://oeis.org/A039951) (smallest such p for each base n).
 
-| base | OEIS | known terms | searched to (before this project) |
-|--:|:--|:--|:--|
-| 2 | A001220 | 1093, 3511 | 2^64 (PrimeGrid, Dec 2022) |
-| 3 | A014127 | 11, 1006003 | 1.2e15 (Fischer) |
-| 5 | A123692 | 2, 20771, 40487, 53471161, 1645333507, 6692367337, 188748146801 | 1.2e15 |
-| 6 | A212583 | 66161, 534851, 3152573 | 2e14 |
-| 7 | A123693 | 5, 491531 | 1.2e15 |
-| 10 | A045616 | 3, 487, 56598313 | 2e14 |
-| 12 | A111027 | 2693, 123653 | 2e14 |
-| 13 | A128667 | 2, 863, 1747591 | 2e14 |
-| 14 | A234810 | 29, 353, 7596952219 | 2e14 |
-| 15 | A242741 | 29131, 119327070011 | 2e14 |
-| 17 | A128668 | 2, 3, 46021, 48947, 478225523351 | 2e14 |
-| 18 | A244260 | 5, 7, 37, 331, 33923, 1284043 | 2e14 |
-| 19 | A090968 | 3, 7, 13, 43, 137, 63061489 | 2e14 |
-| 20 | A242982 | 281, 46457, 9377747, 122959073 | 2e14 |
-| 22 | A298951 | 13, 673, 1595813, 492366587, 9809862296159 | 2e14 |
-| 23 | A128669 | 13, 2481757, 13703077, 15546404183, 2549536629329 | 2e14 |
-| 26 | A306255 | 3, 5, 71, 486999673, 6695256707 | 2e14 |
-| 30 | A306256 | 7, 160541, 94727075783 | 2e14 |
-| 47, 72 | A039951 gaps | none known | 2e14 |
+| base | OEIS | known terms | searched to before this project | searched to now (Oct 03 2026) |
+|--:|:--|:--|:--|:--|
+| 2 | A001220 | 1093, 3511 | 2^64 (PrimeGrid, Dec 2022) | unchanged |
+| 3 | A014127 | 11, 1006003 | 1.2e15 (Fischer) | unchanged (Phase 2) |
+| 5 | A123692 | 2, 20771, 40487, 53471161, 1645333507, 6692367337, 188748146801 | 1.2e15 | unchanged (Phase 2) |
+| 6 | A212583 | 66161, 534851, 3152573 | 2e14 | 3.08e14 |
+| 7 | A123693 | 5, 491531 | 1.2e15 | unchanged (Phase 2) |
+| 10 | A045616 | 3, 487, 56598313 | 2e14 | 3.08e14 |
+| 12 | A111027 | 2693, 123653 | 2e14 | 3.08e14 |
+| 13 | A128667 | 2, 863, 1747591 | 2e14 | 3.08e14 |
+| 14 | A234810 | 29, 353, 7596952219 | 2e14 | 3.08e14 |
+| 15 | A242741 | 29131, 119327070011 | 2e14 | 3.08e14 |
+| 17 | A128668 | 2, 3, 46021, 48947, 478225523351 | 2e14 | 3.08e14 |
+| 18 | A244260 | 5, 7, 37, 331, 33923, 1284043 | 2e14 | 3.08e14 |
+| 19 | A090968 | 3, 7, 13, 43, 137, 63061489 | 2e14 | 3.08e14 |
+| 20 | A242982 | 281, 46457, 9377747, 122959073 | 2e14 | 3.08e14 |
+| 22 | A298951 | 13, 673, 1595813, 492366587, 9809862296159 | 2e14 | 3.08e14 |
+| 23 | A128669 | 13, 2481757, 13703077, 15546404183, 2549536629329 | 2e14 | 3.08e14 |
+| 26 | A306255 | 3, 5, 71, 486999673, 6695256707 | 2e14 | 3.08e14 |
+| 30 | A306256 | 7, 160541, 94727075783, **303632117562967** (new, Oct 2026) | 2e14 | 3.08e14 (own search from 0) |
+| 47, 72 | A039951 gaps | none known | 2e14 | 3.08e14 |
 
 Search limits: R. Fischer, [fermatquotient.com](http://www.fermatquotient.com/FermatQuotienten/)
 (`FermQ_Sort.txt` 2025-09, `Statistik.txt` 2026-07: bases 2..150 to 2.0e14, bases 3, 5, 7 to
@@ -117,8 +117,9 @@ atom1 [2e14, 7e14) as `p1a.*`, atom2 [7e14, 1.2e15) as `p1b.*`). Since 2026-09-3
 runs: atom1 was freed, its checkpoint and logs moved to atom2, and atom2 works through
 `runs/queue.txt` with `queue.sh`:
 
-    200000000000000  700000000000000  p1a  (16 bases)   resumed at 2.398e14, ~3 days
-    700000000000000  1200000000000000 p1b  (16 bases)   resumes at 7.380e14, ~3.3 days
+    0                303640000000000  v30  30           complete (independent check of base-30 a(4))
+    200000000000000  700000000000000  p1a  (16 bases)   checkpoint 3.0848e14, ~2.9 days left
+    700000000000000  1200000000000000 p1b  (16 bases)   checkpoint 7.380e14, ~3.3 days left
     1200000000000000 2200000000000000 p2a  oeis,47,72   ~8.7 days
     2200000000000000 3200000000000000 p2b  oeis,47,72   ~8.5 days
 
@@ -146,10 +147,15 @@ To verify a solution p for base b:
 
 ## Results
 
-* **New: a(4) = 303632117562967 for base 30 ([A306256](https://oeis.org/A306256)), found 2026-10-01**
-  in Phase 1 and confirmed by an independent base-30 scan of every prime below 3.0364e14
-  (9,396,616,950,003 primes = π(303640000000000) by primecount; solutions exactly 7, 160541,
-  94727075783, 303632117562967; 316 chunks recomputed on the CPU, all matching). Also checked with
-  the CPU tool, Python and OpenSSL. Draft submission: [OEIS_draft_A306256.md](OEIS_draft_A306256.md).
-  Not yet submitted.
-* No other solutions for the 16 Phase-1 bases in [2e14, 3.0487e14).
+* **A306256 (base 30): a(4) = 303632117562967 — in the OEIS since Oct 02 2026** (Jeff Sponaugle's edit,
+  approved as revision #18). Found 2026-10-01 in Phase 1; confirmed by an independent base-30 scan
+  of every prime below 3.0364e14 (9,396,616,950,003 primes = π(303640000000000) by primecount;
+  solutions exactly 7, 160541, 94727075783, 303632117562967; 316 chunks recomputed on the CPU, all
+  matching) and by the CPU tool, Python and OpenSSL. Evidence: [OEIS_draft_A306256.md](OEIS_draft_A306256.md).
+* **No other solutions** for bases 6, 10, 12, 13, 14, 15, 17, 18, 19, 20, 22, 23, 26, 30, 47, 72 among all
+  primes in [2e14, 3.0848e14): 3,271,298,909,197 primes = π(3.0848e14) − π(2e14) by primecount,
+  10,848 contiguous chunks, 0 FLT errors, 119 CPU re-checks all matching. With Fischer's search to
+  2e14 this means no further terms below 3.08e14 for these entries, and a(47), a(72) > 3.08e14 in
+  A039951. Base 30: a(5) > 3.0848e14.
+* What can be submitted (bound updates, the stale A306256 comment, a note to R. Fischer) and the
+  state of the OEIS entries as of Oct 03 2026: [submission.md](submission.md).
