@@ -1,0 +1,13 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=280 vs b1={110}: values [1721036800000, 1771561000000), 2302 candidates (even-AP path)
+stage b2=281 vs b1={111}: values [1751989905401, 1870414552161), 5338 candidates (even-AP path)
+stage b2=282 vs b1={112}: values [1783386774432, 1973822685184), 8492 candidates (even-AP path)
+stage b2=283 vs b1={113}: values [1815232161643, 2081951752609), 11768 candidates (even-AP path)
+stage b2=284 vs b1={114}: values [1847530855424, 2194972623936), 15168 candidates (even-AP path)
+stage b2=285 vs b1={115}: values [1880287678125, 2313060765625), 18696 candidates (even-AP path)
+stage b2=286 vs b1={116}: values [1913507486176, 2436396322816), 22352 candidates (even-AP path)
+stage b2=287 vs b1={117}: values [1947195170207, 2565164201769), 26141 candidates (even-AP path)
+
+*** MATCH: 1994355542880 is an 6-digit palindrome in bases 117 and 287
+stage b2=288 vs b1={118}: values [1981355655168, 2699554153024), 30066 candidates (even-AP path)
+done: 0.00s, 86701 candidates tested

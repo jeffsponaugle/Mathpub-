@@ -1,0 +1,20 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=162 vs b1={46}: values [4251528, 4477456), 9 candidates (generic path)
+stage b2=163 vs b1={47}: values [4330747, 4879681), 21 candidates (generic path)
+stage b2=164 vs b1={48}: values [4410944, 5308416), 34 candidates (generic path)
+stage b2=165 vs b1={49}: values [4492125, 5764801), 47 candidates (generic path)
+stage b2=166 vs b1={50}: values [4574296, 6250000), 61 candidates (generic path)
+stage b2=167 vs b1={51}: values [4657463, 6765201), 76 candidates (generic path)
+stage b2=168 vs b1={52}: values [4741632, 7311616), 92 candidates (generic path)
+stage b2=169 vs b1={53}: values [4826809, 7890481), 108 candidates (generic path)
+stage b2=170 vs b1={54}: values [4913000, 8503056), 125 candidates (generic path)
+stage b2=171 vs b1={55}: values [5000211, 9150625), 142 candidates (generic path)
+stage b2=172 vs b1={56}: values [5088448, 9834496), 161 candidates (generic path)
+stage b2=173 vs b1={57}: values [5177717, 10556001), 180 candidates (generic path)
+
+*** MATCH: 5569044 is an 4-digit palindrome in bases 57 and 173
+stage b2=174 vs b1={58}: values [5268024, 11316496), 200 candidates (generic path)
+stage b2=175 vs b1={59}: values [5359375, 12117361), 221 candidates (generic path)
+stage b2=176 vs b1={60}: values [5451776, 12960000), 243 candidates (generic path)
+stage b2=177 vs b1={61}: values [5545233, 13845841), 265 candidates (generic path)
+done: 0.00s, 1074 candidates tested

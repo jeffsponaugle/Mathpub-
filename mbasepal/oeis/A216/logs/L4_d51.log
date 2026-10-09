@@ -1,0 +1,31 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=77 vs b1={26}: values [456533, 456976), 1 candidates (generic path)
+stage b2=78 vs b1={27}: values [474552, 531441), 10 candidates (generic path)
+stage b2=79 vs b1={28}: values [493039, 614656), 20 candidates (generic path)
+stage b2=80 vs b1={29}: values [512000, 707281), 31 candidates (generic path)
+stage b2=81 vs b1={30}: values [531441, 810000), 43 candidates (generic path)
+stage b2=82 vs b1={31}: values [551368, 923521), 56 candidates (generic path)
+stage b2=83 vs b1={32}: values [571787, 1048576), 70 candidates (generic path)
+stage b2=84 vs b1={33}: values [592704, 1185921), 85 candidates (generic path)
+stage b2=85 vs b1={34}: values [614125, 1336336), 100 candidates (generic path)
+stage b2=86 vs b1={35}: values [636056, 1500625), 117 candidates (generic path)
+stage b2=87 vs b1={36}: values [658503, 1679616), 135 candidates (generic path)
+stage b2=88 vs b1={37}: values [681472, 1874161), 155 candidates (generic path)
+stage b2=89 vs b1={38}: values [704969, 2085136), 175 candidates (generic path)
+
+*** MATCH: 1097460 is an 4-digit palindrome in bases 38 and 89
+stage b2=90 vs b1={39}: values [729000, 2313441), 196 candidates (generic path)
+stage b2=91 vs b1={40}: values [753571, 2560000), 219 candidates (generic path)
+stage b2=92 vs b1={41}: values [778688, 2825761), 242 candidates (generic path)
+stage b2=93 vs b1={42}: values [804357, 3111696), 267 candidates (generic path)
+stage b2=94 vs b1={43}: values [830584, 3418801), 293 candidates (generic path)
+stage b2=95 vs b1={44}: values [857375, 3748096), 321 candidates (generic path)
+stage b2=96 vs b1={45}: values [884736, 4100625), 349 candidates (generic path)
+stage b2=97 vs b1={46}: values [912673, 4477456), 379 candidates (generic path)
+stage b2=98 vs b1={47}: values [941192, 4879681), 411 candidates (generic path)
+stage b2=99 vs b1={48}: values [970299, 5308416), 443 candidates (generic path)
+stage b2=100 vs b1={49}: values [1000000, 5764801), 477 candidates (generic path)
+stage b2=101 vs b1={50}: values [1030301, 6250000), 512 candidates (generic path)
+
+*** MATCH: 1061208 is an 4-digit palindrome in bases 50 and 101
+done: 0.00s, 1299 candidates tested

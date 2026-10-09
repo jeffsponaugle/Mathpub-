@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=18 vs b1={12}: values [34012224, 35831808), 313 candidates (generic path)
+stage b2=19 vs b1={13}: values [47045881, 62748517), 2290 candidates (generic path)
+stage b2=20 vs b1={14}: values [64000000, 105413504), 5177 candidates (generic path)
+
+*** MATCH: 69012421 is an 7-digit palindrome in bases 14 and 20
+done: 0.00s, 7778 candidates tested

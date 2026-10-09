@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=114 vs b1={24}: values [12996, 13824), 8 candidates (generic path)
+stage b2=115 vs b1={25}: values [13225, 15625), 21 candidates (generic path)
+
+*** MATCH: 13571 is an 3-digit palindrome in bases 25 and 115
+stage b2=116 vs b1={26}: values [13456, 17576), 36 candidates (generic path)
+done: 0.00s, 30 candidates tested

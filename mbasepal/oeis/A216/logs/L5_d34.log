@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=61 vs b1={27}: values [13845841, 14348907), 136 candidates (generic path)
+stage b2=62 vs b1={28}: values [14776336, 17210368), 634 candidates (generic path)
+
+*** MATCH: 15464537 is an 5-digit palindrome in bases 28 and 62
+done: 0.00s, 770 candidates tested

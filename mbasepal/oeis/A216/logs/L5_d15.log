@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=31 vs b1={16}: values [923521, 1048576), 131 candidates (generic path)
+
+*** MATCH: 999503 is an 5-digit palindrome in bases 16 and 31
+done: 0.00s, 130 candidates tested

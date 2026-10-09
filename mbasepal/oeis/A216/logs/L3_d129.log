@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=159 vs b1={30}: values [25281, 27000), 11 candidates (generic path)
+
+*** MATCH: 25918 is an 3-digit palindrome in bases 30 and 159
+stage b2=160 vs b1={31}: values [25600, 29791), 27 candidates (generic path)
+
+*** MATCH: 25601 is an 3-digit palindrome in bases 31 and 160
+done: 0.00s, 13 candidates tested

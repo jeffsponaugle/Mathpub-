@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=252 vs b1={84}: values [4032758016, 4182119424), 2353 candidates (generic path)
+stage b2=253 vs b1={85}: values [4097152081, 4437053125), 5311 candidates (generic path)
+
+*** MATCH: 4115842963 is an 5-digit palindrome in bases 85 and 253
+done: 0.00s, 7663 candidates tested

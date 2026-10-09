@@ -1,0 +1,11 @@
+search Lk base 2 [4294967296, 10000000000) threads=14 chunk=4194304 -> runs/A061955/hits_A061955.txt
+[      60s] complete below 5247074304  (1.59e+07 n/s)
+[     120s] complete below 5851054080  (1.3e+07 n/s)
+[     180s] complete below 6467616768  (1.21e+07 n/s)
+[     240s] complete below 7063207936  (1.15e+07 n/s)
+[     300s] complete below 7683964928  (1.13e+07 n/s)
+[     360s] complete below 8262778880  (1.1e+07 n/s)
+[     420s] complete below 8833204224  (1.08e+07 n/s)
+[     480s] complete below 9869197312  (1.16e+07 n/s)
+[     487s] complete below 10000000000  (1.17e+07 n/s)
+done [4294967296, 10000000000) in 486.9s

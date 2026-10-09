@@ -1,0 +1,25 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=271 vs b1={107}: values [1461660310351, 1500730351849), 1964 candidates (even-AP path)
+stage b2=272 vs b1={108}: values [1488827973632, 1586874322944), 4873 candidates (even-AP path)
+stage b2=273 vs b1={109}: values [1516398112593, 1677100110841), 7899 candidates (even-AP path)
+stage b2=274 vs b1={110}: values [1544375182624, 1771561000000), 11045 candidates (even-AP path)
+stage b2=275 vs b1={111}: values [1572763671875, 1870414552161), 14313 candidates (even-AP path)
+stage b2=276 vs b1={112}: values [1601568101376, 1973822685184), 17706 candidates (even-AP path)
+stage b2=277 vs b1={113}: values [1630793025157, 2081951752609), 21228 candidates (even-AP path)
+stage b2=278 vs b1={114}: values [1660443030368, 2194972623936), 24880 candidates (even-AP path)
+stage b2=279 vs b1={115}: values [1690522737399, 2313060765625), 28666 candidates (even-AP path)
+stage b2=280 vs b1={116}: values [1721036800000, 2436396322816), 32588 candidates (even-AP path)
+stage b2=281 vs b1={117}: values [1751989905401, 2565164201769), 36650 candidates (even-AP path)
+stage b2=282 vs b1={118}: values [1783386774432, 2699554153024), 40854 candidates (even-AP path)
+stage b2=283 vs b1={119}: values [1815232161643, 2839760855281), 45203 candidates (even-AP path)
+
+*** MATCH: 2809577104920 is an 6-digit palindrome in bases 119 and 283
+stage b2=284 vs b1={120}: values [1847530855424, 2985984000000), 49701 candidates (even-AP path)
+stage b2=285 vs b1={121}: values [1880287678125, 3138428376721), 54350 candidates (even-AP path)
+stage b2=286 vs b1={122}: values [1913507486176, 3297303959104), 59153 candidates (even-AP path)
+
+*** MATCH: 2038492270101 is an 6-digit palindrome in bases 122 and 286
+stage b2=287 vs b1={123}: values [1947195170207, 3462825991689), 64114 candidates (even-AP path)
+stage b2=288 vs b1={124}: values [1981355655168, 3635215077376), 69235 candidates (even-AP path)
+stage b2=289 vs b1={125}: values [2015993900449, 3814697265625), 74519 candidates (even-AP path)
+done: 0.00s, 382231 candidates tested

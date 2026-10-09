@@ -1,0 +1,12 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=20 vs b1={8}: values [400, 512), 6 candidates (generic path)
+stage b2=21 vs b1={9}: values [441, 729), 14 candidates (generic path)
+
+*** MATCH: 610 is an 3-digit palindrome in bases 9 and 21
+stage b2=22 vs b1={10}: values [484, 1000), 24 candidates (generic path)
+
+*** MATCH: 595 is an 3-digit palindrome in bases 10 and 22
+stage b2=23 vs b1={11}: values [529, 1331), 35 candidates (generic path)
+
+*** MATCH: 576 is an 3-digit palindrome in bases 11 and 23
+done: 0.00s, 29 candidates tested

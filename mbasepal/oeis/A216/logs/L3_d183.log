@@ -1,0 +1,12 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=220 vs b1={37}: values [48400, 50653), 11 candidates (generic path)
+stage b2=221 vs b1={38}: values [48841, 54872), 28 candidates (generic path)
+
+*** MATCH: 51715 is an 3-digit palindrome in bases 38 and 221
+stage b2=222 vs b1={39}: values [49284, 59319), 46 candidates (generic path)
+stage b2=223 vs b1={40}: values [49729, 64000), 64 candidates (generic path)
+stage b2=224 vs b1={41}: values [50176, 68921), 84 candidates (generic path)
+stage b2=225 vs b1={42}: values [50625, 74088), 105 candidates (generic path)
+stage b2=226 vs b1={43}: values [51076, 79507), 126 candidates (generic path)
+stage b2=227 vs b1={44}: values [51529, 85184), 149 candidates (generic path)
+done: 0.00s, 75 candidates tested

@@ -1,0 +1,11 @@
+# A046475: Primes that are palindromic in bases 6 and 10.
+# complete for all terms < 10^51 (dbpal exhaustive search)
+1 2
+2 3
+3 5
+4 7
+5 191
+6 108151801
+7 11271517211
+8 155259838952551
+9 36599233807670833299563

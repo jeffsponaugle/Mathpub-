@@ -1,0 +1,15 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=36 vs b1={20}: values [60466176, 64000000), 76 candidates (even-AP path)
+stage b2=37 vs b1={21}: values [69343957, 85766121), 325 candidates (even-AP path)
+stage b2=38 vs b1={22}: values [79235168, 113379904), 623 candidates (even-AP path)
+stage b2=39 vs b1={23}: values [90224199, 148035889), 975 candidates (even-AP path)
+stage b2=40 vs b1={24}: values [102400000, 191102976), 1386 candidates (even-AP path)
+stage b2=41 vs b1={25}: values [115856201, 244140625), 1862 candidates (even-AP path)
+
+*** MATCH: 190739094 is an 6-digit palindrome in bases 25 and 41
+stage b2=42 vs b1={26}: values [130691232, 308915776), 2406 candidates (even-AP path)
+stage b2=43 vs b1={27}: values [147008443, 387420489), 3024 candidates (even-AP path)
+stage b2=44 vs b1={28}: values [164916224, 481890304), 3722 candidates (even-AP path)
+
+*** MATCH: 166571505 is an 6-digit palindrome in bases 28 and 44
+done: 0.00s, 5935 candidates tested

@@ -1,0 +1,14 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=19 vs b1={15}: values [116490258898219, 129746337890625), 281770 candidates (MITM path)
+  MITM b1=15: s=4 t=2 j=2 je=4 Q=225 table=361 yh=781
+stage b2=20 vs b1={16}: values [204800000000000, 281474976710656), 1198047 candidates (MITM path)
+  MITM b1=16: s=3 t=3 j=3 je=3 Q=4096 table=8000 yh=150
+stage b2=21 vs b1={17}: values [350277500542221, 582622237229761), 2709051 candidates (MITM path)
+  MITM b1=17: s=3 t=3 j=3 je=3 Q=4913 table=9261 yh=293
+stage b2=22 vs b1={18}: values [584318301411328, 1156831381426176), 5049512 candidates (MITM path)
+  MITM b1=18: s=3 t=3 j=3 je=3 Q=5832 table=10648 yh=475
+stage b2=23 vs b1={19}: values [952809757913927, 2213314919066161), 8514862 candidates (MITM path)
+  MITM b1=19: s=3 t=3 j=3 je=3 Q=6859 table=12167 yh=700
+
+*** MATCH: 1093158208940760 is an 12-digit palindrome in bases 19 and 23
+done: 0.00s, 1777 candidates tested

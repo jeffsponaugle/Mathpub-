@@ -1,0 +1,8 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=158 vs b1={77}: values [15557597153344, 16048523266853), 124465 candidates (generic path)
+stage b2=159 vs b1={78}: values [16157819263041, 17565568854912), 350215 candidates (generic path)
+stage b2=160 vs b1={79}: values [16777216000000, 19203908986159), 592455 candidates (generic path)
+stage b2=161 vs b1={80}: values [17416274304961, 20971520000000), 851907 candidates (generic path)
+
+*** MATCH: 17855191021508 is an 7-digit palindrome in bases 80 and 161
+done: 0.04s, 1198205 candidates tested

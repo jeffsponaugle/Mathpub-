@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=183 vs b1={33}: values [33489, 35937), 14 candidates (generic path)
+
+*** MATCH: 33856 is an 3-digit palindrome in bases 33 and 183
+done: 0.00s, 14 candidates tested

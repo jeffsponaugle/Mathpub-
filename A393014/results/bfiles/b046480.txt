@@ -1,0 +1,11 @@
+# A046480: Primes that are palindromic in bases 10 and 12.
+# complete for all terms < 12^49 (dbpal exhaustive search)
+1 2
+2 3
+3 5
+4 7
+5 11
+6 181
+7 797
+8 713171317
+9 12306732288267618624875457842681676288223760321

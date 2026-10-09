@@ -1,0 +1,11 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=158 vs b1={68}: values [98465804768, 98867482624), 102 candidates (even-AP path)
+stage b2=159 vs b1={69}: values [101621504799, 107918163081), 1567 candidates (even-AP path)
+stage b2=160 vs b1={70}: values [104857600000, 117649000000), 3123 candidates (even-AP path)
+stage b2=161 vs b1={71}: values [108175616801, 128100283921), 4775 candidates (even-AP path)
+
+*** MATCH: 121462387488 is an 6-digit palindrome in bases 71 and 161
+stage b2=162 vs b1={72}: values [111577100832, 139314069504), 6525 candidates (even-AP path)
+stage b2=163 vs b1={73}: values [115063617043, 151334226289), 8376 candidates (even-AP path)
+stage b2=164 vs b1={74}: values [118636749824, 164206490176), 10332 candidates (even-AP path)
+done: 0.00s, 12728 candidates tested

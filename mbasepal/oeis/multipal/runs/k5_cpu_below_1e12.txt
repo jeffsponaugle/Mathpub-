@@ -1,0 +1,11 @@
+# multipal k=5: all v in [1, 1000000000000) searched, 3643008135 palindromes, 12.8s
+# c  least_v_with_exactly_c  number_of_such_v
+EXACT 1 17 3629158269
+EXACT 2 2293 6910644
+EXACT 3 267140 9506
+EXACT 4 4838419019 15
+# n  least_v_with_at_least_n  (a(n) if lo = 1)
+ATLEAST 1 17
+ATLEAST 2 2293
+ATLEAST 3 267140
+ATLEAST 4 4838419019

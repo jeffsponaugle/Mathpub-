@@ -1,0 +1,7 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=213 vs b1={15}: values [213, 225), 1 candidates (generic path)
+stage b2=214 vs b1={16}: values [214, 256), 1 candidates (generic path)
+stage b2=215 vs b1={17}: values [215, 289), 1 candidates (generic path)
+
+*** MATCH: 216 is an 2-digit palindrome in bases 17 and 215
+done: 0.00s, 3 candidates tested

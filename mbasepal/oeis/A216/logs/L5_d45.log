@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=78 vs b1={33}: values [37015056, 39135393), 349 candidates (generic path)
+
+*** MATCH: 37258417 is an 5-digit palindrome in bases 33 and 78
+done: 0.00s, 349 candidates tested

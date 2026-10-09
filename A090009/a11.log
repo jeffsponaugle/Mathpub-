@@ -1,0 +1,104 @@
+dspattern: p -> p + digitsum(p), chains of length >= 11
+  range     : 2 .. 50,000,000,000,000,000,000,000,000,000
+  patterns  : 15 (15 of them carry past the low four digits)
+  candidates: 699,520,590,251,083 numbers in range fit a pattern (1 in 7.15e+13)
+  threads   : 24
+  mode      : maximal chains only, earliest only
+  checkpoint: a11.ckpt every 300s
+
+  0.01%  1.01e+03M cand/s  complete below 9.9500e+26  elapsed 00:01:00  eta >99h  no hit yet
+  0.02%  1.01e+03M cand/s  complete below 1.8879e+27  elapsed 00:02:00  eta >99h  no hit yet
+  0.03%  1.02e+03M cand/s  complete below 1.9959e+27  elapsed 00:03:01  eta >99h  no hit yet
+  0.04%  1.03e+03M cand/s  complete below 2.7400e+27  elapsed 00:04:01  eta >99h  no hit yet
+  0.04%  1.03e+03M cand/s  complete below 2.8896e+27  elapsed 00:05:01  eta >99h  no hit yet
+  0.05%  1.04e+03M cand/s  complete below 2.9787e+27  elapsed 00:06:01  eta >99h  no hit yet
+  0.06%  1.04e+03M cand/s  complete below 2.9985e+27  elapsed 00:07:01  eta >99h  no hit yet
+  0.07%  1.05e+03M cand/s  complete below 3.5870e+27  elapsed 00:08:01  eta >99h  no hit yet
+  0.08%  1.04e+03M cand/s  complete below 3.7797e+27  elapsed 00:09:01  eta >99h  no hit yet
+  0.09%  1.05e+03M cand/s  complete below 3.8679e+27  elapsed 00:10:01  eta >99h  no hit yet
+  0.10%  1.05e+03M cand/s  complete below 3.8967e+27  elapsed 00:11:02  eta >99h  no hit yet
+  0.11%  1.05e+03M cand/s  complete below 3.9560e+27  elapsed 00:12:02  eta >99h  no hit yet
+  0.12%  1.05e+03M cand/s  complete below 3.9867e+27  elapsed 00:13:02  eta >99h  no hit yet
+  0.13%  1.06e+03M cand/s  complete below 3.9966e+27  elapsed 00:14:02  eta >99h  no hit yet
+  0.14%  1.06e+03M cand/s  complete below 3.9998e+27  elapsed 00:15:02  eta >99h  no hit yet
+  0.15%  1.06e+03M cand/s  complete below 4.4997e+27  elapsed 00:16:02  eta >99h  no hit yet
+  0.16%  1.06e+03M cand/s  complete below 4.6887e+27  elapsed 00:17:02  eta >99h  no hit yet
+  0.16%  1.06e+03M cand/s  complete below 4.7750e+27  elapsed 00:18:03  eta >99h  no hit yet
+  0.17%  1.06e+03M cand/s  complete below 4.7985e+27  elapsed 00:19:03  eta >99h  no hit yet
+  0.18%  1.06e+03M cand/s  complete below 4.8650e+27  elapsed 00:20:03  eta >99h  no hit yet
+  0.19%  1.06e+03M cand/s  complete below 4.8885e+27  elapsed 00:21:03  eta >99h  no hit yet
+  0.20%  1.07e+03M cand/s  complete below 4.8975e+27  elapsed 00:22:03  eta >99h  no hit yet
+  0.21%  1.07e+03M cand/s  complete below 4.8999e+27  elapsed 00:23:03  eta >99h  no hit yet
+  0.22%  1.07e+03M cand/s  complete below 4.9677e+27  elapsed 00:24:03  eta >99h  no hit yet
+  0.23%  1.07e+03M cand/s  complete below 4.9798e+27  elapsed 00:25:03  eta >99h  no hit yet
+  0.24%  1.07e+03M cand/s  complete below 4.9889e+27  elapsed 00:26:03  eta >99h  no hit yet
+  0.25%  1.07e+03M cand/s  complete below 4.9910e+27  elapsed 00:27:04  eta >99h  no hit yet
+  0.26%  1.08e+03M cand/s  complete below 4.9987e+27  elapsed 00:28:04  eta >99h  no hit yet
+  0.27%  1.08e+03M cand/s  complete below 4.9998e+27  elapsed 00:29:04  eta >99h  no hit yet
+
+interrupt -- stopping workers (Ctrl-C again to abort now)
+
+stopped by signal 2 -- the search is incomplete
+  elapsed          : 1782.68s
+  candidates       : 1,922,351,779,546 (in finished work items)
+  after sieve      : 331,311,389
+  base-2 tests     : 376,140,899
+  chains >= 11     : 0
+
+checkpoint a11.ckpt written -- rerun the same command to continue
+=== resumed with --gpu (Tue Sep 29 08:53:24 PDT 2026)
+dspattern: p -> p + digitsum(p), chains of length >= 11
+  range     : 2 .. 50,000,000,000,000,000,000,000,000,000
+  patterns  : 15 (15 of them carry past the low four digits)
+  candidates: 699,520,590,251,083 numbers in range fit a pattern (1 in 7.15e+13)
+  threads   : GPU (Apple M2 Ultra) plus 22 CPU threads
+  mode      : maximal chains only, earliest only
+  checkpoint: a11.ckpt every 300s
+  resuming  : 23336 of 5735478 work items done, 1783s of prior runtime
+
+  0.37%  1.41e+03M cand/s  complete below 5.8686e+27  elapsed 00:30:43  eta >99h  no hit yet
+  0.47%  1.74e+03M cand/s  complete below 5.9890e+27  elapsed 00:31:43  eta >99h  no hit yet
+  0.57%  2.04e+03M cand/s  complete below 6.5985e+27  elapsed 00:32:43  eta 94:53:22  no hit yet
+  0.67%  2.32e+03M cand/s  complete below 6.8000e+27  elapsed 00:33:43  eta 83:14:16  no hit yet
+  0.77%  2.6e+03M cand/s  complete below 6.8998e+27  elapsed 00:34:44  eta 74:11:32  no hit yet
+  0.88%  2.86e+03M cand/s  complete below 6.9890e+27  elapsed 00:35:44  eta 67:17:40  no hit yet
+  0.98%  3.12e+03M cand/s  complete below 7.0998e+27  elapsed 00:36:44  eta 61:42:32  no hit yet
+  1.08%  3.33e+03M cand/s  complete below 7.6800e+27  elapsed 00:37:44  eta 57:39:30  no hit yet
+  1.18%  3.55e+03M cand/s  complete below 7.7899e+27  elapsed 00:38:44  eta 54:04:21  no hit yet
+  1.28%  3.76e+03M cand/s  complete below 7.8792e+27  elapsed 00:39:44  eta 50:57:56  no hit yet
+  1.39%  3.97e+03M cand/s  complete below 7.8990e+27  elapsed 00:40:44  eta 48:15:03  no hit yet
+  1.49%  4.17e+03M cand/s  complete below 7.9730e+27  elapsed 00:41:45  eta 45:56:45  no hit yet
+  1.60%  4.36e+03M cand/s  complete below 7.9897e+27  elapsed 00:42:45  eta 43:50:56  no hit yet
+  1.71%  4.55e+03M cand/s  complete below 7.9990e+27  elapsed 00:43:45  eta 42:00:16  no hit yet
+  1.81%  4.71e+03M cand/s  complete below 8.4489e+27  elapsed 00:44:45  eta 40:30:23  no hit yet
+  1.91%  4.86e+03M cand/s  complete below 8.6199e+27  elapsed 00:45:45  eta 39:13:31  no hit yet
+  2.01%  5.01e+03M cand/s  complete below 8.7000e+27  elapsed 00:46:45  eta 38:00:36  no hit yet
+  2.11%  5.15e+03M cand/s  complete below 8.7891e+27  elapsed 00:47:45  eta 36:54:02  no hit yet
+  2.22%  5.3e+03M cand/s  complete below 8.8000e+27  elapsed 00:48:46  eta 35:51:55  no hit yet
+  2.32%  5.43e+03M cand/s  complete below 8.8800e+27  elapsed 00:49:46  eta 34:56:06  no hit yet
+  2.42%  5.57e+03M cand/s  complete below 8.8962e+27  elapsed 00:50:46  eta 34:02:57  no hit yet
+  2.53%  5.71e+03M cand/s  complete below 8.9000e+27  elapsed 00:51:46  eta 33:10:30  no hit yet
+[len 11] 8968999974999983898865998461(+206) -> 8968999974999983898865998667(+214) -> 8968999974999983898865998881(+212) -> 8968999974999983898865999093(+208) -> 8968999974999983898865999301(+200) -> 8968999974999983898865999501(+202) -> 8968999974999983898865999703(+206) -> 8968999974999983898865999909(+214) -> 8968999974999983898866000123(+176) -> 8968999974999983898866000299(+190) -> 8968999974999983898866000489(+191)
+  (terms above 3.3e24 are 13-base strong probable primes, which is not a proof: certify them with verify_chain.py)
+  2.63%  5.82e+03M cand/s  complete below 8.9689e+27  elapsed 00:52:46  eta 32:31:42  hit!
+
+earliest chain of length >= 11 starts at 8968999974999983898865998461
+(confirmed smallest: every candidate below it in range was tested)
+(its terms reach 3.3e24, beyond proven Miller-Rabin: certify them with verify_chain.py)
+  elapsed          : 3166.76s (including earlier runs)
+  candidates       : 18,415,991,319,744
+  after sieve      : 596,862,307
+  base-2 tests     : 688,519,859
+  chains >= 11     : 1
+  longest found    : 11 (starting at 8968999974999983898865998461)
+
+checkpoint a11.ckpt marked complete
+=== resumed with the list kernel (Tue Sep 29 09:30:16 PDT 2026)
+dspattern: p -> p + digitsum(p), chains of length >= 11
+  range     : 2 .. 50,000,000,000,000,000,000,000,000,000
+  patterns  : 15 (15 of them carry past the low four digits)
+  candidates: 699,520,590,251,083 numbers in range fit a pattern (1 in 7.15e+13)
+
+checkpoint a11.ckpt says this search is already complete:
+  earliest chain of length >= 11 starts at 8968999974999983898865998461 (confirmed)
+Use --restart to run it again.

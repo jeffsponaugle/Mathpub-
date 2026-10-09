@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;}
+{\colortbl;\red255\green255\blue255;\red95\green167\blue255;\red140\green233\blue81;}
+{\*\expandedcolortbl;;\cssrgb\c43922\c72157\c100000;\cssrgb\c60784\c91373\c38824;}
+\margl1440\margr1440\vieww19760\viewh16740\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 jbs@house1:~/a279885$ ./pipal /bigoutput/pi-10t.txt -o palinpi.txt\
+a(1) = 1  (digit index 0)\
+a(3) = 141  (digit index 0)\
+a(5) = 46264  (digit index 18)\
+a(2) = 33  (digit index 23)\
+a(4) = 3993  (digit index 42)\
+a(7) = 1736371  (digit index 639)\
+a(6) = 999999  (digit index 761)\
+a(8) = 23911932  (digit index 3731)\
+a(9) = 398989893  (digit index 6576)\
+a(10) = 0136776310  (digit index 16060)\
+a(11) = 21348884312  (digit index 247145)\
+a(12) = 450197791054  (digit index 273839)\
+a(13) = 9475082805749  (digit index 879325)\
+a(14) = 95715977951759  (digit index 5380811)\
+a(15) = 697763767367796  (digit index 10593199)\
+a(17) = 42611063036011624  (digit index 105176739)\
+a(16) = 4855796336975584  (digit index 171880710)\
+a(18) = 700015327723510007  (digit index 517694393)\
+a(19) = 5851405951595041585  (digit index 559015192)\
+a(20) = 74054579700797545047  (digit index 824827923)\
+a(21) = 483737413000314737384  (digit index 14024981821)\
+a(23) = 36336834991019943863363  (digit index 76493992134)\
+a(25) = 7956862182723272812686597  (digit index 83804102851)\
+a(22) = 9719452352662532549179  (digit index 451919578225)\
+a(24) = 986834759630036957438689  (digit index 519646741280)\
+a(27) = 324887509575454575905788423  (digit index 5518550463785)\
+a(29) = 93281764007618981670046718239  (digit index 6255843181997)\
+done: scanned 10300000000000 digits, 27 of 64 lengths found\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+sudo\cf3  apt install libgmp-dev\
+\
+\
+*** MATCH: 73012066376764835227425 is an 18-digit palindrome in bases 20 and 22\
+done: 1290.35s, 705590374481 candidates tested\
+a(18) = 73012066376764835227425   (palindromic with 18 digits in bases 20 and 22)\
+  base 20 : 5b830ba7227ab038b5\
+  base 22 : 1258i9fj77jf9i8521\
+\
+*** MATCH: 6411682614162861146 is an 19-digit palindrome in bases 10 and 11\
+done: 2.01s, 713209754 candidates tested\
+a(19) = 6411682614162861146   (palindromic with 19 digits in bases 10 and 11)\
+  base 10 : 6411682614162861146\
+  base 11 : 11759a6746476a95711\
+\
+jbs@buildtest:~$ ./a171740 -n 21\
+A171740 search: n=21, threads=10, limit=none\
+stage b2=10 vs b1=\{9\}: values [100000000000000000000, 109418989131512359209), 941898914 candidates\
+\
+*** MATCH: 104618510424015816401 is an 21-digit palindrome in bases 9 and 10\
+done: 2.00s, 462096803 candidates tested\
+a(21) = 104618510424015816401   (palindromic with 21 digits in bases 9 and 10)\
+  base 9  : 854013340414043310458\
+  base 10 : 104618510424015816401\
+\
+\
+\
+\
+}

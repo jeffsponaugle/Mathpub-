@@ -1,0 +1,16 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=50 vs b1={19}: values [125000, 130321), 3 candidates (generic path)
+stage b2=51 vs b1={20}: values [132651, 160000), 11 candidates (generic path)
+stage b2=52 vs b1={21}: values [140608, 194481), 20 candidates (generic path)
+stage b2=53 vs b1={22}: values [148877, 234256), 31 candidates (generic path)
+stage b2=54 vs b1={23}: values [157464, 279841), 42 candidates (generic path)
+stage b2=55 vs b1={24}: values [166375, 331776), 55 candidates (generic path)
+stage b2=56 vs b1={25}: values [175616, 390625), 69 candidates (generic path)
+stage b2=57 vs b1={26}: values [185193, 456976), 84 candidates (generic path)
+stage b2=58 vs b1={27}: values [195112, 531441), 100 candidates (generic path)
+stage b2=59 vs b1={28}: values [205379, 614656), 118 candidates (generic path)
+stage b2=60 vs b1={29}: values [216000, 707281), 137 candidates (generic path)
+stage b2=61 vs b1={30}: values [226981, 810000), 157 candidates (generic path)
+
+*** MATCH: 238328 is an 4-digit palindrome in bases 30 and 61
+done: 0.00s, 824 candidates tested

@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=63 vs b1={28}: values [15752961, 17210368), 368 candidates (generic path)
+stage b2=64 vs b1={29}: values [16777216, 20511149), 912 candidates (generic path)
+
+*** MATCH: 17064001 is an 5-digit palindrome in bases 29 and 64
+done: 0.00s, 1280 candidates tested

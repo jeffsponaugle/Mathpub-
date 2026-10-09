@@ -1,0 +1,7 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=164 vs b1={46}: values [4410944, 4477456), 3 candidates (generic path)
+stage b2=165 vs b1={47}: values [4492125, 4879681), 15 candidates (generic path)
+stage b2=166 vs b1={48}: values [4574296, 5308416), 27 candidates (generic path)
+
+*** MATCH: 4574297 is an 4-digit palindrome in bases 48 and 166
+done: 0.00s, 45 candidates tested

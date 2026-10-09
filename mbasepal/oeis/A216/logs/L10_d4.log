@@ -1,0 +1,20 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=17 vs b1={13}: values [118587876497, 137858491849), 13573 candidates (MITM path)
+  MITM b1=13: s=3 t=2 j=2 je=3 Q=169 table=289 yh=47
+stage b2=18 vs b1={14}: values [198359290368, 289254654976), 48104 candidates (MITM path)
+  MITM b1=14: s=3 t=2 j=2 je=3 Q=196 table=324 yh=149
+stage b2=19 vs b1={15}: values [322687697779, 576650390625), 102566 candidates (MITM path)
+  MITM b1=15: s=3 t=2 j=2 je=3 Q=225 table=361 yh=285
+stage b2=20 vs b1={16}: values [512000000000, 1099511627776), 183598 candidates (MITM path)
+  MITM b1=16: s=3 t=2 j=2 je=3 Q=256 table=400 yh=459
+stage b2=21 vs b1={17}: values [794280046581, 2015993900449), 299139 candidates (MITM path)
+  MITM b1=17: s=3 t=2 j=2 je=3 Q=289 table=441 yh=679
+stage b2=22 vs b1={18}: values [1207269217792, 3570467226624), 458551 candidates (MITM path)
+  MITM b1=18: s=3 t=2 j=2 je=3 Q=324 table=484 yh=948
+stage b2=23 vs b1={19}: values [1801152661463, 6131066257801), 672729 candidates (MITM path)
+  MITM b1=19: s=3 t=2 j=2 je=3 Q=361 table=529 yh=1272
+
+*** MATCH: 3240922809120 is an 10-digit palindrome in bases 19 and 23
+stage b2=24 vs b1={20}: values [2641807540224, 10240000000000), 954233 candidates (MITM path)
+  MITM b1=20: s=3 t=2 j=2 je=3 Q=400 table=576 yh=1657
+done: 0.00s, 3121 candidates tested

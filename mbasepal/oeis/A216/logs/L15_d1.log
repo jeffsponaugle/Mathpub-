@@ -1,0 +1,6 @@
+A171740 search: n=15, threads=1, limit=none
+stage b2=8 vs b1={7}: values [4398046511104, 4747561509943), 166662 candidates (MITM path)
+  MITM b1=7: s=5 t=3 j=3 je=5 Q=343 table=512 yh=326
+
+*** MATCH: 4712469842177 is an 15-digit palindrome in bases 7 and 8
+done: 0.00s, 293 candidates tested

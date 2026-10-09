@@ -1,0 +1,26 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=149 vs b1={65}: values [73439775749, 75418890625), 599 candidates (even-AP path)
+stage b2=150 vs b1={66}: values [75937500000, 82653950016), 1991 candidates (even-AP path)
+stage b2=151 vs b1={67}: values [78502725751, 90458382169), 3473 candidates (even-AP path)
+stage b2=152 vs b1={68}: values [81136812032, 98867482624), 5049 candidates (even-AP path)
+stage b2=153 vs b1={69}: values [83841135993, 107918163081), 6723 candidates (even-AP path)
+stage b2=154 vs b1={70}: values [86617093024, 117649000000), 8497 candidates (even-AP path)
+stage b2=155 vs b1={71}: values [89466096875, 128100283921), 10375 candidates (even-AP path)
+stage b2=156 vs b1={72}: values [92389579776, 139314069504), 12361 candidates (even-AP path)
+stage b2=157 vs b1={73}: values [95388992557, 151334226289), 14457 candidates (even-AP path)
+stage b2=158 vs b1={74}: values [98465804768, 164206490176), 16668 candidates (even-AP path)
+stage b2=159 vs b1={75}: values [101621504799, 177978515625), 18996 candidates (even-AP path)
+stage b2=160 vs b1={76}: values [104857600000, 192699928576), 21446 candidates (even-AP path)
+stage b2=161 vs b1={77}: values [108175616801, 208422380089), 24022 candidates (even-AP path)
+stage b2=162 vs b1={78}: values [111577100832, 225199600704), 26726 candidates (even-AP path)
+stage b2=163 vs b1={79}: values [115063617043, 243087455521), 29562 candidates (even-AP path)
+
+*** MATCH: 224898267600 is an 6-digit palindrome in bases 79 and 163
+stage b2=164 vs b1={80}: values [118636749824, 262144000000), 32535 candidates (even-AP path)
+stage b2=165 vs b1={81}: values [122298103125, 282429536481), 35648 candidates (even-AP path)
+stage b2=166 vs b1={82}: values [126049300576, 304006671424), 38904 candidates (even-AP path)
+stage b2=167 vs b1={83}: values [129891985607, 326940373369), 42309 candidates (even-AP path)
+
+*** MATCH: 134221391136 is an 6-digit palindrome in bases 83 and 167
+stage b2=168 vs b1={84}: values [133827821568, 351298031616), 45865 candidates (even-AP path)
+done: 0.00s, 266770 candidates tested

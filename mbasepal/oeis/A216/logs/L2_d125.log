@@ -1,0 +1,17 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=137 vs b1={12}: values [137, 144), 1 candidates (generic path)
+stage b2=138 vs b1={13}: values [138, 169), 1 candidates (generic path)
+stage b2=139 vs b1={14}: values [139, 196), 1 candidates (generic path)
+stage b2=140 vs b1={15}: values [140, 225), 1 candidates (generic path)
+stage b2=141 vs b1={16}: values [141, 256), 1 candidates (generic path)
+stage b2=142 vs b1={17}: values [142, 289), 2 candidates (generic path)
+stage b2=143 vs b1={18}: values [143, 324), 2 candidates (generic path)
+stage b2=144 vs b1={19}: values [144, 361), 2 candidates (generic path)
+stage b2=145 vs b1={20}: values [145, 400), 2 candidates (generic path)
+stage b2=146 vs b1={21}: values [146, 441), 3 candidates (generic path)
+stage b2=147 vs b1={22}: values [147, 484), 3 candidates (generic path)
+stage b2=148 vs b1={23}: values [148, 529), 3 candidates (generic path)
+stage b2=149 vs b1={24}: values [149, 576), 3 candidates (generic path)
+
+*** MATCH: 150 is an 2-digit palindrome in bases 24 and 149
+done: 0.00s, 24 candidates tested

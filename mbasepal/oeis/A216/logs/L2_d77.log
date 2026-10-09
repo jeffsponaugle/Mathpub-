@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=87 vs b1={10}: values [87, 100), 1 candidates (generic path)
+
+*** MATCH: 88 is an 2-digit palindrome in bases 10 and 87
+done: 0.00s, 1 candidates tested

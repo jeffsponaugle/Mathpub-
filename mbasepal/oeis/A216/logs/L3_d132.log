@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=162 vs b1={30}: values [26244, 27000), 5 candidates (generic path)
+stage b2=163 vs b1={31}: values [26569, 29791), 20 candidates (generic path)
+
+*** MATCH: 27711 is an 3-digit palindrome in bases 31 and 163
+stage b2=164 vs b1={32}: values [26896, 32768), 36 candidates (generic path)
+stage b2=165 vs b1={33}: values [27225, 35937), 53 candidates (generic path)
+stage b2=166 vs b1={34}: values [27556, 39304), 71 candidates (generic path)
+done: 0.00s, 34 candidates tested

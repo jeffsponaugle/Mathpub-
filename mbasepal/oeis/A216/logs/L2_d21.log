@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=27 vs b1={6}: values [27, 36), 1 candidates (generic path)
+
+*** MATCH: 28 is an 2-digit palindrome in bases 6 and 27
+done: 0.00s, 1 candidates tested

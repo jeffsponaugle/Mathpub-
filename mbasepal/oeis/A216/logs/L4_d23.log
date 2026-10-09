@@ -1,0 +1,8 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=39 vs b1={16}: values [59319, 65536), 5 candidates (generic path)
+stage b2=40 vs b1={17}: values [64000, 83521), 13 candidates (generic path)
+stage b2=41 vs b1={18}: values [68921, 104976), 22 candidates (generic path)
+
+*** MATCH: 75810 is an 4-digit palindrome in bases 18 and 41
+stage b2=42 vs b1={19}: values [74088, 130321), 32 candidates (generic path)
+done: 0.00s, 38 candidates tested

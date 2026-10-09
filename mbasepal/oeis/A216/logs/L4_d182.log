@@ -1,0 +1,35 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=244 vs b1={62}: values [14526784, 14776336), 5 candidates (generic path)
+stage b2=245 vs b1={63}: values [14706125, 15752961), 18 candidates (generic path)
+stage b2=246 vs b1={64}: values [14886936, 16777216), 32 candidates (generic path)
+stage b2=247 vs b1={65}: values [15069223, 17850625), 46 candidates (generic path)
+stage b2=248 vs b1={66}: values [15252992, 18974736), 61 candidates (generic path)
+stage b2=249 vs b1={67}: values [15438249, 20151121), 77 candidates (generic path)
+stage b2=250 vs b1={68}: values [15625000, 21381376), 93 candidates (generic path)
+stage b2=251 vs b1={69}: values [15813251, 22667121), 109 candidates (generic path)
+
+*** MATCH: 21758940 is an 4-digit palindrome in bases 69 and 251
+stage b2=252 vs b1={70}: values [16003008, 24010000), 127 candidates (generic path)
+stage b2=253 vs b1={71}: values [16194277, 25411681), 145 candidates (generic path)
+stage b2=254 vs b1={72}: values [16387064, 26873856), 163 candidates (generic path)
+stage b2=255 vs b1={73}: values [16581375, 28398241), 182 candidates (generic path)
+stage b2=256 vs b1={74}: values [16777216, 29986576), 202 candidates (generic path)
+stage b2=257 vs b1={75}: values [16974593, 31640625), 223 candidates (generic path)
+stage b2=258 vs b1={76}: values [17173512, 33362176), 244 candidates (generic path)
+stage b2=259 vs b1={77}: values [17373979, 35153041), 266 candidates (generic path)
+stage b2=260 vs b1={78}: values [17576000, 37015056), 288 candidates (generic path)
+stage b2=261 vs b1={79}: values [17779581, 38950081), 311 candidates (generic path)
+stage b2=262 vs b1={80}: values [17984728, 40960000), 335 candidates (generic path)
+stage b2=263 vs b1={81}: values [18191447, 43046721), 360 candidates (generic path)
+stage b2=264 vs b1={82}: values [18399744, 45212176), 385 candidates (generic path)
+stage b2=265 vs b1={83}: values [18609625, 47458321), 411 candidates (generic path)
+stage b2=266 vs b1={84}: values [18821096, 49787136), 438 candidates (generic path)
+stage b2=267 vs b1={85}: values [19034163, 52200625), 466 candidates (generic path)
+stage b2=268 vs b1={86}: values [19248832, 54700816), 494 candidates (generic path)
+stage b2=269 vs b1={87}: values [19465109, 57289761), 523 candidates (generic path)
+stage b2=270 vs b1={88}: values [19683000, 59969536), 553 candidates (generic path)
+stage b2=271 vs b1={89}: values [19902511, 62742241), 584 candidates (generic path)
+stage b2=272 vs b1={90}: values [20123648, 65610000), 615 candidates (generic path)
+
+*** MATCH: 20346417 is an 4-digit palindrome in bases 90 and 272
+done: 0.00s, 1612 candidates tested

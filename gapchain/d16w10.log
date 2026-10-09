@@ -1,0 +1,12 @@
+2026-09-26 18:24:17  started (pid 96697): ./gapsieve -l 17 -s 59937403886031994880 -e 60500000000000000000 --first --gaps dec -c d16w10.ck -r --log d16w10.log -q --gpu
+2026-09-26 18:24:17  consecutive primes, decreasing gaps, chain length >= 17, range 59937403886031994880..60500000000000000000, GPU (Apple M4 Max) plus 12 CPU threads, first match only
+2026-09-26 18:24:17  (sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+2026-09-26 18:25:17  13.57%  eta 00:06:23  no hit yet  1.27P/s  at 6.00138e+19  elapsed 00:01:00
+2026-09-26 18:26:17  27.23%  eta 00:05:21  no hit yet  1.27P/s  at 6.00906e+19  elapsed 00:02:00
+2026-09-26 18:27:17  40.92%  eta 00:04:20  no hit yet  1.27P/s  at 6.01676e+19  elapsed 00:03:00
+2026-09-26 18:28:17  54.50%  eta 00:03:20  no hit yet  1.27P/s  at 6.0244e+19  elapsed 00:04:00
+2026-09-26 18:29:17  68.18%  eta 00:02:20  no hit yet  1.28P/s  at 6.0321e+19  elapsed 00:05:00
+2026-09-26 18:30:18  81.88%  eta 00:01:19  no hit yet  1.28P/s  at 6.0398e+19  elapsed 00:06:01
+2026-09-26 18:31:18  95.57%  eta 00:00:19  no hit yet  1.28P/s  at 6.04751e+19  elapsed 00:07:01
+2026-09-26 18:31:37  no decreasing-gap chain (A263049) of length 17 in 59937403886031994880..60500000000000000000, 00:07:20 elapsed
+2026-09-26 18:31:37  exit 0

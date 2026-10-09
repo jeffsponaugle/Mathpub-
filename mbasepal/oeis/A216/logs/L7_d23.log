@@ -1,0 +1,5 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=54 vs b1={31}: values [24794911296, 27512614111), 17260 candidates (generic path)
+
+*** MATCH: 25763014657 is an 7-digit palindrome in bases 31 and 54
+done: 0.00s, 17259 candidates tested

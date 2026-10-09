@@ -1,0 +1,18 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=122 vs b1={55}: values [27027081632, 27680640625), 360 candidates (even-AP path)
+stage b2=123 vs b1={56}: values [28153056843, 30840979456), 1445 candidates (even-AP path)
+stage b2=124 vs b1={57}: values [29316250624, 34296447249), 2613 candidates (even-AP path)
+stage b2=125 vs b1={58}: values [30517578125, 38068692544), 3867 candidates (even-AP path)
+stage b2=126 vs b1={59}: values [31757969376, 42180533641), 5211 candidates (even-AP path)
+stage b2=127 vs b1={60}: values [33038369407, 46656000000), 6648 candidates (even-AP path)
+stage b2=128 vs b1={61}: values [34359738368, 51520374361), 8183 candidates (even-AP path)
+stage b2=129 vs b1={62}: values [35723051649, 56800235584), 9819 candidates (even-AP path)
+stage b2=130 vs b1={63}: values [37129300000, 62523502209), 11559 candidates (even-AP path)
+stage b2=131 vs b1={64}: values [38579489651, 68719476736), 13407 candidates (even-AP path)
+stage b2=132 vs b1={65}: values [40074642432, 75418890625), 15368 candidates (even-AP path)
+stage b2=133 vs b1={66}: values [41615795893, 82653950016), 17444 candidates (even-AP path)
+
+*** MATCH: 46003518828 is an 6-digit palindrome in bases 66 and 133
+stage b2=134 vs b1={67}: values [43204003424, 90458382169), 19640 candidates (even-AP path)
+stage b2=135 vs b1={68}: values [44840334375, 98867482624), 21959 candidates (even-AP path)
+done: 0.00s, 82221 candidates tested

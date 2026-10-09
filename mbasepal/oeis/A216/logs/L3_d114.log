@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=142 vs b1={28}: values [20164, 21952), 13 candidates (generic path)
+
+*** MATCH: 21727 is an 3-digit palindrome in bases 28 and 142
+stage b2=143 vs b1={29}: values [20449, 24389), 28 candidates (generic path)
+stage b2=144 vs b1={30}: values [20736, 27000), 44 candidates (generic path)
+stage b2=145 vs b1={31}: values [21025, 29791), 61 candidates (generic path)
+stage b2=146 vs b1={32}: values [21316, 32768), 79 candidates (generic path)
+stage b2=147 vs b1={33}: values [21609, 35937), 98 candidates (generic path)
+done: 0.00s, 38 candidates tested

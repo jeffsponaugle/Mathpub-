@@ -1,0 +1,18 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=266 vs b1={66}: values [18821096, 18974736), 3 candidates (generic path)
+stage b2=267 vs b1={67}: values [19034163, 20151121), 16 candidates (generic path)
+stage b2=268 vs b1={68}: values [19248832, 21381376), 30 candidates (generic path)
+stage b2=269 vs b1={69}: values [19465109, 22667121), 45 candidates (generic path)
+stage b2=270 vs b1={70}: values [19683000, 24010000), 60 candidates (generic path)
+stage b2=271 vs b1={71}: values [19902511, 25411681), 76 candidates (generic path)
+stage b2=272 vs b1={72}: values [20123648, 26873856), 92 candidates (generic path)
+stage b2=273 vs b1={73}: values [20346417, 28398241), 109 candidates (generic path)
+stage b2=274 vs b1={74}: values [20570824, 29986576), 126 candidates (generic path)
+stage b2=275 vs b1={75}: values [20796875, 31640625), 144 candidates (generic path)
+
+*** MATCH: 21783576 is an 4-digit palindrome in bases 75 and 275
+stage b2=276 vs b1={76}: values [21024576, 33362176), 162 candidates (generic path)
+stage b2=277 vs b1={77}: values [21253933, 35153041), 182 candidates (generic path)
+stage b2=278 vs b1={78}: values [21484952, 37015056), 201 candidates (generic path)
+stage b2=279 vs b1={79}: values [21717639, 38950081), 222 candidates (generic path)
+done: 0.00s, 718 candidates tested

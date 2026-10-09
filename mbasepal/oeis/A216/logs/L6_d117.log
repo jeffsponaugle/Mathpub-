@@ -1,0 +1,12 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=200 vs b1={83}: values [320000000000, 326940373369), 868 candidates (even-AP path)
+stage b2=201 vs b1={84}: values [328080401001, 351298031616), 2860 candidates (even-AP path)
+stage b2=202 vs b1={85}: values [336323216032, 377149515625), 4954 candidates (even-AP path)
+stage b2=203 vs b1={86}: values [344730881243, 404567235136), 7153 candidates (even-AP path)
+stage b2=204 vs b1={87}: values [353305857024, 433626201009), 9461 candidates (even-AP path)
+stage b2=205 vs b1={88}: values [362050628125, 464404086784), 11881 candidates (even-AP path)
+stage b2=206 vs b1={89}: values [370967703776, 496981290961), 14416 candidates (even-AP path)
+stage b2=207 vs b1={90}: values [380059617807, 531441000000), 17068 candidates (even-AP path)
+
+*** MATCH: 383713823584 is an 6-digit palindrome in bases 90 and 207
+done: 0.00s, 52007 candidates tested

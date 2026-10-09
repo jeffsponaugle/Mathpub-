@@ -1,0 +1,5 @@
+n=6 (split 14, order 2): 8 ranges, 117756 work units
+a(6) = 11263684837
+  compact solutions, not reduced for symmetry: 90107368610
+  compact starting positions, reduced: 11262875246 (1621441 solutions share a puzzle with another)
+  canonical covers checked: 11297471910, compute time 0.1 h

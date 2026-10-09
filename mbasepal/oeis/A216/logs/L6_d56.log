@@ -1,0 +1,13 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=104 vs b1={48}: values [12166529024, 12230590464), 57 candidates (even-AP path)
+stage b2=105 vs b1={49}: values [12762815625, 13841287201), 932 candidates (even-AP path)
+stage b2=106 vs b1={50}: values [13382255776, 15625000000), 1884 candidates (even-AP path)
+stage b2=107 vs b1={51}: values [14025517307, 17596287801), 2915 candidates (even-AP path)
+stage b2=108 vs b1={52}: values [14693280768, 19770609664), 4031 candidates (even-AP path)
+stage b2=109 vs b1={53}: values [15386239549, 22164361129), 5234 candidates (even-AP path)
+stage b2=110 vs b1={54}: values [16105100000, 24794911296), 6529 candidates (even-AP path)
+stage b2=111 vs b1={55}: values [16850581551, 27680640625), 7919 candidates (even-AP path)
+
+*** MATCH: 17739332800 is an 6-digit palindrome in bases 55 and 111
+stage b2=112 vs b1={56}: values [17623416832, 30840979456), 9409 candidates (even-AP path)
+done: 0.00s, 22360 candidates tested

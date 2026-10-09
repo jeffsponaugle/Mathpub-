@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=118 vs b1={46}: values [193877776, 205962976), 868 candidates (generic path)
+stage b2=119 vs b1={47}: values [200533921, 229345007), 2035 candidates (generic path)
+stage b2=120 vs b1={48}: values [207360000, 254803968), 3295 candidates (generic path)
+stage b2=121 vs b1={49}: values [214358881, 282475249), 4653 candidates (generic path)
+
+*** MATCH: 218824629 is an 5-digit palindrome in bases 49 and 121
+done: 0.00s, 10851 candidates tested

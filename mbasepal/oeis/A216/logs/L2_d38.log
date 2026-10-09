@@ -1,0 +1,16 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=45 vs b1={7}: values [45, 49), 1 candidates (generic path)
+stage b2=46 vs b1={8}: values [46, 64), 1 candidates (generic path)
+stage b2=47 vs b1={9}: values [47, 81), 1 candidates (generic path)
+stage b2=48 vs b1={10}: values [48, 100), 2 candidates (generic path)
+stage b2=49 vs b1={11}: values [49, 121), 2 candidates (generic path)
+stage b2=50 vs b1={12}: values [50, 144), 2 candidates (generic path)
+stage b2=51 vs b1={13}: values [51, 169), 3 candidates (generic path)
+stage b2=52 vs b1={14}: values [52, 196), 3 candidates (generic path)
+stage b2=53 vs b1={15}: values [53, 225), 4 candidates (generic path)
+stage b2=54 vs b1={16}: values [54, 256), 4 candidates (generic path)
+stage b2=55 vs b1={17}: values [55, 289), 5 candidates (generic path)
+stage b2=56 vs b1={18}: values [56, 324), 5 candidates (generic path)
+
+*** MATCH: 57 is an 2-digit palindrome in bases 18 and 56
+done: 0.01s, 33 candidates tested

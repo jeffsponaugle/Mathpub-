@@ -1,0 +1,30 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=210 vs b1={15}: values [210, 225), 1 candidates (generic path)
+stage b2=211 vs b1={16}: values [211, 256), 1 candidates (generic path)
+stage b2=212 vs b1={17}: values [212, 289), 1 candidates (generic path)
+stage b2=213 vs b1={18}: values [213, 324), 1 candidates (generic path)
+stage b2=214 vs b1={19}: values [214, 361), 1 candidates (generic path)
+stage b2=215 vs b1={20}: values [215, 400), 1 candidates (generic path)
+stage b2=216 vs b1={21}: values [216, 441), 2 candidates (generic path)
+stage b2=217 vs b1={22}: values [217, 484), 2 candidates (generic path)
+stage b2=218 vs b1={23}: values [218, 529), 2 candidates (generic path)
+stage b2=219 vs b1={24}: values [219, 576), 2 candidates (generic path)
+stage b2=220 vs b1={25}: values [220, 625), 2 candidates (generic path)
+
+*** MATCH: 442 is an 2-digit palindrome in bases 25 and 220
+stage b2=221 vs b1={26}: values [221, 676), 3 candidates (generic path)
+stage b2=222 vs b1={27}: values [222, 729), 3 candidates (generic path)
+stage b2=223 vs b1={28}: values [223, 784), 3 candidates (generic path)
+stage b2=224 vs b1={29}: values [224, 841), 3 candidates (generic path)
+stage b2=225 vs b1={30}: values [225, 900), 4 candidates (generic path)
+stage b2=226 vs b1={31}: values [226, 961), 4 candidates (generic path)
+stage b2=227 vs b1={32}: values [227, 1024), 4 candidates (generic path)
+stage b2=228 vs b1={33}: values [228, 1089), 4 candidates (generic path)
+stage b2=229 vs b1={34}: values [229, 1156), 5 candidates (generic path)
+stage b2=230 vs b1={35}: values [230, 1225), 5 candidates (generic path)
+stage b2=231 vs b1={36}: values [231, 1296), 5 candidates (generic path)
+stage b2=232 vs b1={37}: values [232, 1369), 5 candidates (generic path)
+stage b2=233 vs b1={38}: values [233, 1444), 6 candidates (generic path)
+
+*** MATCH: 234 is an 2-digit palindrome in bases 38 and 233
+done: 0.00s, 29 candidates tested

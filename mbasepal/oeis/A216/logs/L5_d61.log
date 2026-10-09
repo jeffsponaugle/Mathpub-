@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=102 vs b1={41}: values [108243216, 115856201), 732 candidates (generic path)
+stage b2=103 vs b1={42}: values [112550881, 130691232), 1710 candidates (generic path)
+
+*** MATCH: 117081337 is an 5-digit palindrome in bases 42 and 103
+stage b2=104 vs b1={43}: values [116985856, 147008443), 2776 candidates (generic path)
+done: 0.00s, 2451 candidates tested

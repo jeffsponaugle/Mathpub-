@@ -1,0 +1,26 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=154 vs b1={44}: values [3652264, 3748096), 5 candidates (generic path)
+stage b2=155 vs b1={45}: values [3723875, 4100625), 16 candidates (generic path)
+stage b2=156 vs b1={46}: values [3796416, 4477456), 28 candidates (generic path)
+stage b2=157 vs b1={47}: values [3869893, 4879681), 41 candidates (generic path)
+stage b2=158 vs b1={48}: values [3944312, 5308416), 55 candidates (generic path)
+stage b2=159 vs b1={49}: values [4019679, 5764801), 70 candidates (generic path)
+
+*** MATCH: 5495200 is an 4-digit palindrome in bases 49 and 159
+stage b2=160 vs b1={50}: values [4096000, 6250000), 85 candidates (generic path)
+stage b2=161 vs b1={51}: values [4173281, 6765201), 100 candidates (generic path)
+stage b2=162 vs b1={52}: values [4251528, 7311616), 117 candidates (generic path)
+stage b2=163 vs b1={53}: values [4330747, 7890481), 134 candidates (generic path)
+stage b2=164 vs b1={54}: values [4410944, 8503056), 153 candidates (generic path)
+
+*** MATCH: 5249805 is an 4-digit palindrome in bases 54 and 164
+stage b2=165 vs b1={55}: values [4492125, 9150625), 172 candidates (generic path)
+stage b2=166 vs b1={56}: values [4574296, 9834496), 191 candidates (generic path)
+stage b2=167 vs b1={57}: values [4657463, 10556001), 212 candidates (generic path)
+stage b2=168 vs b1={58}: values [4741632, 11316496), 233 candidates (generic path)
+stage b2=169 vs b1={59}: values [4826809, 12117361), 256 candidates (generic path)
+stage b2=170 vs b1={60}: values [4913000, 12960000), 279 candidates (generic path)
+stage b2=171 vs b1={61}: values [5000211, 13845841), 303 candidates (generic path)
+stage b2=172 vs b1={62}: values [5088448, 14776336), 328 candidates (generic path)
+stage b2=173 vs b1={63}: values [5177717, 15752961), 354 candidates (generic path)
+done: 0.00s, 591 candidates tested

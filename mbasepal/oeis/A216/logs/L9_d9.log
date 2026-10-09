@@ -1,0 +1,12 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=29 vs b1={20}: values [500246412961, 512000000000), 16618 candidates (MITM path)
+  MITM b1=20: s=3 t=2 j=2 je=2 Q=400 table=841 yh=20
+stage b2=30 vs b1={21}: values [656100000000, 794280046581), 170593 candidates (MITM path)
+  MITM b1=21: s=3 t=2 j=2 je=3 Q=441 table=900 yh=190
+stage b2=31 vs b1={22}: values [852891037441, 1207269217792), 383726 candidates (MITM path)
+  MITM b1=22: s=3 t=2 j=2 je=3 Q=484 table=961 yh=400
+
+*** MATCH: 1141282588378 is an 9-digit palindrome in bases 22 and 31
+stage b2=32 vs b1={23}: values [1099511627776, 1801152661463), 669138 candidates (MITM path)
+  MITM b1=23: s=3 t=2 j=2 je=3 Q=529 table=1024 yh=654
+done: 0.00s, 574 candidates tested

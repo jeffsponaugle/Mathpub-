@@ -1,0 +1,22 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=69 vs b1={24}: values [328509, 331776), 1 candidates (generic path)
+stage b2=70 vs b1={25}: values [343000, 390625), 10 candidates (generic path)
+stage b2=71 vs b1={26}: values [357911, 456976), 20 candidates (generic path)
+stage b2=72 vs b1={27}: values [373248, 531441), 31 candidates (generic path)
+stage b2=73 vs b1={28}: values [389017, 614656), 43 candidates (generic path)
+stage b2=74 vs b1={29}: values [405224, 707281), 56 candidates (generic path)
+stage b2=75 vs b1={30}: values [421875, 810000), 70 candidates (generic path)
+stage b2=76 vs b1={31}: values [438976, 923521), 84 candidates (generic path)
+stage b2=77 vs b1={32}: values [456533, 1048576), 100 candidates (generic path)
+stage b2=78 vs b1={33}: values [474552, 1185921), 117 candidates (generic path)
+stage b2=79 vs b1={34}: values [493039, 1336336), 136 candidates (generic path)
+
+*** MATCH: 638400 is an 4-digit palindrome in bases 34 and 79
+stage b2=80 vs b1={35}: values [512000, 1500625), 155 candidates (generic path)
+stage b2=81 vs b1={36}: values [531441, 1679616), 176 candidates (generic path)
+stage b2=82 vs b1={37}: values [551368, 1874161), 197 candidates (generic path)
+stage b2=83 vs b1={38}: values [571787, 2085136), 220 candidates (generic path)
+stage b2=84 vs b1={39}: values [592704, 2313441), 244 candidates (generic path)
+stage b2=85 vs b1={40}: values [614125, 2560000), 270 candidates (generic path)
+stage b2=86 vs b1={41}: values [636056, 2825761), 297 candidates (generic path)
+done: 0.00s, 736 candidates tested

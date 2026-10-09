@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=187 vs b1={33}: values [34969, 35937), 6 candidates (generic path)
+stage b2=188 vs b1={34}: values [35344, 39304), 22 candidates (generic path)
+stage b2=189 vs b1={35}: values [35721, 42875), 38 candidates (generic path)
+
+*** MATCH: 36289 is an 3-digit palindrome in bases 35 and 189
+stage b2=190 vs b1={36}: values [36100, 46656), 56 candidates (generic path)
+done: 0.00s, 67 candidates tested

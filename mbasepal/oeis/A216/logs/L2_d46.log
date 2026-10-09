@@ -1,0 +1,19 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=54 vs b1={8}: values [54, 64), 1 candidates (generic path)
+stage b2=55 vs b1={9}: values [55, 81), 1 candidates (generic path)
+stage b2=56 vs b1={10}: values [56, 100), 1 candidates (generic path)
+stage b2=57 vs b1={11}: values [57, 121), 2 candidates (generic path)
+stage b2=58 vs b1={12}: values [58, 144), 2 candidates (generic path)
+stage b2=59 vs b1={13}: values [59, 169), 2 candidates (generic path)
+stage b2=60 vs b1={14}: values [60, 196), 3 candidates (generic path)
+stage b2=61 vs b1={15}: values [61, 225), 3 candidates (generic path)
+stage b2=62 vs b1={16}: values [62, 256), 4 candidates (generic path)
+stage b2=63 vs b1={17}: values [63, 289), 4 candidates (generic path)
+stage b2=64 vs b1={18}: values [64, 324), 5 candidates (generic path)
+stage b2=65 vs b1={19}: values [65, 361), 5 candidates (generic path)
+stage b2=66 vs b1={20}: values [66, 400), 6 candidates (generic path)
+stage b2=67 vs b1={21}: values [67, 441), 6 candidates (generic path)
+stage b2=68 vs b1={22}: values [68, 484), 7 candidates (generic path)
+
+*** MATCH: 69 is an 2-digit palindrome in bases 22 and 68
+done: 0.00s, 50 candidates tested

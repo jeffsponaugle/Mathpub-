@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=154 vs b1={29}: values [23716, 24389), 5 candidates (generic path)
+stage b2=155 vs b1={30}: values [24025, 27000), 20 candidates (generic path)
+
+*** MATCH: 24026 is an 3-digit palindrome in bases 30 and 155
+done: 0.00s, 25 candidates tested

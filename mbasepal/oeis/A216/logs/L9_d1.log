@@ -1,0 +1,10 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=6 vs b1={5}: values [1679616, 1953125), 212 candidates (MITM path)
+  MITM b1=5: s=3 t=2 j=2 je=3 Q=25 table=36 yh=6
+stage b2=7 vs b1={6}: values [5764801, 10077696), 1797 candidates (MITM path)
+  MITM b1=6: s=3 t=2 j=2 je=3 Q=36 table=49 yh=37
+stage b2=8 vs b1={7}: values [16777216, 40353607), 5756 candidates (MITM path)
+  MITM b1=7: s=3 t=2 j=2 je=3 Q=49 table=64 yh=90
+
+*** MATCH: 27924649 is an 9-digit palindrome in bases 7 and 8
+done: 0.00s, 86 candidates tested

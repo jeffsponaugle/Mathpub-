@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=8 vs b1={3}: values [8, 9), 1 candidates (generic path)
+stage b2=9 vs b1={4}: values [9, 16), 1 candidates (generic path)
+
+*** MATCH: 10 is an 2-digit palindrome in bases 4 and 9
+done: 0.00s, 1 candidates tested

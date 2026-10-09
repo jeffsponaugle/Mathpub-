@@ -1,0 +1,11 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=27 vs b1={16}: values [14348907, 16777216), 124 candidates (even-AP path)
+stage b2=28 vs b1={17}: values [17210368, 24137569), 316 candidates (even-AP path)
+stage b2=29 vs b1={18}: values [20511149, 34012224), 554 candidates (even-AP path)
+stage b2=30 vs b1={19}: values [24300000, 47045881), 843 candidates (even-AP path)
+stage b2=31 vs b1={20}: values [28629151, 64000000), 1188 candidates (even-AP path)
+
+*** MATCH: 39957792 is an 6-digit palindrome in bases 20 and 31
+stage b2=32 vs b1={21}: values [33554432, 85766121), 1594 candidates (even-AP path)
+stage b2=33 vs b1={22}: values [39135393, 113379904), 2066 candidates (even-AP path)
+done: 0.00s, 2497 candidates tested

@@ -1,0 +1,14 @@
+huge pages: 614400 of 614400 MB
+build: 7de4dcb9ad85 g++ 13 x86_64
+fen: rn1qk1nr/pppppppp/8/8/8/8/PPPPPPPP/RN1QK1NR w KQkq - 0 1
+threads: 96  table: 614400 MB  seed: 1  ttmin: 2
+split ply 5: 904283 unique positions (6434922 paths), 1.7s
+  93169/904283 tasks (10.30%)  302s elapsed  ETA 2613s
+  177473/904283 tasks (19.63%)  602s elapsed  ETA 2458s
+  257327/904283 tasks (28.46%)  902s elapsed  ETA 2263s
+  348199/904283 tasks (38.51%)  1202s elapsed  ETA 1917s
+  458217/904283 tasks (50.67%)  1502s elapsed  ETA 1460s
+  584444/904283 tasks (64.63%)  1802s elapsed  ETA 985s
+  718339/904283 tasks (79.44%)  2102s elapsed  ETA 544s
+  864987/904283 tasks (95.65%)  2402s elapsed  ETA 109s
+perft(12) = 65331730056646121   (2468.64s, 2.65e+13 leaves/s)

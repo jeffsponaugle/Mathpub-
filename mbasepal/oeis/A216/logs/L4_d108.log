@@ -1,0 +1,12 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=152 vs b1={44}: values [3511808, 3748096), 11 candidates (generic path)
+stage b2=153 vs b1={45}: values [3581577, 4100625), 23 candidates (generic path)
+stage b2=154 vs b1={46}: values [3652264, 4477456), 35 candidates (generic path)
+stage b2=155 vs b1={47}: values [3723875, 4879681), 49 candidates (generic path)
+
+*** MATCH: 4473456 is an 4-digit palindrome in bases 47 and 155
+stage b2=156 vs b1={48}: values [3796416, 5308416), 63 candidates (generic path)
+stage b2=157 vs b1={49}: values [3869893, 5764801), 77 candidates (generic path)
+
+*** MATCH: 3894700 is an 4-digit palindrome in bases 49 and 157
+done: 0.00s, 170 candidates tested

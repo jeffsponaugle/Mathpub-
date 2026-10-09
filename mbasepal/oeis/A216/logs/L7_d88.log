@@ -1,0 +1,8 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=170 vs b1={82}: values [24137569000000, 24928547056768), 160997 candidates (generic path)
+stage b2=171 vs b1={83}: values [25002110044521, 27136050989627), 426771 candidates (generic path)
+stage b2=172 vs b1={84}: values [25892303048704, 29509034655744), 710774 candidates (generic path)
+
+*** MATCH: 27058731771701 is an 7-digit palindrome in bases 84 and 172
+stage b2=173 vs b1={85}: values [26808753332089, 32057708828125), 1013759 candidates (generic path)
+done: 0.03s, 898191 candidates tested

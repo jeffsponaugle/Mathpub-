@@ -1,0 +1,14 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=59 vs b1={30}: values [714924299, 729000000), 69 candidates (even-AP path)
+stage b2=60 vs b1={31}: values [777600000, 887503681), 509 candidates (even-AP path)
+stage b2=61 vs b1={32}: values [844596301, 1073741824), 1010 candidates (even-AP path)
+stage b2=62 vs b1={33}: values [916132832, 1291467969), 1575 candidates (even-AP path)
+stage b2=63 vs b1={34}: values [992436543, 1544804416), 2210 candidates (even-AP path)
+stage b2=64 vs b1={35}: values [1073741824, 1838265625), 2917 candidates (even-AP path)
+stage b2=65 vs b1={36}: values [1160290625, 2176782336), 3702 candidates (even-AP path)
+
+*** MATCH: 1473790956 is an 6-digit palindrome in bases 36 and 65
+stage b2=66 vs b1={37}: values [1252332576, 2565726409), 4569 candidates (even-AP path)
+stage b2=67 vs b1={38}: values [1350125107, 3010936384), 5522 candidates (even-AP path)
+stage b2=68 vs b1={39}: values [1453933568, 3518743761), 6567 candidates (even-AP path)
+done: 0.00s, 10789 candidates tested

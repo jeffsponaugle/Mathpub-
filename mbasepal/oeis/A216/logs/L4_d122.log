@@ -1,0 +1,20 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=169 vs b1={47}: values [4826809, 4879681), 2 candidates (generic path)
+stage b2=170 vs b1={48}: values [4913000, 5308416), 14 candidates (generic path)
+stage b2=171 vs b1={49}: values [5000211, 5764801), 27 candidates (generic path)
+stage b2=172 vs b1={50}: values [5088448, 6250000), 40 candidates (generic path)
+stage b2=173 vs b1={51}: values [5177717, 6765201), 54 candidates (generic path)
+stage b2=174 vs b1={52}: values [5268024, 7311616), 68 candidates (generic path)
+stage b2=175 vs b1={53}: values [5359375, 7890481), 83 candidates (generic path)
+stage b2=176 vs b1={54}: values [5451776, 8503056), 99 candidates (generic path)
+stage b2=177 vs b1={55}: values [5545233, 9150625), 116 candidates (generic path)
+
+*** MATCH: 6269872 is an 4-digit palindrome in bases 55 and 177
+stage b2=178 vs b1={56}: values [5639752, 9834496), 133 candidates (generic path)
+stage b2=179 vs b1={57}: values [5735339, 10556001), 151 candidates (generic path)
+stage b2=180 vs b1={58}: values [5832000, 11316496), 170 candidates (generic path)
+stage b2=181 vs b1={59}: values [5929741, 12117361), 189 candidates (generic path)
+stage b2=182 vs b1={60}: values [6028568, 12960000), 210 candidates (generic path)
+stage b2=183 vs b1={61}: values [6128487, 13845841), 231 candidates (generic path)
+stage b2=184 vs b1={62}: values [6229504, 14776336), 253 candidates (generic path)
+done: 0.00s, 576 candidates tested

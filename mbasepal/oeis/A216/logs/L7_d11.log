@@ -1,0 +1,10 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=29 vs b1={18}: values [594823321, 612220032), 714 candidates (generic path)
+stage b2=30 vs b1={19}: values [729000000, 893871739), 6107 candidates (generic path)
+stage b2=31 vs b1={20}: values [887503681, 1280000000), 13175 candidates (generic path)
+
+*** MATCH: 1279663199 is an 7-digit palindrome in bases 20 and 31
+stage b2=32 vs b1={21}: values [1073741824, 1801088541), 22197 candidates (generic path)
+
+*** MATCH: 1200809057 is an 7-digit palindrome in bases 21 and 32
+done: 0.00s, 26279 candidates tested

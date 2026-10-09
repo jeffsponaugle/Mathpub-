@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=7 vs b1={4}: values [49, 64), 3 candidates (generic path)
+stage b2=8 vs b1={5}: values [64, 125), 8 candidates (generic path)
+stage b2=9 vs b1={6}: values [81, 216), 16 candidates (generic path)
+
+*** MATCH: 154 is an 3-digit palindrome in bases 6 and 9
+stage b2=10 vs b1={7}: values [100, 343), 25 candidates (generic path)
+
+*** MATCH: 121 is an 3-digit palindrome in bases 7 and 10
+done: 0.00s, 31 candidates tested

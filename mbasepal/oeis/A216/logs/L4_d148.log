@@ -1,0 +1,20 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=202 vs b1={54}: values [8242408, 8503056), 7 candidates (generic path)
+stage b2=203 vs b1={55}: values [8365427, 9150625), 20 candidates (generic path)
+stage b2=204 vs b1={56}: values [8489664, 9834496), 33 candidates (generic path)
+stage b2=205 vs b1={57}: values [8615125, 10556001), 47 candidates (generic path)
+stage b2=206 vs b1={58}: values [8741816, 11316496), 61 candidates (generic path)
+stage b2=207 vs b1={59}: values [8869743, 12117361), 76 candidates (generic path)
+stage b2=208 vs b1={60}: values [8998912, 12960000), 92 candidates (generic path)
+stage b2=209 vs b1={61}: values [9129329, 13845841), 108 candidates (generic path)
+stage b2=210 vs b1={62}: values [9261000, 14776336), 126 candidates (generic path)
+stage b2=211 vs b1={63}: values [9393931, 15752961), 143 candidates (generic path)
+
+*** MATCH: 10243840 is an 4-digit palindrome in bases 63 and 211
+stage b2=212 vs b1={64}: values [9528128, 16777216), 162 candidates (generic path)
+stage b2=213 vs b1={65}: values [9663597, 17850625), 181 candidates (generic path)
+stage b2=214 vs b1={66}: values [9800344, 18974736), 201 candidates (generic path)
+stage b2=215 vs b1={67}: values [9938375, 20151121), 221 candidates (generic path)
+stage b2=216 vs b1={68}: values [10077696, 21381376), 243 candidates (generic path)
+stage b2=217 vs b1={69}: values [10218313, 22667121), 265 candidates (generic path)
+done: 0.00s, 761 candidates tested

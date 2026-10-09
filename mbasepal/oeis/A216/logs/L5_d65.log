@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=108 vs b1={43}: values [136048896, 147008443), 940 candidates (generic path)
+
+*** MATCH: 137238625 is an 5-digit palindrome in bases 43 and 108
+done: 0.00s, 940 candidates tested

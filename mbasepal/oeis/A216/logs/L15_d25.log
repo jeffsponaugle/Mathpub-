@@ -1,0 +1,6 @@
+A171740 search: n=15, threads=1, limit=none
+stage b2=96 vs b1={71}: values [5646733123551136024526585856, 5873205959385493353867330551), 3013821224133 candidates (MITM path)
+  MITM b1=71: s=5 t=3 j=3 je=4 Q=357911 table=884736 yh=3406464
+
+*** MATCH: 5749069625466878695055883361 is an 15-digit palindrome in bases 71 and 96
+done: 0.13s, 1539283 candidates tested

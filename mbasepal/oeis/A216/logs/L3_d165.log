@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=200 vs b1={35}: values [40000, 42875), 15 candidates (generic path)
+stage b2=201 vs b1={36}: values [40401, 46656), 32 candidates (generic path)
+
+*** MATCH: 40603 is an 3-digit palindrome in bases 36 and 201
+done: 0.00s, 47 candidates tested

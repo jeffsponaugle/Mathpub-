@@ -1,0 +1,1 @@
+noqueens 12 5 4

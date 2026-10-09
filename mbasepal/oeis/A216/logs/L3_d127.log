@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=156 vs b1={29}: values [24336, 24389), 1 candidates (generic path)
+stage b2=157 vs b1={30}: values [24649, 27000), 15 candidates (generic path)
+
+*** MATCH: 24807 is an 3-digit palindrome in bases 30 and 157
+done: 0.00s, 16 candidates tested

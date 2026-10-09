@@ -1,0 +1,8 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=101 vs b1={11}: values [101, 121), 1 candidates (generic path)
+stage b2=102 vs b1={12}: values [102, 144), 1 candidates (generic path)
+stage b2=103 vs b1={13}: values [103, 169), 1 candidates (generic path)
+stage b2=104 vs b1={14}: values [104, 196), 1 candidates (generic path)
+
+*** MATCH: 105 is an 2-digit palindrome in bases 14 and 104
+done: 0.00s, 4 candidates tested

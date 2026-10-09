@@ -1,0 +1,24 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=68 vs b1={24}: values [314432, 331776), 4 candidates (generic path)
+stage b2=69 vs b1={25}: values [328509, 390625), 14 candidates (generic path)
+stage b2=70 vs b1={26}: values [343000, 456976), 24 candidates (generic path)
+stage b2=71 vs b1={27}: values [357911, 531441), 35 candidates (generic path)
+stage b2=72 vs b1={28}: values [373248, 614656), 47 candidates (generic path)
+stage b2=73 vs b1={29}: values [389017, 707281), 60 candidates (generic path)
+stage b2=74 vs b1={30}: values [405224, 810000), 74 candidates (generic path)
+stage b2=75 vs b1={31}: values [421875, 923521), 90 candidates (generic path)
+stage b2=76 vs b1={32}: values [438976, 1048576), 106 candidates (generic path)
+stage b2=77 vs b1={33}: values [456533, 1185921), 124 candidates (generic path)
+stage b2=78 vs b1={34}: values [474552, 1336336), 142 candidates (generic path)
+stage b2=79 vs b1={35}: values [493039, 1500625), 162 candidates (generic path)
+stage b2=80 vs b1={36}: values [512000, 1679616), 183 candidates (generic path)
+stage b2=81 vs b1={37}: values [531441, 1874161), 205 candidates (generic path)
+stage b2=82 vs b1={38}: values [551368, 2085136), 229 candidates (generic path)
+stage b2=83 vs b1={39}: values [571787, 2313441), 253 candidates (generic path)
+stage b2=84 vs b1={40}: values [592704, 2560000), 279 candidates (generic path)
+stage b2=85 vs b1={41}: values [614125, 2825761), 307 candidates (generic path)
+stage b2=86 vs b1={42}: values [636056, 3111696), 335 candidates (generic path)
+stage b2=87 vs b1={43}: values [658503, 3418801), 365 candidates (generic path)
+
+*** MATCH: 681472 is an 4-digit palindrome in bases 43 and 87
+done: 0.00s, 3026 candidates tested

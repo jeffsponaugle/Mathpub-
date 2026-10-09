@@ -1,0 +1,11 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=181 vs b1={64}: values [1073283121, 1073741824), 15 candidates (generic path)
+stage b2=182 vs b1={65}: values [1097199376, 1160290625), 1905 candidates (generic path)
+stage b2=183 vs b1={66}: values [1121513121, 1252332576), 3907 candidates (generic path)
+
+*** MATCH: 1216993006 is an 5-digit palindrome in bases 66 and 183
+stage b2=184 vs b1={67}: values [1146228736, 1350125107), 6023 candidates (generic path)
+
+*** MATCH: 1176936865 is an 5-digit palindrome in bases 67 and 184
+stage b2=185 vs b1={68}: values [1171350625, 1453933568), 8257 candidates (generic path)
+done: 0.00s, 8082 candidates tested

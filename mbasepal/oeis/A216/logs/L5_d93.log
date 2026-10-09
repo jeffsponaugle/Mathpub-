@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=148 vs b1={55}: values [479785216, 503284375), 1073 candidates (generic path)
+
+*** MATCH: 493607233 is an 5-digit palindrome in bases 55 and 148
+stage b2=149 vs b1={56}: values [492884401, 550731776), 2606 candidates (generic path)
+done: 0.00s, 1106 candidates tested

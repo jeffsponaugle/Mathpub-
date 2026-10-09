@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=123 vs b1={25}: values [15129, 15625), 5 candidates (generic path)
+
+*** MATCH: 15499 is an 3-digit palindrome in bases 25 and 123
+stage b2=124 vs b1={26}: values [15376, 17576), 18 candidates (generic path)
+done: 0.00s, 6 candidates tested

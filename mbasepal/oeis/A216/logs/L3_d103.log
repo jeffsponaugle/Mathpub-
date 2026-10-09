@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=129 vs b1={26}: values [16641, 17576), 8 candidates (generic path)
+
+*** MATCH: 17029 is an 3-digit palindrome in bases 26 and 129
+stage b2=130 vs b1={27}: values [16900, 19683), 22 candidates (generic path)
+done: 0.00s, 9 candidates tested

@@ -1,0 +1,16 @@
+search [1, 4294967296)  threads=14  chunk=4194304  chunks=1024
+[      30s] complete below 528482305  (8.77e+06 odd n/s)
+[      60s] complete below 884998145  (7.34e+06 odd n/s)
+[      90s] complete below 1291845633  (7.14e+06 odd n/s)
+[     121s] complete below 1635778561  (6.78e+06 odd n/s)
+[     151s] complete below 1958739969  (6.5e+06 odd n/s)
+[     181s] complete below 2290089985  (6.33e+06 odd n/s)
+[     211s] complete below 2583691265  (6.12e+06 odd n/s)
+[     241s] complete below 2873098241  (5.96e+06 odd n/s)
+[     271s] complete below 3116367873  (5.75e+06 odd n/s)
+[     301s] complete below 3368026113  (5.59e+06 odd n/s)
+[     332s] complete below 3628072961  (5.47e+06 odd n/s)
+[     362s] complete below 3875536897  (5.36e+06 odd n/s)
+[     392s] complete below 4148166657  (5.29e+06 odd n/s)
+[     407s] complete below 4294967296  (5.28e+06 odd n/s)
+done [1, 4294967296) in 406.8s

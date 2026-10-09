@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=119 vs b1={25}: values [14161, 15625), 13 candidates (generic path)
+stage b2=120 vs b1={26}: values [14400, 17576), 27 candidates (generic path)
+
+*** MATCH: 15961 is an 3-digit palindrome in bases 26 and 120
+stage b2=121 vs b1={27}: values [14641, 19683), 42 candidates (generic path)
+
+*** MATCH: 15005 is an 3-digit palindrome in bases 27 and 121
+stage b2=122 vs b1={28}: values [14884, 21952), 58 candidates (generic path)
+done: 0.00s, 52 candidates tested

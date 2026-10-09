@@ -1,0 +1,19 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=75 vs b1={26}: values [421875, 456976), 7 candidates (generic path)
+stage b2=76 vs b1={27}: values [438976, 531441), 17 candidates (generic path)
+stage b2=77 vs b1={28}: values [456533, 614656), 27 candidates (generic path)
+stage b2=78 vs b1={29}: values [474552, 707281), 39 candidates (generic path)
+stage b2=79 vs b1={30}: values [493039, 810000), 51 candidates (generic path)
+stage b2=80 vs b1={31}: values [512000, 923521), 65 candidates (generic path)
+stage b2=81 vs b1={32}: values [531441, 1048576), 79 candidates (generic path)
+stage b2=82 vs b1={33}: values [551368, 1185921), 95 candidates (generic path)
+stage b2=83 vs b1={34}: values [571787, 1336336), 111 candidates (generic path)
+
+*** MATCH: 718200 is an 4-digit palindrome in bases 34 and 83
+stage b2=84 vs b1={35}: values [592704, 1500625), 129 candidates (generic path)
+stage b2=85 vs b1={36}: values [614125, 1679616), 148 candidates (generic path)
+stage b2=86 vs b1={37}: values [636056, 1874161), 168 candidates (generic path)
+stage b2=87 vs b1={38}: values [658503, 2085136), 189 candidates (generic path)
+stage b2=88 vs b1={39}: values [681472, 2313441), 211 candidates (generic path)
+stage b2=89 vs b1={40}: values [704969, 2560000), 235 candidates (generic path)
+done: 0.00s, 546 candidates tested

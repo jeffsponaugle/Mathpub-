@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=184 vs b1={33}: values [33856, 35937), 12 candidates (generic path)
+stage b2=185 vs b1={34}: values [34225, 39304), 28 candidates (generic path)
+stage b2=186 vs b1={35}: values [34596, 42875), 45 candidates (generic path)
+
+*** MATCH: 34783 is an 3-digit palindrome in bases 35 and 186
+done: 0.00s, 85 candidates tested

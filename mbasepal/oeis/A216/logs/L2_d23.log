@@ -1,0 +1,21 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=29 vs b1={6}: values [29, 36), 1 candidates (generic path)
+stage b2=30 vs b1={7}: values [30, 49), 1 candidates (generic path)
+stage b2=31 vs b1={8}: values [31, 64), 2 candidates (generic path)
+stage b2=32 vs b1={9}: values [32, 81), 2 candidates (generic path)
+stage b2=33 vs b1={10}: values [33, 100), 3 candidates (generic path)
+stage b2=34 vs b1={11}: values [34, 121), 3 candidates (generic path)
+stage b2=35 vs b1={12}: values [35, 144), 4 candidates (generic path)
+stage b2=36 vs b1={13}: values [36, 169), 4 candidates (generic path)
+stage b2=37 vs b1={14}: values [37, 196), 5 candidates (generic path)
+stage b2=38 vs b1={15}: values [38, 225), 5 candidates (generic path)
+stage b2=39 vs b1={16}: values [39, 256), 6 candidates (generic path)
+stage b2=40 vs b1={17}: values [40, 289), 7 candidates (generic path)
+stage b2=41 vs b1={18}: values [41, 324), 7 candidates (generic path)
+stage b2=42 vs b1={19}: values [42, 361), 8 candidates (generic path)
+stage b2=43 vs b1={20}: values [43, 400), 9 candidates (generic path)
+stage b2=44 vs b1={21}: values [44, 441), 10 candidates (generic path)
+stage b2=45 vs b1={22}: values [45, 484), 10 candidates (generic path)
+
+*** MATCH: 46 is an 2-digit palindrome in bases 22 and 45
+done: 0.00s, 83 candidates tested

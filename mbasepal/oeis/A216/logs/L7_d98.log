@@ -1,0 +1,8 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=187 vs b1={89}: values [42761175875209, 44231334895529), 224823 candidates (generic path)
+stage b2=188 vs b1={90}: values [44151665987584, 47829690000000), 553530 candidates (generic path)
+
+*** MATCH: 47551335828569 is an 7-digit palindrome in bases 90 and 188
+stage b2=189 vs b1={91}: values [45579633110361, 51676101935731), 903011 candidates (generic path)
+stage b2=190 vs b1={92}: values [47045881000000, 55784660123648), 1274061 candidates (generic path)
+done: 0.04s, 1114853 candidates tested

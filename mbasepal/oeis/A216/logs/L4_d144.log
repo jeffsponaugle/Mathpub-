@@ -1,0 +1,33 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=197 vs b1={53}: values [7645373, 7890481), 7 candidates (generic path)
+stage b2=198 vs b1={54}: values [7762392, 8503056), 19 candidates (generic path)
+stage b2=199 vs b1={55}: values [7880599, 9150625), 33 candidates (generic path)
+stage b2=200 vs b1={56}: values [8000000, 9834496), 46 candidates (generic path)
+stage b2=201 vs b1={57}: values [8120601, 10556001), 61 candidates (generic path)
+stage b2=202 vs b1={58}: values [8242408, 11316496), 76 candidates (generic path)
+stage b2=203 vs b1={59}: values [8365427, 12117361), 92 candidates (generic path)
+stage b2=204 vs b1={60}: values [8489664, 12960000), 108 candidates (generic path)
+stage b2=205 vs b1={61}: values [8615125, 13845841), 125 candidates (generic path)
+stage b2=206 vs b1={62}: values [8741816, 14776336), 143 candidates (generic path)
+stage b2=207 vs b1={63}: values [8869743, 15752961), 161 candidates (generic path)
+
+*** MATCH: 13821184 is an 4-digit palindrome in bases 63 and 207
+stage b2=208 vs b1={64}: values [8998912, 16777216), 180 candidates (generic path)
+stage b2=209 vs b1={65}: values [9129329, 17850625), 200 candidates (generic path)
+stage b2=210 vs b1={66}: values [9261000, 18974736), 221 candidates (generic path)
+stage b2=211 vs b1={67}: values [9393931, 20151121), 242 candidates (generic path)
+stage b2=212 vs b1={68}: values [9528128, 21381376), 264 candidates (generic path)
+
+*** MATCH: 11831085 is an 4-digit palindrome in bases 68 and 212
+stage b2=213 vs b1={69}: values [9663597, 22667121), 287 candidates (generic path)
+stage b2=214 vs b1={70}: values [9800344, 24010000), 311 candidates (generic path)
+stage b2=215 vs b1={71}: values [9938375, 25411681), 335 candidates (generic path)
+stage b2=216 vs b1={72}: values [10077696, 26873856), 361 candidates (generic path)
+stage b2=217 vs b1={73}: values [10218313, 28398241), 387 candidates (generic path)
+stage b2=218 vs b1={74}: values [10360232, 29986576), 413 candidates (generic path)
+stage b2=219 vs b1={75}: values [10503459, 31640625), 441 candidates (generic path)
+
+*** MATCH: 10888900 is an 4-digit palindrome in bases 75 and 219
+stage b2=220 vs b1={76}: values [10648000, 33362176), 470 candidates (generic path)
+stage b2=221 vs b1={77}: values [10793861, 35153041), 499 candidates (generic path)
+done: 0.00s, 1652 candidates tested

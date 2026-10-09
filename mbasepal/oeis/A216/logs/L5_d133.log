@@ -1,0 +1,14 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=204 vs b1={71}: values [1731891456, 1804229351), 1739 candidates (generic path)
+stage b2=205 vs b1={72}: values [1766100625, 1934917632), 4018 candidates (generic path)
+stage b2=206 vs b1={73}: values [1800814096, 2073071593), 6416 candidates (generic path)
+stage b2=207 vs b1={74}: values [1836036801, 2219006624), 8938 candidates (generic path)
+
+*** MATCH: 2146699297 is an 5-digit palindrome in bases 74 and 207
+stage b2=208 vs b1={75}: values [1871773696, 2373046875), 11587 candidates (generic path)
+
+*** MATCH: 1998799713 is an 5-digit palindrome in bases 75 and 208
+stage b2=209 vs b1={76}: values [1908029761, 2535525376), 14366 candidates (generic path)
+stage b2=210 vs b1={77}: values [1944810000, 2706784157), 17279 candidates (generic path)
+stage b2=211 vs b1={78}: values [1982119441, 2887174368), 20329 candidates (generic path)
+done: 0.00s, 31143 candidates tested

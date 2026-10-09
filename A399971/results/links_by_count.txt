@@ -1,0 +1,21 @@
+Compact solutions (reduced for symmetry) by number of links, from `a399971 n`
+(and `a399971 -L k 7` for the low end of n = 7).
+
+n=2: 2:1
+n=3: 2:2 3:8 4:3
+n=4: 3:64 4:451 5:873 6:612 7:130 8:9
+n=5: 3:95 4:5228 5:55446 6:243922 7:546845 8:643904 9:386929 10:109356 11:12444 12:405
+n=6: 3:38 4:17501 5:793803 6:12490373 7:99227726 8:463220887 9:1354091038 10:2534347494
+     11:3042236724 12:2314782703 13:1088567061 14:303357381 15:46846878 16:3592512
+     17:111788 18:930
+n=7: 3:44 4:29756 5:4359125 6:200943164 ...  (none with 2 links)
+
+Minimum number of links: 2, 2, 3, 3, 3, 3 for n = 2..7.  The draft's guess
+1 + floor(n/2) (2, 2, 3, 3, 4, 4) fails at n = 6 and n = 7.  All 38 (n = 6) and
+44 (n = 7) three-link solutions were re-checked with the exhaustive router, and
+the only 5 (n = 6) and 6 (n = 7) two-link induced covers are all non-compact.
+
+Maximum number of links: floor(n^2/2) (A007590): dominoes plus, for odd n, one
+straight 3-cell link always form a compact solution, and more links would need
+more than n^2 cells.  The draft says ceiling(n^2/2) (A000982), which is wrong for
+odd n (5 links cannot fit in 9 cells).

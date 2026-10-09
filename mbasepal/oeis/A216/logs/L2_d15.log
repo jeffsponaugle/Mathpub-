@@ -1,0 +1,16 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=20 vs b1={5}: values [20, 25), 1 candidates (generic path)
+stage b2=21 vs b1={6}: values [21, 36), 1 candidates (generic path)
+stage b2=22 vs b1={7}: values [22, 49), 2 candidates (generic path)
+stage b2=23 vs b1={8}: values [23, 64), 2 candidates (generic path)
+stage b2=24 vs b1={9}: values [24, 81), 3 candidates (generic path)
+
+*** MATCH: 50 is an 2-digit palindrome in bases 9 and 24
+stage b2=25 vs b1={10}: values [25, 100), 4 candidates (generic path)
+stage b2=26 vs b1={11}: values [26, 121), 4 candidates (generic path)
+stage b2=27 vs b1={12}: values [27, 144), 5 candidates (generic path)
+stage b2=28 vs b1={13}: values [28, 169), 6 candidates (generic path)
+stage b2=29 vs b1={14}: values [29, 196), 6 candidates (generic path)
+
+*** MATCH: 30 is an 2-digit palindrome in bases 14 and 29
+done: 0.00s, 14 candidates tested

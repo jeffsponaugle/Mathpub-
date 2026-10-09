@@ -1,0 +1,5 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=14 vs b1={10}: values [7529536, 10000000), 901 candidates (generic path)
+
+*** MATCH: 9046409 is an 7-digit palindrome in bases 10 and 14
+done: 0.00s, 900 candidates tested

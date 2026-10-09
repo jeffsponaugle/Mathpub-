@@ -1,0 +1,133 @@
+X=1441560489708423064780800  threads=14  ckpt=ipn_1441560489708423064780800.ckpt  (1077871 primes sieved)
+FOUND 6 = 2 3
+FOUND 90 = 2 5 9
+FOUND 60 = 3 4 5
+tasks: 7257 at depth 4 (0 already done)
+[5s] tasks 110/7257  nodes 1.412e+07 (2.8M/s)  sols 3  cl 7 2c 1575 dv 124 fb 0 wn 0
+[10s] tasks 193/7257  nodes 2.888e+07 (3.0M/s)  sols 3  cl 7 2c 4100 dv 232 fb 0 wn 0
+[15s] tasks 255/7257  nodes 4.351e+07 (2.9M/s)  sols 3  cl 7 2c 7945 dv 332 fb 0 wn 0
+[20s] tasks 313/7257  nodes 5.813e+07 (2.9M/s)  sols 3  cl 7 2c 12199 dv 425 fb 0 wn 0
+[25s] tasks 359/7257  nodes 7.368e+07 (3.1M/s)  sols 3  cl 7 2c 16556 dv 497 fb 0 wn 0
+[30s] tasks 405/7257  nodes 9.055e+07 (3.4M/s)  sols 3  cl 7 2c 20988 dv 558 fb 0 wn 0
+[35s] tasks 742/7257  nodes 1.098e+08 (3.9M/s)  sols 3  cl 7 2c 24143 dv 621 fb 0 wn 0
+[40s] tasks 878/7257  nodes 1.267e+08 (3.4M/s)  sols 3  cl 7 2c 26578 dv 702 fb 0 wn 0
+FOUND 1446875426304 = 2 7 11 41 43 81 256 257
+[45s] tasks 880/7257  nodes 1.412e+08 (2.9M/s)  sols 4  cl 8 2c 30665 dv 782 fb 0 wn 0
+[50s] tasks 882/7257  nodes 1.571e+08 (3.2M/s)  sols 4  cl 8 2c 35153 dv 864 fb 0 wn 0
+[55s] tasks 931/7257  nodes 1.733e+08 (3.2M/s)  sols 4  cl 8 2c 40293 dv 936 fb 0 wn 0
+[60s] tasks 937/7257  nodes 1.893e+08 (3.2M/s)  sols 4  cl 8 2c 44306 dv 1026 fb 0 wn 0
+[65s] tasks 972/7257  nodes 2.052e+08 (3.2M/s)  sols 4  cl 8 2c 50528 dv 1089 fb 0 wn 0
+[70s] tasks 1005/7257  nodes 2.195e+08 (2.9M/s)  sols 4  cl 8 2c 56564 dv 1138 fb 0 wn 0
+[75s] tasks 1178/7257  nodes 2.380e+08 (3.7M/s)  sols 4  cl 8 2c 63017 dv 1186 fb 0 wn 0
+[80s] tasks 1187/7257  nodes 2.552e+08 (3.4M/s)  sols 4  cl 8 2c 65876 dv 1267 fb 0 wn 0
+[85s] tasks 1285/7257  nodes 2.728e+08 (3.5M/s)  sols 4  cl 8 2c 68836 dv 1336 fb 0 wn 0
+FOUND 12646368 = 2 7 16 17 41 81
+[90s] tasks 1357/7257  nodes 2.910e+08 (3.6M/s)  sols 5  cl 9 2c 72272 dv 1395 fb 0 wn 0
+[95s] tasks 1524/7257  nodes 3.100e+08 (3.8M/s)  sols 5  cl 9 2c 80130 dv 1451 fb 0 wn 0
+FOUND 3291641594841600 = 2 11 13 25 41 43 49 81 256 257
+[100s] tasks 1701/7257  nodes 3.292e+08 (3.8M/s)  sols 6  cl 10 2c 87299 dv 1503 fb 0 wn 0
+[105s] tasks 2244/7257  nodes 3.476e+08 (3.7M/s)  sols 6  cl 10 2c 94018 dv 1543 fb 0 wn 0
+FOUND 28770487200 = 2 13 16 17 25 41 49 81
+[110s] tasks 2552/7257  nodes 3.648e+08 (3.5M/s)  sols 7  cl 11 2c 95935 dv 1621 fb 0 wn 0
+[115s] tasks 3423/7257  nodes 3.842e+08 (3.9M/s)  sols 7  cl 11 2c 97252 dv 1680 fb 0 wn 0
+[120s] tasks 3800/7257  nodes 4.016e+08 (3.5M/s)  sols 7  cl 11 2c 100955 dv 1752 fb 0 wn 0
+[125s] tasks 3840/7257  nodes 4.197e+08 (3.6M/s)  sols 7  cl 11 2c 105517 dv 1808 fb 0 wn 0
+[130s] tasks 3919/7257  nodes 4.389e+08 (3.8M/s)  sols 7  cl 11 2c 114469 dv 1859 fb 0 wn 0
+[135s] tasks 4243/7257  nodes 4.580e+08 (3.8M/s)  sols 7  cl 11 2c 119886 dv 1913 fb 0 wn 0
+[140s] tasks 4248/7257  nodes 4.735e+08 (3.1M/s)  sols 7  cl 11 2c 126473 dv 1982 fb 0 wn 0
+[145s] tasks 4296/7257  nodes 4.894e+08 (3.2M/s)  sols 7  cl 11 2c 131053 dv 2077 fb 0 wn 0
+[150s] tasks 4297/7257  nodes 5.028e+08 (2.7M/s)  sols 7  cl 11 2c 139215 dv 2156 fb 0 wn 0
+[155s] tasks 4299/7257  nodes 5.172e+08 (2.9M/s)  sols 7  cl 11 2c 148310 dv 2203 fb 0 wn 0
+[160s] tasks 4331/7257  nodes 5.295e+08 (2.5M/s)  sols 7  cl 11 2c 153610 dv 2246 fb 0 wn 0
+[165s] tasks 4331/7257  nodes 5.448e+08 (3.1M/s)  sols 7  cl 11 2c 162419 dv 2302 fb 0 wn 0
+[170s] tasks 4334/7257  nodes 5.604e+08 (3.1M/s)  sols 7  cl 11 2c 172226 dv 2359 fb 0 wn 0
+[175s] tasks 4361/7257  nodes 5.765e+08 (3.2M/s)  sols 7  cl 11 2c 181599 dv 2411 fb 0 wn 0
+[180s] tasks 4385/7257  nodes 5.928e+08 (3.3M/s)  sols 7  cl 11 2c 195739 dv 2459 fb 0 wn 0
+[185s] tasks 4483/7257  nodes 6.103e+08 (3.5M/s)  sols 7  cl 11 2c 208626 dv 2498 fb 0 wn 0
+FOUND 4201148160 = 3 5 9 11 43 256 257
+[190s] tasks 4487/7257  nodes 6.262e+08 (3.2M/s)  sols 8  cl 12 2c 216159 dv 2579 fb 0 wn 0
+FOUND 36720 = 3 5 9 16 17
+[195s] tasks 4548/7257  nodes 6.421e+08 (3.2M/s)  sols 9  cl 13 2c 224185 dv 2628 fb 0 wn 0
+[200s] tasks 4549/7257  nodes 6.588e+08 (3.3M/s)  sols 9  cl 13 2c 233001 dv 2696 fb 0 wn 0
+[205s] tasks 4577/7257  nodes 6.760e+08 (3.4M/s)  sols 9  cl 13 2c 240489 dv 2752 fb 0 wn 0
+[210s] tasks 4578/7257  nodes 6.930e+08 (3.4M/s)  sols 9  cl 13 2c 248062 dv 2796 fb 0 wn 0
+[215s] tasks 4605/7257  nodes 7.107e+08 (3.5M/s)  sols 9  cl 13 2c 258872 dv 2837 fb 0 wn 0
+[220s] tasks 4627/7257  nodes 7.282e+08 (3.5M/s)  sols 9  cl 13 2c 286000 dv 2881 fb 0 wn 0
+[225s] tasks 4713/7257  nodes 7.444e+08 (3.2M/s)  sols 9  cl 13 2c 302192 dv 2923 fb 0 wn 0
+FOUND 590325173932032 = 3 7 11 16 17 41 43 81 256 257
+[230s] tasks 4740/7257  nodes 7.612e+08 (3.4M/s)  sols 10  cl 14 2c 324478 dv 2952 fb 0 wn 0
+[235s] tasks 4756/7257  nodes 7.776e+08 (3.3M/s)  sols 10  cl 14 2c 334294 dv 2998 fb 0 wn 0
+FOUND 1342989770695372800 = 3 11 13 16 17 25 41 43 49 81 256 257
+[240s] tasks 5056/7257  nodes 7.954e+08 (3.6M/s)  sols 11  cl 15 2c 351165 dv 3034 fb 0 wn 0
+[245s] tasks 5062/7257  nodes 8.121e+08 (3.4M/s)  sols 11  cl 15 2c 360334 dv 3083 fb 0 wn 0
+[250s] tasks 5067/7257  nodes 8.283e+08 (3.2M/s)  sols 11  cl 15 2c 368364 dv 3155 fb 0 wn 0
+[256s] tasks 5128/7257  nodes 8.463e+08 (3.0M/s)  sols 11  cl 15 2c 376779 dv 3208 fb 0 wn 0
+[261s] tasks 5132/7257  nodes 8.619e+08 (3.1M/s)  sols 11  cl 15 2c 385571 dv 3286 fb 0 wn 0
+[266s] tasks 5171/7257  nodes 8.792e+08 (3.5M/s)  sols 11  cl 15 2c 392593 dv 3326 fb 0 wn 0
+[271s] tasks 5173/7257  nodes 8.969e+08 (3.5M/s)  sols 11  cl 15 2c 400216 dv 3366 fb 0 wn 0
+[276s] tasks 5209/7257  nodes 9.149e+08 (3.6M/s)  sols 11  cl 15 2c 414420 dv 3414 fb 0 wn 0
+[281s] tasks 5217/7257  nodes 9.331e+08 (3.6M/s)  sols 11  cl 15 2c 424041 dv 3474 fb 0 wn 0
+[286s] tasks 5269/7257  nodes 9.513e+08 (3.7M/s)  sols 11  cl 15 2c 433919 dv 3524 fb 0 wn 0
+[291s] tasks 5394/7257  nodes 9.698e+08 (3.7M/s)  sols 11  cl 15 2c 446821 dv 3560 fb 0 wn 0
+[296s] tasks 5398/7257  nodes 9.859e+08 (3.2M/s)  sols 11  cl 15 2c 454334 dv 3634 fb 0 wn 0
+[301s] tasks 5441/7257  nodes 1.002e+09 (3.2M/s)  sols 11  cl 15 2c 461033 dv 3702 fb 0 wn 0
+[306s] tasks 5506/7257  nodes 1.019e+09 (3.5M/s)  sols 11  cl 15 2c 467525 dv 3760 fb 0 wn 0
+FOUND 1441560489708423064780800 = 3 7 11 13 25 41 49 81 83 331 65536 65537
+[311s] tasks 5531/7257  nodes 1.037e+09 (3.4M/s)  sols 12  cl 15 2c 482099 dv 3820 fb 0 wn 0
+[316s] tasks 5715/7257  nodes 1.055e+09 (3.8M/s)  sols 12  cl 15 2c 516346 dv 3845 fb 0 wn 0
+[321s] tasks 5794/7257  nodes 1.072e+09 (3.4M/s)  sols 12  cl 15 2c 539974 dv 3896 fb 0 wn 0
+FOUND 20144846560430592000 = 5 9 11 13 16 17 25 41 43 49 81 256 257
+[326s] tasks 6417/7257  nodes 1.091e+09 (3.6M/s)  sols 13  cl 16 2c 572361 dv 3925 fb 0 wn 0
+[331s] tasks 6452/7257  nodes 1.107e+09 (3.2M/s)  sols 13  cl 16 2c 602706 dv 3971 fb 0 wn 0
+FOUND 126463680 = 4 5 7 16 17 41 81
+[336s] tasks 6454/7257  nodes 1.123e+09 (3.3M/s)  sols 14  cl 17 2c 619847 dv 4023 fb 0 wn 0
+[341s] tasks 6455/7257  nodes 1.140e+09 (3.4M/s)  sols 14  cl 17 2c 635009 dv 4063 fb 0 wn 0
+[346s] tasks 6480/7257  nodes 1.157e+09 (3.4M/s)  sols 14  cl 17 2c 649325 dv 4101 fb 0 wn 0
+[351s] tasks 6482/7257  nodes 1.174e+09 (3.4M/s)  sols 14  cl 17 2c 660528 dv 4134 fb 0 wn 0
+[356s] tasks 6580/7257  nodes 1.193e+09 (3.7M/s)  sols 14  cl 17 2c 669807 dv 4176 fb 0 wn 0
+FOUND 287704872000 = 4 5 13 16 17 25 41 49 81
+[361s] tasks 6580/7257  nodes 1.207e+09 (2.9M/s)  sols 15  cl 18 2c 674947 dv 4210 fb 0 wn 0
+FOUND 32916415948416000 = 4 5 11 13 25 41 43 49 81 256 257
+[366s] tasks 6640/7257  nodes 1.225e+09 (3.6M/s)  sols 16  cl 19 2c 687507 dv 4257 fb 0 wn 0
+[371s] tasks 6661/7257  nodes 1.243e+09 (3.6M/s)  sols 16  cl 19 2c 704036 dv 4295 fb 0 wn 0
+[376s] tasks 6736/7257  nodes 1.261e+09 (3.7M/s)  sols 16  cl 19 2c 717274 dv 4328 fb 0 wn 0
+FOUND 8854877608980480 = 5 7 9 11 16 17 41 43 81 256 257
+[381s] tasks 7001/7257  nodes 1.280e+09 (3.8M/s)  sols 17  cl 20 2c 737404 dv 4365 fb 0 wn 0
+FOUND 14468754263040 = 4 5 7 11 41 43 81 256 257
+[386s] tasks 7250/7257  nodes 1.297e+09 (3.3M/s)  sols 18  cl 21 2c 754775 dv 4402 fb 0 wn 0
+[391s] tasks 7253/7257  nodes 1.307e+09 (2.0M/s)  sols 18  cl 21 2c 760217 dv 4423 fb 0 wn 0
+FOUND 2548696550400 = 4 7 9 11 13 25 43 256 257
+[396s] tasks 7253/7257  nodes 1.315e+09 (1.5M/s)  sols 19  cl 22 2c 772053 dv 4442 fb 0 wn 0
+[401s] tasks 7254/7257  nodes 1.321e+09 (1.2M/s)  sols 19  cl 22 2c 779813 dv 4453 fb 0 wn 0
+FOUND 22276800 = 4 7 9 13 16 17 25
+[406s] tasks 7255/7257  nodes 1.325e+09 (0.8M/s)  sols 20  cl 23 2c 783113 dv 4458 fb 0 wn 0
+[411s] tasks 7256/7257  nodes 1.328e+09 (0.7M/s)  sols 20  cl 23 2c 784895 dv 4458 fb 0 wn 0
+[416s] tasks 7256/7257  nodes 1.330e+09 (0.4M/s)  sols 20  cl 23 2c 786840 dv 4462 fb 0 wn 0
+[421s] tasks 7256/7257  nodes 1.332e+09 (0.4M/s)  sols 20  cl 23 2c 787996 dv 4462 fb 0 wn 0
+[426s] tasks 7256/7257  nodes 1.334e+09 (0.3M/s)  sols 20  cl 23 2c 793017 dv 4462 fb 0 wn 0
+[431s] tasks 7256/7257  nodes 1.336e+09 (0.4M/s)  sols 20  cl 23 2c 800476 dv 4463 fb 0 wn 0
+[436s] tasks 7256/7257  nodes 1.338e+09 (0.4M/s)  sols 20  cl 23 2c 807335 dv 4465 fb 0 wn 0
+[441s] tasks 7256/7257  nodes 1.340e+09 (0.4M/s)  sols 20  cl 23 2c 808003 dv 4472 fb 0 wn 0
+done in 443s, 1340384551 nodes, warnings 0
+
+== COMPLETE: all infinitary perfect numbers <= 1441560489708423064780800 ==
+a(1) = 6  = 2 3
+a(2) = 60  = 3 4 5
+a(3) = 90  = 2 5 9
+a(4) = 36720  = 3 5 9 16 17
+a(5) = 12646368  = 2 7 16 17 41 81
+a(6) = 22276800  = 4 7 9 13 16 17 25
+a(7) = 126463680  = 4 5 7 16 17 41 81
+a(8) = 4201148160  = 3 5 9 11 43 256 257
+a(9) = 28770487200  = 2 13 16 17 25 41 49 81
+a(10) = 287704872000  = 4 5 13 16 17 25 41 49 81
+a(11) = 1446875426304  = 2 7 11 41 43 81 256 257
+a(12) = 2548696550400  = 4 7 9 11 13 25 43 256 257
+a(13) = 14468754263040  = 4 5 7 11 41 43 81 256 257
+a(14) = 590325173932032  = 3 7 11 16 17 41 43 81 256 257
+a(15) = 3291641594841600  = 2 11 13 25 41 43 49 81 256 257
+a(16) = 8854877608980480  = 5 7 9 11 16 17 41 43 81 256 257
+a(17) = 32916415948416000  = 4 5 11 13 25 41 43 49 81 256 257
+a(18) = 1342989770695372800  = 3 11 13 16 17 25 41 43 49 81 256 257
+a(19) = 20144846560430592000  = 5 9 11 13 16 17 25 41 43 49 81 256 257
+a(20) = 1441560489708423064780800  = 3 7 11 13 25 41 49 81 83 331 65536 65537

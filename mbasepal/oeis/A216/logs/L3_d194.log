@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=232 vs b1={38}: values [53824, 54872), 5 candidates (generic path)
+stage b2=233 vs b1={39}: values [54289, 59319), 22 candidates (generic path)
+
+*** MATCH: 55455 is an 3-digit palindrome in bases 39 and 233
+stage b2=234 vs b1={40}: values [54756, 64000), 40 candidates (generic path)
+stage b2=235 vs b1={41}: values [55225, 68921), 59 candidates (generic path)
+done: 0.00s, 31 candidates tested

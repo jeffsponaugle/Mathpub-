@@ -1,0 +1,23 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=10 vs b1={6}: values [1000, 1296), 3 candidates (generic path)
+stage b2=11 vs b1={7}: values [1331, 2401), 9 candidates (generic path)
+stage b2=12 vs b1={8}: values [1728, 4096), 17 candidates (generic path)
+stage b2=13 vs b1={9}: values [2197, 6561), 26 candidates (generic path)
+stage b2=14 vs b1={10}: values [2744, 10000), 38 candidates (generic path)
+stage b2=15 vs b1={11}: values [3375, 14641), 51 candidates (generic path)
+stage b2=16 vs b1={12}: values [4096, 20736), 66 candidates (generic path)
+stage b2=17 vs b1={13}: values [4913, 28561), 82 candidates (generic path)
+stage b2=18 vs b1={14}: values [5832, 38416), 101 candidates (generic path)
+
+*** MATCH: 21945 is an 4-digit palindrome in bases 14 and 18
+stage b2=19 vs b1={15}: values [6859, 50625), 122 candidates (generic path)
+
+*** MATCH: 19040 is an 4-digit palindrome in bases 15 and 19
+stage b2=20 vs b1={16}: values [8000, 65536), 144 candidates (generic path)
+stage b2=21 vs b1={17}: values [9261, 83521), 169 candidates (generic path)
+stage b2=22 vs b1={18}: values [10648, 104976), 195 candidates (generic path)
+stage b2=23 vs b1={19}: values [12167, 130321), 224 candidates (generic path)
+stage b2=24 vs b1={20}: values [13824, 160000), 254 candidates (generic path)
+stage b2=25 vs b1={21}: values [15625, 194481), 287 candidates (generic path)
+stage b2=26 vs b1={22}: values [17576, 234256), 321 candidates (generic path)
+done: 0.00s, 529 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=26 vs b1={14}: values [456976, 537824), 120 candidates (generic path)
+
+*** MATCH: 499617 is an 5-digit palindrome in bases 14 and 26
+done: 0.00s, 120 candidates tested

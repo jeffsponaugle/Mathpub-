@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=48 vs b1={14}: values [2304, 2744), 10 candidates (generic path)
+stage b2=49 vs b1={15}: values [2401, 3375), 20 candidates (generic path)
+
+*** MATCH: 2696 is an 3-digit palindrome in bases 15 and 49
+stage b2=50 vs b1={16}: values [2500, 4096), 32 candidates (generic path)
+stage b2=51 vs b1={17}: values [2601, 4913), 46 candidates (generic path)
+done: 0.00s, 36 candidates tested

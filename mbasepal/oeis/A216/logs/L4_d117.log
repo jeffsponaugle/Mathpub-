@@ -1,0 +1,17 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=163 vs b1={46}: values [4330747, 4477456), 6 candidates (generic path)
+stage b2=164 vs b1={47}: values [4410944, 4879681), 18 candidates (generic path)
+stage b2=165 vs b1={48}: values [4492125, 5308416), 30 candidates (generic path)
+stage b2=166 vs b1={49}: values [4574296, 5764801), 44 candidates (generic path)
+stage b2=167 vs b1={50}: values [4657463, 6250000), 58 candidates (generic path)
+stage b2=168 vs b1={51}: values [4741632, 6765201), 72 candidates (generic path)
+stage b2=169 vs b1={52}: values [4826809, 7311616), 88 candidates (generic path)
+stage b2=170 vs b1={53}: values [4913000, 7890481), 104 candidates (generic path)
+stage b2=171 vs b1={54}: values [5000211, 8503056), 120 candidates (generic path)
+stage b2=172 vs b1={55}: values [5088448, 9150625), 138 candidates (generic path)
+stage b2=173 vs b1={56}: values [5177717, 9834496), 156 candidates (generic path)
+
+*** MATCH: 5418534 is an 4-digit palindrome in bases 56 and 173
+stage b2=174 vs b1={57}: values [5268024, 10556001), 175 candidates (generic path)
+stage b2=175 vs b1={58}: values [5359375, 11316496), 195 candidates (generic path)
+done: 0.00s, 835 candidates tested

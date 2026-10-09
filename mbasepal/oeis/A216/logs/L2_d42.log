@@ -1,0 +1,12 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=50 vs b1={8}: values [50, 64), 1 candidates (generic path)
+stage b2=51 vs b1={9}: values [51, 81), 1 candidates (generic path)
+stage b2=52 vs b1={10}: values [52, 100), 1 candidates (generic path)
+stage b2=53 vs b1={11}: values [53, 121), 2 candidates (generic path)
+
+*** MATCH: 108 is an 2-digit palindrome in bases 11 and 53
+stage b2=54 vs b1={12}: values [54, 144), 2 candidates (generic path)
+stage b2=55 vs b1={13}: values [55, 169), 3 candidates (generic path)
+
+*** MATCH: 56 is an 2-digit palindrome in bases 13 and 55
+done: 0.00s, 7 candidates tested

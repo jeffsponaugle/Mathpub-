@@ -1,0 +1,11 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=180 vs b1={32}: values [32400, 32768), 3 candidates (generic path)
+stage b2=181 vs b1={33}: values [32761, 35937), 18 candidates (generic path)
+stage b2=182 vs b1={34}: values [33124, 39304), 34 candidates (generic path)
+
+*** MATCH: 36037 is an 3-digit palindrome in bases 34 and 182
+stage b2=183 vs b1={35}: values [33489, 42875), 52 candidates (generic path)
+
+*** MATCH: 34222 is an 3-digit palindrome in bases 35 and 183
+stage b2=184 vs b1={36}: values [33856, 46656), 70 candidates (generic path)
+done: 0.00s, 71 candidates tested

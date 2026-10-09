@@ -1,0 +1,8 @@
+A171740 search: n=13, threads=1, limit=none
+stage b2=112 vs b1={78}: values [3895975992546975973113856, 3955759092264800909058048), 30287978838 candidates (MITM path)
+  MITM b1=78: s=4 t=3 j=3 je=3 Q=474552 table=1404928 yh=21559
+stage b2=113 vs b1={79}: values [4334523100191686738306881, 4668229371502258117133839), 160285304832 candidates (MITM path)
+  MITM b1=79: s=4 t=3 j=3 je=3 Q=493039 table=1442897 yh=111086
+
+*** MATCH: 4355158643882431852025294 is an 13-digit palindrome in bases 79 and 113
+done: 0.07s, 28429 candidates tested

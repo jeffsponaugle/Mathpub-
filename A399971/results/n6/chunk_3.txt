@@ -1,0 +1,1 @@
+RANGE n=6 split=14 order=2 units=117756 first=44158 last=58878 compact=1319183233 labeled=10552979864 puzzles=1319092876 multi=152984 covers=1322527363 errors=0 seconds=25

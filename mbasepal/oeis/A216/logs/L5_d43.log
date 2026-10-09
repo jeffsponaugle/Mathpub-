@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=75 vs b1={32}: values [31640625, 33554432), 341 candidates (generic path)
+stage b2=76 vs b1={33}: values [33362176, 39135393), 1000 candidates (generic path)
+stage b2=77 vs b1={34}: values [35153041, 45435424), 1735 candidates (generic path)
+
+*** MATCH: 36060256 is an 5-digit palindrome in bases 34 and 77
+done: 0.00s, 3075 candidates tested

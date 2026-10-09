@@ -1,0 +1,10 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=96 vs b1={45}: values [8153726976, 8303765625), 170 candidates (even-AP path)
+stage b2=97 vs b1={46}: values [8587340257, 9474296896), 972 candidates (even-AP path)
+stage b2=98 vs b1={47}: values [9039207968, 10779215329), 1849 candidates (even-AP path)
+stage b2=99 vs b1={48}: values [9509900499, 12230590464), 2804 candidates (even-AP path)
+stage b2=100 vs b1={49}: values [10000000000, 13841287201), 3842 candidates (even-AP path)
+stage b2=101 vs b1={50}: values [10510100501, 15625000000), 4965 candidates (even-AP path)
+
+*** MATCH: 10758801084 is an 6-digit palindrome in bases 50 and 101
+done: 0.00s, 9940 candidates tested

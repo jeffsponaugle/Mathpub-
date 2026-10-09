@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=244 vs b1={82}: values [3544535296, 3707398432), 2736 candidates (generic path)
+stage b2=245 vs b1={83}: values [3603000625, 3939040643), 5599 candidates (generic path)
+
+*** MATCH: 3625690321 is an 5-digit palindrome in bases 83 and 245
+done: 0.00s, 8335 candidates tested

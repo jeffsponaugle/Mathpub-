@@ -1,0 +1,16 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=144 vs b1={63}: values [61917364224, 62523502209), 203 candidates (even-AP path)
+stage b2=145 vs b1={64}: values [64097340625, 68719476736), 1517 candidates (even-AP path)
+stage b2=146 vs b1={65}: values [66338290976, 75418890625), 2918 candidates (even-AP path)
+stage b2=147 vs b1={66}: values [68641485507, 82653950016), 4412 candidates (even-AP path)
+stage b2=148 vs b1={67}: values [71008211968, 90458382169), 6000 candidates (even-AP path)
+stage b2=149 vs b1={68}: values [73439775749, 98867482624), 7687 candidates (even-AP path)
+
+*** MATCH: 90747347550 is an 6-digit palindrome in bases 68 and 149
+stage b2=150 vs b1={69}: values [75937500000, 107918163081), 9476 candidates (even-AP path)
+stage b2=151 vs b1={70}: values [78502725751, 117649000000), 11370 candidates (even-AP path)
+stage b2=152 vs b1={71}: values [81136812032, 128100283921), 13374 candidates (even-AP path)
+stage b2=153 vs b1={72}: values [83841135993, 139314069504), 15489 candidates (even-AP path)
+stage b2=154 vs b1={73}: values [86617093024, 151334226289), 17720 candidates (even-AP path)
+stage b2=155 vs b1={74}: values [89466096875, 164206490176), 20071 candidates (even-AP path)
+done: 0.00s, 35112 candidates tested

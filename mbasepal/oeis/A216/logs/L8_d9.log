@@ -1,0 +1,18 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=27 vs b1={18}: values [10460353203, 11019960576), 1054 candidates (MITM path)
+  MITM b1=18: s=3 t=1 j=1 je=3 Q=18 table=27 yh=40
+stage b2=28 vs b1={19}: values [13492928512, 16983563041), 5680 candidates (MITM path)
+  MITM b1=19: s=2 t=2 j=2 je=2 Q=361 table=784 yh=8
+stage b2=29 vs b1={20}: values [17249876309, 25600000000), 11806 candidates (MITM path)
+  MITM b1=20: s=2 t=2 j=2 je=2 Q=400 table=841 yh=15
+stage b2=30 vs b1={21}: values [21870000000, 37822859361), 19695 candidates (MITM path)
+  MITM b1=21: s=2 t=2 j=2 je=2 Q=441 table=900 yh=22
+stage b2=31 vs b1={22}: values [27512614111, 54875873536), 29630 candidates (MITM path)
+  MITM b1=22: s=2 t=2 j=2 je=2 Q=484 table=961 yh=31
+stage b2=32 vs b1={23}: values [34359738368, 78310985281), 41916 candidates (MITM path)
+  MITM b1=23: s=2 t=2 j=2 je=2 Q=529 table=1024 yh=41
+stage b2=33 vs b1={24}: values [42618442977, 110075314176), 56882 candidates (MITM path)
+  MITM b1=24: s=2 t=2 j=2 je=2 Q=576 table=1089 yh=53
+
+*** MATCH: 47794089850 is an 8-digit palindrome in bases 24 and 33
+done: 0.00s, 161 candidates tested

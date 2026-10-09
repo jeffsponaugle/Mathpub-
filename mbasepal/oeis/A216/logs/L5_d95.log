@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=151 vs b1={56}: values [519885601, 550731776), 1353 candidates (generic path)
+
+*** MATCH: 540931831 is an 5-digit palindrome in bases 56 and 151
+stage b2=152 vs b1={57}: values [533794816, 601692057), 2939 candidates (generic path)
+done: 0.00s, 1662 candidates tested

@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=237 vs b1={39}: values [56169, 59319), 14 candidates (generic path)
+stage b2=238 vs b1={40}: values [56644, 64000), 31 candidates (generic path)
+stage b2=239 vs b1={41}: values [57121, 68921), 50 candidates (generic path)
+
+*** MATCH: 59034 is an 3-digit palindrome in bases 41 and 239
+stage b2=240 vs b1={42}: values [57600, 74088), 69 candidates (generic path)
+stage b2=241 vs b1={43}: values [58081, 79507), 89 candidates (generic path)
+stage b2=242 vs b1={44}: values [58564, 85184), 111 candidates (generic path)
+done: 0.00s, 107 candidates tested

@@ -1,0 +1,20 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=201 vs b1={15}: values [201, 225), 1 candidates (generic path)
+stage b2=202 vs b1={16}: values [202, 256), 1 candidates (generic path)
+stage b2=203 vs b1={17}: values [203, 289), 1 candidates (generic path)
+stage b2=204 vs b1={18}: values [204, 324), 1 candidates (generic path)
+stage b2=205 vs b1={19}: values [205, 361), 1 candidates (generic path)
+stage b2=206 vs b1={20}: values [206, 400), 1 candidates (generic path)
+stage b2=207 vs b1={21}: values [207, 441), 2 candidates (generic path)
+stage b2=208 vs b1={22}: values [208, 484), 2 candidates (generic path)
+stage b2=209 vs b1={23}: values [209, 529), 2 candidates (generic path)
+stage b2=210 vs b1={24}: values [210, 576), 2 candidates (generic path)
+stage b2=211 vs b1={25}: values [211, 625), 2 candidates (generic path)
+stage b2=212 vs b1={26}: values [212, 676), 3 candidates (generic path)
+stage b2=213 vs b1={27}: values [213, 729), 3 candidates (generic path)
+stage b2=214 vs b1={28}: values [214, 784), 3 candidates (generic path)
+stage b2=215 vs b1={29}: values [215, 841), 3 candidates (generic path)
+stage b2=216 vs b1={30}: values [216, 900), 4 candidates (generic path)
+
+*** MATCH: 217 is an 2-digit palindrome in bases 30 and 216
+done: 0.00s, 32 candidates tested

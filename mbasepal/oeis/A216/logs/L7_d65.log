@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=130 vs b1={65}: values [4826809000000, 4902227890625), 34329 candidates (generic path)
+stage b2=131 vs b1={66}: values [5053913144281, 5455160701056), 178484 candidates (generic path)
+stage b2=132 vs b1={67}: values [5289852801024, 6060711605323), 335161 candidates (generic path)
+
+*** MATCH: 5436171346717 is an 7-digit palindrome in bases 67 and 132
+done: 0.01s, 278349 candidates tested

@@ -1,0 +1,28 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=281 vs b1={110}: values [1751989905401, 1771561000000), 883 candidates (even-AP path)
+stage b2=282 vs b1={111}: values [1783386774432, 1870414552161), 3881 candidates (even-AP path)
+stage b2=283 vs b1={112}: values [1815232161643, 1973822685184), 6998 candidates (even-AP path)
+stage b2=284 vs b1={113}: values [1847530855424, 2081951752609), 10234 candidates (even-AP path)
+stage b2=285 vs b1={114}: values [1880287678125, 2194972623936), 13594 candidates (even-AP path)
+stage b2=286 vs b1={115}: values [1913507486176, 2313060765625), 17080 candidates (even-AP path)
+stage b2=287 vs b1={116}: values [1947195170207, 2436396322816), 20694 candidates (even-AP path)
+stage b2=288 vs b1={117}: values [1981355655168, 2565164201769), 24440 candidates (even-AP path)
+stage b2=289 vs b1={118}: values [2015993900449, 2699554153024), 28320 candidates (even-AP path)
+stage b2=290 vs b1={119}: values [2051114900000, 2839760855281), 32337 candidates (even-AP path)
+stage b2=291 vs b1={120}: values [2086723682451, 2985984000000), 36493 candidates (even-AP path)
+stage b2=292 vs b1={121}: values [2122825311232, 3138428376721), 40793 candidates (even-AP path)
+stage b2=293 vs b1={122}: values [2159424884693, 3297303959104), 45237 candidates (even-AP path)
+stage b2=294 vs b1={123}: values [2196527536224, 3462825991689), 49831 candidates (even-AP path)
+stage b2=295 vs b1={124}: values [2234138434375, 3635215077376), 54576 candidates (even-AP path)
+stage b2=296 vs b1={125}: values [2272262782976, 3814697265625), 59475 candidates (even-AP path)
+stage b2=297 vs b1={126}: values [2310905821257, 4001504141376), 64532 candidates (even-AP path)
+stage b2=298 vs b1={127}: values [2350072823968, 4195872914689), 69749 candidates (even-AP path)
+stage b2=299 vs b1={128}: values [2389769101499, 4398046511104), 75130 candidates (even-AP path)
+stage b2=300 vs b1={129}: values [2430000000000, 4608273662721), 80677 candidates (even-AP path)
+stage b2=301 vs b1={130}: values [2470770901501, 4826809000000), 86394 candidates (even-AP path)
+stage b2=302 vs b1={131}: values [2512087224032, 5053913144281), 92284 candidates (even-AP path)
+stage b2=303 vs b1={132}: values [2553954421743, 5289852801024), 98350 candidates (even-AP path)
+
+*** MATCH: 2603774118064 is an 6-digit palindrome in bases 132 and 303
+stage b2=304 vs b1={133}: values [2596377985024, 5534900853769), 104595 candidates (even-AP path)
+done: 0.00s, 915754 candidates tested

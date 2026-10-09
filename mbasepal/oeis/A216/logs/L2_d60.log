@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=69 vs b1={9}: values [69, 81), 1 candidates (generic path)
+
+*** MATCH: 70 is an 2-digit palindrome in bases 9 and 69
+done: 0.00s, 1 candidates tested

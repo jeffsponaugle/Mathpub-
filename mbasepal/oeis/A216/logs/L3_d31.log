@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=44 vs b1={13}: values [1936, 2197), 6 candidates (generic path)
+
+*** MATCH: 2157 is an 3-digit palindrome in bases 13 and 44
+stage b2=45 vs b1={14}: values [2025, 2744), 16 candidates (generic path)
+
+*** MATCH: 2026 is an 3-digit palindrome in bases 14 and 45
+done: 0.00s, 9 candidates tested

@@ -1,0 +1,27 @@
+fen: r1bqkb1r/pppppppp/8/8/8/8/PPPPPPPP/R1BQKB1R w KQkq - 0 1
+threads: 18  table: 32768 MB  seed: 2  ttmin: 2
+split ply 4: 48563 unique positions (132640 paths), 0.0s
+  3638/48563 tasks (7.49%)  300s elapsed  ETA 3705s
+  7128/48563 tasks (14.68%)  600s elapsed  ETA 3489s
+  10491/48563 tasks (21.60%)  900s elapsed  ETA 3267s
+  13399/48563 tasks (27.59%)  1201s elapsed  ETA 3151s
+  16258/48563 tasks (33.48%)  1501s elapsed  ETA 2982s
+  18951/48563 tasks (39.02%)  1801s elapsed  ETA 2814s
+  21541/48563 tasks (44.36%)  2101s elapsed  ETA 2635s
+  23736/48563 tasks (48.88%)  2401s elapsed  ETA 2511s
+  25597/48563 tasks (52.71%)  2701s elapsed  ETA 2424s
+  28872/48563 tasks (59.45%)  3001s elapsed  ETA 2047s
+  32656/48563 tasks (67.24%)  3301s elapsed  ETA 1608s
+  36258/48563 tasks (74.66%)  3601s elapsed  ETA 1222s
+  39487/48563 tasks (81.31%)  3902s elapsed  ETA 897s
+  41641/48563 tasks (85.75%)  4202s elapsed  ETA 698s
+  43985/48563 tasks (90.57%)  4502s elapsed  ETA 469s
+build: 7de4dcb9ad85 clang++ 21.0.0 arm64
+fen: r1bqkb1r/pppppppp/8/8/8/8/PPPPPPPP/R1BQKB1R w KQkq - 0 1
+threads: 18  table: 32768 MB  seed: 2  ttmin: 2
+split ply 4: 48563 unique positions (132640 paths), 0.0s
+resumed 43985 entries (43985 of this process's 48563 tasks) from runs/noknights_d12_seed2.ckpt
+  44637/48563 tasks (91.92%)  300s elapsed  ETA 26s
+  45525/48563 tasks (93.74%)  600s elapsed  ETA 40s
+  47249/48563 tasks (97.29%)  900s elapsed  ETA 25s
+perft(12) = 26485630391196432   (1088.98s, 2.43e+13 leaves/s)

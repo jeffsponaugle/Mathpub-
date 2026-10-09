@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=143 vs b1={28}: values [20449, 21952), 11 candidates (generic path)
+stage b2=144 vs b1={29}: values [20736, 24389), 26 candidates (generic path)
+
+*** MATCH: 21601 is an 3-digit palindrome in bases 29 and 144
+stage b2=145 vs b1={30}: values [21025, 27000), 42 candidates (generic path)
+stage b2=146 vs b1={31}: values [21316, 29791), 59 candidates (generic path)
+done: 0.00s, 43 candidates tested

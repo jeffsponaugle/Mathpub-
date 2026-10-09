@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=46 vs b1={13}: values [2116, 2197), 2 candidates (generic path)
+stage b2=47 vs b1={14}: values [2209, 2744), 12 candidates (generic path)
+stage b2=48 vs b1={15}: values [2304, 3375), 23 candidates (generic path)
+
+*** MATCH: 2305 is an 3-digit palindrome in bases 15 and 48
+done: 0.00s, 37 candidates tested

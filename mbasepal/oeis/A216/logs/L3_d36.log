@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=50 vs b1={14}: values [2500, 2744), 5 candidates (generic path)
+
+*** MATCH: 2701 is an 3-digit palindrome in bases 14 and 50
+stage b2=51 vs b1={15}: values [2601, 3375), 16 candidates (generic path)
+done: 0.00s, 7 candidates tested

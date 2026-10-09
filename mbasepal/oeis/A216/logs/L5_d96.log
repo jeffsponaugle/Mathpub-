@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=152 vs b1={56}: values [533794816, 550731776), 734 candidates (generic path)
+stage b2=153 vs b1={57}: values [547981281, 601692057), 2295 candidates (generic path)
+
+*** MATCH: 551375587 is an 5-digit palindrome in bases 57 and 153
+done: 0.00s, 3029 candidates tested

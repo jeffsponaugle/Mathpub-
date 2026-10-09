@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=281 vs b1={91}: values [6234839521, 6240321451), 70 candidates (generic path)
+stage b2=282 vs b1={92}: values [6324066576, 6590815232), 3355 candidates (generic path)
+
+*** MATCH: 6535284859 is an 5-digit palindrome in bases 92 and 282
+stage b2=283 vs b1={93}: values [6414247921, 6956883693), 6776 candidates (generic path)
+stage b2=284 vs b1={94}: values [6505390336, 7339040224), 10336 candidates (generic path)
+done: 0.00s, 5308 candidates tested

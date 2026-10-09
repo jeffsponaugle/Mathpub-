@@ -1,0 +1,9 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=185 vs b1={14}: values [185, 196), 1 candidates (generic path)
+stage b2=186 vs b1={15}: values [186, 225), 1 candidates (generic path)
+stage b2=187 vs b1={16}: values [187, 256), 1 candidates (generic path)
+stage b2=188 vs b1={17}: values [188, 289), 1 candidates (generic path)
+stage b2=189 vs b1={18}: values [189, 324), 1 candidates (generic path)
+
+*** MATCH: 190 is an 2-digit palindrome in bases 18 and 189
+done: 0.00s, 5 candidates tested

@@ -1,0 +1,50 @@
+2026-09-25 12:10:02  started (pid 53268): ./gapsieve -l 17 -s 1.8446744e19 -e 4.5e19 --first -c a16w1.ck -r --log a16w1.log -q
+2026-09-25 12:10:02  consecutive primes, chain length >= 17, range 18446744000000000000..45000000000000000000, 14 threads, first match only
+2026-09-25 12:10:02  (sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+2026-09-25 12:11:02  0.03%  eta 2d14:34:31  no hit yet  117.84T/s  at 1.84538e+19  elapsed 00:01:00
+2026-09-25 12:12:03  0.05%  eta 2d14:29:38  no hit yet  117.96T/s  at 1.84609e+19  elapsed 00:02:00
+2026-09-25 12:13:03  0.08%  eta 2d14:23:15  no hit yet  118.13T/s  at 1.84681e+19  elapsed 00:03:00
+2026-09-25 12:14:03  0.11%  eta 2d14:18:15  no hit yet  118.26T/s  at 1.84752e+19  elapsed 00:04:00
+2026-09-25 12:15:03  0.13%  eta 2d14:17:39  no hit yet  118.25T/s  at 1.84823e+19  elapsed 00:05:00
+2026-09-25 12:16:03  0.16%  eta 2d14:18:32  no hit yet  118.19T/s  at 1.84894e+19  elapsed 00:06:00
+2026-09-25 12:17:03  0.19%  eta 2d14:16:24  no hit yet  118.22T/s  at 1.84965e+19  elapsed 00:07:00
+2026-09-25 12:18:03  0.21%  eta 2d14:13:14  no hit yet  118.29T/s  at 1.85037e+19  elapsed 00:08:01
+2026-09-25 12:19:03  0.24%  eta 2d14:11:11  no hit yet  118.32T/s  at 1.85108e+19  elapsed 00:09:01
+2026-09-25 12:20:04  0.27%  eta 2d14:08:30  no hit yet  118.38T/s  at 1.85179e+19  elapsed 00:10:01
+2026-09-25 12:21:04  0.29%  eta 2d14:07:45  no hit yet  118.37T/s  at 1.85251e+19  elapsed 00:11:01
+2026-09-25 12:22:04  0.32%  eta 2d14:06:06  no hit yet  118.39T/s  at 1.85322e+19  elapsed 00:12:01
+2026-09-25 12:23:04  0.35%  eta 2d14:04:46  no hit yet  118.40T/s  at 1.85393e+19  elapsed 00:13:01
+2026-09-25 12:24:04  0.38%  eta 2d14:04:11  no hit yet  118.39T/s  at 1.85464e+19  elapsed 00:14:02
+2026-09-25 12:25:04  0.40%  eta 2d14:02:45  no hit yet  118.40T/s  at 1.85536e+19  elapsed 00:15:02
+2026-09-25 12:26:05  0.43%  eta 2d14:01:37  no hit yet  118.40T/s  at 1.85607e+19  elapsed 00:16:02
+2026-09-25 12:27:05  0.46%  eta 2d14:00:14  no hit yet  118.42T/s  at 1.85678e+19  elapsed 00:17:02
+2026-09-25 12:28:05  0.48%  eta 2d13:58:40  no hit yet  118.43T/s  at 1.8575e+19  elapsed 00:18:02
+2026-09-25 12:29:05  0.51%  eta 2d13:57:32  no hit yet  118.44T/s  at 1.85821e+19  elapsed 00:19:02
+2026-09-25 12:30:05  0.54%  eta 2d13:56:32  no hit yet  118.44T/s  at 1.85892e+19  elapsed 00:20:03
+2026-09-25 12:31:05  0.56%  eta 2d13:56:00  no hit yet  118.42T/s  at 1.85963e+19  elapsed 00:21:03
+2026-09-25 12:32:06  0.59%  eta 2d13:54:37  no hit yet  118.44T/s  at 1.86035e+19  elapsed 00:22:03
+2026-09-25 12:33:06  0.62%  eta 2d13:53:17  no hit yet  118.45T/s  at 1.86106e+19  elapsed 00:23:03
+2026-09-25 12:34:06  0.64%  eta 2d13:52:03  no hit yet  118.45T/s  at 1.86178e+19  elapsed 00:24:03
+2026-09-25 12:35:06  0.67%  eta 2d13:50:41  no hit yet  118.46T/s  at 1.86249e+19  elapsed 00:25:04
+2026-09-25 12:36:06  0.70%  eta 2d13:49:38  no hit yet  118.47T/s  at 1.86321e+19  elapsed 00:26:04
+2026-09-25 12:37:07  0.72%  eta 2d13:48:27  no hit yet  118.47T/s  at 1.86392e+19  elapsed 00:27:04
+2026-09-25 12:38:07  0.75%  eta 2d13:47:04  no hit yet  118.48T/s  at 1.86463e+19  elapsed 00:28:04
+2026-09-25 12:39:07  0.78%  eta 2d13:45:48  no hit yet  118.49T/s  at 1.86535e+19  elapsed 00:29:04
+2026-09-25 12:40:07  0.81%  eta 2d13:44:29  no hit yet  118.50T/s  at 1.86606e+19  elapsed 00:30:04
+2026-09-25 12:41:07  0.83%  eta 2d13:43:17  no hit yet  118.51T/s  at 1.86678e+19  elapsed 00:31:04
+2026-09-25 12:42:07  0.86%  eta 2d13:42:08  no hit yet  118.51T/s  at 1.86749e+19  elapsed 00:32:05
+2026-09-25 12:43:07  0.89%  eta 2d13:40:52  no hit yet  118.52T/s  at 1.8682e+19  elapsed 00:33:05
+2026-09-25 12:44:08  0.91%  eta 2d13:39:48  no hit yet  118.52T/s  at 1.86892e+19  elapsed 00:34:05
+2026-09-25 12:45:08  0.94%  eta 2d13:38:41  no hit yet  118.53T/s  at 1.86963e+19  elapsed 00:35:05
+2026-09-25 12:46:08  0.97%  eta 2d13:37:51  no hit yet  118.52T/s  at 1.87034e+19  elapsed 00:36:05
+2026-09-25 12:47:08  0.99%  eta 2d13:37:13  no hit yet  118.51T/s  at 1.87105e+19  elapsed 00:37:05
+2026-09-25 12:48:08  1.02%  eta 2d13:36:32  no hit yet  118.50T/s  at 1.87176e+19  elapsed 00:38:05
+2026-09-25 12:49:08  1.05%  eta 2d13:35:49  no hit yet  118.49T/s  at 1.87247e+19  elapsed 00:39:05
+2026-09-25 12:50:08  1.07%  eta 2d13:35:05  no hit yet  118.48T/s  at 1.87318e+19  elapsed 00:40:06
+2026-09-25 12:51:08  1.10%  eta 2d13:34:17  no hit yet  118.48T/s  at 1.87389e+19  elapsed 00:41:06
+2026-09-25 12:52:09  1.13%  eta 2d13:33:51  no hit yet  118.46T/s  at 1.8746e+19  elapsed 00:42:06
+2026-09-25 12:53:09  1.15%  eta 2d13:35:25  no hit yet  118.38T/s  at 1.87529e+19  elapsed 00:43:06
+2026-09-25 12:54:04  interrupt: finishing segments in flight...
+2026-09-25 12:54:04  stopped at 1.18% of 18446744000000000000..45000000000000000000 with no chain of length >= 17 yet, 00:44:01 elapsed
+2026-09-25 12:54:04  resume with: -c a16w1.ck -r
+2026-09-25 12:54:04  exit 130

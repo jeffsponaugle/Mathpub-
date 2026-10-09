@@ -1,0 +1,17 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=109 vs b1={50}: values [15386239549, 15625000000), 185 candidates (even-AP path)
+stage b2=110 vs b1={51}: values [16105100000, 17596287801), 1121 candidates (even-AP path)
+stage b2=111 vs b1={52}: values [16850581551, 19770609664), 2136 candidates (even-AP path)
+stage b2=112 vs b1={53}: values [17623416832, 22164361129), 3233 candidates (even-AP path)
+stage b2=113 vs b1={54}: values [18424351793, 24794911296), 4416 candidates (even-AP path)
+stage b2=114 vs b1={55}: values [19254145824, 27680640625), 5688 candidates (even-AP path)
+stage b2=115 vs b1={56}: values [20113571875, 30840979456), 7054 candidates (even-AP path)
+stage b2=116 vs b1={57}: values [21003416576, 34296447249), 8517 candidates (even-AP path)
+stage b2=117 vs b1={58}: values [21924480357, 38068692544), 10080 candidates (even-AP path)
+
+*** MATCH: 26601110992 is an 6-digit palindrome in bases 58 and 117
+stage b2=118 vs b1={59}: values [22877577568, 42180533641), 11749 candidates (even-AP path)
+stage b2=119 vs b1={60}: values [23863536599, 46656000000), 13526 candidates (even-AP path)
+stage b2=120 vs b1={61}: values [24883200000, 51520374361), 15416 candidates (even-AP path)
+stage b2=121 vs b1={62}: values [25937424601, 56800235584), 17422 candidates (even-AP path)
+done: 0.00s, 40865 candidates tested

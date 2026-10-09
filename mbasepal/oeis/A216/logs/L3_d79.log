@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=101 vs b1={22}: values [10201, 10648), 5 candidates (generic path)
+stage b2=102 vs b1={23}: values [10404, 12167), 18 candidates (generic path)
+
+*** MATCH: 10507 is an 3-digit palindrome in bases 23 and 102
+done: 0.00s, 23 candidates tested

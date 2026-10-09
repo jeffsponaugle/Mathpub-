@@ -1,0 +1,10 @@
+A171740 search: n=11, threads=1, limit=none
+stage b2=42 vs b1={30}: values [17080198121677824, 17714700000000000), 4854969 candidates (MITM path)
+  MITM b1=30: s=4 t=2 j=2 je=3 Q=900 table=1764 yh=2753
+stage b2=43 vs b1={31}: values [21611482313284249, 25408476896404831), 25828412 candidates (MITM path)
+  MITM b1=31: s=4 t=2 j=2 je=3 Q=961 table=1849 yh=13969
+stage b2=44 vs b1={32}: values [27197360938418176, 36028797018963968), 53551045 candidates (MITM path)
+  MITM b1=32: s=3 t=3 j=3 je=3 Q=32768 table=85184 yh=629
+
+*** MATCH: 28921424479420089 is an 11-digit palindrome in bases 32 and 44
+done: 0.00s, 16845 candidates tested

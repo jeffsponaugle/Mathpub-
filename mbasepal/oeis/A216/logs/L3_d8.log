@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=14 vs b1={6}: values [196, 216), 2 candidates (generic path)
+
+*** MATCH: 197 is an 3-digit palindrome in bases 6 and 14
+done: 0.00s, 2 candidates tested

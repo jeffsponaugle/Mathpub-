@@ -1,0 +1,10 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=21 vs b1={15}: values [37822859361, 38443359375), 3191 candidates (MITM path)
+  MITM b1=15: s=3 t=2 j=2 je=3 Q=225 table=441 yh=8
+stage b2=22 vs b1={16}: values [54875873536, 68719476736), 59097 candidates (MITM path)
+  MITM b1=16: s=3 t=2 j=2 je=3 Q=256 table=484 yh=123
+stage b2=23 vs b1={17}: values [78310985281, 118587876497), 143928 candidates (MITM path)
+  MITM b1=17: s=3 t=2 j=2 je=3 Q=289 table=529 yh=273
+
+*** MATCH: 78641539396 is an 9-digit palindrome in bases 17 and 23
+done: 0.00s, 134 candidates tested

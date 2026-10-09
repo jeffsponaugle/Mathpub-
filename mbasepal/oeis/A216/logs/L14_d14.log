@@ -1,0 +1,14 @@
+A171740 search: n=14, threads=1, limit=none
+stage b2=57 vs b1={43}: values [67046038752496061076057, 73885357344138503765449), 3498556122 candidates (MITM path)
+  MITM b1=43: s=4 t=3 j=3 je=3 Q=79507 table=185193 yh=18892
+stage b2=58 vs b1={44}: values [84055070416556869132288, 101938319743841411792896), 8099355779 candidates (MITM path)
+  MITM b1=44: s=4 t=3 j=3 je=3 Q=85184 table=195112 yh=41512
+stage b2=59 vs b1={45}: values [104972647676132430295979, 139628860198736572265625), 13925699414 candidates (MITM path)
+  MITM b1=45: s=4 t=3 j=3 je=3 Q=91125 table=205379 yh=67805
+stage b2=60 vs b1={46}: values [130606940160000000000000, 189937030341242876870656), 21194162302 candidates (MITM path)
+  MITM b1=46: s=4 t=3 j=3 je=3 Q=97336 table=216000 yh=98122
+stage b2=61 vs b1={47}: values [161915287432152755657581, 256666986187667409334369), 30149364329 candidates (MITM path)
+  MITM b1=47: s=4 t=3 j=3 je=3 Q=103823 table=226981 yh=132828
+
+*** MATCH: 197766169061546926090512 is an 14-digit palindrome in bases 47 and 61
+done: 0.05s, 276589 candidates tested

@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=52 vs b1={14}: values [2704, 2744), 1 candidates (generic path)
+stage b2=53 vs b1={15}: values [2809, 3375), 11 candidates (generic path)
+stage b2=54 vs b1={16}: values [2916, 4096), 22 candidates (generic path)
+
+*** MATCH: 2971 is an 3-digit palindrome in bases 16 and 54
+done: 0.00s, 34 candidates tested

@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=85 vs b1={35}: values [52200625, 52521875), 45 candidates (generic path)
+stage b2=86 vs b1={36}: values [54700816, 60466176), 780 candidates (generic path)
+
+*** MATCH: 56365089 is an 5-digit palindrome in bases 36 and 86
+done: 0.00s, 825 candidates tested

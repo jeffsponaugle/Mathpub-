@@ -1,0 +1,19 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=188 vs b1={14}: values [188, 196), 1 candidates (generic path)
+stage b2=189 vs b1={15}: values [189, 225), 1 candidates (generic path)
+stage b2=190 vs b1={16}: values [190, 256), 1 candidates (generic path)
+stage b2=191 vs b1={17}: values [191, 289), 1 candidates (generic path)
+stage b2=192 vs b1={18}: values [192, 324), 1 candidates (generic path)
+stage b2=193 vs b1={19}: values [193, 361), 1 candidates (generic path)
+stage b2=194 vs b1={20}: values [194, 400), 2 candidates (generic path)
+stage b2=195 vs b1={21}: values [195, 441), 2 candidates (generic path)
+stage b2=196 vs b1={22}: values [196, 484), 2 candidates (generic path)
+stage b2=197 vs b1={23}: values [197, 529), 2 candidates (generic path)
+stage b2=198 vs b1={24}: values [198, 576), 2 candidates (generic path)
+stage b2=199 vs b1={25}: values [199, 625), 3 candidates (generic path)
+stage b2=200 vs b1={26}: values [200, 676), 3 candidates (generic path)
+stage b2=201 vs b1={27}: values [201, 729), 3 candidates (generic path)
+stage b2=202 vs b1={28}: values [202, 784), 3 candidates (generic path)
+
+*** MATCH: 203 is an 2-digit palindrome in bases 28 and 202
+done: 0.00s, 28 candidates tested

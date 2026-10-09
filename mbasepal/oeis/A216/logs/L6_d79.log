@@ -1,0 +1,22 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=141 vs b1={62}: values [55730836701, 56800235584), 382 candidates (even-AP path)
+stage b2=142 vs b1={63}: values [57735339232, 62523502209), 1673 candidates (even-AP path)
+stage b2=143 vs b1={64}: values [59797108943, 68719476736), 3052 candidates (even-AP path)
+stage b2=144 vs b1={65}: values [61917364224, 75418890625), 4522 candidates (even-AP path)
+stage b2=145 vs b1={66}: values [64097340625, 82653950016), 6087 candidates (even-AP path)
+stage b2=146 vs b1={67}: values [66338290976, 90458382169), 7751 candidates (even-AP path)
+stage b2=147 vs b1={68}: values [68641485507, 98867482624), 9516 candidates (even-AP path)
+stage b2=148 vs b1={69}: values [71008211968, 107918163081), 11386 candidates (even-AP path)
+stage b2=149 vs b1={70}: values [73439775749, 117649000000), 13365 candidates (even-AP path)
+stage b2=150 vs b1={71}: values [75937500000, 128100283921), 15456 candidates (even-AP path)
+stage b2=151 vs b1={72}: values [78502725751, 139314069504), 17663 candidates (even-AP path)
+stage b2=152 vs b1={73}: values [81136812032, 151334226289), 19989 candidates (even-AP path)
+stage b2=153 vs b1={74}: values [83841135993, 164206490176), 22439 candidates (even-AP path)
+stage b2=154 vs b1={75}: values [86617093024, 177978515625), 25016 candidates (even-AP path)
+stage b2=155 vs b1={76}: values [89466096875, 192699928576), 27723 candidates (even-AP path)
+stage b2=156 vs b1={77}: values [92389579776, 208422380089), 30564 candidates (even-AP path)
+stage b2=157 vs b1={78}: values [95388992557, 225199600704), 33544 candidates (even-AP path)
+
+*** MATCH: 98773473586 is an 6-digit palindrome in bases 78 and 157
+stage b2=158 vs b1={79}: values [98465804768, 243087455521), 36666 candidates (even-AP path)
+done: 0.00s, 217684 candidates tested

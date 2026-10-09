@@ -1,0 +1,20 @@
+# A045875 search -- DGX Spark (GB10, aarch64) builds
+#   make          -> a045875 (CPU) and a045875gpu (CUDA)
+NVCC ?= /usr/local/cuda/bin/nvcc
+ARCH ?= $(shell $(NVCC) --list-gpu-code 2>/dev/null | grep -q sm_121 \
+                && echo -arch=sm_121 \
+                || echo -gencode arch=compute_120,code=compute_120)
+# no libgmp-dev on this box: link the runtime library by full path
+GMPLIB ?= $(firstword $(wildcard /usr/lib/aarch64-linux-gnu/libgmp.so \
+          /lib/aarch64-linux-gnu/libgmp.so.10 /usr/lib/libgmp.so))
+
+all: a045875 a045875gpu
+
+a045875: a045875.c
+	cc -O3 -Wall -Wextra -o $@ $< $(GMPLIB) -lpthread -lm
+
+a045875gpu: a045875_gpu.cu
+	$(NVCC) -O3 $(ARCH) -o $@ $< -Xlinker $(GMPLIB)
+
+clean:
+	rm -f a045875 a045875gpu

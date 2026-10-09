@@ -1,0 +1,11 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=15 vs b1={4}: values [15, 16), 1 candidates (generic path)
+stage b2=16 vs b1={5}: values [16, 25), 1 candidates (generic path)
+stage b2=17 vs b1={6}: values [17, 36), 2 candidates (generic path)
+stage b2=18 vs b1={7}: values [18, 49), 2 candidates (generic path)
+stage b2=19 vs b1={8}: values [19, 64), 3 candidates (generic path)
+stage b2=20 vs b1={9}: values [20, 81), 4 candidates (generic path)
+stage b2=21 vs b1={10}: values [21, 100), 4 candidates (generic path)
+
+*** MATCH: 22 is an 2-digit palindrome in bases 10 and 21
+done: 0.00s, 14 candidates tested

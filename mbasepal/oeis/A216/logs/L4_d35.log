@@ -1,0 +1,20 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=56 vs b1={21}: values [175616, 194481), 7 candidates (generic path)
+stage b2=57 vs b1={22}: values [185193, 234256), 16 candidates (generic path)
+stage b2=58 vs b1={23}: values [195112, 279841), 26 candidates (generic path)
+stage b2=59 vs b1={24}: values [205379, 331776), 37 candidates (generic path)
+stage b2=60 vs b1={25}: values [216000, 390625), 49 candidates (generic path)
+stage b2=61 vs b1={26}: values [226981, 456976), 62 candidates (generic path)
+stage b2=62 vs b1={27}: values [238328, 531441), 77 candidates (generic path)
+stage b2=63 vs b1={28}: values [250047, 614656), 92 candidates (generic path)
+stage b2=64 vs b1={29}: values [262144, 707281), 109 candidates (generic path)
+
+*** MATCH: 540930 is an 4-digit palindrome in bases 29 and 64
+stage b2=65 vs b1={30}: values [274625, 810000), 127 candidates (generic path)
+stage b2=66 vs b1={31}: values [287496, 923521), 147 candidates (generic path)
+stage b2=67 vs b1={32}: values [300763, 1048576), 167 candidates (generic path)
+stage b2=68 vs b1={33}: values [314432, 1185921), 189 candidates (generic path)
+stage b2=69 vs b1={34}: values [328509, 1336336), 212 candidates (generic path)
+
+*** MATCH: 343000 is an 4-digit palindrome in bases 34 and 69
+done: 0.00s, 736 candidates tested

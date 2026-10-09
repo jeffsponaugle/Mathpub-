@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=17 vs b1={10}: values [83521, 100000), 58 candidates (generic path)
+
+*** MATCH: 94249 is an 5-digit palindrome in bases 10 and 17
+done: 0.00s, 57 candidates tested

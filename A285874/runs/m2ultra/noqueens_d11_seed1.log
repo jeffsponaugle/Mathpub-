@@ -1,0 +1,6 @@
+build: 7c75e38c1115 clang++ 21.0.0 arm64
+fen: rnb1kbnr/pppppppp/8/8/8/8/PPPPPPPP/RNB1KBNR w KQkq - 0 1
+threads: 24  table: 24576 MB  seed: 1  ttmin: 2
+split ply 5: 772206 unique positions (5247292 paths), 0.4s
+  758960/772206 tasks (98.28%)  301s elapsed  ETA 5s
+perft(11) = 1417924743230683   (304.86s, 4.65e+12 leaves/s)

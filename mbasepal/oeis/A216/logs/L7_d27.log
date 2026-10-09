@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=61 vs b1={34}: values [51520374361, 52523350144), 4419 candidates (generic path)
+stage b2=62 vs b1={35}: values [56800235584, 64339296875), 31634 candidates (generic path)
+stage b2=63 vs b1={36}: values [62523502209, 78364164096), 63351 candidates (generic path)
+
+*** MATCH: 62950939696 is an 7-digit palindrome in bases 36 and 63
+done: 0.00s, 99402 candidates tested

@@ -1,0 +1,1418 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: ply author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: ply author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: ply author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: ply author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: ply author:irvine
+Showing 1-6 of 6
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess irvine
+Showing 1-10 of 12
+
+%I A285873 #10 Apr 17 2022 01:00:41
+%S A285873 1,21,441,9872,220447,5247292,124278971,3113440755,77520962327,
+%T A285873 2024021927610
+%N A285873 Number of possible chess games at the end of the n-th ply starting without queens.
+%C A285873 Gives the number of possible chess games where both sides start without queens. Queens are still allowed to appear later in the game through promotion.
+%C A285873 Does not include games which end in fewer than n plies.
+%C A285873 The total number of such games should be less than the total number of standard chess games, and it appears A285873(n) <= A048987(n) for n >= 7.
+%C A285873 Initial terms computed using the Chesspresso engine.
+%H A285873 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285873 a(1) = 21 because there are 20 usual opening moves plus the additional move of moving the king into the vacant square where the queen would usually be.
+%Y A285873 Cf. A048987 (standard), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285873 nonn,hard,more,fini
+%O A285873 0,2
+%A A285873 _Sean A. Irvine_, Apr 28 2017
+
+%I A285874 #13 Apr 17 2022 01:01:19
+%S A285874 1,20,400,8702,188473,4505624,106770421,2770746488,71151220765,
+%T A285874 1969755500063
+%N A285874 Number of possible chess games at the end of the n-th ply starting without rooks.
+%C A285874 Gives the number of possible chess games where both sides start without rooks. Rooks are still allowed to appear later in the game through promotion.
+%C A285874 Does not include games which end in fewer than n plies.
+%C A285874 The total number of such games should be less than the total number of standard chess games, and it appears A285874(n) <= A048987(n) for all n.
+%C A285874 Initial terms computed using the Chesspresso engine.
+%H A285874 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%Y A285874 Cf. A048987 (standard), A285873 (no queens), A285875 (no knights), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285874 nonn,hard,more,fini
+%O A285874 0,2
+%A A285874 _Sean A. Irvine_, Apr 28 2017
+%E A285874 a(9) from _Sean A. Irvine_, May 04 2017
+
+%I A285875 #8 Apr 17 2022 01:01:38
+%S A285875 1,18,324,6572,132640,3030492,68633066,1733220521,43321058602,
+%T A285875 1182486223832
+%N A285875 Number of possible chess games at the end of the n-th ply starting without knights.
+%C A285875 Gives the number of possible chess games where both sides start without knights. Knights are still allowed to appear later in the game through promotion.
+%C A285875 Does not include games which end in fewer than n plies.
+%C A285875 The total number of such games should be less than the total number of standard chess games, and it appears A285875(n) <= A048987(n) for all n.
+%C A285875 Initial terms computed using the Chesspresso engine.
+%H A285875 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285875 a(1) = 18 because each pawn can move forward 1 or 2 squares (16 moves) and each rook can move into the square where the knight would have been (2 moves).
+%Y A285875 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285876 (no bishops), A285877 (no pawns), A285878 (pawns and king).
+%K A285875 nonn,hard,more,fini
+%O A285875 0,2
+%A A285875 _Sean A. Irvine_, Apr 28 2017
+
+%I A285876 #6 May 04 2017 00:04:32
+%S A285876 1,22,484,11248,260904,6434922,158069690,4126252938,107097735673,
+%T A285876 2940365284820
+%N A285876 Number of possible chess games at the end of the n-th ply starting without bishops.
+%C A285876 Gives the number of possible chess games where both sides start without bishops.
+%C A285876 Does not include games which end in fewer than n plies.
+%C A285876 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285876(n) <= A048987(n) for large enough n.
+%C A285876 Initial terms computed using the Chesspresso engine.
+%H A285876 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%e A285876 a(1) = 22 because we have the standard 20 opening moves, plus the queen and king can each move into the squares that would normally contain the bishops.
+%Y A285876 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285877 (no pawns), A285878 (pawns and king).
+%K A285876 nonn,hard,more,fini
+%O A285876 0,2
+%A A285876 _Sean A. Irvine_, Apr 28 2017
+
+%I A285877 #6 May 04 2017 00:04:59
+%S A285877 1,50,2125,96062,4200525,191462298,8509434855,390020597683
+%N A285877 Number of possible chess games at the end of the n-th ply starting without pawns.
+%C A285877 Gives the number of possible chess games where both sides start without pawns.
+%C A285877 Does not include games which end in fewer than n plies.
+%C A285877 The initial terms exceed the corresponding terms in A048987, but this should eventually reverse and we should have A285877(n) <= A048987(n) for large enough n.
+%C A285877 Initial terms computed using the Chesspresso engine.
+%H A285877 <a href="http://www.chesspresso.org/">Chesspresso<sup>TM</sup></a>.
+%Y A285877 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285878 (pawns and king).
+%K A285877 nonn,hard,more,fini
+%O A285877 0,2
+%A A285877 _Sean A. Irvine_, Apr 28 2017
+
+%I A285878 #11 May 04 2017 15:02:19
+%S A285878 1,18,324,5658,98766,1683597,28677387,479763588,8014917042,
+%T A285878 132060434889,2170519816231
+%N A285878 Number of possible chess games at the end of the n-th ply starting with just pawns and king.
+%C A285878 Gives the number of possible chess games where both sides start without queens, rooks, knights, and bishops.
+%C A285878 Does not include games which end in fewer than n plies.
+%C A285878 Initial terms computed using the Chesspresso engine.
+%H A285878 Bernhard Seybold, <a href="http://www.chesspresso.org/">Chesspresso</a>.
+%e A285878 a(1) = 18 since each pawn can move forward 1 or 2 squares (16 moves) or the king can move left or right (2 moves).
+%Y A285878 Cf. A048987 (standard), A285873 (no queens), A285874 (no rooks), A285875 (no knights), A285876 (no bishops), A285877 (no pawns).
+%K A285878 nonn,hard,more,fini
+%O A285878 0,2
+%A A285878 _Sean A. Irvine_, Apr 28 2017
+%E A285878 a(10) from _Sean A. Irvine_, May 04 2017
+
+%I A068911 #133 Mar 13 2026 18:21:39
+%S A068911 1,2,4,6,12,18,36,54,108,162,324,486,972,1458,2916,4374,8748,13122,
+%T A068911 26244,39366,78732,118098,236196,354294,708588,1062882,2125764,
+%U A068911 3188646,6377292,9565938,19131876,28697814,57395628,86093442,172186884,258280326,516560652
+%N A068911 Number of n-step walks (each step +-1 starting from 0) which are never more than 2 or less than -2.
+%C A068911 From _Johannes W. Meijer_, May 29 2010: (Start)
+%C A068911 a(n) is the number of ways White can force checkmate in exactly (n+1) moves, n >= 0, ignoring the fifty-move and the triple repetition rules, in the following chess position: White Ka1, Ra8, Bc1, Nb8, pawns a6, a7, b2, c6, d2, f6, g5 and h6; Black Ke8, Nh8, pawns b3, c7, d3, f7, g6 and h7. (After Noam D. Elkies, see link; diagram 5).
+%C A068911 Counts all paths of length n, n >= 0, starting at the third node on the path graph P_5, see the Maple program. (End)
+%C A068911 From _Alec Jones_, Feb 25 2016: (Start)
+%C A068911 The a(n) are the n-th terms in a "Fibonacci snake" drawn on a rectilinear grid. The n-th term is computed as the sum of the previous terms in cells adjacent to the n-th cell (diagonals included). (This sequence excludes the first term of the snake.)
+%C A068911 For example:
+%C A068911   1 ...  1      1  ...   1 4      1 4 6 ...  1 4 6       1 4 6   ...  and so on.
+%C A068911          1 ...  1 2      1 2 ...  1 2        1 2 12 ...  1 2 12 18 (End)
+%C A068911 From _Gus Wiseman_, Oct 06 2023: (Start)
+%C A068911 Also the number of subsets of {1..n} containing no two distinct elements summing to n. The a(0) = 1 through a(4) = 12 subsets are:
+%C A068911   {}  {}   {}     {}     {}
+%C A068911       {1}  {1}    {1}    {1}
+%C A068911            {2}    {2}    {2}
+%C A068911            {1,2}  {3}    {3}
+%C A068911                   {1,3}  {4}
+%C A068911                   {2,3}  {1,2}
+%C A068911                          {1,4}
+%C A068911                          {2,3}
+%C A068911                          {2,4}
+%C A068911                          {3,4}
+%C A068911                          {1,2,4}
+%C A068911                          {2,3,4}
+%C A068911 For n+1 instead of n we have A038754, complement A167762.
+%C A068911 Including twins gives A117855, complement A366131.
+%C A068911 The complement is counted by A365544.
+%C A068911 For all subsets (not just pairs) we have A365377, complement A365376. (End)
+%C A068911 It appears that a(n) is the L_1 norm of the first column of  M^n, where M is the 3 by 3 Toeplitz matrix with rows (1, 0, -1), (1, 1, 0) and (0, 1, 1). - _Michael Shmoish_, Mar 13 2026
+%H A068911 Alois P. Heinz, <a href="/A068911/b068911.txt">Table of n, a(n) for n = 0..4191</a>
+%H A068911 F. Javier de Vega, <a href="https://arxiv.org/abs/2003.13378">An extension of Furstenberg's theorem of the infinitude of primes</a>, arXiv:2003.13378 [math.NT], 2020-2022.
+%H A068911 Stoyan Dimitrov, <a href="https://arxiv.org/abs/2103.04332">Sorting by shuffling methods and a queue</a>, arXiv:2103.04332 [math.CO], 2021.
+%H A068911 Robert Dorward et al., <a href="https://arxiv.org/abs/1508.07531">A Generalization of Zeckendorf's Theorem via Circumscribed m-gons</a>, arXiv:1508.07531 [math.NT], 2015. See Example 1.3 p. 4.
+%H A068911 Noam D. Elkies, <a href="https://arxiv.org/abs/math/0508645">New Directions in Enumerative Chess Problems</a>, arXiv:math/0508645 [math.CO], 2005; The Electronic Journal of Combinatorics, 11 (2), 2004-2005.
+%H A068911 Sean A. Irvine, <a href="https://oeis.org/wiki/User:Sean_A._Irvine/Walks_on_Graphs#5_vertices">Walks on Graphs</a>.
+%H A068911 D. Panario, M. Sahin, Q. Wang, and W. Webb, <a href="https://doi.org/10.1016/j.amc.2014.05.108">General conditional recurrences</a>, Applied Mathematics and Computation, Volume 243, Sep 15 2014, Pages 220-231.
+%H A068911 Noriaki Sannomiya, H. Katsura, and Y. Nakayama, <a href="https://arxiv.org/abs/1612.02285">Supersymmetry breaking and Nambu-Goldstone fermions with cubic dispersion</a>, arXiv preprint arXiv:1612.02285 [cond-mat.str-el], 2016-2017. See Table I, line 3.
+%H A068911 <a href="/index/Rec#order_02">Index entries for linear recurrences with constant coefficients</a>, signature (0,3).
+%F A068911 a(n) = A068913(2, n) = 2*A038754(n-1) = 3*a(n-2) = a(n-1)*a(n-2)/a(n-3) starting with a(0)=1, a(1)=2, a(2)=4 and a(3)=6.
+%F A068911 For n>0: a(2n) = 4*3^(n-1) = 2*a(2n-1); a(2n+1) = 2*3^n = 3*a(2n)/2 = 2*a(2n)-A000079(n-2).
+%F A068911 From _Paul Barry_, Feb 17 2004: (Start)
+%F A068911 G.f.: (1+x)^2/(1-3x^2).
+%F A068911 a(n) = 2*3^((n+1)/2)*((1-(-1)^n)/6 + sqrt(3)*(1+(-1)^n)/9) - (1/3)*0^n.
+%F A068911 The sequence 0, 1, 2, 4, ... has a(n) = 2*3^(n/2)*((1+(-1)^n)/6 + sqrt(3)*(1-(-1)^n)/9) - (2/3)*0^n + (1/3)*Sum_{k=0..n} binomial(n, k)*k*(-1)^k. (End)
+%F A068911 a(n) = 2^((3 + (-1)^n)/2)*3^((2*n - 3 - (-1)^n)/4) - ((1 - (-1)^(2^n)))/6. - _Luce ETIENNE_, Aug 30 2014
+%F A068911 For n > 2, indexing from 0, a(n) = a(n-1) + a(n-2) if n is odd, a(n-1) + a(n-2) + a(n-3) if n is even. - _Alec Jones_, Feb 25 2016
+%F A068911 a(n) = 2*a(n-1) if n is even, a(n-1) + a(n-2) if n is odd. - _Vincenzo Librandi_, Feb 26 2016
+%F A068911 E.g.f.: (4*cosh(sqrt(3)*x) + 2*sqrt(3)*sinh(sqrt(3)*x) - 1)/3. - _Stefano Spezia_, Feb 17 2022
+%F A068911 From _Amiram Eldar_, Dec 27 2025: (Start)
+%F A068911 Sum_{n>=0} 1/a(n) = 17/8.
+%F A068911 Sum_{n>=0} (-1)^n/a(n) = 5/8. (End)
+%e A068911 The a(3) = 6 walks: (0,-1,-2,-1), (0,-1,0,-1), (0,-1,0,1), (0,1,0,-1), (0,1,0,1), (0,1,2,1). - _Gus Wiseman_, Oct 10 2023
+%p A068911 with(GraphTheory): G:= PathGraph(5): A:=AdjacencyMatrix(G): nmax:=34; for n from 0 to nmax do B(n):=A^n; a(n):=add(B(n)[3,k], k=1..5) od: seq(a(n), n=0..nmax); # _Johannes W. Meijer_, May 29 2010
+%p A068911 # Alternative:
+%p A068911 a:= proc(n) a(n):= `if`(n<2, n+1, (4-irem(n, 2))/2*a(n-1)) end:
+%p A068911 seq(a(n), n=0..40);  # _Alois P. Heinz_, Feb 03 2019
+%t A068911 Join[{1},Transpose[NestList[{Last[#],3First[#]}&,{2,4},40]][[1]]] (* _Harvey P. Dale_, Oct 24 2011 *)
+%t A068911 Table[Length[Select[Subsets[Range[n]],FreeQ[Total/@Subsets[#,{2}],n]&]],{n,0,15}] (* _Gus Wiseman_, Oct 06 2023 *)
+%o A068911 (PARI) a(n)=[4,6][n%2+1]*3^(n\2)\3 \\ _Charles R Greathouse IV_, Feb 26 2016
+%o A068911 (Magma) [Floor((5-(-1)^n)*3^Floor(n/2)/3): n in [0..40]]; // _Bruno Berselli_, Feb 26 2016, after _Charles R Greathouse IV_
+%o A068911 (Python)
+%o A068911 def A068911(n): return 3**(n>>1)<<1 if n&1 else (3**(n-1>>1)<<2 if n else 1) # _Chai Wah Wu_, Aug 30 2024
+%Y A068911 Cf. A000007, A016116 (without initial term), A068912, A068913 for similar.
+%Y A068911 Equals A060647(n-1)+1.
+%Y A068911 Cf. also A028495, A038754, A048328, A078038, A124302, A306293.
+%Y A068911 First differences are A117855.
+%Y A068911 Cf. A004526, A004737, A008967, A046663, A088809, A365376, A365377, A365381, A365541, A365544, A366130.
+%K A068911 nonn,easy,walk
+%O A068911 0,2
+%A A068911 _Henry Bottomley_, Mar 06 2002
+
+%I A066866 #36 May 26 2024 12:51:38
+%S A066866 1,5,22,201,4216,162314,12329633,1831137521,528106112383,
+%T A066866 296848246952000,324932515409958655,692572885398506075946,
+%U A066866 2874785146216927021053015,23237716875160177498526082523,365789982527236500400197753931927,11212996751916827855636781928754023265
+%N A066866 Number of binary arrangements without adjacent 1's in n X n rhombic hexagonal grid torus.
+%D A066866 Steven R. Finch, Mathematical Constants, Cambridge, 2003, pp. 342-349.
+%D A066866 J. Katzenelson and R. P. Kurshan, S/R: A Language for Specifying Protocols and Other Coordinating Processes, pp. 286-292 in Proc. IEEE Conf. Comput. Comm., 1986.
+%H A066866 Sean A. Irvine, <a href="/A066866/b066866.txt">Table of n, a(n) for n = 1..18</a>
+%H A066866 Steven R. Finch, <a href="http://www.people.fas.harvard.edu/~sfinch/constant/square/square.html">Hard Square Entropy Constant</a> [Broken link]
+%H A066866 Steven R. Finch, <a href="http://web.archive.org/web/20010605012506/http://www.mathsoft.com/asolve/constant/square/square.html">Hard Square Entropy Constant</a> [From the Wayback machine]
+%H A066866 Sean A. Irvine, <a href="https://github.com/archmageirvine/joeis/blob/master/src/irvine/oeis/a066/A066866.java">Java program</a> (github)
+%H A066866 V. Kotesovec, <a href="https://oeis.org/wiki/User:Vaclav_Kotesovec">Non-attacking chess pieces</a>, 6ed, 2013, p. 73.
+%e A066866 neighbors for n=4:
+%e A066866 .|/ |/ |/ |/
+%e A066866 -o--o--o--o-
+%e A066866 /| /| /| /|
+%e A066866 .|/ |/ |/ |/
+%e A066866 -o--o--o--o-
+%e A066866 /| /| /| /|
+%e A066866 .|/ |/ |/ |/
+%e A066866 -o--o--o--o-
+%e A066866 /| /| /| /|
+%e A066866 .|/ |/ |/ |/
+%e A066866 -o--o--o--o-
+%e A066866 /| /| /| /|
+%o A066866 (S/R) proc a
+%o A066866 stvar $[N][N]:boolean
+%o A066866 init $[][] := false
+%o A066866 cyset true
+%o A066866 asgn $[][]->{false,true}
+%o A066866 kill +[i in 0.. N-1](
+%o A066866 +[j in 0.. N-1](
+%o A066866 $[i][j]`*(
+%o A066866 $[i][(j+1) mod N]`
+%o A066866 +$[(i-1) mod N][(j+1) mod N]`
+%o A066866 +$[(i-1) mod N][j]` ))) end
+%Y A066866 Cf. A006506, A027683, A066863, A066864, A066865.
+%K A066866 nonn,hard
+%O A066866 1,2
+%A A066866 _R. H. Hardin_, Jan 25 2002
+%E A066866 Terms a(11)-a(12) from _Vaclav Kotesovec_, May 07 2012
+%E A066866 a(13) from _Vaclav Kotesovec_, Aug 15 2016
+%E A066866 a(14) from _Vaclav Kotesovec_, May 24 2021
+%E A066866 a(15)-a(16) from _Sean A. Irvine_, Nov 18 2023
+
+%I A067959 #19 Jan 14 2024 21:09:53
+%S A067959 1,7,22,547,9021,812830,70046159,24082448515,10363980496342,
+%T A067959 14228018243052057,29400555005986658803,166705587265151114516638,
+%U A067959 1606507128309318588452521527,38505096862341023166325442747581,1696028983502674228038462924646464012
+%N A067959 Number of binary arrangements without adjacent 1's on n X n torus connected ne-sw n-s nw-se.
+%H A067959 Sean A. Irvine, <a href="/A067959/b067959.txt">Table of n, a(n) for n = 1..17</a>
+%H A067959 V. Kotesovec, <a href="https://oeis.org/wiki/User:Vaclav_Kotesovec">Non-attacking chess pieces</a>, 6ed, 2013, p. 73.
+%e A067959 Neighbors for n=4 (dots represent spaces):
+%e A067959 .\|/\|/\|/\|/
+%e A067959 . o..o..o..o
+%e A067959 ./|\/|\/|\/|\
+%e A067959 .\|/\|/\|/\|/
+%e A067959 . o..o..o..o
+%e A067959 ./|\/|\/|\/|\
+%e A067959 .\|/\|/\|/\|/
+%e A067959 . o..o..o..o
+%e A067959 ./|\/|\/|\/|\
+%e A067959 .\|/\|/\|/\|/
+%e A067959 . o..o..o..o
+%e A067959 ./|\/|\/|\/|\
+%Y A067959 Cf. circle A000204, line A000045, arrays: ne-sw nw-se A067965, e-w ne-sw nw-se A067963, n-s nw-se A067964, e-w n-s nw-se A066864, e-w ne-sw n-s nw-se A063443, n-s A067966, e-w n-s A006506, nw-se A067962, toruses: bare A002416, ne-sw nw-se A067960, e-w ne-sw n-s nw-se A067958, n-s A067961, e-w n-s A027683, e-w ne-sw n-s A066866.
+%K A067959 nonn,hard
+%O A067959 1,2
+%A A067959 _R. H. Hardin_, Feb 02 2002
+%E A067959 a(13) from _Vaclav Kotesovec_, Aug 22 2016
+%E A067959 a(14) from _Vaclav Kotesovec_, May 24 2021
+%E A067959 a(15) from _Sean A. Irvine_, Jan 14 2024
+
+%I A005679 M0140 #42 Feb 18 2024 03:53:49
+%S A005679 2,1,3,2,3,1,2,1,3,1,2,3,2,1,3,2,3,1,2,3,2,1,3,1,2,1,3,2,3,1,2,1,3,1,
+%T A005679 2,3,2,1,3,1,2,1,3,2,3,1,2,3,2,1,3,2,3,1,2,1,3,1,2,3,2,1,3,2,3,1,2,3,
+%U A005679 2,1,3,1,2,1,3,2,3,1,2,3,2,1,3,2,3,1,2,1,3,1,2,3,2,1,3,1,2,1,3,2,3,1,2,1,3
+%N A005679 A squarefree (or Thue-Morse) ternary sequence: closed under a->abc, b->ac, c->b.
+%C A005679 Fixed point of the morphism 1 -> 23, 2 -> 213 & 3 -> 1. - _Robert G. Wilson v_, Apr 06 2008
+%C A005679 Replacing all 4's in A005681 with 1's yields this sequence. - _Sean A. Irvine_, Aug 04 2016
+%D A005679 A. Salomaa, Jewels of Formal Language Theory. Computer Science Press, Rockville, MD, 1981, p. 10.
+%D A005679 G. Siebert, personal communication.
+%D A005679 N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+%H A005679 Marston Morse and Gustav A. Hedlund, <a href="https://doi.org/10.1215/S0012-7094-44-01101-4">Unending chess, symbolic dynamics and a problem in semigroups</a>, Duke Math. J., Volume 11, Number 1 (1944), 1-7.
+%H A005679 G. Siebert, <a href="/A001285/a001285_1.pdf">Letter to N. J. A. Sloane, Sept. 1977</a>.
+%H A005679 <a href="/index/Fi#FIXEDPOINTS">Index entries for sequences that are fixed points of mappings</a>
+%t A005679 Nest[ # /. {1 -> {2, 3}, 2 -> {2, 1, 3}, 3 -> 1} &, {2}, 7] // Flatten (* _Robert G. Wilson v_, Apr 06 2008 *)
+%t A005679 SubstitutionSystem[{1->{2,3},2->{2,1,3},3->{1}},{2},{7}][[1]] (* _Harvey P. Dale_, Jul 14 2022 *)
+%Y A005679 Cf. A005681.
+%K A005679 nonn,easy,nice
+%O A005679 1,1
+%A A005679 _N. J. A. Sloane_
+%E A005679 More terms from _Robert G. Wilson v_, Apr 06 2008
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess irvine
+Showing 11-12 of 12
+
+%I A063724 #16 Apr 01 2019 02:05:47
+%S A063724 0,0,0,8,11,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,
+%T A063724 72,75,78,81,84,87,90,93,96,99,102,105,108,111,114,117,120,123,126,
+%U A063724 129,132,135,138,141,144,147,150,153,156,159,162,165,168,171,174,177,180
+%N A063724 Consider problem of placing N queens on an n X n board so that each queen attacks precisely 4 others. Sequence gives maximal number of queens.
+%D A063724 Peter Hayes, A Problem of Chess Queens, Journal of Recreational Mathematics, 24(4), 1992, 264-271.
+%F A063724 a(1)=a(2)=a(3)=0, a(4)=8, a(5)=11, a(n) = 3n - 3 for n >= 6.
+%F A063724 From _Colin Barker_, Apr 13 2012: (Start)
+%F A063724 a(n) = 2*a(n-1) - a(n-2) for n >= 8.
+%F A063724 G.f.: x^4*(8 - 5*x + x^2 - x^3)/(1-x)^2. (End)
+%e A063724 Examples from _Sean A. Irvine_, Mar 31 2019: (Start)
+%e A063724 a(4) = 8:
+%e A063724 .QQ.
+%e A063724 Q..Q
+%e A063724 Q..Q
+%e A063724 .QQ.
+%e A063724 a(5) = 11:
+%e A063724 .Q.Q.
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 .QQQ.
+%e A063724 a(6) = 15:
+%e A063724 .Q..Q.
+%e A063724 Q...QQ
+%e A063724 Q.Q...
+%e A063724 Q....Q
+%e A063724 Q....Q
+%e A063724 .QQQQ.
+%e A063724 (End)
+%Y A063724 Cf. A051754-A051759, A051567-A051571, A019654.
+%K A063724 easy,nonn
+%O A063724 1,4
+%A A063724 _Jud McCranie_, Aug 11 2001
+
+%I A396774 #46 Aug 03 2026 16:49:16
+%S A396774 151,13523,3698581,1449300001
+%N A396774 Consider the square spiral with its cells numbered starting at 0, then a(n) is the largest number a ferz can reach if it starts on square 1 and has to make stops on prime numbers within n steps.
+%C A396774 The ferz or fers is a fairy chess piece that may move one square diagonally. In each turn the ferz has to do between 1 and n moves and land on a prime number.
+%C A396774 A king that is allowed to make n steps at a time will be able to reach exactly the same prime numbers as a ferz that can do up to n steps. A knight doing two steps will be able to reach exactly the same squares as a ferz that can do up to 3 steps.
+%C A396774 Because a ferz always remains on a square of the same color and all odd numbers fall on squares of the same color, it is necessary that the ferz start on square 1 rather than 0. - _Sean A. Irvine_, Jul 26 2026
+%H A396774 Brady Haran, Jonas Karlsson, and N. J. A. Sloane, <a href="https://youtu.be/UiX4CFIiegM">Red & Black Knights (extraordinary result)</a>, YouTube Numberphile video, May 2026
+%e A396774 For n=1, the ferz follows the path along the diagonally adjacent squares 1, 3, 5, 19, 41, 71, 107, 151 = a(1). For n=2, the ferz follows the path 1, 5, 37, 101, 199, 331, 491, 683, 911, 1171, 1459, 1783, 2137, 2521, 2939, 3391, 3163, 3631, 3167, 3169, 3637, 4133, 4663, 5227, 5821, 6449, 7109, 7451, 6779, 6781, 7457, 8161, 8527, 9281, 10067, 10883, 11731, 12611, 13523 = a(2). There are many other paths also leading to 13523.
+%Y A396774 Cf. A000040, A392177, A392178.
+%K A396774 nonn,hard,more
+%O A396774 1,1
+%A A396774 _Ruediger Jehn_ and _Kester Habermann_, Jul 07 2026
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess irvine
+Showing 11-12 of 12
+
+%I A063724 #16 Apr 01 2019 02:05:47
+%S A063724 0,0,0,8,11,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,
+%T A063724 72,75,78,81,84,87,90,93,96,99,102,105,108,111,114,117,120,123,126,
+%U A063724 129,132,135,138,141,144,147,150,153,156,159,162,165,168,171,174,177,180
+%N A063724 Consider problem of placing N queens on an n X n board so that each queen attacks precisely 4 others. Sequence gives maximal number of queens.
+%D A063724 Peter Hayes, A Problem of Chess Queens, Journal of Recreational Mathematics, 24(4), 1992, 264-271.
+%F A063724 a(1)=a(2)=a(3)=0, a(4)=8, a(5)=11, a(n) = 3n - 3 for n >= 6.
+%F A063724 From _Colin Barker_, Apr 13 2012: (Start)
+%F A063724 a(n) = 2*a(n-1) - a(n-2) for n >= 8.
+%F A063724 G.f.: x^4*(8 - 5*x + x^2 - x^3)/(1-x)^2. (End)
+%e A063724 Examples from _Sean A. Irvine_, Mar 31 2019: (Start)
+%e A063724 a(4) = 8:
+%e A063724 .QQ.
+%e A063724 Q..Q
+%e A063724 Q..Q
+%e A063724 .QQ.
+%e A063724 a(5) = 11:
+%e A063724 .Q.Q.
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 .QQQ.
+%e A063724 a(6) = 15:
+%e A063724 .Q..Q.
+%e A063724 Q...QQ
+%e A063724 Q.Q...
+%e A063724 Q....Q
+%e A063724 Q....Q
+%e A063724 .QQQQ.
+%e A063724 (End)
+%Y A063724 Cf. A051754-A051759, A051567-A051571, A019654.
+%K A063724 easy,nonn
+%O A063724 1,4
+%A A063724 _Jud McCranie_, Aug 11 2001
+
+%I A396774 #46 Aug 03 2026 16:49:16
+%S A396774 151,13523,3698581,1449300001
+%N A396774 Consider the square spiral with its cells numbered starting at 0, then a(n) is the largest number a ferz can reach if it starts on square 1 and has to make stops on prime numbers within n steps.
+%C A396774 The ferz or fers is a fairy chess piece that may move one square diagonally. In each turn the ferz has to do between 1 and n moves and land on a prime number.
+%C A396774 A king that is allowed to make n steps at a time will be able to reach exactly the same prime numbers as a ferz that can do up to n steps. A knight doing two steps will be able to reach exactly the same squares as a ferz that can do up to 3 steps.
+%C A396774 Because a ferz always remains on a square of the same color and all odd numbers fall on squares of the same color, it is necessary that the ferz start on square 1 rather than 0. - _Sean A. Irvine_, Jul 26 2026
+%H A396774 Brady Haran, Jonas Karlsson, and N. J. A. Sloane, <a href="https://youtu.be/UiX4CFIiegM">Red & Black Knights (extraordinary result)</a>, YouTube Numberphile video, May 2026
+%e A396774 For n=1, the ferz follows the path along the diagonally adjacent squares 1, 3, 5, 19, 41, 71, 107, 151 = a(1). For n=2, the ferz follows the path 1, 5, 37, 101, 199, 331, 491, 683, 911, 1171, 1459, 1783, 2137, 2521, 2939, 3391, 3163, 3631, 3167, 3169, 3637, 4133, 4663, 5227, 5821, 6449, 7109, 7451, 6779, 6781, 7457, 8161, 8527, 9281, 10067, 10883, 11731, 12611, 13523 = a(2). There are many other paths also leading to 13523.
+%Y A396774 Cf. A000040, A392177, A392178.
+%K A396774 nonn,hard,more
+%O A396774 1,1
+%A A396774 _Ruediger Jehn_ and _Kester Habermann_, Jul 07 2026
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess irvine
+Showing 11-12 of 12
+
+%I A063724 #16 Apr 01 2019 02:05:47
+%S A063724 0,0,0,8,11,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,
+%T A063724 72,75,78,81,84,87,90,93,96,99,102,105,108,111,114,117,120,123,126,
+%U A063724 129,132,135,138,141,144,147,150,153,156,159,162,165,168,171,174,177,180
+%N A063724 Consider problem of placing N queens on an n X n board so that each queen attacks precisely 4 others. Sequence gives maximal number of queens.
+%D A063724 Peter Hayes, A Problem of Chess Queens, Journal of Recreational Mathematics, 24(4), 1992, 264-271.
+%F A063724 a(1)=a(2)=a(3)=0, a(4)=8, a(5)=11, a(n) = 3n - 3 for n >= 6.
+%F A063724 From _Colin Barker_, Apr 13 2012: (Start)
+%F A063724 a(n) = 2*a(n-1) - a(n-2) for n >= 8.
+%F A063724 G.f.: x^4*(8 - 5*x + x^2 - x^3)/(1-x)^2. (End)
+%e A063724 Examples from _Sean A. Irvine_, Mar 31 2019: (Start)
+%e A063724 a(4) = 8:
+%e A063724 .QQ.
+%e A063724 Q..Q
+%e A063724 Q..Q
+%e A063724 .QQ.
+%e A063724 a(5) = 11:
+%e A063724 .Q.Q.
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 .QQQ.
+%e A063724 a(6) = 15:
+%e A063724 .Q..Q.
+%e A063724 Q...QQ
+%e A063724 Q.Q...
+%e A063724 Q....Q
+%e A063724 Q....Q
+%e A063724 .QQQQ.
+%e A063724 (End)
+%Y A063724 Cf. A051754-A051759, A051567-A051571, A019654.
+%K A063724 easy,nonn
+%O A063724 1,4
+%A A063724 _Jud McCranie_, Aug 11 2001
+
+%I A396774 #46 Aug 03 2026 16:49:16
+%S A396774 151,13523,3698581,1449300001
+%N A396774 Consider the square spiral with its cells numbered starting at 0, then a(n) is the largest number a ferz can reach if it starts on square 1 and has to make stops on prime numbers within n steps.
+%C A396774 The ferz or fers is a fairy chess piece that may move one square diagonally. In each turn the ferz has to do between 1 and n moves and land on a prime number.
+%C A396774 A king that is allowed to make n steps at a time will be able to reach exactly the same prime numbers as a ferz that can do up to n steps. A knight doing two steps will be able to reach exactly the same squares as a ferz that can do up to 3 steps.
+%C A396774 Because a ferz always remains on a square of the same color and all odd numbers fall on squares of the same color, it is necessary that the ferz start on square 1 rather than 0. - _Sean A. Irvine_, Jul 26 2026
+%H A396774 Brady Haran, Jonas Karlsson, and N. J. A. Sloane, <a href="https://youtu.be/UiX4CFIiegM">Red & Black Knights (extraordinary result)</a>, YouTube Numberphile video, May 2026
+%e A396774 For n=1, the ferz follows the path along the diagonally adjacent squares 1, 3, 5, 19, 41, 71, 107, 151 = a(1). For n=2, the ferz follows the path 1, 5, 37, 101, 199, 331, 491, 683, 911, 1171, 1459, 1783, 2137, 2521, 2939, 3391, 3163, 3631, 3167, 3169, 3637, 4133, 4663, 5227, 5821, 6449, 7109, 7451, 6779, 6781, 7457, 8161, 8527, 9281, 10067, 10883, 11731, 12611, 13523 = a(2). There are many other paths also leading to 13523.
+%Y A396774 Cf. A000040, A392177, A392178.
+%K A396774 nonn,hard,more
+%O A396774 1,1
+%A A396774 _Ruediger Jehn_ and _Kester Habermann_, Jul 07 2026
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: chess irvine
+Showing 11-12 of 12
+
+%I A063724 #16 Apr 01 2019 02:05:47
+%S A063724 0,0,0,8,11,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,
+%T A063724 72,75,78,81,84,87,90,93,96,99,102,105,108,111,114,117,120,123,126,
+%U A063724 129,132,135,138,141,144,147,150,153,156,159,162,165,168,171,174,177,180
+%N A063724 Consider problem of placing N queens on an n X n board so that each queen attacks precisely 4 others. Sequence gives maximal number of queens.
+%D A063724 Peter Hayes, A Problem of Chess Queens, Journal of Recreational Mathematics, 24(4), 1992, 264-271.
+%F A063724 a(1)=a(2)=a(3)=0, a(4)=8, a(5)=11, a(n) = 3n - 3 for n >= 6.
+%F A063724 From _Colin Barker_, Apr 13 2012: (Start)
+%F A063724 a(n) = 2*a(n-1) - a(n-2) for n >= 8.
+%F A063724 G.f.: x^4*(8 - 5*x + x^2 - x^3)/(1-x)^2. (End)
+%e A063724 Examples from _Sean A. Irvine_, Mar 31 2019: (Start)
+%e A063724 a(4) = 8:
+%e A063724 .QQ.
+%e A063724 Q..Q
+%e A063724 Q..Q
+%e A063724 .QQ.
+%e A063724 a(5) = 11:
+%e A063724 .Q.Q.
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 Q...Q
+%e A063724 .QQQ.
+%e A063724 a(6) = 15:
+%e A063724 .Q..Q.
+%e A063724 Q...QQ
+%e A063724 Q.Q...
+%e A063724 Q....Q
+%e A063724 Q....Q
+%e A063724 .QQQQ.
+%e A063724 (End)
+%Y A063724 Cf. A051754-A051759, A051567-A051571, A019654.
+%K A063724 easy,nonn
+%O A063724 1,4
+%A A063724 _Jud McCranie_, Aug 11 2001
+
+%I A396774 #46 Aug 03 2026 16:49:16
+%S A396774 151,13523,3698581,1449300001
+%N A396774 Consider the square spiral with its cells numbered starting at 0, then a(n) is the largest number a ferz can reach if it starts on square 1 and has to make stops on prime numbers within n steps.
+%C A396774 The ferz or fers is a fairy chess piece that may move one square diagonally. In each turn the ferz has to do between 1 and n moves and land on a prime number.
+%C A396774 A king that is allowed to make n steps at a time will be able to reach exactly the same prime numbers as a ferz that can do up to n steps. A knight doing two steps will be able to reach exactly the same squares as a ferz that can do up to 3 steps.
+%C A396774 Because a ferz always remains on a square of the same color and all odd numbers fall on squares of the same color, it is necessary that the ferz start on square 1 rather than 0. - _Sean A. Irvine_, Jul 26 2026
+%H A396774 Brady Haran, Jonas Karlsson, and N. J. A. Sloane, <a href="https://youtu.be/UiX4CFIiegM">Red & Black Knights (extraordinary result)</a>, YouTube Numberphile video, May 2026
+%e A396774 For n=1, the ferz follows the path along the diagonally adjacent squares 1, 3, 5, 19, 41, 71, 107, 151 = a(1). For n=2, the ferz follows the path 1, 5, 37, 101, 199, 331, 491, 683, 911, 1171, 1459, 1783, 2137, 2521, 2939, 3391, 3163, 3631, 3167, 3169, 3637, 4133, 4663, 5227, 5821, 6449, 7109, 7451, 6779, 6781, 7457, 8161, 8527, 9281, 10067, 10883, 11731, 12611, 13523 = a(2). There are many other paths also leading to 13523.
+%Y A396774 Cf. A000040, A392177, A392178.
+%K A396774 nonn,hard,more
+%O A396774 1,1
+%A A396774 _Ruediger Jehn_ and _Kester Habermann_, Jul 07 2026
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

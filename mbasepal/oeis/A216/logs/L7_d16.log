@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=40 vs b1={24}: values [4096000000, 4586471424), 7664 candidates (generic path)
+stage b2=41 vs b1={25}: values [4750104241, 6103515625), 19638 candidates (generic path)
+
+*** MATCH: 6041072349 is an 7-digit palindrome in bases 25 and 41
+stage b2=42 vs b1={26}: values [5489031744, 8031810176), 34322 candidates (generic path)
+done: 0.00s, 34751 candidates tested

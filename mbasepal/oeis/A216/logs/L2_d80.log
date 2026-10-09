@@ -1,0 +1,10 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=90 vs b1={10}: values [90, 100), 1 candidates (generic path)
+stage b2=91 vs b1={11}: values [91, 121), 1 candidates (generic path)
+stage b2=92 vs b1={12}: values [92, 144), 1 candidates (generic path)
+stage b2=93 vs b1={13}: values [93, 169), 1 candidates (generic path)
+stage b2=94 vs b1={14}: values [94, 196), 2 candidates (generic path)
+stage b2=95 vs b1={15}: values [95, 225), 2 candidates (generic path)
+
+*** MATCH: 96 is an 2-digit palindrome in bases 15 and 95
+done: 0.00s, 8 candidates tested

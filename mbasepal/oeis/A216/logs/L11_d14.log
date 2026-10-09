@@ -1,0 +1,16 @@
+A171740 search: n=11, threads=1, limit=none
+stage b2=48 vs b1={34}: values [64925062108545024, 70188843638032384), 20658162 candidates (MITM path)
+  MITM b1=34: s=4 t=2 j=2 je=3 Q=1156 table=2304 yh=8967
+stage b2=49 vs b1={35}: values [79792266297612001, 96549157373046875), 59321627 candidates (MITM path)
+  MITM b1=35: s=4 t=2 j=2 je=3 Q=1225 table=2401 yh=24708
+stage b2=50 vs b1={36}: values [97656250000000000, 131621703842267136), 108689453 candidates (MITM path)
+  MITM b1=36: s=3 t=3 j=3 je=3 Q=46656 table=125000 yh=870
+stage b2=51 vs b1={37}: values [119042423827613001, 177917621779460413), 170640259 candidates (MITM path)
+  MITM b1=37: s=3 t=3 j=3 je=3 Q=50653 table=132651 yh=1287
+stage b2=52 vs b1={38}: values [144555105949057024, 238572050223552512), 247280240 candidates (MITM path)
+  MITM b1=38: s=3 t=3 j=3 je=3 Q=54872 table=140608 yh=1759
+
+*** MATCH: 183094184161456101 is an 11-digit palindrome in bases 38 and 52
+stage b2=53 vs b1={39}: values [174887470365513049, 317475837322472439), 340961033 candidates (MITM path)
+  MITM b1=39: s=3 t=3 j=3 je=3 Q=59319 table=148877 yh=2291
+done: 0.01s, 36685 candidates tested

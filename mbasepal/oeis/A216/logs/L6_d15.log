@@ -1,0 +1,8 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=34 vs b1={19}: values [45435424, 47045881), 41 candidates (even-AP path)
+stage b2=35 vs b1={20}: values [52521875, 64000000), 268 candidates (even-AP path)
+stage b2=36 vs b1={21}: values [60466176, 85766121), 543 candidates (even-AP path)
+stage b2=37 vs b1={22}: values [69343957, 113379904), 870 candidates (even-AP path)
+
+*** MATCH: 75954970 is an 6-digit palindrome in bases 22 and 37
+done: 0.00s, 1000 candidates tested

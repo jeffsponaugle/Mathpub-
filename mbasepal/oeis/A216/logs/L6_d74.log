@@ -1,0 +1,17 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=133 vs b1={59}: values [41615795893, 42180533641), 241 candidates (even-AP path)
+stage b2=134 vs b1={60}: values [43204003424, 46656000000), 1435 candidates (even-AP path)
+stage b2=135 vs b1={61}: values [44840334375, 51520374361), 2716 candidates (even-AP path)
+stage b2=136 vs b1={62}: values [46525874176, 56800235584), 4085 candidates (even-AP path)
+stage b2=137 vs b1={63}: values [48261724457, 62523502209), 5547 candidates (even-AP path)
+stage b2=138 vs b1={64}: values [50049003168, 68719476736), 7105 candidates (even-AP path)
+stage b2=139 vs b1={65}: values [51888844699, 75418890625), 8762 candidates (even-AP path)
+stage b2=140 vs b1={66}: values [53782400000, 82653950016), 10522 candidates (even-AP path)
+
+*** MATCH: 64953443661 is an 6-digit palindrome in bases 66 and 140
+stage b2=141 vs b1={67}: values [55730836701, 90458382169), 12389 candidates (even-AP path)
+stage b2=142 vs b1={68}: values [57735339232, 98867482624), 14366 candidates (even-AP path)
+stage b2=143 vs b1={69}: values [59797108943, 107918163081), 16457 candidates (even-AP path)
+stage b2=144 vs b1={70}: values [61917364224, 117649000000), 18665 candidates (even-AP path)
+stage b2=145 vs b1={71}: values [64097340625, 128100283921), 20995 candidates (even-AP path)
+done: 0.00s, 43332 candidates tested

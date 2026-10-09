@@ -1,0 +1,7 @@
+a(6) = 11263684837
+  compact solutions, not reduced for symmetry: 90107368610
+  compact starting positions, reduced: 11262875246 (1621441 solutions share a puzzle with another)
+  induced path covers visited: 90377640020 (11297471910 canonical), witness-search nodes: 159141439788
+  141212 tasks, 24 threads, 1025.39 s
+  exhaustive-routing cross-check: 2928457 covers checked, 0 mismatches
+  (XCHECK variant build)

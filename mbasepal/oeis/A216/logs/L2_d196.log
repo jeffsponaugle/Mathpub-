@@ -1,0 +1,17 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=211 vs b1={15}: values [211, 225), 1 candidates (generic path)
+stage b2=212 vs b1={16}: values [212, 256), 1 candidates (generic path)
+stage b2=213 vs b1={17}: values [213, 289), 1 candidates (generic path)
+stage b2=214 vs b1={18}: values [214, 324), 1 candidates (generic path)
+stage b2=215 vs b1={19}: values [215, 361), 1 candidates (generic path)
+stage b2=216 vs b1={20}: values [216, 400), 1 candidates (generic path)
+stage b2=217 vs b1={21}: values [217, 441), 2 candidates (generic path)
+stage b2=218 vs b1={22}: values [218, 484), 2 candidates (generic path)
+stage b2=219 vs b1={23}: values [219, 529), 2 candidates (generic path)
+stage b2=220 vs b1={24}: values [220, 576), 2 candidates (generic path)
+stage b2=221 vs b1={25}: values [221, 625), 2 candidates (generic path)
+stage b2=222 vs b1={26}: values [222, 676), 3 candidates (generic path)
+stage b2=223 vs b1={27}: values [223, 729), 3 candidates (generic path)
+
+*** MATCH: 224 is an 2-digit palindrome in bases 27 and 223
+done: 0.00s, 22 candidates tested

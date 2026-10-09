@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=191 vs b1={34}: values [36481, 39304), 15 candidates (generic path)
+
+*** MATCH: 38010 is an 3-digit palindrome in bases 34 and 191
+stage b2=192 vs b1={35}: values [36864, 42875), 32 candidates (generic path)
+stage b2=193 vs b1={36}: values [37249, 46656), 49 candidates (generic path)
+
+*** MATCH: 37829 is an 3-digit palindrome in bases 36 and 193
+stage b2=194 vs b1={37}: values [37636, 50653), 68 candidates (generic path)
+done: 0.00s, 26 candidates tested

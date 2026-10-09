@@ -1,0 +1,5 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=48 vs b1={28}: values [12230590464, 13492928512), 11415 candidates (generic path)
+
+*** MATCH: 12359264257 is an 7-digit palindrome in bases 28 and 48
+done: 0.00s, 11414 candidates tested

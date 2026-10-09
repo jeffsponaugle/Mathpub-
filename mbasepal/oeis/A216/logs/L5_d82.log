@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=132 vs b1={50}: values [303595776, 312500000), 512 candidates (generic path)
+stage b2=133 vs b1={51}: values [312900721, 345025251), 1817 candidates (generic path)
+stage b2=134 vs b1={52}: values [322417936, 380204032), 3219 candidates (generic path)
+
+*** MATCH: 329582649 is an 5-digit palindrome in bases 52 and 134
+done: 0.00s, 5547 candidates tested

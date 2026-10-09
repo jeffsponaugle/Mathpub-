@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=49 vs b1={23}: values [5764801, 6436343), 280 candidates (generic path)
+
+*** MATCH: 6298020 is an 5-digit palindrome in bases 23 and 49
+stage b2=50 vs b1={24}: values [6250000, 7962624), 686 candidates (generic path)
+done: 0.00s, 300 candidates tested

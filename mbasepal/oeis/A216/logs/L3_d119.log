@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=147 vs b1={28}: values [21609, 21952), 3 candidates (generic path)
+stage b2=148 vs b1={29}: values [21904, 24389), 17 candidates (generic path)
+stage b2=149 vs b1={30}: values [22201, 27000), 33 candidates (generic path)
+
+*** MATCH: 23245 is an 3-digit palindrome in bases 30 and 149
+stage b2=150 vs b1={31}: values [22500, 29791), 49 candidates (generic path)
+stage b2=151 vs b1={32}: values [22801, 32768), 67 candidates (generic path)
+stage b2=152 vs b1={33}: values [23104, 35937), 85 candidates (generic path)
+done: 0.00s, 62 candidates tested

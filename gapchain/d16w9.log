@@ -1,0 +1,31 @@
+2026-09-26 17:57:33  started (pid 96431): ./gapsieve -l 17 -s 35957542650153533440 -e 38000000000000000000 --first --gaps dec -c d16w9.ck -r --log d16w9.log -q --gpu
+2026-09-26 17:57:33  consecutive primes, decreasing gaps, chain length >= 17, range 35957542650153533440..38000000000000000000, GPU (Apple M4 Max) plus 12 CPU threads, first match only
+2026-09-26 17:57:33  (sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+2026-09-26 17:58:33  3.73%  eta 00:25:54  no hit yet  1.27P/s  at 3.60336e+19  elapsed 00:01:00
+2026-09-26 17:59:34  7.48%  eta 00:24:49  no hit yet  1.27P/s  at 3.61103e+19  elapsed 00:02:00
+2026-09-26 18:00:34  11.23%  eta 00:23:47  no hit yet  1.27P/s  at 3.61868e+19  elapsed 00:03:00
+2026-09-26 18:01:34  14.98%  eta 00:22:45  no hit yet  1.27P/s  at 3.62635e+19  elapsed 00:04:00
+2026-09-26 18:02:34  18.75%  eta 00:21:43  no hit yet  1.27P/s  at 3.63405e+19  elapsed 00:05:00
+2026-09-26 18:03:34  22.52%  eta 00:20:41  no hit yet  1.27P/s  at 3.64175e+19  elapsed 00:06:00
+2026-09-26 18:04:34  26.29%  eta 00:19:41  no hit yet  1.27P/s  at 3.64944e+19  elapsed 00:07:01
+2026-09-26 18:05:35  30.06%  eta 00:18:40  no hit yet  1.28P/s  at 3.65715e+19  elapsed 00:08:01
+2026-09-26 18:06:35  33.82%  eta 00:17:39  no hit yet  1.28P/s  at 3.66484e+19  elapsed 00:09:01
+2026-09-26 18:07:35  37.58%  eta 00:16:39  no hit yet  1.28P/s  at 3.67251e+19  elapsed 00:10:01
+2026-09-26 18:08:35  41.35%  eta 00:15:38  no hit yet  1.28P/s  at 3.6802e+19  elapsed 00:11:01
+2026-09-26 18:09:35  45.12%  eta 00:14:38  no hit yet  1.28P/s  at 3.6879e+19  elapsed 00:12:02
+2026-09-26 18:10:35  48.88%  eta 00:13:38  no hit yet  1.28P/s  at 3.69559e+19  elapsed 00:13:02
+2026-09-26 18:11:36  52.63%  eta 00:12:38  no hit yet  1.28P/s  at 3.70326e+19  elapsed 00:14:02
+2026-09-26 18:12:36  56.38%  eta 00:11:38  no hit yet  1.28P/s  at 3.71091e+19  elapsed 00:15:02
+2026-09-26 18:13:36  60.14%  eta 00:10:38  no hit yet  1.28P/s  at 3.71858e+19  elapsed 00:16:02
+2026-09-26 18:14:36  63.89%  eta 00:09:38  no hit yet  1.28P/s  at 3.72625e+19  elapsed 00:17:03
+2026-09-26 18:15:36  67.63%  eta 00:08:38  no hit yet  1.28P/s  at 3.73389e+19  elapsed 00:18:03
+2026-09-26 18:16:36  71.35%  eta 00:07:38  no hit yet  1.27P/s  at 3.74149e+19  elapsed 00:19:03
+2026-09-26 18:17:36  75.09%  eta 00:06:39  no hit yet  1.27P/s  at 3.74912e+19  elapsed 00:20:03
+2026-09-26 18:18:36  78.83%  eta 00:05:39  no hit yet  1.27P/s  at 3.75677e+19  elapsed 00:21:03
+2026-09-26 18:19:36  82.58%  eta 00:04:39  no hit yet  1.27P/s  at 3.76441e+19  elapsed 00:22:03
+2026-09-26 18:20:37  86.33%  eta 00:03:39  no hit yet  1.27P/s  at 3.77208e+19  elapsed 00:23:03
+2026-09-26 18:21:37  90.05%  eta 00:02:39  no hit yet  1.27P/s  at 3.77968e+19  elapsed 00:24:03
+2026-09-26 18:22:37  93.79%  eta 00:01:39  no hit yet  1.27P/s  at 3.78731e+19  elapsed 00:25:03
+2026-09-26 18:23:37  97.54%  eta 00:00:39  no hit yet  1.27P/s  at 3.79498e+19  elapsed 00:26:03
+2026-09-26 18:24:16  no decreasing-gap chain (A263049) of length 17 in 35957542650153533440..38000000000000000000, 00:26:43 elapsed
+2026-09-26 18:24:16  exit 0

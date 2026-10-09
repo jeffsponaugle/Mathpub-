@@ -1,0 +1,12 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=199 vs b1={15}: values [199, 225), 1 candidates (generic path)
+stage b2=200 vs b1={16}: values [200, 256), 1 candidates (generic path)
+stage b2=201 vs b1={17}: values [201, 289), 1 candidates (generic path)
+stage b2=202 vs b1={18}: values [202, 324), 1 candidates (generic path)
+stage b2=203 vs b1={19}: values [203, 361), 1 candidates (generic path)
+stage b2=204 vs b1={20}: values [204, 400), 1 candidates (generic path)
+stage b2=205 vs b1={21}: values [205, 441), 2 candidates (generic path)
+stage b2=206 vs b1={22}: values [206, 484), 2 candidates (generic path)
+
+*** MATCH: 207 is an 2-digit palindrome in bases 22 and 206
+done: 0.00s, 10 candidates tested

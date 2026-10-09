@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=23 vs b1={5}: values [23, 25), 1 candidates (generic path)
+
+*** MATCH: 24 is an 2-digit palindrome in bases 5 and 23
+done: 0.00s, 1 candidates tested

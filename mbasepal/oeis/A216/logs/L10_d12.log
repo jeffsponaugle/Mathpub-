@@ -1,0 +1,12 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=40 vs b1={28}: values [262144000000000, 296196766695424), 332547 candidates (MITM path)
+  MITM b1=28: s=3 t=2 j=2 je=2 Q=784 table=1600 yh=208
+stage b2=41 vs b1={29}: values [327381934393961, 420707233300201), 805528 candidates (MITM path)
+  MITM b1=29: s=3 t=2 j=2 je=2 Q=841 table=1681 yh=480
+stage b2=42 vs b1={30}: values [406671383849472, 590490000000000), 1406511 candidates (MITM path)
+  MITM b1=30: s=3 t=2 j=2 je=2 Q=900 table=1764 yh=798
+stage b2=43 vs b1={31}: values [502592611936843, 819628286980801), 2156582 candidates (MITM path)
+  MITM b1=31: s=3 t=2 j=2 je=2 Q=961 table=1849 yh=1167
+
+*** MATCH: 567228097076960 is an 10-digit palindrome in bases 31 and 43
+done: 0.00s, 1724 candidates tested

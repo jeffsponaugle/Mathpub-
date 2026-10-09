@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=168 vs b1={31}: values [28224, 29791), 10 candidates (generic path)
+stage b2=169 vs b1={32}: values [28561, 32768), 25 candidates (generic path)
+stage b2=170 vs b1={33}: values [28900, 35937), 42 candidates (generic path)
+
+*** MATCH: 28901 is an 3-digit palindrome in bases 33 and 170
+done: 0.00s, 77 candidates tested

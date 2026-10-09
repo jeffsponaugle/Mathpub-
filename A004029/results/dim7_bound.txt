@@ -1,0 +1,22 @@
+7-dim Q-classes with a 1-dim rational constituent (distinct fingerprints): 38074
+  split into Z-classes:        38067
+  excluded (CARAT failure or stopped): 7
+      1c1c1c1c1c1__group.1043__C  (rc-15)
+      1c1c1c1c1c1__group.1043__T  (rc-15)
+      1c1c1c1c1c1__min.170__C  (rc-15)
+      2-2s1c1c1c1__group.1696__X10  (rc-15)
+      6-2p__group.7619__C  (rc3)
+      6-2p__group.7619__T  (rc3)
+      6-2p__group.7619__X10  (rc3)
+Z-classes counted:             1431317   (dropped: 2 unclear Z_equiv, 0 errors, 0 orphans)
+space-group types (affine):    12540299110
+incl. enantiomorphs (proper):  12540769790
+enantiomorphic pairs:          470680
+normalizer cross-check: 40000 Z-classes recomputed, 0 differences, covering 94.94% of the affine total
+
+Lower bounds:
+  A004028(7) >= 38074
+  A004027(7) >= 1431317
+  A004029(7) >= 12540299110
+  A006227(7) >= 12540769790
+  A395859(7) >= 470680

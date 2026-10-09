@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=34 vs b1={17}: values [1336336, 1419857), 73 candidates (generic path)
+stage b2=35 vs b1={18}: values [1500625, 1889568), 318 candidates (generic path)
+
+*** MATCH: 1722526 is an 5-digit palindrome in bases 18 and 35
+stage b2=36 vs b1={19}: values [1679616, 2476099), 615 candidates (generic path)
+done: 0.00s, 425 candidates tested

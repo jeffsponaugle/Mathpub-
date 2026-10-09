@@ -1,0 +1,17 @@
+build: 7c75e38c1115 g++ 13 x86_64
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 96  table: 614400 MB  seed: 1  ttmin: 2
+split ply 5: 734593 unique positions (4505624 paths), 1.2s
+  2697/734593 tasks (0.37%)  302s elapsed  ETA 81462s
+  8526/734593 tasks (1.16%)  602s elapsed  ETA 51123s
+  14639/734593 tasks (1.99%)  902s elapsed  ETA 44286s
+  21641/734593 tasks (2.95%)  1202s elapsed  ETA 39554s
+  27955/734593 tasks (3.81%)  1502s elapsed  ETA 37937s
+build: 7de4dcb9ad85 g++ 13 x86_64
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 96  table: off  seed: 1  ttmin: 2
+runs/norooks_d13_seed1.ckpt: 326845 entries
+runs/norooks_d13_seed1.mathb.ckpt: 315638 entries
+runs/norooks_d13_seed1.mathg.ckpt: 92110 entries
+merged 734593 tasks from 3 files; 0 computed twice, all agreeing
+perft(13) = 1363086189786054605

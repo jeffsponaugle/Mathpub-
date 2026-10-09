@@ -1,0 +1,5 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=177 vs b1={85}: values [30749609024289, 32057708828125), 235897 candidates (generic path)
+
+*** MATCH: 31169202457072 is an 7-digit palindrome in bases 85 and 177
+done: 0.00s, 131072 candidates tested

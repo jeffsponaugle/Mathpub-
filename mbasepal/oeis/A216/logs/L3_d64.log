@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=84 vs b1={20}: values [7056, 8000), 12 candidates (generic path)
+
+*** MATCH: 7057 is an 3-digit palindrome in bases 20 and 84
+done: 0.00s, 12 candidates tested

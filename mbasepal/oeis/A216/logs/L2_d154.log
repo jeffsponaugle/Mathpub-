@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=167 vs b1={13}: values [167, 169), 1 candidates (generic path)
+
+*** MATCH: 168 is an 2-digit palindrome in bases 13 and 167
+done: 0.00s, 1 candidates tested

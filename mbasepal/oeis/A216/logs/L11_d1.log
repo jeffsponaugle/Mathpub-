@@ -1,0 +1,8 @@
+A171740 search: n=11, threads=1, limit=none
+stage b2=7 vs b1={6}: values [282475249, 362797056), 4780 candidates (MITM path)
+  MITM b1=6: s=3 t=3 j=3 je=3 Q=216 table=343 yh=14
+stage b2=8 vs b1={7}: values [1073741824, 1977326743), 27576 candidates (MITM path)
+  MITM b1=7: s=3 t=3 j=3 je=3 Q=343 table=512 yh=54
+
+*** MATCH: 1556085529 is an 11-digit palindrome in bases 7 and 8
+done: 0.00s, 43 candidates tested

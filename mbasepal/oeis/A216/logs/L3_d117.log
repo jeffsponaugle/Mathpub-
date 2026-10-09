@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=145 vs b1={28}: values [21025, 21952), 7 candidates (generic path)
+
+*** MATCH: 21026 is an 3-digit palindrome in bases 28 and 145
+done: 0.00s, 7 candidates tested

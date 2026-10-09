@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=194 vs b1={14}: values [194, 196), 1 candidates (generic path)
+
+*** MATCH: 195 is an 2-digit palindrome in bases 14 and 194
+done: 0.00s, 1 candidates tested

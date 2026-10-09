@@ -1,0 +1,12 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=256 vs b1={102}: values [1099511627776, 1126162419264), 1589 candidates (even-AP path)
+stage b2=257 vs b1={103}: values [1121154893057, 1194052296529), 4295 candidates (even-AP path)
+stage b2=258 vs b1={104}: values [1143137652768, 1265319018496), 7115 candidates (even-AP path)
+stage b2=259 vs b1={105}: values [1165463885299, 1340095640625), 10052 candidates (even-AP path)
+stage b2=260 vs b1={106}: values [1188137600000, 1418519112256), 13108 candidates (even-AP path)
+stage b2=261 vs b1={107}: values [1211162837301, 1500730351849), 16287 candidates (even-AP path)
+stage b2=262 vs b1={108}: values [1234543668832, 1586874322944), 19591 candidates (even-AP path)
+stage b2=263 vs b1={109}: values [1258284197543, 1677100110841), 23023 candidates (even-AP path)
+
+*** MATCH: 1277604207000 is an 6-digit palindrome in bases 109 and 263
+done: 0.00s, 73352 candidates tested

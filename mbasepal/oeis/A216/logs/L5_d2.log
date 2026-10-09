@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=7 vs b1={5}: values [2401, 3125), 15 candidates (generic path)
+stage b2=8 vs b1={6}: values [4096, 7776), 58 candidates (generic path)
+
+*** MATCH: 5001 is an 5-digit palindrome in bases 6 and 8
+done: 0.00s, 72 candidates tested

@@ -1,0 +1,17 @@
+# dspattern checkpoint -- safe to inspect
+version 1
+complete 1
+length 10
+all 0
+first 1
+start 56676324800
+end 1000000000000000000000
+items 609424 1c776b9ddd0da601
+elapsed 5.324
+candidates 3581358838
+sieved 3909550
+tests 4703523
+found 1
+longest 10 63782998969989799429
+best 63782998969989799429
+watermark 1367

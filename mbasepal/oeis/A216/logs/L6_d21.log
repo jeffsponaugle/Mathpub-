@@ -1,0 +1,13 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=45 vs b1={24}: values [184528125, 191102976), 73 candidates (even-AP path)
+stage b2=46 vs b1={25}: values [205962976, 244140625), 393 candidates (even-AP path)
+stage b2=47 vs b1={26}: values [229345007, 308915776), 767 candidates (even-AP path)
+stage b2=48 vs b1={27}: values [254803968, 387420489), 1200 candidates (even-AP path)
+stage b2=49 vs b1={28}: values [282475249, 481890304), 1696 candidates (even-AP path)
+stage b2=50 vs b1={29}: values [312500000, 594823321), 2259 candidates (even-AP path)
+stage b2=51 vs b1={30}: values [345025251, 729000000), 2895 candidates (even-AP path)
+stage b2=52 vs b1={31}: values [380204032, 887503681), 3608 candidates (even-AP path)
+stage b2=53 vs b1={32}: values [418195493, 1073741824), 4404 candidates (even-AP path)
+
+*** MATCH: 433366956 is an 6-digit palindrome in bases 32 and 53
+done: 0.00s, 12997 candidates tested

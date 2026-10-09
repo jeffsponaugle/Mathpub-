@@ -1,0 +1,18 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=78 vs b1={9}: values [78, 81), 1 candidates (generic path)
+stage b2=79 vs b1={10}: values [79, 100), 1 candidates (generic path)
+stage b2=80 vs b1={11}: values [80, 121), 1 candidates (generic path)
+stage b2=81 vs b1={12}: values [81, 144), 1 candidates (generic path)
+stage b2=82 vs b1={13}: values [82, 169), 2 candidates (generic path)
+stage b2=83 vs b1={14}: values [83, 196), 2 candidates (generic path)
+stage b2=84 vs b1={15}: values [84, 225), 2 candidates (generic path)
+stage b2=85 vs b1={16}: values [85, 256), 3 candidates (generic path)
+stage b2=86 vs b1={17}: values [86, 289), 3 candidates (generic path)
+stage b2=87 vs b1={18}: values [87, 324), 3 candidates (generic path)
+stage b2=88 vs b1={19}: values [88, 361), 4 candidates (generic path)
+stage b2=89 vs b1={20}: values [89, 400), 4 candidates (generic path)
+stage b2=90 vs b1={21}: values [90, 441), 4 candidates (generic path)
+stage b2=91 vs b1={22}: values [91, 484), 5 candidates (generic path)
+
+*** MATCH: 92 is an 2-digit palindrome in bases 22 and 91
+done: 0.00s, 35 candidates tested

@@ -1,0 +1,16 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=51 vs b1={27}: values [345025251, 387420489), 320 candidates (even-AP path)
+stage b2=52 vs b1={28}: values [380204032, 481890304), 724 candidates (even-AP path)
+stage b2=53 vs b1={29}: values [418195493, 594823321), 1187 candidates (even-AP path)
+stage b2=54 vs b1={30}: values [459165024, 729000000), 1714 candidates (even-AP path)
+stage b2=55 vs b1={31}: values [503284375, 887503681), 2310 candidates (even-AP path)
+stage b2=56 vs b1={32}: values [550731776, 1073741824), 2979 candidates (even-AP path)
+stage b2=57 vs b1={33}: values [601692057, 1291467969), 3725 candidates (even-AP path)
+
+*** MATCH: 984536776 is an 6-digit palindrome in bases 33 and 57
+stage b2=58 vs b1={34}: values [656356768, 1544804416), 4554 candidates (even-AP path)
+stage b2=59 vs b1={35}: values [714924299, 1838265625), 5470 candidates (even-AP path)
+stage b2=60 vs b1={36}: values [777600000, 2176782336), 6478 candidates (even-AP path)
+stage b2=61 vs b1={37}: values [844596301, 2565726409), 7583 candidates (even-AP path)
+stage b2=62 vs b1={38}: values [916132832, 3010936384), 8790 candidates (even-AP path)
+done: 0.00s, 16323 candidates tested

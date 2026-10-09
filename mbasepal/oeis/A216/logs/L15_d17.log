@@ -1,0 +1,8 @@
+A171740 search: n=15, threads=1, limit=none
+stage b2=70 vs b1={53}: values [67822307284900000000000000, 73137151889028619724488157), 645363339150 candidates (MITM path)
+  MITM b1=53: s=5 t=3 j=3 je=4 Q=148877 table=343000 yh=1881526
+stage b2=71 vs b1={54}: values [82721210695570328927708881, 96806918768257718637133824), 1548710498310 candidates (MITM path)
+  MITM b1=54: s=5 t=3 j=3 je=4 Q=157464 table=357911 yh=4327083
+
+*** MATCH: 87744517114621993184413398 is an 15-digit palindrome in bases 54 and 71
+done: 0.15s, 3424670 candidates tested

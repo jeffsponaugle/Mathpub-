@@ -1,0 +1,7 @@
+resuming from d16w4.ck at 3667367/10225289 segments (35.87%)
+consecutive primes, decreasing gaps, chain length >= 17, range 44500000000000000000..57500000000000000000, 14 threads, first match only
+(sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+interrupt: finishing segments in flight...
+
+stopped at 36.27% of 44500000000000000000..57500000000000000000 with no decreasing-gap chain (A263049) of length 17 yet, 00:07:37 elapsed
+resume with: -c d16w4.ck -r

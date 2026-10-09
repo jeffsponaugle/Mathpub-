@@ -1,0 +1,10 @@
+# A046482: Primes that are palindromic in bases 10 and 14.
+# complete for all terms < 14^46 (dbpal exhaustive search)
+1 2
+2 3
+3 5
+4 7
+5 11
+6 9046409
+7 14203330241
+8 19119657727650105672775691191

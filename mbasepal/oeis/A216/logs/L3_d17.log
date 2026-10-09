@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=26 vs b1={9}: values [676, 729), 3 candidates (generic path)
+stage b2=27 vs b1={10}: values [729, 1000), 11 candidates (generic path)
+
+*** MATCH: 757 is an 3-digit palindrome in bases 10 and 27
+done: 0.00s, 12 candidates tested

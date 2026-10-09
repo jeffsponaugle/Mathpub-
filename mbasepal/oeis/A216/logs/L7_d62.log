@@ -1,0 +1,8 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=125 vs b1={63}: values [3814697265625, 3938980639167), 63634 candidates (generic path)
+stage b2=126 vs b1={64}: values [4001504141376, 4398046511104), 198234 candidates (generic path)
+stage b2=127 vs b1={65}: values [4195872914689, 4902227890625), 344836 candidates (generic path)
+
+*** MATCH: 4402348373468 is an 7-digit palindrome in bases 65 and 127
+stage b2=128 vs b1={66}: values [4398046511104, 5455160701056), 504072 candidates (generic path)
+done: 0.01s, 394992 candidates tested

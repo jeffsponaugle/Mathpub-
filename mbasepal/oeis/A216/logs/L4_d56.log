@@ -1,0 +1,24 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=84 vs b1={28}: values [592704, 614656), 4 candidates (generic path)
+stage b2=85 vs b1={29}: values [614125, 707281), 13 candidates (generic path)
+stage b2=86 vs b1={30}: values [636056, 810000), 24 candidates (generic path)
+stage b2=87 vs b1={31}: values [658503, 923521), 36 candidates (generic path)
+stage b2=88 vs b1={32}: values [681472, 1048576), 48 candidates (generic path)
+stage b2=89 vs b1={33}: values [704969, 1185921), 61 candidates (generic path)
+stage b2=90 vs b1={34}: values [729000, 1336336), 75 candidates (generic path)
+stage b2=91 vs b1={35}: values [753571, 1500625), 91 candidates (generic path)
+stage b2=92 vs b1={36}: values [778688, 1679616), 107 candidates (generic path)
+stage b2=93 vs b1={37}: values [804357, 1874161), 124 candidates (generic path)
+stage b2=94 vs b1={38}: values [830584, 2085136), 142 candidates (generic path)
+stage b2=95 vs b1={39}: values [857375, 2313441), 162 candidates (generic path)
+stage b2=96 vs b1={40}: values [884736, 2560000), 182 candidates (generic path)
+
+*** MATCH: 1117537 is an 4-digit palindrome in bases 40 and 96
+stage b2=97 vs b1={41}: values [912673, 2825761), 204 candidates (generic path)
+stage b2=98 vs b1={42}: values [941192, 3111696), 227 candidates (generic path)
+stage b2=99 vs b1={43}: values [970299, 3418801), 250 candidates (generic path)
+stage b2=100 vs b1={44}: values [1000000, 3748096), 275 candidates (generic path)
+stage b2=101 vs b1={45}: values [1030301, 4100625), 301 candidates (generic path)
+stage b2=102 vs b1={46}: values [1061208, 4477456), 329 candidates (generic path)
+stage b2=103 vs b1={47}: values [1092727, 4879681), 357 candidates (generic path)
+done: 0.00s, 1150 candidates tested

@@ -1,0 +1,13 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=249 vs b1={63}: values [15438249, 15752961), 6 candidates (generic path)
+stage b2=250 vs b1={64}: values [15625000, 16777216), 19 candidates (generic path)
+stage b2=251 vs b1={65}: values [15813251, 17850625), 33 candidates (generic path)
+
+*** MATCH: 17078292 is an 4-digit palindrome in bases 65 and 251
+stage b2=252 vs b1={66}: values [16003008, 18974736), 47 candidates (generic path)
+stage b2=253 vs b1={67}: values [16194277, 20151121), 62 candidates (generic path)
+stage b2=254 vs b1={68}: values [16387064, 21381376), 78 candidates (generic path)
+stage b2=255 vs b1={69}: values [16581375, 22667121), 94 candidates (generic path)
+stage b2=256 vs b1={70}: values [16777216, 24010000), 111 candidates (generic path)
+stage b2=257 vs b1={71}: values [16974593, 25411681), 128 candidates (generic path)
+done: 0.00s, 115 candidates tested

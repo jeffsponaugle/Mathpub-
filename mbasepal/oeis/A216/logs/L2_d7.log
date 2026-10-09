@@ -1,0 +1,7 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=11 vs b1={4}: values [11, 16), 1 candidates (generic path)
+stage b2=12 vs b1={5}: values [12, 25), 2 candidates (generic path)
+stage b2=13 vs b1={6}: values [13, 36), 2 candidates (generic path)
+
+*** MATCH: 14 is an 2-digit palindrome in bases 6 and 13
+done: 0.00s, 4 candidates tested

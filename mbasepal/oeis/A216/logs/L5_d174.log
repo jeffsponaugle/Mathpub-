@@ -1,0 +1,10 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=260 vs b1={86}: values [4569760000, 4704270176), 1990 candidates (generic path)
+stage b2=261 vs b1={87}: values [4640470641, 4984209207), 5047 candidates (generic path)
+stage b2=262 vs b1={88}: values [4711998736, 5277319168), 8236 candidates (generic path)
+
+*** MATCH: 4909764721 is an 5-digit palindrome in bases 88 and 262
+stage b2=263 vs b1={89}: values [4784350561, 5584059449), 11562 candidates (generic path)
+
+*** MATCH: 4854419548 is an 5-digit palindrome in bases 89 and 263
+done: 0.00s, 17086 candidates tested

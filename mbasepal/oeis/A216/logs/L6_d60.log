@@ -1,0 +1,9 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=111 vs b1={51}: values [16850581551, 17596287801), 546 candidates (even-AP path)
+stage b2=112 vs b1={52}: values [17623416832, 19770609664), 1529 candidates (even-AP path)
+stage b2=113 vs b1={53}: values [18424351793, 22164361129), 2593 candidates (even-AP path)
+stage b2=114 vs b1={54}: values [19254145824, 24794911296), 3740 candidates (even-AP path)
+stage b2=115 vs b1={55}: values [20113571875, 27680640625), 4976 candidates (even-AP path)
+
+*** MATCH: 20857663736 is an 6-digit palindrome in bases 55 and 115
+done: 0.00s, 8983 candidates tested

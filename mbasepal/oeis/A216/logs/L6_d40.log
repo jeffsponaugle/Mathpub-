@@ -1,0 +1,8 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=78 vs b1={38}: values [2887174368, 3010936384), 261 candidates (even-AP path)
+stage b2=79 vs b1={39}: values [3077056399, 3518743761), 896 candidates (even-AP path)
+
+*** MATCH: 3509003120 is an 6-digit palindrome in bases 39 and 79
+stage b2=80 vs b1={40}: values [3276800000, 4096000000), 1601 candidates (even-AP path)
+stage b2=81 vs b1={41}: values [3486784401, 4750104241), 2378 candidates (even-AP path)
+done: 0.00s, 1718 candidates tested

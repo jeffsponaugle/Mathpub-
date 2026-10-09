@@ -1,0 +1,21 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=128 vs b1={12}: values [128, 144), 1 candidates (generic path)
+stage b2=129 vs b1={13}: values [129, 169), 1 candidates (generic path)
+stage b2=130 vs b1={14}: values [130, 196), 1 candidates (generic path)
+stage b2=131 vs b1={15}: values [131, 225), 1 candidates (generic path)
+stage b2=132 vs b1={16}: values [132, 256), 1 candidates (generic path)
+stage b2=133 vs b1={17}: values [133, 289), 2 candidates (generic path)
+stage b2=134 vs b1={18}: values [134, 324), 2 candidates (generic path)
+stage b2=135 vs b1={19}: values [135, 361), 2 candidates (generic path)
+stage b2=136 vs b1={20}: values [136, 400), 2 candidates (generic path)
+stage b2=137 vs b1={21}: values [137, 441), 3 candidates (generic path)
+stage b2=138 vs b1={22}: values [138, 484), 3 candidates (generic path)
+stage b2=139 vs b1={23}: values [139, 529), 3 candidates (generic path)
+stage b2=140 vs b1={24}: values [140, 576), 4 candidates (generic path)
+stage b2=141 vs b1={25}: values [141, 625), 4 candidates (generic path)
+stage b2=142 vs b1={26}: values [142, 676), 4 candidates (generic path)
+stage b2=143 vs b1={27}: values [143, 729), 5 candidates (generic path)
+stage b2=144 vs b1={28}: values [144, 784), 5 candidates (generic path)
+
+*** MATCH: 145 is an 2-digit palindrome in bases 28 and 144
+done: 0.00s, 44 candidates tested

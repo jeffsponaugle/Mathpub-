@@ -1,0 +1,20 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=254 vs b1={64}: values [16387064, 16777216), 7 candidates (generic path)
+stage b2=255 vs b1={65}: values [16581375, 17850625), 20 candidates (generic path)
+stage b2=256 vs b1={66}: values [16777216, 18974736), 34 candidates (generic path)
+stage b2=257 vs b1={67}: values [16974593, 20151121), 49 candidates (generic path)
+stage b2=258 vs b1={68}: values [17173512, 21381376), 64 candidates (generic path)
+stage b2=259 vs b1={69}: values [17373979, 22667121), 79 candidates (generic path)
+stage b2=260 vs b1={70}: values [17576000, 24010000), 96 candidates (generic path)
+stage b2=261 vs b1={71}: values [17779581, 25411681), 113 candidates (generic path)
+stage b2=262 vs b1={72}: values [17984728, 26873856), 130 candidates (generic path)
+stage b2=263 vs b1={73}: values [18191447, 28398241), 148 candidates (generic path)
+stage b2=264 vs b1={74}: values [18399744, 29986576), 167 candidates (generic path)
+stage b2=265 vs b1={75}: values [18609625, 31640625), 186 candidates (generic path)
+
+*** MATCH: 19525996 is an 4-digit palindrome in bases 75 and 265
+stage b2=266 vs b1={76}: values [18821096, 33362176), 206 candidates (generic path)
+stage b2=267 vs b1={77}: values [19034163, 35153041), 227 candidates (generic path)
+stage b2=268 vs b1={78}: values [19248832, 37015056), 248 candidates (generic path)
+stage b2=269 vs b1={79}: values [19465109, 38950081), 270 candidates (generic path)
+done: 0.00s, 1109 candidates tested

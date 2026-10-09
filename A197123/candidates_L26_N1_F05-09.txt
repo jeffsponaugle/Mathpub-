@@ -1,0 +1,2 @@
+# pibloomt v1.1.0 L=26 filter=05-09 bloom_bytes=1048576 blocked=0 threads=10 pi=pi-1b.txt
+# end windows=0 tested=0 candidates=0 last_pos=0

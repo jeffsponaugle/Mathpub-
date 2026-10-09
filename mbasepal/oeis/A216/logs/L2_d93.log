@@ -1,0 +1,24 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=104 vs b1={11}: values [104, 121), 1 candidates (generic path)
+stage b2=105 vs b1={12}: values [105, 144), 1 candidates (generic path)
+stage b2=106 vs b1={13}: values [106, 169), 1 candidates (generic path)
+stage b2=107 vs b1={14}: values [107, 196), 1 candidates (generic path)
+stage b2=108 vs b1={15}: values [108, 225), 2 candidates (generic path)
+stage b2=109 vs b1={16}: values [109, 256), 2 candidates (generic path)
+stage b2=110 vs b1={17}: values [110, 289), 2 candidates (generic path)
+stage b2=111 vs b1={18}: values [111, 324), 2 candidates (generic path)
+stage b2=112 vs b1={19}: values [112, 361), 3 candidates (generic path)
+stage b2=113 vs b1={20}: values [113, 400), 3 candidates (generic path)
+stage b2=114 vs b1={21}: values [114, 441), 3 candidates (generic path)
+stage b2=115 vs b1={22}: values [115, 484), 4 candidates (generic path)
+stage b2=116 vs b1={23}: values [116, 529), 4 candidates (generic path)
+stage b2=117 vs b1={24}: values [117, 576), 4 candidates (generic path)
+stage b2=118 vs b1={25}: values [118, 625), 5 candidates (generic path)
+stage b2=119 vs b1={26}: values [119, 676), 5 candidates (generic path)
+stage b2=120 vs b1={27}: values [120, 729), 6 candidates (generic path)
+stage b2=121 vs b1={28}: values [121, 784), 6 candidates (generic path)
+stage b2=122 vs b1={29}: values [122, 841), 6 candidates (generic path)
+stage b2=123 vs b1={30}: values [123, 900), 7 candidates (generic path)
+
+*** MATCH: 124 is an 2-digit palindrome in bases 30 and 123
+done: 0.00s, 68 candidates tested

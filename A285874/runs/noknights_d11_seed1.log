@@ -1,0 +1,4 @@
+fen: r1bqkb1r/pppppppp/8/8/8/8/PPPPPPPP/R1BQKB1R w KQkq - 0 1
+threads: 14  table: 8192 MB  seed: 1  ttmin: 2
+split ply 5: 526797 unique positions (3030492 paths), 0.2s
+  344720/526797 tasks (65.44%)  300s elapsed  ETA 158s

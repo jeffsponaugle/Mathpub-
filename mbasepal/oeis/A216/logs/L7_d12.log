@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=31 vs b1={19}: values [887503681, 893871739), 214 candidates (generic path)
+stage b2=32 vs b1={20}: values [1073741824, 1280000000), 6295 candidates (generic path)
+stage b2=33 vs b1={21}: values [1291467969, 1801088541), 14181 candidates (generic path)
+
+*** MATCH: 1393838392 is an 7-digit palindrome in bases 21 and 33
+done: 0.00s, 20690 candidates tested

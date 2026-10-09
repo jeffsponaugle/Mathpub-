@@ -1,0 +1,24 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=20 vs b1={15}: values [512000000000, 576650390625), 20204 candidates (MITM path)
+  MITM b1=15: s=3 t=2 j=2 je=3 Q=225 table=400 yh=51
+stage b2=21 vs b1={16}: values [794280046581, 1099511627776), 74737 candidates (MITM path)
+  MITM b1=16: s=3 t=2 j=2 je=3 Q=256 table=441 yh=170
+stage b2=22 vs b1={17}: values [1207269217792, 2015993900449), 156924 candidates (MITM path)
+  MITM b1=17: s=3 t=2 j=2 je=3 Q=289 table=484 yh=325
+stage b2=23 vs b1={18}: values [1801152661463, 3570467226624), 274895 candidates (MITM path)
+  MITM b1=18: s=3 t=2 j=2 je=3 Q=324 table=529 yh=520
+stage b2=24 vs b1={19}: values [2641807540224, 6131066257801), 438205 candidates (MITM path)
+  MITM b1=19: s=3 t=2 j=2 je=3 Q=361 table=576 yh=761
+stage b2=25 vs b1={20}: values [3814697265625, 10240000000000), 657952 candidates (MITM path)
+  MITM b1=20: s=3 t=2 j=2 je=3 Q=400 table=625 yh=1053
+stage b2=26 vs b1={21}: values [5429503678976, 16679880978201), 946892 candidates (MITM path)
+  MITM b1=21: s=3 t=2 j=2 je=3 Q=441 table=676 yh=1401
+stage b2=27 vs b1={22}: values [7625597484987, 26559922791424), 1319566 candidates (MITM path)
+  MITM b1=22: s=3 t=2 j=2 je=3 Q=484 table=729 yh=1811
+stage b2=28 vs b1={23}: values [10578455953408, 41426511213649), 1792412 candidates (MITM path)
+  MITM b1=23: s=3 t=2 j=2 je=3 Q=529 table=784 yh=2287
+stage b2=29 vs b1={24}: values [14507145975869, 63403380965376), 2383886 candidates (MITM path)
+  MITM b1=24: s=3 t=2 j=2 je=3 Q=576 table=841 yh=2835
+
+*** MATCH: 16446205929150 is an 10-digit palindrome in bases 24 and 29
+done: 0.00s, 8492 candidates tested

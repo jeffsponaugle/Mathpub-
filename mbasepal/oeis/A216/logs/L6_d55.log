@@ -1,0 +1,11 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=103 vs b1={48}: values [11592740743, 12230590464), 584 candidates (even-AP path)
+stage b2=104 vs b1={49}: values [12166529024, 13841287201), 1489 candidates (even-AP path)
+stage b2=105 vs b1={50}: values [12762815625, 15625000000), 2473 candidates (even-AP path)
+stage b2=106 vs b1={51}: values [13382255776, 17596287801), 3539 candidates (even-AP path)
+stage b2=107 vs b1={52}: values [14025517307, 19770609664), 4690 candidates (even-AP path)
+stage b2=108 vs b1={53}: values [14693280768, 22164361129), 5931 candidates (even-AP path)
+stage b2=109 vs b1={54}: values [15386239549, 24794911296), 7266 candidates (even-AP path)
+
+*** MATCH: 15686852830 is an 6-digit palindrome in bases 54 and 109
+done: 0.00s, 19033 candidates tested

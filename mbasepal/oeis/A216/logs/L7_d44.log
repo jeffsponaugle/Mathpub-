@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=93 vs b1={49}: values [646990183449, 678223072849), 38830 candidates (generic path)
+stage b2=94 vs b1={50}: values [689869781056, 781250000000), 110020 candidates (generic path)
+
+*** MATCH: 739800170897 is an 7-digit palindrome in bases 50 and 94
+stage b2=95 vs b1={51}: values [735091890625, 897410677851), 189321 candidates (generic path)
+done: 0.00s, 109857 candidates tested

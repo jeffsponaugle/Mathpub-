@@ -1,0 +1,21 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=73 vs b1={25}: values [389017, 390625), 1 candidates (generic path)
+stage b2=74 vs b1={26}: values [405224, 456976), 10 candidates (generic path)
+stage b2=75 vs b1={27}: values [421875, 531441), 20 candidates (generic path)
+stage b2=76 vs b1={28}: values [438976, 614656), 31 candidates (generic path)
+stage b2=77 vs b1={29}: values [456533, 707281), 43 candidates (generic path)
+stage b2=78 vs b1={30}: values [474552, 810000), 56 candidates (generic path)
+stage b2=79 vs b1={31}: values [493039, 923521), 69 candidates (generic path)
+stage b2=80 vs b1={32}: values [512000, 1048576), 84 candidates (generic path)
+stage b2=81 vs b1={33}: values [531441, 1185921), 100 candidates (generic path)
+stage b2=82 vs b1={34}: values [551368, 1336336), 117 candidates (generic path)
+stage b2=83 vs b1={35}: values [571787, 1500625), 135 candidates (generic path)
+stage b2=84 vs b1={36}: values [592704, 1679616), 155 candidates (generic path)
+stage b2=85 vs b1={37}: values [614125, 1874161), 175 candidates (generic path)
+
+*** MATCH: 709156 is an 4-digit palindrome in bases 37 and 85
+stage b2=86 vs b1={38}: values [636056, 2085136), 196 candidates (generic path)
+stage b2=87 vs b1={39}: values [658503, 2313441), 219 candidates (generic path)
+stage b2=88 vs b1={40}: values [681472, 2560000), 243 candidates (generic path)
+stage b2=89 vs b1={41}: values [704969, 2825761), 268 candidates (generic path)
+done: 0.00s, 1015 candidates tested

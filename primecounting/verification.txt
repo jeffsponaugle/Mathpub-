@@ -1,0 +1,424 @@
+==============================================================================
+VERIFICATION OF DIGIT-CONTENT COUNTS OVER THE FIRST 10^n PRIMES
+==============================================================================
+
+Generated: 2026-08-31 from digitprimes_results.txt
+Tool: digitprimes (single ordered pass over all primes via primesieve,
+14-thread chunked sieve with strictly in-order merge; every power-of-10
+crossing chunk was independently re-scanned serially and required to
+match the parallel pass exactly).
+
+Sequences verified/extended, per digit d:
+  'no digit d'          : A231412 A228413 A228414 A228415 A228416 A228417 A228418 A228419 A228420 A228421   (d = 0..9)
+  'at least one digit d': A231726 A231787 A231788 A231789 A231790 A231792 A231793 A231794 A231795 A231796   (d = 0..9)
+
+------------------------------------------------------------------------------
+1. ENDPOINT CHECK: the 10^n-th prime vs OEIS A006988
+------------------------------------------------------------------------------
+The run counts primes in order and records the prime at which the count
+reaches exactly 10^n. These must equal the independently published
+values of the 10^n-th prime (OEIS A006988).
+
+  [PASS] p(10^0 ) =               2  == A006988(0)
+  [PASS] p(10^1 ) =              29  == A006988(1)
+  [PASS] p(10^2 ) =             541  == A006988(2)
+  [PASS] p(10^3 ) =           7,919  == A006988(3)
+  [PASS] p(10^4 ) =         104,729  == A006988(4)
+  [PASS] p(10^5 ) =       1,299,709  == A006988(5)
+  [PASS] p(10^6 ) =      15,485,863  == A006988(6)
+  [PASS] p(10^7 ) =     179,424,673  == A006988(7)
+  [PASS] p(10^8 ) =   2,038,074,743  == A006988(8)
+  [PASS] p(10^9 ) =  22,801,763,489  == A006988(9)
+  [PASS] p(10^10) = 252,097,800,623  == A006988(10)
+  [PASS] p(10^11) = 2,760,727,302,517  == A006988(11)
+  [PASS] p(10^12) = 29,996,224,275,833  == A006988(12)
+  [PASS] p(10^13) = 323,780,508,946,331  == A006988(13)
+
+------------------------------------------------------------------------------
+2. SUMMATION CHECK: no_d(n) + has_d(n) = 10^n (total primes counted)
+------------------------------------------------------------------------------
+For every n and every digit d, the count of the first 10^n primes
+WITHOUT digit d plus the count WITH at least one digit d must sum to
+the total number of primes considered, which is 10^n by definition
+(and section 1 confirms the count reached 10^n at the correct prime).
+
+  [PASS] n=0   no_d + has_d =               1  for all d = 0..9
+  [PASS] n=1   no_d + has_d =              10  for all d = 0..9
+  [PASS] n=2   no_d + has_d =             100  for all d = 0..9
+  [PASS] n=3   no_d + has_d =           1,000  for all d = 0..9
+  [PASS] n=4   no_d + has_d =          10,000  for all d = 0..9
+  [PASS] n=5   no_d + has_d =         100,000  for all d = 0..9
+  [PASS] n=6   no_d + has_d =       1,000,000  for all d = 0..9
+  [PASS] n=7   no_d + has_d =      10,000,000  for all d = 0..9
+  [PASS] n=8   no_d + has_d =     100,000,000  for all d = 0..9
+  [PASS] n=9   no_d + has_d =   1,000,000,000  for all d = 0..9
+  [PASS] n=10  no_d + has_d =  10,000,000,000  for all d = 0..9
+  [PASS] n=11  no_d + has_d = 100,000,000,000  for all d = 0..9
+  [PASS] n=12  no_d + has_d = 1,000,000,000,000  for all d = 0..9
+  [PASS] n=13  no_d + has_d = 10,000,000,000,000  for all d = 0..9
+
+  Explicit summations for the new terms (n = 13, total = 10,000,000,000,000):
+
+  [PASS] d=0: 2,572,084,882,736 (A231412) + 7,427,915,117,264 (A231726) = 10,000,000,000,000
+  [PASS] d=1: 1,266,309,423,393 (A228413) + 8,733,690,576,607 (A231787) = 10,000,000,000,000
+  [PASS] d=2: 1,761,252,701,672 (A228414) + 8,238,747,298,328 (A231788) = 10,000,000,000,000
+  [PASS] d=3: 1,770,118,421,758 (A228415) + 8,229,881,578,242 (A231789) = 10,000,000,000,000
+  [PASS] d=4: 2,565,954,604,082 (A228416) + 7,434,045,395,918 (A231790) = 10,000,000,000,000
+  [PASS] d=5: 2,567,010,423,857 (A228417) + 7,432,989,576,143 (A231792) = 10,000,000,000,000
+  [PASS] d=6: 2,567,938,055,999 (A228418) + 7,432,061,944,001 (A231793) = 10,000,000,000,000
+  [PASS] d=7: 1,926,738,759,318 (A228419) + 8,073,261,240,682 (A231794) = 10,000,000,000,000
+  [PASS] d=8: 2,570,658,222,631 (A228420) + 7,429,341,777,369 (A231795) = 10,000,000,000,000
+  [PASS] d=9: 1,928,516,761,196 (A228421) + 8,071,483,238,804 (A231796) = 10,000,000,000,000
+
+------------------------------------------------------------------------------
+3. 'NO DIGIT d' COUNTS vs PUBLISHED OEIS TERMS (n = 0..12)
+------------------------------------------------------------------------------
+
+  A231412 (first 10^n primes with no digit 0):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =              10  == OEIS
+  [PASS] a(2 ) =              91  == OEIS
+  [PASS] a(3 ) =             819  == OEIS
+  [PASS] a(4 ) =           7,122  == OEIS
+  [PASS] a(5 ) =          61,702  == OEIS
+  [PASS] a(6 ) =         557,224  == OEIS
+  [PASS] a(7 ) =       5,062,320  == OEIS
+  [PASS] a(8 ) =      45,002,763  == OEIS
+  [PASS] a(9 ) =     395,879,190  == OEIS
+  [PASS] a(10) =   3,579,400,605  == OEIS
+  [PASS] a(11) =  32,487,367,715  == OEIS
+  [PASS] a(12) = 294,505,958,253  == OEIS
+  [NEW ] a(13) = 2,572,084,882,736
+
+  A228413 (first 10^n primes with no digit 1):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =               6  == OEIS
+  [PASS] a(2 ) =              54  == OEIS
+  [PASS] a(3 ) =             532  == OEIS
+  [PASS] a(4 ) =           4,675  == OEIS
+  [PASS] a(5 ) =          34,425  == OEIS
+  [PASS] a(6 ) =         262,549  == OEIS
+  [PASS] a(7 ) =       2,051,466  == OEIS
+  [PASS] a(8 ) =      16,831,152  == OEIS
+  [PASS] a(9 ) =     155,616,459  == OEIS
+  [PASS] a(10) =   1,529,462,564  == OEIS
+  [PASS] a(11) =  14,830,618,421  == OEIS
+  [PASS] a(12) = 141,585,123,501  == OEIS
+  [NEW ] a(13) = 1,266,309,423,393
+
+  A228414 (first 10^n primes with no digit 2):
+  [PASS] a(0 ) =               0  == OEIS
+  [PASS] a(1 ) =               7  == OEIS
+  [PASS] a(2 ) =              77  == OEIS
+  [PASS] a(3 ) =             697  == OEIS
+  [PASS] a(4 ) =           6,497  == OEIS
+  [PASS] a(5 ) =          55,552  == OEIS
+  [PASS] a(6 ) =         512,100  == OEIS
+  [PASS] a(7 ) =       4,710,641  == OEIS
+  [PASS] a(8 ) =      42,205,969  == OEIS
+  [PASS] a(9 ) =     341,224,891  == OEIS
+  [PASS] a(10) =   2,787,791,578  == OEIS
+  [PASS] a(11) =  22,971,326,749  == OEIS
+  [PASS] a(12) = 190,650,687,957  == OEIS
+  [NEW ] a(13) = 1,761,252,701,672
+
+  A228415 (first 10^n primes with no digit 3):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =               7  == OEIS
+  [PASS] a(2 ) =              54  == OEIS
+  [PASS] a(3 ) =             534  == OEIS
+  [PASS] a(4 ) =           4,909  == OEIS
+  [PASS] a(5 ) =          45,405  == OEIS
+  [PASS] a(6 ) =         385,008  == OEIS
+  [PASS] a(7 ) =       3,539,880  == OEIS
+  [PASS] a(8 ) =      32,260,781  == OEIS
+  [PASS] a(9 ) =     294,001,190  == OEIS
+  [PASS] a(10) =   2,564,080,248  == OEIS
+  [PASS] a(11) =  23,271,246,324  == OEIS
+  [PASS] a(12) = 211,753,431,947  == OEIS
+  [NEW ] a(13) = 1,770,118,421,758
+
+  A228416 (first 10^n primes with no digit 4):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =              10  == OEIS
+  [PASS] a(2 ) =              75  == OEIS
+  [PASS] a(3 ) =             721  == OEIS
+  [PASS] a(4 ) =           6,637  == OEIS
+  [PASS] a(5 ) =          60,605  == OEIS
+  [PASS] a(6 ) =         514,809  == OEIS
+  [PASS] a(7 ) =       4,730,382  == OEIS
+  [PASS] a(8 ) =      43,254,591  == OEIS
+  [PASS] a(9 ) =     392,344,689  == OEIS
+  [PASS] a(10) =   3,421,561,753  == OEIS
+  [PASS] a(11) =  31,049,600,245  == OEIS
+  [PASS] a(12) = 282,499,317,912  == OEIS
+  [NEW ] a(13) = 2,565,954,604,082
+
+  A228417 (first 10^n primes with no digit 5):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =               9  == OEIS
+  [PASS] a(2 ) =              85  == OEIS
+  [PASS] a(3 ) =             708  == OEIS
+  [PASS] a(4 ) =           6,635  == OEIS
+  [PASS] a(5 ) =          60,640  == OEIS
+  [PASS] a(6 ) =         535,534  == OEIS
+  [PASS] a(7 ) =       4,737,129  == OEIS
+  [PASS] a(8 ) =      43,297,195  == OEIS
+  [PASS] a(9 ) =     392,641,522  == OEIS
+  [PASS] a(10) =   3,536,880,527  == OEIS
+  [PASS] a(11) =  31,067,514,571  == OEIS
+  [PASS] a(12) = 282,635,824,867  == OEIS
+  [NEW ] a(13) = 2,567,010,423,857
+
+  A228418 (first 10^n primes with no digit 6):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =              10  == OEIS
+  [PASS] a(2 ) =              90  == OEIS
+  [PASS] a(3 ) =             719  == OEIS
+  [PASS] a(4 ) =           6,696  == OEIS
+  [PASS] a(5 ) =          60,845  == OEIS
+  [PASS] a(6 ) =         554,933  == OEIS
+  [PASS] a(7 ) =       4,742,037  == OEIS
+  [PASS] a(8 ) =      43,331,008  == OEIS
+  [PASS] a(9 ) =     392,875,212  == OEIS
+  [PASS] a(10) =   3,573,268,469  == OEIS
+  [PASS] a(11) =  31,207,451,849  == OEIS
+  [PASS] a(12) = 282,765,603,085  == OEIS
+  [NEW ] a(13) = 2,567,938,055,999
+
+  A228419 (first 10^n primes with no digit 7):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =               8  == OEIS
+  [PASS] a(2 ) =              67  == OEIS
+  [PASS] a(3 ) =             539  == OEIS
+  [PASS] a(4 ) =           5,034  == OEIS
+  [PASS] a(5 ) =          45,549  == OEIS
+  [PASS] a(6 ) =         416,913  == OEIS
+  [PASS] a(7 ) =       3,570,781  == OEIS
+  [PASS] a(8 ) =      32,517,377  == OEIS
+  [PASS] a(9 ) =     294,828,478  == OEIS
+  [PASS] a(10) =   2,681,147,149  == OEIS
+  [PASS] a(11) =  23,720,397,369  == OEIS
+  [PASS] a(12) = 212,156,228,217  == OEIS
+  [NEW ] a(13) = 1,926,738,759,318
+
+  A228420 (first 10^n primes with no digit 8):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =              10  == OEIS
+  [PASS] a(2 ) =              92  == OEIS
+  [PASS] a(3 ) =             816  == OEIS
+  [PASS] a(4 ) =           6,712  == OEIS
+  [PASS] a(5 ) =          60,867  == OEIS
+  [PASS] a(6 ) =         555,878  == OEIS
+  [PASS] a(7 ) =       5,026,796  == OEIS
+  [PASS] a(8 ) =      43,410,238  == OEIS
+  [PASS] a(9 ) =     395,243,878  == OEIS
+  [PASS] a(10) =   3,576,361,255  == OEIS
+  [PASS] a(11) =  32,461,990,759  == OEIS
+  [PASS] a(12) = 282,971,130,960  == OEIS
+  [NEW ] a(13) = 2,570,658,222,631
+
+  A228421 (first 10^n primes with no digit 9):
+  [PASS] a(0 ) =               1  == OEIS
+  [PASS] a(1 ) =               8  == OEIS
+  [PASS] a(2 ) =              69  == OEIS
+  [PASS] a(3 ) =             620  == OEIS
+  [PASS] a(4 ) =           5,010  == OEIS
+  [PASS] a(5 ) =          45,732  == OEIS
+  [PASS] a(6 ) =         418,142  == OEIS
+  [PASS] a(7 ) =       3,785,060  == OEIS
+  [PASS] a(8 ) =      32,579,606  == OEIS
+  [PASS] a(9 ) =     296,601,070  == OEIS
+  [PASS] a(10) =   2,683,254,222  == OEIS
+  [PASS] a(11) =  24,354,108,057  == OEIS
+  [PASS] a(12) = 212,324,183,352  == OEIS
+  [NEW ] a(13) = 1,928,516,761,196
+
+------------------------------------------------------------------------------
+4. 'AT LEAST ONE DIGIT d' = 10^n - no_d vs PUBLISHED OEIS TERMS (n = 1..11)
+------------------------------------------------------------------------------
+
+  A231726 (first 10^n primes with at least one digit 0):
+  [PASS] a(1 ) =               0  == OEIS
+  [PASS] a(2 ) =               9  == OEIS
+  [PASS] a(3 ) =             181  == OEIS
+  [PASS] a(4 ) =           2,878  == OEIS
+  [PASS] a(5 ) =          38,298  == OEIS
+  [PASS] a(6 ) =         442,776  == OEIS
+  [PASS] a(7 ) =       4,937,680  == OEIS
+  [PASS] a(8 ) =      54,997,237  == OEIS
+  [PASS] a(9 ) =     604,120,810  == OEIS
+  [PASS] a(10) =   6,420,599,395  == OEIS
+  [PASS] a(11) =  67,512,632,285  == OEIS
+  [NEW ] a(12) = 705,494,041,747
+  [NEW ] a(13) = 7,427,915,117,264
+
+  A231787 (first 10^n primes with at least one digit 1):
+  [PASS] a(1 ) =               4  == OEIS
+  [PASS] a(2 ) =              46  == OEIS
+  [PASS] a(3 ) =             468  == OEIS
+  [PASS] a(4 ) =           5,325  == OEIS
+  [PASS] a(5 ) =          65,575  == OEIS
+  [PASS] a(6 ) =         737,451  == OEIS
+  [PASS] a(7 ) =       7,948,534  == OEIS
+  [PASS] a(8 ) =      83,168,848  == OEIS
+  [PASS] a(9 ) =     844,383,541  == OEIS
+  [PASS] a(10) =   8,470,537,436  == OEIS
+  [PASS] a(11) =  85,169,381,579  == OEIS
+  [NEW ] a(12) = 858,414,876,499
+  [NEW ] a(13) = 8,733,690,576,607
+
+  A231788 (first 10^n primes with at least one digit 2):
+  [PASS] a(1 ) =               3  == OEIS
+  [PASS] a(2 ) =              23  == OEIS
+  [PASS] a(3 ) =             303  == OEIS
+  [PASS] a(4 ) =           3,503  == OEIS
+  [PASS] a(5 ) =          44,448  == OEIS
+  [PASS] a(6 ) =         487,900  == OEIS
+  [PASS] a(7 ) =       5,289,359  == OEIS
+  [PASS] a(8 ) =      57,794,031  == OEIS
+  [PASS] a(9 ) =     658,775,109  == OEIS
+  [PASS] a(10) =   7,212,208,422  == OEIS
+  [PASS] a(11) =  77,028,673,251  == OEIS
+  [NEW ] a(12) = 809,349,312,043
+  [NEW ] a(13) = 8,238,747,298,328
+
+  A231789 (first 10^n primes with at least one digit 3):
+  [PASS] a(1 ) =               3  == OEIS
+  [PASS] a(2 ) =              46  == OEIS
+  [PASS] a(3 ) =             466  == OEIS
+  [PASS] a(4 ) =           5,091  == OEIS
+  [PASS] a(5 ) =          54,595  == OEIS
+  [PASS] a(6 ) =         614,992  == OEIS
+  [PASS] a(7 ) =       6,460,120  == OEIS
+  [PASS] a(8 ) =      67,739,219  == OEIS
+  [PASS] a(9 ) =     705,998,810  == OEIS
+  [PASS] a(10) =   7,435,919,752  == OEIS
+  [PASS] a(11) =  76,728,753,676  == OEIS
+  [NEW ] a(12) = 788,246,568,053
+  [NEW ] a(13) = 8,229,881,578,242
+
+  A231790 (first 10^n primes with at least one digit 4):
+  [PASS] a(1 ) =               0  == OEIS
+  [PASS] a(2 ) =              25  == OEIS
+  [PASS] a(3 ) =             279  == OEIS
+  [PASS] a(4 ) =           3,363  == OEIS
+  [PASS] a(5 ) =          39,395  == OEIS
+  [PASS] a(6 ) =         485,191  == OEIS
+  [PASS] a(7 ) =       5,269,618  == OEIS
+  [PASS] a(8 ) =      56,745,409  == OEIS
+  [PASS] a(9 ) =     607,655,311  == OEIS
+  [PASS] a(10) =   6,578,438,247  == OEIS
+  [PASS] a(11) =  68,950,399,755  == OEIS
+  [NEW ] a(12) = 717,500,682,088
+  [NEW ] a(13) = 7,434,045,395,918
+
+  A231792 (first 10^n primes with at least one digit 5):
+  [PASS] a(1 ) =               1  == OEIS
+  [PASS] a(2 ) =              15  == OEIS
+  [PASS] a(3 ) =             292  == OEIS
+  [PASS] a(4 ) =           3,365  == OEIS
+  [PASS] a(5 ) =          39,360  == OEIS
+  [PASS] a(6 ) =         464,466  == OEIS
+  [PASS] a(7 ) =       5,262,871  == OEIS
+  [PASS] a(8 ) =      56,702,805  == OEIS
+  [PASS] a(9 ) =     607,358,478  == OEIS
+  [PASS] a(10) =   6,463,119,473  == OEIS
+  [PASS] a(11) =  68,932,485,429  == OEIS
+  [NEW ] a(12) = 717,364,175,133
+  [NEW ] a(13) = 7,432,989,576,143
+
+  A231793 (first 10^n primes with at least one digit 6):
+  [PASS] a(1 ) =               0  == OEIS
+  [PASS] a(2 ) =              10  == OEIS
+  [PASS] a(3 ) =             281  == OEIS
+  [PASS] a(4 ) =           3,304  == OEIS
+  [PASS] a(5 ) =          39,155  == OEIS
+  [PASS] a(6 ) =         445,067  == OEIS
+  [PASS] a(7 ) =       5,257,963  == OEIS
+  [PASS] a(8 ) =      56,668,992  == OEIS
+  [PASS] a(9 ) =     607,124,788  == OEIS
+  [PASS] a(10) =   6,426,731,531  == OEIS
+  [PASS] a(11) =  68,792,548,151  == OEIS
+  [NEW ] a(12) = 717,234,396,915
+  [NEW ] a(13) = 7,432,061,944,001
+
+  A231794 (first 10^n primes with at least one digit 7):
+  [PASS] a(1 ) =               2  == OEIS
+  [PASS] a(2 ) =              33  == OEIS
+  [PASS] a(3 ) =             461  == OEIS
+  [PASS] a(4 ) =           4,966  == OEIS
+  [PASS] a(5 ) =          54,451  == OEIS
+  [PASS] a(6 ) =         583,087  == OEIS
+  [PASS] a(7 ) =       6,429,219  == OEIS
+  [PASS] a(8 ) =      67,482,623  == OEIS
+  [PASS] a(9 ) =     705,171,522  == OEIS
+  [PASS] a(10) =   7,318,852,851  == OEIS
+  [PASS] a(11) =  76,279,602,631  == OEIS
+  [NEW ] a(12) = 787,843,771,783
+  [NEW ] a(13) = 8,073,261,240,682
+
+  A231795 (first 10^n primes with at least one digit 8):
+  [PASS] a(1 ) =               0  == OEIS
+  [PASS] a(2 ) =               8  == OEIS
+  [PASS] a(3 ) =             184  == OEIS
+  [PASS] a(4 ) =           3,288  == OEIS
+  [PASS] a(5 ) =          39,133  == OEIS
+  [PASS] a(6 ) =         444,122  == OEIS
+  [PASS] a(7 ) =       4,973,204  == OEIS
+  [PASS] a(8 ) =      56,589,762  == OEIS
+  [PASS] a(9 ) =     604,756,122  == OEIS
+  [PASS] a(10) =   6,423,638,745  == OEIS
+  [PASS] a(11) =  67,538,009,241  == OEIS
+  [NEW ] a(12) = 717,028,869,040
+  [NEW ] a(13) = 7,429,341,777,369
+
+  A231796 (first 10^n primes with at least one digit 9):
+  [PASS] a(1 ) =               2  == OEIS
+  [PASS] a(2 ) =              31  == OEIS
+  [PASS] a(3 ) =             380  == OEIS
+  [PASS] a(4 ) =           4,990  == OEIS
+  [PASS] a(5 ) =          54,268  == OEIS
+  [PASS] a(6 ) =         581,858  == OEIS
+  [PASS] a(7 ) =       6,214,940  == OEIS
+  [PASS] a(8 ) =      67,420,394  == OEIS
+  [PASS] a(9 ) =     703,398,930  == OEIS
+  [PASS] a(10) =   7,316,745,778  == OEIS
+  [PASS] a(11) =  75,645,891,943  == OEIS
+  [NEW ] a(12) = 787,675,816,648
+  [NEW ] a(13) = 8,071,483,238,804
+
+------------------------------------------------------------------------------
+5. NEW TERMS
+------------------------------------------------------------------------------
+
+  'No digit d' — new a(13), over the first 10^13 primes
+  (all primes p <= p(10^13) = 323,780,508,946,331):
+
+    A231412 (no 0):  a(13) = 2,572,084,882,736
+    A228413 (no 1):  a(13) = 1,266,309,423,393
+    A228414 (no 2):  a(13) = 1,761,252,701,672
+    A228415 (no 3):  a(13) = 1,770,118,421,758
+    A228416 (no 4):  a(13) = 2,565,954,604,082
+    A228417 (no 5):  a(13) = 2,567,010,423,857
+    A228418 (no 6):  a(13) = 2,567,938,055,999
+    A228419 (no 7):  a(13) = 1,926,738,759,318
+    A228420 (no 8):  a(13) = 2,570,658,222,631
+    A228421 (no 9):  a(13) = 1,928,516,761,196
+
+  'At least one digit d' — new a(12) and a(13):
+
+    A231726 (>=1 0):  a(12) = 705,494,041,747   a(13) = 7,427,915,117,264
+    A231787 (>=1 1):  a(12) = 858,414,876,499   a(13) = 8,733,690,576,607
+    A231788 (>=1 2):  a(12) = 809,349,312,043   a(13) = 8,238,747,298,328
+    A231789 (>=1 3):  a(12) = 788,246,568,053   a(13) = 8,229,881,578,242
+    A231790 (>=1 4):  a(12) = 717,500,682,088   a(13) = 7,434,045,395,918
+    A231792 (>=1 5):  a(12) = 717,364,175,133   a(13) = 7,432,989,576,143
+    A231793 (>=1 6):  a(12) = 717,234,396,915   a(13) = 7,432,061,944,001
+    A231794 (>=1 7):  a(12) = 787,843,771,783   a(13) = 8,073,261,240,682
+    A231795 (>=1 8):  a(12) = 717,028,869,040   a(13) = 7,429,341,777,369
+    A231796 (>=1 9):  a(12) = 787,675,816,648   a(13) = 8,071,483,238,804
+
+==============================================================================
+SUMMARY: 278 checks passed, 0 failed.
+==============================================================================

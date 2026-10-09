@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=212 vs b1={73}: values [2019963136, 2073071593), 1182 candidates (generic path)
+stage b2=213 vs b1={74}: values [2058346161, 2219006624), 3542 candidates (generic path)
+
+*** MATCH: 2137607509 is an 5-digit palindrome in bases 74 and 213
+stage b2=214 vs b1={75}: values [2097273616, 2373046875), 6022 candidates (generic path)
+stage b2=215 vs b1={76}: values [2136750625, 2535525376), 8627 candidates (generic path)
+done: 0.00s, 5624 candidates tested

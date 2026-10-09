@@ -1,0 +1,12 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=92 vs b1={30}: values [778688, 810000), 4 candidates (generic path)
+stage b2=93 vs b1={31}: values [804357, 923521), 14 candidates (generic path)
+stage b2=94 vs b1={32}: values [830584, 1048576), 25 candidates (generic path)
+stage b2=95 vs b1={33}: values [857375, 1185921), 37 candidates (generic path)
+
+*** MATCH: 975936 is an 4-digit palindrome in bases 33 and 95
+stage b2=96 vs b1={34}: values [884736, 1336336), 50 candidates (generic path)
+stage b2=97 vs b1={35}: values [912673, 1500625), 63 candidates (generic path)
+stage b2=98 vs b1={36}: values [941192, 1679616), 77 candidates (generic path)
+stage b2=99 vs b1={37}: values [970299, 1874161), 93 candidates (generic path)
+done: 0.00s, 102 candidates tested

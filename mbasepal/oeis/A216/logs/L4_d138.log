@@ -1,0 +1,13 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=189 vs b1={51}: values [6751269, 6765201), 1 candidates (generic path)
+stage b2=190 vs b1={52}: values [6859000, 7311616), 13 candidates (generic path)
+stage b2=191 vs b1={53}: values [6967871, 7890481), 26 candidates (generic path)
+stage b2=192 vs b1={54}: values [7077888, 8503056), 39 candidates (generic path)
+stage b2=193 vs b1={55}: values [7189057, 9150625), 53 candidates (generic path)
+stage b2=194 vs b1={56}: values [7301384, 9834496), 68 candidates (generic path)
+
+*** MATCH: 7717515 is an 4-digit palindrome in bases 56 and 194
+stage b2=195 vs b1={57}: values [7414875, 10556001), 83 candidates (generic path)
+stage b2=196 vs b1={58}: values [7529536, 11316496), 99 candidates (generic path)
+stage b2=197 vs b1={59}: values [7645373, 12117361), 116 candidates (generic path)
+done: 0.00s, 214 candidates tested

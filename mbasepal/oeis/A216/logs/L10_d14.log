@@ -1,0 +1,28 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=45 vs b1={31}: values [756680642578125, 819628286980801), 341128 candidates (MITM path)
+  MITM b1=31: s=3 t=2 j=2 je=2 Q=961 table=2025 yh=169
+stage b2=46 vs b1={32}: values [922190162669056, 1125899906842624), 989061 candidates (MITM path)
+  MITM b1=32: s=3 t=2 j=2 je=2 Q=1024 table=2116 yh=468
+stage b2=47 vs b1={33}: values [1119130473102767, 1531578985264449), 1798376 candidates (MITM path)
+  MITM b1=33: s=3 t=2 j=2 je=2 Q=1089 table=2209 yh=815
+stage b2=48 vs b1={34}: values [1352605460594688, 2064377754059776), 2793412 candidates (MITM path)
+  MITM b1=34: s=3 t=2 j=2 je=2 Q=1156 table=2304 yh=1213
+stage b2=49 vs b1={35}: values [1628413597910449, 2758547353515625), 4000825 candidates (MITM path)
+  MITM b1=35: s=3 t=2 j=2 je=2 Q=1225 table=2401 yh=1667
+stage b2=50 vs b1={36}: values [1953125000000000, 3656158440062976), 5449708 candidates (MITM path)
+  MITM b1=36: s=3 t=2 j=2 je=2 Q=1296 table=2500 yh=2180
+stage b2=51 vs b1={37}: values [2334165173090451, 4808584372417849), 7171705 candidates (MITM path)
+  MITM b1=37: s=3 t=2 j=2 je=2 Q=1369 table=2601 yh=2758
+stage b2=52 vs b1={38}: values [2779905883635712, 6278211847988224), 9201128 candidates (MITM path)
+  MITM b1=38: s=3 t=2 j=2 je=3 Q=1444 table=2704 yh=3403
+stage b2=53 vs b1={39}: values [3299763591802133, 8140406085191601), 11575071 candidates (MITM path)
+  MITM b1=39: s=3 t=2 j=2 je=3 Q=1521 table=2809 yh=4121
+stage b2=54 vs b1={40}: values [3904305912313344, 10485760000000000), 14333527 candidates (MITM path)
+  MITM b1=40: s=3 t=2 j=2 je=3 Q=1600 table=2916 yh=4916
+stage b2=55 vs b1={41}: values [4605366583984375, 13422659310152401), 17519505 candidates (MITM path)
+  MITM b1=41: s=3 t=2 j=2 je=3 Q=1681 table=3025 yh=5792
+
+*** MATCH: 5733768413240616 is an 10-digit palindrome in bases 41 and 55
+stage b2=56 vs b1={42}: values [5416169448144896, 17080198121677824), 21179146 candidates (MITM path)
+  MITM b1=42: s=3 t=2 j=2 je=3 Q=1764 table=3136 yh=6754
+done: 0.00s, 22636 candidates tested

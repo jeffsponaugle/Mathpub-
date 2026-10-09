@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=22 vs b1={8}: values [484, 512), 2 candidates (generic path)
+stage b2=23 vs b1={9}: values [529, 729), 9 candidates (generic path)
+stage b2=24 vs b1={10}: values [576, 1000), 18 candidates (generic path)
+stage b2=25 vs b1={11}: values [625, 1331), 29 candidates (generic path)
+
+*** MATCH: 676 is an 3-digit palindrome in bases 11 and 25
+done: 0.00s, 58 candidates tested

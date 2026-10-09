@@ -1,0 +1,9 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=44 vs b1={21}: values [3748096, 4084101), 174 candidates (generic path)
+stage b2=45 vs b1={22}: values [4100625, 5153632), 521 candidates (generic path)
+stage b2=46 vs b1={23}: values [4477456, 6436343), 926 candidates (generic path)
+stage b2=47 vs b1={24}: values [4879681, 7962624), 1396 candidates (generic path)
+stage b2=48 vs b1={25}: values [5308416, 9765625), 1935 candidates (generic path)
+
+*** MATCH: 5582689 is an 5-digit palindrome in bases 25 and 48
+done: 0.00s, 4950 candidates tested

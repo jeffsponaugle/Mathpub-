@@ -1,0 +1,12 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=99 vs b1={22}: values [9801, 10648), 9 candidates (generic path)
+stage b2=100 vs b1={23}: values [10000, 12167), 22 candidates (generic path)
+stage b2=101 vs b1={24}: values [10201, 13824), 36 candidates (generic path)
+
+*** MATCH: 11515 is an 3-digit palindrome in bases 24 and 101
+stage b2=102 vs b1={25}: values [10404, 15625), 52 candidates (generic path)
+
+*** MATCH: 11017 is an 3-digit palindrome in bases 25 and 102
+stage b2=103 vs b1={26}: values [10609, 17576), 68 candidates (generic path)
+stage b2=104 vs b1={27}: values [10816, 19683), 86 candidates (generic path)
+done: 0.00s, 84 candidates tested

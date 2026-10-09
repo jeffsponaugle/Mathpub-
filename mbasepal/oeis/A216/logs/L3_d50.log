@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=67 vs b1={17}: values [4489, 4913), 7 candidates (generic path)
+
+*** MATCH: 4691 is an 3-digit palindrome in bases 17 and 67
+stage b2=68 vs b1={18}: values [4624, 5832), 18 candidates (generic path)
+done: 0.00s, 8 candidates tested

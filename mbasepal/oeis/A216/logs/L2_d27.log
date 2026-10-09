@@ -1,0 +1,7 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=33 vs b1={6}: values [33, 36), 1 candidates (generic path)
+stage b2=34 vs b1={7}: values [34, 49), 1 candidates (generic path)
+stage b2=35 vs b1={8}: values [35, 64), 1 candidates (generic path)
+
+*** MATCH: 36 is an 2-digit palindrome in bases 8 and 35
+done: 0.00s, 3 candidates tested

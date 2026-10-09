@@ -1,0 +1,9 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=34 vs b1={21}: values [1544804416, 1801088541), 6521 candidates (generic path)
+stage b2=35 vs b1={22}: values [1838265625, 2494357888), 15303 candidates (generic path)
+stage b2=36 vs b1={23}: values [2176782336, 3404825447), 26322 candidates (generic path)
+
+*** MATCH: 3088676989 is an 7-digit palindrome in bases 23 and 36
+stage b2=37 vs b1={24}: values [2565726409, 4586471424), 39894 candidates (generic path)
+stage b2=38 vs b1={25}: values [3010936384, 6103515625), 56360 candidates (generic path)
+done: 0.00s, 59883 candidates tested

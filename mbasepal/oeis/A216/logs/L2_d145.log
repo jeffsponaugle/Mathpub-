@@ -1,0 +1,20 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=158 vs b1={13}: values [158, 169), 1 candidates (generic path)
+stage b2=159 vs b1={14}: values [159, 196), 1 candidates (generic path)
+stage b2=160 vs b1={15}: values [160, 225), 1 candidates (generic path)
+stage b2=161 vs b1={16}: values [161, 256), 1 candidates (generic path)
+stage b2=162 vs b1={17}: values [162, 289), 1 candidates (generic path)
+stage b2=163 vs b1={18}: values [163, 324), 1 candidates (generic path)
+stage b2=164 vs b1={19}: values [164, 361), 2 candidates (generic path)
+stage b2=165 vs b1={20}: values [165, 400), 2 candidates (generic path)
+stage b2=166 vs b1={21}: values [166, 441), 2 candidates (generic path)
+stage b2=167 vs b1={22}: values [167, 484), 2 candidates (generic path)
+stage b2=168 vs b1={23}: values [168, 529), 3 candidates (generic path)
+stage b2=169 vs b1={24}: values [169, 576), 3 candidates (generic path)
+stage b2=170 vs b1={25}: values [170, 625), 3 candidates (generic path)
+stage b2=171 vs b1={26}: values [171, 676), 3 candidates (generic path)
+stage b2=172 vs b1={27}: values [172, 729), 4 candidates (generic path)
+stage b2=173 vs b1={28}: values [173, 784), 4 candidates (generic path)
+
+*** MATCH: 174 is an 2-digit palindrome in bases 28 and 173
+done: 0.00s, 34 candidates tested

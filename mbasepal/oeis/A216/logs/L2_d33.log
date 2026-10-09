@@ -1,0 +1,8 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=40 vs b1={7}: values [40, 49), 1 candidates (generic path)
+stage b2=41 vs b1={8}: values [41, 64), 1 candidates (generic path)
+stage b2=42 vs b1={9}: values [42, 81), 1 candidates (generic path)
+stage b2=43 vs b1={10}: values [43, 100), 2 candidates (generic path)
+
+*** MATCH: 44 is an 2-digit palindrome in bases 10 and 43
+done: 0.00s, 5 candidates tested

@@ -1,0 +1,8 @@
+A171740 search: n=11, threads=1, limit=none
+stage b2=24 vs b1={18}: values [63403380965376, 64268410079232), 108637 candidates (MITM path)
+  MITM b1=18: s=4 t=2 j=2 je=4 Q=324 table=576 yh=189
+stage b2=25 vs b1={19}: values [95367431640625, 116490258898219), 2162978 candidates (MITM path)
+  MITM b1=19: s=4 t=2 j=2 je=4 Q=361 table=625 yh=3461
+
+*** MATCH: 96396891300626 is an 11-digit palindrome in bases 19 and 25
+done: 0.00s, 358 candidates tested

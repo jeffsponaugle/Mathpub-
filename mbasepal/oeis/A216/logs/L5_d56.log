@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=94 vs b1={38}: values [78074896, 79235168), 132 candidates (generic path)
+stage b2=95 vs b1={39}: values [81450625, 90224199), 973 candidates (generic path)
+
+*** MATCH: 83968791 is an 5-digit palindrome in bases 39 and 95
+done: 0.00s, 1105 candidates tested

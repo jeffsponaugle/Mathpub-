@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=23 vs b1={15}: values [148035889, 170859375), 1876 candidates (generic path)
+stage b2=24 vs b1={16}: values [191102976, 268435456), 5595 candidates (generic path)
+stage b2=25 vs b1={17}: values [244140625, 410338673), 10637 candidates (generic path)
+
+*** MATCH: 289744476 is an 7-digit palindrome in bases 17 and 25
+done: 0.00s, 18107 candidates tested

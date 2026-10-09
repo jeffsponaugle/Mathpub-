@@ -1,0 +1,23 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=5 vs b1={3}: values [5, 9), 1 candidates (generic path)
+stage b2=6 vs b1={4}: values [6, 16), 2 candidates (generic path)
+stage b2=7 vs b1={5}: values [7, 25), 3 candidates (generic path)
+
+*** MATCH: 24 is an 2-digit palindrome in bases 5 and 7
+stage b2=8 vs b1={6}: values [8, 36), 4 candidates (generic path)
+stage b2=9 vs b1={7}: values [9, 49), 5 candidates (generic path)
+stage b2=10 vs b1={8}: values [10, 64), 6 candidates (generic path)
+stage b2=11 vs b1={9}: values [11, 81), 7 candidates (generic path)
+stage b2=12 vs b1={10}: values [12, 100), 8 candidates (generic path)
+stage b2=13 vs b1={11}: values [13, 121), 9 candidates (generic path)
+stage b2=14 vs b1={12}: values [14, 144), 10 candidates (generic path)
+stage b2=15 vs b1={13}: values [15, 169), 11 candidates (generic path)
+stage b2=16 vs b1={14}: values [16, 196), 12 candidates (generic path)
+stage b2=17 vs b1={15}: values [17, 225), 13 candidates (generic path)
+stage b2=18 vs b1={16}: values [18, 256), 14 candidates (generic path)
+stage b2=19 vs b1={17}: values [19, 289), 15 candidates (generic path)
+stage b2=20 vs b1={18}: values [20, 324), 16 candidates (generic path)
+stage b2=21 vs b1={19}: values [21, 361), 17 candidates (generic path)
+stage b2=22 vs b1={20}: values [22, 400), 18 candidates (generic path)
+stage b2=23 vs b1={21}: values [23, 441), 19 candidates (generic path)
+done: 0.00s, 24 candidates tested

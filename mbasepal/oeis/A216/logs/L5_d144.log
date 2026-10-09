@@ -1,0 +1,12 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=219 vs b1={75}: values [2300257521, 2373046875), 1518 candidates (generic path)
+stage b2=220 vs b1={76}: values [2342560000, 2535525376), 3987 candidates (generic path)
+stage b2=221 vs b1={77}: values [2385443281, 2706784157), 6580 candidates (generic path)
+stage b2=222 vs b1={78}: values [2428912656, 2887174368), 9299 candidates (generic path)
+stage b2=223 vs b1={79}: values [2472973441, 3077056399), 12148 candidates (generic path)
+
+*** MATCH: 2633949337 is an 5-digit palindrome in bases 79 and 223
+stage b2=224 vs b1={80}: values [2517630976, 3276800000), 15131 candidates (generic path)
+stage b2=225 vs b1={81}: values [2562890625, 3486784401), 18250 candidates (generic path)
+stage b2=226 vs b1={82}: values [2608757776, 3707398432), 21510 candidates (generic path)
+done: 0.00s, 37749 candidates tested

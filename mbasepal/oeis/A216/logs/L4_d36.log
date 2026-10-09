@@ -1,0 +1,10 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=57 vs b1={21}: values [185193, 194481), 3 candidates (generic path)
+stage b2=58 vs b1={22}: values [195112, 234256), 12 candidates (generic path)
+stage b2=59 vs b1={23}: values [205379, 279841), 22 candidates (generic path)
+stage b2=60 vs b1={24}: values [216000, 331776), 33 candidates (generic path)
+stage b2=61 vs b1={25}: values [226981, 390625), 44 candidates (generic path)
+stage b2=62 vs b1={26}: values [238328, 456976), 57 candidates (generic path)
+
+*** MATCH: 238329 is an 4-digit palindrome in bases 26 and 62
+done: 0.00s, 169 candidates tested

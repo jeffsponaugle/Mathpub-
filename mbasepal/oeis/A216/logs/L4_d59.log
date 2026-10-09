@@ -1,0 +1,36 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=88 vs b1={29}: values [681472, 707281), 4 candidates (generic path)
+stage b2=89 vs b1={30}: values [704969, 810000), 14 candidates (generic path)
+stage b2=90 vs b1={31}: values [729000, 923521), 25 candidates (generic path)
+stage b2=91 vs b1={32}: values [753571, 1048576), 36 candidates (generic path)
+stage b2=92 vs b1={33}: values [778688, 1185921), 49 candidates (generic path)
+stage b2=93 vs b1={34}: values [804357, 1336336), 62 candidates (generic path)
+stage b2=94 vs b1={35}: values [830584, 1500625), 76 candidates (generic path)
+stage b2=95 vs b1={36}: values [857375, 1679616), 92 candidates (generic path)
+stage b2=96 vs b1={37}: values [884736, 1874161), 108 candidates (generic path)
+stage b2=97 vs b1={38}: values [912673, 2085136), 125 candidates (generic path)
+stage b2=98 vs b1={39}: values [941192, 2313441), 143 candidates (generic path)
+stage b2=99 vs b1={40}: values [970299, 2560000), 163 candidates (generic path)
+stage b2=100 vs b1={41}: values [1000000, 2825761), 183 candidates (generic path)
+stage b2=101 vs b1={42}: values [1030301, 3111696), 205 candidates (generic path)
+stage b2=102 vs b1={43}: values [1061208, 3418801), 227 candidates (generic path)
+
+*** MATCH: 3036440 is an 4-digit palindrome in bases 43 and 102
+stage b2=103 vs b1={44}: values [1092727, 3748096), 251 candidates (generic path)
+stage b2=104 vs b1={45}: values [1124864, 4100625), 276 candidates (generic path)
+stage b2=105 vs b1={46}: values [1157625, 4477456), 302 candidates (generic path)
+stage b2=106 vs b1={47}: values [1191016, 4879681), 329 candidates (generic path)
+stage b2=107 vs b1={48}: values [1225043, 5308416), 357 candidates (generic path)
+stage b2=108 vs b1={49}: values [1259712, 5764801), 387 candidates (generic path)
+stage b2=109 vs b1={50}: values [1295029, 6250000), 418 candidates (generic path)
+stage b2=110 vs b1={51}: values [1331000, 6765201), 450 candidates (generic path)
+stage b2=111 vs b1={52}: values [1367631, 7311616), 483 candidates (generic path)
+stage b2=112 vs b1={53}: values [1404928, 7890481), 518 candidates (generic path)
+stage b2=113 vs b1={54}: values [1442897, 8503056), 553 candidates (generic path)
+stage b2=114 vs b1={55}: values [1481544, 9150625), 591 candidates (generic path)
+stage b2=115 vs b1={56}: values [1520875, 9834496), 629 candidates (generic path)
+stage b2=116 vs b1={57}: values [1560896, 10556001), 669 candidates (generic path)
+stage b2=117 vs b1={58}: values [1601613, 11316496), 710 candidates (generic path)
+
+*** MATCH: 1643032 is an 4-digit palindrome in bases 58 and 117
+done: 0.00s, 3636 candidates tested

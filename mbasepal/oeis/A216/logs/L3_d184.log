@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=221 vs b1={37}: values [48841, 50653), 9 candidates (generic path)
+
+*** MATCH: 49505 is an 3-digit palindrome in bases 37 and 221
+stage b2=222 vs b1={38}: values [49284, 54872), 26 candidates (generic path)
+done: 0.00s, 10 candidates tested

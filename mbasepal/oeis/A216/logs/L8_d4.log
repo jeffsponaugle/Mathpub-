@@ -1,0 +1,8 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=15 vs b1={11}: values [170859375, 214358881), 860 candidates (MITM path)
+  MITM b1=11: s=2 t=2 j=2 je=2 Q=121 table=225 yh=4
+stage b2=16 vs b1={12}: values [268435456, 429981696), 2466 candidates (MITM path)
+  MITM b1=12: s=2 t=2 j=2 je=2 Q=144 table=256 yh=10
+
+*** MATCH: 342324801 is an 8-digit palindrome in bases 12 and 16
+done: 0.00s, 9 candidates tested

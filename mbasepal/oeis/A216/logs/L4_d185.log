@@ -1,0 +1,7 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=248 vs b1={63}: values [15252992, 15752961), 9 candidates (generic path)
+stage b2=249 vs b1={64}: values [15438249, 16777216), 22 candidates (generic path)
+
+*** MATCH: 15749500 is an 4-digit palindrome in bases 64 and 249
+stage b2=250 vs b1={65}: values [15625000, 17850625), 36 candidates (generic path)
+done: 0.00s, 33 candidates tested

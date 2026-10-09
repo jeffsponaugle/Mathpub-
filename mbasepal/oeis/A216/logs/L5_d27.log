@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=50 vs b1={23}: values [6250000, 6436343), 75 candidates (generic path)
+stage b2=51 vs b1={24}: values [6765201, 7962624), 461 candidates (generic path)
+
+*** MATCH: 7410454 is an 5-digit palindrome in bases 24 and 51
+stage b2=52 vs b1={25}: values [7311616, 9765625), 908 candidates (generic path)
+done: 0.00s, 573 candidates tested

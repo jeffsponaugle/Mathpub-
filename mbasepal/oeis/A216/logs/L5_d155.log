@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=234 vs b1={79}: values [2998219536, 3077056399), 1440 candidates (generic path)
+
+*** MATCH: 3026583613 is an 5-digit palindrome in bases 79 and 234
+done: 0.00s, 1440 candidates tested

@@ -1,0 +1,11 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=95 vs b1={50}: values [735091890625, 781250000000), 53837 candidates (generic path)
+stage b2=96 vs b1={51}: values [782757789696, 897410677851), 129590 candidates (generic path)
+stage b2=97 vs b1={52}: values [832972004929, 1028071702528), 213768 candidates (generic path)
+
+*** MATCH: 988740767922 is an 7-digit palindrome in bases 52 and 97
+stage b2=98 vs b1={53}: values [885842380864, 1174711139837), 306918 candidates (generic path)
+
+*** MATCH: 971771799559 is an 7-digit palindrome in bases 53 and 98
+stage b2=99 vs b1={54}: values [941480149401, 1338925209984), 409611 candidates (generic path)
+done: 0.01s, 520581 candidates tested

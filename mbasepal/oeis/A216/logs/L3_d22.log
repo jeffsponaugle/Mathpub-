@@ -1,0 +1,14 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=33 vs b1={11}: values [1089, 1331), 8 candidates (generic path)
+stage b2=34 vs b1={12}: values [1156, 1728), 17 candidates (generic path)
+
+*** MATCH: 1667 is an 3-digit palindrome in bases 12 and 34
+stage b2=35 vs b1={13}: values [1225, 2197), 28 candidates (generic path)
+stage b2=36 vs b1={14}: values [1296, 2744), 41 candidates (generic path)
+
+*** MATCH: 1477 is an 3-digit palindrome in bases 14 and 36
+stage b2=37 vs b1={15}: values [1369, 3375), 55 candidates (generic path)
+stage b2=38 vs b1={16}: values [1444, 4096), 70 candidates (generic path)
+
+*** MATCH: 1445 is an 3-digit palindrome in bases 16 and 38
+done: 0.00s, 53 candidates tested

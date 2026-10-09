@@ -1,0 +1,21 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=257 vs b1={85}: values [4362470401, 4437053125), 1130 candidates (generic path)
+stage b2=258 vs b1={86}: values [4430766096, 4704270176), 4109 candidates (generic path)
+stage b2=259 vs b1={87}: values [4499860561, 4984209207), 7221 candidates (generic path)
+stage b2=260 vs b1={88}: values [4569760000, 5277319168), 10467 candidates (generic path)
+stage b2=261 vs b1={89}: values [4640470641, 5584059449), 13852 candidates (generic path)
+stage b2=262 vs b1={90}: values [4711998736, 5904900000), 17379 candidates (generic path)
+
+*** MATCH: 5481371693 is an 5-digit palindrome in bases 90 and 262
+stage b2=263 vs b1={91}: values [4784350561, 6240321451), 21050 candidates (generic path)
+
+*** MATCH: 5299113624 is an 5-digit palindrome in bases 91 and 263
+stage b2=264 vs b1={92}: values [4857532416, 6590815232), 24870 candidates (generic path)
+stage b2=265 vs b1={93}: values [4931550625, 6956883693), 28841 candidates (generic path)
+
+*** MATCH: 5281205671 is an 5-digit palindrome in bases 93 and 265
+stage b2=266 vs b1={94}: values [5006411536, 7339040224), 32968 candidates (generic path)
+stage b2=267 vs b1={95}: values [5082121521, 7737809375), 37253 candidates (generic path)
+stage b2=268 vs b1={96}: values [5158686976, 8153726976), 41700 candidates (generic path)
+stage b2=269 vs b1={97}: values [5236114321, 8587340257), 46313 candidates (generic path)
+done: 0.00s, 84812 candidates tested

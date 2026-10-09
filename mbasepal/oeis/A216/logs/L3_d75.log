@@ -1,0 +1,17 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=96 vs b1={21}: values [9216, 9261), 1 candidates (generic path)
+stage b2=97 vs b1={22}: values [9409, 10648), 13 candidates (generic path)
+stage b2=98 vs b1={23}: values [9604, 12167), 27 candidates (generic path)
+stage b2=99 vs b1={24}: values [9801, 13824), 41 candidates (generic path)
+stage b2=100 vs b1={25}: values [10000, 15625), 57 candidates (generic path)
+stage b2=101 vs b1={26}: values [10201, 17576), 74 candidates (generic path)
+
+*** MATCH: 11717 is an 3-digit palindrome in bases 26 and 101
+stage b2=102 vs b1={27}: values [10404, 19683), 91 candidates (generic path)
+stage b2=103 vs b1={28}: values [10609, 21952), 111 candidates (generic path)
+stage b2=104 vs b1={29}: values [10816, 24389), 131 candidates (generic path)
+stage b2=105 vs b1={30}: values [11025, 27000), 153 candidates (generic path)
+stage b2=106 vs b1={31}: values [11236, 29791), 176 candidates (generic path)
+stage b2=107 vs b1={32}: values [11449, 32768), 200 candidates (generic path)
+stage b2=108 vs b1={33}: values [11664, 35937), 225 candidates (generic path)
+done: 0.00s, 262 candidates tested

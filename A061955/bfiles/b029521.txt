@@ -1,0 +1,21 @@
+# A029521: all terms below 10^11.
+# Every n < 10^11 was tested; terms beyond the previously published ones were
+# each confirmed by direct evaluation of the concatenation mod n. Oct 04 2026.
+1 1
+2 3
+3 15
+4 969
+5 1107
+6 136193
+7 538019
+8 2177475
+9 2799315
+10 5948555
+11 46399701
+12 74304045
+13 121428377
+14 1467721527
+15 2057284125
+16 2344510025
+17 4836747933
+18 9212877375

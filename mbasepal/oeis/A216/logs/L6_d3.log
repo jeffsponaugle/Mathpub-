@@ -1,0 +1,13 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=10 vs b1={7}: values [100000, 117649), 18 candidates (even-AP path)
+stage b2=11 vs b1={8}: values [161051, 262144), 76 candidates (even-AP path)
+stage b2=12 vs b1={9}: values [248832, 531441), 164 candidates (even-AP path)
+stage b2=13 vs b1={10}: values [371293, 1000000), 287 candidates (even-AP path)
+stage b2=14 vs b1={11}: values [537824, 1771561), 450 candidates (even-AP path)
+
+*** MATCH: 1131720 is an 6-digit palindrome in bases 11 and 14
+stage b2=15 vs b1={12}: values [759375, 2985984), 660 candidates (even-AP path)
+
+*** MATCH: 1102816 is an 6-digit palindrome in bases 12 and 15
+stage b2=16 vs b1={13}: values [1048576, 4826809), 923 candidates (even-AP path)
+done: 0.00s, 890 candidates tested

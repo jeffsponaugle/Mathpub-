@@ -1,0 +1,28 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=216 vs b1={57}: values [10077696, 10556001), 11 candidates (generic path)
+stage b2=217 vs b1={58}: values [10218313, 11316496), 24 candidates (generic path)
+stage b2=218 vs b1={59}: values [10360232, 12117361), 37 candidates (generic path)
+stage b2=219 vs b1={60}: values [10503459, 12960000), 52 candidates (generic path)
+stage b2=220 vs b1={61}: values [10648000, 13845841), 67 candidates (generic path)
+stage b2=221 vs b1={62}: values [10793861, 14776336), 82 candidates (generic path)
+stage b2=222 vs b1={63}: values [10941048, 15752961), 98 candidates (generic path)
+stage b2=223 vs b1={64}: values [11089567, 16777216), 115 candidates (generic path)
+stage b2=224 vs b1={65}: values [11239424, 17850625), 132 candidates (generic path)
+stage b2=225 vs b1={66}: values [11390625, 18974736), 150 candidates (generic path)
+stage b2=226 vs b1={67}: values [11543176, 20151121), 169 candidates (generic path)
+stage b2=227 vs b1={68}: values [11697083, 21381376), 188 candidates (generic path)
+stage b2=228 vs b1={69}: values [11852352, 22667121), 209 candidates (generic path)
+stage b2=229 vs b1={70}: values [12008989, 24010000), 229 candidates (generic path)
+stage b2=230 vs b1={71}: values [12167000, 25411681), 251 candidates (generic path)
+stage b2=231 vs b1={72}: values [12326391, 26873856), 273 candidates (generic path)
+stage b2=232 vs b1={73}: values [12487168, 28398241), 296 candidates (generic path)
+stage b2=233 vs b1={74}: values [12649337, 29986576), 320 candidates (generic path)
+
+*** MATCH: 13794300 is an 4-digit palindrome in bases 74 and 233
+stage b2=234 vs b1={75}: values [12812904, 31640625), 344 candidates (generic path)
+stage b2=235 vs b1={76}: values [12977875, 33362176), 370 candidates (generic path)
+stage b2=236 vs b1={77}: values [13144256, 35153041), 396 candidates (generic path)
+stage b2=237 vs b1={78}: values [13312053, 37015056), 422 candidates (generic path)
+stage b2=238 vs b1={79}: values [13481272, 38950081), 450 candidates (generic path)
+stage b2=239 vs b1={80}: values [13651919, 40960000), 479 candidates (generic path)
+done: 0.00s, 2759 candidates tested

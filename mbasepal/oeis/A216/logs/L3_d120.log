@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=148 vs b1={28}: values [21904, 21952), 1 candidates (generic path)
+stage b2=149 vs b1={29}: values [22201, 24389), 15 candidates (generic path)
+
+*** MATCH: 23692 is an 3-digit palindrome in bases 29 and 149
+stage b2=150 vs b1={30}: values [22500, 27000), 31 candidates (generic path)
+stage b2=151 vs b1={31}: values [22801, 29791), 47 candidates (generic path)
+stage b2=152 vs b1={32}: values [23104, 32768), 64 candidates (generic path)
+stage b2=153 vs b1={33}: values [23409, 35937), 82 candidates (generic path)
+done: 0.00s, 36 candidates tested

@@ -1,0 +1,11 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=97 vs b1={39}: values [88529281, 90224199), 181 candidates (generic path)
+stage b2=98 vs b1={40}: values [92236816, 102400000), 1059 candidates (generic path)
+stage b2=99 vs b1={41}: values [96059601, 115856201), 2020 candidates (generic path)
+
+*** MATCH: 113301244 is an 5-digit palindrome in bases 41 and 99
+stage b2=100 vs b1={42}: values [100000000, 130691232), 3070 candidates (generic path)
+
+*** MATCH: 104500401 is an 5-digit palindrome in bases 42 and 100
+stage b2=101 vs b1={43}: values [104060401, 147008443), 4211 candidates (generic path)
+done: 0.00s, 4634 candidates tested

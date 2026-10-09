@@ -1,0 +1,17 @@
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 14  table: 8192 MB  seed: 1  ttmin: 2
+split ply 5: 734593 unique positions (4505624 paths), 0.5s
+  74218/734593 tasks (10.10%)  61s elapsed  ETA 534s
+  139230/734593 tasks (18.95%)  121s elapsed  ETA 513s
+  202091/734593 tasks (27.51%)  181s elapsed  ETA 475s
+  264768/734593 tasks (36.04%)  241s elapsed  ETA 426s
+  322254/734593 tasks (43.87%)  301s elapsed  ETA 384s
+  375138/734593 tasks (51.07%)  361s elapsed  ETA 345s
+  422505/734593 tasks (57.52%)  421s elapsed  ETA 310s
+  468969/734593 tasks (63.84%)  481s elapsed  ETA 272s
+  518625/734593 tasks (70.60%)  541s elapsed  ETA 225s
+  575472/734593 tasks (78.34%)  601s elapsed  ETA 166s
+  628793/734593 tasks (85.60%)  661s elapsed  ETA 111s
+  670775/734593 tasks (91.31%)  721s elapsed  ETA 69s
+  716565/734593 tasks (97.55%)  782s elapsed  ETA 20s
+perft(11) = 1568917594686774   (796.25s, 1.97e+12 leaves/s)

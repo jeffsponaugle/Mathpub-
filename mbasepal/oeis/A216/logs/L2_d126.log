@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=138 vs b1={12}: values [138, 144), 1 candidates (generic path)
+stage b2=139 vs b1={13}: values [139, 169), 1 candidates (generic path)
+
+*** MATCH: 140 is an 2-digit palindrome in bases 13 and 139
+done: 0.00s, 2 candidates tested

@@ -1,0 +1,22 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=95 vs b1={31}: values [857375, 923521), 8 candidates (generic path)
+stage b2=96 vs b1={32}: values [884736, 1048576), 18 candidates (generic path)
+stage b2=97 vs b1={33}: values [912673, 1185921), 30 candidates (generic path)
+stage b2=98 vs b1={34}: values [941192, 1336336), 42 candidates (generic path)
+stage b2=99 vs b1={35}: values [970299, 1500625), 55 candidates (generic path)
+stage b2=100 vs b1={36}: values [1000000, 1679616), 68 candidates (generic path)
+stage b2=101 vs b1={37}: values [1030301, 1874161), 83 candidates (generic path)
+stage b2=102 vs b1={38}: values [1061208, 2085136), 99 candidates (generic path)
+stage b2=103 vs b1={39}: values [1092727, 2313441), 116 candidates (generic path)
+stage b2=104 vs b1={40}: values [1124864, 2560000), 133 candidates (generic path)
+stage b2=105 vs b1={41}: values [1157625, 2825761), 152 candidates (generic path)
+stage b2=106 vs b1={42}: values [1191016, 3111696), 171 candidates (generic path)
+stage b2=107 vs b1={43}: values [1225043, 3418801), 192 candidates (generic path)
+stage b2=108 vs b1={44}: values [1259712, 3748096), 214 candidates (generic path)
+stage b2=109 vs b1={45}: values [1295029, 4100625), 237 candidates (generic path)
+
+*** MATCH: 1426920 is an 4-digit palindrome in bases 45 and 109
+stage b2=110 vs b1={46}: values [1331000, 4477456), 261 candidates (generic path)
+stage b2=111 vs b1={47}: values [1367631, 4879681), 286 candidates (generic path)
+stage b2=112 vs b1={48}: values [1404928, 5308416), 312 candidates (generic path)
+done: 0.00s, 1623 candidates tested

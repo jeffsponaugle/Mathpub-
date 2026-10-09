@@ -1,0 +1,19 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=88 vs b1={42}: values [5277319168, 5489031744), 311 candidates (even-AP path)
+stage b2=89 vs b1={43}: values [5584059449, 6321363049), 1046 candidates (even-AP path)
+stage b2=90 vs b1={44}: values [5904900000, 7256313856), 1854 candidates (even-AP path)
+stage b2=91 vs b1={45}: values [6240321451, 8303765625), 2739 candidates (even-AP path)
+stage b2=92 vs b1={46}: values [6590815232, 9474296896), 3704 candidates (even-AP path)
+stage b2=93 vs b1={47}: values [6956883693, 10779215329), 4753 candidates (even-AP path)
+stage b2=94 vs b1={48}: values [7339040224, 12230590464), 5890 candidates (even-AP path)
+stage b2=95 vs b1={49}: values [7737809375, 13841287201), 7119 candidates (even-AP path)
+stage b2=96 vs b1={50}: values [8153726976, 15625000000), 8445 candidates (even-AP path)
+stage b2=97 vs b1={51}: values [8587340257, 17596287801), 9871 candidates (even-AP path)
+
+*** MATCH: 11317910240 is an 6-digit palindrome in bases 51 and 97
+stage b2=98 vs b1={52}: values [9039207968, 19770609664), 11402 candidates (even-AP path)
+stage b2=99 vs b1={53}: values [9509900499, 22164361129), 13042 candidates (even-AP path)
+stage b2=100 vs b1={54}: values [10000000000, 24794911296), 14795 candidates (even-AP path)
+stage b2=101 vs b1={55}: values [10510100501, 27680640625), 16666 candidates (even-AP path)
+stage b2=102 vs b1={56}: values [11040808032, 30840979456), 18659 candidates (even-AP path)
+done: 0.00s, 45713 candidates tested

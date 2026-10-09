@@ -1,0 +1,12 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=286 vs b1={93}: values [6690585616, 6956883693), 3256 candidates (generic path)
+stage b2=287 vs b1={94}: values [6784652161, 7339040224), 6731 candidates (generic path)
+stage b2=288 vs b1={95}: values [6879707136, 7737809375), 10346 candidates (generic path)
+
+*** MATCH: 7656403969 is an 5-digit palindrome in bases 95 and 288
+stage b2=289 vs b1={96}: values [6975757441, 8153726976), 14104 candidates (generic path)
+
+*** MATCH: 7246368661 is an 5-digit palindrome in bases 96 and 289
+stage b2=290 vs b1={97}: values [7072810000, 8587340257), 18009 candidates (generic path)
+stage b2=291 vs b1={98}: values [7170871761, 9039207968), 22064 candidates (generic path)
+done: 0.00s, 31439 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=103 vs b1={41}: values [112550881, 115856201), 312 candidates (generic path)
+
+*** MATCH: 115139684 is an 5-digit palindrome in bases 41 and 103
+done: 0.00s, 312 candidates tested

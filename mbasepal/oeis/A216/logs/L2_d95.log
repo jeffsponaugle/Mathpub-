@@ -1,0 +1,12 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=106 vs b1={11}: values [106, 121), 1 candidates (generic path)
+stage b2=107 vs b1={12}: values [107, 144), 1 candidates (generic path)
+stage b2=108 vs b1={13}: values [108, 169), 1 candidates (generic path)
+stage b2=109 vs b1={14}: values [109, 196), 1 candidates (generic path)
+stage b2=110 vs b1={15}: values [110, 225), 2 candidates (generic path)
+stage b2=111 vs b1={16}: values [111, 256), 2 candidates (generic path)
+stage b2=112 vs b1={17}: values [112, 289), 2 candidates (generic path)
+stage b2=113 vs b1={18}: values [113, 324), 2 candidates (generic path)
+
+*** MATCH: 114 is an 2-digit palindrome in bases 18 and 113
+done: 0.00s, 12 candidates tested

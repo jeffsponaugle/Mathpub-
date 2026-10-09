@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=139 vs b1={52}: values [373301041, 380204032), 358 candidates (generic path)
+stage b2=140 vs b1={53}: values [384160000, 418195493), 1737 candidates (generic path)
+
+*** MATCH: 412659801 is an 5-digit palindrome in bases 53 and 140
+stage b2=141 vs b1={54}: values [395254161, 459165024), 3215 candidates (generic path)
+stage b2=142 vs b1={55}: values [406586896, 503284375), 4796 candidates (generic path)
+done: 0.00s, 3273 candidates tested

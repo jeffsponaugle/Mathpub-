@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=196 vs b1={34}: values [38416, 39304), 5 candidates (generic path)
+
+*** MATCH: 39201 is an 3-digit palindrome in bases 34 and 196
+stage b2=197 vs b1={35}: values [38809, 42875), 21 candidates (generic path)
+done: 0.00s, 7 candidates tested

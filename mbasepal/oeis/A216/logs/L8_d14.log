@@ -1,0 +1,16 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=39 vs b1={25}: values [137231006679, 152587890625), 6639 candidates (MITM path)
+  MITM b1=25: s=3 t=1 j=1 je=2 Q=25 table=39 yh=171
+stage b2=40 vs b1={26}: values [163840000000, 208827064576), 17574 candidates (MITM path)
+  MITM b1=26: s=2 t=2 j=2 je=2 Q=676 table=1600 yh=11
+stage b2=41 vs b1={27}: values [194754273881, 282429536481), 31028 candidates (MITM path)
+  MITM b1=27: s=2 t=2 j=2 je=2 Q=729 table=1681 yh=19
+stage b2=42 vs b1={28}: values [230539333248, 377801998336), 47326 candidates (MITM path)
+  MITM b1=28: s=2 t=2 j=2 je=2 Q=784 table=1764 yh=27
+stage b2=43 vs b1={29}: values [271818611107, 500246412961), 66816 candidates (MITM path)
+  MITM b1=29: s=2 t=2 j=2 je=2 Q=841 table=1849 yh=37
+stage b2=44 vs b1={30}: values [319277809664, 656100000000), 89865 candidates (MITM path)
+  MITM b1=30: s=2 t=2 j=2 je=2 Q=900 table=1936 yh=47
+
+*** MATCH: 342239511285 is an 8-digit palindrome in bases 30 and 44
+done: 0.00s, 269 candidates tested

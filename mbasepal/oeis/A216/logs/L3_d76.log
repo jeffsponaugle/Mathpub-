@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=98 vs b1={22}: values [9604, 10648), 11 candidates (generic path)
+stage b2=99 vs b1={23}: values [9801, 12167), 24 candidates (generic path)
+
+*** MATCH: 10000 is an 3-digit palindrome in bases 23 and 99
+done: 0.00s, 35 candidates tested

@@ -1,0 +1,17 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=228 vs b1={59}: values [11852352, 12117361), 6 candidates (generic path)
+stage b2=229 vs b1={60}: values [12008989, 12960000), 19 candidates (generic path)
+stage b2=230 vs b1={61}: values [12167000, 13845841), 32 candidates (generic path)
+stage b2=231 vs b1={62}: values [12326391, 14776336), 46 candidates (generic path)
+stage b2=232 vs b1={63}: values [12487168, 15752961), 61 candidates (generic path)
+stage b2=233 vs b1={64}: values [12649337, 16777216), 77 candidates (generic path)
+stage b2=234 vs b1={65}: values [12812904, 17850625), 93 candidates (generic path)
+stage b2=235 vs b1={66}: values [12977875, 18974736), 109 candidates (generic path)
+stage b2=236 vs b1={67}: values [13144256, 20151121), 126 candidates (generic path)
+stage b2=237 vs b1={68}: values [13312053, 21381376), 144 candidates (generic path)
+stage b2=238 vs b1={69}: values [13481272, 22667121), 163 candidates (generic path)
+stage b2=239 vs b1={70}: values [13651919, 24010000), 182 candidates (generic path)
+
+*** MATCH: 13938720 is an 4-digit palindrome in bases 70 and 239
+stage b2=240 vs b1={71}: values [13824000, 25411681), 202 candidates (generic path)
+done: 0.00s, 1056 candidates tested

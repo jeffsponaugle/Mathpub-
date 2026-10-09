@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=38 vs b1={12}: values [1444, 1728), 8 candidates (generic path)
+stage b2=39 vs b1={13}: values [1521, 2197), 18 candidates (generic path)
+stage b2=40 vs b1={14}: values [1600, 2744), 29 candidates (generic path)
+
+*** MATCH: 1801 is an 3-digit palindrome in bases 14 and 40
+stage b2=41 vs b1={15}: values [1681, 3375), 42 candidates (generic path)
+stage b2=42 vs b1={16}: values [1764, 4096), 56 candidates (generic path)
+done: 0.00s, 59 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=150 vs b1={29}: values [22500, 24389), 13 candidates (generic path)
+
+*** MATCH: 22501 is an 3-digit palindrome in bases 29 and 150
+done: 0.00s, 13 candidates tested

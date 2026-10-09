@@ -1,0 +1,8 @@
+A171740 search: n=13, threads=1, limit=none
+stage b2=20 vs b1={16}: values [4096000000000000, 4503599627370496), 6368745 candidates (MITM path)
+  MITM b1=16: s=4 t=3 j=3 je=4 Q=4096 table=8000 yh=797
+stage b2=21 vs b1={17}: values [7355827511386641, 9904578032905937), 29717452 candidates (MITM path)
+  MITM b1=17: s=4 t=3 j=3 je=4 Q=4913 table=9261 yh=3209
+
+*** MATCH: 8047782883062742 is an 13-digit palindrome in bases 17 and 21
+done: 0.00s, 1669 candidates tested

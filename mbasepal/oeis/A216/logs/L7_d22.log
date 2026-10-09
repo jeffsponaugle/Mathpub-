@@ -1,0 +1,5 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=52 vs b1={30}: values [19770609664, 21870000000), 14931 candidates (generic path)
+
+*** MATCH: 20196246357 is an 7-digit palindrome in bases 30 and 52
+done: 0.00s, 14931 candidates tested

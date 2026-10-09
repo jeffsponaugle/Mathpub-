@@ -1,0 +1,13 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=175 vs b1={14}: values [175, 196), 1 candidates (generic path)
+stage b2=176 vs b1={15}: values [176, 225), 1 candidates (generic path)
+stage b2=177 vs b1={16}: values [177, 256), 1 candidates (generic path)
+stage b2=178 vs b1={17}: values [178, 289), 1 candidates (generic path)
+stage b2=179 vs b1={18}: values [179, 324), 1 candidates (generic path)
+stage b2=180 vs b1={19}: values [180, 361), 2 candidates (generic path)
+stage b2=181 vs b1={20}: values [181, 400), 2 candidates (generic path)
+stage b2=182 vs b1={21}: values [182, 441), 2 candidates (generic path)
+stage b2=183 vs b1={22}: values [183, 484), 2 candidates (generic path)
+
+*** MATCH: 184 is an 2-digit palindrome in bases 22 and 183
+done: 0.00s, 12 candidates tested

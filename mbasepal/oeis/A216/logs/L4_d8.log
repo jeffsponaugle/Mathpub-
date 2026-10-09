@@ -1,0 +1,11 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=17 vs b1={9}: values [4913, 6561), 6 candidates (generic path)
+stage b2=18 vs b1={10}: values [5832, 10000), 13 candidates (generic path)
+stage b2=19 vs b1={11}: values [6859, 14641), 22 candidates (generic path)
+
+*** MATCH: 13320 is an 4-digit palindrome in bases 11 and 19
+stage b2=20 vs b1={12}: values [8000, 20736), 32 candidates (generic path)
+stage b2=21 vs b1={13}: values [9261, 28561), 44 candidates (generic path)
+stage b2=22 vs b1={14}: values [10648, 38416), 58 candidates (generic path)
+stage b2=23 vs b1={15}: values [12167, 50625), 73 candidates (generic path)
+done: 0.00s, 72 candidates tested

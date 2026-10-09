@@ -1,0 +1,7 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=184 vs b1={14}: values [184, 196), 1 candidates (generic path)
+stage b2=185 vs b1={15}: values [185, 225), 1 candidates (generic path)
+stage b2=186 vs b1={16}: values [186, 256), 1 candidates (generic path)
+
+*** MATCH: 187 is an 2-digit palindrome in bases 16 and 186
+done: 0.00s, 3 candidates tested

@@ -1,0 +1,9 @@
+# A046473: Primes that are palindromic in bases 3 and 10.
+# complete for all terms < 10^49 (dbpal exhaustive search)
+1 2
+2 151
+3 757
+4 93739
+5 7949497
+6 112969211
+7 3195269530359625913

@@ -1,0 +1,8 @@
+A171740 search: n=17, threads=1, limit=none
+stage b2=14 vs b1={12}: values [2177953337809371136, 2218611106740436992), 27549852 candidates (MITM path)
+  MITM b1=12: s=5 t=4 j=4 je=5 Q=20736 table=38416 yh=718
+stage b2=15 vs b1={13}: values [6568408355712890625, 8650415919381337933), 812366921 candidates (MITM path)
+  MITM b1=13: s=5 t=4 j=4 je=5 Q=28561 table=50625 yh=16047
+
+*** MATCH: 8535888851411555386 is an 17-digit palindrome in bases 13 and 15
+done: 0.00s, 15883 candidates tested

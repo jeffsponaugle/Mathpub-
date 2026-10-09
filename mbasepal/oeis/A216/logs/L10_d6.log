@@ -1,0 +1,12 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=23 vs b1={17}: values [1801152661463, 2015993900449), 33380 candidates (MITM path)
+  MITM b1=17: s=3 t=2 j=2 je=3 Q=289 table=529 yh=64
+stage b2=24 vs b1={18}: values [2641807540224, 3570467226624), 116628 candidates (MITM path)
+  MITM b1=18: s=3 t=2 j=2 je=3 Q=324 table=576 yh=203
+stage b2=25 vs b1={19}: values [3814697265625, 6131066257801), 237197 candidates (MITM path)
+  MITM b1=19: s=3 t=2 j=2 je=3 Q=361 table=625 yh=380
+stage b2=26 vs b1={20}: values [5429503678976, 10240000000000), 404878 candidates (MITM path)
+  MITM b1=20: s=3 t=2 j=2 je=3 Q=400 table=676 yh=599
+
+*** MATCH: 5681121663231 is an 10-digit palindrome in bases 20 and 26
+done: 0.00s, 679 candidates tested

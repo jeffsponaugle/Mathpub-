@@ -1,0 +1,10 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=202 vs b1={70}: values [1664966416, 1680700000), 386 candidates (generic path)
+stage b2=203 vs b1={71}: values [1698181681, 1804229351), 2574 candidates (generic path)
+stage b2=204 vs b1={72}: values [1731891456, 1934917632), 4879 candidates (generic path)
+stage b2=205 vs b1={73}: values [1766100625, 2073071593), 7305 candidates (generic path)
+stage b2=206 vs b1={74}: values [1800814096, 2219006624), 9855 candidates (generic path)
+
+*** MATCH: 1840535017 is an 5-digit palindrome in bases 74 and 206
+stage b2=207 vs b1={75}: values [1836036801, 2373046875), 12533 candidates (generic path)
+done: 0.00s, 25104 candidates tested

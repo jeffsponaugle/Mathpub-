@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=201 vs b1={70}: values [1632240801, 1680700000), 1200 candidates (generic path)
+stage b2=202 vs b1={71}: values [1664966416, 1804229351), 3413 candidates (generic path)
+
+*** MATCH: 1698997761 is an 5-digit palindrome in bases 71 and 202
+stage b2=203 vs b1={72}: values [1698181681, 1934917632), 5745 candidates (generic path)
+done: 0.00s, 4633 candidates tested

@@ -1,0 +1,10 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=24 vs b1={13}: values [331776, 371293), 69 candidates (generic path)
+stage b2=25 vs b1={14}: values [390625, 537824), 236 candidates (generic path)
+stage b2=26 vs b1={15}: values [456976, 759375), 448 candidates (generic path)
+
+*** MATCH: 593711 is an 5-digit palindrome in bases 15 and 26
+stage b2=27 vs b1={16}: values [531441, 1048576), 710 candidates (generic path)
+
+*** MATCH: 589816 is an 5-digit palindrome in bases 16 and 27
+done: 0.00s, 838 candidates tested

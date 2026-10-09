@@ -1,0 +1,9 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=122 vs b1={47}: values [221533456, 229345007), 525 candidates (generic path)
+stage b2=123 vs b1={48}: values [228886641, 254803968), 1714 candidates (generic path)
+stage b2=124 vs b1={49}: values [236421376, 282475249), 2996 candidates (generic path)
+stage b2=125 vs b1={50}: values [244140625, 312500000), 4376 candidates (generic path)
+stage b2=126 vs b1={51}: values [252047376, 345025251), 5857 candidates (generic path)
+
+*** MATCH: 256762801 is an 5-digit palindrome in bases 51 and 126
+done: 0.00s, 15465 candidates tested

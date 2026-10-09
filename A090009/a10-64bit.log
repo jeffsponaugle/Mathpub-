@@ -1,0 +1,14 @@
+dspattern: p -> p + digitsum(p), chains of length >= 10
+  range     : 2 .. 18,446,744,073,709,551,615
+  patterns  : 5 (5 of them carry past the low four digits)
+  candidates: 176,288,301 numbers in range fit a pattern (1 in 1.05e+11)
+  threads   : 14
+  mode      : maximal chains only
+
+
+no chain of length >= 10 starts in this range (exhaustive)
+  elapsed          : 0.55s
+  candidates       : 176,288,301
+  after sieve      : 173,444
+  base-2 tests     : 210,385
+  chains >= 10     : 0

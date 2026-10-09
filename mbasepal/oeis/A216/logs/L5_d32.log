@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=58 vs b1={26}: values [11316496, 11881376), 168 candidates (generic path)
+stage b2=59 vs b1={27}: values [12117361, 14348907), 642 candidates (generic path)
+
+*** MATCH: 14039405 is an 5-digit palindrome in bases 27 and 59
+stage b2=60 vs b1={28}: values [12960000, 17210368), 1181 candidates (generic path)
+stage b2=61 vs b1={29}: values [13845841, 20511149), 1792 candidates (generic path)
+done: 0.00s, 1162 candidates tested

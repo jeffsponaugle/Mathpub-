@@ -1,0 +1,18 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=151 vs b1={66}: values [78502725751, 82653950016), 1206 candidates (even-AP path)
+stage b2=152 vs b1={67}: values [81136812032, 90458382169), 2655 candidates (even-AP path)
+stage b2=153 vs b1={68}: values [83841135993, 98867482624), 4196 candidates (even-AP path)
+stage b2=154 vs b1={69}: values [86617093024, 107918163081), 5833 candidates (even-AP path)
+stage b2=155 vs b1={70}: values [89466096875, 117649000000), 7569 candidates (even-AP path)
+stage b2=156 vs b1={71}: values [92389579776, 128100283921), 9407 candidates (even-AP path)
+stage b2=157 vs b1={72}: values [95388992557, 139314069504), 11351 candidates (even-AP path)
+
+*** MATCH: 120420231038 is an 6-digit palindrome in bases 72 and 157
+stage b2=158 vs b1={73}: values [98465804768, 151334226289), 13404 candidates (even-AP path)
+stage b2=159 vs b1={74}: values [101621504799, 164206490176), 15570 candidates (even-AP path)
+stage b2=160 vs b1={75}: values [104857600000, 177978515625), 17852 candidates (even-AP path)
+stage b2=161 vs b1={76}: values [108175616801, 192699928576), 20254 candidates (even-AP path)
+stage b2=162 vs b1={77}: values [111577100832, 208422380089), 22779 candidates (even-AP path)
+stage b2=163 vs b1={78}: values [115063617043, 225199600704), 25432 candidates (even-AP path)
+stage b2=164 vs b1={79}: values [118636749824, 243087455521), 28215 candidates (even-AP path)
+done: 0.00s, 58719 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=24 vs b1={9}: values [576, 729), 7 candidates (generic path)
+
+*** MATCH: 601 is an 3-digit palindrome in bases 9 and 24
+done: 0.00s, 7 candidates tested

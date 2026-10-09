@@ -1,0 +1,11 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=230 vs b1={38}: values [52900, 54872), 9 candidates (generic path)
+stage b2=231 vs b1={39}: values [53361, 59319), 26 candidates (generic path)
+
+*** MATCH: 57289 is an 3-digit palindrome in bases 39 and 231
+stage b2=232 vs b1={40}: values [53824, 64000), 44 candidates (generic path)
+stage b2=233 vs b1={41}: values [54289, 68921), 63 candidates (generic path)
+stage b2=234 vs b1={42}: values [54756, 74088), 83 candidates (generic path)
+
+*** MATCH: 54757 is an 3-digit palindrome in bases 42 and 234
+done: 0.00s, 74 candidates tested

@@ -1,0 +1,7 @@
+# variant depth split1 split2 -- seed-1 confirmations of terms whose seed-2 run finished on the M5 Pro (run on the Studio)
+noknights 11 5 4
+noqueens 10 4 5
+noqueens 11 5 4
+nobishops 10 4 5
+nobishops 11 5 4
+pawnsking 13 6 5

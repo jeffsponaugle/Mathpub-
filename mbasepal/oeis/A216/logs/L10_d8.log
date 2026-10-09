@@ -1,0 +1,12 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=29 vs b1={21}: values [14507145975869, 16679880978201), 105930 candidates (MITM path)
+  MITM b1=21: s=3 t=2 j=2 je=2 Q=441 table=841 yh=126
+stage b2=30 vs b1={22}: values [19683000000000, 26559922791424), 283001 candidates (MITM path)
+  MITM b1=22: s=3 t=2 j=2 je=3 Q=484 table=900 yh=315
+stage b2=31 vs b1={23}: values [26439622160671, 41426511213649), 523484 candidates (MITM path)
+  MITM b1=23: s=3 t=2 j=2 je=3 Q=529 table=961 yh=545
+
+*** MATCH: 36434748011040 is an 10-digit palindrome in bases 23 and 31
+stage b2=32 vs b1={24}: values [35184372088832, 63403380965376), 840993 candidates (MITM path)
+  MITM b1=24: s=3 t=2 j=2 je=3 Q=576 table=1024 yh=822
+done: 0.00s, 842 candidates tested

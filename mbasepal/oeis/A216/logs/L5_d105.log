@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=165 vs b1={60}: values [741200625, 777600000), 1337 candidates (generic path)
+stage b2=166 vs b1={61}: values [759333136, 844596301), 3095 candidates (generic path)
+
+*** MATCH: 806345333 is an 5-digit palindrome in bases 61 and 166
+stage b2=167 vs b1={62}: values [777796321, 916132832), 4961 candidates (generic path)
+stage b2=168 vs b1={63}: values [796594176, 992436543), 6939 candidates (generic path)
+done: 0.00s, 5802 candidates tested

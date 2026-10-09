@@ -1,0 +1,6 @@
+A171740 search: n=11, threads=1, limit=none
+stage b2=11 vs b1={9}: values [25937424601, 31381059609), 33801 candidates (MITM path)
+  MITM b1=9: s=4 t=2 j=2 je=4 Q=81 table=121 yh=280
+
+*** MATCH: 28455496928 is an 11-digit palindrome in bases 9 and 11
+done: 0.00s, 130 candidates tested

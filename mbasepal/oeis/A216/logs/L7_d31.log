@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=69 vs b1={38}: values [107918163081, 114415582592), 19779 candidates (generic path)
+stage b2=70 vs b1={39}: values [117649000000, 137231006679), 57091 candidates (generic path)
+
+*** MATCH: 122783381911 is an 7-digit palindrome in bases 39 and 70
+done: 0.00s, 76869 candidates tested

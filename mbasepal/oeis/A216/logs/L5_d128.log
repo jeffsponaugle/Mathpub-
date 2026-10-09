@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=197 vs b1={69}: values [1506138481, 1564031349), 1492 candidates (generic path)
+
+*** MATCH: 1529502091 is an 5-digit palindrome in bases 69 and 197
+done: 0.00s, 1492 candidates tested

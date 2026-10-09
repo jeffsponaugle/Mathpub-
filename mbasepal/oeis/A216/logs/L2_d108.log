@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=119 vs b1={11}: values [119, 121), 1 candidates (generic path)
+
+*** MATCH: 120 is an 2-digit palindrome in bases 11 and 119
+done: 0.00s, 1 candidates tested

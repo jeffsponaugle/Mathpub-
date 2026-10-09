@@ -1,0 +1,32 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=9 vs b1={7}: values [4782969, 5764801), 150 candidates (MITM path)
+  MITM b1=7: s=3 t=1 j=1 je=3 Q=7 table=9 yh=17
+stage b2=10 vs b1={8}: values [10000000, 16777216), 678 candidates (MITM path)
+  MITM b1=8: s=2 t=2 j=2 je=2 Q=64 table=100 yh=7
+stage b2=11 vs b1={9}: values [19487171, 43046721), 1610 candidates (MITM path)
+  MITM b1=9: s=2 t=2 j=2 je=2 Q=81 table=121 yh=14
+stage b2=12 vs b1={10}: values [35831808, 100000000), 3095 candidates (MITM path)
+  MITM b1=10: s=2 t=2 j=2 je=2 Q=100 table=144 yh=22
+stage b2=13 vs b1={11}: values [62748517, 214358881), 5309 candidates (MITM path)
+  MITM b1=11: s=2 t=2 j=2 je=2 Q=121 table=169 yh=32
+stage b2=14 vs b1={12}: values [105413504, 429981696), 8449 candidates (MITM path)
+  MITM b1=12: s=2 t=2 j=2 je=2 Q=144 table=196 yh=44
+stage b2=15 vs b1={13}: values [170859375, 815730721), 12739 candidates (MITM path)
+  MITM b1=13: s=2 t=2 j=2 je=2 Q=169 table=225 yh=57
+stage b2=16 vs b1={14}: values [268435456, 1475789056), 18423 candidates (MITM path)
+  MITM b1=14: s=2 t=2 j=2 je=2 Q=196 table=256 yh=72
+stage b2=17 vs b1={15}: values [410338673, 2562890625), 25773 candidates (MITM path)
+  MITM b1=15: s=2 t=2 j=2 je=2 Q=225 table=289 yh=90
+stage b2=18 vs b1={16}: values [612220032, 4294967296), 35082 candidates (MITM path)
+  MITM b1=16: s=2 t=2 j=2 je=2 Q=256 table=324 yh=109
+stage b2=19 vs b1={17}: values [893871739, 6975757441), 46669 candidates (MITM path)
+  MITM b1=17: s=2 t=2 j=2 je=2 Q=289 table=361 yh=130
+
+*** MATCH: 2727014580 is an 8-digit palindrome in bases 17 and 19
+stage b2=20 vs b1={18}: values [1280000000, 11019960576), 60875 candidates (MITM path)
+  MITM b1=18: s=2 t=2 j=2 je=2 Q=324 table=400 yh=153
+stage b2=21 vs b1={19}: values [1801088541, 16983563041), 78067 candidates (MITM path)
+  MITM b1=19: s=2 t=2 j=2 je=2 Q=361 table=441 yh=178
+stage b2=22 vs b1={20}: values [2494357888, 25600000000), 98635 candidates (MITM path)
+  MITM b1=20: s=2 t=2 j=2 je=2 Q=400 table=484 yh=204
+done: 0.00s, 540 candidates tested

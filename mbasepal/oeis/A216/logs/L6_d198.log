@@ -1,0 +1,28 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=321 vs b1={123}: values [3408200705601, 3462825991689), 1652 candidates (even-AP path)
+stage b2=322 vs b1={124}: values [3461619737632, 3635215077376), 5200 candidates (even-AP path)
+stage b2=323 vs b1={125}: values [3515706497843, 3814697265625), 8873 candidates (even-AP path)
+stage b2=324 vs b1={126}: values [3570467226624, 4001504141376), 12674 candidates (even-AP path)
+stage b2=325 vs b1={127}: values [3625908203125, 4195872914689), 16604 candidates (even-AP path)
+stage b2=326 vs b1={128}: values [3682035745376, 4398046511104), 20667 candidates (even-AP path)
+stage b2=327 vs b1={129}: values [3738856210407, 4608273662721), 24865 candidates (even-AP path)
+stage b2=328 vs b1={130}: values [3796375994368, 4826809000000), 29202 candidates (even-AP path)
+stage b2=329 vs b1={131}: values [3854601532649, 5053913144281), 33678 candidates (even-AP path)
+stage b2=330 vs b1={132}: values [3913539300000, 5289852801024), 38298 candidates (even-AP path)
+stage b2=331 vs b1={133}: values [3973195810651, 5534900853769), 43065 candidates (even-AP path)
+stage b2=332 vs b1={134}: values [4033577618432, 5789336458816), 47979 candidates (even-AP path)
+stage b2=333 vs b1={135}: values [4094691316893, 6053445140625), 53046 candidates (even-AP path)
+stage b2=334 vs b1={136}: values [4156543539424, 6327518887936), 58267 candidates (even-AP path)
+stage b2=335 vs b1={137}: values [4219140959375, 6611856250609), 63644 candidates (even-AP path)
+stage b2=336 vs b1={138}: values [4282490290176, 6906762437184), 69182 candidates (even-AP path)
+stage b2=337 vs b1={139}: values [4346598285457, 7212549413161), 74883 candidates (even-AP path)
+stage b2=338 vs b1={140}: values [4411471739168, 7529536000000), 80749 candidates (even-AP path)
+stage b2=339 vs b1={141}: values [4477117485699, 7858047974841), 86784 candidates (even-AP path)
+stage b2=340 vs b1={142}: values [4543542400000, 8198418170944), 92990 candidates (even-AP path)
+
+*** MATCH: 6113480954581 is an 6-digit palindrome in bases 142 and 340
+stage b2=341 vs b1={143}: values [4610753397701, 8550986578849), 99371 candidates (even-AP path)
+
+*** MATCH: 4699556269200 is an 6-digit palindrome in bases 143 and 341
+stage b2=342 vs b1={144}: values [4678757435232, 8916100448256), 105930 candidates (even-AP path)
+done: 0.00s, 812503 candidates tested

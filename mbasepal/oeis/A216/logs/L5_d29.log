@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=53 vs b1={24}: values [7890481, 7962624), 26 candidates (generic path)
+stage b2=54 vs b1={25}: values [8503056, 9765625), 433 candidates (generic path)
+
+*** MATCH: 9232273 is an 5-digit palindrome in bases 25 and 54
+stage b2=55 vs b1={26}: values [9150625, 11881376), 903 candidates (generic path)
+done: 0.00s, 486 candidates tested

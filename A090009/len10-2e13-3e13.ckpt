@@ -1,0 +1,23 @@
+# dschain checkpoint -- safe to delete, safe to inspect
+version 1
+complete 1
+start 20000000000000
+end 30000000000000
+chunk 10000000
+length 10
+maximal 1
+nchunks 1000001
+watermark 1000001
+elapsed 719.395
+primes 324225759582
+found 0
+longest 8
+longest_at 21430195082809
+hist 1 308417803276
+hist 2 15010891879
+hist 3 763135461
+hist 4 32762433
+hist 5 1138716
+hist 6 26824
+hist 7 926
+hist 8 67

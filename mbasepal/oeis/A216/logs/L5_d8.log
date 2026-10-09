@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=19 vs b1={11}: values [130321, 161051), 86 candidates (generic path)
+
+*** MATCH: 131766 is an 5-digit palindrome in bases 11 and 19
+done: 0.00s, 85 candidates tested

@@ -1,0 +1,16 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=22 vs b1={5}: values [22, 25), 1 candidates (generic path)
+stage b2=23 vs b1={6}: values [23, 36), 1 candidates (generic path)
+stage b2=24 vs b1={7}: values [24, 49), 2 candidates (generic path)
+stage b2=25 vs b1={8}: values [25, 64), 2 candidates (generic path)
+stage b2=26 vs b1={9}: values [26, 81), 3 candidates (generic path)
+stage b2=27 vs b1={10}: values [27, 100), 3 candidates (generic path)
+stage b2=28 vs b1={11}: values [28, 121), 4 candidates (generic path)
+stage b2=29 vs b1={12}: values [29, 144), 4 candidates (generic path)
+stage b2=30 vs b1={13}: values [30, 169), 5 candidates (generic path)
+stage b2=31 vs b1={14}: values [31, 196), 6 candidates (generic path)
+stage b2=32 vs b1={15}: values [32, 225), 7 candidates (generic path)
+stage b2=33 vs b1={16}: values [33, 256), 7 candidates (generic path)
+
+*** MATCH: 34 is an 2-digit palindrome in bases 16 and 33
+done: 0.00s, 42 candidates tested

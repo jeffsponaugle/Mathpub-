@@ -1,0 +1,8 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=35 vs b1={15}: values [42875, 50625), 7 candidates (generic path)
+stage b2=36 vs b1={16}: values [46656, 65536), 15 candidates (generic path)
+
+*** MATCH: 55981 is an 4-digit palindrome in bases 16 and 36
+stage b2=37 vs b1={17}: values [50653, 83521), 25 candidates (generic path)
+stage b2=38 vs b1={18}: values [54872, 104976), 35 candidates (generic path)
+done: 0.00s, 27 candidates tested

@@ -1,0 +1,8 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=29 vs b1={13}: values [24389, 28561), 5 candidates (generic path)
+stage b2=30 vs b1={14}: values [27000, 38416), 13 candidates (generic path)
+stage b2=31 vs b1={15}: values [29791, 50625), 22 candidates (generic path)
+
+*** MATCH: 33760 is an 4-digit palindrome in bases 15 and 31
+stage b2=32 vs b1={16}: values [32768, 65536), 33 candidates (generic path)
+done: 0.00s, 41 candidates tested

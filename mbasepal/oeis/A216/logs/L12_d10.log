@@ -1,0 +1,18 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=39 vs b1={29}: values [317475837322472439, 353814783205469041), 10327250 candidates (MITM path)
+  MITM b1=29: s=4 t=2 j=2 je=3 Q=841 table=1521 yh=6790
+stage b2=40 vs b1={30}: values [419430400000000000, 531441000000000000), 27346338 candidates (MITM path)
+  MITM b1=30: s=3 t=3 j=3 je=3 Q=27000 table=64000 yh=428
+stage b2=41 vs b1={31}: values [550329031716248441, 787662783788549761), 49963904 candidates (MITM path)
+  MITM b1=31: s=3 t=3 j=3 je=3 Q=29791 table=68921 yh=725
+stage b2=42 vs b1={32}: values [717368321110468608, 1152921504606846976), 79349730 candidates (MITM path)
+  MITM b1=32: s=3 t=3 j=3 je=3 Q=32768 table=74088 yh=1072
+stage b2=43 vs b1={33}: values [929293739471222707, 1667889514952984961), 116841221 candidates (MITM path)
+  MITM b1=33: s=3 t=3 j=3 je=3 Q=35937 table=79507 yh=1470
+stage b2=44 vs b1={34}: values [1196683881290399744, 2386420683693101056), 163958840 candidates (MITM path)
+  MITM b1=34: s=3 t=3 j=3 je=3 Q=39304 table=85184 yh=1925
+
+*** MATCH: 1670458470795180045 is an 12-digit palindrome in bases 34 and 44
+stage b2=45 vs b1={35}: values [1532278301220703125, 3379220508056640625), 222422247 candidates (MITM path)
+  MITM b1=35: s=3 t=3 j=3 je=3 Q=42875 table=91125 yh=2441
+done: 0.01s, 11435 candidates tested

@@ -1,0 +1,14 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=32 vs b1={14}: values [32768, 38416), 6 candidates (generic path)
+stage b2=33 vs b1={15}: values [35937, 50625), 14 candidates (generic path)
+stage b2=34 vs b1={16}: values [39304, 65536), 23 candidates (generic path)
+stage b2=35 vs b1={17}: values [42875, 83521), 34 candidates (generic path)
+
+*** MATCH: 71856 is an 4-digit palindrome in bases 17 and 35
+stage b2=36 vs b1={18}: values [46656, 104976), 46 candidates (generic path)
+stage b2=37 vs b1={19}: values [50653, 130321), 59 candidates (generic path)
+stage b2=38 vs b1={20}: values [54872, 160000), 73 candidates (generic path)
+stage b2=39 vs b1={21}: values [59319, 194481), 89 candidates (generic path)
+stage b2=40 vs b1={22}: values [64000, 234256), 107 candidates (generic path)
+stage b2=41 vs b1={23}: values [68921, 279841), 126 candidates (generic path)
+done: 0.00s, 139 candidates tested

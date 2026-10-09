@@ -1,0 +1,11 @@
+# merged: Mac Studio (forward) + mathd, mathb, mathg, M5 Pro (from the end); seed 2, split 6
+build: 7de4dcb9ad85 g++ 13 x86_64
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 96  table: off  seed: 2  ttmin: 2
+runs/v13_studio.ckpt: 4460530 entries
+runs/v13_m5pro.ckpt: 687380 entries
+runs/norooks_d13_seed2.mathd.ckpt: 1299870 entries
+runs/v13_mathb.ckpt: 1395587 entries
+runs/v13_mathg.ckpt: 444895 entries
+merged 8095245 tasks from 5 files; 193017 computed twice, all agreeing
+perft(13) = 1363086189786054605

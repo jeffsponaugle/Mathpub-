@@ -1,0 +1,10 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=241 vs b1={81}: values [3373402561, 3486784401), 1953 candidates (generic path)
+stage b2=242 vs b1={82}: values [3429742096, 3707398432), 4742 candidates (generic path)
+
+*** MATCH: 3678467519 is an 5-digit palindrome in bases 82 and 242
+stage b2=243 vs b1={83}: values [3486784401, 3939040643), 7659 candidates (generic path)
+stage b2=244 vs b1={84}: values [3544535296, 4182119424), 10710 candidates (generic path)
+stage b2=245 vs b1={85}: values [3603000625, 4437053125), 13896 candidates (generic path)
+stage b2=246 vs b1={86}: values [3662186256, 4704270176), 17220 candidates (generic path)
+done: 0.00s, 13719 candidates tested

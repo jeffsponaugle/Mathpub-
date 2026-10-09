@@ -1,0 +1,7 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=24 vs b1={11}: values [13824, 14641), 2 candidates (generic path)
+stage b2=25 vs b1={12}: values [15625, 20736), 9 candidates (generic path)
+
+*** MATCH: 18226 is an 4-digit palindrome in bases 12 and 25
+stage b2=26 vs b1={13}: values [17576, 28561), 17 candidates (generic path)
+done: 0.00s, 11 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=162 vs b1={59}: values [688747536, 714924299), 998 candidates (generic path)
+
+*** MATCH: 695623627 is an 5-digit palindrome in bases 59 and 162
+done: 0.00s, 998 candidates tested

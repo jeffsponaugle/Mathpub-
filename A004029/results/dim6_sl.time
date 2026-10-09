@@ -1,0 +1,1 @@
+( tr '\n' '\0' < results/qfiles_dim6.txt | xargs -0 -P 14 -n 1 ./enantio -m -)  165.07s user 9.97s system 556% cpu 31.454 total

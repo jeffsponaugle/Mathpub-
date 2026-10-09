@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=223 vs b1={37}: values [49729, 50653), 5 candidates (generic path)
+stage b2=224 vs b1={38}: values [50176, 54872), 21 candidates (generic path)
+
+*** MATCH: 51297 is an 3-digit palindrome in bases 38 and 224
+stage b2=225 vs b1={39}: values [50625, 59319), 39 candidates (generic path)
+stage b2=226 vs b1={40}: values [51076, 64000), 58 candidates (generic path)
+done: 0.00s, 30 candidates tested

@@ -1,0 +1,7 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=52 vs b1={8}: values [52, 64), 1 candidates (generic path)
+stage b2=53 vs b1={9}: values [53, 81), 1 candidates (generic path)
+stage b2=54 vs b1={10}: values [54, 100), 1 candidates (generic path)
+
+*** MATCH: 55 is an 2-digit palindrome in bases 10 and 54
+done: 0.00s, 3 candidates tested

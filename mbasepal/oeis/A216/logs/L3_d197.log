@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=236 vs b1={39}: values [55696, 59319), 16 candidates (generic path)
+stage b2=237 vs b1={40}: values [56169, 64000), 34 candidates (generic path)
+
+*** MATCH: 57355 is an 3-digit palindrome in bases 40 and 237
+stage b2=238 vs b1={41}: values [56644, 68921), 52 candidates (generic path)
+stage b2=239 vs b1={42}: values [57121, 74088), 71 candidates (generic path)
+done: 0.00s, 54 candidates tested

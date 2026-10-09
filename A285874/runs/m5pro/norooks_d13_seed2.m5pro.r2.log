@@ -1,0 +1,51 @@
+build: 7de4dcb9ad85 clang++ 21.0.0 arm64
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 18  table: 32768 MB  seed: 2  ttmin: 2
+split ply 6: 8095245 unique positions (106770421 paths), 11.2s
+computing 477719 of 8095245 tasks
+resumed 295074 entries (0 of this process's 477719 tasks) from runs/norooks_d13_seed2.m5pro.ckpt
+  7318/477719 tasks (1.53%)  311s elapsed  ETA 19290s
+  14035/477719 tasks (2.94%)  611s elapsed  ETA 19827s
+  22192/477719 tasks (4.65%)  912s elapsed  ETA 18478s
+  34677/477719 tasks (7.26%)  1212s elapsed  ETA 15337s
+  46229/477719 tasks (9.68%)  1512s elapsed  ETA 14006s
+  56496/477719 tasks (11.83%)  1812s elapsed  ETA 13425s
+  67182/477719 tasks (14.06%)  2112s elapsed  ETA 12837s
+  74490/477719 tasks (15.59%)  2412s elapsed  ETA 12996s
+  84181/477719 tasks (17.62%)  2712s elapsed  ETA 12626s
+  97542/477719 tasks (20.42%)  3012s elapsed  ETA 11696s
+  106341/477719 tasks (22.26%)  3312s elapsed  ETA 11528s
+  118125/477719 tasks (24.73%)  3612s elapsed  ETA 10963s
+  127306/477719 tasks (26.65%)  3913s elapsed  ETA 10738s
+  137063/477719 tasks (28.69%)  4213s elapsed  ETA 10442s
+  145124/477719 tasks (30.38%)  4513s elapsed  ETA 10316s
+  157051/477719 tasks (32.88%)  4813s elapsed  ETA 9804s
+  166584/477719 tasks (34.87%)  5113s elapsed  ETA 9529s
+  177524/477719 tasks (37.16%)  5413s elapsed  ETA 9134s
+  194225/477719 tasks (40.66%)  5713s elapsed  ETA 8322s
+  199806/477719 tasks (41.83%)  6013s elapsed  ETA 8348s
+  204497/477719 tasks (42.81%)  6313s elapsed  ETA 8420s
+  210155/477719 tasks (43.99%)  6613s elapsed  ETA 8405s
+  215351/477719 tasks (45.08%)  6913s elapsed  ETA 8409s
+  222682/477719 tasks (46.61%)  7213s elapsed  ETA 8249s
+  229083/477719 tasks (47.95%)  7514s elapsed  ETA 8143s
+  232966/477719 tasks (48.77%)  7814s elapsed  ETA 8197s
+  238155/477719 tasks (49.85%)  8114s elapsed  ETA 8150s
+  247074/477719 tasks (51.72%)  8414s elapsed  ETA 7844s
+  253089/477719 tasks (52.98%)  8714s elapsed  ETA 7724s
+  259069/477719 tasks (54.23%)  9014s elapsed  ETA 7598s
+  268067/477719 tasks (56.11%)  9314s elapsed  ETA 7276s
+  276719/477719 tasks (57.93%)  9614s elapsed  ETA 6975s
+  284951/477719 tasks (59.65%)  9914s elapsed  ETA 6699s
+  294799/477719 tasks (61.71%)  10215s elapsed  ETA 6331s
+  306302/477719 tasks (64.12%)  10515s elapsed  ETA 5878s
+  310992/477719 tasks (65.10%)  10815s elapsed  ETA 5792s
+  315206/477719 tasks (65.98%)  11115s elapsed  ETA 5725s
+  321430/477719 tasks (67.28%)  11415s elapsed  ETA 5545s
+  329688/477719 tasks (69.01%)  11715s elapsed  ETA 5255s
+  338211/477719 tasks (70.80%)  12015s elapsed  ETA 4951s
+  347224/477719 tasks (72.68%)  12315s elapsed  ETA 4624s
+  354955/477719 tasks (74.30%)  12615s elapsed  ETA 4359s
+  367194/477719 tasks (76.86%)  12915s elapsed  ETA 3884s
+  379759/477719 tasks (79.49%)  13216s elapsed  ETA 3406s
+  392306/477719 tasks (82.12%)  13516s elapsed  ETA 2940s

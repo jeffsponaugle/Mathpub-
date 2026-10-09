@@ -1,0 +1,22 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=37 vs b1={26}: values [129961739795077, 141167095653376), 161591 candidates (MITM path)
+  MITM b1=26: s=3 t=2 j=2 je=2 Q=676 table=1369 yh=119
+stage b2=38 vs b1={27}: values [165216101262848, 205891132094649), 513346 candidates (MITM path)
+  MITM b1=27: s=3 t=2 j=2 je=2 Q=729 table=1444 yh=356
+stage b2=39 vs b1={28}: values [208728361158759, 296196766695424), 969457 candidates (MITM path)
+  MITM b1=28: s=3 t=2 j=2 je=2 Q=784 table=1521 yh=638
+stage b2=40 vs b1={29}: values [262144000000000, 420707233300201), 1548470 candidates (MITM path)
+  MITM b1=29: s=3 t=2 j=2 je=2 Q=841 table=1600 yh=968
+stage b2=41 vs b1={30}: values [327381934393961, 590490000000000), 2270989 candidates (MITM path)
+  MITM b1=30: s=3 t=2 j=2 je=3 Q=900 table=1681 yh=1351
+stage b2=42 vs b1={31}: values [406671383849472, 819628286980801), 3159791 candidates (MITM path)
+  MITM b1=31: s=3 t=2 j=2 je=3 Q=961 table=1764 yh=1792
+stage b2=43 vs b1={32}: values [502592611936843, 1125899906842624), 4239943 candidates (MITM path)
+  MITM b1=32: s=3 t=2 j=2 je=3 Q=1024 table=1849 yh=2294
+
+*** MATCH: 850466252340408 is an 10-digit palindrome in bases 32 and 43
+stage b2=44 vs b1={33}: values [618121839509504, 1531578985264449), 5538917 candidates (MITM path)
+  MITM b1=33: s=3 t=2 j=2 je=3 Q=1089 table=1936 yh=2862
+stage b2=45 vs b1={34}: values [756680642578125, 2064377754059776), 7086709 candidates (MITM path)
+  MITM b1=34: s=3 t=2 j=2 je=3 Q=1156 table=2025 yh=3500
+done: 0.00s, 7483 candidates tested

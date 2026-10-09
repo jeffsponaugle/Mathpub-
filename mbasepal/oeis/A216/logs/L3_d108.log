@@ -1,0 +1,11 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=135 vs b1={27}: values [18225, 19683), 11 candidates (generic path)
+stage b2=136 vs b1={28}: values [18496, 21952), 26 candidates (generic path)
+
+*** MATCH: 20129 is an 3-digit palindrome in bases 28 and 136
+stage b2=137 vs b1={29}: values [18769, 24389), 42 candidates (generic path)
+stage b2=138 vs b1={30}: values [19044, 27000), 58 candidates (generic path)
+stage b2=139 vs b1={31}: values [19321, 29791), 76 candidates (generic path)
+stage b2=140 vs b1={32}: values [19600, 32768), 95 candidates (generic path)
+stage b2=141 vs b1={33}: values [19881, 35937), 114 candidates (generic path)
+done: 0.00s, 67 candidates tested

@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=11 vs b1={5}: values [121, 125), 1 candidates (generic path)
+stage b2=12 vs b1={6}: values [144, 216), 7 candidates (generic path)
+stage b2=13 vs b1={7}: values [169, 343), 14 candidates (generic path)
+
+*** MATCH: 235 is an 3-digit palindrome in bases 7 and 13
+stage b2=14 vs b1={8}: values [196, 512), 23 candidates (generic path)
+
+*** MATCH: 211 is an 3-digit palindrome in bases 8 and 14
+done: 0.00s, 24 candidates tested

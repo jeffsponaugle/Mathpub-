@@ -1,0 +1,13 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=95 vs b1={45}: values [7737809375, 8303765625), 661 candidates (even-AP path)
+stage b2=96 vs b1={46}: values [8153726976, 9474296896), 1493 candidates (even-AP path)
+stage b2=97 vs b1={47}: values [8587340257, 10779215329), 2402 candidates (even-AP path)
+stage b2=98 vs b1={48}: values [9039207968, 12230590464), 3391 candidates (even-AP path)
+stage b2=99 vs b1={49}: values [9509900499, 13841287201), 4464 candidates (even-AP path)
+
+*** MATCH: 11644776100 is an 6-digit palindrome in bases 49 and 99
+stage b2=100 vs b1={50}: values [10000000000, 15625000000), 5626 candidates (even-AP path)
+stage b2=101 vs b1={51}: values [10510100501, 17596287801), 6878 candidates (even-AP path)
+stage b2=102 vs b1={52}: values [11040808032, 19770609664), 8227 candidates (even-AP path)
+stage b2=103 vs b1={53}: values [11592740743, 22164361129), 9675 candidates (even-AP path)
+done: 0.00s, 13750 candidates tested

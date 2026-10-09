@@ -1,0 +1,20 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=189 vs b1={79}: values [241162079949, 243087455521), 286 candidates (even-AP path)
+stage b2=190 vs b1={80}: values [247609900000, 262144000000), 2119 candidates (even-AP path)
+stage b2=191 vs b1={81}: values [254194901951, 282429536481), 4053 candidates (even-AP path)
+stage b2=192 vs b1={82}: values [260919263232, 304006671424), 6088 candidates (even-AP path)
+stage b2=193 vs b1={83}: values [267785184193, 326940373369), 8229 candidates (even-AP path)
+stage b2=194 vs b1={84}: values [274794888224, 351298031616), 10478 candidates (even-AP path)
+stage b2=195 vs b1={85}: values [281950621875, 377149515625), 12839 candidates (even-AP path)
+stage b2=196 vs b1={86}: values [289254654976, 404567235136), 15315 candidates (even-AP path)
+stage b2=197 vs b1={87}: values [296709280757, 433626201009), 17909 candidates (even-AP path)
+
+*** MATCH: 363709379880 is an 6-digit palindrome in bases 87 and 197
+stage b2=198 vs b1={88}: values [304316815968, 464404086784), 20624 candidates (even-AP path)
+stage b2=199 vs b1={89}: values [312079600999, 496981290961), 23463 candidates (even-AP path)
+
+*** MATCH: 344561137200 is an 6-digit palindrome in bases 89 and 199
+stage b2=200 vs b1={90}: values [320000000000, 531441000000), 26431 candidates (even-AP path)
+stage b2=201 vs b1={91}: values [328080401001, 567869252041), 29529 candidates (even-AP path)
+stage b2=202 vs b1={92}: values [336323216032, 606355001344), 32762 candidates (even-AP path)
+done: 0.00s, 86594 candidates tested

@@ -1,0 +1,26 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=159 vs b1={45}: values [4019679, 4100625), 4 candidates (generic path)
+stage b2=160 vs b1={46}: values [4096000, 4477456), 15 candidates (generic path)
+stage b2=161 vs b1={47}: values [4173281, 4879681), 28 candidates (generic path)
+stage b2=162 vs b1={48}: values [4251528, 5308416), 41 candidates (generic path)
+stage b2=163 vs b1={49}: values [4330747, 5764801), 54 candidates (generic path)
+stage b2=164 vs b1={50}: values [4410944, 6250000), 69 candidates (generic path)
+stage b2=165 vs b1={51}: values [4492125, 6765201), 84 candidates (generic path)
+stage b2=166 vs b1={52}: values [4574296, 7311616), 100 candidates (generic path)
+stage b2=167 vs b1={53}: values [4657463, 7890481), 116 candidates (generic path)
+stage b2=168 vs b1={54}: values [4741632, 8503056), 134 candidates (generic path)
+stage b2=169 vs b1={55}: values [4826809, 9150625), 152 candidates (generic path)
+stage b2=170 vs b1={56}: values [4913000, 9834496), 171 candidates (generic path)
+
+*** MATCH: 5843241 is an 4-digit palindrome in bases 56 and 170
+stage b2=171 vs b1={57}: values [5000211, 10556001), 191 candidates (generic path)
+stage b2=172 vs b1={58}: values [5088448, 11316496), 211 candidates (generic path)
+stage b2=173 vs b1={59}: values [5177717, 12117361), 232 candidates (generic path)
+stage b2=174 vs b1={60}: values [5268024, 12960000), 255 candidates (generic path)
+stage b2=175 vs b1={61}: values [5359375, 13845841), 278 candidates (generic path)
+stage b2=176 vs b1={62}: values [5451776, 14776336), 302 candidates (generic path)
+stage b2=177 vs b1={63}: values [5545233, 15752961), 326 candidates (generic path)
+stage b2=178 vs b1={64}: values [5639752, 16777216), 352 candidates (generic path)
+stage b2=179 vs b1={65}: values [5735339, 17850625), 379 candidates (generic path)
+stage b2=180 vs b1={66}: values [5832000, 18974736), 406 candidates (generic path)
+done: 0.00s, 1111 candidates tested

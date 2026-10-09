@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=41 vs b1={12}: values [1681, 1728), 2 candidates (generic path)
+stage b2=42 vs b1={13}: values [1764, 2197), 11 candidates (generic path)
+
+*** MATCH: 1765 is an 3-digit palindrome in bases 13 and 42
+done: 0.00s, 13 candidates tested

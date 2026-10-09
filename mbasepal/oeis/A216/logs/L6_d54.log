@@ -1,0 +1,12 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=101 vs b1={47}: values [10510100501, 10779215329), 262 candidates (even-AP path)
+stage b2=102 vs b1={48}: values [11040808032, 12230590464), 1122 candidates (even-AP path)
+stage b2=103 vs b1={49}: values [11592740743, 13841287201), 2058 candidates (even-AP path)
+stage b2=104 vs b1={50}: values [12166529024, 15625000000), 3075 candidates (even-AP path)
+stage b2=105 vs b1={51}: values [12762815625, 17596287801), 4176 candidates (even-AP path)
+stage b2=106 vs b1={52}: values [13382255776, 19770609664), 5364 candidates (even-AP path)
+stage b2=107 vs b1={53}: values [14025517307, 22164361129), 6644 candidates (even-AP path)
+
+*** MATCH: 14793436620 is an 6-digit palindrome in bases 53 and 107
+stage b2=108 vs b1={54}: values [14693280768, 24794911296), 8020 candidates (even-AP path)
+done: 0.00s, 16807 candidates tested

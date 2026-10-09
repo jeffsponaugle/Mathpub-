@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=119 vs b1={46}: values [200533921, 205962976), 384 candidates (generic path)
+stage b2=120 vs b1={47}: values [207360000, 229345007), 1527 candidates (generic path)
+stage b2=121 vs b1={48}: values [214358881, 254803968), 2763 candidates (generic path)
+
+*** MATCH: 223656522 is an 5-digit palindrome in bases 48 and 121
+stage b2=122 vs b1={49}: values [221533456, 282475249), 4095 candidates (generic path)
+done: 0.00s, 4817 candidates tested

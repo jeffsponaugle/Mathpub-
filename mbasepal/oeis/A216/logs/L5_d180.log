@@ -1,0 +1,9 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=268 vs b1={88}: values [5158686976, 5277319168), 1652 candidates (generic path)
+stage b2=269 vs b1={89}: values [5236114321, 5584059449), 4809 candidates (generic path)
+
+*** MATCH: 5517023490 is an 5-digit palindrome in bases 89 and 269
+stage b2=270 vs b1={90}: values [5314410000, 5904900000), 8101 candidates (generic path)
+stage b2=271 vs b1={91}: values [5393580481, 6240321451), 11530 candidates (generic path)
+stage b2=272 vs b1={92}: values [5473632256, 6590815232), 15101 candidates (generic path)
+done: 0.00s, 11509 candidates tested

@@ -1,0 +1,14 @@
+A171740 search: n=14, threads=1, limit=none
+stage b2=25 vs b1={20}: values [1490116119384765625, 1638400000000000000), 24294832 candidates (MITM path)
+  MITM b1=20: s=4 t=3 j=3 je=3 Q=8000 table=15625 yh=1555
+stage b2=26 vs b1={21}: values [2481152873203736576, 3243919932521508681), 94968263 candidates (MITM path)
+  MITM b1=21: s=4 t=3 j=3 je=4 Q=9261 table=17576 yh=5404
+stage b2=27 vs b1={22}: values [4052555153018976267, 6221821273427820544), 207379816 candidates (MITM path)
+  MITM b1=22: s=4 t=3 j=3 je=4 Q=10648 table=19683 yh=10536
+stage b2=28 vs b1={23}: values [6502111422497947648, 11592836324538749809), 377288363 candidates (MITM path)
+  MITM b1=23: s=4 t=3 j=3 je=4 Q=12167 table=21952 yh=17187
+stage b2=29 vs b1={24}: values [10260628712958602189, 21035720123168587776), 624647460 candidates (MITM path)
+  MITM b1=24: s=4 t=3 j=3 je=4 Q=13824 table=24389 yh=25612
+
+*** MATCH: 10716579270481431300 is an 14-digit palindrome in bases 24 and 29
+done: 0.01s, 35766 candidates tested

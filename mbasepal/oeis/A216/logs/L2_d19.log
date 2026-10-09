@@ -1,0 +1,18 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=24 vs b1={5}: values [24, 25), 1 candidates (generic path)
+stage b2=25 vs b1={6}: values [25, 36), 1 candidates (generic path)
+stage b2=26 vs b1={7}: values [26, 49), 1 candidates (generic path)
+stage b2=27 vs b1={8}: values [27, 64), 2 candidates (generic path)
+stage b2=28 vs b1={9}: values [28, 81), 2 candidates (generic path)
+stage b2=29 vs b1={10}: values [29, 100), 3 candidates (generic path)
+stage b2=30 vs b1={11}: values [30, 121), 4 candidates (generic path)
+stage b2=31 vs b1={12}: values [31, 144), 4 candidates (generic path)
+stage b2=32 vs b1={13}: values [32, 169), 5 candidates (generic path)
+stage b2=33 vs b1={14}: values [33, 196), 5 candidates (generic path)
+stage b2=34 vs b1={15}: values [34, 225), 6 candidates (generic path)
+stage b2=35 vs b1={16}: values [35, 256), 7 candidates (generic path)
+stage b2=36 vs b1={17}: values [36, 289), 8 candidates (generic path)
+stage b2=37 vs b1={18}: values [37, 324), 8 candidates (generic path)
+
+*** MATCH: 38 is an 2-digit palindrome in bases 18 and 37
+done: 0.00s, 54 candidates tested

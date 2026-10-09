@@ -1,0 +1,12 @@
+a(18) 1342989770695372800 2^12·3^5·5^2·7^2·11·13·17·41·43·257
+a(19) 20144846560430592000 2^12·3^6·5^3·7^2·11·13·17·41·43·257
+a(20) 1441560489708423064780800 2^16·3^5·5^2·7^3·11·13·41·83·331·65537
+a(21) 21623407345626345971712000 2^16·3^6·5^3·7^3·11·13·41·83·331·65537
+a(22) 6149822195556228360752824320000 2^18·3^5·5^4·7^2·11·41·79·83·157·313·331·65537
+a(23) 9224733293334342541129236480000 2^17·3^6·5^4·7^2·11·41·79·83·157·313·331·65537
+
+Sources: a(18), a(20), a(22), a(23) appear among the examples of Moews & Moews (1998); a(19) is from Cohen (1990). All are listed in David Moews' aliquot database (https://djm.cc/aliquot-database/aliquot-database-.1.txt).
+
+These values were previously known as infinitary perfect numbers but not known to be consecutive terms. An exhaustive search over Fermi-Dirac factorizations (N = product of distinct p^(2^k), with prod(q+1) = 2*prod(q)) shows that no other infinitary perfect number exists up to a(23) = 9224733293334342541129236480000. In particular the intervals between a(17) and a(18), a(18) and a(19), ..., a(22) and a(23) are empty.
+
+The smallest known infinitary perfect number above a(23) is 92247332933343425411292364800000 = 10*a(23) (Moews & Moews 1998); it is not known whether other terms lie between a(23) and that value.

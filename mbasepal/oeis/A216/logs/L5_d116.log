@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=180 vs b1={64}: values [1049760000, 1073741824), 741 candidates (generic path)
+stage b2=181 vs b1={65}: values [1073283121, 1160290625), 2656 candidates (generic path)
+
+*** MATCH: 1075183260 is an 5-digit palindrome in bases 65 and 181
+done: 0.00s, 3397 candidates tested

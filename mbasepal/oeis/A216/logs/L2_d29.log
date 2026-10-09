@@ -1,0 +1,27 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=35 vs b1={6}: values [35, 36), 1 candidates (generic path)
+stage b2=36 vs b1={7}: values [36, 49), 1 candidates (generic path)
+stage b2=37 vs b1={8}: values [37, 64), 1 candidates (generic path)
+stage b2=38 vs b1={9}: values [38, 81), 2 candidates (generic path)
+stage b2=39 vs b1={10}: values [39, 100), 2 candidates (generic path)
+stage b2=40 vs b1={11}: values [40, 121), 3 candidates (generic path)
+stage b2=41 vs b1={12}: values [41, 144), 3 candidates (generic path)
+stage b2=42 vs b1={13}: values [42, 169), 4 candidates (generic path)
+stage b2=43 vs b1={14}: values [43, 196), 4 candidates (generic path)
+stage b2=44 vs b1={15}: values [44, 225), 5 candidates (generic path)
+stage b2=45 vs b1={16}: values [45, 256), 5 candidates (generic path)
+stage b2=46 vs b1={17}: values [46, 289), 6 candidates (generic path)
+stage b2=47 vs b1={18}: values [47, 324), 6 candidates (generic path)
+stage b2=48 vs b1={19}: values [48, 361), 7 candidates (generic path)
+stage b2=49 vs b1={20}: values [49, 400), 8 candidates (generic path)
+stage b2=50 vs b1={21}: values [50, 441), 8 candidates (generic path)
+stage b2=51 vs b1={22}: values [51, 484), 9 candidates (generic path)
+stage b2=52 vs b1={23}: values [52, 529), 10 candidates (generic path)
+stage b2=53 vs b1={24}: values [53, 576), 10 candidates (generic path)
+stage b2=54 vs b1={25}: values [54, 625), 11 candidates (generic path)
+stage b2=55 vs b1={26}: values [55, 676), 12 candidates (generic path)
+stage b2=56 vs b1={27}: values [56, 729), 13 candidates (generic path)
+stage b2=57 vs b1={28}: values [57, 784), 13 candidates (generic path)
+
+*** MATCH: 58 is an 2-digit palindrome in bases 28 and 57
+done: 0.00s, 137 candidates tested

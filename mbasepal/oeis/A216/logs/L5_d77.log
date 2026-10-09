@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=125 vs b1={48}: values [244140625, 254803968), 683 candidates (generic path)
+
+*** MATCH: 246250126 is an 5-digit palindrome in bases 48 and 125
+done: 0.00s, 683 candidates tested

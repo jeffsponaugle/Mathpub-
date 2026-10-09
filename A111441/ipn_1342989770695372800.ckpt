@@ -1,0 +1,20 @@
+IPN1 X=1342989770695372800 L=4 tasks=4227 hash=2800c5f16a54b45b
+B ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7
+S 2 3
+S 2 5 9
+S 3 4 5
+S 2 7 11 41 43 81 256 257
+S 2 7 16 17 41 81
+S 2 11 13 25 41 43 49 81 256 257
+S 2 13 16 17 25 41 49 81
+S 3 5 9 16 17
+S 3 5 9 11 43 256 257
+S 3 7 11 16 17 41 43 81 256 257
+S 3 11 13 16 17 25 41 43 49 81 256 257
+S 4 5 7 16 17 41 81
+S 4 5 11 13 25 41 43 49 81 256 257
+S 4 5 13 16 17 25 41 49 81
+S 5 7 9 11 16 17 41 43 81 256 257
+S 4 7 9 13 16 17 25
+S 4 7 9 11 13 25 43 256 257
+S 4 5 7 11 41 43 81 256 257

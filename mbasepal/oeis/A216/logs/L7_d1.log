@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=5 vs b1={4}: values [15625, 16384), 7 candidates
+stage b2=6 vs b1={5}: values [46656, 78125), 146 candidates
+stage b2=7 vs b1={6}: values [117649, 279936), 474 candidates
+
+*** MATCH: 186621 is an 7-digit palindrome in bases 6 and 7
+done: 0.00s, 354 candidates tested

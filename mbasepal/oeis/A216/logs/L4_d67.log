@@ -1,0 +1,26 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=99 vs b1={32}: values [970299, 1048576), 8 candidates (generic path)
+stage b2=100 vs b1={33}: values [1000000, 1185921), 19 candidates (generic path)
+stage b2=101 vs b1={34}: values [1030301, 1336336), 31 candidates (generic path)
+stage b2=102 vs b1={35}: values [1061208, 1500625), 43 candidates (generic path)
+stage b2=103 vs b1={36}: values [1092727, 1679616), 56 candidates (generic path)
+stage b2=104 vs b1={37}: values [1124864, 1874161), 70 candidates (generic path)
+stage b2=105 vs b1={38}: values [1157625, 2085136), 85 candidates (generic path)
+stage b2=106 vs b1={39}: values [1191016, 2313441), 100 candidates (generic path)
+stage b2=107 vs b1={40}: values [1225043, 2560000), 117 candidates (generic path)
+stage b2=108 vs b1={41}: values [1259712, 2825761), 135 candidates (generic path)
+stage b2=109 vs b1={42}: values [1295029, 3111696), 153 candidates (generic path)
+stage b2=110 vs b1={43}: values [1331000, 3418801), 173 candidates (generic path)
+stage b2=111 vs b1={44}: values [1367631, 3748096), 194 candidates (generic path)
+stage b2=112 vs b1={45}: values [1404928, 4100625), 215 candidates (generic path)
+stage b2=113 vs b1={46}: values [1442897, 4477456), 238 candidates (generic path)
+
+*** MATCH: 1752066 is an 4-digit palindrome in bases 46 and 113
+stage b2=114 vs b1={47}: values [1481544, 4879681), 262 candidates (generic path)
+stage b2=115 vs b1={48}: values [1520875, 5308416), 287 candidates (generic path)
+stage b2=116 vs b1={49}: values [1560896, 5764801), 313 candidates (generic path)
+stage b2=117 vs b1={50}: values [1601613, 6250000), 340 candidates (generic path)
+stage b2=118 vs b1={51}: values [1643032, 6765201), 368 candidates (generic path)
+stage b2=119 vs b1={52}: values [1685159, 7311616), 398 candidates (generic path)
+stage b2=120 vs b1={53}: values [1728000, 7890481), 428 candidates (generic path)
+done: 0.00s, 1708 candidates tested

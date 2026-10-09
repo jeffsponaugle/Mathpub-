@@ -1,0 +1,10 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=277 vs b1={109}: values [1630793025157, 1677100110841), 2179 candidates (even-AP path)
+stage b2=278 vs b1={110}: values [1660443030368, 1771561000000), 5172 candidates (even-AP path)
+stage b2=279 vs b1={111}: values [1690522737399, 1870414552161), 8284 candidates (even-AP path)
+
+*** MATCH: 1801833659920 is an 6-digit palindrome in bases 111 and 279
+stage b2=280 vs b1={112}: values [1721036800000, 1973822685184), 11516 candidates (even-AP path)
+stage b2=281 vs b1={113}: values [1751989905401, 2081951752609), 14872 candidates (even-AP path)
+stage b2=282 vs b1={114}: values [1783386774432, 2194972623936), 18354 candidates (even-AP path)
+done: 0.00s, 19666 candidates tested

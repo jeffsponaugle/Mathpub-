@@ -1,0 +1,775 @@
+digitprimes: first 10^13 primes, 14 threads, chunk 1000000000
+
+[crossing] pi = 10^0  (p = 2)
+  no 0 (A231412): 1                OK
+  no 1 (A228413): 1                OK
+  no 2 (A228414): 0                OK
+  no 3 (A228415): 1                OK
+  no 4 (A228416): 1                OK
+  no 5 (A228417): 1                OK
+  no 6 (A228418): 1                OK
+  no 7 (A228419): 1                OK
+  no 8 (A228420): 1                OK
+  no 9 (A228421): 1                OK
+
+[crossing] pi = 10^1  (p = 29)
+  no 0 (A231412): 10               OK
+  no 1 (A228413): 6                OK
+  no 2 (A228414): 7                OK
+  no 3 (A228415): 7                OK
+  no 4 (A228416): 10               OK
+  no 5 (A228417): 9                OK
+  no 6 (A228418): 10               OK
+  no 7 (A228419): 8                OK
+  no 8 (A228420): 10               OK
+  no 9 (A228421): 8                OK
+
+[crossing] pi = 10^2  (p = 541)
+  no 0 (A231412): 91               OK
+  no 1 (A228413): 54               OK
+  no 2 (A228414): 77               OK
+  no 3 (A228415): 54               OK
+  no 4 (A228416): 75               OK
+  no 5 (A228417): 85               OK
+  no 6 (A228418): 90               OK
+  no 7 (A228419): 67               OK
+  no 8 (A228420): 92               OK
+  no 9 (A228421): 69               OK
+
+[crossing] pi = 10^3  (p = 7919)
+  no 0 (A231412): 819              OK
+  no 1 (A228413): 532              OK
+  no 2 (A228414): 697              OK
+  no 3 (A228415): 534              OK
+  no 4 (A228416): 721              OK
+  no 5 (A228417): 708              OK
+  no 6 (A228418): 719              OK
+  no 7 (A228419): 539              OK
+  no 8 (A228420): 816              OK
+  no 9 (A228421): 620              OK
+
+[crossing] pi = 10^4  (p = 104729)
+  no 0 (A231412): 7122             OK
+  no 1 (A228413): 4675             OK
+  no 2 (A228414): 6497             OK
+  no 3 (A228415): 4909             OK
+  no 4 (A228416): 6637             OK
+  no 5 (A228417): 6635             OK
+  no 6 (A228418): 6696             OK
+  no 7 (A228419): 5034             OK
+  no 8 (A228420): 6712             OK
+  no 9 (A228421): 5010             OK
+
+[crossing] pi = 10^5  (p = 1299709)
+  no 0 (A231412): 61702            OK
+  no 1 (A228413): 34425            OK
+  no 2 (A228414): 55552            OK
+  no 3 (A228415): 45405            OK
+  no 4 (A228416): 60605            OK
+  no 5 (A228417): 60640            OK
+  no 6 (A228418): 60845            OK
+  no 7 (A228419): 45549            OK
+  no 8 (A228420): 60867            OK
+  no 9 (A228421): 45732            OK
+
+[crossing] pi = 10^6  (p = 15485863)
+  no 0 (A231412): 557224           OK
+  no 1 (A228413): 262549           OK
+  no 2 (A228414): 512100           OK
+  no 3 (A228415): 385008           OK
+  no 4 (A228416): 514809           OK
+  no 5 (A228417): 535534           OK
+  no 6 (A228418): 554933           OK
+  no 7 (A228419): 416913           OK
+  no 8 (A228420): 555878           OK
+  no 9 (A228421): 418142           OK
+
+[crossing] pi = 10^7  (p = 179424673)
+  no 0 (A231412): 5062320          OK
+  no 1 (A228413): 2051466          OK
+  no 2 (A228414): 4710641          OK
+  no 3 (A228415): 3539880          OK
+  no 4 (A228416): 4730382          OK
+  no 5 (A228417): 4737129          OK
+  no 6 (A228418): 4742037          OK
+  no 7 (A228419): 3570781          OK
+  no 8 (A228420): 5026796          OK
+  no 9 (A228421): 3785060          OK
+
+[crossing] pi = 10^8  (p = 2038074743)
+  no 0 (A231412): 45002763         OK
+  no 1 (A228413): 16831152         OK
+  no 2 (A228414): 42205969         OK
+  no 3 (A228415): 32260781         OK
+  no 4 (A228416): 43254591         OK
+  no 5 (A228417): 43297195         OK
+  no 6 (A228418): 43331008         OK
+  no 7 (A228419): 32517377         OK
+  no 8 (A228420): 43410238         OK
+  no 9 (A228421): 32579606         OK
+
+[crossing] pi = 10^9  (p = 22801763489)
+  no 0 (A231412): 395879190        OK
+  no 1 (A228413): 155616459        OK
+  no 2 (A228414): 341224891        OK
+  no 3 (A228415): 294001190        OK
+  no 4 (A228416): 392344689        OK
+  no 5 (A228417): 392641522        OK
+  no 6 (A228418): 392875212        OK
+  no 7 (A228419): 294828478        OK
+  no 8 (A228420): 395243878        OK
+  no 9 (A228421): 296601070        OK
+
+[crossing] pi = 10^10  (p = 252097800623)
+  no 0 (A231412): 3579400605       OK
+  no 1 (A228413): 1529462564       OK
+  no 2 (A228414): 2787791578       OK
+  no 3 (A228415): 2564080248       OK
+  no 4 (A228416): 3421561753       OK
+  no 5 (A228417): 3536880527       OK
+  no 6 (A228418): 3573268469       OK
+  no 7 (A228419): 2681147149       OK
+  no 8 (A228420): 3576361255       OK
+  no 9 (A228421): 2683254222       OK
+progress: 0.3351%  33509581303 primes  up to 887000000000  2233.5M primes/s  eta 1.2 h
+progress: 0.6481%  64809777588 primes  up to 1760000000000  2157.1M primes/s  eta 1.3 h
+progress: 0.9393%  93928649320 primes  up to 2587000000000  2084.4M primes/s  eta 1.3 h
+
+[crossing] pi = 10^11  (p = 2760727302517)
+  no 0 (A231412): 32487367715      OK
+  no 1 (A228413): 14830618421      OK
+  no 2 (A228414): 22971326749      OK
+  no 3 (A228415): 23271246324      OK
+  no 4 (A228416): 31049600245      OK
+  no 5 (A228417): 31067514571      OK
+  no 6 (A228418): 31207451849      OK
+  no 7 (A228419): 23720397369      OK
+  no 8 (A228420): 32461990759      OK
+  no 9 (A228421): 24354108057      OK
+progress: 1.2178%  121781799996 primes  up to 3387000000000  2027.2M primes/s  eta 1.4 h
+progress: 1.4885%  148854945679 primes  up to 4171000000000  1982.4M primes/s  eta 1.4 h
+progress: 1.7524%  175239277386 primes  up to 4940000000000  1945.0M primes/s  eta 1.4 h
+progress: 2.0124%  201244518305 primes  up to 5702000000000  1914.0M primes/s  eta 1.4 h
+
+interrupted; checkpoint saved to digitprimes.ckpt (rerun to resume)
+resumed from digitprimes.ckpt: 5915 chunks merged, 208491825666 primes, next crossing 10^12
+digitprimes: first 10^13 primes, 14 threads, chunk 1000000000
+progress: 2.3387%  233874281805 primes  up to 6663000000000  1687.6M primes/s  eta 1.6 h
+progress: 2.5923%  259227630747 primes  up to 7413000000000  1687.5M primes/s  eta 1.6 h
+progress: 2.8406%  284057215362 primes  up to 8150000000000  1675.9M primes/s  eta 1.6 h
+progress: 3.0858%  308576434573 primes  up to 8880000000000  1665.2M primes/s  eta 1.6 h
+progress: 3.3289%  332894277517 primes  up to 9606000000000  1655.0M primes/s  eta 1.6 h
+progress: 3.5682%  356816923262 primes  up to 10322000000000  1644.8M primes/s  eta 1.6 h
+progress: 3.8048%  380484478168 primes  up to 11032000000000  1634.7M primes/s  eta 1.6 h
+progress: 4.0397%  403968412101 primes  up to 11738000000000  1625.9M primes/s  eta 1.6 h
+progress: 4.2724%  427239543494 primes  up to 12439000000000  1617.5M primes/s  eta 1.6 h
+progress: 4.5017%  450169236070 primes  up to 13131000000000  1608.2M primes/s  eta 1.6 h
+progress: 4.7289%  472893712565 primes  up to 13818000000000  1599.7M primes/s  eta 1.7 h
+progress: 4.9542%  495415880413 primes  up to 14500000000000  1591.5M primes/s  eta 1.7 h
+progress: 5.1780%  517804257605 primes  up to 15179000000000  1583.7M primes/s  eta 1.7 h
+progress: 5.4003%  540028075211 primes  up to 15854000000000  1576.3M primes/s  eta 1.7 h
+progress: 5.6235%  562352193095 primes  up to 16533000000000  1570.4M primes/s  eta 1.7 h
+progress: 5.8432%  584318066926 primes  up to 17202000000000  1563.7M primes/s  eta 1.7 h
+progress: 6.0635%  606354227853 primes  up to 17874000000000  1558.0M primes/s  eta 1.7 h
+progress: 6.2813%  628134133143 primes  up to 18539000000000  1551.7M primes/s  eta 1.7 h
+progress: 6.4979%  649790396200 primes  up to 19201000000000  1546.0M primes/s  eta 1.7 h
+progress: 6.7129%  671291552616 primes  up to 19859000000000  1540.2M primes/s  eta 1.7 h
+progress: 6.9280%  692802157337 primes  up to 20518000000000  1535.0M primes/s  eta 1.7 h
+progress: 7.1426%  714257663265 primes  up to 21176000000000  1530.1M primes/s  eta 1.7 h
+progress: 7.3550%  735495978902 primes  up to 21828000000000  1525.0M primes/s  eta 1.7 h
+progress: 7.5684%  756843807538 primes  up to 22484000000000  1520.7M primes/s  eta 1.7 h
+progress: 7.7817%  778171395861 primes  up to 23140000000000  1516.6M primes/s  eta 1.7 h
+progress: 7.9928%  799284543069 primes  up to 23790000000000  1512.4M primes/s  eta 1.7 h
+progress: 8.2038%  820378986440 primes  up to 24440000000000  1508.4M primes/s  eta 1.7 h
+progress: 8.4146%  841455235747 primes  up to 25090000000000  1504.7M primes/s  eta 1.7 h
+progress: 8.6248%  862481427544 primes  up to 25739000000000  1501.1M primes/s  eta 1.7 h
+progress: 8.8339%  883393286590 primes  up to 26385000000000  1497.5M primes/s  eta 1.7 h
+progress: 9.0432%  904321009746 primes  up to 27032000000000  1494.1M primes/s  eta 1.7 h
+progress: 9.2510%  925103249010 primes  up to 27675000000000  1490.6M primes/s  eta 1.7 h
+progress: 9.4577%  945773114628 primes  up to 28315000000000  1487.1M primes/s  eta 1.7 h
+progress: 9.6649%  966492363989 primes  up to 28957000000000  1484.0M primes/s  eta 1.7 h
+progress: 9.8707%  987067885486 primes  up to 29595000000000  1480.7M primes/s  eta 1.7 h
+
+[crossing] pi = 10^12  (p = 29996224275833)
+  no 0 (A231412): 294505958253     OK
+  no 1 (A228413): 141585123501     OK
+  no 2 (A228414): 190650687957     OK
+  no 3 (A228415): 211753431947     OK
+  no 4 (A228416): 282499317912     OK
+  no 5 (A228417): 282635824867     OK
+  no 6 (A228418): 282765603085     OK
+  no 7 (A228419): 212156228217     OK
+  no 8 (A228420): 282971130960     OK
+  no 9 (A228421): 212324183352     OK
+progress: 10.0705%  1007049167453 primes  up to 30215000000000  1476.6M primes/s  eta 1.7 h
+progress: 10.2753%  1027532348097 primes  up to 30851000000000  1473.4M primes/s  eta 1.7 h
+progress: 10.4791%  1047905390946 primes  up to 31484000000000  1470.4M primes/s  eta 1.7 h
+progress: 10.6814%  1068136758972 primes  up to 32113000000000  1467.1M primes/s  eta 1.7 h
+progress: 10.8845%  1088451725764 primes  up to 32745000000000  1464.3M primes/s  eta 1.7 h
+progress: 11.0869%  1108689857343 primes  up to 33375000000000  1461.5M primes/s  eta 1.7 h
+progress: 11.2895%  1128947817710 primes  up to 34006000000000  1458.8M primes/s  eta 1.7 h
+progress: 11.4916%  1149161654578 primes  up to 34636000000000  1456.0M primes/s  eta 1.7 h
+progress: 11.6930%  1169299531130 primes  up to 35264000000000  1453.3M primes/s  eta 1.7 h
+progress: 11.8930%  1189297781653 primes  up to 35888000000000  1450.6M primes/s  eta 1.7 h
+progress: 12.0925%  1209252959248 primes  up to 36511000000000  1447.9M primes/s  eta 1.7 h
+progress: 12.2923%  1229229273743 primes  up to 37135000000000  1445.3M primes/s  eta 1.7 h
+progress: 12.4923%  1249226733756 primes  up to 37760000000000  1442.9M primes/s  eta 1.7 h
+progress: 12.6909%  1269085765997 primes  up to 38381000000000  1440.4M primes/s  eta 1.7 h
+progress: 12.8884%  1288838617388 primes  up to 38999000000000  1438.0M primes/s  eta 1.7 h
+progress: 13.0858%  1308581447444 primes  up to 39617000000000  1435.5M primes/s  eta 1.7 h
+progress: 13.2841%  1328410263774 primes  up to 40238000000000  1433.3M primes/s  eta 1.7 h
+progress: 13.4807%  1348069765837 primes  up to 40854000000000  1431.0M primes/s  eta 1.7 h
+progress: 13.6778%  1367783577035 primes  up to 41472000000000  1428.8M primes/s  eta 1.7 h
+progress: 13.8739%  1387392469020 primes  up to 42087000000000  1426.5M primes/s  eta 1.7 h
+progress: 14.0709%  1407087744601 primes  up to 42705000000000  1424.5M primes/s  eta 1.7 h
+progress: 14.2665%  1426646516846 primes  up to 43319000000000  1422.3M primes/s  eta 1.7 h
+progress: 14.4616%  1446164708537 primes  up to 43932000000000  1420.2M primes/s  eta 1.7 h
+progress: 14.6567%  1465674227997 primes  up to 44545000000000  1418.2M primes/s  eta 1.7 h
+progress: 14.8514%  1485143309363 primes  up to 45157000000000  1416.1M primes/s  eta 1.7 h
+progress: 15.0457%  1504572237267 primes  up to 45768000000000  1414.1M primes/s  eta 1.7 h
+progress: 15.2390%  1523897574879 primes  up to 46376000000000  1412.1M primes/s  eta 1.7 h
+progress: 15.4321%  1543214896627 primes  up to 46984000000000  1410.1M primes/s  eta 1.7 h
+progress: 15.6240%  1562397324310 primes  up to 47588000000000  1408.0M primes/s  eta 1.7 h
+progress: 15.8167%  1581667246874 primes  up to 48195000000000  1406.1M primes/s  eta 1.7 h
+progress: 16.0087%  1600865997516 primes  up to 48800000000000  1404.1M primes/s  eta 1.7 h
+progress: 16.2006%  1620057105945 primes  up to 49405000000000  1402.2M primes/s  eta 1.7 h
+progress: 16.3918%  1639177391781 primes  up to 50008000000000  1400.3M primes/s  eta 1.7 h
+progress: 16.5839%  1658385532121 primes  up to 50614000000000  1398.5M primes/s  eta 1.7 h
+progress: 16.7749%  1677491286239 primes  up to 51217000000000  1396.7M primes/s  eta 1.7 h
+progress: 16.9668%  1696684844711 primes  up to 51823000000000  1395.0M primes/s  eta 1.7 h
+progress: 17.1559%  1715586473526 primes  up to 52420000000000  1393.1M primes/s  eta 1.7 h
+progress: 17.3470%  1734702841875 primes  up to 53024000000000  1391.5M primes/s  eta 1.6 h
+progress: 17.5356%  1753559115529 primes  up to 53620000000000  1389.7M primes/s  eta 1.6 h
+progress: 17.7257%  1772566951529 primes  up to 54221000000000  1388.0M primes/s  eta 1.6 h
+progress: 17.9150%  1791504927151 primes  up to 54820000000000  1386.3M primes/s  eta 1.6 h
+progress: 18.1037%  1810373116804 primes  up to 55417000000000  1384.7M primes/s  eta 1.6 h
+progress: 18.2917%  1829171732657 primes  up to 56012000000000  1383.0M primes/s  eta 1.6 h
+progress: 18.4793%  1847932422338 primes  up to 56606000000000  1381.3M primes/s  eta 1.6 h
+progress: 18.6672%  1866718532644 primes  up to 57201000000000  1379.7M primes/s  eta 1.6 h
+progress: 18.8540%  1885403741364 primes  up to 57793000000000  1378.0M primes/s  eta 1.6 h
+progress: 19.0405%  1904051416620 primes  up to 58384000000000  1376.3M primes/s  eta 1.6 h
+progress: 19.2049%  1920485470161 primes  up to 58905000000000  1372.9M primes/s  eta 1.6 h
+progress: 19.3855%  1938554493584 primes  up to 59478000000000  1370.8M primes/s  eta 1.6 h
+progress: 19.5674%  1956744046192 primes  up to 60055000000000  1368.9M primes/s  eta 1.6 h
+progress: 19.7480%  1974802074143 primes  up to 60628000000000  1366.9M primes/s  eta 1.6 h
+progress: 19.9289%  1992886263995 primes  up to 61202000000000  1365.0M primes/s  eta 1.6 h
+progress: 20.1084%  2010839067505 primes  up to 61772000000000  1363.1M primes/s  eta 1.6 h
+progress: 20.2916%  2029164509547 primes  up to 62354000000000  1361.5M primes/s  eta 1.6 h
+progress: 20.4748%  2047484595978 primes  up to 62936000000000  1359.9M primes/s  eta 1.6 h
+progress: 20.6589%  2065893638598 primes  up to 63521000000000  1358.4M primes/s  eta 1.6 h
+progress: 20.8433%  2084328880296 primes  up to 64107000000000  1357.0M primes/s  eta 1.6 h
+progress: 21.0279%  2102790200785 primes  up to 64694000000000  1355.6M primes/s  eta 1.6 h
+progress: 21.2115%  2121151973653 primes  up to 65278000000000  1354.2M primes/s  eta 1.6 h
+progress: 21.3960%  2139602933716 primes  up to 65865000000000  1352.8M primes/s  eta 1.6 h
+progress: 21.5789%  2157891594795 primes  up to 66447000000000  1351.5M primes/s  eta 1.6 h
+progress: 21.7599%  2175986722605 primes  up to 67023000000000  1349.9M primes/s  eta 1.6 h
+progress: 21.9436%  2194359589739 primes  up to 67608000000000  1348.6M primes/s  eta 1.6 h
+progress: 22.1257%  2212570447155 primes  up to 68188000000000  1347.2M primes/s  eta 1.6 h
+progress: 22.3090%  2230902103255 primes  up to 68772000000000  1346.0M primes/s  eta 1.6 h
+progress: 22.4920%  2249197514370 primes  up to 69355000000000  1344.7M primes/s  eta 1.6 h
+progress: 22.6749%  2267488022982 primes  up to 69938000000000  1343.4M primes/s  eta 1.6 h
+progress: 22.8571%  2285711033149 primes  up to 70519000000000  1342.2M primes/s  eta 1.6 h
+progress: 23.0393%  2303929319708 primes  up to 71100000000000  1340.9M primes/s  eta 1.6 h
+progress: 23.2211%  2322111648590 primes  up to 71680000000000  1339.7M primes/s  eta 1.6 h
+progress: 23.4020%  2340195322629 primes  up to 72257000000000  1338.4M primes/s  eta 1.6 h
+progress: 23.5834%  2358337067467 primes  up to 72836000000000  1337.2M primes/s  eta 1.6 h
+progress: 23.7629%  2376286358037 primes  up to 73409000000000  1335.8M primes/s  eta 1.6 h
+progress: 23.9433%  2394325226845 primes  up to 73985000000000  1334.6M primes/s  eta 1.6 h
+progress: 24.1230%  2412297161652 primes  up to 74559000000000  1333.3M primes/s  eta 1.6 h
+progress: 24.3020%  2430202091028 primes  up to 75131000000000  1332.1M primes/s  eta 1.6 h
+progress: 24.4842%  2448415711315 primes  up to 75713000000000  1331.0M primes/s  eta 1.6 h
+progress: 24.6641%  2466405958799 primes  up to 76288000000000  1329.8M primes/s  eta 1.6 h
+progress: 24.8439%  2484391998925 primes  up to 76863000000000  1328.6M primes/s  eta 1.6 h
+progress: 25.0244%  2502436324538 primes  up to 77440000000000  1327.5M primes/s  eta 1.6 h
+progress: 25.2045%  2520445177079 primes  up to 78016000000000  1326.4M primes/s  eta 1.6 h
+progress: 25.3842%  2538418662413 primes  up to 78591000000000  1325.3M primes/s  eta 1.6 h
+progress: 25.5617%  2556169232733 primes  up to 79159000000000  1324.1M primes/s  eta 1.6 h
+progress: 25.7404%  2574040847772 primes  up to 79731000000000  1323.0M primes/s  eta 1.6 h
+progress: 25.9203%  2592033415810 primes  up to 80307000000000  1321.9M primes/s  eta 1.6 h
+progress: 26.1002%  2610021902851 primes  up to 80883000000000  1320.9M primes/s  eta 1.6 h
+progress: 26.2798%  2627975248556 primes  up to 81458000000000  1319.8M primes/s  eta 1.6 h
+progress: 26.4605%  2646049372013 primes  up to 82037000000000  1318.9M primes/s  eta 1.5 h
+progress: 26.6399%  2663994801233 primes  up to 82612000000000  1317.8M primes/s  eta 1.5 h
+progress: 26.8197%  2681967355597 primes  up to 83188000000000  1316.8M primes/s  eta 1.5 h
+progress: 26.9994%  2699936145179 primes  up to 83764000000000  1315.8M primes/s  eta 1.5 h
+progress: 27.1781%  2717807426025 primes  up to 84337000000000  1314.8M primes/s  eta 1.5 h
+progress: 27.3568%  2735675009396 primes  up to 84910000000000  1313.9M primes/s  eta 1.5 h
+progress: 27.5354%  2753538895370 primes  up to 85483000000000  1312.9M primes/s  eta 1.5 h
+progress: 27.7140%  2771399004712 primes  up to 86056000000000  1311.9M primes/s  eta 1.5 h
+progress: 27.8916%  2789161953659 primes  up to 86626000000000  1310.9M primes/s  eta 1.5 h
+progress: 28.0717%  2807170491393 primes  up to 87204000000000  1310.0M primes/s  eta 1.5 h
+progress: 28.2505%  2825050662071 primes  up to 87778000000000  1309.1M primes/s  eta 1.5 h
+progress: 28.4286%  2842864944818 primes  up to 88350000000000  1308.2M primes/s  eta 1.5 h
+progress: 28.6074%  2860737866190 primes  up to 88924000000000  1307.3M primes/s  eta 1.5 h
+progress: 28.7842%  2878420449115 primes  up to 89492000000000  1306.4M primes/s  eta 1.5 h
+progress: 28.9613%  2896130736024 primes  up to 90061000000000  1305.4M primes/s  eta 1.5 h
+progress: 29.1365%  2913650737731 primes  up to 90624000000000  1304.4M primes/s  eta 1.5 h
+progress: 29.3132%  2931323000477 primes  up to 91192000000000  1303.5M primes/s  eta 1.5 h
+progress: 29.4909%  2949085072709 primes  up to 91763000000000  1302.7M primes/s  eta 1.5 h
+progress: 29.6669%  2966688258003 primes  up to 92329000000000  1301.7M primes/s  eta 1.5 h
+progress: 29.8429%  2984288090437 primes  up to 92895000000000  1300.8M primes/s  eta 1.5 h
+progress: 30.0188%  3001884583197 primes  up to 93461000000000  1299.9M primes/s  eta 1.5 h
+progress: 30.1932%  3019322370277 primes  up to 94022000000000  1299.0M primes/s  eta 1.5 h
+progress: 30.3694%  3036943381423 primes  up to 94589000000000  1298.1M primes/s  eta 1.5 h
+progress: 30.5453%  3054529917366 primes  up to 95155000000000  1297.2M primes/s  eta 1.5 h
+progress: 30.7205%  3072051167163 primes  up to 95719000000000  1296.3M primes/s  eta 1.5 h
+progress: 30.8969%  3089693421522 primes  up to 96287000000000  1295.5M primes/s  eta 1.5 h
+progress: 31.0718%  3107177235078 primes  up to 96850000000000  1294.6M primes/s  eta 1.5 h
+progress: 31.2478%  3124781966832 primes  up to 97417000000000  1293.8M primes/s  eta 1.5 h
+progress: 31.4220%  3142197394337 primes  up to 97978000000000  1292.9M primes/s  eta 1.5 h
+progress: 31.5964%  3159640709836 primes  up to 98540000000000  1292.0M primes/s  eta 1.5 h
+progress: 31.7721%  3177205124939 primes  up to 99106000000000  1291.2M primes/s  eta 1.5 h
+progress: 31.9467%  3194673275755 primes  up to 99669000000000  1290.3M primes/s  eta 1.5 h
+progress: 32.1214%  3212138402773 primes  up to 100232000000000  1289.5M primes/s  eta 1.5 h
+progress: 32.2938%  3229383323885 primes  up to 100788000000000  1288.6M primes/s  eta 1.5 h
+progress: 32.4678%  3246780385515 primes  up to 101349000000000  1287.7M primes/s  eta 1.5 h
+progress: 32.6424%  3264236439832 primes  up to 101912000000000  1286.9M primes/s  eta 1.5 h
+progress: 32.8147%  3281472567254 primes  up to 102468000000000  1286.1M primes/s  eta 1.5 h
+progress: 32.9833%  3298333822023 primes  up to 103012000000000  1285.0M primes/s  eta 1.4 h
+progress: 33.1560%  3315595257035 primes  up to 103569000000000  1284.2M primes/s  eta 1.4 h
+progress: 33.3288%  3332884719072 primes  up to 104127000000000  1283.4M primes/s  eta 1.4 h
+progress: 33.5017%  3350171326105 primes  up to 104685000000000  1282.6M primes/s  eta 1.4 h
+progress: 33.6752%  3367517064868 primes  up to 105245000000000  1281.8M primes/s  eta 1.4 h
+progress: 33.8480%  3384798005573 primes  up to 105803000000000  1280.9M primes/s  eta 1.4 h
+progress: 34.0226%  3402261925018 primes  up to 106367000000000  1280.2M primes/s  eta 1.4 h
+progress: 34.1954%  3419537119719 primes  up to 106925000000000  1279.4M primes/s  eta 1.4 h
+progress: 34.3681%  3436809653999 primes  up to 107483000000000  1278.7M primes/s  eta 1.4 h
+progress: 34.5386%  3453862648409 primes  up to 108034000000000  1277.8M primes/s  eta 1.4 h
+progress: 34.7113%  3471129563825 primes  up to 108592000000000  1277.1M primes/s  eta 1.4 h
+progress: 34.8824%  3488239132301 primes  up to 109145000000000  1276.3M primes/s  eta 1.4 h
+progress: 35.0528%  3505284132152 primes  up to 109696000000000  1275.5M primes/s  eta 1.4 h
+progress: 35.2251%  3522512057561 primes  up to 110253000000000  1274.7M primes/s  eta 1.4 h
+progress: 35.3977%  3539768192811 primes  up to 110811000000000  1274.0M primes/s  eta 1.4 h
+progress: 35.5699%  3556990716577 primes  up to 111368000000000  1273.3M primes/s  eta 1.4 h
+progress: 35.7430%  3574303394530 primes  up to 111928000000000  1272.6M primes/s  eta 1.4 h
+progress: 35.9137%  3591366012784 primes  up to 112480000000000  1271.8M primes/s  eta 1.4 h
+progress: 36.0840%  3608395182171 primes  up to 113031000000000  1271.0M primes/s  eta 1.4 h
+progress: 36.2555%  3625545356500 primes  up to 113586000000000  1270.3M primes/s  eta 1.4 h
+progress: 36.4260%  3642600319430 primes  up to 114138000000000  1269.6M primes/s  eta 1.4 h
+progress: 36.5978%  3659776163103 primes  up to 114694000000000  1268.9M primes/s  eta 1.4 h
+progress: 36.7686%  3676856957763 primes  up to 115247000000000  1268.2M primes/s  eta 1.4 h
+progress: 36.9390%  3693904299390 primes  up to 115799000000000  1267.4M primes/s  eta 1.4 h
+progress: 37.1098%  3710980051033 primes  up to 116352000000000  1266.7M primes/s  eta 1.4 h
+progress: 37.2808%  3728084088381 primes  up to 116906000000000  1266.0M primes/s  eta 1.4 h
+progress: 37.4512%  3745123896112 primes  up to 117458000000000  1265.3M primes/s  eta 1.4 h
+progress: 37.6222%  3762222856581 primes  up to 118012000000000  1264.7M primes/s  eta 1.4 h
+progress: 37.7923%  3779226815339 primes  up to 118563000000000  1264.0M primes/s  eta 1.4 h
+progress: 37.9635%  3796351790634 primes  up to 119118000000000  1263.3M primes/s  eta 1.4 h
+progress: 38.1323%  3813227510900 primes  up to 119665000000000  1262.6M primes/s  eta 1.4 h
+progress: 38.2958%  3829576453047 primes  up to 120195000000000  1261.7M primes/s  eta 1.4 h
+progress: 38.4660%  3846601673577 primes  up to 120747000000000  1261.0M primes/s  eta 1.4 h
+progress: 38.6347%  3863470285794 primes  up to 121294000000000  1260.3M primes/s  eta 1.4 h
+progress: 38.8058%  3880583313611 primes  up to 121849000000000  1259.7M primes/s  eta 1.3 h
+progress: 38.9760%  3897601333580 primes  up to 122401000000000  1259.0M primes/s  eta 1.3 h
+progress: 39.1437%  3914370451855 primes  up to 122945000000000  1258.3M primes/s  eta 1.3 h
+progress: 39.3114%  3931137351353 primes  up to 123489000000000  1257.5M primes/s  eta 1.3 h
+progress: 39.4809%  3948086824605 primes  up to 124039000000000  1256.9M primes/s  eta 1.3 h
+progress: 39.6506%  3965064786309 primes  up to 124590000000000  1256.2M primes/s  eta 1.3 h
+progress: 39.8210%  3982102068411 primes  up to 125143000000000  1255.6M primes/s  eta 1.3 h
+progress: 39.9908%  3999075425260 primes  up to 125694000000000  1255.0M primes/s  eta 1.3 h
+progress: 40.1608%  4016077285615 primes  up to 126246000000000  1254.4M primes/s  eta 1.3 h
+progress: 40.3292%  4032922814013 primes  up to 126793000000000  1253.7M primes/s  eta 1.3 h
+progress: 40.4983%  4049827734505 primes  up to 127342000000000  1253.1M primes/s  eta 1.3 h
+progress: 40.6685%  4066853555482 primes  up to 127895000000000  1252.5M primes/s  eta 1.3 h
+progress: 40.8385%  4083846351673 primes  up to 128447000000000  1251.9M primes/s  eta 1.3 h
+progress: 41.0081%  4100806073932 primes  up to 128998000000000  1251.3M primes/s  eta 1.3 h
+progress: 41.1783%  4117825165549 primes  up to 129551000000000  1250.7M primes/s  eta 1.3 h
+progress: 41.3481%  4134811209444 primes  up to 130103000000000  1250.1M primes/s  eta 1.3 h
+progress: 41.5167%  4151672020759 primes  up to 130651000000000  1249.5M primes/s  eta 1.3 h
+progress: 41.6859%  4168592164440 primes  up to 131201000000000  1249.0M primes/s  eta 1.3 h
+progress: 41.8554%  4185540976703 primes  up to 131752000000000  1248.4M primes/s  eta 1.3 h
+progress: 42.0246%  4202456702967 primes  up to 132302000000000  1247.8M primes/s  eta 1.3 h
+progress: 42.1931%  4219308823779 primes  up to 132850000000000  1247.2M primes/s  eta 1.3 h
+progress: 42.3625%  4236250988539 primes  up to 133401000000000  1246.7M primes/s  eta 1.3 h
+progress: 42.5310%  4253098858620 primes  up to 133949000000000  1246.1M primes/s  eta 1.3 h
+progress: 42.6979%  4269790846872 primes  up to 134492000000000  1245.5M primes/s  eta 1.3 h
+progress: 42.8670%  4286695997419 primes  up to 135042000000000  1244.9M primes/s  eta 1.3 h
+progress: 43.0354%  4303537476188 primes  up to 135590000000000  1244.3M primes/s  eta 1.3 h
+progress: 43.2016%  4320161846115 primes  up to 136131000000000  1243.7M primes/s  eta 1.3 h
+progress: 43.3688%  4336876275250 primes  up to 136675000000000  1243.1M primes/s  eta 1.3 h
+progress: 43.5383%  4353834498862 primes  up to 137227000000000  1242.6M primes/s  eta 1.3 h
+progress: 43.7064%  4370636996058 primes  up to 137774000000000  1242.1M primes/s  eta 1.3 h
+progress: 43.8741%  4387406783166 primes  up to 138320000000000  1241.5M primes/s  eta 1.3 h
+progress: 44.0427%  4404266641082 primes  up to 138869000000000  1241.0M primes/s  eta 1.3 h
+progress: 44.2109%  4421093760301 primes  up to 139417000000000  1240.4M primes/s  eta 1.2 h
+progress: 44.3773%  4437734690660 primes  up to 139959000000000  1239.9M primes/s  eta 1.2 h
+progress: 44.5471%  4454711296312 primes  up to 140512000000000  1239.4M primes/s  eta 1.2 h
+progress: 44.7147%  4471470827661 primes  up to 141058000000000  1238.8M primes/s  eta 1.2 h
+progress: 44.8847%  4488474028931 primes  up to 141612000000000  1238.4M primes/s  eta 1.2 h
+progress: 45.0526%  4505260381068 primes  up to 142159000000000  1237.8M primes/s  eta 1.2 h
+progress: 45.2211%  4522106038892 primes  up to 142708000000000  1237.3M primes/s  eta 1.2 h
+progress: 45.3889%  4538888411147 primes  up to 143255000000000  1236.8M primes/s  eta 1.2 h
+progress: 45.5576%  4555760813298 primes  up to 143805000000000  1236.3M primes/s  eta 1.2 h
+progress: 45.7248%  4572477907296 primes  up to 144350000000000  1235.8M primes/s  eta 1.2 h
+progress: 45.8941%  4589407706262 primes  up to 144902000000000  1235.4M primes/s  eta 1.2 h
+progress: 46.0621%  4606212865104 primes  up to 145450000000000  1234.9M primes/s  eta 1.2 h
+progress: 46.2305%  4623046710394 primes  up to 145999000000000  1234.4M primes/s  eta 1.2 h
+progress: 46.3976%  4639756031127 primes  up to 146544000000000  1233.9M primes/s  eta 1.2 h
+progress: 46.5646%  4656463427644 primes  up to 147089000000000  1233.4M primes/s  eta 1.2 h
+progress: 46.7329%  4673291598251 primes  up to 147638000000000  1232.9M primes/s  eta 1.2 h
+progress: 46.9000%  4689995211957 primes  up to 148183000000000  1232.4M primes/s  eta 1.2 h
+progress: 47.0679%  4706788866832 primes  up to 148731000000000  1231.9M primes/s  eta 1.2 h
+progress: 47.2355%  4723550026385 primes  up to 149278000000000  1231.5M primes/s  eta 1.2 h
+progress: 47.4019%  4740186760478 primes  up to 149821000000000  1230.9M primes/s  eta 1.2 h
+progress: 47.5697%  4756974828379 primes  up to 150369000000000  1230.5M primes/s  eta 1.2 h
+progress: 47.7373%  4773730338610 primes  up to 150916000000000  1230.0M primes/s  eta 1.2 h
+progress: 47.9045%  4790453354645 primes  up to 151462000000000  1229.5M primes/s  eta 1.2 h
+progress: 48.0727%  4807266439197 primes  up to 152011000000000  1229.1M primes/s  eta 1.2 h
+progress: 48.2389%  4823893908099 primes  up to 152554000000000  1228.6M primes/s  eta 1.2 h
+progress: 48.4070%  4840703337645 primes  up to 153103000000000  1228.1M primes/s  eta 1.2 h
+progress: 48.5739%  4857388453971 primes  up to 153648000000000  1227.7M primes/s  eta 1.2 h
+progress: 48.7410%  4874102355970 primes  up to 154194000000000  1227.2M primes/s  eta 1.2 h
+progress: 48.9081%  4890814495583 primes  up to 154740000000000  1226.7M primes/s  eta 1.2 h
+progress: 49.0756%  4907555370495 primes  up to 155287000000000  1226.3M primes/s  eta 1.2 h
+progress: 49.2429%  4924294374336 primes  up to 155834000000000  1225.8M primes/s  eta 1.2 h
+progress: 49.4091%  4940909293860 primes  up to 156377000000000  1225.4M primes/s  eta 1.1 h
+progress: 49.5761%  4957614180730 primes  up to 156923000000000  1224.9M primes/s  eta 1.1 h
+progress: 49.7426%  4974256209781 primes  up to 157467000000000  1224.5M primes/s  eta 1.1 h
+progress: 49.9096%  4990957418326 primes  up to 158013000000000  1224.0M primes/s  eta 1.1 h
+progress: 50.0753%  5007534760897 primes  up to 158555000000000  1223.6M primes/s  eta 1.1 h
+progress: 50.2414%  5024140826945 primes  up to 159098000000000  1223.1M primes/s  eta 1.1 h
+progress: 50.4071%  5040714584886 primes  up to 159640000000000  1222.6M primes/s  eta 1.1 h
+progress: 50.5729%  5057286702481 primes  up to 160182000000000  1222.2M primes/s  eta 1.1 h
+progress: 50.7389%  5073887624047 primes  up to 160725000000000  1221.7M primes/s  eta 1.1 h
+progress: 50.9036%  5090364521363 primes  up to 161264000000000  1221.3M primes/s  eta 1.1 h
+progress: 51.0687%  5106870325115 primes  up to 161804000000000  1220.8M primes/s  eta 1.1 h
+progress: 51.2337%  5123374458084 primes  up to 162344000000000  1220.4M primes/s  eta 1.1 h
+progress: 51.3985%  5139846260621 primes  up to 162883000000000  1219.9M primes/s  eta 1.1 h
+progress: 51.5635%  5156347066675 primes  up to 163423000000000  1219.4M primes/s  eta 1.1 h
+progress: 51.7288%  5172876762311 primes  up to 163964000000000  1219.0M primes/s  eta 1.1 h
+progress: 51.8931%  5189313173450 primes  up to 164502000000000  1218.6M primes/s  eta 1.1 h
+progress: 52.0587%  5205870117913 primes  up to 165044000000000  1218.1M primes/s  eta 1.1 h
+progress: 52.2239%  5222394796872 primes  up to 165585000000000  1217.7M primes/s  eta 1.1 h
+progress: 52.3877%  5238765155040 primes  up to 166121000000000  1217.2M primes/s  eta 1.1 h
+progress: 52.5504%  5255042317375 primes  up to 166654000000000  1216.7M primes/s  eta 1.1 h
+progress: 52.7150%  5271501035468 primes  up to 167193000000000  1216.3M primes/s  eta 1.1 h
+progress: 52.8799%  5287988753214 primes  up to 167733000000000  1215.9M primes/s  eta 1.1 h
+progress: 53.0444%  5304444323581 primes  up to 168272000000000  1215.4M primes/s  eta 1.1 h
+progress: 53.2093%  5320928687058 primes  up to 168812000000000  1215.0M primes/s  eta 1.1 h
+progress: 53.3723%  5337228347916 primes  up to 169346000000000  1214.6M primes/s  eta 1.1 h
+progress: 53.5350%  5353495988141 primes  up to 169879000000000  1214.1M primes/s  eta 1.1 h
+progress: 53.6976%  5369761880699 primes  up to 170412000000000  1213.6M primes/s  eta 1.1 h
+progress: 53.8609%  5386087455426 primes  up to 170947000000000  1213.2M primes/s  eta 1.1 h
+progress: 54.0259%  5402594415289 primes  up to 171488000000000  1212.8M primes/s  eta 1.1 h
+progress: 54.1889%  5418886362684 primes  up to 172022000000000  1212.3M primes/s  eta 1.0 h
+progress: 54.3527%  5435268269708 primes  up to 172559000000000  1211.9M primes/s  eta 1.0 h
+progress: 54.5162%  5451618104560 primes  up to 173095000000000  1211.5M primes/s  eta 1.0 h
+progress: 54.6794%  5467935791112 primes  up to 173630000000000  1211.1M primes/s  eta 1.0 h
+progress: 54.8428%  5484282475865 primes  up to 174166000000000  1210.6M primes/s  eta 1.0 h
+progress: 55.0063%  5500627622641 primes  up to 174702000000000  1210.2M primes/s  eta 1.0 h
+progress: 55.1703%  5517032220537 primes  up to 175240000000000  1209.8M primes/s  eta 1.0 h
+progress: 55.3347%  5533465827676 primes  up to 175779000000000  1209.4M primes/s  eta 1.0 h
+progress: 55.4968%  5549684485060 primes  up to 176311000000000  1209.0M primes/s  eta 1.0 h
+progress: 55.6599%  5565993034810 primes  up to 176846000000000  1208.5M primes/s  eta 1.0 h
+progress: 55.8239%  5582391580285 primes  up to 177384000000000  1208.2M primes/s  eta 1.0 h
+progress: 55.9885%  5598849537987 primes  up to 177924000000000  1207.8M primes/s  eta 1.0 h
+progress: 56.1528%  5615275545708 primes  up to 178463000000000  1207.4M primes/s  eta 1.0 h
+progress: 56.3158%  5631578051171 primes  up to 178998000000000  1207.0M primes/s  eta 1.0 h
+progress: 56.4791%  5647909688138 primes  up to 179534000000000  1206.6M primes/s  eta 1.0 h
+progress: 56.6409%  5664087345683 primes  up to 180065000000000  1206.1M primes/s  eta 1.0 h
+progress: 56.8045%  5680446457359 primes  up to 180602000000000  1205.8M primes/s  eta 1.0 h
+progress: 56.9674%  5696743056944 primes  up to 181137000000000  1205.4M primes/s  eta 1.0 h
+progress: 57.1310%  5713099106343 primes  up to 181674000000000  1205.0M primes/s  eta 1.0 h
+progress: 57.2958%  5729575586620 primes  up to 182215000000000  1204.6M primes/s  eta 1.0 h
+progress: 57.4626%  5746263758582 primes  up to 182763000000000  1204.3M primes/s  eta 1.0 h
+progress: 57.6310%  5763102595943 primes  up to 183316000000000  1204.0M primes/s  eta 1.0 h
+progress: 57.7991%  5779909479647 primes  up to 183868000000000  1203.7M primes/s  eta 1.0 h
+progress: 57.9687%  5796866984037 primes  up to 184425000000000  1203.5M primes/s  eta 1.0 h
+progress: 58.1367%  5813670794152 primes  up to 184977000000000  1203.2M primes/s  eta 1.0 h
+progress: 58.3041%  5830412149495 primes  up to 185527000000000  1202.9M primes/s  eta 1.0 h
+progress: 58.4721%  5847212887203 primes  up to 186079000000000  1202.7M primes/s  eta 1.0 h
+progress: 58.6392%  5863920791192 primes  up to 186628000000000  1202.4M primes/s  eta 1.0 h
+progress: 58.8066%  5880657665733 primes  up to 187178000000000  1202.1M primes/s  eta 1.0 h
+progress: 58.9727%  5897271278994 primes  up to 187724000000000  1201.8M primes/s  eta 0.9 h
+progress: 59.1397%  5913974686027 primes  up to 188273000000000  1201.5M primes/s  eta 0.9 h
+progress: 59.3074%  5930737491274 primes  up to 188824000000000  1201.2M primes/s  eta 0.9 h
+progress: 59.4735%  5947346741633 primes  up to 189370000000000  1200.9M primes/s  eta 0.9 h
+progress: 59.6377%  5963771930669 primes  up to 189910000000000  1200.6M primes/s  eta 0.9 h
+progress: 59.8035%  5980347850740 primes  up to 190455000000000  1200.3M primes/s  eta 0.9 h
+progress: 59.9695%  5996952779959 primes  up to 191001000000000  1200.0M primes/s  eta 0.9 h
+progress: 60.1356%  6013556228186 primes  up to 191547000000000  1199.7M primes/s  eta 0.9 h
+progress: 60.3043%  6030431914083 primes  up to 192102000000000  1199.4M primes/s  eta 0.9 h
+progress: 60.4715%  6047154052796 primes  up to 192652000000000  1199.1M primes/s  eta 0.9 h
+progress: 60.6372%  6063722763280 primes  up to 193197000000000  1198.8M primes/s  eta 0.9 h
+progress: 60.8041%  6080411713516 primes  up to 193746000000000  1198.6M primes/s  eta 0.9 h
+progress: 60.9704%  6097038374773 primes  up to 194293000000000  1198.3M primes/s  eta 0.9 h
+progress: 61.1363%  6113633208444 primes  up to 194839000000000  1198.0M primes/s  eta 0.9 h
+progress: 61.3023%  6130226567723 primes  up to 195385000000000  1197.7M primes/s  eta 0.9 h
+progress: 61.4682%  6146818543251 primes  up to 195931000000000  1197.4M primes/s  eta 0.9 h
+progress: 61.6347%  6163469951464 primes  up to 196479000000000  1197.2M primes/s  eta 0.9 h
+progress: 61.8012%  6180120014376 primes  up to 197027000000000  1196.9M primes/s  eta 0.9 h
+progress: 61.9665%  6196647083175 primes  up to 197571000000000  1196.6M primes/s  eta 0.9 h
+progress: 62.1332%  6213324592486 primes  up to 198120000000000  1196.3M primes/s  eta 0.9 h
+progress: 62.2994%  6229939995932 primes  up to 198667000000000  1196.1M primes/s  eta 0.9 h
+progress: 62.4640%  6246402091781 primes  up to 199209000000000  1195.8M primes/s  eta 0.9 h
+progress: 62.6283%  6262832478468 primes  up to 199750000000000  1195.5M primes/s  eta 0.9 h
+progress: 62.7947%  6279474094860 primes  up to 200298000000000  1195.2M primes/s  eta 0.9 h
+progress: 62.9627%  6296266234462 primes  up to 200851000000000  1195.0M primes/s  eta 0.9 h
+progress: 63.1297%  6312965814904 primes  up to 201401000000000  1194.7M primes/s  eta 0.9 h
+progress: 63.2972%  6329724722449 primes  up to 201953000000000  1194.5M primes/s  eta 0.9 h
+progress: 63.4663%  6346634016015 primes  up to 202510000000000  1194.3M primes/s  eta 0.8 h
+progress: 63.6339%  6363390131981 primes  up to 203062000000000  1194.0M primes/s  eta 0.8 h
+progress: 63.8027%  6380266248002 primes  up to 203618000000000  1193.8M primes/s  eta 0.8 h
+progress: 63.9702%  6397019650976 primes  up to 204170000000000  1193.6M primes/s  eta 0.8 h
+progress: 64.1383%  6413832373595 primes  up to 204724000000000  1193.4M primes/s  eta 0.8 h
+progress: 64.3067%  6430673988721 primes  up to 205279000000000  1193.2M primes/s  eta 0.8 h
+progress: 64.4742%  6447423201441 primes  up to 205831000000000  1192.9M primes/s  eta 0.8 h
+progress: 64.6423%  6464231761515 primes  up to 206385000000000  1192.7M primes/s  eta 0.8 h
+progress: 64.8098%  6480978233508 primes  up to 206937000000000  1192.5M primes/s  eta 0.8 h
+progress: 64.9769%  6497693016495 primes  up to 207488000000000  1192.3M primes/s  eta 0.8 h
+progress: 65.1438%  6514376166927 primes  up to 208038000000000  1192.0M primes/s  eta 0.8 h
+progress: 65.3106%  6531057946699 primes  up to 208588000000000  1191.8M primes/s  eta 0.8 h
+progress: 65.4753%  6547526037531 primes  up to 209131000000000  1191.5M primes/s  eta 0.8 h
+progress: 65.6405%  6564053557881 primes  up to 209676000000000  1191.3M primes/s  eta 0.8 h
+progress: 65.8058%  6580579853134 primes  up to 210221000000000  1191.0M primes/s  eta 0.8 h
+progress: 65.9707%  6597074350086 primes  up to 210765000000000  1190.8M primes/s  eta 0.8 h
+progress: 66.1378%  6613779944446 primes  up to 211316000000000  1190.5M primes/s  eta 0.8 h
+progress: 66.3048%  6630484157692 primes  up to 211867000000000  1190.3M primes/s  eta 0.8 h
+progress: 66.4704%  6647035529891 primes  up to 212413000000000  1190.0M primes/s  eta 0.8 h
+progress: 66.6371%  6663706858538 primes  up to 212963000000000  1189.8M primes/s  eta 0.8 h
+progress: 66.8041%  6680407123948 primes  up to 213514000000000  1189.6M primes/s  eta 0.8 h
+progress: 66.9695%  6696954673551 primes  up to 214060000000000  1189.4M primes/s  eta 0.8 h
+progress: 67.1365%  6713652434536 primes  up to 214611000000000  1189.1M primes/s  eta 0.8 h
+progress: 67.3026%  6730257861707 primes  up to 215159000000000  1188.9M primes/s  eta 0.8 h
+progress: 67.4686%  6746862013772 primes  up to 215707000000000  1188.7M primes/s  eta 0.8 h
+progress: 67.6343%  6763434674110 primes  up to 216254000000000  1188.4M primes/s  eta 0.8 h
+progress: 67.8004%  6780036387456 primes  up to 216802000000000  1188.2M primes/s  eta 0.8 h
+progress: 67.9661%  6796606497897 primes  up to 217349000000000  1188.0M primes/s  eta 0.7 h
+progress: 68.1311%  6813114759784 primes  up to 217894000000000  1187.8M primes/s  eta 0.7 h
+progress: 68.2974%  6829742940206 primes  up to 218443000000000  1187.5M primes/s  eta 0.7 h
+progress: 68.4625%  6846248625410 primes  up to 218988000000000  1187.3M primes/s  eta 0.7 h
+progress: 68.6290%  6862904527595 primes  up to 219538000000000  1187.1M primes/s  eta 0.7 h
+progress: 68.7944%  6879438100271 primes  up to 220084000000000  1186.8M primes/s  eta 0.7 h
+progress: 68.9603%  6896030948509 primes  up to 220632000000000  1186.6M primes/s  eta 0.7 h
+progress: 69.1177%  6911774888785 primes  up to 221152000000000  1186.2M primes/s  eta 0.7 h
+progress: 69.2755%  6927547980567 primes  up to 221673000000000  1185.9M primes/s  eta 0.7 h
+progress: 69.4353%  6943531826319 primes  up to 222201000000000  1185.6M primes/s  eta 0.7 h
+progress: 69.5954%  6959544724359 primes  up to 222730000000000  1185.2M primes/s  eta 0.7 h
+progress: 69.7550%  6975495967148 primes  up to 223257000000000  1184.9M primes/s  eta 0.7 h
+progress: 69.9142%  6991415772728 primes  up to 223783000000000  1184.6M primes/s  eta 0.7 h
+progress: 70.0736%  7007364698801 primes  up to 224310000000000  1184.3M primes/s  eta 0.7 h
+progress: 70.2337%  7023373100246 primes  up to 224839000000000  1183.9M primes/s  eta 0.7 h
+progress: 70.3923%  7039229048549 primes  up to 225363000000000  1183.6M primes/s  eta 0.7 h
+progress: 70.5505%  7055053611520 primes  up to 225886000000000  1183.3M primes/s  eta 0.7 h
+progress: 70.7091%  7070907328295 primes  up to 226410000000000  1182.9M primes/s  eta 0.7 h
+progress: 70.8682%  7086820440050 primes  up to 226936000000000  1182.6M primes/s  eta 0.7 h
+progress: 71.0273%  7102732480638 primes  up to 227462000000000  1182.3M primes/s  eta 0.7 h
+progress: 71.1873%  7118734061631 primes  up to 227991000000000  1182.0M primes/s  eta 0.7 h
+progress: 71.3480%  7134795020059 primes  up to 228522000000000  1181.7M primes/s  eta 0.7 h
+progress: 71.5085%  7150854887784 primes  up to 229053000000000  1181.4M primes/s  eta 0.7 h
+progress: 71.6688%  7166883299177 primes  up to 229583000000000  1181.1M primes/s  eta 0.7 h
+progress: 71.8285%  7182850154515 primes  up to 230111000000000  1180.8M primes/s  eta 0.7 h
+progress: 71.9885%  7198846162336 primes  up to 230640000000000  1180.5M primes/s  eta 0.7 h
+progress: 72.1484%  7214841004904 primes  up to 231169000000000  1180.2M primes/s  eta 0.7 h
+progress: 72.3065%  7230653421648 primes  up to 231692000000000  1179.9M primes/s  eta 0.7 h
+progress: 72.4659%  7246585667302 primes  up to 232219000000000  1179.6M primes/s  eta 0.6 h
+progress: 72.6264%  7262637683622 primes  up to 232750000000000  1179.3M primes/s  eta 0.6 h
+progress: 72.7869%  7278688726822 primes  up to 233281000000000  1179.0M primes/s  eta 0.6 h
+progress: 72.9471%  7294708375852 primes  up to 233811000000000  1178.7M primes/s  eta 0.6 h
+progress: 73.1079%  7310787475618 primes  up to 234343000000000  1178.4M primes/s  eta 0.6 h
+progress: 73.2680%  7326804899442 primes  up to 234873000000000  1178.2M primes/s  eta 0.6 h
+progress: 73.4270%  7342700376972 primes  up to 235399000000000  1177.9M primes/s  eta 0.6 h
+progress: 73.5863%  7358625019967 primes  up to 235926000000000  1177.6M primes/s  eta 0.6 h
+progress: 73.7449%  7374488126983 primes  up to 236451000000000  1177.3M primes/s  eta 0.6 h
+progress: 73.9050%  7390501220142 primes  up to 236981000000000  1177.0M primes/s  eta 0.6 h
+progress: 74.0636%  7406362205961 primes  up to 237506000000000  1176.7M primes/s  eta 0.6 h
+progress: 74.2219%  7422191877861 primes  up to 238030000000000  1176.4M primes/s  eta 0.6 h
+progress: 74.3814%  7438141388952 primes  up to 238558000000000  1176.1M primes/s  eta 0.6 h
+progress: 74.5409%  7454089810298 primes  up to 239086000000000  1175.8M primes/s  eta 0.6 h
+progress: 74.7004%  7470037146390 primes  up to 239614000000000  1175.6M primes/s  eta 0.6 h
+progress: 74.8595%  7485953260799 primes  up to 240141000000000  1175.3M primes/s  eta 0.6 h
+progress: 75.0178%  7501777750614 primes  up to 240665000000000  1175.0M primes/s  eta 0.6 h
+progress: 75.1790%  7517903129131 primes  up to 241199000000000  1174.7M primes/s  eta 0.6 h
+progress: 75.3382%  7533816084939 primes  up to 241726000000000  1174.5M primes/s  eta 0.6 h
+progress: 75.4982%  7549818508651 primes  up to 242256000000000  1174.2M primes/s  eta 0.6 h
+progress: 75.6588%  7565880303403 primes  up to 242788000000000  1173.9M primes/s  eta 0.6 h
+progress: 75.8179%  7581790072515 primes  up to 243315000000000  1173.7M primes/s  eta 0.6 h
+progress: 75.9776%  7597759030373 primes  up to 243844000000000  1173.4M primes/s  eta 0.6 h
+progress: 76.1373%  7613727075781 primes  up to 244373000000000  1173.1M primes/s  eta 0.6 h
+progress: 76.2963%  7629633755525 primes  up to 244900000000000  1172.9M primes/s  eta 0.6 h
+progress: 76.4563%  7645629836987 primes  up to 245430000000000  1172.6M primes/s  eta 0.6 h
+progress: 76.6159%  7661594889633 primes  up to 245959000000000  1172.3M primes/s  eta 0.6 h
+progress: 76.7768%  7677679524057 primes  up to 246492000000000  1172.1M primes/s  eta 0.6 h
+progress: 76.9364%  7693642425238 primes  up to 247021000000000  1171.8M primes/s  eta 0.5 h
+progress: 77.0948%  7709483514628 primes  up to 247546000000000  1171.6M primes/s  eta 0.5 h
+progress: 77.2547%  7725474419054 primes  up to 248076000000000  1171.3M primes/s  eta 0.5 h
+progress: 77.4137%  7741373954099 primes  up to 248603000000000  1171.0M primes/s  eta 0.5 h
+progress: 77.5730%  7757302517405 primes  up to 249131000000000  1170.8M primes/s  eta 0.5 h
+progress: 77.7308%  7773079252649 primes  up to 249654000000000  1170.5M primes/s  eta 0.5 h
+progress: 77.8916%  7789156658668 primes  up to 250187000000000  1170.3M primes/s  eta 0.5 h
+progress: 78.0508%  7805082243070 primes  up to 250715000000000  1170.0M primes/s  eta 0.5 h
+progress: 78.2101%  7821006742058 primes  up to 251243000000000  1169.8M primes/s  eta 0.5 h
+progress: 78.3687%  7836869959195 primes  up to 251769000000000  1169.5M primes/s  eta 0.5 h
+progress: 78.5276%  7852762319691 primes  up to 252296000000000  1169.2M primes/s  eta 0.5 h
+progress: 78.6877%  7868774329108 primes  up to 252827000000000  1169.0M primes/s  eta 0.5 h
+progress: 78.8476%  7884755195462 primes  up to 253357000000000  1168.8M primes/s  eta 0.5 h
+progress: 79.0061%  7900614394992 primes  up to 253883000000000  1168.5M primes/s  eta 0.5 h
+progress: 79.1653%  7916532919546 primes  up to 254411000000000  1168.3M primes/s  eta 0.5 h
+progress: 79.3245%  7932450407301 primes  up to 254939000000000  1168.0M primes/s  eta 0.5 h
+progress: 79.4819%  7948186086430 primes  up to 255461000000000  1167.7M primes/s  eta 0.5 h
+progress: 79.6398%  7963981026436 primes  up to 255985000000000  1167.5M primes/s  eta 0.5 h
+progress: 79.7984%  7979835292663 primes  up to 256511000000000  1167.2M primes/s  eta 0.5 h
+progress: 79.9563%  7995628267137 primes  up to 257035000000000  1166.9M primes/s  eta 0.5 h
+progress: 80.1163%  8011631220412 primes  up to 257566000000000  1166.7M primes/s  eta 0.5 h
+progress: 80.2742%  8027422266650 primes  up to 258090000000000  1166.4M primes/s  eta 0.5 h
+progress: 80.4324%  8043242452573 primes  up to 258615000000000  1166.2M primes/s  eta 0.5 h
+progress: 80.5906%  8059061720045 primes  up to 259140000000000  1165.9M primes/s  eta 0.5 h
+progress: 80.7482%  8074819793167 primes  up to 259663000000000  1165.7M primes/s  eta 0.5 h
+progress: 80.9055%  8090546769993 primes  up to 260185000000000  1165.4M primes/s  eta 0.5 h
+progress: 81.0642%  8106423415449 primes  up to 260712000000000  1165.2M primes/s  eta 0.5 h
+progress: 81.2230%  8122299121611 primes  up to 261239000000000  1164.9M primes/s  eta 0.4 h
+progress: 81.3808%  8138083420387 primes  up to 261763000000000  1164.7M primes/s  eta 0.4 h
+progress: 81.5387%  8153866898107 primes  up to 262287000000000  1164.4M primes/s  eta 0.4 h
+progress: 81.6947%  8169468622931 primes  up to 262805000000000  1164.1M primes/s  eta 0.4 h
+progress: 81.8531%  8185310267870 primes  up to 263331000000000  1163.9M primes/s  eta 0.4 h
+progress: 82.0112%  8201120983882 primes  up to 263856000000000  1163.6M primes/s  eta 0.4 h
+progress: 82.1678%  8216780168846 primes  up to 264376000000000  1163.4M primes/s  eta 0.4 h
+progress: 82.3265%  8232649135311 primes  up to 264903000000000  1163.1M primes/s  eta 0.4 h
+progress: 82.4840%  8248396705120 primes  up to 265426000000000  1162.9M primes/s  eta 0.4 h
+progress: 82.6417%  8264173435217 primes  up to 265950000000000  1162.6M primes/s  eta 0.4 h
+progress: 82.7995%  8279949356857 primes  up to 266474000000000  1162.4M primes/s  eta 0.4 h
+progress: 82.9572%  8295724257867 primes  up to 266998000000000  1162.1M primes/s  eta 0.4 h
+progress: 83.1132%  8311317591990 primes  up to 267516000000000  1161.9M primes/s  eta 0.4 h
+progress: 83.2712%  8327120726745 primes  up to 268041000000000  1161.6M primes/s  eta 0.4 h
+progress: 83.4292%  8342923003286 primes  up to 268566000000000  1161.4M primes/s  eta 0.4 h
+progress: 83.5860%  8358603910058 primes  up to 269087000000000  1161.1M primes/s  eta 0.4 h
+progress: 83.7431%  8374314076653 primes  up to 269609000000000  1160.9M primes/s  eta 0.4 h
+progress: 83.9008%  8390083451680 primes  up to 270133000000000  1160.6M primes/s  eta 0.4 h
+progress: 84.0576%  8405761609671 primes  up to 270654000000000  1160.4M primes/s  eta 0.4 h
+progress: 84.2147%  8421468972778 primes  up to 271176000000000  1160.1M primes/s  eta 0.4 h
+progress: 84.3718%  8437175366422 primes  up to 271698000000000  1159.9M primes/s  eta 0.4 h
+progress: 84.5282%  8452820828317 primes  up to 272218000000000  1159.7M primes/s  eta 0.4 h
+progress: 84.6865%  8468645757121 primes  up to 272744000000000  1159.4M primes/s  eta 0.4 h
+progress: 84.8435%  8484349537942 primes  up to 273266000000000  1159.2M primes/s  eta 0.4 h
+progress: 85.0014%  8500142610839 primes  up to 273791000000000  1159.0M primes/s  eta 0.4 h
+progress: 85.1584%  8515844516955 primes  up to 274313000000000  1158.7M primes/s  eta 0.4 h
+progress: 85.3158%  8531575581298 primes  up to 274836000000000  1158.5M primes/s  eta 0.4 h
+progress: 85.4725%  8547245714224 primes  up to 275357000000000  1158.2M primes/s  eta 0.3 h
+progress: 85.6297%  8562974993139 primes  up to 275880000000000  1158.0M primes/s  eta 0.3 h
+progress: 85.7867%  8578673297149 primes  up to 276402000000000  1157.8M primes/s  eta 0.3 h
+progress: 85.9440%  8594400791893 primes  up to 276925000000000  1157.6M primes/s  eta 0.3 h
+progress: 86.1016%  8610157367368 primes  up to 277449000000000  1157.3M primes/s  eta 0.3 h
+progress: 86.2597%  8625973250883 primes  up to 277975000000000  1157.1M primes/s  eta 0.3 h
+progress: 86.4167%  8641668070536 primes  up to 278497000000000  1156.9M primes/s  eta 0.3 h
+progress: 86.5739%  8657392032105 primes  up to 279020000000000  1156.7M primes/s  eta 0.3 h
+progress: 86.7302%  8673024899986 primes  up to 279540000000000  1156.4M primes/s  eta 0.3 h
+progress: 86.8878%  8688777103851 primes  up to 280064000000000  1156.2M primes/s  eta 0.3 h
+progress: 87.0444%  8704438305163 primes  up to 280585000000000  1156.0M primes/s  eta 0.3 h
+progress: 87.2028%  8720278981099 primes  up to 281112000000000  1155.7M primes/s  eta 0.3 h
+progress: 87.3597%  8735968466606 primes  up to 281634000000000  1155.5M primes/s  eta 0.3 h
+progress: 87.5172%  8751717249732 primes  up to 282158000000000  1155.3M primes/s  eta 0.3 h
+progress: 87.6753%  8767525183288 primes  up to 282684000000000  1155.1M primes/s  eta 0.3 h
+progress: 87.8321%  8783212102278 primes  up to 283206000000000  1154.9M primes/s  eta 0.3 h
+progress: 87.9890%  8798898032279 primes  up to 283728000000000  1154.6M primes/s  eta 0.3 h
+progress: 88.1467%  8814673263092 primes  up to 284253000000000  1154.4M primes/s  eta 0.3 h
+progress: 88.3054%  8830537763729 primes  up to 284781000000000  1154.2M primes/s  eta 0.3 h
+progress: 88.4661%  8846611747386 primes  up to 285316000000000  1154.1M primes/s  eta 0.3 h
+progress: 88.6277%  8862774962316 primes  up to 285854000000000  1153.9M primes/s  eta 0.3 h
+progress: 88.7891%  8878907121161 primes  up to 286391000000000  1153.7M primes/s  eta 0.3 h
+progress: 88.9501%  8895008389422 primes  up to 286927000000000  1153.6M primes/s  eta 0.3 h
+progress: 89.1120%  8911198898418 primes  up to 287466000000000  1153.4M primes/s  eta 0.3 h
+progress: 89.2727%  8927268366479 primes  up to 288001000000000  1153.3M primes/s  eta 0.3 h
+progress: 89.4337%  8943366925223 primes  up to 288537000000000  1153.1M primes/s  eta 0.3 h
+progress: 89.5955%  8959554578492 primes  up to 289076000000000  1152.9M primes/s  eta 0.3 h
+progress: 89.7568%  8975681417469 primes  up to 289613000000000  1152.8M primes/s  eta 0.2 h
+progress: 89.9190%  8991897434768 primes  up to 290153000000000  1152.6M primes/s  eta 0.2 h
+progress: 90.0796%  9007962406810 primes  up to 290688000000000  1152.5M primes/s  eta 0.2 h
+progress: 90.2397%  9023966345728 primes  up to 291221000000000  1152.3M primes/s  eta 0.2 h
+progress: 90.4009%  9040089607986 primes  up to 291758000000000  1152.2M primes/s  eta 0.2 h
+progress: 90.5621%  9056211831750 primes  up to 292295000000000  1152.0M primes/s  eta 0.2 h
+progress: 90.7236%  9072363304881 primes  up to 292833000000000  1151.8M primes/s  eta 0.2 h
+progress: 90.8851%  9088513911968 primes  up to 293371000000000  1151.7M primes/s  eta 0.2 h
+progress: 91.0448%  9104483453860 primes  up to 293903000000000  1151.5M primes/s  eta 0.2 h
+progress: 91.2057%  9120572189554 primes  up to 294439000000000  1151.4M primes/s  eta 0.2 h
+progress: 91.3654%  9136540006718 primes  up to 294971000000000  1151.2M primes/s  eta 0.2 h
+progress: 91.5260%  9152597020209 primes  up to 295506000000000  1151.0M primes/s  eta 0.2 h
+progress: 91.6871%  9168713186745 primes  up to 296043000000000  1150.9M primes/s  eta 0.2 h
+progress: 91.8480%  9184798423389 primes  up to 296579000000000  1150.7M primes/s  eta 0.2 h
+progress: 92.0070%  9200702714299 primes  up to 297109000000000  1150.5M primes/s  eta 0.2 h
+progress: 92.1679%  9216786318468 primes  up to 297645000000000  1150.4M primes/s  eta 0.2 h
+progress: 92.3293%  9232928986467 primes  up to 298183000000000  1150.2M primes/s  eta 0.2 h
+progress: 92.4892%  9248920820747 primes  up to 298716000000000  1150.1M primes/s  eta 0.2 h
+progress: 92.6503%  9265031788526 primes  up to 299253000000000  1149.9M primes/s  eta 0.2 h
+progress: 92.8117%  9281171790356 primes  up to 299791000000000  1149.8M primes/s  eta 0.2 h
+progress: 92.9740%  9297400925068 primes  up to 300332000000000  1149.7M primes/s  eta 0.2 h
+progress: 93.1363%  9313629248186 primes  up to 300873000000000  1149.5M primes/s  eta 0.2 h
+progress: 93.2974%  9329736719444 primes  up to 301410000000000  1149.4M primes/s  eta 0.2 h
+progress: 93.4584%  9345843327650 primes  up to 301947000000000  1149.2M primes/s  eta 0.2 h
+progress: 93.6195%  9361949049600 primes  up to 302484000000000  1149.1M primes/s  eta 0.2 h
+progress: 93.7811%  9378113983912 primes  up to 303023000000000  1149.0M primes/s  eta 0.2 h
+progress: 93.9428%  9394277879863 primes  up to 303562000000000  1148.8M primes/s  eta 0.1 h
+progress: 94.1050%  9410500935229 primes  up to 304103000000000  1148.7M primes/s  eta 0.1 h
+progress: 94.2660%  9426603346829 primes  up to 304640000000000  1148.6M primes/s  eta 0.1 h
+progress: 94.4279%  9442794703467 primes  up to 305180000000000  1148.4M primes/s  eta 0.1 h
+progress: 94.5893%  9458925316936 primes  up to 305718000000000  1148.3M primes/s  eta 0.1 h
+progress: 94.7509%  9475085086509 primes  up to 306257000000000  1148.1M primes/s  eta 0.1 h
+progress: 94.9127%  9491273862455 primes  up to 306797000000000  1148.0M primes/s  eta 0.1 h
+progress: 95.0722%  9507222085320 primes  up to 307329000000000  1147.8M primes/s  eta 0.1 h
+progress: 95.2335%  9523349168078 primes  up to 307867000000000  1147.7M primes/s  eta 0.1 h
+progress: 95.3945%  9539445561623 primes  up to 308404000000000  1147.6M primes/s  eta 0.1 h
+progress: 95.5566%  9555660946756 primes  up to 308945000000000  1147.4M primes/s  eta 0.1 h
+progress: 95.7170%  9571695667910 primes  up to 309480000000000  1147.3M primes/s  eta 0.1 h
+progress: 95.8758%  9587579684509 primes  up to 310010000000000  1147.1M primes/s  eta 0.1 h
+progress: 96.0376%  9603762588048 primes  up to 310550000000000  1147.0M primes/s  eta 0.1 h
+progress: 96.1985%  9619854706469 primes  up to 311087000000000  1146.9M primes/s  eta 0.1 h
+progress: 96.3607%  9636066004666 primes  up to 311628000000000  1146.7M primes/s  eta 0.1 h
+progress: 96.5216%  9652156447175 primes  up to 312165000000000  1146.6M primes/s  eta 0.1 h
+progress: 96.6828%  9668276020428 primes  up to 312703000000000  1146.5M primes/s  eta 0.1 h
+progress: 96.8433%  9684334912207 primes  up to 313239000000000  1146.3M primes/s  eta 0.1 h
+progress: 97.0045%  9700452972704 primes  up to 313777000000000  1146.2M primes/s  eta 0.1 h
+progress: 97.1654%  9716540174029 primes  up to 314314000000000  1146.1M primes/s  eta 0.1 h
+progress: 97.3260%  9732596620270 primes  up to 314850000000000  1145.9M primes/s  eta 0.1 h
+progress: 97.4865%  9748652225227 primes  up to 315386000000000  1145.8M primes/s  eta 0.1 h
+progress: 97.6468%  9764677177445 primes  up to 315921000000000  1145.6M primes/s  eta 0.1 h
+progress: 97.8082%  9780820954362 primes  up to 316460000000000  1145.5M primes/s  eta 0.1 h
+progress: 97.9684%  9796844225291 primes  up to 316995000000000  1145.4M primes/s  eta 0.0 h
+progress: 98.1299%  9812986466560 primes  up to 317534000000000  1145.2M primes/s  eta 0.0 h
+progress: 98.2886%  9828858254016 primes  up to 318064000000000  1145.1M primes/s  eta 0.0 h
+progress: 98.4488%  9844879028763 primes  up to 318599000000000  1144.9M primes/s  eta 0.0 h
+progress: 98.6093%  9860929032881 primes  up to 319135000000000  1144.8M primes/s  eta 0.0 h
+progress: 98.7695%  9876948193361 primes  up to 319670000000000  1144.6M primes/s  eta 0.0 h
+progress: 98.9297%  9892966524970 primes  up to 320205000000000  1144.5M primes/s  eta 0.0 h
+progress: 99.0898%  9908984105421 primes  up to 320740000000000  1144.4M primes/s  eta 0.0 h
+progress: 99.2506%  9925060806519 primes  up to 321277000000000  1144.2M primes/s  eta 0.0 h
+progress: 99.4120%  9941196540621 primes  up to 321816000000000  1144.1M primes/s  eta 0.0 h
+progress: 99.5715%  9957151894357 primes  up to 322349000000000  1144.0M primes/s  eta 0.0 h
+progress: 99.7326%  9973256040857 primes  up to 322887000000000  1143.8M primes/s  eta 0.0 h
+progress: 99.8936%  9989359347292 primes  up to 323425000000000  1143.7M primes/s  eta 0.0 h
+
+[crossing] pi = 10^13  (p = 323780508946331)
+  no 0 (A231412): 2572084882736    (new)
+  no 1 (A228413): 1266309423393    (new)
+  no 2 (A228414): 1761252701672    (new)
+  no 3 (A228415): 1770118421758    (new)
+  no 4 (A228416): 2565954604082    (new)
+  no 5 (A228417): 2567010423857    (new)
+  no 6 (A228418): 2567938055999    (new)
+  no 7 (A228419): 1926738759318    (new)
+  no 8 (A228420): 2570658222631    (new)
+  no 9 (A228421): 1928516761196    (new)
+
+done. results in digitprimes_results.txt
+
+no digit d ('missing') sequences:
+A231412 (no 0): 1, 10, 91, 819, 7122, 61702, 557224, 5062320, 45002763, 395879190, 3579400605, 32487367715, 294505958253, 2572084882736,
+A228413 (no 1): 1, 6, 54, 532, 4675, 34425, 262549, 2051466, 16831152, 155616459, 1529462564, 14830618421, 141585123501, 1266309423393,
+A228414 (no 2): 0, 7, 77, 697, 6497, 55552, 512100, 4710641, 42205969, 341224891, 2787791578, 22971326749, 190650687957, 1761252701672,
+A228415 (no 3): 1, 7, 54, 534, 4909, 45405, 385008, 3539880, 32260781, 294001190, 2564080248, 23271246324, 211753431947, 1770118421758,
+A228416 (no 4): 1, 10, 75, 721, 6637, 60605, 514809, 4730382, 43254591, 392344689, 3421561753, 31049600245, 282499317912, 2565954604082,
+A228417 (no 5): 1, 9, 85, 708, 6635, 60640, 535534, 4737129, 43297195, 392641522, 3536880527, 31067514571, 282635824867, 2567010423857,
+A228418 (no 6): 1, 10, 90, 719, 6696, 60845, 554933, 4742037, 43331008, 392875212, 3573268469, 31207451849, 282765603085, 2567938055999,
+A228419 (no 7): 1, 8, 67, 539, 5034, 45549, 416913, 3570781, 32517377, 294828478, 2681147149, 23720397369, 212156228217, 1926738759318,
+A228420 (no 8): 1, 10, 92, 816, 6712, 60867, 555878, 5026796, 43410238, 395243878, 3576361255, 32461990759, 282971130960, 2570658222631,
+A228421 (no 9): 1, 8, 69, 620, 5010, 45732, 418142, 3785060, 32579606, 296601070, 2683254222, 24354108057, 212324183352, 1928516761196,
+
+at least one digit d sequences (10^n - no_d, from n=1):
+A231726 (>=1 0): 0, 9, 181, 2878, 38298, 442776, 4937680, 54997237, 604120810, 6420599395, 67512632285, 705494041747, 7427915117264,
+A231787 (>=1 1): 4, 46, 468, 5325, 65575, 737451, 7948534, 83168848, 844383541, 8470537436, 85169381579, 858414876499, 8733690576607,
+A231788 (>=1 2): 3, 23, 303, 3503, 44448, 487900, 5289359, 57794031, 658775109, 7212208422, 77028673251, 809349312043, 8238747298328,
+A231789 (>=1 3): 3, 46, 466, 5091, 54595, 614992, 6460120, 67739219, 705998810, 7435919752, 76728753676, 788246568053, 8229881578242,
+A231790 (>=1 4): 0, 25, 279, 3363, 39395, 485191, 5269618, 56745409, 607655311, 6578438247, 68950399755, 717500682088, 7434045395918,
+A231792 (>=1 5): 1, 15, 292, 3365, 39360, 464466, 5262871, 56702805, 607358478, 6463119473, 68932485429, 717364175133, 7432989576143,
+A231793 (>=1 6): 0, 10, 281, 3304, 39155, 445067, 5257963, 56668992, 607124788, 6426731531, 68792548151, 717234396915, 7432061944001,
+A231794 (>=1 7): 2, 33, 461, 4966, 54451, 583087, 6429219, 67482623, 705171522, 7318852851, 76279602631, 787843771783, 8073261240682,
+A231795 (>=1 8): 0, 8, 184, 3288, 39133, 444122, 4973204, 56589762, 604756122, 6423638745, 67538009241, 717028869040, 7429341777369,
+A231796 (>=1 9): 2, 31, 380, 4990, 54268, 581858, 6214940, 67420394, 703398930, 7316745778, 75645891943, 787675816648, 8071483238804,

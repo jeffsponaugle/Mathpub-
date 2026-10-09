@@ -1,0 +1,8 @@
+build: 7c75e38c1115 g++ 13 x86_64
+fen: rnbqkbnr/8/8/8/8/8/8/RNBQKBNR w KQkq - 0 1
+threads: 32  table: 1228800 MB  seed: 1  ttmin: 2
+split ply 4: 1321124 unique positions (4200525 paths), 1.4s
+  111645/1321124 tasks (8.45%)  302s elapsed  ETA 3252s
+  426886/1321124 tasks (32.31%)  602s elapsed  ETA 1257s
+  1090109/1321124 tasks (82.51%)  902s elapsed  ETA 191s
+perft(9) = 806635564568344   (984.35s, 8.19e+11 leaves/s)

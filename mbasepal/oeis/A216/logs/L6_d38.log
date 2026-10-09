@@ -1,0 +1,34 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=75 vs b1={37}: values [2373046875, 2565726409), 457 candidates (even-AP path)
+stage b2=76 vs b1={38}: values [2535525376, 3010936384), 1084 candidates (even-AP path)
+stage b2=77 vs b1={39}: values [2706784157, 3518743761), 1779 candidates (even-AP path)
+stage b2=78 vs b1={40}: values [2887174368, 4096000000), 2548 candidates (even-AP path)
+stage b2=79 vs b1={41}: values [3077056399, 4750104241), 3394 candidates (even-AP path)
+stage b2=80 vs b1={42}: values [3276800000, 5489031744), 4321 candidates (even-AP path)
+stage b2=81 vs b1={43}: values [3486784401, 6321363049), 5334 candidates (even-AP path)
+stage b2=82 vs b1={44}: values [3707398432, 7256313856), 6437 candidates (even-AP path)
+stage b2=83 vs b1={45}: values [3939040643, 8303765625), 7634 candidates (even-AP path)
+stage b2=84 vs b1={46}: values [4182119424, 9474296896), 8929 candidates (even-AP path)
+stage b2=85 vs b1={47}: values [4437053125, 10779215329), 10328 candidates (even-AP path)
+stage b2=86 vs b1={48}: values [4704270176, 12230590464), 11833 candidates (even-AP path)
+stage b2=87 vs b1={49}: values [4984209207, 13841287201), 13451 candidates (even-AP path)
+stage b2=88 vs b1={50}: values [5277319168, 15625000000), 15185 candidates (even-AP path)
+stage b2=89 vs b1={51}: values [5584059449, 17596287801), 17040 candidates (even-AP path)
+stage b2=90 vs b1={52}: values [5904900000, 19770609664), 19021 candidates (even-AP path)
+stage b2=91 vs b1={53}: values [6240321451, 22164361129), 21132 candidates (even-AP path)
+
+*** MATCH: 19281754404 is an 6-digit palindrome in bases 53 and 91
+stage b2=92 vs b1={54}: values [6590815232, 24794911296), 23378 candidates (even-AP path)
+
+*** MATCH: 9846860925 is an 6-digit palindrome in bases 54 and 92
+stage b2=93 vs b1={55}: values [6956883693, 27680640625), 25765 candidates (even-AP path)
+stage b2=94 vs b1={56}: values [7339040224, 30840979456), 28296 candidates (even-AP path)
+
+*** MATCH: 9725779185 is an 6-digit palindrome in bases 56 and 94
+stage b2=95 vs b1={57}: values [7737809375, 34296447249), 30977 candidates (even-AP path)
+stage b2=96 vs b1={58}: values [8153726976, 38068692544), 33813 candidates (even-AP path)
+stage b2=97 vs b1={59}: values [8587340257, 42180533641), 36808 candidates (even-AP path)
+
+*** MATCH: 9134191920 is an 6-digit palindrome in bases 59 and 97
+stage b2=98 vs b1={60}: values [9039207968, 46656000000), 39968 candidates (even-AP path)
+done: 0.00s, 162003 candidates tested

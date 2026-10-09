@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=148 vs b1={13}: values [148, 169), 1 candidates (generic path)
+stage b2=149 vs b1={14}: values [149, 196), 1 candidates (generic path)
+
+*** MATCH: 150 is an 2-digit palindrome in bases 14 and 149
+done: 0.00s, 2 candidates tested

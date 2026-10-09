@@ -1,0 +1,11 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=95 vs b1={10}: values [95, 100), 1 candidates (generic path)
+stage b2=96 vs b1={11}: values [96, 121), 1 candidates (generic path)
+stage b2=97 vs b1={12}: values [97, 144), 1 candidates (generic path)
+stage b2=98 vs b1={13}: values [98, 169), 1 candidates (generic path)
+stage b2=99 vs b1={14}: values [99, 196), 1 candidates (generic path)
+stage b2=100 vs b1={15}: values [100, 225), 2 candidates (generic path)
+stage b2=101 vs b1={16}: values [101, 256), 2 candidates (generic path)
+
+*** MATCH: 102 is an 2-digit palindrome in bases 16 and 101
+done: 0.00s, 9 candidates tested

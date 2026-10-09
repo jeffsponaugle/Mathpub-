@@ -1,0 +1,3 @@
+# pisearch L=19 candidates=/tmp/c19.txt pi=pi-10b.txt  format digits:first:second (1-based after decimal point)
+1350168131352524443:4750253204:8858170606
+# summary: 1 repeats; earliest-second-occurrence = 1350168131352524443:4750253204:8858170606

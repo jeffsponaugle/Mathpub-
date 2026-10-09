@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=56 vs b1={15}: values [3136, 3375), 5 candidates (generic path)
+stage b2=57 vs b1={16}: values [3249, 4096), 15 candidates (generic path)
+
+*** MATCH: 3421 is an 3-digit palindrome in bases 16 and 57
+stage b2=58 vs b1={17}: values [3364, 4913), 27 candidates (generic path)
+done: 0.00s, 21 candidates tested

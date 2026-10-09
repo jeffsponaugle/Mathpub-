@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=106 vs b1={42}: values [126247696, 130691232), 396 candidates (generic path)
+stage b2=107 vs b1={43}: values [131079601, 147008443), 1392 candidates (generic path)
+stage b2=108 vs b1={44}: values [136048896, 164916224), 2475 candidates (generic path)
+
+*** MATCH: 141904657 is an 5-digit palindrome in bases 44 and 108
+stage b2=109 vs b1={45}: values [141158161, 184528125), 3651 candidates (generic path)
+done: 0.00s, 4326 candidates tested

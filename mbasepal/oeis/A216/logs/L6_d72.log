@@ -1,0 +1,10 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=130 vs b1={58}: values [37129300000, 38068692544), 428 candidates (even-AP path)
+stage b2=131 vs b1={59}: values [38579489651, 42180533641), 1602 candidates (even-AP path)
+stage b2=132 vs b1={60}: values [40074642432, 46656000000), 2862 candidates (even-AP path)
+stage b2=133 vs b1={61}: values [41615795893, 51520374361), 4210 candidates (even-AP path)
+stage b2=134 vs b1={62}: values [43204003424, 56800235584), 5651 candidates (even-AP path)
+stage b2=135 vs b1={63}: values [44840334375, 62523502209), 7188 candidates (even-AP path)
+
+*** MATCH: 46424233216 is an 6-digit palindrome in bases 63 and 135
+done: 0.00s, 15428 candidates tested

@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=220 vs b1={75}: values [2342560000, 2373046875), 630 candidates (generic path)
+stage b2=221 vs b1={76}: values [2385443281, 2535525376), 3073 candidates (generic path)
+
+*** MATCH: 2392134499 is an 5-digit palindrome in bases 76 and 221
+done: 0.00s, 3703 candidates tested

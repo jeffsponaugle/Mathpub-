@@ -1,0 +1,6 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=13 vs b1={10}: values [815730721, 1000000000), 6452 candidates (MITM path)
+  MITM b1=10: s=3 t=2 j=2 je=3 Q=100 table=169 yh=39
+
+*** MATCH: 952404259 is an 9-digit palindrome in bases 10 and 13
+done: 0.00s, 29 candidates tested

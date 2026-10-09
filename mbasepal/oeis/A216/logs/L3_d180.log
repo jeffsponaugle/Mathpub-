@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=217 vs b1={37}: values [47089, 50653), 17 candidates (generic path)
+stage b2=218 vs b1={38}: values [47524, 54872), 34 candidates (generic path)
+
+*** MATCH: 48179 is an 3-digit palindrome in bases 38 and 218
+stage b2=219 vs b1={39}: values [47961, 59319), 52 candidates (generic path)
+
+*** MATCH: 47962 is an 3-digit palindrome in bases 39 and 219
+done: 0.00s, 52 candidates tested

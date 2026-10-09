@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=87 vs b1={20}: values [7569, 8000), 5 candidates (generic path)
+stage b2=88 vs b1={21}: values [7744, 9261), 18 candidates (generic path)
+
+*** MATCH: 7745 is an 3-digit palindrome in bases 21 and 88
+done: 0.00s, 23 candidates tested

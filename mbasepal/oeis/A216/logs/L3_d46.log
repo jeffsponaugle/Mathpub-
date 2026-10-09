@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=62 vs b1={16}: values [3844, 4096), 5 candidates (generic path)
+
+*** MATCH: 4031 is an 3-digit palindrome in bases 16 and 62
+stage b2=63 vs b1={17}: values [3969, 4913), 15 candidates (generic path)
+done: 0.00s, 6 candidates tested

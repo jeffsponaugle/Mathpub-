@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=144 vs b1={71}: values [8916100448256, 9095120158391), 59954 candidates (generic path)
+stage b2=145 vs b1={72}: values [9294114390625, 10030613004288), 241584 candidates (generic path)
+
+*** MATCH: 10022654568671 is an 7-digit palindrome in bases 72 and 145
+stage b2=146 vs b1={73}: values [9685390482496, 11047398519097), 437645 candidates (generic path)
+done: 0.01s, 409908 candidates tested

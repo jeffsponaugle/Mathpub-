@@ -1,0 +1,10 @@
+A171740 search: n=15, threads=1, limit=none
+stage b2=34 vs b1={27}: values [2758702310349224820736, 2954312706550833698643), 3724255892 candidates (MITM path)
+  MITM b1=27: s=5 t=3 j=3 je=4 Q=19683 table=39304 yh=94756
+stage b2=35 vs b1={28}: values [4139545122369384765625, 5097655355238390956032), 14891524767 candidates (MITM path)
+  MITM b1=28: s=5 t=3 j=3 je=4 Q=21952 table=42875 yh=347325
+stage b2=36 vs b1={29}: values [6140942214464815497216, 8629188747598184440949), 31752352135 candidates (MITM path)
+  MITM b1=29: s=4 t=4 j=4 je=4 Q=707281 table=1679616 yh=18905
+
+*** MATCH: 6742744364652302264221 is an 15-digit palindrome in bases 29 and 36
+done: 0.07s, 446654 candidates tested

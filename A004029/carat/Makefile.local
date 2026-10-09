@@ -1,0 +1,815 @@
+CC=clang
+CFLAGS=-O2 -w -std=gnu89 -Iinclude -I/opt/homebrew/include -DDATADIR='"$(CURDIR)"'
+LDFLAGS=-L/opt/homebrew/lib -lgmp -lm
+LIBOBJ=obj/functions_utils.o obj/functions_Autgrp_autgrp.o obj/functions_Autgrp_auttools.o obj/functions_Autgrp_bachtools.o obj/functions_Autgrp_iotools.o obj/functions_Autgrp_isometry.o obj/functions_Autgrp_isotools.o obj/functions_Autgrp_lattools.o obj/functions_Autgrp_mattools.o obj/functions_Autgrp_orbtools.o obj/functions_Autgrp_perfecttools.o obj/functions_Autgrp_pr_aut.o obj/functions_Autgrp_pr_isom.o obj/functions_Autgrp_preproc.o obj/functions_Autgrp_sorttools.o obj/functions_Base_base.o obj/functions_Base_base2.o obj/functions_Base_conjugate.o obj/functions_Bravais_bravais_tools.o obj/functions_Bravais_formspace.o obj/functions_Bravais_init_bravais.o obj/functions_Bravais_invar_space.o obj/functions_Bravais_konj_bravais.o obj/functions_Bravais_lincomb.o obj/functions_Bravais_normalisator.o obj/functions_Bravais_normlin.o obj/functions_Bravais_p_formspace.o obj/functions_Bravais_rform.o obj/functions_Bravais_tr_bravais.o obj/functions_Bravais_trace_bifo.o obj/functions_Contrib_suche_kand.o obj/functions_Contrib_torsionfree.o obj/functions_Datei_brav_from_datei.o obj/functions_Datei_free_bravais.o obj/functions_Datei_get_data_dir.o obj/functions_Datei_get_symbol.o obj/functions_Datei_get_zentr.o obj/functions_Datei_gittstab.o obj/functions_Datei_gittstabneu.o obj/functions_Datei_lattice_tools.o obj/functions_Datei_lattice.o obj/functions_Datei_read_symbol.o obj/functions_Datei_right_order.o obj/functions_Datei_super_lattice.o obj/functions_Getput_get_bravais.o obj/functions_Getput_get_mat.o obj/functions_Getput_put_bravais.o obj/functions_Getput_put_mat.o obj/functions_Getput_put_order.o obj/functions_Getput_read_header.o obj/functions_Graph_aff_normal.o obj/functions_Graph_calculate_representatives.o obj/functions_Graph_coho_size.o obj/functions_Graph_graph_mapped_word.o obj/functions_Graph_graph_tools.o obj/functions_Graph_is_k_subgroup.o obj/functions_Graph_lattices.o obj/functions_Graph_normalop_o.o obj/functions_Graph_obergruppenzahl.o obj/functions_Graph_orbit_fkts.o obj/functions_Graph_phi.o obj/functions_Graph_Q_data.o obj/functions_Graph_stabs.o obj/functions_Graph_sub-k-groups-fcts.o obj/functions_Graph_sub-super-tools.o obj/functions_Graph_subgroupgraph.o obj/functions_Graph_super-k-groups-fcts.o obj/functions_Hyperbolic_hyp_isom.o obj/functions_Hyperbolic_hyp_stabilizer.o obj/functions_Idem_almost_decomposable_lattice.o obj/functions_Idem_bravais_catalog.o obj/functions_Idem_centr.o obj/functions_Idem_min_pol.o obj/functions_Idem_symbol.o obj/functions_Idem_v4_catalog.o obj/functions_Idem_z_equivalent.o obj/functions_Longtools_dump_MP_mat.o obj/functions_Longtools_long_elt.o obj/functions_Longtools_long_gauss.o obj/functions_Longtools_long_hnf.o obj/functions_Longtools_long_kernel_mat.o obj/functions_Longtools_long_mat_inv.o obj/functions_Longtools_long_qbase.o obj/functions_Longtools_long_rein_mat.o obj/functions_Longtools_long_solve_mat.o obj/functions_Longtools_MP_conv_mat.o obj/functions_Longtools_MP_gauss.o obj/functions_Longtools_MP_hnf.o obj/functions_Longtools_MP_pair_red.o obj/functions_Longtools_MP_red_sort.o obj/functions_Longtools_MP_solve.o obj/functions_Matrix_add_mat.o obj/functions_Matrix_col_row_ops_mat.o obj/functions_Matrix_comp_mat.o obj/functions_Matrix_construct_mat.o obj/functions_Matrix_divide_by_gcd.o obj/functions_Matrix_elt_div_mat.o obj/functions_Matrix_find_max_entry_mat.o obj/functions_Matrix_gauss_mat.o obj/functions_Matrix_inv_mat.o obj/functions_Matrix_kgv2rat_mat.o obj/functions_Matrix_kron_mat.o obj/functions_Matrix_modp_mat.o obj/functions_Matrix_mul_mat.o obj/functions_Matrix_null_mat.o obj/functions_Matrix_p_gauss_mat.o obj/functions_Matrix_p_lse_solve.o obj/functions_Matrix_p_mat_det.o obj/functions_Matrix_p_solve_mat.o obj/functions_Matrix_real_mat.o obj/functions_Matrix_red_mat.o obj/functions_Matrix_scal_pr_mat.o obj/functions_Matrix_solve_mat.o obj/functions_Matrix_tools_mat.o obj/functions_Matrix_tr_pose_mat.o obj/functions_Matrix_trace_mat.o obj/functions_Matrix_unity_mat.o obj/functions_Name_aff_class_inf.o obj/functions_Name_compute_q_matrix.o obj/functions_Name_HM_symbol.o obj/functions_Name_point_group.o obj/functions_Name_Q_catalog.o obj/functions_Name_q_class_inf.o obj/functions_Name_reverse_name_fct.o obj/functions_Name_z_class_inf.o obj/functions_Orbit_orb_division.o obj/functions_Orbit_orbit_alg.o obj/functions_Orbit_orbit_subdivision.o obj/functions_Orbit_row_spin.o obj/functions_Polyeder_first_fuber.o obj/functions_Polyeder_first_polyeder.o obj/functions_Polyeder_fuber_tools.o obj/functions_Polyeder_polyeder_to_vecs.o obj/functions_Polyeder_polyeder_tools.o obj/functions_Polyeder_refine_fuber.o obj/functions_Polyeder_refine_polyeder.o obj/functions_Presentation_check_base.o obj/functions_Presentation_mapped_word.o obj/functions_Presentation_presentation.o obj/functions_Presentation_put_word.o obj/functions_Reduction_mink_red.o obj/functions_Reduction_pair_red.o obj/functions_Reduction_reduction_sort.o obj/functions_Reduction_short_reduce.o obj/functions_Sort_compare.o obj/functions_Sort_quicksort.o obj/functions_Sort_search.o obj/functions_Symm_dsylv.o obj/functions_Symm_rest_short.o obj/functions_Symm_short.o obj/functions_Symm_shortest.o obj/functions_Tools_chin_remainder.o obj/functions_Tools_intpow.o obj/functions_Tools_itoa.o obj/functions_Tools_malloc2dim.o obj/functions_Tools_min_div.o obj/functions_Tools_ovfl_mul.o obj/functions_Tools_prime_tools.o obj/functions_Tools_random.o obj/functions_Tools_tools.o obj/functions_TSubgroups_name_fct.o obj/functions_TSubgroups_PoaN.o obj/functions_TSubgroups_tsubgroups_fct_db.o obj/functions_TSubgroups_tsubgroups_fct.o obj/functions_TSubgroups_tsubgroups_tools.o obj/functions_TSubgroups_tSUPERgroups_fct_db.o obj/functions_Voronoi_all_vor_neighbours.o obj/functions_Voronoi_bravais_flok_datei.o obj/functions_Voronoi_bravais_flok.o obj/functions_Voronoi_calc_vor_data.o obj/functions_Voronoi_first_perfect.o obj/functions_Voronoi_init_voronoi.o obj/functions_Voronoi_normalizer.o obj/functions_Voronoi_pair_red_inv.o obj/functions_Voronoi_red_normal.o obj/functions_Voronoi_vor_neighbour.o obj/functions_Voronoi_vor_vertices.o obj/functions_Zassen_coboundary.o obj/functions_Zassen_cong_solve.o obj/functions_Zassen_convert_cocycle_to_column.o obj/functions_Zassen_convert_to_cocycle.o obj/functions_Zassen_normalop.o obj/functions_Zassen_put_cocycle.o obj/functions_Zassen_reget_gen.o obj/functions_Zassen_reverse_valuation.o obj/functions_Zassen_zass.o obj/functions_ZZ_get_groups.o obj/functions_ZZ_q2z.o obj/functions_ZZ_ZZ_cen_fun.o obj/functions_ZZ_ZZ_gen_vs.o obj/functions_ZZ_ZZ_irr_const.o obj/functions_ZZ_ZZ_lll.o obj/functions_ZZ_ZZ_zclass.o obj/functions_ZZ_ZZ.o
+PROGS=bin/Add bin/Aut_grp bin/Bravais_equiv bin/Bravais_grp bin/Bravais_inclusions bin/Conj_bravais bin/Conj bin/Conjugated bin/Conv bin/Datei bin/Elt bin/Extensions bin/Extract bin/First_perfect bin/Form_elt bin/Form_space bin/Formtovec bin/Full bin/Gauss bin/Graph bin/Idem bin/Inv bin/Invar_space bin/Is_finite bin/Isometry bin/Kron bin/KSubgroups bin/KSupergroups bin/Long_solve bin/Ltm bin/Mink_red bin/Minpol bin/Modp bin/Mtl bin/Mul bin/Name bin/Normalizer_in_N bin/Normalizer bin/Normlin bin/Orbit bin/Order bin/P_lse_solve bin/Pair_red bin/Pdet bin/Perfect_neighbours bin/Polyeder bin/Presentation bin/Q_catalog bin/QtoZ bin/Red_gen bin/Rein bin/Rest_short bin/Reverse_name bin/Rform bin/Same_generators bin/Scalarmul bin/Scpr bin/Short_reduce bin/Short bin/Shortest bin/Signature bin/Simplify_mat bin/Symbol bin/Torsionfree bin/Tr_bravais bin/Tr bin/Trace bin/Trbifo bin/TSubgroups bin/TSupergroups bin/Vectoform bin/Vor_vertices bin/Z_equiv bin/Zass_main bin/ZZprog
+all: $(PROGS)
+libfunctions.a: $(LIBOBJ)
+	ar rcs $@ $^ && ranlib $@
+obj/functions_utils.o: functions/utils.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_autgrp.o: functions/Autgrp/autgrp.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_auttools.o: functions/Autgrp/auttools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_bachtools.o: functions/Autgrp/bachtools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_iotools.o: functions/Autgrp/iotools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_isometry.o: functions/Autgrp/isometry.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_isotools.o: functions/Autgrp/isotools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_lattools.o: functions/Autgrp/lattools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_mattools.o: functions/Autgrp/mattools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_orbtools.o: functions/Autgrp/orbtools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_perfecttools.o: functions/Autgrp/perfecttools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_pr_aut.o: functions/Autgrp/pr_aut.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_pr_isom.o: functions/Autgrp/pr_isom.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_preproc.o: functions/Autgrp/preproc.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Autgrp_sorttools.o: functions/Autgrp/sorttools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Base_base.o: functions/Base/base.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Base_base2.o: functions/Base/base2.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Base_conjugate.o: functions/Base/conjugate.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_bravais_tools.o: functions/Bravais/bravais_tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_formspace.o: functions/Bravais/formspace.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_init_bravais.o: functions/Bravais/init_bravais.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_invar_space.o: functions/Bravais/invar_space.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_konj_bravais.o: functions/Bravais/konj_bravais.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_lincomb.o: functions/Bravais/lincomb.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_normalisator.o: functions/Bravais/normalisator.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_normlin.o: functions/Bravais/normlin.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_p_formspace.o: functions/Bravais/p_formspace.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_rform.o: functions/Bravais/rform.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_tr_bravais.o: functions/Bravais/tr_bravais.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Bravais_trace_bifo.o: functions/Bravais/trace_bifo.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Contrib_suche_kand.o: functions/Contrib/suche_kand.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Contrib_torsionfree.o: functions/Contrib/torsionfree.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_brav_from_datei.o: functions/Datei/brav_from_datei.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_free_bravais.o: functions/Datei/free_bravais.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_get_data_dir.o: functions/Datei/get_data_dir.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_get_symbol.o: functions/Datei/get_symbol.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_get_zentr.o: functions/Datei/get_zentr.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_gittstab.o: functions/Datei/gittstab.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_gittstabneu.o: functions/Datei/gittstabneu.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_lattice_tools.o: functions/Datei/lattice_tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_lattice.o: functions/Datei/lattice.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_read_symbol.o: functions/Datei/read_symbol.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_right_order.o: functions/Datei/right_order.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Datei_super_lattice.o: functions/Datei/super_lattice.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Getput_get_bravais.o: functions/Getput/get_bravais.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Getput_get_mat.o: functions/Getput/get_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Getput_put_bravais.o: functions/Getput/put_bravais.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Getput_put_mat.o: functions/Getput/put_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Getput_put_order.o: functions/Getput/put_order.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Getput_read_header.o: functions/Getput/read_header.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_aff_normal.o: functions/Graph/aff_normal.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_calculate_representatives.o: functions/Graph/calculate_representatives.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_coho_size.o: functions/Graph/coho_size.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_graph_mapped_word.o: functions/Graph/graph_mapped_word.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_graph_tools.o: functions/Graph/graph_tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_is_k_subgroup.o: functions/Graph/is_k_subgroup.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_lattices.o: functions/Graph/lattices.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_normalop_o.o: functions/Graph/normalop_o.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_obergruppenzahl.o: functions/Graph/obergruppenzahl.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_orbit_fkts.o: functions/Graph/orbit_fkts.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_phi.o: functions/Graph/phi.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_Q_data.o: functions/Graph/Q_data.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_stabs.o: functions/Graph/stabs.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_sub-k-groups-fcts.o: functions/Graph/sub-k-groups-fcts.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_sub-super-tools.o: functions/Graph/sub-super-tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_subgroupgraph.o: functions/Graph/subgroupgraph.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Graph_super-k-groups-fcts.o: functions/Graph/super-k-groups-fcts.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Hyperbolic_hyp_isom.o: functions/Hyperbolic/hyp_isom.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Hyperbolic_hyp_stabilizer.o: functions/Hyperbolic/hyp_stabilizer.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Idem_almost_decomposable_lattice.o: functions/Idem/almost_decomposable_lattice.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Idem_bravais_catalog.o: functions/Idem/bravais_catalog.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Idem_centr.o: functions/Idem/centr.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Idem_min_pol.o: functions/Idem/min_pol.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Idem_symbol.o: functions/Idem/symbol.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Idem_v4_catalog.o: functions/Idem/v4_catalog.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Idem_z_equivalent.o: functions/Idem/z_equivalent.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_dump_MP_mat.o: functions/Longtools/dump_MP_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_elt.o: functions/Longtools/long_elt.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_gauss.o: functions/Longtools/long_gauss.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_hnf.o: functions/Longtools/long_hnf.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_kernel_mat.o: functions/Longtools/long_kernel_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_mat_inv.o: functions/Longtools/long_mat_inv.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_qbase.o: functions/Longtools/long_qbase.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_rein_mat.o: functions/Longtools/long_rein_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_long_solve_mat.o: functions/Longtools/long_solve_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_MP_conv_mat.o: functions/Longtools/MP_conv_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_MP_gauss.o: functions/Longtools/MP_gauss.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_MP_hnf.o: functions/Longtools/MP_hnf.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_MP_pair_red.o: functions/Longtools/MP_pair_red.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_MP_red_sort.o: functions/Longtools/MP_red_sort.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Longtools_MP_solve.o: functions/Longtools/MP_solve.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_add_mat.o: functions/Matrix/add_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_col_row_ops_mat.o: functions/Matrix/col_row_ops_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_comp_mat.o: functions/Matrix/comp_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_construct_mat.o: functions/Matrix/construct_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_divide_by_gcd.o: functions/Matrix/divide_by_gcd.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_elt_div_mat.o: functions/Matrix/elt_div_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_find_max_entry_mat.o: functions/Matrix/find_max_entry_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_gauss_mat.o: functions/Matrix/gauss_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_inv_mat.o: functions/Matrix/inv_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_kgv2rat_mat.o: functions/Matrix/kgv2rat_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_kron_mat.o: functions/Matrix/kron_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_modp_mat.o: functions/Matrix/modp_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_mul_mat.o: functions/Matrix/mul_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_null_mat.o: functions/Matrix/null_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_p_gauss_mat.o: functions/Matrix/p_gauss_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_p_lse_solve.o: functions/Matrix/p_lse_solve.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_p_mat_det.o: functions/Matrix/p_mat_det.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_p_solve_mat.o: functions/Matrix/p_solve_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_real_mat.o: functions/Matrix/real_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_red_mat.o: functions/Matrix/red_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_scal_pr_mat.o: functions/Matrix/scal_pr_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_solve_mat.o: functions/Matrix/solve_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_tools_mat.o: functions/Matrix/tools_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_tr_pose_mat.o: functions/Matrix/tr_pose_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_trace_mat.o: functions/Matrix/trace_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Matrix_unity_mat.o: functions/Matrix/unity_mat.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_aff_class_inf.o: functions/Name/aff_class_inf.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_compute_q_matrix.o: functions/Name/compute_q_matrix.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_HM_symbol.o: functions/Name/HM_symbol.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_point_group.o: functions/Name/point_group.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_Q_catalog.o: functions/Name/Q_catalog.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_q_class_inf.o: functions/Name/q_class_inf.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_reverse_name_fct.o: functions/Name/reverse_name_fct.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Name_z_class_inf.o: functions/Name/z_class_inf.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Orbit_orb_division.o: functions/Orbit/orb_division.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Orbit_orbit_alg.o: functions/Orbit/orbit_alg.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Orbit_orbit_subdivision.o: functions/Orbit/orbit_subdivision.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Orbit_row_spin.o: functions/Orbit/row_spin.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Polyeder_first_fuber.o: functions/Polyeder/first_fuber.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Polyeder_first_polyeder.o: functions/Polyeder/first_polyeder.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Polyeder_fuber_tools.o: functions/Polyeder/fuber_tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Polyeder_polyeder_to_vecs.o: functions/Polyeder/polyeder_to_vecs.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Polyeder_polyeder_tools.o: functions/Polyeder/polyeder_tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Polyeder_refine_fuber.o: functions/Polyeder/refine_fuber.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Polyeder_refine_polyeder.o: functions/Polyeder/refine_polyeder.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Presentation_check_base.o: functions/Presentation/check_base.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Presentation_mapped_word.o: functions/Presentation/mapped_word.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Presentation_presentation.o: functions/Presentation/presentation.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Presentation_put_word.o: functions/Presentation/put_word.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Reduction_mink_red.o: functions/Reduction/mink_red.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Reduction_pair_red.o: functions/Reduction/pair_red.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Reduction_reduction_sort.o: functions/Reduction/reduction_sort.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Reduction_short_reduce.o: functions/Reduction/short_reduce.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Sort_compare.o: functions/Sort/compare.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Sort_quicksort.o: functions/Sort/quicksort.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Sort_search.o: functions/Sort/search.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Symm_dsylv.o: functions/Symm/dsylv.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Symm_rest_short.o: functions/Symm/rest_short.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Symm_short.o: functions/Symm/short.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Symm_shortest.o: functions/Symm/shortest.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_chin_remainder.o: functions/Tools/chin_remainder.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_intpow.o: functions/Tools/intpow.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_itoa.o: functions/Tools/itoa.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_malloc2dim.o: functions/Tools/malloc2dim.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_min_div.o: functions/Tools/min_div.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_ovfl_mul.o: functions/Tools/ovfl_mul.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_prime_tools.o: functions/Tools/prime_tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_random.o: functions/Tools/random.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Tools_tools.o: functions/Tools/tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_TSubgroups_name_fct.o: functions/TSubgroups/name_fct.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_TSubgroups_PoaN.o: functions/TSubgroups/PoaN.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_TSubgroups_tsubgroups_fct_db.o: functions/TSubgroups/tsubgroups_fct_db.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_TSubgroups_tsubgroups_fct.o: functions/TSubgroups/tsubgroups_fct.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_TSubgroups_tsubgroups_tools.o: functions/TSubgroups/tsubgroups_tools.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_TSubgroups_tSUPERgroups_fct_db.o: functions/TSubgroups/tSUPERgroups_fct_db.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_all_vor_neighbours.o: functions/Voronoi/all_vor_neighbours.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_bravais_flok_datei.o: functions/Voronoi/bravais_flok_datei.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_bravais_flok.o: functions/Voronoi/bravais_flok.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_calc_vor_data.o: functions/Voronoi/calc_vor_data.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_first_perfect.o: functions/Voronoi/first_perfect.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_init_voronoi.o: functions/Voronoi/init_voronoi.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_normalizer.o: functions/Voronoi/normalizer.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_pair_red_inv.o: functions/Voronoi/pair_red_inv.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_red_normal.o: functions/Voronoi/red_normal.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_vor_neighbour.o: functions/Voronoi/vor_neighbour.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Voronoi_vor_vertices.o: functions/Voronoi/vor_vertices.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_coboundary.o: functions/Zassen/coboundary.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_cong_solve.o: functions/Zassen/cong_solve.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_convert_cocycle_to_column.o: functions/Zassen/convert_cocycle_to_column.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_convert_to_cocycle.o: functions/Zassen/convert_to_cocycle.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_normalop.o: functions/Zassen/normalop.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_put_cocycle.o: functions/Zassen/put_cocycle.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_reget_gen.o: functions/Zassen/reget_gen.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_reverse_valuation.o: functions/Zassen/reverse_valuation.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_Zassen_zass.o: functions/Zassen/zass.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_get_groups.o: functions/ZZ/get_groups.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_q2z.o: functions/ZZ/q2z.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_ZZ_cen_fun.o: functions/ZZ/ZZ_cen_fun.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_ZZ_gen_vs.o: functions/ZZ/ZZ_gen_vs.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_ZZ_irr_const.o: functions/ZZ/ZZ_irr_const.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_ZZ_lll.o: functions/ZZ/ZZ_lll.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_ZZ_zclass.o: functions/ZZ/ZZ_zclass.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+obj/functions_ZZ_ZZ.o: functions/ZZ/ZZ.c
+	@mkdir -p obj
+	$(CC) $(CFLAGS) -c $< -o $@
+bin/Add: src/add.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Aut_grp: src/autgrp.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Bravais_equiv: src/bravais_equiv.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Bravais_grp: src/bravaisgroup.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Bravais_inclusions: src/bravais_inclusions.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Conj_bravais: src/conj_bravais.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Conj: src/conj.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Conjugated: src/conjugated.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Conv: src/conv.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Datei: src/datei.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Elt: src/elt.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Extensions: src/extensions.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Extract: src/extract.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/First_perfect: src/first_perfect.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Form_elt: src/form_elt.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Form_space: src/form_space.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Formtovec: src/formtovec.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Full: src/full.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Gauss: src/gauss.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Graph: src/graph.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Idem: src/idem.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Inv: src/inv.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Invar_space: src/invar_space.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Is_finite: src/is_finite.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Isometry: src/isometry.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Kron: src/kron.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/KSubgroups: src/sub-k-groups.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/KSupergroups: src/super-k-groups.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Long_solve: src/long_solve.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Ltm: src/ltm.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Mink_red: src/mink_red.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Minpol: src/minpol.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Modp: src/modp.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Mtl: src/mtl.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Mul: src/mul.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Name: src/name.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Normalizer_in_N: src/normalizer_in_n.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Normalizer: src/normalizer.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Normlin: src/normlin.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Orbit: src/orbit.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Order: src/order.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/P_lse_solve: src/p_lse_solve.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Pair_red: src/pair_red.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Pdet: src/pdet.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Perfect_neighbours: src/perfect_neighbours.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Polyeder: src/polyeder.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Presentation: src/presentation.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Q_catalog: src/Q_catalog.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/QtoZ: src/qtoz.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Red_gen: src/red_gen.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Rein: src/rein.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Rest_short: src/rest_short.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Reverse_name: src/reverse_name.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Rform: src/rform.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Same_generators: src/same_generators.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Scalarmul: src/scalarmul.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Scpr: src/scpr.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Short_reduce: src/short_reduce.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Short: src/short.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Shortest: src/shortest.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Signature: src/signature.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Simplify_mat: src/simplify_mat.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Symbol: src/symbol.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Torsionfree: src/torsionfree.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Tr_bravais: src/tr_bravais.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Tr: src/tr.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Trace: src/trace.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Trbifo: src/trbifo.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/TSubgroups: src/tsubgroups.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/TSupergroups: src/tsupergroups.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Vectoform: src/vectoform.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Vor_vertices: src/vor_vertices.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Z_equiv: src/z_equiv.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/Zass_main: src/zass_main.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@
+bin/ZZprog: src/ZZprog.c libfunctions.a
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $< libfunctions.a $(LDFLAGS) -o $@

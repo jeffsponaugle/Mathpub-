@@ -1,0 +1,7 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=21 vs b1={5}: values [21, 25), 1 candidates (generic path)
+stage b2=22 vs b1={6}: values [22, 36), 1 candidates (generic path)
+stage b2=23 vs b1={7}: values [23, 49), 2 candidates (generic path)
+
+*** MATCH: 24 is an 2-digit palindrome in bases 7 and 23
+done: 0.00s, 4 candidates tested

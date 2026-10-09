@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=219 vs b1={37}: values [47961, 50653), 13 candidates (generic path)
+
+*** MATCH: 48838 is an 3-digit palindrome in bases 37 and 219
+stage b2=220 vs b1={38}: values [48400, 54872), 30 candidates (generic path)
+done: 0.00s, 15 candidates tested

@@ -1,0 +1,16 @@
+cchain-v1
+kind=2
+k=17
+start=3203000719597029781
+end=1000000000000000000000
+B=1024
+chunk_log2=24
+M=223092870
+C=864
+frontier_sb=78
+elapsed=511.1
+cand=4070713
+prp=4711784
+best_len=7
+best_p=3267537757391047141
+nfound=0

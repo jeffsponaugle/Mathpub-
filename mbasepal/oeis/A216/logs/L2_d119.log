@@ -1,0 +1,9 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=131 vs b1={12}: values [131, 144), 1 candidates (generic path)
+stage b2=132 vs b1={13}: values [132, 169), 1 candidates (generic path)
+stage b2=133 vs b1={14}: values [133, 196), 1 candidates (generic path)
+stage b2=134 vs b1={15}: values [134, 225), 1 candidates (generic path)
+stage b2=135 vs b1={16}: values [135, 256), 1 candidates (generic path)
+
+*** MATCH: 136 is an 2-digit palindrome in bases 16 and 135
+done: 0.00s, 5 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=135 vs b1={51}: values [332150625, 345025251), 707 candidates (generic path)
+
+*** MATCH: 336123811 is an 5-digit palindrome in bases 51 and 135
+done: 0.00s, 707 candidates tested

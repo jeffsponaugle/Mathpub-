@@ -1,0 +1,8 @@
+CompileFlags:
+  Add: [-Icarat/include, -I/opt/homebrew/include, -I../carat/include, -std=gnu11]
+---
+If:
+  PathMatch: .*\.cpp
+CompileFlags:
+  Add: [-std=c++17, -I/opt/homebrew/include]
+  Remove: [-std=gnu11]

@@ -1,0 +1,22 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=10 vs b1={8}: values [1000000000, 1073741824), 738 candidates (MITM path)
+  MITM b1=8: s=3 t=2 j=2 je=3 Q=64 table=100 yh=8
+stage b2=11 vs b1={9}: values [2357947691, 3486784401), 7010 candidates (MITM path)
+  MITM b1=9: s=3 t=2 j=2 je=3 Q=81 table=121 yh=58
+stage b2=12 vs b1={10}: values [5159780352, 10000000000), 19452 candidates (MITM path)
+  MITM b1=10: s=3 t=2 j=2 je=3 Q=100 table=144 yh=136
+stage b2=13 vs b1={11}: values [10604499373, 25937424601), 41297 candidates (MITM path)
+  MITM b1=11: s=3 t=2 j=2 je=3 Q=121 table=169 yh=245
+stage b2=14 vs b1={12}: values [20661046784, 61917364224), 76710 candidates (MITM path)
+  MITM b1=12: s=3 t=2 j=2 je=3 Q=144 table=196 yh=392
+stage b2=15 vs b1={13}: values [38443359375, 137858491849), 130918 candidates (MITM path)
+  MITM b1=13: s=3 t=2 j=2 je=3 Q=169 table=225 yh=582
+stage b2=16 vs b1={14}: values [68719476736, 289254654976), 210319 candidates (MITM path)
+  MITM b1=14: s=3 t=2 j=2 je=3 Q=196 table=256 yh=822
+stage b2=17 vs b1={15}: values [118587876497, 576650390625), 322612 candidates (MITM path)
+  MITM b1=15: s=3 t=2 j=2 je=3 Q=225 table=289 yh=1117
+
+*** MATCH: 260311602096 is an 10-digit palindrome in bases 15 and 17
+stage b2=18 vs b1={16}: values [198359290368, 1099511627776), 476910 candidates (MITM path)
+  MITM b1=16: s=3 t=2 j=2 je=3 Q=256 table=324 yh=1472
+done: 0.00s, 2691 candidates tested

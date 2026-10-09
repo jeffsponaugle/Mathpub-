@@ -1,0 +1,34 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=47 vs b1={32}: values [1119130473102767, 1125899906842624), 29517 candidates (MITM path)
+  MITM b1=32: s=3 t=2 j=2 je=2 Q=1024 table=2209 yh=14
+stage b2=48 vs b1={33}: values [1352605460594688, 1531578985264449), 702397 candidates (MITM path)
+  MITM b1=33: s=3 t=2 j=2 je=2 Q=1089 table=2304 yh=305
+stage b2=49 vs b1={34}: values [1628413597910449, 2064377754059776), 1543372 candidates (MITM path)
+  MITM b1=34: s=3 t=2 j=2 je=2 Q=1156 table=2401 yh=643
+stage b2=50 vs b1={35}: values [1953125000000000, 2758547353515625), 2577352 candidates (MITM path)
+  MITM b1=35: s=3 t=2 j=2 je=2 Q=1225 table=2500 yh=1031
+stage b2=51 vs b1={36}: values [2334165173090451, 3656158440062976), 3831585 candidates (MITM path)
+  MITM b1=36: s=3 t=2 j=2 je=2 Q=1296 table=2601 yh=1474
+stage b2=52 vs b1={37}: values [2779905883635712, 4808584372417849), 5335763 candidates (MITM path)
+  MITM b1=37: s=3 t=2 j=2 je=2 Q=1369 table=2704 yh=1974
+stage b2=53 vs b1={38}: values [3299763591802133, 6278211847988224), 7122144 candidates (MITM path)
+  MITM b1=38: s=3 t=2 j=2 je=2 Q=1444 table=2809 yh=2536
+stage b2=54 vs b1={39}: values [3904305912313344, 8140406085191601), 9225660 candidates (MITM path)
+  MITM b1=39: s=3 t=2 j=2 je=2 Q=1521 table=2916 yh=3164
+stage b2=55 vs b1={40}: values [4605366583984375, 10485760000000000), 11684038 candidates (MITM path)
+  MITM b1=40: s=3 t=2 j=2 je=2 Q=1600 table=3025 yh=3863
+stage b2=56 vs b1={41}: values [5416169448144896, 13422659310152401), 14537912 candidates (MITM path)
+  MITM b1=41: s=3 t=2 j=2 je=3 Q=1681 table=3136 yh=4636
+stage b2=57 vs b1={42}: values [6351461955384057, 17080198121677824), 17830942 candidates (MITM path)
+  MITM b1=42: s=3 t=2 j=2 je=3 Q=1764 table=3249 yh=5489
+stage b2=58 vs b1={43}: values [7427658739644928, 21611482313284249), 21609930 candidates (MITM path)
+  MITM b1=43: s=3 t=2 j=2 je=3 Q=1849 table=3364 yh=6424
+stage b2=59 vs b1={44}: values [8662995818654939, 27197360938418176), 25924934 candidates (MITM path)
+  MITM b1=44: s=3 t=2 j=2 je=3 Q=1936 table=3481 yh=7448
+
+*** MATCH: 12410554422030840 is an 10-digit palindrome in bases 44 and 59
+stage b2=60 vs b1={45}: values [10077696000000000, 34050628916015625), 30829390 candidates (MITM path)
+  MITM b1=45: s=3 t=2 j=2 je=3 Q=2025 table=3600 yh=8564
+stage b2=61 vs b1={46}: values [11694146092834141, 42420747482776576), 36380223 candidates (MITM path)
+  MITM b1=46: s=3 t=2 j=2 je=3 Q=2116 table=3721 yh=9778
+done: 0.00s, 34121 candidates tested

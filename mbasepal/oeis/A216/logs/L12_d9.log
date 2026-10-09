@@ -1,0 +1,16 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=36 vs b1={27}: values [131621703842267136, 150094635296999121), 8486348 candidates (MITM path)
+  MITM b1=27: s=4 t=2 j=2 je=3 Q=729 table=1296 yh=6549
+stage b2=37 vs b1={28}: values [177917621779460413, 232218265089212416), 21163848 candidates (MITM path)
+  MITM b1=28: s=3 t=3 j=3 je=3 Q=21952 table=50653 yh=418
+stage b2=38 vs b1={29}: values [238572050223552512, 353814783205469041), 38274716 candidates (MITM path)
+  MITM b1=29: s=3 t=3 j=3 je=3 Q=24389 table=54872 yh=698
+stage b2=39 vs b1={30}: values [317475837322472439, 531441000000000000), 60807259 candidates (MITM path)
+  MITM b1=30: s=3 t=3 j=3 je=3 Q=27000 table=59319 yh=1026
+stage b2=40 vs b1={31}: values [419430400000000000, 787662783788549761), 89900485 candidates (MITM path)
+  MITM b1=31: s=3 t=3 j=3 je=3 Q=29791 table=64000 yh=1405
+stage b2=41 vs b1={32}: values [550329031716248441, 1152921504606846976), 126858790 candidates (MITM path)
+  MITM b1=32: s=3 t=3 j=3 je=3 Q=32768 table=68921 yh=1841
+
+*** MATCH: 593018939654134224 is an 12-digit palindrome in bases 32 and 41
+done: 0.01s, 10227 candidates tested

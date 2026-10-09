@@ -1,0 +1,13 @@
+1c1__group.1__Z1	2	1	1	1	0	0	trivial
+2-2__group.4__Z2	6	1	1	1	0	1	trivial
+1c1__min.2__Z1	1	1	1	1	0	0	trivial
+2-2__max.3__Z1	12	1	1	1	0	1	trivial
+2-2__min.5__Z1	3	1	1	1	0	0	trivial
+1s1__group.2__Z1	4	2x2	3	3	0	1	explicit
+1s1__group.2__Z2	4	1	1	1	0	1	trivial
+1s1__min.3__Z1	2	2	2	2	0	1	explicit
+1s1__min.3__Z2	2	1	1	1	0	1	trivial
+2-1__max.2__Z1	8	2	2	2	0	1	explicit
+2-1__min.4__Z1	4	1	1	1	0	0	trivial
+2-2__group.3__Z1	6	1	1	1	0	0	trivial
+2-2__group.4__Z1	6	1	1	1	0	1	trivial

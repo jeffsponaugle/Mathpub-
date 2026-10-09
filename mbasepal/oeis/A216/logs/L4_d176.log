@@ -1,0 +1,10 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=237 vs b1={61}: values [13312053, 13845841), 10 candidates (generic path)
+stage b2=238 vs b1={62}: values [13481272, 14776336), 23 candidates (generic path)
+stage b2=239 vs b1={63}: values [13651919, 15752961), 37 candidates (generic path)
+stage b2=240 vs b1={64}: values [13824000, 16777216), 52 candidates (generic path)
+stage b2=241 vs b1={65}: values [13997521, 17850625), 67 candidates (generic path)
+
+*** MATCH: 14289132 is an 4-digit palindrome in bases 65 and 241
+stage b2=242 vs b1={66}: values [14172488, 18974736), 83 candidates (generic path)
+done: 0.00s, 191 candidates tested

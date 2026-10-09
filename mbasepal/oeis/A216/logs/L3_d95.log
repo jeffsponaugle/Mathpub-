@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=120 vs b1={25}: values [14400, 15625), 11 candidates (generic path)
+stage b2=121 vs b1={26}: values [14641, 17576), 25 candidates (generic path)
+
+*** MATCH: 14763 is an 3-digit palindrome in bases 26 and 121
+done: 0.00s, 36 candidates tested

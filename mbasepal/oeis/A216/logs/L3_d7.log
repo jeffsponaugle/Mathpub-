@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=13 vs b1={6}: values [169, 216), 4 candidates (generic path)
+
+*** MATCH: 209 is an 3-digit palindrome in bases 6 and 13
+stage b2=14 vs b1={7}: values [196, 343), 11 candidates (generic path)
+done: 0.00s, 5 candidates tested

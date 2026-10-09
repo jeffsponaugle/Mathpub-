@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=228 vs b1={38}: values [51984, 54872), 13 candidates (generic path)
+stage b2=229 vs b1={39}: values [52441, 59319), 31 candidates (generic path)
+
+*** MATCH: 53816 is an 3-digit palindrome in bases 39 and 229
+stage b2=230 vs b1={40}: values [52900, 64000), 49 candidates (generic path)
+stage b2=231 vs b1={41}: values [53361, 68921), 68 candidates (generic path)
+done: 0.00s, 50 candidates tested

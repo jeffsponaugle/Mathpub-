@@ -1,0 +1,6 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=10 vs b1={8}: values [100000000, 134217728), 3422 candidates (MITM path)
+  MITM b1=8: s=3 t=2 j=2 je=3 Q=64 table=100 yh=35
+
+*** MATCH: 130535031 is an 9-digit palindrome in bases 8 and 10
+done: 0.00s, 31 candidates tested

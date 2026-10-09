@@ -1,0 +1,11 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=139 vs b1={27}: values [19321, 19683), 3 candidates (generic path)
+stage b2=140 vs b1={28}: values [19600, 21952), 17 candidates (generic path)
+stage b2=141 vs b1={29}: values [19881, 24389), 32 candidates (generic path)
+stage b2=142 vs b1={30}: values [20164, 27000), 49 candidates (generic path)
+
+*** MATCH: 21443 is an 3-digit palindrome in bases 30 and 142
+stage b2=143 vs b1={31}: values [20449, 29791), 66 candidates (generic path)
+
+*** MATCH: 20450 is an 3-digit palindrome in bases 31 and 143
+done: 0.00s, 108 candidates tested

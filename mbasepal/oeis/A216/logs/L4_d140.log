@@ -1,0 +1,12 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=192 vs b1={52}: values [7077888, 7311616), 7 candidates (generic path)
+stage b2=193 vs b1={53}: values [7189057, 7890481), 19 candidates (generic path)
+stage b2=194 vs b1={54}: values [7301384, 8503056), 32 candidates (generic path)
+stage b2=195 vs b1={55}: values [7414875, 9150625), 46 candidates (generic path)
+stage b2=196 vs b1={56}: values [7529536, 9834496), 61 candidates (generic path)
+stage b2=197 vs b1={57}: values [7645373, 10556001), 75 candidates (generic path)
+stage b2=198 vs b1={58}: values [7762392, 11316496), 91 candidates (generic path)
+stage b2=199 vs b1={59}: values [7880599, 12117361), 107 candidates (generic path)
+
+*** MATCH: 7960200 is an 4-digit palindrome in bases 59 and 199
+done: 0.00s, 437 candidates tested

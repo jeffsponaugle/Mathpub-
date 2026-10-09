@@ -1,0 +1,19 @@
+build: 7de4dcb9ad85 clang++ 21.0.0 arm64
+fen: rnb1kbnr/pppppppp/8/8/8/8/PPPPPPPP/RNB1KBNR w KQkq - 0 1
+threads: 18  table: 32768 MB  seed: 1  ttmin: 2
+split ply 5: 772206 unique positions (5247292 paths), 0.4s
+  69186/772206 tasks (8.96%)  300s elapsed  ETA 3049s
+  125953/772206 tasks (16.31%)  600s elapsed  ETA 3079s
+  176945/772206 tasks (22.91%)  901s elapsed  ETA 3028s
+  229679/772206 tasks (29.74%)  1201s elapsed  ETA 2835s
+  275237/772206 tasks (35.64%)  1501s elapsed  ETA 2709s
+  330982/772206 tasks (42.86%)  1801s elapsed  ETA 2400s
+  385654/772206 tasks (49.94%)  2101s elapsed  ETA 2105s
+  436560/772206 tasks (56.53%)  2401s elapsed  ETA 1846s
+  486010/772206 tasks (62.94%)  2701s elapsed  ETA 1590s
+  533851/772206 tasks (69.13%)  3001s elapsed  ETA 1340s
+  583752/772206 tasks (75.60%)  3301s elapsed  ETA 1066s
+  638245/772206 tasks (82.65%)  3602s elapsed  ETA 756s
+  684150/772206 tasks (88.60%)  3902s elapsed  ETA 502s
+  729190/772206 tasks (94.43%)  4202s elapsed  ETA 248s
+perft(12) = 38045182847789814   (4432.70s, 8.58e+12 leaves/s)

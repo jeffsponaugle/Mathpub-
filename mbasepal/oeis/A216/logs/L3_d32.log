@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=45 vs b1={13}: values [2025, 2197), 4 candidates (generic path)
+
+*** MATCH: 2026 is an 3-digit palindrome in bases 13 and 45
+done: 0.00s, 4 candidates tested

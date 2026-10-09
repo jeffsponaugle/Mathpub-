@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=98 vs b1={51}: values [885842380864, 897410677851), 12292 candidates (generic path)
+stage b2=99 vs b1={52}: values [941480149401, 1028071702528), 89243 candidates (generic path)
+
+*** MATCH: 996062124718 is an 7-digit palindrome in bases 52 and 99
+done: 0.00s, 77827 candidates tested

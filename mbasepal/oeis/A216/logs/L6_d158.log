@@ -1,0 +1,11 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=262 vs b1={104}: values [1234543668832, 1265319018496), 1712 candidates (even-AP path)
+stage b2=263 vs b1={105}: values [1258284197543, 1340095640625), 4498 candidates (even-AP path)
+stage b2=264 vs b1={106}: values [1282388557824, 1418519112256), 7399 candidates (even-AP path)
+stage b2=265 vs b1={107}: values [1306860915625, 1500730351849), 10418 candidates (even-AP path)
+stage b2=266 vs b1={108}: values [1331705468576, 1586874322944), 13558 candidates (even-AP path)
+stage b2=267 vs b1={109}: values [1356926446107, 1677100110841), 16822 candidates (even-AP path)
+
+*** MATCH: 1397430505240 is an 6-digit palindrome in bases 109 and 267
+stage b2=268 vs b1={110}: values [1382528109568, 1771561000000), 20211 candidates (even-AP path)
+done: 0.00s, 40525 candidates tested

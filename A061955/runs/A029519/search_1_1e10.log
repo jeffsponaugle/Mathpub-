@@ -1,0 +1,18 @@
+search Ld base 2 [1, 10000000000) threads=14 chunk=4194304 -> ./hits_A029519.txt
+[      60s] complete below 822083585  (1.37e+07 n/s)
+[     120s] complete below 1447034881  (1.2e+07 n/s)
+[     180s] complete below 2076180481  (1.15e+07 n/s)
+[     240s] complete below 2743074817  (1.14e+07 n/s)
+[     300s] complete below 3464495105  (1.15e+07 n/s)
+[     360s] complete below 4169138177  (1.16e+07 n/s)
+[     420s] complete below 4852809729  (1.15e+07 n/s)
+[     480s] complete below 5519704065  (1.15e+07 n/s)
+[     540s] complete below 6178209793  (1.14e+07 n/s)
+[     601s] complete below 6790578177  (1.13e+07 n/s)
+[     661s] complete below 7407140865  (1.12e+07 n/s)
+[     721s] complete below 7927234561  (1.1e+07 n/s)
+[     781s] complete below 8585740289  (1.1e+07 n/s)
+[     841s] complete below 9227468801  (1.1e+07 n/s)
+[     901s] complete below 9865003009  (1.1e+07 n/s)
+[     912s] complete below 10000000000  (1.1e+07 n/s)
+done [1, 10000000000) in 912.4s

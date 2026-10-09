@@ -1,0 +1,28 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=196 vs b1={53}: values [7529536, 7890481), 10 candidates (generic path)
+stage b2=197 vs b1={54}: values [7645373, 8503056), 23 candidates (generic path)
+stage b2=198 vs b1={55}: values [7762392, 9150625), 36 candidates (generic path)
+stage b2=199 vs b1={56}: values [7880599, 9834496), 50 candidates (generic path)
+stage b2=200 vs b1={57}: values [8000000, 10556001), 64 candidates (generic path)
+stage b2=201 vs b1={58}: values [8120601, 11316496), 80 candidates (generic path)
+stage b2=202 vs b1={59}: values [8242408, 12117361), 95 candidates (generic path)
+stage b2=203 vs b1={60}: values [8365427, 12960000), 112 candidates (generic path)
+stage b2=204 vs b1={61}: values [8489664, 13845841), 129 candidates (generic path)
+stage b2=205 vs b1={62}: values [8615125, 14776336), 147 candidates (generic path)
+stage b2=206 vs b1={63}: values [8741816, 15752961), 166 candidates (generic path)
+stage b2=207 vs b1={64}: values [8869743, 16777216), 185 candidates (generic path)
+stage b2=208 vs b1={65}: values [8998912, 17850625), 205 candidates (generic path)
+stage b2=209 vs b1={66}: values [9129329, 18974736), 226 candidates (generic path)
+stage b2=210 vs b1={67}: values [9261000, 20151121), 247 candidates (generic path)
+stage b2=211 vs b1={68}: values [9393931, 21381376), 270 candidates (generic path)
+stage b2=212 vs b1={69}: values [9528128, 22667121), 293 candidates (generic path)
+stage b2=213 vs b1={70}: values [9663597, 24010000), 317 candidates (generic path)
+stage b2=214 vs b1={71}: values [9800344, 25411681), 341 candidates (generic path)
+stage b2=215 vs b1={72}: values [9938375, 26873856), 367 candidates (generic path)
+stage b2=216 vs b1={73}: values [10077696, 28398241), 393 candidates (generic path)
+stage b2=217 vs b1={74}: values [10218313, 29986576), 420 candidates (generic path)
+stage b2=218 vs b1={75}: values [10360232, 31640625), 448 candidates (generic path)
+stage b2=219 vs b1={76}: values [10503459, 33362176), 477 candidates (generic path)
+
+*** MATCH: 10599820 is an 4-digit palindrome in bases 76 and 219
+done: 0.00s, 5088 candidates tested

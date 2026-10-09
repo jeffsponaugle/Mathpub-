@@ -1,0 +1,24 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=67 vs b1={9}: values [67, 81), 1 candidates (generic path)
+stage b2=68 vs b1={10}: values [68, 100), 1 candidates (generic path)
+stage b2=69 vs b1={11}: values [69, 121), 1 candidates (generic path)
+stage b2=70 vs b1={12}: values [70, 144), 2 candidates (generic path)
+stage b2=71 vs b1={13}: values [71, 169), 2 candidates (generic path)
+stage b2=72 vs b1={14}: values [72, 196), 2 candidates (generic path)
+stage b2=73 vs b1={15}: values [73, 225), 3 candidates (generic path)
+stage b2=74 vs b1={16}: values [74, 256), 3 candidates (generic path)
+stage b2=75 vs b1={17}: values [75, 289), 3 candidates (generic path)
+stage b2=76 vs b1={18}: values [76, 324), 4 candidates (generic path)
+stage b2=77 vs b1={19}: values [77, 361), 4 candidates (generic path)
+stage b2=78 vs b1={20}: values [78, 400), 5 candidates (generic path)
+stage b2=79 vs b1={21}: values [79, 441), 5 candidates (generic path)
+stage b2=80 vs b1={22}: values [80, 484), 6 candidates (generic path)
+stage b2=81 vs b1={23}: values [81, 529), 6 candidates (generic path)
+stage b2=82 vs b1={24}: values [82, 576), 7 candidates (generic path)
+stage b2=83 vs b1={25}: values [83, 625), 7 candidates (generic path)
+stage b2=84 vs b1={26}: values [84, 676), 8 candidates (generic path)
+stage b2=85 vs b1={27}: values [85, 729), 8 candidates (generic path)
+stage b2=86 vs b1={28}: values [86, 784), 9 candidates (generic path)
+
+*** MATCH: 87 is an 2-digit palindrome in bases 28 and 86
+done: 0.00s, 84 candidates tested

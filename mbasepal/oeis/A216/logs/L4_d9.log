@@ -1,0 +1,26 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=18 vs b1={9}: values [5832, 6561), 3 candidates (generic path)
+stage b2=19 vs b1={10}: values [6859, 10000), 9 candidates (generic path)
+stage b2=20 vs b1={11}: values [8000, 14641), 17 candidates (generic path)
+stage b2=21 vs b1={12}: values [9261, 20736), 27 candidates (generic path)
+stage b2=22 vs b1={13}: values [10648, 28561), 38 candidates (generic path)
+stage b2=23 vs b1={14}: values [12167, 38416), 50 candidates (generic path)
+stage b2=24 vs b1={15}: values [13824, 50625), 64 candidates (generic path)
+stage b2=25 vs b1={16}: values [15625, 65536), 80 candidates (generic path)
+stage b2=26 vs b1={17}: values [17576, 83521), 98 candidates (generic path)
+stage b2=27 vs b1={18}: values [19683, 104976), 118 candidates (generic path)
+
+*** MATCH: 73416 is an 4-digit palindrome in bases 18 and 27
+stage b2=28 vs b1={19}: values [21952, 130321), 139 candidates (generic path)
+stage b2=29 vs b1={20}: values [24389, 160000), 162 candidates (generic path)
+stage b2=30 vs b1={21}: values [27000, 194481), 187 candidates (generic path)
+stage b2=31 vs b1={22}: values [29791, 234256), 213 candidates (generic path)
+stage b2=32 vs b1={23}: values [32768, 279841), 242 candidates (generic path)
+stage b2=33 vs b1={24}: values [35937, 331776), 272 candidates (generic path)
+
+*** MATCH: 59500 is an 4-digit palindrome in bases 24 and 33
+stage b2=34 vs b1={25}: values [39304, 390625), 304 candidates (generic path)
+stage b2=35 vs b1={26}: values [42875, 456976), 339 candidates (generic path)
+
+*** MATCH: 42876 is an 4-digit palindrome in bases 26 and 35
+done: 0.00s, 826 candidates tested

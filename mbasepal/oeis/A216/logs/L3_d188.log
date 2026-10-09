@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=225 vs b1={37}: values [50625, 50653), 1 candidates (generic path)
+stage b2=226 vs b1={38}: values [51076, 54872), 17 candidates (generic path)
+
+*** MATCH: 51981 is an 3-digit palindrome in bases 38 and 226
+stage b2=227 vs b1={39}: values [51529, 59319), 35 candidates (generic path)
+done: 0.00s, 20 candidates tested

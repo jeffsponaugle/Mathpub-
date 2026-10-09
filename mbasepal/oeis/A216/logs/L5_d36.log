@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=64 vs b1={28}: values [16777216, 17210368), 106 candidates (generic path)
+stage b2=65 vs b1={29}: values [17850625, 20511149), 630 candidates (generic path)
+
+*** MATCH: 19363501 is an 5-digit palindrome in bases 29 and 65
+stage b2=66 vs b1={30}: values [18974736, 24300000), 1223 candidates (generic path)
+done: 0.00s, 826 candidates tested

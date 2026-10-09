@@ -1,0 +1,6 @@
+A171740 search: n=11, threads=1, limit=none
+stage b2=34 vs b1={25}: values [2064377754059776, 2384185791015625), 7038738 candidates (MITM path)
+  MITM b1=25: s=4 t=2 j=2 je=4 Q=625 table=1156 yh=6089
+
+*** MATCH: 2169311631182347 is an 11-digit palindrome in bases 25 and 34
+done: 0.00s, 1998 candidates tested

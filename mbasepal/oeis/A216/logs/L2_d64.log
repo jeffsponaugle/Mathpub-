@@ -1,0 +1,11 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=73 vs b1={9}: values [73, 81), 1 candidates (generic path)
+stage b2=74 vs b1={10}: values [74, 100), 1 candidates (generic path)
+stage b2=75 vs b1={11}: values [75, 121), 1 candidates (generic path)
+stage b2=76 vs b1={12}: values [76, 144), 1 candidates (generic path)
+stage b2=77 vs b1={13}: values [77, 169), 2 candidates (generic path)
+stage b2=78 vs b1={14}: values [78, 196), 2 candidates (generic path)
+stage b2=79 vs b1={15}: values [79, 225), 2 candidates (generic path)
+
+*** MATCH: 80 is an 2-digit palindrome in bases 15 and 79
+done: 0.00s, 10 candidates tested

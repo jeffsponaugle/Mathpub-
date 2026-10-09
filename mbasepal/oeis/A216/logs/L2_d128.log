@@ -1,0 +1,8 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=140 vs b1={12}: values [140, 144), 1 candidates (generic path)
+stage b2=141 vs b1={13}: values [141, 169), 1 candidates (generic path)
+stage b2=142 vs b1={14}: values [142, 196), 1 candidates (generic path)
+stage b2=143 vs b1={15}: values [143, 225), 1 candidates (generic path)
+
+*** MATCH: 144 is an 2-digit palindrome in bases 15 and 143
+done: 0.00s, 4 candidates tested

@@ -1,0 +1,14 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=62 vs b1={44}: values [52036560683837093888, 52654090776777588736), 10871964 candidates (MITM path)
+  MITM b1=44: s=4 t=2 j=2 je=3 Q=1936 table=3844 yh=2829
+stage b2=63 vs b1={45}: values [62050608388552823487, 68952523554931640625), 110389133 candidates (MITM path)
+  MITM b1=45: s=4 t=2 j=2 je=3 Q=2025 table=3969 yh=27813
+stage b2=64 vs b1={46}: values [73786976294838206464, 89762301673555234816), 232471581 candidates (MITM path)
+  MITM b1=46: s=4 t=2 j=2 je=3 Q=2116 table=4096 yh=56756
+stage b2=65 vs b1={47}: values [87507831740087890625, 116191483108948578241), 380324494 candidates (MITM path)
+  MITM b1=47: s=3 t=3 j=3 je=3 Q=103823 table=274625 yh=1385
+
+*** MATCH: 105118748408901972096 is an 12-digit palindrome in bases 47 and 65
+stage b2=66 vs b1={48}: values [103510234140112521216, 149587343098087735296), 557470139 candidates (MITM path)
+  MITM b1=48: s=3 t=3 j=3 je=3 Q=110592 table=287496 yh=1940
+done: 0.01s, 88317 candidates tested

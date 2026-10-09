@@ -1,0 +1,7 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=12 vs b1={8}: values [248832, 262144), 8 candidates (even-AP path)
+stage b2=13 vs b1={9}: values [371293, 531441), 73 candidates (even-AP path)
+stage b2=14 vs b1={10}: values [537824, 1000000), 169 candidates (even-AP path)
+
+*** MATCH: 546645 is an 6-digit palindrome in bases 10 and 14
+done: 0.00s, 95 candidates tested

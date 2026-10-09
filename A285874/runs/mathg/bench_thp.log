@@ -1,0 +1,6 @@
+perft(10) = 53938077183794   (103.08s, 5.23e+11 leaves/s)
+perft wall incl. setup+teardown: 132.640748164 s
+huge pages: 200000 of 200000 MB
+perft(10) = 53938077183794   (63.26s, 8.53e+11 leaves/s)
+perft_new wall incl. setup+teardown: 68.952206655 s
+BENCH-DONE

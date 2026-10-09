@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=207 vs b1={15}: values [207, 225), 1 candidates (generic path)
+
+*** MATCH: 208 is an 2-digit palindrome in bases 15 and 207
+done: 0.00s, 1 candidates tested

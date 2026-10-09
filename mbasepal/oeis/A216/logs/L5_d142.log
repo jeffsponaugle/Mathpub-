@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=216 vs b1={74}: values [2176782336, 2219006624), 906 candidates (generic path)
+
+*** MATCH: 2203983217 is an 5-digit palindrome in bases 74 and 216
+done: 0.00s, 905 candidates tested

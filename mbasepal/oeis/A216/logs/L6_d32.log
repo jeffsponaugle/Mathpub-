@@ -1,0 +1,33 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=65 vs b1={33}: values [1160290625, 1291467969), 478 candidates (even-AP path)
+stage b2=66 vs b1={34}: values [1252332576, 1544804416), 1018 candidates (even-AP path)
+stage b2=67 vs b1={35}: values [1350125107, 1838265625), 1624 candidates (even-AP path)
+stage b2=68 vs b1={36}: values [1453933568, 2176782336), 2299 candidates (even-AP path)
+stage b2=69 vs b1={37}: values [1564031349, 2565726409), 3050 candidates (even-AP path)
+stage b2=70 vs b1={38}: values [1680700000, 3010936384), 3879 candidates (even-AP path)
+stage b2=71 vs b1={39}: values [1804229351, 3518743761), 4791 candidates (even-AP path)
+stage b2=72 vs b1={40}: values [1934917632, 4096000000), 5790 candidates (even-AP path)
+stage b2=73 vs b1={41}: values [2073071593, 4750104241), 6882 candidates (even-AP path)
+stage b2=74 vs b1={42}: values [2219006624, 5489031744), 8070 candidates (even-AP path)
+stage b2=75 vs b1={43}: values [2373046875, 6321363049), 9359 candidates (even-AP path)
+stage b2=76 vs b1={44}: values [2535525376, 7256313856), 10755 candidates (even-AP path)
+stage b2=77 vs b1={45}: values [2706784157, 8303765625), 12260 candidates (even-AP path)
+
+*** MATCH: 7844683002 is an 6-digit palindrome in bases 45 and 77
+stage b2=78 vs b1={46}: values [2887174368, 9474296896), 13881 candidates (even-AP path)
+stage b2=79 vs b1={47}: values [3077056399, 10779215329), 15622 candidates (even-AP path)
+
+*** MATCH: 6858710640 is an 6-digit palindrome in bases 47 and 79
+stage b2=80 vs b1={48}: values [3276800000, 12230590464), 17488 candidates (even-AP path)
+stage b2=81 vs b1={49}: values [3486784401, 13841287201), 19484 candidates (even-AP path)
+stage b2=82 vs b1={50}: values [3707398432, 15625000000), 21615 candidates (even-AP path)
+stage b2=83 vs b1={51}: values [3939040643, 17596287801), 23886 candidates (even-AP path)
+stage b2=84 vs b1={52}: values [4182119424, 19770609664), 26301 candidates (even-AP path)
+stage b2=85 vs b1={53}: values [4437053125, 22164361129), 28866 candidates (even-AP path)
+stage b2=86 vs b1={54}: values [4704270176, 24794911296), 31587 candidates (even-AP path)
+stage b2=87 vs b1={55}: values [4984209207, 27680640625), 34467 candidates (even-AP path)
+
+*** MATCH: 5671013656 is an 6-digit palindrome in bases 55 and 87
+stage b2=88 vs b1={56}: values [5277319168, 30840979456), 37513 candidates (even-AP path)
+stage b2=89 vs b1={57}: values [5584059449, 34296447249), 40729 candidates (even-AP path)
+done: 0.00s, 125642 candidates tested

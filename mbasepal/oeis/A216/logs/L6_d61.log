@@ -1,0 +1,14 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=113 vs b1={52}: values [18424351793, 19770609664), 934 candidates (even-AP path)
+stage b2=114 vs b1={53}: values [19254145824, 22164361129), 1965 candidates (even-AP path)
+stage b2=115 vs b1={54}: values [20113571875, 24794911296), 3079 candidates (even-AP path)
+stage b2=116 vs b1={55}: values [21003416576, 27680640625), 4278 candidates (even-AP path)
+stage b2=117 vs b1={56}: values [21924480357, 30840979456), 5568 candidates (even-AP path)
+stage b2=118 vs b1={57}: values [22877577568, 34296447249), 6950 candidates (even-AP path)
+stage b2=119 vs b1={58}: values [23863536599, 38068692544), 8430 candidates (even-AP path)
+stage b2=120 vs b1={59}: values [24883200000, 42180533641), 10011 candidates (even-AP path)
+stage b2=121 vs b1={60}: values [25937424601, 46656000000), 11696 candidates (even-AP path)
+
+*** MATCH: 28041703416 is an 6-digit palindrome in bases 60 and 121
+stage b2=122 vs b1={61}: values [27027081632, 51520374361), 13489 candidates (even-AP path)
+done: 0.00s, 43035 candidates tested

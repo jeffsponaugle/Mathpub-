@@ -1,0 +1,9 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=65 vs b1={36}: values [75418890625, 78364164096), 10725 candidates (generic path)
+stage b2=66 vs b1={37}: values [82653950016, 94931877133), 42707 candidates (generic path)
+stage b2=67 vs b1={38}: values [90458382169, 114415582592), 79655 candidates (generic path)
+stage b2=68 vs b1={39}: values [98867482624, 137231006679), 122009 candidates (generic path)
+stage b2=69 vs b1={40}: values [107918163081, 163840000000), 170230 candidates (generic path)
+
+*** MATCH: 111699763627 is an 7-digit palindrome in bases 40 and 69
+done: 0.01s, 320631 candidates tested

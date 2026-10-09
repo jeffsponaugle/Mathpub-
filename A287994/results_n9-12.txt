@@ -1,0 +1,6 @@
+# a287994 -p ../A197123/pi-10b.txt -l 9-12 -n 10000000000 -t 14
+n=9   A287994(9) = 1267602413  A290977(9) = 669926997   ("669926997669926997" at position 1,267,602,413)
+n=10  no repeat found in first 10,000,000,000 digits
+n=11  no repeat found in first 10,000,000,000 digits
+n=12  no repeat found in first 10,000,000,000 digits
+# done: scanned 10000000000 digits in 0.4s

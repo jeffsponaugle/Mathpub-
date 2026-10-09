@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=33 vs b1={17}: values [1185921, 1419857), 215 candidates (generic path)
+stage b2=34 vs b1={18}: values [1336336, 1889568), 479 candidates (generic path)
+
+*** MATCH: 1456663 is an 5-digit palindrome in bases 18 and 34
+done: 0.00s, 694 candidates tested

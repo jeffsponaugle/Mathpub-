@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=110 vs b1={43}: values [146410000, 147008443), 50 candidates (generic path)
+stage b2=111 vs b1={44}: values [151807041, 164916224), 1064 candidates (generic path)
+
+*** MATCH: 160358482 is an 5-digit palindrome in bases 44 and 111
+stage b2=112 vs b1={45}: values [157351936, 184528125), 2167 candidates (generic path)
+done: 0.00s, 1354 candidates tested

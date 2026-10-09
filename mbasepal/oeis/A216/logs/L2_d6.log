@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=10 vs b1={4}: values [10, 16), 1 candidates (generic path)
+stage b2=11 vs b1={5}: values [11, 25), 2 candidates (generic path)
+
+*** MATCH: 12 is an 2-digit palindrome in bases 5 and 11
+done: 0.00s, 3 candidates tested

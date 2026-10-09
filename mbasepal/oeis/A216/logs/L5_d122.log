@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=188 vs b1={66}: values [1249198336, 1252332576), 89 candidates (generic path)
+
+*** MATCH: 1250258657 is an 5-digit palindrome in bases 66 and 188
+done: 0.00s, 89 candidates tested

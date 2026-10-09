@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=116 vs b1={59}: values [2436396322816, 2488651484819), 33478 candidates (generic path)
+stage b2=117 vs b1={60}: values [2565164201769, 2799360000000), 146225 candidates (generic path)
+
+*** MATCH: 2580089113135 is an 7-digit palindrome in bases 60 and 117
+done: 0.00s, 99014 candidates tested

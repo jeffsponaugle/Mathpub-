@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=4 vs b1={3}: values [16, 27), 3 candidates (generic path)
+stage b2=5 vs b1={4}: values [25, 64), 8 candidates (generic path)
+
+*** MATCH: 46 is an 3-digit palindrome in bases 4 and 5
+stage b2=6 vs b1={5}: values [36, 125), 15 candidates (generic path)
+done: 0.00s, 13 candidates tested

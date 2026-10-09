@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=90 vs b1={37}: values [65610000, 69343957), 461 candidates (generic path)
+stage b2=91 vs b1={38}: values [68574961, 79235168), 1288 candidates (generic path)
+
+*** MATCH: 75904466 is an 5-digit palindrome in bases 38 and 91
+stage b2=92 vs b1={39}: values [71639296, 90224199), 2196 candidates (generic path)
+stage b2=93 vs b1={40}: values [74805201, 102400000), 3191 candidates (generic path)
+done: 0.00s, 2381 candidates tested

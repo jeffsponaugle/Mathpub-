@@ -1,0 +1,8 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=32 vs b1={22}: values [1099511627776, 1207269217792), 102766 candidates (MITM path)
+  MITM b1=22: s=3 t=2 j=2 je=2 Q=484 table=1024 yh=101
+stage b2=33 vs b1={23}: values [1406408618241, 1801152661463), 332859 candidates (MITM path)
+  MITM b1=23: s=3 t=2 j=2 je=3 Q=529 table=1089 yh=306
+
+*** MATCH: 1408219987879 is an 9-digit palindrome in bases 23 and 33
+done: 0.00s, 103 candidates tested

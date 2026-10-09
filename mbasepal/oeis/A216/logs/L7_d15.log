@@ -1,0 +1,5 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=38 vs b1={23}: values [3010936384, 3404825447), 7179 candidates (generic path)
+
+*** MATCH: 3333147809 is an 7-digit palindrome in bases 23 and 38
+done: 0.00s, 7178 candidates tested

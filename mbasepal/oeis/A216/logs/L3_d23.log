@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=34 vs b1={11}: values [1156, 1331), 6 candidates (generic path)
+stage b2=35 vs b1={12}: values [1225, 1728), 15 candidates (generic path)
+
+*** MATCH: 1401 is an 3-digit palindrome in bases 12 and 35
+stage b2=36 vs b1={13}: values [1296, 2197), 26 candidates (generic path)
+
+*** MATCH: 1333 is an 3-digit palindrome in bases 13 and 36
+done: 0.00s, 24 candidates tested

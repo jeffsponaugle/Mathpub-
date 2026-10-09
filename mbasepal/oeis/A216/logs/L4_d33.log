@@ -1,0 +1,17 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=53 vs b1={20}: values [148877, 160000), 4 candidates (generic path)
+stage b2=54 vs b1={21}: values [157464, 194481), 13 candidates (generic path)
+stage b2=55 vs b1={22}: values [166375, 234256), 23 candidates (generic path)
+stage b2=56 vs b1={23}: values [175616, 279841), 34 candidates (generic path)
+stage b2=57 vs b1={24}: values [185193, 331776), 46 candidates (generic path)
+stage b2=58 vs b1={25}: values [195112, 390625), 59 candidates (generic path)
+stage b2=59 vs b1={26}: values [205379, 456976), 73 candidates (generic path)
+stage b2=60 vs b1={27}: values [216000, 531441), 88 candidates (generic path)
+stage b2=61 vs b1={28}: values [226981, 614656), 105 candidates (generic path)
+stage b2=62 vs b1={29}: values [238328, 707281), 122 candidates (generic path)
+stage b2=63 vs b1={30}: values [250047, 810000), 142 candidates (generic path)
+stage b2=64 vs b1={31}: values [262144, 923521), 162 candidates (generic path)
+stage b2=65 vs b1={32}: values [274625, 1048576), 184 candidates (generic path)
+
+*** MATCH: 287496 is an 4-digit palindrome in bases 32 and 65
+done: 0.00s, 1049 candidates tested

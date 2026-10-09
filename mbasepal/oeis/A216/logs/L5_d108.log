@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=169 vs b1={61}: values [815730721, 844596301), 1011 candidates (generic path)
+
+*** MATCH: 837323514 is an 5-digit palindrome in bases 61 and 169
+stage b2=170 vs b1={62}: values [835210000, 916132832), 2801 candidates (generic path)
+done: 0.00s, 1085 candidates tested

@@ -1,0 +1,43 @@
+build: 7de4dcb9ad85 clang++ 21.0.0 arm64
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 18  table: 32768 MB  seed: 2  ttmin: 2
+split ply 6: 8095245 unique positions (106770421 paths), 11.8s
+computing 8095245 of 8095245 tasks, in reverse order
+  13782/8095245 tasks (0.17%)  312s elapsed  ETA 175962s
+  29900/8095245 tasks (0.37%)  612s elapsed  ETA 161882s
+  62080/8095245 tasks (0.77%)  912s elapsed  ETA 116490s
+  74907/8095245 tasks (0.93%)  1212s elapsed  ETA 128512s
+  93674/8095245 tasks (1.16%)  1512s elapsed  ETA 128162s
+  126490/8095245 tasks (1.56%)  1812s elapsed  ETA 113427s
+  134195/8095245 tasks (1.66%)  2112s elapsed  ETA 124614s
+  139529/8095245 tasks (1.72%)  2412s elapsed  ETA 136877s
+  145242/8095245 tasks (1.79%)  2712s elapsed  ETA 147820s
+  150927/8095245 tasks (1.86%)  3013s elapsed  ETA 157946s
+  156424/8095245 tasks (1.93%)  3313s elapsed  ETA 167519s
+  160564/8095245 tasks (1.98%)  3613s elapsed  ETA 177944s
+  165529/8095245 tasks (2.04%)  3913s elapsed  ETA 186873s
+build: 7de4dcb9ad85 clang++ 21.0.0 arm64
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 18  table: 32768 MB  seed: 2  ttmin: 2
+split ply 6: 8095245 unique positions (106770421 paths), 11.3s
+computing 425078 of 8095245 tasks
+resumed 165529 entries (0 of this process's 425078 tasks) from runs/norooks_d13_seed2.m5pro.ckpt
+  7729/425078 tasks (1.82%)  311s elapsed  ETA 16208s
+  13647/425078 tasks (3.21%)  612s elapsed  ETA 18095s
+  19446/425078 tasks (4.57%)  912s elapsed  ETA 18780s
+  27619/425078 tasks (6.50%)  1212s elapsed  ETA 17274s
+  36019/425078 tasks (8.47%)  1512s elapsed  ETA 16206s
+  39997/425078 tasks (9.41%)  1812s elapsed  ETA 17335s
+  44648/425078 tasks (10.50%)  2112s elapsed  ETA 17899s
+  49488/425078 tasks (11.64%)  2412s elapsed  ETA 18221s
+  56374/425078 tasks (13.26%)  2712s elapsed  ETA 17665s
+  62809/425078 tasks (14.78%)  3012s elapsed  ETA 17310s
+  70405/425078 tasks (16.56%)  3313s elapsed  ETA 16630s
+  75617/425078 tasks (17.79%)  3613s elapsed  ETA 16643s
+  82978/425078 tasks (19.52%)  3913s elapsed  ETA 16084s
+  92467/425078 tasks (21.75%)  4213s elapsed  ETA 15113s
+  98935/425078 tasks (23.27%)  4513s elapsed  ETA 14840s
+  105462/425078 tasks (24.81%)  4813s elapsed  ETA 14552s
+  115067/425078 tasks (27.07%)  5113s elapsed  ETA 13745s
+  120570/425078 tasks (28.36%)  5413s elapsed  ETA 13643s
+  129545/425078 tasks (30.48%)  5713s elapsed  ETA 13008s

@@ -1,0 +1,25 @@
+huge pages: 614400 of 614400 MB
+build: 7de4dcb9ad85 g++ 13 x86_64
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 96  table: 614400 MB  seed: 2  ttmin: 2
+split ply 6: 8095245 unique positions (106770421 paths), 31.3s
+computing 1944471 of 8095245 tasks
+  6113/1944471 tasks (0.31%)  333s elapsed  ETA 95165s
+  15482/1944471 tasks (0.80%)  634s elapsed  ETA 74793s
+  31154/1944471 tasks (1.60%)  934s elapsed  ETA 55301s
+  44536/1944471 tasks (2.29%)  1234s elapsed  ETA 51219s
+  56633/1944471 tasks (2.91%)  1534s elapsed  ETA 50028s
+  72873/1944471 tasks (3.75%)  1834s elapsed  ETA 46254s
+  95996/1944471 tasks (4.94%)  2134s elapsed  ETA 40459s
+  120619/1944471 tasks (6.20%)  2435s elapsed  ETA 36309s
+  149487/1944471 tasks (7.69%)  2735s elapsed  ETA 32438s
+  166213/1944471 tasks (8.55%)  3035s elapsed  ETA 32114s
+  174392/1944471 tasks (8.97%)  3335s elapsed  ETA 33513s
+  181245/1944471 tasks (9.32%)  3635s elapsed  ETA 35041s
+  194454/1944471 tasks (10.00%)  3935s elapsed  ETA 35118s
+  212330/1944471 tasks (10.92%)  4236s elapsed  ETA 34281s
+  222474/1944471 tasks (11.44%)  4536s elapsed  ETA 34850s
+  235910/1944471 tasks (12.13%)  4836s elapsed  ETA 34783s
+  254469/1944471 tasks (13.09%)  5136s elapsed  ETA 33889s
+  281997/1944471 tasks (14.50%)  5436s elapsed  ETA 31852s
+  307817/1944471 tasks (15.83%)  5736s elapsed  ETA 30323s

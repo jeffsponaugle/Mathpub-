@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=174 vs b1={14}: values [174, 196), 1 candidates (generic path)
+stage b2=175 vs b1={15}: values [175, 225), 1 candidates (generic path)
+
+*** MATCH: 176 is an 2-digit palindrome in bases 15 and 175
+done: 0.00s, 2 candidates tested

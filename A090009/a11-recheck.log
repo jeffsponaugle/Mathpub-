@@ -1,0 +1,18 @@
+dspattern: p -> p + digitsum(p), chains of length >= 11
+  range     : 2 .. 8,968,999,974,999,983,898,865,998,461
+  patterns  : 12 (12 of them carry past the low four digits)
+  candidates: 18,411,673,898,715 numbers in range fit a pattern (1 in 4.87e+14)
+  threads   : GPU (Apple M4 Max) plus 0 CPU threads
+  mode      : all starts
+
+[len 11] 8968999974999983898865998461(+206) -> 8968999974999983898865998667(+214) -> 8968999974999983898865998881(+212) -> 8968999974999983898865999093(+208) -> 8968999974999983898865999301(+200) -> 8968999974999983898865999501(+202) -> 8968999974999983898865999703(+206) -> 8968999974999983898865999909(+214) -> 8968999974999983898866000123(+176) -> 8968999974999983898866000299(+190) -> 8968999974999983898866000489(+191)
+  (terms above 3.3e24 are 13-base strong probable primes, which is not a proof: certify them with verify_chain.py)
+
+done
+  elapsed          : 401.80s
+  candidates       : 18,411,673,898,715
+  after sieve      : 56,958,715
+  base-2 tests     : 68,945,942
+  chains >= 11     : 1
+  longest found    : 11 (starting at 8968999974999983898865998461)
+exit 0

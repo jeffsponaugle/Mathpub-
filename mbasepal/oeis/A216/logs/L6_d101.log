@@ -1,0 +1,7 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=175 vs b1={74}: values [164130859375, 164206490176), 15 candidates (even-AP path)
+stage b2=176 vs b1={75}: values [168874213376, 177978515625), 1670 candidates (even-AP path)
+stage b2=177 vs b1={76}: values [173726604657, 192699928576), 3422 candidates (even-AP path)
+
+*** MATCH: 174579818644 is an 6-digit palindrome in bases 76 and 177
+done: 0.00s, 1862 candidates tested

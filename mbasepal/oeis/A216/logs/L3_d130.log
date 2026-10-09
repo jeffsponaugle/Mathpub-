@@ -1,0 +1,12 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=160 vs b1={30}: values [25600, 27000), 9 candidates (generic path)
+stage b2=161 vs b1={31}: values [25921, 29791), 25 candidates (generic path)
+stage b2=162 vs b1={32}: values [26244, 32768), 41 candidates (generic path)
+
+*** MATCH: 28027 is an 3-digit palindrome in bases 32 and 162
+stage b2=163 vs b1={33}: values [26569, 35937), 58 candidates (generic path)
+stage b2=164 vs b1={34}: values [26896, 39304), 76 candidates (generic path)
+stage b2=165 vs b1={35}: values [27225, 42875), 95 candidates (generic path)
+stage b2=166 vs b1={36}: values [27556, 46656), 116 candidates (generic path)
+stage b2=167 vs b1={37}: values [27889, 50653), 137 candidates (generic path)
+done: 0.00s, 100 candidates tested

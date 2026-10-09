@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=113 vs b1={24}: values [12769, 13824), 10 candidates (generic path)
+
+*** MATCH: 13222 is an 3-digit palindrome in bases 24 and 113
+stage b2=114 vs b1={25}: values [12996, 15625), 24 candidates (generic path)
+done: 0.00s, 12 candidates tested

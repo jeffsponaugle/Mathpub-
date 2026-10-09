@@ -1,0 +1,9 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=279 vs b1={91}: values [6059221281, 6240321451), 2327 candidates (generic path)
+stage b2=280 vs b1={92}: values [6146560000, 6590815232), 5667 candidates (generic path)
+stage b2=281 vs b1={93}: values [6234839521, 6956883693), 9145 candidates (generic path)
+
+*** MATCH: 6450642464 is an 5-digit palindrome in bases 93 and 281
+stage b2=282 vs b1={94}: values [6324066576, 7339040224), 12764 candidates (generic path)
+stage b2=283 vs b1={95}: values [6414247921, 7737809375), 16527 candidates (generic path)
+done: 0.00s, 19186 candidates tested

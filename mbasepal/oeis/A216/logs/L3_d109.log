@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=136 vs b1={27}: values [18496, 19683), 9 candidates (generic path)
+stage b2=137 vs b1={28}: values [18769, 21952), 24 candidates (generic path)
+stage b2=138 vs b1={29}: values [19044, 24389), 39 candidates (generic path)
+
+*** MATCH: 20149 is an 3-digit palindrome in bases 29 and 138
+stage b2=139 vs b1={30}: values [19321, 27000), 56 candidates (generic path)
+
+*** MATCH: 19461 is an 3-digit palindrome in bases 30 and 139
+done: 0.00s, 78 candidates tested

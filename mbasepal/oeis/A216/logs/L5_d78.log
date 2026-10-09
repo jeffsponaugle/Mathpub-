@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=126 vs b1={48}: values [252047376, 254803968), 174 candidates (generic path)
+stage b2=127 vs b1={49}: values [260144641, 282475249), 1385 candidates (generic path)
+
+*** MATCH: 267241783 is an 5-digit palindrome in bases 49 and 127
+done: 0.00s, 1559 candidates tested

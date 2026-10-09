@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=129 vs b1={49}: values [276922881, 282475249), 334 candidates (generic path)
+stage b2=130 vs b1={50}: values [285610000, 312500000), 1592 candidates (generic path)
+stage b2=131 vs b1={51}: values [294499921, 345025251), 2945 candidates (generic path)
+
+*** MATCH: 309911286 is an 5-digit palindrome in bases 51 and 131
+stage b2=132 vs b1={52}: values [303595776, 380204032), 4397 candidates (generic path)
+done: 0.00s, 5234 candidates tested

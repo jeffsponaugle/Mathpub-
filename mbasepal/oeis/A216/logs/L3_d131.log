@@ -1,0 +1,14 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=161 vs b1={30}: values [25921, 27000), 7 candidates (generic path)
+stage b2=162 vs b1={31}: values [26244, 29791), 22 candidates (generic path)
+stage b2=163 vs b1={32}: values [26569, 32768), 39 candidates (generic path)
+
+*** MATCH: 31134 is an 3-digit palindrome in bases 32 and 163
+stage b2=164 vs b1={33}: values [26896, 35937), 56 candidates (generic path)
+
+*** MATCH: 28373 is an 3-digit palindrome in bases 33 and 164
+stage b2=165 vs b1={34}: values [27225, 39304), 74 candidates (generic path)
+stage b2=166 vs b1={35}: values [27556, 42875), 93 candidates (generic path)
+stage b2=167 vs b1={36}: values [27889, 46656), 113 candidates (generic path)
+stage b2=168 vs b1={37}: values [28224, 50653), 134 candidates (generic path)
+done: 0.00s, 110 candidates tested

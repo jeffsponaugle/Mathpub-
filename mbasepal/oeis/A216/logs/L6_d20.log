@@ -1,0 +1,6 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=43 vs b1={23}: values [147008443, 148035889), 13 candidates (even-AP path)
+stage b2=44 vs b1={24}: values [164916224, 191102976), 308 candidates (even-AP path)
+
+*** MATCH: 169796925 is an 6-digit palindrome in bases 24 and 44
+done: 0.00s, 101 candidates tested

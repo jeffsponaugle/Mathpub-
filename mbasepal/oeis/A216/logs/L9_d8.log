@@ -1,0 +1,6 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=27 vs b1={19}: values [282429536481, 322687697779), 75753 candidates (MITM path)
+  MITM b1=19: s=3 t=2 j=2 je=3 Q=361 table=729 yh=104
+
+*** MATCH: 302665883230 is an 9-digit palindrome in bases 19 and 27
+done: 0.00s, 53 candidates tested

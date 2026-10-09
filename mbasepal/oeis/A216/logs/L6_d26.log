@@ -1,0 +1,25 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=54 vs b1={28}: values [459165024, 481890304), 145 candidates (even-AP path)
+stage b2=55 vs b1={29}: values [503284375, 594823321), 551 candidates (even-AP path)
+stage b2=56 vs b1={30}: values [550731776, 729000000), 1016 candidates (even-AP path)
+stage b2=57 vs b1={31}: values [601692057, 887503681), 1544 candidates (even-AP path)
+stage b2=58 vs b1={32}: values [656356768, 1073741824), 2140 candidates (even-AP path)
+stage b2=59 vs b1={33}: values [714924299, 1291467969), 2808 candidates (even-AP path)
+stage b2=60 vs b1={34}: values [777600000, 1544804416), 3552 candidates (even-AP path)
+stage b2=61 vs b1={35}: values [844596301, 1838265625), 4378 candidates (even-AP path)
+stage b2=62 vs b1={36}: values [916132832, 2176782336), 5290 candidates (even-AP path)
+stage b2=63 vs b1={37}: values [992436543, 2565726409), 6292 candidates (even-AP path)
+stage b2=64 vs b1={38}: values [1073741824, 3010936384), 7390 candidates (even-AP path)
+
+*** MATCH: 2289422850 is an 6-digit palindrome in bases 38 and 64
+stage b2=65 vs b1={39}: values [1160290625, 3518743761), 8588 candidates (even-AP path)
+stage b2=66 vs b1={40}: values [1252332576, 4096000000), 9892 candidates (even-AP path)
+stage b2=67 vs b1={41}: values [1350125107, 4750104241), 11305 candidates (even-AP path)
+stage b2=68 vs b1={42}: values [1453933568, 5489031744), 12833 candidates (even-AP path)
+stage b2=69 vs b1={43}: values [1564031349, 6321363049), 14482 candidates (even-AP path)
+stage b2=70 vs b1={44}: values [1680700000, 7256313856), 16256 candidates (even-AP path)
+stage b2=71 vs b1={45}: values [1804229351, 8303765625), 18160 candidates (even-AP path)
+stage b2=72 vs b1={46}: values [1934917632, 9474296896), 20200 candidates (even-AP path)
+stage b2=73 vs b1={47}: values [2073071593, 10779215329), 22380 candidates (even-AP path)
+stage b2=74 vs b1={48}: values [2219006624, 12230590464), 24707 candidates (even-AP path)
+done: 0.00s, 53378 candidates tested

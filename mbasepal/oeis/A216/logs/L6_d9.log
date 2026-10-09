@@ -1,0 +1,19 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=23 vs b1={14}: values [6436343, 7529536), 90 candidates (even-AP path)
+stage b2=24 vs b1={15}: values [7962624, 11390625), 248 candidates (even-AP path)
+stage b2=25 vs b1={16}: values [9765625, 16777216), 449 candidates (even-AP path)
+stage b2=26 vs b1={17}: values [11881376, 24137569), 698 candidates (even-AP path)
+stage b2=27 vs b1={18}: values [14348907, 34012224), 1000 candidates (even-AP path)
+stage b2=28 vs b1={19}: values [17210368, 47045881), 1360 candidates (even-AP path)
+stage b2=29 vs b1={20}: values [20511149, 64000000), 1784 candidates (even-AP path)
+stage b2=30 vs b1={21}: values [24300000, 85766121), 2277 candidates (even-AP path)
+stage b2=31 vs b1={22}: values [28629151, 113379904), 2845 candidates (even-AP path)
+stage b2=32 vs b1={23}: values [33554432, 148035889), 3494 candidates (even-AP path)
+stage b2=33 vs b1={24}: values [39135393, 191102976), 4229 candidates (even-AP path)
+
+*** MATCH: 116554550 is an 6-digit palindrome in bases 24 and 33
+stage b2=34 vs b1={25}: values [45435424, 244140625), 5056 candidates (even-AP path)
+stage b2=35 vs b1={26}: values [52521875, 308915776), 5981 candidates (even-AP path)
+
+*** MATCH: 55257336 is an 6-digit palindrome in bases 26 and 35
+done: 0.00s, 18328 candidates tested

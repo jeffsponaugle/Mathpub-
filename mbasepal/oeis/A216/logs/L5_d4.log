@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=11 vs b1={7}: values [14641, 16807), 18 candidates (generic path)
+stage b2=12 vs b1={8}: values [20736, 32768), 84 candidates (generic path)
+
+*** MATCH: 23341 is an 5-digit palindrome in bases 8 and 12
+done: 0.00s, 102 candidates tested

@@ -1,0 +1,16 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=12 vs b1={9}: values [35831808, 43046721), 348 candidates (MITM path)
+  MITM b1=9: s=3 t=1 j=1 je=3 Q=9 table=12 yh=29
+stage b2=13 vs b1={10}: values [62748517, 100000000), 1305 candidates (MITM path)
+  MITM b1=10: s=2 t=2 j=2 je=2 Q=100 table=169 yh=8
+stage b2=14 vs b1={11}: values [105413504, 214358881), 2836 candidates (MITM path)
+  MITM b1=11: s=2 t=2 j=2 je=2 Q=121 table=196 yh=15
+stage b2=15 vs b1={12}: values [170859375, 429981696), 5119 candidates (MITM path)
+  MITM b1=12: s=2 t=2 j=2 je=2 Q=144 table=225 yh=23
+stage b2=16 vs b1={13}: values [268435456, 815730721), 8352 candidates (MITM path)
+  MITM b1=13: s=2 t=2 j=2 je=2 Q=169 table=256 yh=33
+stage b2=17 vs b1={14}: values [410338673, 1475789056), 12757 candidates (MITM path)
+  MITM b1=14: s=2 t=2 j=2 je=2 Q=196 table=289 yh=45
+
+*** MATCH: 526323690 is an 8-digit palindrome in bases 14 and 17
+done: 0.00s, 113 candidates tested

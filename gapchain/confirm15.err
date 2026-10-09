@@ -1,0 +1,8 @@
+consecutive primes, chain length >= 16, range 221860944705726407..1397398433200922807, 14 threads, first match only
+(sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+0.38%  eta 04:19:28  no hit yet  75.21T/s  at 2.26383e+17  elapsed 00:01:00
+0.77%  eta 04:18:10  no hit yet  75.30T/s  at 2.30919e+17  elapsed 00:02:00
+interrupt: finishing segments in flight...
+
+stopped at 0.90% of 221860944705726407..1397398433200922807 with no chain of length >= 16 yet, 00:02:20 elapsed
+resume with: -c confirm15.ck -r

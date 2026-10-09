@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=228 vs b1={77}: values [2702336256, 2706784157), 86 candidates (generic path)
+stage b2=229 vs b1={78}: values [2750058481, 2887174368), 2615 candidates (generic path)
+
+*** MATCH: 2765109278 is an 5-digit palindrome in bases 78 and 229
+done: 0.00s, 2701 candidates tested

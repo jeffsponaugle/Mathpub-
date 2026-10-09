@@ -1,0 +1,26 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=87 vs b1={60}: values [2161283703465490489863, 2176782336000000000000), 35741919 candidates (MITM path)
+  MITM b1=60: s=4 t=2 j=2 je=3 Q=3600 table=7569 yh=4723
+stage b2=88 vs b1={61}: values [2450808588882738675712, 2654348974297586158321), 438282934 candidates (MITM path)
+  MITM b1=61: s=4 t=2 j=2 je=3 Q=3721 table=7744 yh=56597
+stage b2=89 vs b1={62}: values [2775173073766990340489, 3226266762397899821056), 907667345 candidates (MITM path)
+  MITM b1=62: s=4 t=2 j=2 je=3 Q=3844 table=7921 yh=114590
+stage b2=90 vs b1={63}: values [3138105960900000000000, 3909188328478827879681), 1450927512 candidates (MITM path)
+  MITM b1=63: s=4 t=2 j=2 je=3 Q=3969 table=8100 yh=179127
+stage b2=91 vs b1={64}: values [3543686674874777831491, 4722366482869645213696), 2075618294 candidates (MITM path)
+  MITM b1=64: s=3 t=3 j=3 je=3 Q=262144 table=753571 yh=2755
+stage b2=92 vs b1={65}: values [3996373778857415671808, 5688009063105712890625), 2789843047 candidates (MITM path)
+  MITM b1=65: s=3 t=3 j=3 je=3 Q=274625 table=778688 yh=3583
+stage b2=93 vs b1={66}: values [4501035456767426597157, 6831675453247426400256), 3602280307 candidates (MITM path)
+  MITM b1=66: s=3 t=3 j=3 je=3 Q=287496 table=804357 yh=4479
+stage b2=94 vs b1={67}: values [5062982072492057196544, 8182718904632857144561), 4522211174 candidates (MITM path)
+  MITM b1=67: s=3 t=3 j=3 je=3 Q=300763 table=830584 yh=5445
+stage b2=95 vs b1={68}: values [5688000922764599609375, 9774779120406941925376), 5559547385 candidates (MITM path)
+  MITM b1=68: s=3 t=3 j=3 je=3 Q=314432 table=857375 yh=6485
+
+*** MATCH: 7540457177662123212576 is an 12-digit palindrome in bases 68 and 95
+stage b2=96 vs b1={69}: values [6382393305518410039296, 11646329922777311412561), 6724860087 candidates (MITM path)
+  MITM b1=69: s=3 t=3 j=3 je=3 Q=328509 table=884736 yh=7601
+stage b2=97 vs b1={70}: values [7153014030880804126753, 13841287201000000000000), 8029409309 candidates (MITM path)
+  MITM b1=70: s=3 t=3 j=3 je=3 Q=343000 table=912673 yh=8798
+done: 0.15s, 376422 candidates tested

@@ -1,0 +1,12 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=160 vs b1={13}: values [160, 169), 1 candidates (generic path)
+stage b2=161 vs b1={14}: values [161, 196), 1 candidates (generic path)
+stage b2=162 vs b1={15}: values [162, 225), 1 candidates (generic path)
+stage b2=163 vs b1={16}: values [163, 256), 1 candidates (generic path)
+stage b2=164 vs b1={17}: values [164, 289), 1 candidates (generic path)
+stage b2=165 vs b1={18}: values [165, 324), 1 candidates (generic path)
+stage b2=166 vs b1={19}: values [166, 361), 2 candidates (generic path)
+stage b2=167 vs b1={20}: values [167, 400), 2 candidates (generic path)
+
+*** MATCH: 168 is an 2-digit palindrome in bases 20 and 167
+done: 0.00s, 10 candidates tested

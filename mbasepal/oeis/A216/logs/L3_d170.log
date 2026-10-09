@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=205 vs b1={35}: values [42025, 42875), 5 candidates (generic path)
+stage b2=206 vs b1={36}: values [42436, 46656), 21 candidates (generic path)
+stage b2=207 vs b1={37}: values [42849, 50653), 38 candidates (generic path)
+
+*** MATCH: 44506 is an 3-digit palindrome in bases 37 and 207
+stage b2=208 vs b1={38}: values [43264, 54872), 56 candidates (generic path)
+stage b2=209 vs b1={39}: values [43681, 59319), 75 candidates (generic path)
+stage b2=210 vs b1={40}: values [44100, 64000), 95 candidates (generic path)
+done: 0.00s, 76 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=75 vs b1={41}: values [177978515625, 194754273881), 39765 candidates (generic path)
+
+*** MATCH: 187674080926 is an 7-digit palindrome in bases 41 and 75
+done: 0.00s, 39765 candidates tested

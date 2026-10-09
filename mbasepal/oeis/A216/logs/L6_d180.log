@@ -1,0 +1,15 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=295 vs b1={115}: values [2234138434375, 2313060765625), 3075 candidates (even-AP path)
+stage b2=296 vs b1={116}: values [2272262782976, 2436396322816), 6329 candidates (even-AP path)
+stage b2=297 vs b1={117}: values [2310905821257, 2565164201769), 9706 candidates (even-AP path)
+stage b2=298 vs b1={118}: values [2350072823968, 2699554153024), 13207 candidates (even-AP path)
+stage b2=299 vs b1={119}: values [2389769101499, 2839760855281), 16835 candidates (even-AP path)
+
+*** MATCH: 2660549810400 is an 6-digit palindrome in bases 119 and 299
+stage b2=300 vs b1={120}: values [2430000000000, 2985984000000), 20593 candidates (even-AP path)
+stage b2=301 vs b1={121}: values [2470770901501, 3138428376721), 24483 candidates (even-AP path)
+stage b2=302 vs b1={122}: values [2512087224032, 3297303959104), 28509 candidates (even-AP path)
+stage b2=303 vs b1={123}: values [2553954421743, 3462825991689), 32672 candidates (even-AP path)
+stage b2=304 vs b1={124}: values [2596377985024, 3635215077376), 36977 candidates (even-AP path)
+stage b2=305 vs b1={125}: values [2639363440625, 3814697265625), 41425 candidates (even-AP path)
+done: 0.00s, 71129 candidates tested

@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=230 vs b1={78}: values [2798410000, 2887174368), 1678 candidates (generic path)
+stage b2=231 vs b1={79}: values [2847396321, 3077056399), 4304 candidates (generic path)
+stage b2=232 vs b1={80}: values [2897022976, 3276800000), 7056 candidates (generic path)
+
+*** MATCH: 2992723673 is an 5-digit palindrome in bases 80 and 232
+stage b2=233 vs b1={81}: values [2947295521, 3486784401), 9938 candidates (generic path)
+done: 0.00s, 13875 candidates tested

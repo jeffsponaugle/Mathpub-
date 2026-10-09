@@ -1,0 +1,9 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=174 vs b1={48}: values [5268024, 5308416), 2 candidates (generic path)
+stage b2=175 vs b1={49}: values [5359375, 5764801), 14 candidates (generic path)
+stage b2=176 vs b1={50}: values [5451776, 6250000), 26 candidates (generic path)
+
+*** MATCH: 5732145 is an 4-digit palindrome in bases 50 and 176
+stage b2=177 vs b1={51}: values [5545233, 6765201), 39 candidates (generic path)
+stage b2=178 vs b1={52}: values [5639752, 7311616), 53 candidates (generic path)
+done: 0.00s, 51 candidates tested

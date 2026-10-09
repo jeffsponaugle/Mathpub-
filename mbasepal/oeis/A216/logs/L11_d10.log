@@ -1,0 +1,10 @@
+A171740 search: n=11, threads=1, limit=none
+stage b2=36 vs b1={26}: values [3656158440062976, 3670344486987776), 234612 candidates (MITM path)
+  MITM b1=26: s=4 t=2 j=2 je=3 Q=676 table=1296 yh=182
+stage b2=37 vs b1={27}: values [4808584372417849, 5559060566555523), 10822518 candidates (MITM path)
+  MITM b1=27: s=4 t=2 j=2 je=3 Q=729 table=1369 yh=7906
+stage b2=38 vs b1={28}: values [6278211847988224, 8293509467471872), 25434384 candidates (MITM path)
+  MITM b1=28: s=3 t=3 j=3 je=3 Q=21952 table=54872 yh=464
+
+*** MATCH: 6355119734595765 is an 11-digit palindrome in bases 28 and 38
+done: 0.00s, 8106 candidates tested

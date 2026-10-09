@@ -1,0 +1,21 @@
+# base pairs searched on the Mac Studio (results merged back with tools/merge_remote.sh)
+10,12 studio
+10,14 studio
+10,15 studio
+10,16 studio
+5,7 studio
+5,8 studio
+5,9 studio
+7,9 studio
+6,8 studio
+6,9 studio
+3,6 studio
+4,6 studio
+2,6 studio
+6,15 studio
+11,13 studio
+5,10 studio
+10,11 atom1
+6,10 atom1
+8,10 atom1
+4,10 atom1

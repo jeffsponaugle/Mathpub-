@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=295 vs b1={95}: values [7573350625, 7737809375), 1890 candidates (generic path)
+stage b2=296 vs b1={96}: values [7676563456, 8153726976), 5447 candidates (generic path)
+stage b2=297 vs b1={97}: values [7780827681, 8587340257), 9144 candidates (generic path)
+stage b2=298 vs b1={98}: values [7886150416, 9039207968), 12985 candidates (generic path)
+
+*** MATCH: 7924336435 is an 5-digit palindrome in bases 98 and 298
+done: 0.00s, 29466 candidates tested

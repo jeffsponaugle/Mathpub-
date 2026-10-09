@@ -1,0 +1,4 @@
+consecutive primes, decreasing gaps, chain length >= 17, range 59937403886031994880..60500000000000000000, GPU (Apple M4 Max) plus 12 CPU threads, first match only
+(sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+
+no decreasing-gap chain (A263049) of length 17 in 59937403886031994880..60500000000000000000, 00:07:20 elapsed

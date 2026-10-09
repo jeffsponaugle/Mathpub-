@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=15 vs b1={9}: values [50625, 59049), 38 candidates (generic path)
+stage b2=16 vs b1={10}: values [65536, 100000), 135 candidates (generic path)
+
+*** MATCH: 90209 is an 5-digit palindrome in bases 10 and 16
+stage b2=17 vs b1={11}: values [83521, 161051), 269 candidates (generic path)
+done: 0.00s, 197 candidates tested

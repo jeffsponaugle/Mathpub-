@@ -1,0 +1,2 @@
+# variant depth split1 split2 split3 -- A285874 a(13): seed 1 mathd, seed 2 mathg, seed 3 M5 Pro
+norooks 13 5 6 4

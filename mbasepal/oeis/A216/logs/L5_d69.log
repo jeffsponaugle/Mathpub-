@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=113 vs b1={44}: values [163047361, 164916224), 147 candidates (generic path)
+stage b2=114 vs b1={45}: values [168896016, 184528125), 1203 candidates (generic path)
+
+*** MATCH: 179722483 is an 5-digit palindrome in bases 45 and 114
+stage b2=115 vs b1={46}: values [174900625, 205962976), 2349 candidates (generic path)
+done: 0.00s, 1715 candidates tested

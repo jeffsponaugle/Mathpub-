@@ -1,0 +1,12 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=172 vs b1={48}: values [5088448, 5308416), 8 candidates (generic path)
+stage b2=173 vs b1={49}: values [5177717, 5764801), 20 candidates (generic path)
+stage b2=174 vs b1={50}: values [5268024, 6250000), 33 candidates (generic path)
+stage b2=175 vs b1={51}: values [5359375, 6765201), 46 candidates (generic path)
+stage b2=176 vs b1={52}: values [5451776, 7311616), 61 candidates (generic path)
+
+*** MATCH: 5825601 is an 4-digit palindrome in bases 52 and 176
+stage b2=177 vs b1={53}: values [5545233, 7890481), 75 candidates (generic path)
+stage b2=178 vs b1={54}: values [5639752, 8503056), 91 candidates (generic path)
+stage b2=179 vs b1={55}: values [5735339, 9150625), 107 candidates (generic path)
+done: 0.00s, 185 candidates tested

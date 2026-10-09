@@ -1,0 +1,5 @@
+# A007508: twin prime pairs below 10^n  (14 threads, kernel=twin, seg=2^22 k)
+# n  a(n)  [decade count]  [seconds]
+# resuming at decade 14 with a(13) = 15834664872
+14 135780321665  [119945656793]  [1222.80]
+15 1177209242304  [1041428920639]  [15184.70]

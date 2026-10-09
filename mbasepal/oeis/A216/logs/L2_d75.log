@@ -1,0 +1,9 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=85 vs b1={10}: values [85, 100), 1 candidates (generic path)
+stage b2=86 vs b1={11}: values [86, 121), 1 candidates (generic path)
+stage b2=87 vs b1={12}: values [87, 144), 1 candidates (generic path)
+stage b2=88 vs b1={13}: values [88, 169), 1 candidates (generic path)
+stage b2=89 vs b1={14}: values [89, 196), 2 candidates (generic path)
+
+*** MATCH: 90 is an 2-digit palindrome in bases 14 and 89
+done: 0.00s, 6 candidates tested

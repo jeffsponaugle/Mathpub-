@@ -1,0 +1,6 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=25 vs b1={15}: values [9765625, 11390625), 105 candidates (even-AP path)
+stage b2=26 vs b1={16}: values [11881376, 16777216), 279 candidates (even-AP path)
+
+*** MATCH: 12338379 is an 6-digit palindrome in bases 16 and 26
+done: 0.00s, 157 candidates tested

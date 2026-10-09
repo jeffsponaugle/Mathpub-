@@ -1,0 +1,26 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=71 vs b1={50}: values [231122292121701565271, 244140625000000000000), 101626105 candidates (MITM path)
+  MITM b1=50: s=4 t=2 j=2 je=3 Q=2500 table=5041 yh=20160
+stage b2=72 vs b1={51}: values [269561249468963094528, 309629344375621415601), 287609824 candidates (MITM path)
+  MITM b1=51: s=4 t=2 j=2 je=3 Q=2601 table=5184 yh=55481
+stage b2=73 vs b1={52}: values [313726685568359708377, 390877006486250192896), 509800875 candidates (MITM path)
+  MITM b1=52: s=4 t=2 j=2 je=3 Q=2704 table=5329 yh=95666
+stage b2=74 vs b1={53}: values [364375289404334925824, 491258904256726154641), 772707673 candidates (MITM path)
+  MITM b1=53: s=3 t=3 j=3 je=3 Q=148877 table=405224 yh=1907
+stage b2=75 vs b1={54}: values [422351360321044921875, 614787626176508399616), 1081233121 candidates (MITM path)
+  MITM b1=54: s=3 t=3 j=3 je=3 Q=157464 table=421875 yh=2563
+stage b2=76 vs b1={55}: values [488595558857835544576, 766217865410400390625), 1440697507 candidates (MITM path)
+  MITM b1=55: s=3 t=3 j=3 je=3 Q=166375 table=438976 yh=3282
+stage b2=77 vs b1={56}: values [564154396389137449973, 951166013805414055936), 1856862096 candidates (MITM path)
+  MITM b1=56: s=3 t=3 j=3 je=3 Q=175616 table=456533 yh=4068
+stage b2=78 vs b1={57}: values [650190514836423555072, 1176246293903439668001), 2335953428 candidates (MITM path)
+  MITM b1=57: s=3 t=3 j=3 je=3 Q=185193 table=474552 yh=4923
+stage b2=79 vs b1={58}: values [747993810527520928879, 1449225352009601191936), 2884688311 candidates (MITM path)
+  MITM b1=58: s=3 t=3 j=3 je=3 Q=195112 table=493039 yh=5851
+
+*** MATCH: 1020401574390370739360 is an 12-digit palindrome in bases 58 and 79
+stage b2=80 vs b1={59}: values [858993459200000000000, 1779197418239532716881), 3510299527 candidates (MITM path)
+  MITM b1=59: s=3 t=3 j=3 je=3 Q=205379 table=512000 yh=6857
+stage b2=81 vs b1={60}: values [984770902183611232881, 2176782336000000000000), 4220562229 candidates (MITM path)
+  MITM b1=60: s=3 t=3 j=3 je=3 Q=216000 table=531441 yh=7942
+done: 0.09s, 191764 candidates tested

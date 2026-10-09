@@ -1,0 +1,12 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=26 vs b1={20}: values [3670344486987776, 4096000000000000), 1377902 candidates (MITM path)
+  MITM b1=20: s=4 t=2 j=2 je=4 Q=400 table=676 yh=2039
+stage b2=27 vs b1={21}: values [5559060566555523, 7355827511386641), 4637770 candidates (MITM path)
+  MITM b1=21: s=3 t=3 j=3 je=3 Q=9261 table=19683 yh=236
+stage b2=28 vs b1={22}: values [8293509467471872, 12855002631049216), 9465834 candidates (MITM path)
+  MITM b1=22: s=3 t=3 j=3 je=3 Q=10648 table=21952 yh=432
+stage b2=29 vs b1={23}: values [12200509765705829, 21914624432020321), 16331093 candidates (MITM path)
+  MITM b1=23: s=3 t=3 j=3 je=3 Q=12167 table=24389 yh=670
+
+*** MATCH: 16699985993414520 is an 12-digit palindrome in bases 23 and 29
+done: 0.00s, 3018 candidates tested

@@ -1,0 +1,40 @@
+#!/bin/sh
+set -e
+
+echo "### Test Ex3-1"
+../bin/Bravais_catalog << EOF
+1,1,1,1,1
+y
+stdout
+a
+EOF
+echo "### Ex3-1 return code $?"
+
+echo "### Test Ex3-2"
+../bin/Bravais_inclusions Ex3_11111 -S
+echo "### Ex3-2 return code $?"
+
+echo "### Test Ex3-3"
+../bin/Bravais_catalog << EOF
+5-1
+y
+stdout
+a
+EOF
+echo "### Ex3-3 return code $?"
+
+echo "### Test Ex3-4"
+../bin/Bravais_catalog << EOF
+5-2
+y
+stdout
+a
+EOF
+echo "### Ex3-4 return code $?"
+
+for f in Ex3_51? ; do
+  echo "### Test Ex3-4-$f"
+  ../bin/Bravais_inclusions $f
+  echo "### Ex3-4-$f return code $?"
+done
+

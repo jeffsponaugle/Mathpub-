@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=78 vs b1={42}: values [225199600704, 230539333248), 11253 candidates (generic path)
+stage b2=79 vs b1={43}: values [243087455521, 271818611107), 58274 candidates (generic path)
+
+*** MATCH: 269263146304 is an 7-digit palindrome in bases 43 and 79
+stage b2=80 vs b1={44}: values [262144000000, 319277809664), 111590 candidates (generic path)
+done: 0.00s, 83431 candidates tested

@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=116 vs b1={45}: values [181063936, 184528125), 258 candidates (generic path)
+stage b2=117 vs b1={46}: values [187388721, 205962976), 1357 candidates (generic path)
+
+*** MATCH: 194220001 is an 5-digit palindrome in bases 46 and 117
+stage b2=118 vs b1={47}: values [193877776, 229345007), 2548 candidates (generic path)
+done: 0.00s, 1640 candidates tested

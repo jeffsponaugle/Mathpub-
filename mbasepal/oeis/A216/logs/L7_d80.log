@@ -1,0 +1,14 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=156 vs b1={76}: values [14412774445056, 14645194571776), 61221 candidates (generic path)
+stage b2=157 vs b1={77}: values [14976071831449, 16048523266853), 277127 candidates (generic path)
+stage b2=158 vs b1={78}: values [15557597153344, 17565568854912), 509081 candidates (generic path)
+stage b2=159 vs b1={79}: values [16157819263041, 19203908986159), 757795 candidates (generic path)
+stage b2=160 vs b1={80}: values [16777216000000, 20971520000000), 1024001 candidates (generic path)
+stage b2=161 vs b1={81}: values [17416274304961, 22876792454961), 1308448 candidates (generic path)
+
+*** MATCH: 20005540313893 is an 7-digit palindrome in bases 81 and 161
+stage b2=162 vs b1={82}: values [18075490334784, 24928547056768), 1611905 candidates (generic path)
+stage b2=163 vs b1={83}: values [18755369578009, 27136050989627), 1935159 candidates (generic path)
+
+*** MATCH: 18766296451226 is an 7-digit palindrome in bases 83 and 163
+done: 0.12s, 3804084 candidates tested

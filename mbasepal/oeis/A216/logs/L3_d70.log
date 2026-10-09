@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=91 vs b1={21}: values [8281, 9261), 11 candidates (generic path)
+stage b2=92 vs b1={22}: values [8464, 10648), 24 candidates (generic path)
+
+*** MATCH: 8465 is an 3-digit palindrome in bases 22 and 92
+done: 0.00s, 35 candidates tested

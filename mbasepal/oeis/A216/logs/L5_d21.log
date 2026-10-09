@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=41 vs b1={20}: values [2825761, 3200000), 223 candidates (generic path)
+
+*** MATCH: 2983858 is an 5-digit palindrome in bases 20 and 41
+done: 0.00s, 223 candidates tested

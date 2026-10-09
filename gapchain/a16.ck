@@ -1,0 +1,21 @@
+gapsieve-checkpoint 1
+k 17
+lo 1397398433200922807
+hi 18000000000000000000
+segsize 1271357767680
+nseg 13058954
+depth 199
+sievelo 1397398433200922807
+first 1
+gaps inc
+done 12529751
+found 0
+len 17 0
+len 18 0
+len 19 0
+len 20 0
+len 21 0
+len 22 0
+len 23 0
+len 24 0
+len 25 0

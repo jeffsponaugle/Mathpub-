@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=20 vs b1={11}: values [160000, 161051), 3 candidates (generic path)
+stage b2=21 vs b1={12}: values [194481, 248832), 124 candidates (generic path)
+
+*** MATCH: 221866 is an 5-digit palindrome in bases 12 and 21
+done: 0.00s, 127 candidates tested

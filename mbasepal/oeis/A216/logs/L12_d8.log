@@ -1,0 +1,20 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=32 vs b1={24}: values [36028797018963968, 36520347436056576), 457793 candidates (MITM path)
+  MITM b1=24: s=4 t=2 j=2 je=3 Q=576 table=1024 yh=448
+stage b2=33 vs b1={25}: values [50542106513726817, 59604644775390625), 7017239 candidates (MITM path)
+  MITM b1=25: s=4 t=2 j=2 je=3 Q=625 table=1089 yh=6444
+stage b2=34 vs b1={26}: values [70188843638032384, 95428956661682176), 16338712 candidates (MITM path)
+  MITM b1=26: s=3 t=3 j=3 je=3 Q=17576 table=39304 yh=416
+stage b2=35 vs b1={27}: values [96549157373046875, 150094635296999121), 29128260 candidates (MITM path)
+  MITM b1=27: s=3 t=3 j=3 je=3 Q=19683 table=42875 yh=680
+stage b2=36 vs b1={28}: values [131621703842267136, 232218265089212416), 46213423 candidates (MITM path)
+  MITM b1=28: s=3 t=3 j=3 je=3 Q=21952 table=46656 yh=991
+stage b2=37 vs b1={29}: values [177917621779460413, 353814783205469041), 68556477 candidates (MITM path)
+  MITM b1=29: s=3 t=3 j=3 je=3 Q=24389 table=50653 yh=1354
+stage b2=38 vs b1={30}: values [238572050223552512, 531441000000000000), 97268396 candidates (MITM path)
+  MITM b1=30: s=3 t=3 j=3 je=3 Q=27000 table=54872 yh=1773
+stage b2=39 vs b1={31}: values [317475837322472439, 787662783788549761), 133623526 candidates (MITM path)
+  MITM b1=31: s=3 t=3 j=3 je=3 Q=29791 table=59319 yh=2253
+
+*** MATCH: 331113952227684640 is an 12-digit palindrome in bases 31 and 39
+done: 0.01s, 12172 candidates tested

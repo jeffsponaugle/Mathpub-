@@ -1,0 +1,9 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=124 vs b1={56}: values [29316250624, 30840979456), 800 candidates (even-AP path)
+stage b2=125 vs b1={57}: values [30517578125, 34296447249), 1935 candidates (even-AP path)
+stage b2=126 vs b1={58}: values [31757969376, 38068692544), 3155 candidates (even-AP path)
+stage b2=127 vs b1={59}: values [33038369407, 42180533641), 4464 candidates (even-AP path)
+stage b2=128 vs b1={60}: values [34359738368, 46656000000), 5864 candidates (even-AP path)
+
+*** MATCH: 35135439105 is an 6-digit palindrome in bases 60 and 128
+done: 0.00s, 10738 candidates tested

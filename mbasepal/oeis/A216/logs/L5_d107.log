@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=168 vs b1={61}: values [796594176, 844596301), 1701 candidates (generic path)
+
+*** MATCH: 805541353 is an 5-digit palindrome in bases 61 and 168
+done: 0.00s, 1701 candidates tested

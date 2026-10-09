@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=108 vs b1={23}: values [11664, 12167), 5 candidates (generic path)
+
+*** MATCH: 12097 is an 3-digit palindrome in bases 23 and 108
+stage b2=109 vs b1={24}: values [11881, 13824), 18 candidates (generic path)
+done: 0.00s, 7 candidates tested

@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=178 vs b1={32}: values [31684, 32768), 7 candidates (generic path)
+
+*** MATCH: 32575 is an 3-digit palindrome in bases 32 and 178
+stage b2=179 vs b1={33}: values [32041, 35937), 22 candidates (generic path)
+stage b2=180 vs b1={34}: values [32400, 39304), 39 candidates (generic path)
+done: 0.00s, 11 candidates tested

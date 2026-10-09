@@ -1,0 +1,27 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=135 vs b1={40}: values [2460375, 2560000), 6 candidates (generic path)
+stage b2=136 vs b1={41}: values [2515456, 2825761), 17 candidates (generic path)
+stage b2=137 vs b1={42}: values [2571353, 3111696), 29 candidates (generic path)
+stage b2=138 vs b1={43}: values [2628072, 3418801), 42 candidates (generic path)
+stage b2=139 vs b1={44}: values [2685619, 3748096), 55 candidates (generic path)
+stage b2=140 vs b1={45}: values [2744000, 4100625), 70 candidates (generic path)
+stage b2=141 vs b1={46}: values [2803221, 4477456), 85 candidates (generic path)
+stage b2=142 vs b1={47}: values [2863288, 4879681), 100 candidates (generic path)
+stage b2=143 vs b1={48}: values [2924207, 5308416), 117 candidates (generic path)
+stage b2=144 vs b1={49}: values [2985984, 5764801), 135 candidates (generic path)
+stage b2=145 vs b1={50}: values [3048625, 6250000), 153 candidates (generic path)
+stage b2=146 vs b1={51}: values [3112136, 6765201), 172 candidates (generic path)
+stage b2=147 vs b1={52}: values [3176523, 7311616), 192 candidates (generic path)
+stage b2=148 vs b1={53}: values [3241792, 7890481), 213 candidates (generic path)
+stage b2=149 vs b1={54}: values [3307949, 8503056), 235 candidates (generic path)
+
+*** MATCH: 3889050 is an 4-digit palindrome in bases 54 and 149
+stage b2=150 vs b1={55}: values [3375000, 9150625), 257 candidates (generic path)
+stage b2=151 vs b1={56}: values [3442951, 9834496), 281 candidates (generic path)
+stage b2=152 vs b1={57}: values [3511808, 10556001), 305 candidates (generic path)
+stage b2=153 vs b1={58}: values [3581577, 11316496), 331 candidates (generic path)
+stage b2=154 vs b1={59}: values [3652264, 12117361), 357 candidates (generic path)
+stage b2=155 vs b1={60}: values [3723875, 12960000), 385 candidates (generic path)
+stage b2=156 vs b1={61}: values [3796416, 13845841), 413 candidates (generic path)
+stage b2=157 vs b1={62}: values [3869893, 14776336), 443 candidates (generic path)
+done: 0.00s, 1711 candidates tested

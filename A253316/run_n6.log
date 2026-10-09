@@ -1,0 +1,75 @@
+A253316: counting 12x12 Takuzu grids (n=6)
+  valid lines: 208   seams: 43056   work units after symmetry: 5548
+  threads: 14   memory budget: 18.0 GB   checkpoint: a253316_n6.ckpt
+[09:44:02] units 0/5548  work   1.23%  active 14  elapsed 30s  ETA 40m15s (~Mon 10:24)  partial 0
+[09:44:32] units 0/5548  work   2.49%  active 14  elapsed 1m00s  ETA 39m12s (~Mon 10:23)  partial 0
+[09:45:02] units 0/5548  work   3.52%  active 14  elapsed 1m30s  ETA 41m12s (~Mon 10:26)  partial 0
+[09:45:32] units 0/5548  work   4.93%  active 14  elapsed 2m00s  ETA 38m39s (~Mon 10:24)  partial 0
+[09:46:03] units 14/5548  work   6.42%  active 14  elapsed 2m30s  ETA 36m31s (~Mon 10:22)  partial 182679250718992
+[09:46:33] units 14/5548  work   7.91%  active 14  elapsed 3m00s  ETA 34m59s (~Mon 10:21)  partial 182679250718992
+[09:47:03] units 14/5548  work   9.22%  active 14  elapsed 3m30s  ETA 34m33s (~Mon 10:21)  partial 182679250718992
+[09:47:33] units 14/5548  work  10.44%  active 14  elapsed 4m00s  ETA 34m22s (~Mon 10:21)  partial 182679250718992
+
+[interrupt] finishing checkpoint and stopping (Ctrl-C again to abort immediately)
+[09:47:57] units 25/5548  work  10.24%  active 0  elapsed 4m25s  ETA -  partial 348012288173906
+  session time 265.1s; candidate pairs examined this session (weighted): 550726850905484
+stopped with 5523 of 5548 units remaining; rerun the same command to resume.
+A253316: counting 12x12 Takuzu grids (n=6)
+  valid lines: 208   seams: 43056   work units after symmetry: 5548
+  threads: 14   memory budget: 18.0 GB   checkpoint: a253316_n6.ckpt
+  resumed: 25 units already done (10.24% of estimated work)
+[09:48:42] units 25/5548  work  11.53%  active 14  elapsed 30s  ETA 34m15s (~Mon 10:22)  partial 348012288173906
+[09:49:12] units 25/5548  work  12.66%  active 14  elapsed 1m00s  ETA 36m02s (~Mon 10:25)  partial 348012288173906
+[09:49:42] units 25/5548  work  13.88%  active 14  elapsed 1m30s  ETA 35m31s (~Mon 10:25)  partial 348012288173906
+[09:50:12] units 26/5548  work  15.45%  active 14  elapsed 2m00s  ETA 32m28s (~Mon 10:22)  partial 363119715083454
+[09:50:42] units 39/5548  work  16.69%  active 14  elapsed 2m30s  ETA 32m18s (~Mon 10:23)  partial 541389569720630
+[09:51:12] units 39/5548  work  17.78%  active 14  elapsed 3m00s  ETA 32m44s (~Mon 10:23)  partial 541389569720630
+[09:51:42] units 39/5548  work  18.97%  active 14  elapsed 3m30s  ETA 32m31s (~Mon 10:24)  partial 541389569720630
+[09:52:12] units 39/5548  work  20.35%  active 14  elapsed 4m00s  ETA 31m34s (~Mon 10:23)  partial 541389569720630
+[09:52:42] units 53/5548  work  21.63%  active 14  elapsed 4m30s  ETA 31m00s (~Mon 10:23)  partial 738323511264046
+[09:53:12] units 59/5548  work  22.90%  active 14  elapsed 5m00s  ETA 30m29s (~Mon 10:23)  partial 786343104123462
+[09:53:42] units 65/5548  work  24.17%  active 14  elapsed 5m30s  ETA 29m58s (~Mon 10:23)  partial 835497898410718
+[09:54:12] units 75/5548  work  25.48%  active 14  elapsed 6m00s  ETA 29m22s (~Mon 10:23)  partial 924933577052530
+[09:54:42] units 89/5548  work  27.06%  active 14  elapsed 6m31s  ETA 28m14s (~Mon 10:22)  partial 1046827736007308
+[09:55:13] units 109/5548  work  28.69%  active 14  elapsed 7m01s  ETA 27m05s (~Mon 10:22)  partial 1198381781832736
+[09:55:43] units 126/5548  work  30.24%  active 14  elapsed 7m31s  ETA 26m11s (~Mon 10:21)  partial 1323697552191808
+[09:56:13] units 141/5548  work  31.91%  active 14  elapsed 8m01s  ETA 25m10s (~Mon 10:21)  partial 1429546543537332
+[09:56:43] units 157/5548  work  33.55%  active 14  elapsed 8m31s  ETA 24m16s (~Mon 10:20)  partial 1545532626104228
+[09:57:13] units 175/5548  work  35.16%  active 14  elapsed 9m01s  ETA 23m27s (~Mon 10:20)  partial 1674635309253908
+[09:57:43] units 197/5548  work  36.73%  active 14  elapsed 9m31s  ETA 22m43s (~Mon 10:20)  partial 1819902742395600
+[09:58:13] units 213/5548  work  38.34%  active 14  elapsed 10m01s  ETA 21m58s (~Mon 10:20)  partial 1911110212833464
+[09:58:43] units 240/5548  work  40.10%  active 14  elapsed 10m31s  ETA 21m05s (~Mon 10:19)  partial 2029663648383916
+[09:59:13] units 269/5548  work  41.97%  active 14  elapsed 11m01s  ETA 20m08s (~Mon 10:19)  partial 2122599960421676
+[09:59:43] units 300/5548  work  43.88%  active 14  elapsed 11m31s  ETA 19m13s (~Mon 10:18)  partial 2215772388339228
+[10:00:13] units 338/5548  work  45.80%  active 14  elapsed 12m01s  ETA 18m19s (~Mon 10:18)  partial 2308469698562080
+[10:00:43] units 373/5548  work  47.61%  active 14  elapsed 12m31s  ETA 17m33s (~Mon 10:18)  partial 2393470438055240
+[10:01:13] units 410/5548  work  49.30%  active 14  elapsed 13m01s  ETA 16m54s (~Mon 10:18)  partial 2473842844155388
+[10:01:43] units 457/5548  work  50.91%  active 14  elapsed 13m31s  ETA 16m19s (~Mon 10:18)  partial 2582009674888084
+[10:02:13] units 519/5548  work  52.89%  active 14  elapsed 14m01s  ETA 15m29s (~Mon 10:17)  partial 2719203698879600
+[10:02:43] units 581/5548  work  54.92%  active 14  elapsed 14m31s  ETA 14m39s (~Mon 10:17)  partial 2844685704564740
+[10:03:13] units 654/5548  work  57.00%  active 14  elapsed 15m01s  ETA 13m49s (~Mon 10:17)  partial 2976508350647800
+[10:03:43] units 733/5548  work  59.16%  active 14  elapsed 15m31s  ETA 12m58s (~Mon 10:16)  partial 3099915627881892
+[10:04:13] units 816/5548  work  61.29%  active 14  elapsed 16m02s  ETA 12m09s (~Mon 10:16)  partial 3224400457249132
+[10:04:43] units 905/5548  work  63.46%  active 14  elapsed 16m32s  ETA 11m21s (~Mon 10:16)  partial 3348620633337180
+[10:05:13] units 998/5548  work  65.56%  active 14  elapsed 17m02s  ETA 10m36s (~Mon 10:15)  partial 3465949148450680
+[10:05:44] units 1097/5548  work  67.76%  active 14  elapsed 17m32s  ETA 9m50s (~Mon 10:15)  partial 3573508033477608
+[10:06:14] units 1208/5548  work  69.97%  active 14  elapsed 18m02s  ETA 9m04s (~Mon 10:15)  partial 3673614451096980
+[10:06:44] units 1330/5548  work  72.17%  active 14  elapsed 18m32s  ETA 8m20s (~Mon 10:15)  partial 3770344266562684
+[10:07:14] units 1463/5548  work  74.24%  active 14  elapsed 19m02s  ETA 7m40s (~Mon 10:14)  partial 3868960540457732
+[10:07:44] units 1608/5548  work  76.27%  active 14  elapsed 19m32s  ETA 7m01s (~Mon 10:14)  partial 3957488713752080
+[10:08:14] units 1761/5548  work  78.12%  active 14  elapsed 20m02s  ETA 6m27s (~Mon 10:14)  partial 4052436816465120
+[10:08:44] units 1924/5548  work  79.95%  active 14  elapsed 20m32s  ETA 5m54s (~Mon 10:14)  partial 4143845821597980
+[10:09:14] units 2099/5548  work  81.77%  active 14  elapsed 21m02s  ETA 5m22s (~Mon 10:14)  partial 4233583986758256
+[10:09:44] units 2286/5548  work  83.59%  active 14  elapsed 21m32s  ETA 4m49s (~Mon 10:14)  partial 4321325458494544
+[10:10:14] units 2481/5548  work  85.40%  active 14  elapsed 22m02s  ETA 4m17s (~Mon 10:14)  partial 4409855284667088
+[10:10:44] units 2685/5548  work  87.15%  active 14  elapsed 22m32s  ETA 3m46s (~Mon 10:14)  partial 4488140041894236
+[10:11:14] units 2911/5548  work  88.96%  active 14  elapsed 23m02s  ETA 3m14s (~Mon 10:14)  partial 4560682246496600
+[10:11:44] units 3161/5548  work  90.74%  active 14  elapsed 23m32s  ETA 2m42s (~Mon 10:14)  partial 4638140571613780
+[10:12:14] units 3449/5548  work  92.52%  active 14  elapsed 24m02s  ETA 2m11s (~Mon 10:14)  partial 4708118157188548
+[10:12:44] units 3773/5548  work  94.12%  active 14  elapsed 24m32s  ETA 1m43s (~Mon 10:14)  partial 4771447722712828
+[10:13:14] units 4129/5548  work  95.70%  active 14  elapsed 25m03s  ETA 1m16s (~Mon 10:14)  partial 4828069118285240
+[10:13:44] units 4522/5548  work  97.20%  active 14  elapsed 25m33s  ETA 49s (~Mon 10:14)  partial 4885533672244976
+[10:14:15] units 4963/5548  work  98.69%  active 14  elapsed 26m03s  ETA 23s (~Mon 10:14)  partial 4937238195572960
+[10:14:45] units 5526/5548  work  99.97%  active 14  elapsed 26m33s  ETA 1s (~Mon 10:14)  partial 4972126356476472
+[10:14:45] units 5548/5548  work 100.00%  active 0  elapsed 26m34s  ETA -  partial 4972955852202492
+  session time 1593.6s; candidate pairs examined this session (weighted): 6844817585070504

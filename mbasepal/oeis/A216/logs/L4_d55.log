@@ -1,0 +1,31 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=83 vs b1={28}: values [571787, 614656), 7 candidates (generic path)
+stage b2=84 vs b1={29}: values [592704, 707281), 17 candidates (generic path)
+stage b2=85 vs b1={30}: values [614125, 810000), 28 candidates (generic path)
+stage b2=86 vs b1={31}: values [636056, 923521), 39 candidates (generic path)
+stage b2=87 vs b1={32}: values [658503, 1048576), 52 candidates (generic path)
+stage b2=88 vs b1={33}: values [681472, 1185921), 66 candidates (generic path)
+stage b2=89 vs b1={34}: values [704969, 1336336), 80 candidates (generic path)
+stage b2=90 vs b1={35}: values [729000, 1500625), 96 candidates (generic path)
+stage b2=91 vs b1={36}: values [753571, 1679616), 112 candidates (generic path)
+stage b2=92 vs b1={37}: values [778688, 1874161), 130 candidates (generic path)
+stage b2=93 vs b1={38}: values [804357, 2085136), 149 candidates (generic path)
+stage b2=94 vs b1={39}: values [830584, 2313441), 168 candidates (generic path)
+
+*** MATCH: 2080880 is an 4-digit palindrome in bases 39 and 94
+stage b2=95 vs b1={40}: values [857375, 2560000), 189 candidates (generic path)
+stage b2=96 vs b1={41}: values [884736, 2825761), 211 candidates (generic path)
+stage b2=97 vs b1={42}: values [912673, 3111696), 234 candidates (generic path)
+stage b2=98 vs b1={43}: values [941192, 3418801), 258 candidates (generic path)
+
+*** MATCH: 1930896 is an 4-digit palindrome in bases 43 and 98
+stage b2=99 vs b1={44}: values [970299, 3748096), 284 candidates (generic path)
+stage b2=100 vs b1={45}: values [1000000, 4100625), 311 candidates (generic path)
+stage b2=101 vs b1={46}: values [1030301, 4477456), 338 candidates (generic path)
+
+*** MATCH: 1174530 is an 4-digit palindrome in bases 46 and 101
+stage b2=102 vs b1={47}: values [1061208, 4879681), 368 candidates (generic path)
+stage b2=103 vs b1={48}: values [1092727, 5308416), 398 candidates (generic path)
+stage b2=104 vs b1={49}: values [1124864, 5764801), 429 candidates (generic path)
+stage b2=105 vs b1={50}: values [1157625, 6250000), 462 candidates (generic path)
+done: 0.00s, 1753 candidates tested

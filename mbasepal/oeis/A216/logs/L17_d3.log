@@ -1,0 +1,8 @@
+A171740 search: n=17, threads=1, limit=none
+stage b2=19 vs b1={16}: values [288441413567621167681, 295147905179352825856), 394881310 candidates (MITM path)
+  MITM b1=16: s=5 t=4 j=4 je=5 Q=65536 table=130321 yh=3031
+stage b2=20 vs b1={17}: values [655360000000000000000, 827240261886336764177), 6714072730 candidates (MITM path)
+  MITM b1=17: s=5 t=4 j=4 je=5 Q=83521 table=160000 yh=41963
+
+*** MATCH: 670814726929288547601 is an 17-digit palindrome in bases 17 and 20
+done: 0.01s, 6805 candidates tested

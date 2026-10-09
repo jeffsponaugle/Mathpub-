@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=132 vs b1={26}: values [17424, 17576), 2 candidates (generic path)
+stage b2=133 vs b1={27}: values [17689, 19683), 15 candidates (generic path)
+
+*** MATCH: 18222 is an 3-digit palindrome in bases 27 and 133
+stage b2=134 vs b1={28}: values [17956, 21952), 30 candidates (generic path)
+done: 0.00s, 19 candidates tested

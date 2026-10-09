@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=39 vs b1={19}: values [2313441, 2476099), 107 candidates (generic path)
+
+*** MATCH: 2450410 is an 5-digit palindrome in bases 19 and 39
+done: 0.00s, 107 candidates tested

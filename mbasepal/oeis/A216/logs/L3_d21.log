@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=31 vs b1={10}: values [961, 1000), 2 candidates (generic path)
+stage b2=32 vs b1={11}: values [1024, 1331), 10 candidates (generic path)
+
+*** MATCH: 1153 is an 3-digit palindrome in bases 11 and 32
+stage b2=33 vs b1={12}: values [1089, 1728), 20 candidates (generic path)
+
+*** MATCH: 1123 is an 3-digit palindrome in bases 12 and 33
+done: 0.00s, 14 candidates tested

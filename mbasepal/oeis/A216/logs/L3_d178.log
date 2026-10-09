@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=214 vs b1={36}: values [45796, 46656), 5 candidates (generic path)
+
+*** MATCH: 46439 is an 3-digit palindrome in bases 36 and 214
+stage b2=215 vs b1={37}: values [46225, 50653), 21 candidates (generic path)
+done: 0.00s, 6 candidates tested

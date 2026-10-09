@@ -1,0 +1,13 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=59 vs b1={8}: values [59, 64), 1 candidates (generic path)
+stage b2=60 vs b1={9}: values [60, 81), 1 candidates (generic path)
+stage b2=61 vs b1={10}: values [61, 100), 1 candidates (generic path)
+stage b2=62 vs b1={11}: values [62, 121), 1 candidates (generic path)
+stage b2=63 vs b1={12}: values [63, 144), 2 candidates (generic path)
+stage b2=64 vs b1={13}: values [64, 169), 2 candidates (generic path)
+stage b2=65 vs b1={14}: values [65, 196), 3 candidates (generic path)
+stage b2=66 vs b1={15}: values [66, 225), 3 candidates (generic path)
+stage b2=67 vs b1={16}: values [67, 256), 3 candidates (generic path)
+
+*** MATCH: 68 is an 2-digit palindrome in bases 16 and 67
+done: 0.00s, 16 candidates tested

@@ -1,0 +1,9 @@
+# variant depth split1 split2 -- finished (both seeds on the M4 Max)
+norooks 10 4 5
+norooks 11 5 4
+norooks 12 5 4
+pawnsking 11 5 6
+pawnsking 12 6 5
+nopawns 6 2 3
+nopawns 7 3 2
+nopawns 8 3 4

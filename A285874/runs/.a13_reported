@@ -1,0 +1,7 @@
+mathg partial sum 121857864425431987 over this process's tasks (16468.69s); combine checkpoints with --merge
+mathb partial sum 528994176954789975 over this process's tasks (26702.92s); combine checkpoints with --merge
+mathd partial sum 525840190032764460 over this process's tasks (27409.15s); combine checkpoints with --merge
+mathg partial sum 15940725525463893 over this process's tasks (5707.25s); combine checkpoints with --merge
+mathb partial sum 41743535381660423 over this process's tasks (5960.54s); combine checkpoints with --merge
+mathd partial sum 34708154255137985 over this process's tasks (5283.68s); combine checkpoints with --merge
+perft(13) = 1363086189786054605

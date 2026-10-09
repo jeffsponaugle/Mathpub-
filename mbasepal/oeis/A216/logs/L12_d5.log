@@ -1,0 +1,30 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=23 vs b1={18}: values [952809757913927, 1156831381426176), 1378191 candidates (MITM path)
+  MITM b1=18: s=4 t=2 j=2 je=4 Q=324 table=529 yh=2606
+stage b2=24 vs b1={19}: values [1521681143169024, 2213314919066161), 3619169 candidates (MITM path)
+  MITM b1=19: s=3 t=3 j=3 je=3 Q=6859 table=13824 yh=262
+stage b2=25 vs b1={20}: values [2384185791015625, 4096000000000000), 7011592 candidates (MITM path)
+  MITM b1=20: s=3 t=3 j=3 je=3 Q=8000 table=15625 yh=449
+stage b2=26 vs b1={21}: values [3670344486987776, 7355827511386641), 11930382 candidates (MITM path)
+  MITM b1=21: s=3 t=3 j=3 je=3 Q=9261 table=17576 yh=679
+stage b2=27 vs b1={22}: values [5559060566555523, 12855002631049216), 18832102 candidates (MITM path)
+  MITM b1=22: s=3 t=3 j=3 je=3 Q=10648 table=19683 yh=957
+stage b2=28 vs b1={23}: values [8293509467471872, 21914624432020321), 28266008 candidates (MITM path)
+  MITM b1=23: s=3 t=3 j=3 je=3 Q=12167 table=21952 yh=1288
+stage b2=29 vs b1={24}: values [12200509765705829, 36520347436056576), 40885818 candidates (MITM path)
+  MITM b1=24: s=3 t=3 j=3 je=3 Q=13824 table=24389 yh=1677
+stage b2=30 vs b1={25}: values [17714700000000000, 59604644775390625), 57462202 candidates (MITM path)
+  MITM b1=25: s=3 t=3 j=3 je=3 Q=15625 table=27000 yh=2129
+stage b2=31 vs b1={26}: values [25408476896404831, 95428956661682176), 78895988 candidates (MITM path)
+  MITM b1=26: s=3 t=3 j=3 je=3 Q=17576 table=29791 yh=2649
+stage b2=32 vs b1={27}: values [36028797018963968, 150094635296999121), 106232091 candidates (MITM path)
+  MITM b1=27: s=3 t=3 j=3 je=3 Q=19683 table=32768 yh=3242
+stage b2=33 vs b1={28}: values [50542106513726817, 232218265089212416), 140674150 candidates (MITM path)
+  MITM b1=28: s=3 t=3 j=3 je=3 Q=21952 table=35937 yh=3915
+
+*** MATCH: 101975569769446364 is an 12-digit palindrome in bases 28 and 33
+stage b2=34 vs b1={29}: values [70188843638032384, 353814783205469041), 183599903 candidates (MITM path)
+  MITM b1=29: s=3 t=3 j=3 je=3 Q=24389 table=39304 yh=4672
+stage b2=35 vs b1={30}: values [96549157373046875, 531441000000000000), 236577259 candidates (MITM path)
+  MITM b1=30: s=3 t=3 j=3 je=3 Q=27000 table=42875 yh=5518
+done: 0.01s, 17640 candidates tested

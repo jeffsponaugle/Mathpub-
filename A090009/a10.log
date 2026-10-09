@@ -1,0 +1,21 @@
+dspattern: p -> p + digitsum(p), chains of length >= 10
+  range     : 56,676,324,800 .. 1,000,000,000,000,000,000,000
+  patterns  : 5 (5 of them carry past the low four digits)
+  candidates: 2,009,904,995,948 numbers in range fit a pattern (1 in 4.98e+08)
+  threads   : 14
+  mode      : maximal chains only, earliest only
+  checkpoint: a10.ckpt every 60s
+
+[len 10] 63782998969989799429(+142) -> 63782998969989799571(+140) -> 63782998969989799711(+136) -> 63782998969989799847(+146) -> 63782998969989799993(+148) -> 63782998969989800141(+116) -> 63782998969989800257(+124) -> 63782998969989800381(+122) -> 63782998969989800503(+118) -> 63782998969989800621(+119)
+
+earliest chain of length >= 10 starts at 63782998969989799429
+(confirmed smallest: every candidate below it in range was tested)
+  elapsed          : 5.32s
+  candidates       : 3,581,358,838
+  after sieve      : 3,909,550
+  base-2 tests     : 4,703,523
+  chains >= 10     : 1
+  longest found    : 10 (starting at 63782998969989799429)
+
+checkpoint a10.ckpt marked complete
+exit 0

@@ -1,0 +1,28 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=55 vs b1={37}: values [4605366583984375, 4808584372417849), 403784 candidates (MITM path)
+  MITM b1=37: s=3 t=2 j=2 je=2 Q=1369 table=3025 yh=134
+stage b2=56 vs b1={38}: values [5416169448144896, 6278211847988224), 1565268 candidates (MITM path)
+  MITM b1=38: s=3 t=2 j=2 je=2 Q=1444 table=3136 yh=500
+stage b2=57 vs b1={39}: values [6351461955384057, 8140406085191601), 2973189 candidates (MITM path)
+  MITM b1=39: s=3 t=2 j=2 je=2 Q=1521 table=3249 yh=916
+stage b2=58 vs b1={40}: values [7427658739644928, 10485760000000000), 4659206 candidates (MITM path)
+  MITM b1=40: s=3 t=2 j=2 je=2 Q=1600 table=3364 yh=1386
+stage b2=59 vs b1={41}: values [8662995818654939, 13422659310152401), 6657577 candidates (MITM path)
+  MITM b1=41: s=3 t=2 j=2 je=2 Q=1681 table=3481 yh=1913
+stage b2=60 vs b1={42}: values [10077696000000000, 17080198121677824), 9005276 candidates (MITM path)
+  MITM b1=42: s=3 t=2 j=2 je=2 Q=1764 table=3600 yh=2502
+stage b2=61 vs b1={43}: values [11694146092834141, 21611482313284249), 11742103 candidates (MITM path)
+  MITM b1=43: s=3 t=2 j=2 je=2 Q=1849 table=3721 yh=3156
+stage b2=62 vs b1={44}: values [13537086546263552, 27197360938418176), 14910802 candidates (MITM path)
+  MITM b1=44: s=3 t=2 j=2 je=2 Q=1936 table=3844 yh=3879
+
+*** MATCH: 27000016202473335 is an 10-digit palindrome in bases 44 and 62
+stage b2=63 vs b1={45}: values [15633814156853823, 34050628916015625), 18557172 candidates (MITM path)
+  MITM b1=45: s=3 t=2 j=2 je=2 Q=2025 table=3969 yh=4676
+stage b2=64 vs b1={46}: values [18014398509481984, 42420747482776576), 22730184 candidates (MITM path)
+  MITM b1=46: s=3 t=2 j=2 je=2 Q=2116 table=4096 yh=5550
+stage b2=65 vs b1={47}: values [20711912837890625, 52599132235830049), 27482097 candidates (MITM path)
+  MITM b1=47: s=3 t=2 j=2 je=2 Q=2209 table=4225 yh=6505
+stage b2=66 vs b1={48}: values [23762680013799936, 64925062108545024), 32868571 candidates (MITM path)
+  MITM b1=48: s=3 t=2 j=2 je=2 Q=2304 table=4356 yh=7546
+done: 0.00s, 21137 candidates tested

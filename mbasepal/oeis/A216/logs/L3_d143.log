@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=175 vs b1={32}: values [30625, 32768), 13 candidates (generic path)
+
+*** MATCH: 31326 is an 3-digit palindrome in bases 32 and 175
+stage b2=176 vs b1={33}: values [30976, 35937), 29 candidates (generic path)
+done: 0.00s, 15 candidates tested

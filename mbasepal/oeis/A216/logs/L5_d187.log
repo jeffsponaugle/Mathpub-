@@ -1,0 +1,5 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=277 vs b1={90}: values [5887339441, 5904900000), 229 candidates (generic path)
+
+*** MATCH: 5892173369 is an 5-digit palindrome in bases 90 and 277
+done: 0.00s, 229 candidates tested

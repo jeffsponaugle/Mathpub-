@@ -1,0 +1,23 @@
+resuming from a15.ck at 28/13983585 segments (0.00%)
+consecutive primes, chain length >= 16, range 221860944705726407..18000000000000000000, 14 threads, first match only
+(sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+
+stopped at 0.01% of 221860944705726407..18000000000000000000 with no chain of length >= 16 yet, 00:00:08 elapsed
+resume with: -c a15.ck -r
+2026-09-23 10:55:50  started (pid 84993): ./gapsieve -l 16 -s 221860944705726407 -e 1.8e19 --first -c a15.ck -r --log a15.log
+2026-09-23 10:55:50  resuming from a15.ck at 1005/13983585 segments (0.01%)
+2026-09-23 10:55:50  consecutive primes, chain length >= 16, range 221860944705726407..18000000000000000000, 14 threads, first match only
+2026-09-23 10:55:50  (sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+2026-09-23 10:56:39  interrupt: finishing segments in flight...
+2026-09-23 10:56:39  stopped at 0.05% of 221860944705726407..18000000000000000000 with no chain of length >= 16 yet, 00:00:48 elapsed
+2026-09-23 10:56:39  resume with: -c a15.ck -r
+2026-09-23 10:56:39  exit 130
+2026-09-23 12:21:40  started (pid 87755): ./gapsieve -l 16 -s 221860944705726407 -e 1.8e19 --first -c a15.ck -r --log a15.log
+2026-09-23 12:21:40  resuming from a15.ck at 6638/13983585 segments (0.05%)
+2026-09-23 12:21:40  consecutive primes, chain length >= 16, range 221860944705726407..18000000000000000000, 14 threads, first match only
+2026-09-23 12:21:40  (sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+2026-09-23 12:22:41  0.10%  eta 1d09:10:41  no hit yet  148.70T/s  at 2.39238e+17  elapsed 00:01:00
+2026-09-23 12:22:43  interrupt: finishing segments in flight...
+2026-09-23 12:22:43  stopped at 0.10% of 221860944705726407..18000000000000000000 with no chain of length >= 16 yet, 00:01:02 elapsed
+2026-09-23 12:22:43  resume with: -c a15.ck -r
+2026-09-23 12:22:43  exit 130

@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=51 vs b1={14}: values [2601, 2744), 3 candidates (generic path)
+stage b2=52 vs b1={15}: values [2704, 3375), 13 candidates (generic path)
+
+*** MATCH: 2757 is an 3-digit palindrome in bases 15 and 52
+done: 0.00s, 16 candidates tested

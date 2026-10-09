@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=194 vs b1={34}: values [37636, 39304), 9 candidates (generic path)
+stage b2=195 vs b1={35}: values [38025, 42875), 25 candidates (generic path)
+
+*** MATCH: 39196 is an 3-digit palindrome in bases 35 and 195
+stage b2=196 vs b1={36}: values [38416, 46656), 43 candidates (generic path)
+stage b2=197 vs b1={37}: values [38809, 50653), 61 candidates (generic path)
+done: 0.00s, 40 candidates tested

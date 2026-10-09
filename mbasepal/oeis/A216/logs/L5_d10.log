@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=22 vs b1={12}: values [234256, 248832), 31 candidates (generic path)
+stage b2=23 vs b1={13}: values [279841, 371293), 173 candidates (generic path)
+stage b2=24 vs b1={14}: values [331776, 537824), 358 candidates (generic path)
+
+*** MATCH: 380809 is an 5-digit palindrome in bases 14 and 24
+done: 0.00s, 562 candidates tested

@@ -1,0 +1,7 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=37 vs b1={7}: values [37, 49), 1 candidates (generic path)
+stage b2=38 vs b1={8}: values [38, 64), 1 candidates (generic path)
+stage b2=39 vs b1={9}: values [39, 81), 2 candidates (generic path)
+
+*** MATCH: 40 is an 2-digit palindrome in bases 9 and 39
+done: 0.00s, 4 candidates tested

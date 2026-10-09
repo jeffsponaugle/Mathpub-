@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=86 vs b1={20}: values [7396, 8000), 8 candidates (generic path)
+
+*** MATCH: 7999 is an 3-digit palindrome in bases 20 and 86
+stage b2=87 vs b1={21}: values [7569, 9261), 20 candidates (generic path)
+stage b2=88 vs b1={22}: values [7744, 10648), 34 candidates (generic path)
+stage b2=89 vs b1={23}: values [7921, 12167), 48 candidates (generic path)
+done: 0.00s, 17 candidates tested

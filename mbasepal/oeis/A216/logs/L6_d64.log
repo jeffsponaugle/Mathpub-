@@ -1,0 +1,15 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=117 vs b1={53}: values [21924480357, 22164361129), 150 candidates (even-AP path)
+stage b2=118 vs b1={54}: values [22877577568, 24794911296), 1167 candidates (even-AP path)
+stage b2=119 vs b1={55}: values [23863536599, 27680640625), 2266 candidates (even-AP path)
+stage b2=120 vs b1={56}: values [24883200000, 30840979456), 3448 candidates (even-AP path)
+stage b2=121 vs b1={57}: values [25937424601, 34296447249), 4719 candidates (even-AP path)
+stage b2=122 vs b1={58}: values [27027081632, 38068692544), 6081 candidates (even-AP path)
+stage b2=123 vs b1={59}: values [28153056843, 42180533641), 7539 candidates (even-AP path)
+stage b2=124 vs b1={60}: values [29316250624, 46656000000), 9095 candidates (even-AP path)
+stage b2=125 vs b1={61}: values [30517578125, 51520374361), 10754 candidates (even-AP path)
+stage b2=126 vs b1={62}: values [31757969376, 56800235584), 12519 candidates (even-AP path)
+stage b2=127 vs b1={63}: values [33038369407, 62523502209), 14395 candidates (even-AP path)
+
+*** MATCH: 33393481728 is an 6-digit palindrome in bases 63 and 127
+done: 0.00s, 57992 candidates tested

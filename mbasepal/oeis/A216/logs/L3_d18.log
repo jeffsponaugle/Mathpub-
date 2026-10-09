@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=28 vs b1={10}: values [784, 1000), 8 candidates (generic path)
+stage b2=29 vs b1={11}: values [841, 1331), 17 candidates (generic path)
+
+*** MATCH: 842 is an 3-digit palindrome in bases 11 and 29
+done: 0.00s, 25 candidates tested

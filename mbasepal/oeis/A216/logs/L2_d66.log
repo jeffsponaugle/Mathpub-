@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=75 vs b1={9}: values [75, 81), 1 candidates (generic path)
+stage b2=76 vs b1={10}: values [76, 100), 1 candidates (generic path)
+
+*** MATCH: 77 is an 2-digit palindrome in bases 10 and 76
+done: 0.00s, 2 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=53 vs b1={8}: values [53, 64), 1 candidates (generic path)
+
+*** MATCH: 54 is an 2-digit palindrome in bases 8 and 53
+done: 0.00s, 1 candidates tested

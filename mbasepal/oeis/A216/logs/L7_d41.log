@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=87 vs b1={46}: values [433626201009, 435817657216), 3328 candidates (generic path)
+stage b2=88 vs b1={47}: values [464404086784, 506623120463), 61953 candidates (generic path)
+
+*** MATCH: 472000749529 is an 7-digit palindrome in bases 47 and 88
+done: 0.00s, 65281 candidates tested

@@ -1,0 +1,14 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=66 vs b1={9}: values [66, 81), 1 candidates (generic path)
+stage b2=67 vs b1={10}: values [67, 100), 1 candidates (generic path)
+stage b2=68 vs b1={11}: values [68, 121), 1 candidates (generic path)
+stage b2=69 vs b1={12}: values [69, 144), 2 candidates (generic path)
+stage b2=70 vs b1={13}: values [70, 169), 2 candidates (generic path)
+stage b2=71 vs b1={14}: values [71, 196), 2 candidates (generic path)
+stage b2=72 vs b1={15}: values [72, 225), 3 candidates (generic path)
+stage b2=73 vs b1={16}: values [73, 256), 3 candidates (generic path)
+stage b2=74 vs b1={17}: values [74, 289), 3 candidates (generic path)
+stage b2=75 vs b1={18}: values [75, 324), 4 candidates (generic path)
+
+*** MATCH: 76 is an 2-digit palindrome in bases 18 and 75
+done: 0.00s, 22 candidates tested

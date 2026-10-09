@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=166 vs b1={31}: values [27556, 29791), 14 candidates (generic path)
+stage b2=167 vs b1={32}: values [27889, 32768), 30 candidates (generic path)
+
+*** MATCH: 28892 is an 3-digit palindrome in bases 32 and 167
+stage b2=168 vs b1={33}: values [28224, 35937), 46 candidates (generic path)
+stage b2=169 vs b1={34}: values [28561, 39304), 64 candidates (generic path)
+done: 0.00s, 50 candidates tested

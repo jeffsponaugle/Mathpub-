@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=36 vs b1={18}: values [1679616, 1889568), 163 candidates (generic path)
+stage b2=37 vs b1={19}: values [1874161, 2476099), 440 candidates (generic path)
+
+*** MATCH: 2376918 is an 5-digit palindrome in bases 19 and 37
+stage b2=38 vs b1={20}: values [2085136, 3200000), 773 candidates (generic path)
+stage b2=39 vs b1={21}: values [2313441, 4084101), 1165 candidates (generic path)
+done: 0.00s, 846 candidates tested

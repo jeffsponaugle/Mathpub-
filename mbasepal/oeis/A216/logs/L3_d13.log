@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=21 vs b1={8}: values [441, 512), 4 candidates (generic path)
+
+*** MATCH: 463 is an 3-digit palindrome in bases 8 and 21
+done: 0.00s, 4 candidates tested

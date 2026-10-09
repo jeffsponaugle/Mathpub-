@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=8 vs b1={6}: values [262144, 279936), 35 candidates (generic path)
+stage b2=9 vs b1={7}: values [531441, 823543), 401 candidates (generic path)
+
+*** MATCH: 532900 is an 7-digit palindrome in bases 7 and 9
+done: 0.00s, 435 candidates tested

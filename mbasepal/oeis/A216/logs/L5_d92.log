@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=146 vs b1={54}: values [454371856, 459165024), 225 candidates (generic path)
+stage b2=147 vs b1={55}: values [466948881, 503284375), 1682 candidates (generic path)
+
+*** MATCH: 502821439 is an 5-digit palindrome in bases 55 and 147
+stage b2=148 vs b1={56}: values [479785216, 550731776), 3239 candidates (generic path)
+stage b2=149 vs b1={57}: values [492884401, 601692057), 4902 candidates (generic path)
+done: 0.00s, 3407 candidates tested

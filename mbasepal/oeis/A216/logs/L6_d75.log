@@ -1,0 +1,15 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=135 vs b1={60}: values [44840334375, 46656000000), 738 candidates (even-AP path)
+stage b2=136 vs b1={61}: values [46525874176, 51520374361), 1986 candidates (even-AP path)
+stage b2=137 vs b1={62}: values [48261724457, 56800235584), 3321 candidates (even-AP path)
+stage b2=138 vs b1={63}: values [50049003168, 62523502209), 4747 candidates (even-AP path)
+stage b2=139 vs b1={64}: values [51888844699, 68719476736), 6267 candidates (even-AP path)
+stage b2=140 vs b1={65}: values [53782400000, 75418890625), 7886 candidates (even-AP path)
+stage b2=141 vs b1={66}: values [55730836701, 82653950016), 9605 candidates (even-AP path)
+stage b2=142 vs b1={67}: values [57735339232, 90458382169), 11429 candidates (even-AP path)
+stage b2=143 vs b1={68}: values [59797108943, 98867482624), 13362 candidates (even-AP path)
+
+*** MATCH: 64435168656 is an 6-digit palindrome in bases 68 and 143
+stage b2=144 vs b1={69}: values [61917364224, 107918163081), 15406 candidates (even-AP path)
+stage b2=145 vs b1={70}: values [64097340625, 117649000000), 17566 candidates (even-AP path)
+done: 0.00s, 48704 candidates tested

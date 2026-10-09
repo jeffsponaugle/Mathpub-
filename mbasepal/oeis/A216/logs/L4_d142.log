@@ -1,0 +1,27 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=194 vs b1={52}: values [7301384, 7311616), 1 candidates (generic path)
+stage b2=195 vs b1={53}: values [7414875, 7890481), 13 candidates (generic path)
+stage b2=196 vs b1={54}: values [7529536, 8503056), 26 candidates (generic path)
+stage b2=197 vs b1={55}: values [7645373, 9150625), 39 candidates (generic path)
+stage b2=198 vs b1={56}: values [7762392, 9834496), 53 candidates (generic path)
+stage b2=199 vs b1={57}: values [7880599, 10556001), 68 candidates (generic path)
+stage b2=200 vs b1={58}: values [8000000, 11316496), 83 candidates (generic path)
+stage b2=201 vs b1={59}: values [8120601, 12117361), 99 candidates (generic path)
+stage b2=202 vs b1={60}: values [8242408, 12960000), 116 candidates (generic path)
+stage b2=203 vs b1={61}: values [8365427, 13845841), 133 candidates (generic path)
+stage b2=204 vs b1={62}: values [8489664, 14776336), 152 candidates (generic path)
+stage b2=205 vs b1={63}: values [8615125, 15752961), 170 candidates (generic path)
+stage b2=206 vs b1={64}: values [8741816, 16777216), 190 candidates (generic path)
+stage b2=207 vs b1={65}: values [8869743, 17850625), 210 candidates (generic path)
+stage b2=208 vs b1={66}: values [8998912, 18974736), 231 candidates (generic path)
+stage b2=209 vs b1={67}: values [9129329, 20151121), 253 candidates (generic path)
+stage b2=210 vs b1={68}: values [9261000, 21381376), 275 candidates (generic path)
+stage b2=211 vs b1={69}: values [9393931, 22667121), 299 candidates (generic path)
+stage b2=212 vs b1={70}: values [9528128, 24010000), 323 candidates (generic path)
+
+*** MATCH: 10205469 is an 4-digit palindrome in bases 70 and 212
+stage b2=213 vs b1={71}: values [9663597, 25411681), 348 candidates (generic path)
+stage b2=214 vs b1={72}: values [9800344, 26873856), 373 candidates (generic path)
+stage b2=215 vs b1={73}: values [9938375, 28398241), 400 candidates (generic path)
+stage b2=216 vs b1={74}: values [10077696, 29986576), 427 candidates (generic path)
+done: 0.00s, 2760 candidates tested

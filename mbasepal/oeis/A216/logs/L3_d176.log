@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=212 vs b1={36}: values [44944, 46656), 9 candidates (generic path)
+stage b2=213 vs b1={37}: values [45369, 50653), 25 candidates (generic path)
+stage b2=214 vs b1={38}: values [45796, 54872), 43 candidates (generic path)
+
+*** MATCH: 46011 is an 3-digit palindrome in bases 38 and 214
+done: 0.00s, 77 candidates tested

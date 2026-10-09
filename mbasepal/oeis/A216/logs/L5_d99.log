@@ -1,0 +1,10 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=156 vs b1={57}: values [592240896, 601692057), 389 candidates (generic path)
+stage b2=157 vs b1={58}: values [607573201, 656356768), 1980 candidates (generic path)
+stage b2=158 vs b1={59}: values [623201296, 714924299), 3675 candidates (generic path)
+
+*** MATCH: 698370903 is an 5-digit palindrome in bases 59 and 158
+stage b2=159 vs b1={60}: values [639128961, 777600000), 5478 candidates (generic path)
+
+*** MATCH: 643376329 is an 5-digit palindrome in bases 60 and 159
+done: 0.00s, 8388 candidates tested

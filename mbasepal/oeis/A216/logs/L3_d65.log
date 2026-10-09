@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=85 vs b1={20}: values [7225, 8000), 10 candidates (generic path)
+stage b2=86 vs b1={21}: values [7396, 9261), 22 candidates (generic path)
+
+*** MATCH: 7913 is an 3-digit palindrome in bases 21 and 86
+stage b2=87 vs b1={22}: values [7569, 10648), 36 candidates (generic path)
+stage b2=88 vs b1={23}: values [7744, 12167), 51 candidates (generic path)
+done: 0.00s, 38 candidates tested

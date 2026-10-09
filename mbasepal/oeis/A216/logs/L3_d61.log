@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=80 vs b1={19}: values [6400, 6859), 6 candidates (generic path)
+
+*** MATCH: 6401 is an 3-digit palindrome in bases 19 and 80
+done: 0.00s, 6 candidates tested

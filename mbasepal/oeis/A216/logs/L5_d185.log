@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=275 vs b1={90}: values [5719140625, 5904900000), 2457 candidates (generic path)
+stage b2=276 vs b1={91}: values [5802782976, 6240321451), 5744 candidates (generic path)
+stage b2=277 vs b1={92}: values [5887339441, 6590815232), 9169 candidates (generic path)
+
+*** MATCH: 5900536830 is an 5-digit palindrome in bases 92 and 277
+done: 0.00s, 17370 candidates tested

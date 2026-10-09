@@ -1,0 +1,12 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=136 vs b1={51}: values [342102016, 345025251), 159 candidates (generic path)
+stage b2=137 vs b1={52}: values [352275361, 380204032), 1489 candidates (generic path)
+stage b2=138 vs b1={53}: values [362673936, 418195493), 2916 candidates (generic path)
+stage b2=139 vs b1={54}: values [373301041, 459165024), 4445 candidates (generic path)
+stage b2=140 vs b1={55}: values [384160000, 503284375), 6078 candidates (generic path)
+
+*** MATCH: 429105041 is an 5-digit palindrome in bases 55 and 140
+stage b2=141 vs b1={56}: values [395254161, 550731776), 7821 candidates (generic path)
+stage b2=142 vs b1={57}: values [406586896, 601692057), 9676 candidates (generic path)
+stage b2=143 vs b1={58}: values [418161601, 656356768), 11649 candidates (generic path)
+done: 0.00s, 18441 candidates tested

@@ -1,0 +1,9 @@
+# variant depth split1 split2 -- minutes per run
+nopawns 9 4 3
+noknights 10 4 5
+noknights 11 5 4
+noqueens 10 4 5
+noqueens 11 5 4
+nobishops 10 4 5
+nobishops 11 5 4
+pawnsking 13 6 5

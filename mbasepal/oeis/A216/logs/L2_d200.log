@@ -1,0 +1,9 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=215 vs b1={15}: values [215, 225), 1 candidates (generic path)
+stage b2=216 vs b1={16}: values [216, 256), 1 candidates (generic path)
+stage b2=217 vs b1={17}: values [217, 289), 1 candidates (generic path)
+stage b2=218 vs b1={18}: values [218, 324), 1 candidates (generic path)
+stage b2=219 vs b1={19}: values [219, 361), 1 candidates (generic path)
+
+*** MATCH: 220 is an 2-digit palindrome in bases 19 and 219
+done: 0.00s, 5 candidates tested

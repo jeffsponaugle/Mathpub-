@@ -1,0 +1,46 @@
+jeffsponauglejbs@Jeffs-Mac-Studio planargen % ./run_split.sh 13 128 12 ../runs/n13
+geng_coplanar_lr -u -v 13 45:66 res/128  for res=0..127, 12 at a time -> ../runs/n13
+done: 128 of 128 pieces complete
+jeffsponauglejbs@Jeffs-Mac-Studio planargen % python3 aggregate.py 13 128 ../runs/n13
+pieces complete: 128/128
+total graphs: 5942258308   total cpu: 6516.5 s = 1.81 core-hours
+preprune calls 20817597333, planarity tests 4726868441, nonplanar 2989797912, trivially planar 7826961934
+wrote ../runs/n13/combined_n13.txt
+wrote ../runs/n13/rows_with_n13.json (input for euler.py)
+  k= 0:              0   expected              0  OK
+  k= 1:              0   expected              0  OK
+  k= 2:              0   expected              0  OK
+  k= 3:              0   expected              0  OK
+  k= 4:              0   expected              0  OK
+  k= 5:              0   expected              0  OK
+  k= 6:              0   expected              0  OK
+  k= 7:              0   expected              0  OK
+  k= 8:              0   expected              0  OK
+  k= 9:              0   expected              0  OK
+  k=10:              0   expected              0  OK
+  k=11:              0   expected              0  OK
+  k=12:           1301   expected           1301  OK
+  k=13:          13999   expected          13999  OK
+  k=14:          93569   expected          93569  OK
+  k=15:         489387   expected         489387  OK
+  k=16:        2166009   expected        2166009  OK
+  k=17:        8319191   expected        8319191  OK
+  k=18:       27628471   expected       27628471  OK
+  k=19:       78405246   expected       78405246  OK
+  k=20:      188084653   expected      188084653  OK
+  k=21:      378816476   expected      378816476  OK
+  k=22:      637821202   expected      637821202  OK
+  k=23:      894803870   expected      894803870  OK
+  k=24:     1041875241   expected     1041875241  OK
+  k=25:     1001423601   expected     1001423601  OK
+  k=26:      788252425   expected      788252425  OK
+  k=27:      502299195   expected      502299195  OK
+  k=28:      254800097   expected      254800097  OK
+  k=29:      100395695   expected      100395695  OK
+  k=30:       29586335   expected       29586335  OK
+  k=31:        6135196   expected        6135196  OK
+  k=32:         797583   expected         797583  OK
+  k=33:          49566   expected          49566  OK
+n=13 coplanar: total=5942258308 (geng >Z says 5942258308) expected 5942258308 OK
+  cpu 6516.48 sec
+RESULT: PASS

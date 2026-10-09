@@ -1,0 +1,8 @@
+A171740 search: n=15, threads=1, limit=none
+stage b2=13 vs b1={11}: values [3937376385699289, 4177248169415651), 3822749 candidates (MITM path)
+  MITM b1=11: s=5 t=3 j=3 je=5 Q=1331 table=2197 yh=1740
+stage b2=14 vs b1={12}: values [11112006825558016, 15407021574586368), 40744446 candidates (MITM path)
+  MITM b1=12: s=4 t=4 j=4 je=4 Q=20736 table=38416 yh=1061
+
+*** MATCH: 14192598568359611 is an 15-digit palindrome in bases 12 and 14
+done: 0.00s, 2501 candidates tested

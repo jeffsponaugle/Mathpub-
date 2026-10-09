@@ -1,0 +1,24 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=34 vs b1={22}: values [52523350144, 54875873536), 1761 candidates (MITM path)
+  MITM b1=22: s=3 t=1 j=1 je=3 Q=22 table=34 yh=52
+stage b2=35 vs b1={23}: values [64339296875, 78310985281), 9311 candidates (MITM path)
+  MITM b1=23: s=3 t=1 j=1 je=3 Q=23 table=35 yh=267
+stage b2=36 vs b1={24}: values [78364164096, 110075314176), 18881 candidates (MITM path)
+  MITM b1=24: s=2 t=2 j=2 je=2 Q=576 table=1296 yh=15
+stage b2=37 vs b1={25}: values [94931877133, 152587890625), 30764 candidates (MITM path)
+  MITM b1=25: s=2 t=2 j=2 je=2 Q=625 table=1369 yh=23
+stage b2=38 vs b1={26}: values [114415582592, 208827064576), 45279 candidates (MITM path)
+  MITM b1=26: s=2 t=2 j=2 je=2 Q=676 table=1444 yh=32
+stage b2=39 vs b1={27}: values [137231006679, 282429536481), 62764 candidates (MITM path)
+  MITM b1=27: s=2 t=2 j=2 je=2 Q=729 table=1521 yh=42
+stage b2=40 vs b1={28}: values [163840000000, 377801998336), 83579 candidates (MITM path)
+  MITM b1=28: s=2 t=2 j=2 je=2 Q=784 table=1600 yh=53
+
+*** MATCH: 292567324441 is an 8-digit palindrome in bases 28 and 40
+stage b2=41 vs b1={29}: values [194754273881, 500246412961), 108110 candidates (MITM path)
+  MITM b1=29: s=2 t=2 j=2 je=2 Q=841 table=1681 yh=65
+stage b2=42 vs b1={30}: values [230539333248, 656100000000), 136762 candidates (MITM path)
+  MITM b1=30: s=2 t=2 j=2 je=2 Q=900 table=1764 yh=78
+stage b2=43 vs b1={31}: values [271818611107, 852891037441), 169964 candidates (MITM path)
+  MITM b1=31: s=2 t=2 j=2 je=2 Q=961 table=1849 yh=92
+done: 0.00s, 500 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=17 vs b1={11}: values [1419857, 1771561), 72 candidates (even-AP path)
+
+*** MATCH: 1487484 is an 6-digit palindrome in bases 11 and 17
+done: 0.00s, 17 candidates tested

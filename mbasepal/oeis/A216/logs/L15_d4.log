@@ -1,0 +1,8 @@
+A171740 search: n=15, threads=1, limit=none
+stage b2=22 vs b1={18}: values [6221821273427820544, 6746640616477458432), 210402584 candidates (MITM path)
+  MITM b1=18: s=5 t=3 j=3 je=5 Q=5832 table=10648 yh=19760
+stage b2=23 vs b1={19}: values [11592836324538749809, 15181127029874798299), 1053883896 candidates (MITM path)
+  MITM b1=19: s=4 t=4 j=4 je=4 Q=130321 table=279841 yh=3767
+
+*** MATCH: 11713091929744317938 is an 15-digit palindrome in bases 19 and 23
+done: 0.01s, 19887 candidates tested

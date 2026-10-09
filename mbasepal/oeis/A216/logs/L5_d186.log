@@ -1,0 +1,9 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=276 vs b1={90}: values [5802782976, 5904900000), 1341 candidates (generic path)
+stage b2=277 vs b1={91}: values [5887339441, 6240321451), 4601 candidates (generic path)
+stage b2=278 vs b1={92}: values [5972816656, 6590815232), 7997 candidates (generic path)
+stage b2=279 vs b1={93}: values [6059221281, 6956883693), 11533 candidates (generic path)
+stage b2=280 vs b1={94}: values [6146560000, 7339040224), 15211 candidates (generic path)
+
+*** MATCH: 6180977881 is an 5-digit palindrome in bases 94 and 280
+done: 0.00s, 40682 candidates tested

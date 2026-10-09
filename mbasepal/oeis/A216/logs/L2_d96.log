@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=107 vs b1={11}: values [107, 121), 1 candidates (generic path)
+
+*** MATCH: 108 is an 2-digit palindrome in bases 11 and 107
+done: 0.00s, 1 candidates tested

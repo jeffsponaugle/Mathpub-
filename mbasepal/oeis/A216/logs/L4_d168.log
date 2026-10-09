@@ -1,0 +1,6 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=227 vs b1={59}: values [11697083, 12117361), 9 candidates (generic path)
+
+*** MATCH: 12007620 is an 4-digit palindrome in bases 59 and 227
+stage b2=228 vs b1={60}: values [11852352, 12960000), 22 candidates (generic path)
+done: 0.00s, 12 candidates tested

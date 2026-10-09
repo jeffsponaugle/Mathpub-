@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=190 vs b1={90}: values [47045881000000, 47829690000000), 114275 candidates (generic path)
+stage b2=191 vs b1={91}: values [48551226272641, 51676101935731), 448470 candidates (generic path)
+
+*** MATCH: 50866406661796 is an 7-digit palindrome in bases 91 and 191
+stage b2=192 vs b1={92}: values [50096498540544, 55784660123648), 803653 candidates (generic path)
+done: 0.02s, 616267 candidates tested

@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=116 vs b1={24}: values [13456, 13824), 4 candidates (generic path)
+stage b2=117 vs b1={25}: values [13689, 15625), 17 candidates (generic path)
+stage b2=118 vs b1={26}: values [13924, 17576), 31 candidates (generic path)
+
+*** MATCH: 14633 is an 3-digit palindrome in bases 26 and 118
+stage b2=119 vs b1={27}: values [14161, 19683), 47 candidates (generic path)
+stage b2=120 vs b1={28}: values [14400, 21952), 63 candidates (generic path)
+done: 0.00s, 58 candidates tested

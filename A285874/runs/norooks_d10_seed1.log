@@ -1,0 +1,51 @@
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 14  table: 16384 MB  seed: 1  ttmin: 2
+split ply 4: 66810 unique positions (188473 paths), 0.0s
+  845/66810 tasks (1.26%)  15s elapsed  ETA 1182s
+  1803/66810 tasks (2.70%)  30s elapsed  ETA 1091s
+  2613/66810 tasks (3.91%)  45s elapsed  ETA 1115s
+  3344/66810 tasks (5.01%)  61s elapsed  ETA 1149s
+  4243/66810 tasks (6.35%)  76s elapsed  ETA 1115s
+  5144/66810 tasks (7.70%)  91s elapsed  ETA 1088s
+  6026/66810 tasks (9.02%)  106s elapsed  ETA 1068s
+  6901/66810 tasks (10.33%)  121s elapsed  ETA 1050s
+  7579/66810 tasks (11.34%)  136s elapsed  ETA 1063s
+  8364/66810 tasks (12.52%)  151s elapsed  ETA 1056s
+  9108/66810 tasks (13.63%)  166s elapsed  ETA 1053s
+  9876/66810 tasks (14.78%)  181s elapsed  ETA 1045s
+  10608/66810 tasks (15.88%)  196s elapsed  ETA 1040s
+  11408/66810 tasks (17.08%)  212s elapsed  ETA 1027s
+  12009/66810 tasks (17.97%)  227s elapsed  ETA 1034s
+  12516/66810 tasks (18.73%)  242s elapsed  ETA 1049s
+  13241/66810 tasks (19.82%)  257s elapsed  ETA 1039s
+  13879/66810 tasks (20.77%)  272s elapsed  ETA 1037s
+  14617/66810 tasks (21.88%)  287s elapsed  ETA 1025s
+  15361/66810 tasks (22.99%)  302s elapsed  ETA 1012s
+  16120/66810 tasks (24.13%)  317s elapsed  ETA 997s
+  16644/66810 tasks (24.91%)  332s elapsed  ETA 1001s
+  17476/66810 tasks (26.16%)  347s elapsed  ETA 980s
+  18269/66810 tasks (27.34%)  362s elapsed  ETA 963s
+  19069/66810 tasks (28.54%)  378s elapsed  ETA 945s
+  19849/66810 tasks (29.71%)  393s elapsed  ETA 929s
+  20426/66810 tasks (30.57%)  408s elapsed  ETA 926s
+  21120/66810 tasks (31.61%)  423s elapsed  ETA 915s
+  21800/66810 tasks (32.63%)  438s elapsed  ETA 904s
+  22508/66810 tasks (33.69%)  453s elapsed  ETA 891s
+  23102/66810 tasks (34.58%)  468s elapsed  ETA 885s
+  23770/66810 tasks (35.58%)  483s elapsed  ETA 875s
+  24299/66810 tasks (36.37%)  498s elapsed  ETA 871s
+  24770/66810 tasks (37.08%)  513s elapsed  ETA 871s
+  25470/66810 tasks (38.12%)  528s elapsed  ETA 858s
+  25960/66810 tasks (38.86%)  543s elapsed  ETA 855s
+  26639/66810 tasks (39.87%)  558s elapsed  ETA 842s
+  27179/66810 tasks (40.68%)  574s elapsed  ETA 836s
+  27719/66810 tasks (41.49%)  589s elapsed  ETA 830s
+  28199/66810 tasks (42.21%)  604s elapsed  ETA 827s
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 14  table: 8192 MB  seed: 1  ttmin: 2
+split ply 4: 66810 unique positions (188473 paths), 0.0s
+resumed 28199/66810 tasks from runs/norooks_d10_seed1.ckpt
+  37239/66810 tasks (55.74%)  15s elapsed  ETA 12s
+  52206/66810 tasks (78.14%)  30s elapsed  ETA 8s
+  65870/66810 tasks (98.59%)  46s elapsed  ETA 1s
+perft(10) = 53938077183794   (45.94s, 1.17e+12 leaves/s)

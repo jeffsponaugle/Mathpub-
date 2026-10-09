@@ -1,0 +1,10 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=294 vs b1={95}: values [7471182096, 7737809375), 3085 candidates (generic path)
+stage b2=295 vs b1={96}: values [7573350625, 8153726976), 6670 candidates (generic path)
+
+*** MATCH: 8099770751 is an 5-digit palindrome in bases 96 and 295
+stage b2=296 vs b1={97}: values [7676563456, 8587340257), 10396 candidates (generic path)
+stage b2=297 vs b1={98}: values [7780827681, 9039207968), 14266 candidates (generic path)
+stage b2=298 vs b1={99}: values [7886150416, 9509900499), 18285 candidates (generic path)
+stage b2=299 vs b1={100}: values [7992538801, 10000000000), 22455 candidates (generic path)
+done: 0.00s, 21808 candidates tested

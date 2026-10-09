@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=104 vs b1={54}: values [1265319018496, 1338925209984), 65436 candidates (generic path)
+stage b2=105 vs b1={55}: values [1340095640625, 1522435234375), 157512 candidates (generic path)
+
+*** MATCH: 1414302656026 is an 7-digit palindrome in bases 55 and 105
+done: 0.00s, 130972 candidates tested

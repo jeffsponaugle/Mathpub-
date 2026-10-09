@@ -1,0 +1,10 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=57 vs b1={15}: values [3249, 3375), 3 candidates (generic path)
+stage b2=58 vs b1={16}: values [3364, 4096), 13 candidates (generic path)
+
+*** MATCH: 3887 is an 3-digit palindrome in bases 16 and 58
+stage b2=59 vs b1={17}: values [3481, 4913), 25 candidates (generic path)
+
+*** MATCH: 3718 is an 3-digit palindrome in bases 17 and 59
+stage b2=60 vs b1={18}: values [3600, 5832), 38 candidates (generic path)
+done: 0.00s, 25 candidates tested

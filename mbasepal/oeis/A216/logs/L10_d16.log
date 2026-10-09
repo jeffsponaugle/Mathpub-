@@ -1,0 +1,10 @@
+A171740 search: n=10, threads=1, limit=none
+stage b2=50 vs b1={34}: values [1953125000000000, 2064377754059776), 356009 candidates (MITM path)
+  MITM b1=34: s=3 t=2 j=2 je=2 Q=1156 table=2500 yh=143
+stage b2=51 vs b1={35}: values [2334165173090451, 2758547353515625), 1230004 candidates (MITM path)
+  MITM b1=35: s=3 t=2 j=2 je=2 Q=1225 table=2601 yh=473
+stage b2=52 vs b1={36}: values [2779905883635712, 3656158440062976), 2304691 candidates (MITM path)
+  MITM b1=36: s=3 t=2 j=2 je=2 Q=1296 table=2704 yh=853
+
+*** MATCH: 3028257303808673 is an 10-digit palindrome in bases 36 and 52
+done: 0.00s, 858 candidates tested

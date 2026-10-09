@@ -1,0 +1,31 @@
+# Force Ubuntu 16.04 "Xenial" to get newer GCC, binutils etc.
+dist: xenial
+language: c
+
+env:
+  global:
+    - CFLAGS="--coverage -O2 -g"
+    - LDFLAGS="--coverage"
+
+matrix:
+  include:
+    - compiler: gcc
+    - compiler: clang
+    - env: CFLAGS="--coverage -O2 -g -m32" LDFLAGS="--coverage -m32"
+      addons:
+        apt_packages:
+          - gcc-multilib
+          - g++-multilib
+          - libgmp-dev:i386
+
+# temporary hack with sed until we will have a proper configure script
+before_script:
+  - ./autogen.sh && ./configure
+  - make -j2 V=1
+
+script:
+  - cd tst && ./run_all.sh
+
+after_script:
+  - gcov functions/*/*.c
+  - bash <(curl --retry 5 -s https://codecov.io/bash)

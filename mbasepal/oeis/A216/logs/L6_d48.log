@@ -1,0 +1,9 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=91 vs b1={43}: values [6240321451, 6321363049), 108 candidates (even-AP path)
+stage b2=92 vs b1={44}: values [6590815232, 7256313856), 855 candidates (even-AP path)
+stage b2=93 vs b1={45}: values [6956883693, 8303765625), 1675 candidates (even-AP path)
+stage b2=94 vs b1={46}: values [7339040224, 9474296896), 2571 candidates (even-AP path)
+stage b2=95 vs b1={47}: values [7737809375, 10779215329), 3548 candidates (even-AP path)
+
+*** MATCH: 7953561216 is an 6-digit palindrome in bases 47 and 95
+done: 0.00s, 5494 candidates tested

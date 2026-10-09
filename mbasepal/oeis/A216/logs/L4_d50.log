@@ -1,0 +1,18 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=76 vs b1={26}: values [438976, 456976), 4 candidates (generic path)
+stage b2=77 vs b1={27}: values [456533, 531441), 13 candidates (generic path)
+stage b2=78 vs b1={28}: values [474552, 614656), 24 candidates (generic path)
+stage b2=79 vs b1={29}: values [493039, 707281), 35 candidates (generic path)
+stage b2=80 vs b1={30}: values [512000, 810000), 47 candidates (generic path)
+stage b2=81 vs b1={31}: values [531441, 923521), 60 candidates (generic path)
+stage b2=82 vs b1={32}: values [551368, 1048576), 74 candidates (generic path)
+stage b2=83 vs b1={33}: values [571787, 1185921), 90 candidates (generic path)
+stage b2=84 vs b1={34}: values [592704, 1336336), 106 candidates (generic path)
+stage b2=85 vs b1={35}: values [614125, 1500625), 123 candidates (generic path)
+stage b2=86 vs b1={36}: values [636056, 1679616), 142 candidates (generic path)
+stage b2=87 vs b1={37}: values [658503, 1874161), 161 candidates (generic path)
+stage b2=88 vs b1={38}: values [681472, 2085136), 182 candidates (generic path)
+stage b2=89 vs b1={39}: values [704969, 2313441), 204 candidates (generic path)
+
+*** MATCH: 729000 is an 4-digit palindrome in bases 39 and 89
+done: 0.00s, 1259 candidates tested

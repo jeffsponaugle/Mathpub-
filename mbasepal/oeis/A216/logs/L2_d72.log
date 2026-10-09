@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=82 vs b1={10}: values [82, 100), 1 candidates (generic path)
+stage b2=83 vs b1={11}: values [83, 121), 1 candidates (generic path)
+
+*** MATCH: 84 is an 2-digit palindrome in bases 11 and 83
+done: 0.00s, 2 candidates tested

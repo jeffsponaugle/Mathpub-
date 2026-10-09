@@ -1,0 +1,5 @@
+# variant depth split1 split2 -- hours per run
+noknights 12 5 4
+noqueens 12 5 4
+nobishops 12 5 4
+nopawns 10 4 3

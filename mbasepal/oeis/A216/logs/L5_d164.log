@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=246 vs b1={82}: values [3662186256, 3707398432), 748 candidates (generic path)
+stage b2=247 vs b1={83}: values [3722098081, 3939040643), 3556 candidates (generic path)
+stage b2=248 vs b1={84}: values [3782742016, 4182119424), 6494 candidates (generic path)
+
+*** MATCH: 3877398161 is an 5-digit palindrome in bases 84 and 248
+stage b2=249 vs b1={85}: values [3844124001, 4437053125), 9564 candidates (generic path)
+done: 0.00s, 11335 candidates tested

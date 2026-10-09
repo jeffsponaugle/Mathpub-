@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=52 vs b1={24}: values [7311616, 7962624), 241 candidates (generic path)
+stage b2=53 vs b1={25}: values [7890481, 9765625), 668 candidates (generic path)
+
+*** MATCH: 8531146 is an 5-digit palindrome in bases 25 and 53
+stage b2=54 vs b1={26}: values [8503056, 11881376), 1159 candidates (generic path)
+done: 0.00s, 919 candidates tested

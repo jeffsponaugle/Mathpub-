@@ -1,0 +1,17 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=110 vs b1={34}: values [1331000, 1336336), 1 candidates (generic path)
+stage b2=111 vs b1={35}: values [1367631, 1500625), 11 candidates (generic path)
+stage b2=112 vs b1={36}: values [1404928, 1679616), 22 candidates (generic path)
+stage b2=113 vs b1={37}: values [1442897, 1874161), 34 candidates (generic path)
+
+*** MATCH: 1816476 is an 4-digit palindrome in bases 37 and 113
+stage b2=114 vs b1={38}: values [1481544, 2085136), 47 candidates (generic path)
+stage b2=115 vs b1={39}: values [1520875, 2313441), 60 candidates (generic path)
+stage b2=116 vs b1={40}: values [1560896, 2560000), 75 candidates (generic path)
+stage b2=117 vs b1={41}: values [1601613, 2825761), 90 candidates (generic path)
+stage b2=118 vs b1={42}: values [1643032, 3111696), 106 candidates (generic path)
+stage b2=119 vs b1={43}: values [1685159, 3418801), 123 candidates (generic path)
+stage b2=120 vs b1={44}: values [1728000, 3748096), 141 candidates (generic path)
+stage b2=121 vs b1={45}: values [1771561, 4100625), 160 candidates (generic path)
+stage b2=122 vs b1={46}: values [1815848, 4477456), 179 candidates (generic path)
+done: 0.00s, 187 candidates tested

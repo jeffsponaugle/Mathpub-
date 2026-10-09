@@ -1,0 +1,25 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=154 vs b1={67}: values [86617093024, 90458382169), 1052 candidates (even-AP path)
+stage b2=155 vs b1={68}: values [89466096875, 98867482624), 2525 candidates (even-AP path)
+stage b2=156 vs b1={69}: values [92389579776, 107918163081), 4091 candidates (even-AP path)
+stage b2=157 vs b1={70}: values [95388992557, 117649000000), 5753 candidates (even-AP path)
+stage b2=158 vs b1={71}: values [98465804768, 128100283921), 7514 candidates (even-AP path)
+stage b2=159 vs b1={72}: values [101621504799, 139314069504), 9378 candidates (even-AP path)
+stage b2=160 vs b1={73}: values [104857600000, 151334226289), 11347 candidates (even-AP path)
+stage b2=161 vs b1={74}: values [108175616801, 164206490176), 13427 candidates (even-AP path)
+stage b2=162 vs b1={75}: values [111577100832, 177978515625), 15619 candidates (even-AP path)
+stage b2=163 vs b1={76}: values [115063617043, 192699928576), 17927 candidates (even-AP path)
+stage b2=164 vs b1={77}: values [118636749824, 208422380089), 20356 candidates (even-AP path)
+stage b2=165 vs b1={78}: values [122298103125, 225199600704), 22908 candidates (even-AP path)
+stage b2=166 vs b1={79}: values [126049300576, 243087455521), 25587 candidates (even-AP path)
+stage b2=167 vs b1={80}: values [129891985607, 262144000000), 28396 candidates (even-AP path)
+stage b2=168 vs b1={81}: values [133827821568, 282429536481), 31340 candidates (even-AP path)
+stage b2=169 vs b1={82}: values [137858491849, 304006671424), 34422 candidates (even-AP path)
+stage b2=170 vs b1={83}: values [141985700000, 326940373369), 37646 candidates (even-AP path)
+stage b2=171 vs b1={84}: values [146211169851, 351298031616), 41016 candidates (even-AP path)
+stage b2=172 vs b1={85}: values [150536645632, 377149515625), 44535 candidates (even-AP path)
+stage b2=173 vs b1={86}: values [154963892093, 404567235136), 48208 candidates (even-AP path)
+
+*** MATCH: 159947759826 is an 6-digit palindrome in bases 86 and 173
+stage b2=174 vs b1={87}: values [159494694624, 433626201009), 52037 candidates (even-AP path)
+done: 0.00s, 376051 candidates tested

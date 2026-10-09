@@ -1,0 +1,13 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=145 vs b1={42}: values [3048625, 3111696), 3 candidates (generic path)
+stage b2=146 vs b1={43}: values [3112136, 3418801), 15 candidates (generic path)
+stage b2=147 vs b1={44}: values [3176523, 3748096), 27 candidates (generic path)
+stage b2=148 vs b1={45}: values [3241792, 4100625), 40 candidates (generic path)
+stage b2=149 vs b1={46}: values [3307949, 4477456), 53 candidates (generic path)
+stage b2=150 vs b1={47}: values [3375000, 4879681), 67 candidates (generic path)
+stage b2=151 vs b1={48}: values [3442951, 5308416), 82 candidates (generic path)
+
+*** MATCH: 3649520 is an 4-digit palindrome in bases 48 and 151
+stage b2=152 vs b1={49}: values [3511808, 5764801), 98 candidates (generic path)
+stage b2=153 vs b1={50}: values [3581577, 6250000), 114 candidates (generic path)
+done: 0.00s, 295 candidates tested

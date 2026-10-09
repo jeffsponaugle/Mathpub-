@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 A248701 (peak depth, a(n) = depth >= n):\
+  a(1) = 3   (matches OEIS)\
+  a(2) = 7   (matches OEIS)\
+  a(3) = 359   (matches OEIS)\
+  a(4) = 7853   (matches OEIS)\
+  a(5) = 96401   (matches OEIS)\
+  a(6) = 2812099   (matches OEIS)\
+  a(7) = 294276293   (matches OEIS)\
+  a(8) = 12579905251   NEW\
+  a(9) = 5108217950351   NEW\
+  a(10) = 59852066157421   NEW\
+  a(11) > 60233937494016\
+A248702 (valley depth, a(n) = depth >= n):\
+  a(0) = 2   (by definition)\
+  a(1) = 3   (matches OEIS)\
+  a(2) = 19   (matches OEIS)\
+  a(3) = 43   (matches OEIS)\
+  a(4) = 2687   (matches OEIS)\
+  a(5) = 179819   (matches OEIS)\
+  a(6) = 1107791   (matches OEIS)\
+  a(7) = 938665577   NEW\
+  a(8) = 2400369437   NEW\
+  a(9) = 299917793009   NEW\
+  a(10) > 60233937494016\
+A248703 (strict peak depth, a(n) = depth >= n+1):\
+  a(1) = 23   (matches OEIS)\
+  a(2) = 1439   (matches OEIS)\
+  a(3) = 21433   (matches OEIS)\
+  a(4) = 1130863   (matches OEIS)\
+  a(5) = 19881311   (matches OEIS)\
+  a(6) = 331542583   (matches OEIS)\
+  a(7) = 149822520893   NEW\
+  a(8) = 13193280477899   NEW\
+  a(9) > 60233937494016\
+A248704 (strict valley depth, a(n) = depth >= n):\
+  a(1) = 3   (matches OEIS)\
+  a(2) = 19   (matches OEIS)\
+  a(3) = 1429   (matches OEIS)\
+  a(4) = 25243   (matches OEIS)\
+  a(5) = 340577   (matches OEIS)\
+  a(6) = 1107791   (matches OEIS)\
+  a(7) = 3531448007   NEW\
+  a(8) = 17190066197   NEW\
+  a(9) = 37148264596189   NEW\
+  a(10) > 60233937494016\
+jeffsponauglejbs@Jeffs-Mac-Studio A248701 % \
+\
+\
+# A248701 / A248702 / A248703 / A248704: smallest prime with n monotone prime gaps on each side (peak, valley, strict peak, strict valley)\
+# scanning primes in [60233937494017, 100000000000000000] with 24 threads, chunk 17179869184, -d 4, reporting depth >= 6 (resumed), stopping at A248701 depth\
+# stop target: A248701(11)\
+A248702(10) = 384671458489889  [valley depth >= 10]  primes 384671458489537 .. 384671458489889 .. 384671458490201  gaps [6] 64 60 60 44 36 34 18 14 10 6 | 2 6 10 12 12 20 36 40 60 104 [10]\
+A248703(9) = 746882911420231  [strict peak depth >= 10]  primes 746882911419947 .. 746882911420231 .. 746882911420571  gaps [60] 6 8 12 16 20 22 32 34 36 38 | 130 48 38 36 18 16 14 12 10 8 [10]\
+A248704(10) = 1958854030679863  [strict valley depth >= 10]  primes 1958854030679543 .. 1958854030679863 .. 1958854030680431  gaps [8] 70 56 42 40 38 30 12 10 8 6 | 16 20 22 26 30 54 58 74 88 168 [12]\
+A248702(11) = 3860678242735729  [valley depth >= 11]  primes 3860678242735229 .. 3860678242735729 .. 3860678242736251  gaps [14] 114 94 78 50 40 30 30 18 14 12 6 | 10 12 12 18 18 18 26 40 66 108 114 [80]\
+jeffsponauglejbs@Jeffs-Mac-Studio A248701 % \
+\
+p}

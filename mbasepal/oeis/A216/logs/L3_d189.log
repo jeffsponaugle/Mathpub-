@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=227 vs b1={38}: values [51529, 54872), 15 candidates (generic path)
+
+*** MATCH: 52438 is an 3-digit palindrome in bases 38 and 227
+stage b2=228 vs b1={39}: values [51984, 59319), 33 candidates (generic path)
+done: 0.00s, 17 candidates tested

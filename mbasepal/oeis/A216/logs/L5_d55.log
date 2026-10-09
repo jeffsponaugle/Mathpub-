@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=93 vs b1={38}: values [74805201, 79235168), 513 candidates (generic path)
+stage b2=94 vs b1={39}: values [78074896, 90224199), 1375 candidates (generic path)
+stage b2=95 vs b1={40}: values [81450625, 102400000), 2322 candidates (generic path)
+
+*** MATCH: 81495751 is an 5-digit palindrome in bases 40 and 95
+done: 0.00s, 4210 candidates tested

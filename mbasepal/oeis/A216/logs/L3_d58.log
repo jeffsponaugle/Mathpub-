@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=76 vs b1={18}: values [5776, 5832), 1 candidates (generic path)
+
+*** MATCH: 5777 is an 3-digit palindrome in bases 18 and 76
+done: 0.00s, 1 candidates tested

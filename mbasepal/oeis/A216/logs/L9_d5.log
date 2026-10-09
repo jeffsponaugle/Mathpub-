@@ -1,0 +1,6 @@
+A171740 search: n=9, threads=1, limit=none
+stage b2=19 vs b1={14}: values [16983563041, 20661046784), 28219 candidates (MITM path)
+  MITM b1=14: s=3 t=2 j=2 je=3 Q=196 table=361 yh=79
+
+*** MATCH: 17207421669 is an 9-digit palindrome in bases 14 and 19
+done: 0.00s, 5 candidates tested

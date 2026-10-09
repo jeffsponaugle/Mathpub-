@@ -1,0 +1,15 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=15 vs b1={8}: values [3375, 4096), 4 candidates (generic path)
+stage b2=16 vs b1={9}: values [4096, 6561), 10 candidates (generic path)
+stage b2=17 vs b1={10}: values [4913, 10000), 18 candidates (generic path)
+stage b2=18 vs b1={11}: values [5832, 14641), 28 candidates (generic path)
+stage b2=19 vs b1={12}: values [6859, 20736), 39 candidates (generic path)
+stage b2=20 vs b1={13}: values [8000, 28561), 52 candidates (generic path)
+
+*** MATCH: 16842 is an 4-digit palindrome in bases 13 and 20
+stage b2=21 vs b1={14}: values [9261, 38416), 67 candidates (generic path)
+stage b2=22 vs b1={15}: values [10648, 50625), 83 candidates (generic path)
+stage b2=23 vs b1={16}: values [12167, 65536), 101 candidates (generic path)
+stage b2=24 vs b1={17}: values [13824, 83521), 122 candidates (generic path)
+stage b2=25 vs b1={18}: values [15625, 104976), 143 candidates (generic path)
+done: 0.00s, 195 candidates tested

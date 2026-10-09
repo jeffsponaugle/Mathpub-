@@ -1,0 +1,9 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=89 vs b1={47}: values [496981290961, 506623120463), 13677 candidates (generic path)
+stage b2=90 vs b1={48}: values [531441000000, 587068342272), 76307 candidates (generic path)
+stage b2=91 vs b1={49}: values [567869252041, 678223072849), 146442 candidates (generic path)
+stage b2=92 vs b1={50}: values [606355001344, 781250000000), 224603 candidates (generic path)
+
+*** MATCH: 651900386841 is an 7-digit palindrome in bases 50 and 92
+stage b2=93 vs b1={51}: values [646990183449, 897410677851), 311331 candidates (generic path)
+done: 0.01s, 308064 candidates tested

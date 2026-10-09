@@ -1,0 +1,8 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=97 vs b1={31}: values [912673, 923521), 2 candidates (generic path)
+stage b2=98 vs b1={32}: values [941192, 1048576), 12 candidates (generic path)
+
+*** MATCH: 1028511 is an 4-digit palindrome in bases 32 and 98
+stage b2=99 vs b1={33}: values [970299, 1185921), 23 candidates (generic path)
+stage b2=100 vs b1={34}: values [1000000, 1336336), 34 candidates (generic path)
+done: 0.00s, 23 candidates tested

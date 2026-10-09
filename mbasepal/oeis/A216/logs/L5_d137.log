@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=209 vs b1={72}: values [1908029761, 1934917632), 616 candidates (generic path)
+stage b2=210 vs b1={73}: values [1944810000, 2073071593), 2909 candidates (generic path)
+
+*** MATCH: 2044742701 is an 5-digit palindrome in bases 73 and 210
+stage b2=211 vs b1={74}: values [1982119441, 2219006624), 5321 candidates (generic path)
+stage b2=212 vs b1={75}: values [2019963136, 2373046875), 7857 candidates (generic path)
+done: 0.00s, 5484 candidates tested

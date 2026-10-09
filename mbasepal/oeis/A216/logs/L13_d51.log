@@ -1,0 +1,6 @@
+A171740 search: n=13, threads=1, limit=none
+stage b2=159 vs b1={108}: values [261075123337098804348567681, 271962372616449667721330688), 673806848692 candidates (MITM path)
+  MITM b1=108: s=4 t=3 j=3 je=3 Q=1259712 table=4019679 yh=167628
+
+*** MATCH: 267817214770755694352243746 is an 13-digit palindrome in bases 108 and 159
+done: 0.08s, 103806 candidates tested

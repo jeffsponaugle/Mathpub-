@@ -1,0 +1,4 @@
+fen: r1bqkb1r/pppppppp/8/8/8/8/PPPPPPPP/R1BQKB1R w KQkq - 0 1
+threads: 14  table: 8192 MB  seed: 1  ttmin: 2
+split ply 4: 48563 unique positions (132640 paths), 0.0s
+perft(10) = 31936882857782   (34.63s, 9.22e+11 leaves/s)

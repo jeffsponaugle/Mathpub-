@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=269 vs b1={88}: values [5236114321, 5277319168), 570 candidates (generic path)
+stage b2=270 vs b1={89}: values [5314410000, 5584059449), 3699 candidates (generic path)
+stage b2=271 vs b1={90}: values [5393580481, 5904900000), 6963 candidates (generic path)
+
+*** MATCH: 5412675142 is an 5-digit palindrome in bases 90 and 271
+done: 0.00s, 11232 candidates tested

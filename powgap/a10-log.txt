@@ -1,0 +1,5 @@
+
+# interrupt -- finishing current blocks (ctrl-c again to abort)
+# checkpoint saved to a10.ckpt -- rerun the same command to resume
+# interrupted -- 0 chains found, 74,538,461 candidates confirmed, 3m07s elapsed
+# no chains of length >= 10 found

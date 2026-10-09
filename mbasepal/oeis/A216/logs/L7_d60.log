@@ -1,0 +1,12 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=121 vs b1={61}: values [3138428376721, 3142742836021), 2436 candidates (generic path)
+stage b2=122 vs b1={62}: values [3297303959104, 3521614606208), 123530 candidates (generic path)
+stage b2=123 vs b1={63}: values [3462825991689, 3938980639167), 255878 candidates (generic path)
+stage b2=124 vs b1={64}: values [3635215077376, 4398046511104), 400096 candidates (generic path)
+stage b2=125 vs b1={65}: values [3814697265625, 4902227890625), 556816 candidates (generic path)
+stage b2=126 vs b1={66}: values [4001504141376, 5455160701056), 726692 candidates (generic path)
+
+*** MATCH: 4595815265833 is an 7-digit palindrome in bases 66 and 126
+stage b2=127 vs b1={67}: values [4195872914689, 6060711605323), 910396 candidates (generic path)
+stage b2=128 vs b1={68}: values [4398046511104, 6722988818432), 1108619 candidates (generic path)
+done: 0.06s, 1955986 candidates tested

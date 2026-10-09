@@ -1,0 +1,28 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=161 vs b1={13}: values [161, 169), 1 candidates (generic path)
+stage b2=162 vs b1={14}: values [162, 196), 1 candidates (generic path)
+stage b2=163 vs b1={15}: values [163, 225), 1 candidates (generic path)
+stage b2=164 vs b1={16}: values [164, 256), 1 candidates (generic path)
+stage b2=165 vs b1={17}: values [165, 289), 1 candidates (generic path)
+stage b2=166 vs b1={18}: values [166, 324), 1 candidates (generic path)
+stage b2=167 vs b1={19}: values [167, 361), 2 candidates (generic path)
+stage b2=168 vs b1={20}: values [168, 400), 2 candidates (generic path)
+stage b2=169 vs b1={21}: values [169, 441), 2 candidates (generic path)
+stage b2=170 vs b1={22}: values [170, 484), 2 candidates (generic path)
+stage b2=171 vs b1={23}: values [171, 529), 3 candidates (generic path)
+stage b2=172 vs b1={24}: values [172, 576), 3 candidates (generic path)
+stage b2=173 vs b1={25}: values [173, 625), 3 candidates (generic path)
+stage b2=174 vs b1={26}: values [174, 676), 3 candidates (generic path)
+stage b2=175 vs b1={27}: values [175, 729), 4 candidates (generic path)
+stage b2=176 vs b1={28}: values [176, 784), 4 candidates (generic path)
+stage b2=177 vs b1={29}: values [177, 841), 4 candidates (generic path)
+stage b2=178 vs b1={30}: values [178, 900), 5 candidates (generic path)
+stage b2=179 vs b1={31}: values [179, 961), 5 candidates (generic path)
+stage b2=180 vs b1={32}: values [180, 1024), 5 candidates (generic path)
+stage b2=181 vs b1={33}: values [181, 1089), 6 candidates (generic path)
+stage b2=182 vs b1={34}: values [182, 1156), 6 candidates (generic path)
+stage b2=183 vs b1={35}: values [183, 1225), 6 candidates (generic path)
+stage b2=184 vs b1={36}: values [184, 1296), 7 candidates (generic path)
+
+*** MATCH: 185 is an 2-digit palindrome in bases 36 and 184
+done: 0.00s, 77 candidates tested

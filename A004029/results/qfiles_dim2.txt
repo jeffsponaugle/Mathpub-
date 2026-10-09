@@ -1,0 +1,10 @@
+carat/tables/qcatalog/dim2/dir.1,1/ordnung.1/(2)^1/min.2
+carat/tables/qcatalog/dim2/dir.1,1/ordnung.2/(2)^1/group.1
+carat/tables/qcatalog/dim2/dir.1;1/ordnung.2/(2)^2/min.3
+carat/tables/qcatalog/dim2/dir.1;1/ordnung.4/(2)^2/group.2
+carat/tables/qcatalog/dim2/dir.2-1/ordnung.4/(2)^2/min.4
+carat/tables/qcatalog/dim2/dir.2-1/ordnung.8/(2)^4/max.2
+carat/tables/qcatalog/dim2/dir.2-2/ordnung.12/(1)^2(3)^2/max.3
+carat/tables/qcatalog/dim2/dir.2-2/ordnung.3/(1)^1(3)^1/min.5
+carat/tables/qcatalog/dim2/dir.2-2/ordnung.6/(1)^1(3)^1/group.3
+carat/tables/qcatalog/dim2/dir.2-2/ordnung.6/(1)^2(3)^2/group.4

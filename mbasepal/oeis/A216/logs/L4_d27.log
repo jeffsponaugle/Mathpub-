@@ -1,0 +1,13 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=45 vs b1={18}: values [91125, 104976), 7 candidates (generic path)
+stage b2=46 vs b1={19}: values [97336, 130321), 16 candidates (generic path)
+stage b2=47 vs b1={20}: values [103823, 160000), 26 candidates (generic path)
+stage b2=48 vs b1={21}: values [110592, 194481), 37 candidates (generic path)
+stage b2=49 vs b1={22}: values [117649, 234256), 49 candidates (generic path)
+stage b2=50 vs b1={23}: values [125000, 279841), 62 candidates (generic path)
+stage b2=51 vs b1={24}: values [132651, 331776), 77 candidates (generic path)
+stage b2=52 vs b1={25}: values [140608, 390625), 93 candidates (generic path)
+stage b2=53 vs b1={26}: values [148877, 456976), 110 candidates (generic path)
+
+*** MATCH: 157464 is an 4-digit palindrome in bases 26 and 53
+done: 0.00s, 473 candidates tested

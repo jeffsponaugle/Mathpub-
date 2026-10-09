@@ -1,0 +1,2 @@
+search Ld base 6 [1, 10000000000) threads=14 chunk=4194304 -> runs/A029523/hits_A029523.txt
+[      60s] complete below 1195376641  (1.99e+07 n/s)

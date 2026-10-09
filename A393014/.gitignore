@@ -1,0 +1,14 @@
+# build products
+dbpal
+dbpal-cpu
+*.tmp
+*.air
+dbpal.metallib
+src/kernels_src.inc
+# caches / staging
+tools/cache/
+tools/__pycache__/
+results/remote_*/
+results/site/
+*.out
+*.err

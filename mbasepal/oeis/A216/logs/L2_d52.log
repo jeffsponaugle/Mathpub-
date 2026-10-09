@@ -1,0 +1,9 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=60 vs b1={8}: values [60, 64), 1 candidates (generic path)
+stage b2=61 vs b1={9}: values [61, 81), 1 candidates (generic path)
+stage b2=62 vs b1={10}: values [62, 100), 1 candidates (generic path)
+stage b2=63 vs b1={11}: values [63, 121), 1 candidates (generic path)
+stage b2=64 vs b1={12}: values [64, 144), 2 candidates (generic path)
+
+*** MATCH: 65 is an 2-digit palindrome in bases 12 and 64
+done: 0.00s, 6 candidates tested

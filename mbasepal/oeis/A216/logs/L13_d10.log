@@ -1,0 +1,8 @@
+A171740 search: n=13, threads=1, limit=none
+stage b2=41 vs b1={31}: values [22563490300366186081, 24417546297445042591), 390319013 candidates (MITM path)
+  MITM b1=31: s=4 t=3 j=3 je=3 Q=29791 table=68921 yh=5664
+stage b2=42 vs b1={32}: values [30129469486639681536, 36893488147419103232), 1232279021 candidates (MITM path)
+  MITM b1=32: s=4 t=3 j=3 je=3 Q=32768 table=74088 yh=16633
+
+*** MATCH: 34575397981277771773 is an 13-digit palindrome in bases 32 and 42
+done: 0.00s, 16597 candidates tested

@@ -1,0 +1,11 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=317 vs b1={122}: values [3201078401357, 3297303959104), 3021 candidates (even-AP path)
+stage b2=318 vs b1={123}: values [3251888153568, 3462825991689), 6560 candidates (even-AP path)
+stage b2=319 vs b1={124}: values [3303341057599, 3635215077376), 10224 candidates (even-AP path)
+stage b2=320 vs b1={125}: values [3355443200000, 3814697265625), 14016 candidates (even-AP path)
+stage b2=321 vs b1={126}: values [3408200705601, 4001504141376), 17938 candidates (even-AP path)
+
+*** MATCH: 3562651337980 is an 6-digit palindrome in bases 126 and 321
+stage b2=322 vs b1={127}: values [3461619737632, 4195872914689), 21993 candidates (even-AP path)
+stage b2=323 vs b1={128}: values [3515706497843, 4398046511104), 26184 candidates (even-AP path)
+done: 0.00s, 43471 candidates tested

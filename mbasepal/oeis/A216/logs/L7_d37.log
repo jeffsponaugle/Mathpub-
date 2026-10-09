@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=80 vs b1={43}: values [262144000000, 271818611107), 18896 candidates (generic path)
+stage b2=81 vs b1={44}: values [282429536481, 319277809664), 69337 candidates (generic path)
+stage b2=82 vs b1={45}: values [304006671424, 373669453125), 126346 candidates (generic path)
+
+*** MATCH: 306418160061 is an 7-digit palindrome in bases 45 and 82
+done: 0.00s, 153767 candidates tested

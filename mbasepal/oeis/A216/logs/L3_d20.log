@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=30 vs b1={10}: values [900, 1000), 4 candidates (generic path)
+stage b2=31 vs b1={11}: values [961, 1331), 12 candidates (generic path)
+
+*** MATCH: 1086 is an 3-digit palindrome in bases 11 and 31
+stage b2=32 vs b1={12}: values [1024, 1728), 23 candidates (generic path)
+done: 0.00s, 18 candidates tested

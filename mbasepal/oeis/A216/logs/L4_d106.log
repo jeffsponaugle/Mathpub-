@@ -1,0 +1,20 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=149 vs b1={43}: values [3307949, 3418801), 5 candidates (generic path)
+stage b2=150 vs b1={44}: values [3375000, 3748096), 17 candidates (generic path)
+stage b2=151 vs b1={45}: values [3442951, 4100625), 29 candidates (generic path)
+stage b2=152 vs b1={46}: values [3511808, 4477456), 42 candidates (generic path)
+stage b2=153 vs b1={47}: values [3581577, 4879681), 56 candidates (generic path)
+stage b2=154 vs b1={48}: values [3652264, 5308416), 70 candidates (generic path)
+stage b2=155 vs b1={49}: values [3723875, 5764801), 85 candidates (generic path)
+stage b2=156 vs b1={50}: values [3796416, 6250000), 101 candidates (generic path)
+stage b2=157 vs b1={51}: values [3869893, 6765201), 118 candidates (generic path)
+stage b2=158 vs b1={52}: values [3944312, 7311616), 135 candidates (generic path)
+
+*** MATCH: 4471875 is an 4-digit palindrome in bases 52 and 158
+stage b2=159 vs b1={53}: values [4019679, 7890481), 154 candidates (generic path)
+stage b2=160 vs b1={54}: values [4096000, 8503056), 173 candidates (generic path)
+stage b2=161 vs b1={55}: values [4173281, 9150625), 193 candidates (generic path)
+stage b2=162 vs b1={56}: values [4251528, 9834496), 213 candidates (generic path)
+stage b2=163 vs b1={57}: values [4330747, 10556001), 235 candidates (generic path)
+stage b2=164 vs b1={58}: values [4410944, 11316496), 257 candidates (generic path)
+done: 0.00s, 720 candidates tested

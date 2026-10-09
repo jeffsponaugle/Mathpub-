@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=18 vs b1={7}: values [324, 343), 2 candidates (generic path)
+stage b2=19 vs b1={8}: values [361, 512), 8 candidates (generic path)
+
+*** MATCH: 381 is an 3-digit palindrome in bases 8 and 19
+done: 0.00s, 9 candidates tested

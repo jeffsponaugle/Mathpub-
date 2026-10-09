@@ -1,0 +1,6 @@
+2026-09-25 08:16:43  started (pid 50299): ./gapsieve -l 17 -s 18440000000000000000 -e max --first --gaps dec -c d16top.ck -r --log d16top.log
+2026-09-25 08:16:43  gapsieve: --end lowered to 18446744073709551343, the last start whose chain can be checked below 2^64
+2026-09-25 08:16:43  consecutive primes, decreasing gaps, chain length >= 17, range 18440000000000000000..18446744073709551343, 14 threads, first match only
+2026-09-25 08:16:43  (sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+2026-09-25 08:17:27  no decreasing-gap chain (A263049) of length 17 in 18440000000000000000..18446744073709551343, 00:00:44 elapsed
+2026-09-25 08:17:27  exit 0

@@ -1,0 +1,11 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=116 vs b1={36}: values [1560896, 1679616), 9 candidates (generic path)
+stage b2=117 vs b1={37}: values [1601613, 1874161), 20 candidates (generic path)
+stage b2=118 vs b1={38}: values [1643032, 2085136), 32 candidates (generic path)
+stage b2=119 vs b1={39}: values [1685159, 2313441), 45 candidates (generic path)
+
+*** MATCH: 1827960 is an 4-digit palindrome in bases 39 and 119
+stage b2=120 vs b1={40}: values [1728000, 2560000), 58 candidates (generic path)
+stage b2=121 vs b1={41}: values [1771561, 2825761), 73 candidates (generic path)
+stage b2=122 vs b1={42}: values [1815848, 3111696), 88 candidates (generic path)
+done: 0.00s, 117 candidates tested

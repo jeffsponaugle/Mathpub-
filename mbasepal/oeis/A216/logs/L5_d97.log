@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=153 vs b1={56}: values [547981281, 550731776), 118 candidates (generic path)
+stage b2=154 vs b1={57}: values [562448656, 601692057), 1655 candidates (generic path)
+stage b2=155 vs b1={58}: values [577200625, 656356768), 3295 candidates (generic path)
+
+*** MATCH: 590486916 is an 5-digit palindrome in bases 58 and 155
+done: 0.00s, 5068 candidates tested

@@ -1,0 +1,10 @@
+A171740 search: n=12, threads=1, limit=none
+stage b2=68 vs b1={48}: values [143746751770690322432, 149587343098087735296), 59074948 candidates (MITM path)
+  MITM b1=48: s=4 t=2 j=2 je=3 Q=2304 table=4624 yh=12776
+stage b2=69 vs b1={49}: values [168787390185178426269, 191581231380566414401), 211214133 candidates (MITM path)
+  MITM b1=49: s=4 t=2 j=2 je=3 Q=2401 table=4761 yh=44364
+stage b2=70 vs b1={50}: values [197732674300000000000, 244140625000000000000), 394461073 candidates (MITM path)
+  MITM b1=50: s=4 t=2 j=2 je=3 Q=2500 table=4900 yh=80503
+
+*** MATCH: 204575924075205482241 is an 12-digit palindrome in bases 50 and 70
+done: 0.00s, 69011 candidates tested

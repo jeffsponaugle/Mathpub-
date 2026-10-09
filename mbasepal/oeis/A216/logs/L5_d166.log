@@ -1,0 +1,9 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=249 vs b1={83}: values [3844124001, 3939040643), 1531 candidates (generic path)
+stage b2=250 vs b1={84}: values [3906250000, 4182119424), 4414 candidates (generic path)
+
+*** MATCH: 4065065001 is an 5-digit palindrome in bases 84 and 250
+stage b2=251 vs b1={85}: values [3969126001, 4437053125), 7428 candidates (generic path)
+
+*** MATCH: 4030048722 is an 5-digit palindrome in bases 85 and 251
+done: 0.00s, 7468 candidates tested

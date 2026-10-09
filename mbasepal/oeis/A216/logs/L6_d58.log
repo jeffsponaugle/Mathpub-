@@ -1,0 +1,13 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=108 vs b1={50}: values [14693280768, 15625000000), 740 candidates (even-AP path)
+stage b2=109 vs b1={51}: values [15386239549, 17596287801), 1707 candidates (even-AP path)
+stage b2=110 vs b1={52}: values [16105100000, 19770609664), 2754 candidates (even-AP path)
+stage b2=111 vs b1={53}: values [16850581551, 22164361129), 3886 candidates (even-AP path)
+stage b2=112 vs b1={54}: values [17623416832, 24794911296), 5105 candidates (even-AP path)
+stage b2=113 vs b1={55}: values [18424351793, 27680640625), 6416 candidates (even-AP path)
+stage b2=114 vs b1={56}: values [19254145824, 30840979456), 7821 candidates (even-AP path)
+stage b2=115 vs b1={57}: values [20113571875, 34296447249), 9326 candidates (even-AP path)
+
+*** MATCH: 21136883276 is an 6-digit palindrome in bases 57 and 115
+stage b2=116 vs b1={58}: values [21003416576, 38068692544), 10934 candidates (even-AP path)
+done: 0.00s, 29235 candidates tested

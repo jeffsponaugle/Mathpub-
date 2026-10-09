@@ -1,0 +1,16 @@
+2026-09-27 16:56:54  started (pid 25534): ./gapsieve -l 17 -s 254345176718302423992 -e 255239263259530362880 --first -c a16w84.ck -r --log a16w84.log -q --gpu
+2026-09-27 16:56:54  consecutive primes, chain length >= 17, range 254345176718302423992..255239263259530362880, GPU (Apple M4 Max) plus 12 CPU threads, first match only
+2026-09-27 16:56:54  (sieve: wheel 9699690 with 12960 classes; 38 primes pre-sieved in 12 patterns, 6 offsets to depth 199; segment 1.27e+12)
+2026-09-27 16:57:54  8.33%  eta 00:11:01  no hit yet  1.24P/s  at 2.5442e+20  elapsed 00:01:00
+2026-09-27 16:58:54  16.65%  eta 00:10:01  no hit yet  1.24P/s  at 2.54494e+20  elapsed 00:02:00
+2026-09-27 16:59:54  25.11%  eta 00:08:57  no hit yet  1.25P/s  at 2.5457e+20  elapsed 00:03:00
+2026-09-27 17:00:54  33.59%  eta 00:07:55  no hit yet  1.25P/s  at 2.54645e+20  elapsed 00:04:00
+2026-09-27 17:01:54  42.12%  eta 00:06:52  no hit yet  1.25P/s  at 2.54722e+20  elapsed 00:05:00
+2026-09-27 17:02:54  50.66%  eta 00:05:51  no hit yet  1.26P/s  at 2.54798e+20  elapsed 00:06:00
+2026-09-27 17:03:54  59.19%  eta 00:04:49  no hit yet  1.26P/s  at 2.54874e+20  elapsed 00:07:00
+2026-09-27 17:04:54  67.73%  eta 00:03:49  no hit yet  1.26P/s  at 2.54951e+20  elapsed 00:08:00
+2026-09-27 17:05:55  76.27%  eta 00:02:48  no hit yet  1.26P/s  at 2.55027e+20  elapsed 00:09:00
+2026-09-27 17:06:55  84.82%  eta 00:01:47  no hit yet  1.26P/s  at 2.55104e+20  elapsed 00:10:01
+2026-09-27 17:07:55  93.37%  eta 00:00:46  no hit yet  1.26P/s  at 2.5518e+20  elapsed 00:11:01
+2026-09-27 17:08:42  no chain of length >= 17 in 254345176718302423992..255239263259530362880, 00:11:48 elapsed
+2026-09-27 17:08:42  exit 0

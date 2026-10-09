@@ -1,0 +1,16 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=20 vs b1={10}: values [8000, 10000), 6 candidates (generic path)
+stage b2=21 vs b1={11}: values [9261, 14641), 13 candidates (generic path)
+stage b2=22 vs b1={12}: values [10648, 20736), 21 candidates (generic path)
+stage b2=23 vs b1={13}: values [12167, 28561), 31 candidates (generic path)
+stage b2=24 vs b1={14}: values [13824, 38416), 43 candidates (generic path)
+stage b2=25 vs b1={15}: values [15625, 50625), 57 candidates (generic path)
+stage b2=26 vs b1={16}: values [17576, 65536), 71 candidates (generic path)
+stage b2=27 vs b1={17}: values [19683, 83521), 88 candidates (generic path)
+stage b2=28 vs b1={18}: values [21952, 104976), 106 candidates (generic path)
+stage b2=29 vs b1={19}: values [24389, 130321), 126 candidates (generic path)
+
+*** MATCH: 30480 is an 4-digit palindrome in bases 19 and 29
+stage b2=30 vs b1={20}: values [27000, 160000), 148 candidates (generic path)
+stage b2=31 vs b1={21}: values [29791, 194481), 172 candidates (generic path)
+done: 0.00s, 562 candidates tested

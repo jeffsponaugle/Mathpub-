@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=217 vs b1={74}: values [2217373921, 2219006624), 35 candidates (generic path)
+stage b2=218 vs b1={75}: values [2258530576, 2373046875), 2410 candidates (generic path)
+
+*** MATCH: 2283053397 is an 5-digit palindrome in bases 75 and 218
+done: 0.00s, 2445 candidates tested

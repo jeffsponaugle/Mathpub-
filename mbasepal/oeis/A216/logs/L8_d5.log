@@ -1,0 +1,10 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=17 vs b1={12}: values [410338673, 429981696), 236 candidates (MITM path)
+  MITM b1=12: s=3 t=1 j=1 je=3 Q=12 table=17 yh=14
+stage b2=18 vs b1={13}: values [612220032, 815730721), 1939 candidates (MITM path)
+  MITM b1=13: s=2 t=2 j=2 je=2 Q=169 table=324 yh=6
+stage b2=19 vs b1={14}: values [893871739, 1475789056), 4466 candidates (MITM path)
+  MITM b1=14: s=2 t=2 j=2 je=2 Q=196 table=361 yh=13
+
+*** MATCH: 1125252600 is an 8-digit palindrome in bases 14 and 19
+done: 0.00s, 25 candidates tested

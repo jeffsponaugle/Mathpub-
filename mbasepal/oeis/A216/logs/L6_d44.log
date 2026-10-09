@@ -1,0 +1,10 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=85 vs b1={41}: values [4437053125, 4750104241), 510 candidates (even-AP path)
+stage b2=86 vs b1={42}: values [4704270176, 5489031744), 1234 candidates (even-AP path)
+stage b2=87 vs b1={43}: values [4984209207, 6321363049), 2031 candidates (even-AP path)
+
+*** MATCH: 6143993680 is an 6-digit palindrome in bases 43 and 87
+stage b2=88 vs b1={44}: values [5277319168, 7256313856), 2905 candidates (even-AP path)
+stage b2=89 vs b1={45}: values [5584059449, 8303765625), 3858 candidates (even-AP path)
+stage b2=90 vs b1={46}: values [5904900000, 9474296896), 4897 candidates (even-AP path)
+done: 0.00s, 6052 candidates tested

@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=223 vs b1={76}: values [2472973441, 2535525376), 1258 candidates (generic path)
+stage b2=224 vs b1={77}: values [2517630976, 2706784157), 3770 candidates (generic path)
+
+*** MATCH: 2521946113 is an 5-digit palindrome in bases 77 and 224
+done: 0.00s, 5028 candidates tested

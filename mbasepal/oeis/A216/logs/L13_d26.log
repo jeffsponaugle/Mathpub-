@@ -1,0 +1,10 @@
+A171740 search: n=13, threads=1, limit=none
+stage b2=90 vs b1={64}: values [282429536481000000000000, 302231454903657293676544), 37260803030 candidates (MITM path)
+  MITM b1=64: s=4 t=3 j=3 je=3 Q=262144 table=729000 yh=51113
+stage b2=91 vs b1={65}: values [322475487413604782665681, 369720589101871337890625), 83197147088 candidates (MITM path)
+  MITM b1=65: s=4 t=3 j=3 je=3 Q=274625 table=753571 yh=110404
+stage b2=92 vs b1={66}: values [367666387654882241806336, 450890579914330142416896), 137253246160 candidates (MITM path)
+  MITM b1=66: s=4 t=3 j=3 je=3 Q=287496 table=778688 yh=176263
+
+*** MATCH: 376717864631542355904697 is an 13-digit palindrome in bases 66 and 92
+done: 0.05s, 180688 candidates tested

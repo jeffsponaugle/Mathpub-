@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=88 vs b1={20}: values [7744, 8000), 3 candidates (generic path)
+stage b2=89 vs b1={21}: values [7921, 9261), 16 candidates (generic path)
+
+*** MATCH: 8545 is an 3-digit palindrome in bases 21 and 89
+stage b2=90 vs b1={22}: values [8100, 10648), 29 candidates (generic path)
+stage b2=91 vs b1={23}: values [8281, 12167), 43 candidates (generic path)
+stage b2=92 vs b1={24}: values [8464, 13824), 59 candidates (generic path)
+done: 0.00s, 28 candidates tested

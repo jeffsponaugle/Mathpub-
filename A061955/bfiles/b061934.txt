@@ -1,0 +1,17 @@
+# A061934: all terms below 10^11.
+# Every n < 10^11 was tested; terms beyond the previously published ones were
+# each confirmed by direct evaluation of the concatenation mod n. Oct 04 2026.
+1 1
+2 16
+3 19
+4 207
+5 350376
+6 723792
+7 853456
+8 1894016
+9 12574488
+10 40168848
+11 676024904
+12 2842583384
+13 6735278991
+14 19984824981

@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=205 vs b1={71}: values [1766100625, 1804229351), 908 candidates (generic path)
+stage b2=206 vs b1={72}: values [1800814096, 1934917632), 3161 candidates (generic path)
+
+*** MATCH: 1877327853 is an 5-digit palindrome in bases 72 and 206
+stage b2=207 vs b1={73}: values [1836036801, 2073071593), 5532 candidates (generic path)
+stage b2=208 vs b1={74}: values [1871773696, 2219006624), 8026 candidates (generic path)
+done: 0.00s, 5162 candidates tested

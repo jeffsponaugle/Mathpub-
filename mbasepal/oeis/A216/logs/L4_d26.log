@@ -1,0 +1,13 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=43 vs b1={17}: values [79507, 83521), 3 candidates (generic path)
+stage b2=44 vs b1={18}: values [85184, 104976), 11 candidates (generic path)
+stage b2=45 vs b1={19}: values [91125, 130321), 20 candidates (generic path)
+stage b2=46 vs b1={20}: values [97336, 160000), 30 candidates (generic path)
+stage b2=47 vs b1={21}: values [103823, 194481), 42 candidates (generic path)
+stage b2=48 vs b1={22}: values [110592, 234256), 54 candidates (generic path)
+stage b2=49 vs b1={23}: values [117649, 279841), 68 candidates (generic path)
+stage b2=50 vs b1={24}: values [125000, 331776), 83 candidates (generic path)
+stage b2=51 vs b1={25}: values [132651, 390625), 100 candidates (generic path)
+
+*** MATCH: 140608 is an 4-digit palindrome in bases 25 and 51
+done: 0.00s, 406 candidates tested

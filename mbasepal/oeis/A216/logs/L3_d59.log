@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=78 vs b1={19}: values [6084, 6859), 10 candidates (generic path)
+stage b2=79 vs b1={20}: values [6241, 8000), 23 candidates (generic path)
+
+*** MATCH: 6716 is an 3-digit palindrome in bases 20 and 79
+stage b2=80 vs b1={21}: values [6400, 9261), 36 candidates (generic path)
+stage b2=81 vs b1={22}: values [6561, 10648), 51 candidates (generic path)
+done: 0.00s, 39 candidates tested

@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=29 vs b1={10}: values [841, 1000), 6 candidates (generic path)
+
+*** MATCH: 929 is an 3-digit palindrome in bases 10 and 29
+stage b2=30 vs b1={11}: values [900, 1331), 15 candidates (generic path)
+done: 0.00s, 7 candidates tested

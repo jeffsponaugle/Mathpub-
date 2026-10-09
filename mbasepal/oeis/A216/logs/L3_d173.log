@@ -1,0 +1,11 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=209 vs b1={36}: values [43681, 46656), 15 candidates (generic path)
+stage b2=210 vs b1={37}: values [44100, 50653), 32 candidates (generic path)
+stage b2=211 vs b1={38}: values [44521, 54872), 50 candidates (generic path)
+
+*** MATCH: 49586 is an 3-digit palindrome in bases 38 and 211
+stage b2=212 vs b1={39}: values [44944, 59319), 68 candidates (generic path)
+
+*** MATCH: 45581 is an 3-digit palindrome in bases 39 and 212
+stage b2=213 vs b1={40}: values [45369, 64000), 88 candidates (generic path)
+done: 0.00s, 120 candidates tested

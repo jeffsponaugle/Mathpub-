@@ -1,0 +1,6 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=30 vs b1={6}: values [30, 36), 1 candidates (generic path)
+stage b2=31 vs b1={7}: values [31, 49), 1 candidates (generic path)
+
+*** MATCH: 32 is an 2-digit palindrome in bases 7 and 31
+done: 0.00s, 2 candidates tested

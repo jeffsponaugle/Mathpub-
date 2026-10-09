@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=72 vs b1={31}: values [26873856, 28629151), 339 candidates (generic path)
+stage b2=73 vs b1={32}: values [28398241, 33554432), 968 candidates (generic path)
+stage b2=74 vs b1={33}: values [29986576, 39135393), 1671 candidates (generic path)
+
+*** MATCH: 30966929 is an 5-digit palindrome in bases 33 and 74
+done: 0.00s, 2978 candidates tested

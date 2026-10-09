@@ -1,0 +1,9 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=139 vs b1={41}: values [2685619, 2825761), 8 candidates (generic path)
+stage b2=140 vs b1={42}: values [2744000, 3111696), 19 candidates (generic path)
+stage b2=141 vs b1={43}: values [2803221, 3418801), 31 candidates (generic path)
+
+*** MATCH: 2983420 is an 4-digit palindrome in bases 43 and 141
+stage b2=142 vs b1={44}: values [2863288, 3748096), 44 candidates (generic path)
+stage b2=143 vs b1={45}: values [2924207, 4100625), 58 candidates (generic path)
+done: 0.00s, 67 candidates tested

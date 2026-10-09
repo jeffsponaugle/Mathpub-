@@ -1,0 +1,5 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=129 vs b1={12}: values [129, 144), 1 candidates (generic path)
+
+*** MATCH: 130 is an 2-digit palindrome in bases 12 and 129
+done: 0.00s, 1 candidates tested

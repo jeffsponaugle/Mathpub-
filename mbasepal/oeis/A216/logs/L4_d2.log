@@ -1,0 +1,7 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=6 vs b1={4}: values [216, 256), 2 candidates (generic path)
+stage b2=7 vs b1={5}: values [343, 625), 6 candidates (generic path)
+
+*** MATCH: 624 is an 4-digit palindrome in bases 5 and 7
+stage b2=8 vs b1={6}: values [512, 1296), 13 candidates (generic path)
+done: 0.00s, 9 candidates tested

@@ -1,0 +1,11 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=81 vs b1={19}: values [6561, 6859), 4 candidates (generic path)
+stage b2=82 vs b1={20}: values [6724, 8000), 16 candidates (generic path)
+stage b2=83 vs b1={21}: values [6889, 9261), 29 candidates (generic path)
+
+*** MATCH: 7471 is an 3-digit palindrome in bases 21 and 83
+stage b2=84 vs b1={22}: values [7056, 10648), 43 candidates (generic path)
+stage b2=85 vs b1={23}: values [7225, 12167), 59 candidates (generic path)
+
+*** MATCH: 7396 is an 3-digit palindrome in bases 23 and 85
+done: 0.00s, 57 candidates tested

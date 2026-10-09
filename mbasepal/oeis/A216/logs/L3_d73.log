@@ -1,0 +1,9 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=94 vs b1={21}: values [8836, 9261), 5 candidates (generic path)
+stage b2=95 vs b1={22}: values [9025, 10648), 18 candidates (generic path)
+
+*** MATCH: 9501 is an 3-digit palindrome in bases 22 and 95
+stage b2=96 vs b1={23}: values [9216, 12167), 31 candidates (generic path)
+
+*** MATCH: 9217 is an 3-digit palindrome in bases 23 and 96
+done: 0.00s, 26 candidates tested

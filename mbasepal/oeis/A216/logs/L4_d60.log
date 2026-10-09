@@ -1,0 +1,13 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=89 vs b1={29}: values [704969, 707281), 1 candidates (generic path)
+stage b2=90 vs b1={30}: values [729000, 810000), 11 candidates (generic path)
+stage b2=91 vs b1={31}: values [753571, 923521), 21 candidates (generic path)
+stage b2=92 vs b1={32}: values [778688, 1048576), 32 candidates (generic path)
+stage b2=93 vs b1={33}: values [804357, 1185921), 45 candidates (generic path)
+stage b2=94 vs b1={34}: values [830584, 1336336), 58 candidates (generic path)
+stage b2=95 vs b1={35}: values [857375, 1500625), 72 candidates (generic path)
+
+*** MATCH: 939456 is an 4-digit palindrome in bases 35 and 95
+stage b2=96 vs b1={36}: values [884736, 1679616), 87 candidates (generic path)
+stage b2=97 vs b1={37}: values [912673, 1874161), 103 candidates (generic path)
+done: 0.00s, 245 candidates tested

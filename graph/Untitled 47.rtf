@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 IBMPlexMono-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww25100\viewh14460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 I thought I would share a couple of sequences I recently extended that were interesting challenges.  A197123 is a list of n digit numbers that are repeated in the decimal digits of Pi.  It was created in 2011, and in 2024 I extended it from a(18) to a(23). Jonas Schmitz, who lives in Germany, extended the sequence a(24) at the end of 2024. I finally got around to taking another crack at it this summer and recently found a(25).  It was a technically interesting problem because it is a unique dual-substring search across 10 trillion 25 digit numbers.  I used a bloom filter along with a cluster of machines with >1TB of RAM each to do a pre-filter of candidates followed by a second complete pass to find the actual digits.  Fortunately I computed 20T digits of PI last year, so I had those files locally in my homelab. In the search for a(26) I am teaming up with Jonas who had some fantastic ideas of ways to approach the search, and we hope to have a(26) in a week or so.    a(27) is next, but first I need to acquire >100T digits of Pi.  (Downloading now)\
+\
+It is kind of a fun record - \'91the longest known repeating sequence in the digits of Pi\'92!\
+\
+I also had some good success this morning with a longer running task for A228768. This is a sequence of numbers that are emirps (primes when read backwards) in base 2 to n. It sat at a(13) [base 2-13] in 2013 with no movement, and a few weeks ago I was able to find a(14) and a(15). a(16) was the prize I was hoping for, as it is quite interesting to have a number that is prime forward and reverse in all bases from 2 to 16, especially for us computer nerds who love hexadecimal. I built a program that could take advantage of my DGXSpark cluster which has a combined 2 petaflops of FP4 performance. It has been running continuously since mid July and this morning popped up the solution. I was very lucky in this search as there are two permissible regions and the second region has 3x10^20 integers! I estimated it would take me more than 7 years to search that. a(17) of this series is going to require some better techniques for sure!\
+\
+I added a(16) to the series and it is in edit/approval right now, but the number was 30180149651549267791.  You can try it - a prime/emirp is base 2 to base 16! \
+\
+If anyone has a suggestion for a next series to tackle, let me know!\
+\
+-Jeff Sponaugle\
+\
+\
+\
+}

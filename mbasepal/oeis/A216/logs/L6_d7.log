@@ -1,0 +1,11 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=19 vs b1={12}: values [2476099, 2985984), 75 candidates (even-AP path)
+stage b2=20 vs b1={13}: values [3200000, 4826809), 204 candidates (even-AP path)
+stage b2=21 vs b1={14}: values [4084101, 7529536), 373 candidates (even-AP path)
+stage b2=22 vs b1={15}: values [5153632, 11390625), 586 candidates (even-AP path)
+
+*** MATCH: 10652864 is an 6-digit palindrome in bases 15 and 22
+stage b2=23 vs b1={16}: values [6436343, 16777216), 850 candidates (even-AP path)
+stage b2=24 vs b1={17}: values [7962624, 24137569), 1171 candidates (even-AP path)
+stage b2=25 vs b1={18}: values [9765625, 34012224), 1552 candidates (even-AP path)
+done: 0.00s, 1839 candidates tested

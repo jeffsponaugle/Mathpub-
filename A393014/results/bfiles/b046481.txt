@@ -1,0 +1,12 @@
+# A046481: Primes that are palindromic in bases 10 and 13.
+# complete for all terms < 13^41 (dbpal exhaustive search)
+1 2
+2 3
+3 5
+4 7
+5 11
+6 313
+7 353
+8 797
+9 7520859392939580257
+10 970015486464684510079

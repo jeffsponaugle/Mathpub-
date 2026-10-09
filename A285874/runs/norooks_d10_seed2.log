@@ -1,0 +1,5 @@
+fen: 1nbqkbn1/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBN1 w - - 0 1
+threads: 14  table: 4096 MB  seed: 2  ttmin: 2
+split ply 5: 734593 unique positions (4505624 paths), 0.5s
+  433336/734593 tasks (58.99%)  31s elapsed  ETA 21s
+perft(10) = 53938077183794   (52.76s, 1.02e+12 leaves/s)

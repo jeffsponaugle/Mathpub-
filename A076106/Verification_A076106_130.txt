@@ -1,0 +1,15 @@
+scanned 2192839684744 digits total
+n   A076106(n)       A076130(n)         status
+1   7                13                 all 4 primes found
+2   73               299                all 21 primes found
+3   373              5229               all 143 primes found
+4   9337             75961              all 1061 primes found
+5   35569            715492             all 8363 primes found
+6   805289           11137824           all 68906 primes found
+7   9271903          135224164          all 586081 primes found
+8   43927427         1541659153         all 5096876 primes found
+9   342263843        20252853413        all 45086079 primes found
+10  7530425897       238602469714       all 404204977 primes found
+11  70676925127      2192839682323      all 3663002302 primes found
+
+

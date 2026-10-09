@@ -1,0 +1,9 @@
+cchain: kind 2 (p -> 2p-1), k=17
+  range [3203000719597029781, 1000000000000000000000]
+  wheel M=223092870, 864 admissible classes; sieve B=1024 (163 primes)
+  chunk 2^24, 266319 superblocks x 864 units, 14 threads
+[      60s] p=3.2217e+18  sb 5/266319  3.109e+14 p/s  cand 271643  prp 314242  best 6/17 @ 3220658240371301731  ETA 37.1d
+[     120s] p=3.2479e+18  sb 12/266319  3.734e+14 p/s  cand 637317  prp 737827  best 6/17 @ 3220658240371301731  ETA 30.9d
+[     180s] p=3.2741e+18  sb 19/266319  3.942e+14 p/s  cand 1025140  prp 1186943  best 7/17 @ 3267537757391047141  ETA 29.3d
+
+INTERRUPTED: frontier at p = 3285344019425247780 (checkpoint written)

@@ -1,0 +1,8 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=238 vs b1={39}: values [56644, 59319), 12 candidates (generic path)
+stage b2=239 vs b1={40}: values [57121, 64000), 29 candidates (generic path)
+
+*** MATCH: 58556 is an 3-digit palindrome in bases 40 and 239
+stage b2=240 vs b1={41}: values [57600, 68921), 48 candidates (generic path)
+stage b2=241 vs b1={42}: values [58081, 74088), 67 candidates (generic path)
+done: 0.00s, 47 candidates tested

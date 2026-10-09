@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=84 vs b1={35}: values [49787136, 52521875), 388 candidates (generic path)
+stage b2=85 vs b1={36}: values [52200625, 60466176), 1145 candidates (generic path)
+stage b2=86 vs b1={37}: values [54700816, 69343957), 1980 candidates (generic path)
+stage b2=87 vs b1={38}: values [57289761, 79235168), 2900 candidates (generic path)
+
+*** MATCH: 57675781 is an 5-digit palindrome in bases 38 and 87
+done: 0.00s, 6412 candidates tested

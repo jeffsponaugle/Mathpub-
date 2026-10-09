@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=70 vs b1={30}: values [24010000, 24300000), 60 candidates (generic path)
+stage b2=71 vs b1={31}: values [25411681, 28629151), 639 candidates (generic path)
+
+*** MATCH: 27892280 is an 5-digit palindrome in bases 31 and 71
+stage b2=72 vs b1={32}: values [26873856, 33554432), 1289 candidates (generic path)
+done: 0.00s, 896 candidates tested

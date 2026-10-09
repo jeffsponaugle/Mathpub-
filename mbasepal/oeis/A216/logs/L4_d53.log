@@ -1,0 +1,19 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=80 vs b1={27}: values [512000, 531441), 4 candidates (generic path)
+stage b2=81 vs b1={28}: values [531441, 614656), 13 candidates (generic path)
+stage b2=82 vs b1={29}: values [551368, 707281), 24 candidates (generic path)
+stage b2=83 vs b1={30}: values [571787, 810000), 35 candidates (generic path)
+stage b2=84 vs b1={31}: values [592704, 923521), 47 candidates (generic path)
+stage b2=85 vs b1={32}: values [614125, 1048576), 61 candidates (generic path)
+stage b2=86 vs b1={33}: values [636056, 1185921), 75 candidates (generic path)
+stage b2=87 vs b1={34}: values [658503, 1336336), 90 candidates (generic path)
+stage b2=88 vs b1={35}: values [681472, 1500625), 106 candidates (generic path)
+stage b2=89 vs b1={36}: values [704969, 1679616), 124 candidates (generic path)
+
+*** MATCH: 849150 is an 4-digit palindrome in bases 36 and 89
+stage b2=90 vs b1={37}: values [729000, 1874161), 142 candidates (generic path)
+stage b2=91 vs b1={38}: values [753571, 2085136), 161 candidates (generic path)
+stage b2=92 vs b1={39}: values [778688, 2313441), 182 candidates (generic path)
+stage b2=93 vs b1={40}: values [804357, 2560000), 203 candidates (generic path)
+stage b2=94 vs b1={41}: values [830584, 2825761), 226 candidates (generic path)
+done: 0.00s, 619 candidates tested

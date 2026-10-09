@@ -1,0 +1,10 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=61 vs b1={31}: values [844596301, 887503681), 190 candidates (even-AP path)
+stage b2=62 vs b1={32}: values [916132832, 1073741824), 662 candidates (even-AP path)
+stage b2=63 vs b1={33}: values [992436543, 1291467969), 1196 candidates (even-AP path)
+stage b2=64 vs b1={34}: values [1073741824, 1544804416), 1797 candidates (even-AP path)
+
+*** MATCH: 1339777985 is an 6-digit palindrome in bases 34 and 64
+stage b2=65 vs b1={35}: values [1160290625, 1838265625), 2469 candidates (even-AP path)
+stage b2=66 vs b1={36}: values [1252332576, 2176782336), 3216 candidates (even-AP path)
+done: 0.00s, 4117 candidates tested

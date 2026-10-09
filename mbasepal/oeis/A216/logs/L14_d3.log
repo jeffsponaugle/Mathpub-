@@ -1,0 +1,6 @@
+A171740 search: n=14, threads=1, limit=none
+stage b2=17 vs b1={14}: values [9904578032905937, 11112006825558016), 2942518 candidates (MITM path)
+  MITM b1=14: s=4 t=3 j=3 je=4 Q=2744 table=4913 yh=599
+
+*** MATCH: 10205276352438060 is an 14-digit palindrome in bases 14 and 17
+done: 0.00s, 150 candidates tested

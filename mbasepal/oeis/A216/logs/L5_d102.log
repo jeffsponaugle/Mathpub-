@@ -1,0 +1,11 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=160 vs b1={58}: values [655360000, 656356768), 39 candidates (generic path)
+stage b2=161 vs b1={59}: values [671898241, 714924299), 1660 candidates (generic path)
+stage b2=162 vs b1={60}: values [688747536, 777600000), 3386 candidates (generic path)
+stage b2=163 vs b1={61}: values [705911761, 844596301), 5220 candidates (generic path)
+stage b2=164 vs b1={62}: values [723394816, 916132832), 7167 candidates (generic path)
+stage b2=165 vs b1={63}: values [741200625, 992436543), 9229 candidates (generic path)
+stage b2=166 vs b1={64}: values [759333136, 1073741824), 11410 candidates (generic path)
+
+*** MATCH: 762832749 is an 5-digit palindrome in bases 64 and 166
+done: 0.00s, 38109 candidates tested

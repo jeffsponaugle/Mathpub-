@@ -1,0 +1,11 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=60 vs b1={22}: values [216000, 234256), 6 candidates (generic path)
+stage b2=61 vs b1={23}: values [226981, 279841), 15 candidates (generic path)
+stage b2=62 vs b1={24}: values [238328, 331776), 25 candidates (generic path)
+stage b2=63 vs b1={25}: values [250047, 390625), 36 candidates (generic path)
+
+*** MATCH: 290368 is an 4-digit palindrome in bases 25 and 63
+stage b2=64 vs b1={26}: values [262144, 456976), 48 candidates (generic path)
+stage b2=65 vs b1={27}: values [274625, 531441), 61 candidates (generic path)
+stage b2=66 vs b1={28}: values [287496, 614656), 76 candidates (generic path)
+done: 0.00s, 90 candidates tested

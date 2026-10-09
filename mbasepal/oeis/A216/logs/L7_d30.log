@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=67 vs b1={37}: values [90458382169, 94931877133), 14874 candidates (generic path)
+stage b2=68 vs b1={38}: values [98867482624, 114415582592), 49449 candidates (generic path)
+
+*** MATCH: 107585105541 is an 7-digit palindrome in bases 38 and 68
+done: 0.00s, 64322 candidates tested

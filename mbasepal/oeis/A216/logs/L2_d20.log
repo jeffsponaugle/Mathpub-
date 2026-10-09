@@ -1,0 +1,8 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=26 vs b1={6}: values [26, 36), 1 candidates (generic path)
+stage b2=27 vs b1={7}: values [27, 49), 1 candidates (generic path)
+stage b2=28 vs b1={8}: values [28, 64), 2 candidates (generic path)
+stage b2=29 vs b1={9}: values [29, 81), 2 candidates (generic path)
+
+*** MATCH: 30 is an 2-digit palindrome in bases 9 and 29
+done: 0.00s, 6 candidates tested

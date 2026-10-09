@@ -1,0 +1,22 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=144 vs b1={42}: values [2985984, 3111696), 7 candidates (generic path)
+stage b2=145 vs b1={43}: values [3048625, 3418801), 18 candidates (generic path)
+stage b2=146 vs b1={44}: values [3112136, 3748096), 30 candidates (generic path)
+stage b2=147 vs b1={45}: values [3176523, 4100625), 43 candidates (generic path)
+stage b2=148 vs b1={46}: values [3241792, 4477456), 57 candidates (generic path)
+stage b2=149 vs b1={47}: values [3307949, 4879681), 71 candidates (generic path)
+stage b2=150 vs b1={48}: values [3375000, 5308416), 86 candidates (generic path)
+stage b2=151 vs b1={49}: values [3442951, 5764801), 102 candidates (generic path)
+stage b2=152 vs b1={50}: values [3511808, 6250000), 119 candidates (generic path)
+
+*** MATCH: 4186233 is an 4-digit palindrome in bases 50 and 152
+stage b2=153 vs b1={51}: values [3581577, 6765201), 137 candidates (generic path)
+stage b2=154 vs b1={52}: values [3652264, 7311616), 155 candidates (generic path)
+stage b2=155 vs b1={53}: values [3723875, 7890481), 174 candidates (generic path)
+stage b2=156 vs b1={54}: values [3796416, 8503056), 194 candidates (generic path)
+stage b2=157 vs b1={55}: values [3869893, 9150625), 215 candidates (generic path)
+stage b2=158 vs b1={56}: values [3944312, 9834496), 236 candidates (generic path)
+stage b2=159 vs b1={57}: values [4019679, 10556001), 259 candidates (generic path)
+stage b2=160 vs b1={58}: values [4096000, 11316496), 283 candidates (generic path)
+stage b2=161 vs b1={59}: values [4173281, 12117361), 307 candidates (generic path)
+done: 0.00s, 652 candidates tested

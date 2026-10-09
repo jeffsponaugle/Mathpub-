@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=283 vs b1={92}: values [6414247921, 6590815232), 2205 candidates (generic path)
+stage b2=284 vs b1={93}: values [6505390336, 6956883693), 5598 candidates (generic path)
+stage b2=285 vs b1={94}: values [6597500625, 7339040224), 9130 candidates (generic path)
+stage b2=286 vs b1={95}: values [6690585616, 7737809375), 12803 candidates (generic path)
+
+*** MATCH: 6782443383 is an 5-digit palindrome in bases 95 and 286
+done: 0.00s, 29736 candidates tested

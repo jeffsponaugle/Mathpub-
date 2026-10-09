@@ -1,0 +1,14 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=21 vs b1={10}: values [9261, 10000), 2 candidates (generic path)
+stage b2=22 vs b1={11}: values [10648, 14641), 9 candidates (generic path)
+stage b2=23 vs b1={12}: values [12167, 20736), 17 candidates (generic path)
+stage b2=24 vs b1={13}: values [13824, 28561), 26 candidates (generic path)
+
+*** MATCH: 27650 is an 4-digit palindrome in bases 13 and 24
+stage b2=25 vs b1={14}: values [15625, 38416), 37 candidates (generic path)
+stage b2=26 vs b1={15}: values [17576, 50625), 49 candidates (generic path)
+stage b2=27 vs b1={16}: values [19683, 65536), 63 candidates (generic path)
+stage b2=28 vs b1={17}: values [21952, 83521), 79 candidates (generic path)
+stage b2=29 vs b1={18}: values [24389, 104976), 96 candidates (generic path)
+stage b2=30 vs b1={19}: values [27000, 130321), 115 candidates (generic path)
+done: 0.00s, 110 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=140 vs b1={27}: values [19600, 19683), 1 candidates (generic path)
+
+*** MATCH: 19601 is an 3-digit palindrome in bases 27 and 140
+done: 0.00s, 1 candidates tested

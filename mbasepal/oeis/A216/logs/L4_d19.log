@@ -1,0 +1,13 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=33 vs b1={14}: values [35937, 38416), 3 candidates (generic path)
+stage b2=34 vs b1={15}: values [39304, 50625), 10 candidates (generic path)
+stage b2=35 vs b1={16}: values [42875, 65536), 19 candidates (generic path)
+stage b2=36 vs b1={17}: values [46656, 83521), 29 candidates (generic path)
+stage b2=37 vs b1={18}: values [50653, 104976), 40 candidates (generic path)
+
+*** MATCH: 70338 is an 4-digit palindrome in bases 18 and 37
+stage b2=38 vs b1={19}: values [54872, 130321), 53 candidates (generic path)
+stage b2=39 vs b1={20}: values [59319, 160000), 67 candidates (generic path)
+stage b2=40 vs b1={21}: values [64000, 194481), 82 candidates (generic path)
+stage b2=41 vs b1={22}: values [68921, 234256), 99 candidates (generic path)
+done: 0.00s, 123 candidates tested

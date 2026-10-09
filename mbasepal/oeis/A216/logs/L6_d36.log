@@ -1,0 +1,24 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=71 vs b1={35}: values [1804229351, 1838265625), 96 candidates (even-AP path)
+stage b2=72 vs b1={36}: values [1934917632, 2176782336), 649 candidates (even-AP path)
+stage b2=73 vs b1={37}: values [2073071593, 2565726409), 1267 candidates (even-AP path)
+stage b2=74 vs b1={38}: values [2219006624, 3010936384), 1955 candidates (even-AP path)
+stage b2=75 vs b1={39}: values [2373046875, 3518743761), 2716 candidates (even-AP path)
+stage b2=76 vs b1={40}: values [2535525376, 4096000000), 3555 candidates (even-AP path)
+stage b2=77 vs b1={41}: values [2706784157, 4750104241), 4476 candidates (even-AP path)
+stage b2=78 vs b1={42}: values [2887174368, 5489031744), 5483 candidates (even-AP path)
+stage b2=79 vs b1={43}: values [3077056399, 6321363049), 6581 candidates (even-AP path)
+stage b2=80 vs b1={44}: values [3276800000, 7256313856), 7773 candidates (even-AP path)
+stage b2=81 vs b1={45}: values [3486784401, 8303765625), 9065 candidates (even-AP path)
+stage b2=82 vs b1={46}: values [3707398432, 9474296896), 10460 candidates (even-AP path)
+stage b2=83 vs b1={47}: values [3939040643, 10779215329), 11963 candidates (even-AP path)
+
+*** MATCH: 5916083712 is an 6-digit palindrome in bases 47 and 83
+stage b2=84 vs b1={48}: values [4182119424, 12230590464), 13580 candidates (even-AP path)
+stage b2=85 vs b1={49}: values [4437053125, 13841287201), 15314 candidates (even-AP path)
+stage b2=86 vs b1={50}: values [4704270176, 15625000000), 17170 candidates (even-AP path)
+stage b2=87 vs b1={51}: values [4984209207, 17596287801), 19153 candidates (even-AP path)
+stage b2=88 vs b1={52}: values [5277319168, 19770609664), 21268 candidates (even-AP path)
+stage b2=89 vs b1={53}: values [5584059449, 22164361129), 23520 candidates (even-AP path)
+stage b2=90 vs b1={54}: values [5904900000, 24794911296), 25913 candidates (even-AP path)
+done: 0.00s, 68015 candidates tested

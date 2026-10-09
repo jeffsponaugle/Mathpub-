@@ -1,0 +1,8 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=8 vs b1={6}: values [32768, 46656), 28 candidates (even-AP path)
+stage b2=9 vs b1={7}: values [59049, 117649), 81 candidates (even-AP path)
+stage b2=10 vs b1={8}: values [100000, 262144), 163 candidates (even-AP path)
+
+*** MATCH: 207702 is an 6-digit palindrome in bases 8 and 10
+stage b2=11 vs b1={9}: values [161051, 531441), 279 candidates (even-AP path)
+done: 0.00s, 263 candidates tested

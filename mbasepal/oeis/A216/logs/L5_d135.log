@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=206 vs b1={71}: values [1800814096, 1804229351), 81 candidates (generic path)
+stage b2=207 vs b1={72}: values [1836036801, 1934917632), 2308 candidates (generic path)
+stage b2=208 vs b1={73}: values [1871773696, 2073071593), 4653 candidates (generic path)
+
+*** MATCH: 1913091649 is an 5-digit palindrome in bases 73 and 208
+stage b2=209 vs b1={74}: values [1908029761, 2219006624), 7120 candidates (generic path)
+done: 0.00s, 7158 candidates tested

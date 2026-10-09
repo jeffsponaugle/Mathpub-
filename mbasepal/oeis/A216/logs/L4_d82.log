@@ -1,0 +1,16 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=118 vs b1={36}: values [1643032, 1679616), 3 candidates (generic path)
+stage b2=119 vs b1={37}: values [1685159, 1874161), 14 candidates (generic path)
+stage b2=120 vs b1={38}: values [1728000, 2085136), 25 candidates (generic path)
+stage b2=121 vs b1={39}: values [1771561, 2313441), 38 candidates (generic path)
+stage b2=122 vs b1={40}: values [1815848, 2560000), 50 candidates (generic path)
+
+*** MATCH: 2175993 is an 4-digit palindrome in bases 40 and 122
+stage b2=123 vs b1={41}: values [1860867, 2825761), 64 candidates (generic path)
+stage b2=124 vs b1={42}: values [1906624, 3111696), 79 candidates (generic path)
+stage b2=125 vs b1={43}: values [1953125, 3418801), 94 candidates (generic path)
+stage b2=126 vs b1={44}: values [2000376, 3748096), 111 candidates (generic path)
+stage b2=127 vs b1={45}: values [2048383, 4100625), 128 candidates (generic path)
+stage b2=128 vs b1={46}: values [2097152, 4477456), 146 candidates (generic path)
+stage b2=129 vs b1={47}: values [2146689, 4879681), 165 candidates (generic path)
+done: 0.00s, 209 candidates tested

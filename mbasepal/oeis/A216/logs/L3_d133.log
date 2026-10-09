@@ -1,0 +1,7 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=163 vs b1={30}: values [26569, 27000), 3 candidates (generic path)
+stage b2=164 vs b1={31}: values [26896, 29791), 18 candidates (generic path)
+stage b2=165 vs b1={32}: values [27225, 32768), 34 candidates (generic path)
+
+*** MATCH: 27226 is an 3-digit palindrome in bases 32 and 165
+done: 0.00s, 55 candidates tested

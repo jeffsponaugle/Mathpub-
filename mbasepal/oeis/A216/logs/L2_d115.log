@@ -1,0 +1,15 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=127 vs b1={12}: values [127, 144), 1 candidates (generic path)
+stage b2=128 vs b1={13}: values [128, 169), 1 candidates (generic path)
+stage b2=129 vs b1={14}: values [129, 196), 1 candidates (generic path)
+stage b2=130 vs b1={15}: values [130, 225), 1 candidates (generic path)
+stage b2=131 vs b1={16}: values [131, 256), 1 candidates (generic path)
+stage b2=132 vs b1={17}: values [132, 289), 2 candidates (generic path)
+stage b2=133 vs b1={18}: values [133, 324), 2 candidates (generic path)
+stage b2=134 vs b1={19}: values [134, 361), 2 candidates (generic path)
+stage b2=135 vs b1={20}: values [135, 400), 2 candidates (generic path)
+stage b2=136 vs b1={21}: values [136, 441), 3 candidates (generic path)
+stage b2=137 vs b1={22}: values [137, 484), 3 candidates (generic path)
+
+*** MATCH: 138 is an 2-digit palindrome in bases 22 and 137
+done: 0.00s, 19 candidates tested

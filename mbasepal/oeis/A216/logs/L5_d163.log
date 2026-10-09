@@ -1,0 +1,6 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=245 vs b1={82}: values [3603000625, 3707398432), 1740 candidates (generic path)
+stage b2=246 vs b1={83}: values [3662186256, 3939040643), 4575 candidates (generic path)
+
+*** MATCH: 3694562809 is an 5-digit palindrome in bases 83 and 246
+done: 0.00s, 6315 candidates tested

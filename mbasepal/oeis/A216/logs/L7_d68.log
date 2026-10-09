@@ -1,0 +1,9 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=135 vs b1={67}: values [6053445140625, 6060711605323), 2954 candidates (generic path)
+stage b2=136 vs b1={68}: values [6327518887936, 6722988818432), 157217 candidates (generic path)
+stage b2=137 vs b1={69}: values [6611856250609, 7446353252589), 324537 candidates (generic path)
+
+*** MATCH: 7246885697479 is an 7-digit palindrome in bases 69 and 137
+stage b2=138 vs b1={70}: values [6906762437184, 8235430000000), 505568 candidates (generic path)
+stage b2=139 vs b1={71}: values [7212549413161, 9095120158391), 700983 candidates (generic path)
+done: 0.02s, 564518 candidates tested

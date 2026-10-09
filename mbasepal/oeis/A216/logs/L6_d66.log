@@ -1,0 +1,16 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=121 vs b1={55}: values [25937424601, 27680640625), 985 candidates (even-AP path)
+stage b2=122 vs b1={56}: values [27027081632, 30840979456), 2101 candidates (even-AP path)
+stage b2=123 vs b1={57}: values [28153056843, 34296447249), 3302 candidates (even-AP path)
+stage b2=124 vs b1={58}: values [29316250624, 38068692544), 4591 candidates (even-AP path)
+stage b2=125 vs b1={59}: values [30517578125, 42180533641), 5972 candidates (even-AP path)
+stage b2=126 vs b1={60}: values [31757969376, 46656000000), 7448 candidates (even-AP path)
+stage b2=127 vs b1={61}: values [33038369407, 51520374361), 9023 candidates (even-AP path)
+stage b2=128 vs b1={62}: values [34359738368, 56800235584), 10701 candidates (even-AP path)
+stage b2=129 vs b1={63}: values [35723051649, 62523502209), 12485 candidates (even-AP path)
+stage b2=130 vs b1={64}: values [37129300000, 68719476736), 14379 candidates (even-AP path)
+stage b2=131 vs b1={65}: values [38579489651, 75418890625), 16387 candidates (even-AP path)
+
+*** MATCH: 41467841580 is an 6-digit palindrome in bases 65 and 131
+stage b2=132 vs b1={66}: values [40074642432, 82653950016), 18514 candidates (even-AP path)
+done: 0.00s, 72957 candidates tested

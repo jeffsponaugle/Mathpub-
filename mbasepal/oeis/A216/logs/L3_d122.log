@@ -1,0 +1,11 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=151 vs b1={29}: values [22801, 24389), 11 candidates (generic path)
+stage b2=152 vs b1={30}: values [23104, 27000), 26 candidates (generic path)
+
+*** MATCH: 24777 is an 3-digit palindrome in bases 30 and 152
+stage b2=153 vs b1={31}: values [23409, 29791), 42 candidates (generic path)
+stage b2=154 vs b1={32}: values [23716, 32768), 59 candidates (generic path)
+stage b2=155 vs b1={33}: values [24025, 35937), 77 candidates (generic path)
+stage b2=156 vs b1={34}: values [24336, 39304), 96 candidates (generic path)
+stage b2=157 vs b1={35}: values [24649, 42875), 117 candidates (generic path)
+done: 0.00s, 62 candidates tested

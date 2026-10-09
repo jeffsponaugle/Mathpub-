@@ -1,0 +1,6 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=23 vs b1={11}: values [12167, 14641), 5 candidates (generic path)
+
+*** MATCH: 14376 is an 4-digit palindrome in bases 11 and 23
+stage b2=24 vs b1={12}: values [13824, 20736), 13 candidates (generic path)
+done: 0.00s, 6 candidates tested

@@ -1,0 +1,7 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=253 vs b1={84}: values [4097152081, 4182119424), 1328 candidates (generic path)
+stage b2=254 vs b1={85}: values [4162314256, 4437053125), 4259 candidates (generic path)
+stage b2=255 vs b1={86}: values [4228250625, 4704270176), 7321 candidates (generic path)
+
+*** MATCH: 4266160711 is an 5-digit palindrome in bases 86 and 255
+done: 0.00s, 12908 candidates tested

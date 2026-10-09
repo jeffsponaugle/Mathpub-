@@ -1,0 +1,20 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=223 vs b1={91}: values [551473077343, 567869252041), 1479 candidates (even-AP path)
+stage b2=224 vs b1={92}: values [563949338624, 606355001344), 3773 candidates (even-AP path)
+stage b2=225 vs b1={93}: values [576650390625, 646990183449), 6176 candidates (even-AP path)
+stage b2=226 vs b1={94}: values [589579257376, 689869781056), 8689 candidates (even-AP path)
+stage b2=227 vs b1={95}: values [602738989907, 735091890625), 11316 candidates (even-AP path)
+stage b2=228 vs b1={96}: values [616132666368, 782757789696), 14059 candidates (even-AP path)
+stage b2=229 vs b1={97}: values [629763392149, 832972004929), 16922 candidates (even-AP path)
+stage b2=230 vs b1={98}: values [643634300000, 885842380864), 19907 candidates (even-AP path)
+stage b2=231 vs b1={99}: values [657748550151, 941480149401), 23019 candidates (even-AP path)
+stage b2=232 vs b1={100}: values [672109330432, 1000000000000), 26259 candidates (even-AP path)
+stage b2=233 vs b1={101}: values [686719856393, 1061520150601), 29631 candidates (even-AP path)
+
+*** MATCH: 772204136886 is an 6-digit palindrome in bases 101 and 233
+stage b2=234 vs b1={102}: values [701583371424, 1126162419264), 33137 candidates (even-AP path)
+stage b2=235 vs b1={103}: values [716703146875, 1194052296529), 36782 candidates (even-AP path)
+stage b2=236 vs b1={104}: values [732082482176, 1265319018496), 40569 candidates (even-AP path)
+stage b2=237 vs b1={105}: values [747724704957, 1340095640625), 44499 candidates (even-AP path)
+stage b2=238 vs b1={106}: values [763633171168, 1418519112256), 48578 candidates (even-AP path)
+done: 0.00s, 154348 candidates tested

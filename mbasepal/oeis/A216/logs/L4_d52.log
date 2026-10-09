@@ -1,0 +1,33 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=79 vs b1={27}: values [493039, 531441), 7 candidates (generic path)
+stage b2=80 vs b1={28}: values [512000, 614656), 17 candidates (generic path)
+stage b2=81 vs b1={29}: values [531441, 707281), 27 candidates (generic path)
+stage b2=82 vs b1={30}: values [551368, 810000), 39 candidates (generic path)
+stage b2=83 vs b1={31}: values [571787, 923521), 52 candidates (generic path)
+stage b2=84 vs b1={32}: values [592704, 1048576), 65 candidates (generic path)
+stage b2=85 vs b1={33}: values [614125, 1185921), 80 candidates (generic path)
+stage b2=86 vs b1={34}: values [636056, 1336336), 95 candidates (generic path)
+stage b2=87 vs b1={35}: values [658503, 1500625), 112 candidates (generic path)
+stage b2=88 vs b1={36}: values [681472, 1679616), 129 candidates (generic path)
+stage b2=89 vs b1={37}: values [704969, 1874161), 148 candidates (generic path)
+stage b2=90 vs b1={38}: values [729000, 2085136), 168 candidates (generic path)
+stage b2=91 vs b1={39}: values [753571, 2313441), 189 candidates (generic path)
+stage b2=92 vs b1={40}: values [778688, 2560000), 211 candidates (generic path)
+stage b2=93 vs b1={41}: values [804357, 2825761), 234 candidates (generic path)
+stage b2=94 vs b1={42}: values [830584, 3111696), 259 candidates (generic path)
+stage b2=95 vs b1={43}: values [857375, 3418801), 284 candidates (generic path)
+stage b2=96 vs b1={44}: values [884736, 3748096), 311 candidates (generic path)
+stage b2=97 vs b1={45}: values [912673, 4100625), 339 candidates (generic path)
+stage b2=98 vs b1={46}: values [941192, 4477456), 369 candidates (generic path)
+
+*** MATCH: 4094640 is an 4-digit palindrome in bases 46 and 98
+stage b2=99 vs b1={47}: values [970299, 4879681), 399 candidates (generic path)
+
+*** MATCH: 3277200 is an 4-digit palindrome in bases 47 and 99
+stage b2=100 vs b1={48}: values [1000000, 5308416), 431 candidates (generic path)
+stage b2=101 vs b1={49}: values [1030301, 5764801), 465 candidates (generic path)
+stage b2=102 vs b1={50}: values [1061208, 6250000), 499 candidates (generic path)
+stage b2=103 vs b1={51}: values [1092727, 6765201), 535 candidates (generic path)
+
+*** MATCH: 1124864 is an 4-digit palindrome in bases 51 and 103
+done: 0.00s, 4311 candidates tested

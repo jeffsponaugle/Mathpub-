@@ -1,0 +1,6 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=8 vs b1={5}: values [512, 625), 2 candidates (generic path)
+stage b2=9 vs b1={6}: values [729, 1296), 8 candidates (generic path)
+
+*** MATCH: 910 is an 4-digit palindrome in bases 6 and 9
+done: 0.00s, 9 candidates tested

@@ -1,0 +1,5 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=93 vs b1={21}: values [8649, 9261), 7 candidates (generic path)
+
+*** MATCH: 8650 is an 3-digit palindrome in bases 21 and 93
+done: 0.00s, 7 candidates tested

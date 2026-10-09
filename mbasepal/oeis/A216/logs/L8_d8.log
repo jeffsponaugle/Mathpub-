@@ -1,0 +1,26 @@
+A171740 search: n=8, threads=1, limit=none
+stage b2=25 vs b1={17}: values [6103515625, 6975757441), 2233 candidates (MITM path)
+  MITM b1=17: s=3 t=1 j=1 je=3 Q=17 table=25 yh=90
+stage b2=26 vs b1={18}: values [8031810176, 11019960576), 6539 candidates (MITM path)
+  MITM b1=18: s=2 t=2 j=2 je=2 Q=324 table=676 yh=10
+stage b2=27 vs b1={19}: values [10460353203, 16983563041), 12275 candidates (MITM path)
+  MITM b1=19: s=2 t=2 j=2 je=2 Q=361 table=729 yh=17
+stage b2=28 vs b1={20}: values [13492928512, 25600000000), 19698 candidates (MITM path)
+  MITM b1=20: s=2 t=2 j=2 je=2 Q=400 table=784 yh=26
+stage b2=29 vs b1={21}: values [17249876309, 37822859361), 29088 candidates (MITM path)
+  MITM b1=21: s=2 t=2 j=2 je=2 Q=441 table=841 yh=35
+stage b2=30 vs b1={22}: values [21870000000, 54875873536), 40748 candidates (MITM path)
+  MITM b1=22: s=2 t=2 j=2 je=2 Q=484 table=900 yh=46
+stage b2=31 vs b1={23}: values [27512614111, 78310985281), 55006 candidates (MITM path)
+  MITM b1=23: s=2 t=2 j=2 je=2 Q=529 table=961 yh=58
+
+*** MATCH: 72514770528 is an 8-digit palindrome in bases 23 and 31
+stage b2=32 vs b1={24}: values [34359738368, 110075314176), 72209 candidates (MITM path)
+  MITM b1=24: s=2 t=2 j=2 je=2 Q=576 table=1024 yh=71
+stage b2=33 vs b1={25}: values [42618442977, 152587890625), 92730 candidates (MITM path)
+  MITM b1=25: s=2 t=2 j=2 je=2 Q=625 table=1089 yh=86
+stage b2=34 vs b1={26}: values [52523350144, 208827064576), 116965 candidates (MITM path)
+  MITM b1=26: s=2 t=2 j=2 je=2 Q=676 table=1156 yh=102
+stage b2=35 vs b1={27}: values [64339296875, 282429536481), 145333 candidates (MITM path)
+  MITM b1=27: s=2 t=2 j=2 je=2 Q=729 table=1225 yh=119
+done: 0.00s, 353 candidates tested

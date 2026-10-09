@@ -1,0 +1,11 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=250 vs b1={100}: values [976562500000, 1000000000000), 1501 candidates (even-AP path)
+stage b2=251 vs b1={101}: values [996250626251, 1061520150601), 4128 candidates (even-AP path)
+stage b2=252 vs b1={102}: values [1016255020032, 1126162419264), 6868 candidates (even-AP path)
+stage b2=253 vs b1={103}: values [1036579476493, 1194052296529), 9724 candidates (even-AP path)
+stage b2=254 vs b1={104}: values [1057227821024, 1265319018496), 12699 candidates (even-AP path)
+
+*** MATCH: 1113591776115 is an 6-digit palindrome in bases 104 and 254
+stage b2=255 vs b1={105}: values [1078203909375, 1340095640625), 15795 candidates (even-AP path)
+stage b2=256 vs b1={106}: values [1099511627776, 1418519112256), 19015 candidates (even-AP path)
+done: 0.00s, 29095 candidates tested

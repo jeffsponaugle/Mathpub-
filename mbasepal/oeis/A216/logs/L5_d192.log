@@ -1,0 +1,8 @@
+A171740 search: n=5, threads=1, limit=none
+stage b2=284 vs b1={92}: values [6505390336, 6590815232), 1060 candidates (generic path)
+stage b2=285 vs b1={93}: values [6597500625, 6956883693), 4425 candidates (generic path)
+
+*** MATCH: 6875374771 is an 5-digit palindrome in bases 93 and 285
+stage b2=286 vs b1={94}: values [6690585616, 7339040224), 7928 candidates (generic path)
+stage b2=287 vs b1={95}: values [6784652161, 7737809375), 11572 candidates (generic path)
+done: 0.00s, 8847 candidates tested

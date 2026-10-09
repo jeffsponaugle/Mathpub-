@@ -1,0 +1,6 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=154 vs b1={75}: values [13339032325696, 13348388671875), 2562 candidates (generic path)
+stage b2=155 vs b1={76}: values [13867245015625, 14645194571776), 208909 candidates (generic path)
+
+*** MATCH: 13934255209276 is an 7-digit palindrome in bases 76 and 155
+done: 0.00s, 68098 candidates tested

@@ -1,0 +1,6 @@
+A171740 search: n=3, threads=1, limit=none
+stage b2=112 vs b1={24}: values [12544, 13824), 12 candidates (generic path)
+stage b2=113 vs b1={25}: values [12769, 15625), 26 candidates (generic path)
+
+*** MATCH: 12770 is an 3-digit palindrome in bases 25 and 113
+done: 0.00s, 38 candidates tested

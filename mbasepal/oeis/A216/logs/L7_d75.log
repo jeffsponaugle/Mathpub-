@@ -1,0 +1,7 @@
+A171740 search: n=7, threads=1, limit=none
+stage b2=148 vs b1={73}: values [10509215371264, 11047398519097), 166015 candidates (generic path)
+stage b2=149 vs b1={74}: values [10942526586601, 12151280273024), 365409 candidates (generic path)
+
+*** MATCH: 11437332018825 is an 7-digit palindrome in bases 74 and 149
+stage b2=150 vs b1={75}: values [11390625000000, 13348388671875), 580079 candidates (generic path)
+done: 0.01s, 376461 candidates tested

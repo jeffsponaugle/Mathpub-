@@ -1,0 +1,8 @@
+A171740 search: n=13, threads=1, limit=none
+stage b2=8 vs b1={7}: values [68719476736, 96889010407), 107459 candidates (MITM path)
+  MITM b1=7: s=4 t=3 j=3 je=4 Q=343 table=512 yh=210
+stage b2=9 vs b1={8}: values [282429536481, 549755813888), 503022 candidates (MITM path)
+  MITM b1=8: s=4 t=3 j=3 je=4 Q=512 table=729 yh=691
+
+*** MATCH: 318713056300 is an 13-digit palindrome in bases 8 and 9
+done: 0.00s, 304 candidates tested

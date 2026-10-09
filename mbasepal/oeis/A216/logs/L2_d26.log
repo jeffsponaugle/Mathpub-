@@ -1,0 +1,11 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=32 vs b1={6}: values [32, 36), 1 candidates (generic path)
+stage b2=33 vs b1={7}: values [33, 49), 1 candidates (generic path)
+stage b2=34 vs b1={8}: values [34, 64), 1 candidates (generic path)
+stage b2=35 vs b1={9}: values [35, 81), 2 candidates (generic path)
+stage b2=36 vs b1={10}: values [36, 100), 2 candidates (generic path)
+stage b2=37 vs b1={11}: values [37, 121), 3 candidates (generic path)
+stage b2=38 vs b1={12}: values [38, 144), 3 candidates (generic path)
+
+*** MATCH: 39 is an 2-digit palindrome in bases 12 and 38
+done: 0.00s, 13 candidates tested

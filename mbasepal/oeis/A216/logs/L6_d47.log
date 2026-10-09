@@ -1,0 +1,8 @@
+A171740 search: n=6, threads=1, limit=none
+stage b2=90 vs b1={43}: values [5904900000, 6321363049), 572 candidates (even-AP path)
+stage b2=91 vs b1={44}: values [6240321451, 7256313856), 1349 candidates (even-AP path)
+stage b2=92 vs b1={45}: values [6590815232, 8303765625), 2200 candidates (even-AP path)
+stage b2=93 vs b1={46}: values [6956883693, 9474296896), 3130 candidates (even-AP path)
+
+*** MATCH: 7155274642 is an 6-digit palindrome in bases 46 and 93
+done: 0.00s, 4400 candidates tested

@@ -1,0 +1,56 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=120 vs b1={37}: values [1728000, 1874161), 11 candidates (generic path)
+stage b2=121 vs b1={38}: values [1771561, 2085136), 22 candidates (generic path)
+stage b2=122 vs b1={39}: values [1815848, 2313441), 34 candidates (generic path)
+stage b2=123 vs b1={40}: values [1860867, 2560000), 47 candidates (generic path)
+stage b2=124 vs b1={41}: values [1906624, 2825761), 60 candidates (generic path)
+stage b2=125 vs b1={42}: values [1953125, 3111696), 75 candidates (generic path)
+stage b2=126 vs b1={43}: values [2000376, 3418801), 90 candidates (generic path)
+stage b2=127 vs b1={44}: values [2048383, 3748096), 106 candidates (generic path)
+stage b2=128 vs b1={45}: values [2097152, 4100625), 123 candidates (generic path)
+stage b2=129 vs b1={46}: values [2146689, 4477456), 141 candidates (generic path)
+stage b2=130 vs b1={47}: values [2197000, 4879681), 159 candidates (generic path)
+stage b2=131 vs b1={48}: values [2248091, 5308416), 179 candidates (generic path)
+stage b2=132 vs b1={49}: values [2299968, 5764801), 199 candidates (generic path)
+stage b2=133 vs b1={50}: values [2352637, 6250000), 221 candidates (generic path)
+stage b2=134 vs b1={51}: values [2406104, 6765201), 243 candidates (generic path)
+stage b2=135 vs b1={52}: values [2460375, 7311616), 267 candidates (generic path)
+stage b2=136 vs b1={53}: values [2515456, 7890481), 291 candidates (generic path)
+stage b2=137 vs b1={54}: values [2571353, 8503056), 317 candidates (generic path)
+stage b2=138 vs b1={55}: values [2628072, 9150625), 343 candidates (generic path)
+stage b2=139 vs b1={56}: values [2685619, 9834496), 371 candidates (generic path)
+stage b2=140 vs b1={57}: values [2744000, 10556001), 399 candidates (generic path)
+stage b2=141 vs b1={58}: values [2803221, 11316496), 429 candidates (generic path)
+stage b2=142 vs b1={59}: values [2863288, 12117361), 459 candidates (generic path)
+stage b2=143 vs b1={60}: values [2924207, 12960000), 491 candidates (generic path)
+stage b2=144 vs b1={61}: values [2985984, 13845841), 524 candidates (generic path)
+stage b2=145 vs b1={62}: values [3048625, 14776336), 558 candidates (generic path)
+stage b2=146 vs b1={63}: values [3112136, 15752961), 594 candidates (generic path)
+stage b2=147 vs b1={64}: values [3176523, 16777216), 630 candidates (generic path)
+
+*** MATCH: 15882620 is an 4-digit palindrome in bases 64 and 147
+stage b2=148 vs b1={65}: values [3241792, 17850625), 667 candidates (generic path)
+stage b2=149 vs b1={66}: values [3307949, 18974736), 706 candidates (generic path)
+stage b2=150 vs b1={67}: values [3375000, 20151121), 746 candidates (generic path)
+stage b2=151 vs b1={68}: values [3442951, 21381376), 787 candidates (generic path)
+
+*** MATCH: 11568264 is an 4-digit palindrome in bases 68 and 151
+stage b2=152 vs b1={69}: values [3511808, 22667121), 830 candidates (generic path)
+stage b2=153 vs b1={70}: values [3581577, 24010000), 873 candidates (generic path)
+stage b2=154 vs b1={71}: values [3652264, 25411681), 918 candidates (generic path)
+stage b2=155 vs b1={72}: values [3723875, 26873856), 964 candidates (generic path)
+stage b2=156 vs b1={73}: values [3796416, 28398241), 1011 candidates (generic path)
+stage b2=157 vs b1={74}: values [3869893, 29986576), 1060 candidates (generic path)
+stage b2=158 vs b1={75}: values [3944312, 31640625), 1110 candidates (generic path)
+stage b2=159 vs b1={76}: values [4019679, 33362176), 1161 candidates (generic path)
+
+*** MATCH: 7047040 is an 4-digit palindrome in bases 76 and 159
+stage b2=160 vs b1={77}: values [4096000, 35153041), 1214 candidates (generic path)
+stage b2=161 vs b1={78}: values [4173281, 37015056), 1267 candidates (generic path)
+stage b2=162 vs b1={79}: values [4251528, 38950081), 1323 candidates (generic path)
+stage b2=163 vs b1={80}: values [4330747, 40960000), 1379 candidates (generic path)
+stage b2=164 vs b1={81}: values [4410944, 43046721), 1437 candidates (generic path)
+stage b2=165 vs b1={82}: values [4492125, 45212176), 1496 candidates (generic path)
+
+*** MATCH: 4574296 is an 4-digit palindrome in bases 82 and 165
+done: 0.00s, 12824 candidates tested

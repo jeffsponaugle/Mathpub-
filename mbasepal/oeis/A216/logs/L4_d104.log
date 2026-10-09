@@ -1,0 +1,16 @@
+A171740 search: n=4, threads=1, limit=none
+stage b2=147 vs b1={43}: values [3176523, 3418801), 12 candidates (generic path)
+stage b2=148 vs b1={44}: values [3241792, 3748096), 24 candidates (generic path)
+stage b2=149 vs b1={45}: values [3307949, 4100625), 36 candidates (generic path)
+stage b2=150 vs b1={46}: values [3375000, 4477456), 49 candidates (generic path)
+stage b2=151 vs b1={47}: values [3442951, 4879681), 64 candidates (generic path)
+stage b2=152 vs b1={48}: values [3511808, 5308416), 78 candidates (generic path)
+stage b2=153 vs b1={49}: values [3581577, 5764801), 94 candidates (generic path)
+stage b2=154 vs b1={50}: values [3652264, 6250000), 110 candidates (generic path)
+stage b2=155 vs b1={51}: values [3723875, 6765201), 127 candidates (generic path)
+
+*** MATCH: 4014036 is an 4-digit palindrome in bases 51 and 155
+stage b2=156 vs b1={52}: values [3796416, 7311616), 145 candidates (generic path)
+stage b2=157 vs b1={53}: values [3869893, 7890481), 164 candidates (generic path)
+stage b2=158 vs b1={54}: values [3944312, 8503056), 183 candidates (generic path)
+done: 0.00s, 607 candidates tested

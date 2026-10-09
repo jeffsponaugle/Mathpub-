@@ -1,0 +1,9 @@
+A171740 search: n=2, threads=1, limit=none
+stage b2=13 vs b1={4}: values [13, 16), 1 candidates (generic path)
+stage b2=14 vs b1={5}: values [14, 25), 1 candidates (generic path)
+stage b2=15 vs b1={6}: values [15, 36), 2 candidates (generic path)
+stage b2=16 vs b1={7}: values [16, 49), 3 candidates (generic path)
+stage b2=17 vs b1={8}: values [17, 64), 3 candidates (generic path)
+
+*** MATCH: 18 is an 2-digit palindrome in bases 8 and 17
+done: 0.00s, 9 candidates tested
